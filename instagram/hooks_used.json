@@ -108,5 +108,10 @@
   "video": "meta-muse",
   "inicio": "E48 vos como usuario (Abrís WhatsApp y le escribís a un bot)",
   "cierre": "Pregunta de dos opciones (¿tarjeta a una IA o comprás vos?) + motivo (si Amazon firma)"
+ },
+ {
+  "video": "champions-25-nov",
+  "inicio": "A7 el marcador (PSG dos, Roma dos)",
+  "cierre": "Pregunta de opciones con un nombre (¿Soulé, Lautaro o Julián?) + motivo para seguir (resultados de cada fecha)"
  }
 ]
