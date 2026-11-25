@@ -54,7 +54,13 @@ videos/<slug>/timing.json, events.json, public/voz.wav, public/mix.wav   generad
 ## Reglas del guion
 
 - Español rioplatense (voseo). 330-400 palabras = 2:15-2:40. 28-36 frases.
-- Segunda persona, presente, cuando hay protagonista: "Sos Rockstar Games. En 2013 lanzás...".
+- **Inicio: rotar.** Leer `instagram/hooks_used.json` y elegir de `instagram/playbook.md` (sección 1) un tipo de
+  inicio distinto al de los dos videos anteriores. "Sos [X]" (segunda persona) se usa como máximo en 1 de cada 6
+  videos; el resto del guion puede seguir en segunda persona si hay protagonista. Al terminar, agregar el video
+  a `hooks_used.json` con el inicio y el cierre usados.
+- **Cierre: no usar siempre "Seguime para la próxima historia".** Elegir un cierre con motivo concreto de las
+  secciones 3 o 4 del playbook (continuación, pregunta de dos opciones, palabra clave), uno solo por video.
+- Duración objetivo para alcance: 45 a 70 segundos (130 a 190 palabras), salvo que se pida un documental largo.
 - Gancho en 3 golpes en los primeros 10 s: quién sos / qué pasó -> el dato enorme -> la contradicción.
   La primera frase arranca con el tema, sin saludo ni "hoy te cuento".
 - Estructura: gancho -> cómo llegamos acá (hitos con fecha) -> capítulos numerados ("Problema uno: ...",
