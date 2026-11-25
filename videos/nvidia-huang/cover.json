@@ -1,0 +1,21 @@
+{
+ "beat": "b03",
+ "frac": 0.92,
+ "overlay": {
+  "kicker": "NVIDIA",
+  "lines": [
+   {
+    "t": "EL CEO SE FUE"
+   },
+   {
+    "t": "Y VOLVIÓ",
+    "c": "yellow"
+   },
+   {
+    "t": "+US$ 952.000 M EN UN DÍA",
+    "size": 72,
+    "c": "cyan"
+   }
+  ]
+ }
+}

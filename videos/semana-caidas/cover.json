@@ -1,0 +1,22 @@
+{
+ "beat": "b04",
+ "frac": 0.45,
+ "overlay": {
+  "kicker": "¿ATAQUE?",
+  "lines": [
+   {
+    "t": "5 CAÍDAS",
+    "c": "yellow",
+    "size": 190
+   },
+   {
+    "t": "EN 6 DÍAS"
+   },
+   {
+    "t": "mail · aviones · banco · teléfono",
+    "size": 56,
+    "c": "cyan"
+   }
+  ]
+ }
+}

@@ -1,0 +1,22 @@
+{
+ "beat": "b03",
+ "frac": 0.45,
+ "overlay": {
+  "kicker": "CANVA",
+  "lines": [
+   {
+    "t": "1 DE CADA 5",
+    "c": "yellow",
+    "size": 170
+   },
+   {
+    "t": "ESCRITORIOS"
+   },
+   {
+    "t": "1.271 personas afectadas",
+    "size": 72,
+    "c": "cyan"
+   }
+  ]
+ }
+}

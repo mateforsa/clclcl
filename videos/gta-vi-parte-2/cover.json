@@ -1,0 +1,22 @@
+{
+ "beat": "b09",
+ "frac": 0.92,
+ "overlay": {
+  "kicker": "GTA VI · PARTE 2",
+  "lines": [
+   {
+    "t": "44,9 M",
+    "c": "yellow",
+    "size": 210
+   },
+   {
+    "t": "EN 4 DÍAS"
+   },
+   {
+    "t": "¿Y EL ONLINE?",
+    "size": 92,
+    "c": "red"
+   }
+  ]
+ }
+}

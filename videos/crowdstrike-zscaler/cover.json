@@ -1,0 +1,23 @@
+{
+ "beat": "b02",
+ "frac": 0.92,
+ "overlay": {
+  "kicker": "CROWDSTRIKE",
+  "lines": [
+   {
+    "t": "ROMPIÓ",
+    "size": 160
+   },
+   {
+    "t": "8,5 M DE PC",
+    "c": "yellow",
+    "size": 150
+   },
+   {
+    "t": "Y AHORA COMPRA POR US$ 44.000 M",
+    "size": 58,
+    "c": "cyan"
+   }
+  ]
+ }
+}

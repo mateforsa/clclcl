@@ -11,7 +11,7 @@ export type At = string | number | undefined;
 export type Actor = { type: string; pos?: V3; rot?: V3; s?: number; at?: At; enter?: 'pop' | 'drop' | 'grow' | 'none'; out?: At; p?: any;
   move?: { to: V3; at?: At; dur?: number }; spin?: number; bob?: number };
 export type BeatSpec = { id: string; set?: 'neon' | 'room' | 'void'; cam: { from: V3; to: V3; look: V3; lookTo?: V3; fov?: number; shift?: number };
-  actors: Actor[]; overlays?: OverlaySpec[]; keywords?: string[] };
+  actors: Actor[]; overlays?: OverlaySpec[]; keywords?: string[]; noSubs?: boolean };
 export type TBeat = { id: string; start: number; end: number; text: string; words: { w: string; s: number; e: number }[] };
 
 const norm = (s: string) => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9$]/g, '');
@@ -55,7 +55,7 @@ export const BeatView: React.FC<{ spec: BeatSpec; tb: TBeat; dur: number }> = ({
       </ThreeCanvas>
       <AbsoluteFill style={{ background: 'radial-gradient(ellipse at 50% 50%, rgba(0,0,0,0) 55%, rgba(8,3,24,.55) 100%)' }} />
       <Overlays list={spec.overlays ?? []} t={t} when={when} />
-      <Subtitles tb={tb} t={t + tb.start} keywords={spec.keywords ?? []} />
+      {!spec.noSubs && <Subtitles tb={tb} t={t + tb.start} keywords={spec.keywords ?? []} />}
     </AbsoluteFill>
   );
 };

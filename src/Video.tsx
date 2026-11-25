@@ -22,7 +22,9 @@ const Video: React.FC<{ timing: Timing; beats: BeatSpec[] }> = ({ timing, beats 
   );
 };
 /** Root de un video. `extra` = props propios del video (videos/<slug>/props.tsx) que se suman al kit. */
-export const makeRoot = (timing: Timing, beats: BeatSpec[], extra: Record<string, React.FC<any>> = {}): React.FC => {
+export const makeRoot = (timing: Timing, beats: BeatSpec[], extra: Record<string, React.FC<any>> = {}, cover?: { beat: string; overlay: any }): React.FC => {
   Object.assign(REG, extra);
+  // portada: el plano elegido se muestra sin subtítulos y con el título de portada en lugar de sus carteles
+  if (cover) beats = beats.map((b) => (b.id === cover.beat ? { ...b, noSubs: true, overlays: [{ type: 'cover', ...cover.overlay }] } : b));
   return () => <Composition id="Video" component={Video as any} defaultProps={{ timing, beats }} durationInFrames={frameOf(timing.duration)} fps={FPS} width={1080} height={1920} />;
 };

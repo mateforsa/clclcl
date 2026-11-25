@@ -1,0 +1,23 @@
+{
+ "beat": "b05",
+ "frac": 0.92,
+ "overlay": {
+  "kicker": "GTA VI",
+  "lines": [
+   {
+    "t": "SE LO ROBARON",
+    "size": 128
+   },
+   {
+    "t": "Y VENDIÓ ×5",
+    "c": "yellow",
+    "size": 170
+   },
+   {
+    "t": "13 años de espera",
+    "size": 72,
+    "c": "cyan"
+   }
+  ]
+ }
+}

@@ -7,6 +7,7 @@ export type OverlaySpec =
   | { type: 'big'; text: string; sub?: string; at?: any; y?: number; count?: { to: number; pre?: string; post?: string; dec?: number }; red?: boolean; out?: any; size?: number }
   | { type: 'chapter'; n: string; title: string; at?: any }
   | { type: 'plate'; name: string; role: string; at?: any; y?: number; out?: any }
+  | { type: 'cover'; kicker?: string; lines: { t: string; c?: 'yellow' | 'red' | 'cyan'; size?: number }[]; y?: number; at?: any }
   | { type: 'tag'; text: string; at?: any; x: number; y: number; color?: string; out?: any; size?: number };
 const F = 'Poppins, sans-serif';
 const fmt = (v: number, dec = 0) => v.toFixed(dec).replace('.', ',').replace(/\B(?=(\d{3})+(?!\d))/g, '.');
@@ -43,6 +44,15 @@ export const Overlays: React.FC<{ list: OverlaySpec[]; t: number; when: (a: any)
             <span style={{ color: '#1a1030', fontWeight: 800, fontSize: 48 }}>{o.name}</span><span style={{ color: '#6b5aa8', fontWeight: 500, fontSize: 38 }}> · {o.role}</span>
           </div>
         </div>);
+      if (o.type === 'cover') { const col = { yellow: '#ffe14a', red: '#ff3b4e', cyan: C.cyan } as any; const st = '0 0 0 #000, 6px 6px 0 #000, -6px 6px 0 #000, 6px -6px 0 #000, -6px -6px 0 #000, 0 10px 0 #000, 0 18px 40px rgba(0,0,0,.9)';
+        return (
+        <AbsoluteFill key={i} style={{ background: 'linear-gradient(180deg, rgba(8,3,24,.55) 0%, rgba(8,3,24,0) 30%, rgba(8,3,24,0) 48%, rgba(8,3,24,.92) 72%, rgba(8,3,24,.98) 100%)' }}>
+          {o.kicker && <div style={{ position: 'absolute', left: 0, right: 0, top: '23.5%', display: 'flex', justifyContent: 'center' }}>
+            <div style={{ background: C.red, color: '#fff', fontWeight: 900, fontSize: 64, padding: '6px 40px', borderRadius: 16, letterSpacing: 3, transform: 'rotate(-3deg)', boxShadow: '0 10px 0 #000, 0 20px 50px rgba(0,0,0,.6)' }}>{o.kicker}</div></div>}
+          <div style={{ position: 'absolute', left: 30, right: 30, top: `${o.y ?? 56}%`, textAlign: 'center', transform: 'rotate(-2deg)' }}>
+            {o.lines.map((l, j) => <div key={j} style={{ color: l.c ? col[l.c] : '#fff', fontWeight: 900, fontSize: l.size ?? 150, lineHeight: 1.02, letterSpacing: -2, textShadow: st, whiteSpace: 'nowrap' }}>{l.t}</div>)}
+          </div>
+        </AbsoluteFill>); }
       if (o.type === 'tag') return (
         <div key={i} style={{ position: 'absolute', left: `${o.x}%`, top: `${o.y}%`, transform: `translate(-50%,-50%) scale(${k})`, background: o.color ?? C.blue, color: '#fff', fontWeight: 800, fontSize: o.size ?? 44, padding: '6px 26px', borderRadius: 14, whiteSpace: 'nowrap', boxShadow: '0 8px 30px rgba(0,0,0,.45)' }}>{o.text}</div>);
       return null;

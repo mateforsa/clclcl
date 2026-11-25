@@ -1,0 +1,22 @@
+{
+ "beat": "b02",
+ "frac": 0.92,
+ "overlay": {
+  "kicker": "RÉCORD EN LA BOLSA",
+  "lines": [
+   {
+    "t": "US$ 81.300 M",
+    "c": "yellow",
+    "size": 140
+   },
+   {
+    "t": "Y AL 4º DÍA"
+   },
+   {
+    "t": "CAYÓ",
+    "c": "red",
+    "size": 190
+   }
+  ]
+ }
+}
