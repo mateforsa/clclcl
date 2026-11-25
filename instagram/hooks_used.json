@@ -103,5 +103,10 @@
   "video": "ue-fondo-tech",
   "inicio": "A8 la diferencia (de cada 100 dólares: 52, 40 y 5)",
   "cierre": "Pregunta de dos opciones en una palabra (¿Alcanza o es poco?) + motivo (en febrero, si la plata aparece)"
+ },
+ {
+  "video": "meta-muse",
+  "inicio": "E48 vos como usuario (Abrís WhatsApp y le escribís a un bot)",
+  "cierre": "Pregunta de dos opciones (¿tarjeta a una IA o comprás vos?) + motivo (si Amazon firma)"
  }
 ]

@@ -1,0 +1,3 @@
+{ "beat": "b01", "frac": 0.4,
+  "overlay": { "kicker": "CHAMPIONS",
+    "lines": [ { "t": "EL PSG", "size": 150 }, { "t": "YA NO GANA TODO", "c": "yellow", "size": 104 }, { "t": "SOULÉ, EN LOS DOS GOLES", "size": 70, "c": "cyan" } ] } }

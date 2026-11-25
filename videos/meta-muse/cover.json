@@ -1,3 +1,3 @@
-{ "beat": "b03", "frac": 0.3,
+{ "beat": "b03", "frac": 0.55,
   "overlay": { "kicker": "META · MUSE",
     "lines": [ { "t": "LA IA QUE", "size": 150 }, { "t": "COMPRA POR VOS", "c": "yellow", "size": 112 }, { "t": "Y AMAZON LA BLOQUEÓ", "size": 76, "c": "cyan" } ] } }
