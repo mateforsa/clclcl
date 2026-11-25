@@ -1,0 +1,22 @@
+{
+ "beat": "b01",
+ "frac": 0.92,
+ "overlay": {
+  "kicker": "YOUTUBE SHORTS",
+  "lines": [
+   {
+    "t": "¿POR QUÉ"
+   },
+   {
+    "t": "1.000 VISTAS",
+    "c": "yellow",
+    "size": 140
+   },
+   {
+    "t": "Y SE FRENA?",
+    "c": "red",
+    "size": 140
+   }
+  ]
+ }
+}
