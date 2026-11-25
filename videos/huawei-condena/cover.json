@@ -1,0 +1,3 @@
+{ "beat": "b31", "frac": 0.45,
+  "overlay": { "kicker": "HUAWEI",
+    "lines": [ { "t": "CULPABLE", "c": "red", "size": 180 }, { "t": "EN 10 CARGOS", "c": "yellow", "size": 128 }, { "t": "absuelta en 2 · va a apelar", "size": 66, "c": "cyan" } ] } }
