@@ -247,8 +247,6 @@ export const BEATS: BeatSpec[] = [
   { id: 'b26', set: 'room', cam: { from: [0.9, 2.6, 6.6], to: [-0.4, 2.4, 5.8], look: [0, 1.9, -1.5], fov: 46, shift: 0.0 }, keywords: ['81,91', 'debajo', '83'],
     actors: [
       { type: 'chart', pos: [0, 2.55, -1.6], s: 0.95, p: { pts: PATH, lo: 76, hi: 100, base: 83, baseText: 'PRECIO 83', dur: 3.0, delay: 0.1, days: DAYS, tags: [null, { text: '97,17' }, null, null, { text: '81,91', dy: -0.27, dx: -0.1 }] } },
-      { type: 'person', pos: [0.7, 0, -0.5], rot: [0, -2.7, 0], s: 0.7, p: { ...ANT, pose: 'idle' }, out: 'debajo' },
-      { type: 'person', pos: [0.7, 0, -0.5], rot: [0, -2.7, 0], s: 0.7, at: 'debajo', enter: 'none', p: { ...ANT, pose: 'sad' } },
     ],
     overlays: [{ type: 'big', text: 'US$ 81,91', sub: 'cierre del martes 24', at: '81,91', red: true }, { type: 'pill', text: 'BAJO EL PRECIO INICIAL', at: 'debajo', red: true }] },
   { id: 'b27', set: 'void', cam: { from: [0, 2.4, 9.0], to: [0, 2.2, 8.0], look: [0, 1.5, 0], fov: 46 }, keywords: ['mes', 'cuatro'],

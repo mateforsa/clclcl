@@ -78,7 +78,7 @@ Nota: en esta sesión solo se pudo usar el buscador (los sitios no se podían ab
 | Delta dice que perdió unos US$ 500 M en cinco días | Ed Bastian, CEO de Delta, a CNBC el 31/7/2024 | [NPR](https://www.npr.org/2024/07/31/nx-s1-5058652/delta-crowdstrike-outage-500-million-dollars) · [CBS](https://www.cbsnews.com/news/delta-global-tech-outage-500-million-in-costs) |
 | La acción cae más de un tercio en dos semanas | De US$ 343,05 (18/7) a 217,89 (2/8/2024): -36,5% | [Nasdaq / Motley Fool](https://www.nasdaq.com/articles/heres-how-july-outage-affecting-crowdstrike-today-stock-buy) |
 | En tres meses recupera más de la mitad | A mediados de octubre de 2024 volvió a superar los US$ 300 | [Motley Fool](https://www.fool.com/investing/2024/10/15/crowdstrike-stock-back-300-all-time-high) · [TechRadar](https://techradar.com/pro/crowdstrike-claws-back-market-value-after-triggering-largest-it-outage-in-history) |
-| CrowdStrike: 2011, George Kurtz. Zscaler: 2007, Jay Chaudhry | Datos de las propias empresas. Los dos son cofundadores; el guion dice "te funda" para Kurtz (simplificación) y "cofundó" para Chaudhry | [CrowdStrike](https://www.crowdstrike.com/en-us/about-us/) · [Zscaler](https://www.zscaler.com/company/about-zscaler) |
+| CrowdStrike: 2011, George Kurtz. Zscaler: 2007, Jay Chaudhry | CrowdStrike: 2011, Kurtz con Alperovitch y Marston. Zscaler: 2007, Chaudhry con K. Kailash. Los dos son cofundadores; el guion dice "te funda" para Kurtz (simplificación) y "cofundó" para Chaudhry | [CNBC Disruptor 50 (CrowdStrike)](https://www.cnbc.com/2017/05/15/crowdstrike-2017-disruptor-50.html) · [Comparitech (Zscaler)](https://comparitech.com/net-admin/crowdstrike-vs-zscaler) |
 
 ### Lo que quedó afuera o con matices
 

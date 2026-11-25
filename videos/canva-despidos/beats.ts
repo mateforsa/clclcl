@@ -41,10 +41,9 @@ export const BEATS: BeatSpec[] = [
   { id: 'b03', set: 'room', cam: OFF_CAM, keywords: ['1.271', 'perder', 'cambiar', 'mudarse'],
     actors: [
       { type: 'office', p: { ch: [{ i: 7, t: W('b03', 'perder'), kind: 'out' }, { i: 3, t: W('b03', 'cambiar'), kind: 'role' }, { i: 14, t: W('b03', 'mudarse'), kind: 'move' }] } },
-      { type: 'label', pos: [0, 2.2, -1.4], at: 'avisás', enter: 'drop', p: { text: 'AVISO AL EQUIPO', w: 2.6, h: 0.6, bg: '#15102b', border: C.cyan, size: 0.5 }, out: 'perder' },
     ],
     overlays: [
-      { type: 'pill', text: '4 NOV 2026', at: '4', out: '1.271' },
+      { type: 'pill', text: '4 NOV 2026', at: '4', out: 'avisás' }, { type: 'pill', text: 'AVISO AL EQUIPO', at: 'avisás', out: '1.271' },
       { type: 'big', text: '', count: { to: 1271 }, sub: 'personas afectadas', at: '1.271', red: true, out: 'perder' },
       { type: 'pill', text: 'PIERDEN SU PUESTO', at: 'perder', red: true, out: 'cambiar' },
       { type: 'pill', text: 'CAMBIAN DE ROL', at: 'cambiar', out: 'mudarse' },
@@ -165,7 +164,7 @@ export const BEATS: BeatSpec[] = [
     actors: [
       ...([[-1.12, 'PRODUCTO', C.cyan, 'producto', -0.62], [0, 'CRECIMIENTO', C.magenta, 'crecimiento', 0], [1.12, 'PLATAFORMA', C.gold, 'plataforma', 0.62]] as any[]).flatMap(([x, text, color, at, tx]) => [
         { type: 'box', pos: [x, 0.5, 0] as any, at, p: { size: [0.62, 1.0, 0.8], color, glow: true, ei: 0.25 }, move: { to: [tx, 0.5, 0] as any, at: 'una', dur: 0.5 } },
-        { type: 'label', pos: [x, 1.25, 0] as any, at, p: { text, w: 1.0, h: 0.3, bg: '#15102b', color, size: 0.6 }, out: 'una' },
+        { type: 'label', pos: [x, 0.55, 0.45] as any, at, p: { text, w: 1.04, h: 0.3, bg: '#15102b', color, size: 0.6 }, out: 'una' },
         { type: 'person', pos: [x, 1.0, 0] as any, s: 0.55, at, p: { shirt: color, pose: 'idle' }, move: { to: [tx, 1.0, 0] as any, at: 'una', dur: 0.5 } },
       ]),
       { type: 'ring', pos: [0, 0.03, 0], p: { r: 1.6, color: C.cyan } },
@@ -219,8 +218,8 @@ export const BEATS: BeatSpec[] = [
   { id: 'b23', set: 'room', cam: { from: [-0.7, 2.5, 6.8], to: [0.3, 2.3, 6.0], look: [0, 1.25, -0.6], fov: 46 }, keywords: ['seis', 'sueldo'],
     actors: [
       { type: 'box', pos: [-0.35, 0.45, -1.0], p: { size: [2.9, 0.9, 0.7], color: '#8a5a3a' } },
-      ...Array.from({ length: 6 }, (_, i) => ({ type: 'coins', pos: [-1.55 + i * 0.48, 0.9, -1.0] as any, at: W('b23', 'pagás') + i * 0.22, enter: 'none' as const, p: { n: 6, dur: 0.3, r: 0.19 } })),
-      ...Array.from({ length: 6 }, (_, i) => ({ type: 'label', pos: [-1.55 + i * 0.48, 0.62, -0.64] as any, at: W('b23', 'pagás') + i * 0.22, p: { text: String(i + 1), w: 0.34, h: 0.3, bg: '#15102b', color: C.gold, size: 0.75, weight: 900 } })),
+      ...Array.from({ length: 6 }, (_, i) => ({ type: 'coins', pos: [-1.5 + i * 0.44, 0.9, -1.0] as any, at: W('b23', 'pagás') + i * 0.22, enter: 'none' as const, p: { n: 6, dur: 0.3, r: 0.19 } })),
+      ...Array.from({ length: 6 }, (_, i) => ({ type: 'label', pos: [-1.5 + i * 0.44, 0.62, -0.64] as any, at: W('b23', 'pagás') + i * 0.22, p: { text: String(i + 1), w: 0.34, h: 0.3, bg: '#15102b', color: C.gold, size: 0.75, weight: 900 } })),
       { type: 'person', pos: [1.3, 0, 0.3], rot: [0, -0.6, 0], s: 0.9, p: { shirt: C.cyan, hair: '#7a3b1a', pose: 'hold' } },
       { type: 'box', pos: [1.08, 0.9, 0.62], rot: [0, -0.6, 0], p: { size: [0.46, 0.32, 0.34], color: '#c98d62' } },
       { type: 'globe', pos: [-1.1, 2.5, -1.8], s: 0.45, at: 'vivan' },
