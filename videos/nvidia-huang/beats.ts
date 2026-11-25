@@ -1,0 +1,323 @@
+import type { BeatSpec } from '../../src/Beat';
+import { C } from '../../src/kit/math';
+
+type V3 = [number, number, number];
+const HU = { shirt: '#17131f', pants: '#221c33', hair: '#cfd0dc', skin: '#e8b98f' };          // muñeco "Huang" (genérico, campera negra)
+const HU93 = { ...HU, hair: '#15102b' };
+const KR = { shirt: '#2f6bff', pants: '#2a2350', hair: '#c98a3a', skin: '#f2c39b' };            // muñeco "Kress" (genérico)
+const TR = { shirt: '#1b2a5c', pants: '#1b2a5c', hair: '#e8c66a', skin: '#f2c39b' };            // muñeco "Trump" (genérico)
+const DARK = '#15102b';
+const chair = (pos: V3, s = 1.2, x: any = {}) => ({ type: 'chair', pos, s, ...x });
+const seated = (pos: V3, s = 1.2, x: any = {}, look: any = HU) => ({ type: 'person', pos: [pos[0], pos[1] + 0.57 * s - 0.4, pos[2] + 0.06] as V3, p: { ...look, pose: 'sit' }, ...x });
+const NV = (pos: V3, x: any = {}) => ({ type: 'building', pos, p: { w: 2.6, h: 2.7, d: 1.6, seed: 7, color: '#2d1a6e', sign: 'NVIDIA' }, ...x });
+const price = (v: number) => ((v - 100) / 80) * 2.4;
+
+export const BEATS: BeatSpec[] = [
+  /* ---------- GANCHO ---------- */
+  { id: 'b01', cam: { from: [0.9, 2.5, 8.4], to: [0, 2.2, 7.0], look: [0, 1.25, 0], fov: 44 }, keywords: ['Nvidia', '1993'],
+    actors: [
+      NV([0, 0, -3.2]),
+      { type: 'ring', pos: [0, 0.03, 0.4], p: { r: 0.95, color: C.cyan } },
+      chair([0, 0, 0.4], 1.25), seated([0, 0, 0.4], 1.25),
+      { type: 'chip', pos: [1.15, 2.0, 0.5], rot: [1.25, 0, 0], s: 0.6, at: 'persona', bob: 0.06, spin: 0.8 },
+      { type: 'label', pos: [-0.95, 2.3, 0], at: 'dirige', bob: 0.04, p: { text: 'CEO', w: 0.95, h: 0.42, bg: DARK, border: C.gold, color: C.gold, size: 0.62, weight: 900 } },
+    ],
+    overlays: [
+      { type: 'plate', name: 'NVIDIA', role: 'vos', at: 'Nvidia', out: 'dirige' },
+      { type: 'pill', text: 'EL MISMO CEO DESDE 1993', at: '1993' },
+    ] },
+  { id: 'b02', set: 'void', cam: { from: [-0.9, 2.6, 8.2], to: [0.3, 2.3, 7.2], look: [0, 1.35, 0], fov: 44 }, keywords: ['vacía', '11'],
+    actors: [
+      { type: 'ring', pos: [0, 0.03, 0], p: { r: 1.0, color: C.cyan }, out: 'vacía' },
+      { type: 'ring', pos: [0, 0.03, 0], p: { r: 1.0, color: C.red }, at: 'vacía', enter: 'none' },
+      chair([0, 0, 0], 1.45), seated([0, 0, 0], 1.45, { out: 'silla' }),
+      { type: 'calendar', pos: [-1.05, 2.9, -0.6], rot: [0, 0.25, 0], s: 0.5, at: '2026', p: { top: 'NOVIEMBRE', big: '2026' } },
+      { type: 'label', pos: [1.05, 2.8, -0.4], at: 'vacía', bob: 0.05, p: { text: '?', w: 0.8, h: 0.8, size: 0.95, color: C.red, weight: 900 } },
+    ],
+    overlays: [{ type: 'big', text: '11 DÍAS', sub: 'con la silla vacía', at: '11', red: true }] },
+  { id: 'b03', cam: { from: [0.5, 1.9, 8.8], to: [-0.3, 3.0, 11.5], look: [0, 1.3, 0], lookTo: [0, 1.7, 0], fov: 46 }, keywords: ['952.000'],
+    actors: [
+      { type: 'ring', pos: [0, 0.03, 0.5], p: { r: 0.9, color: C.gold } },
+      chair([0, 0, 0.5], 1.25), seated([0, 0, 0.5], 1.25, { at: 'ocupar', enter: 'drop' }),
+      { type: 'coins', pos: [-1.5, 0, 0], at: 'sumás', enter: 'none', p: { n: 26, dur: 1.3 } },
+      { type: 'coins', pos: [-0.95, 0, -0.7], at: '952', enter: 'none', p: { n: 40, dur: 1.5 } },
+      { type: 'coins', pos: [0.95, 0, -0.7], at: '952', enter: 'none', p: { n: 44, dur: 1.7 } },
+      { type: 'coins', pos: [1.5, 0, 0], at: 'dólares', enter: 'none', p: { n: 30, dur: 1.3 } },
+    ],
+    overlays: [{ type: 'big', text: '', count: { to: 952000, pre: 'US$ ', post: ' M' }, sub: 'de valor en una jornada', at: '952', size: 100 }] },
+  { id: 'b04', set: 'room', cam: { from: [1.0, 2.6, 6.0], to: [0.1, 2.3, 5.0], look: [0, 1.6, -1.0], fov: 46 }, keywords: ['investigación', 'abierta'],
+    actors: [
+      { type: 'desk', pos: [0, 0, -0.9], s: 1.5 },
+      { type: 'doc', pos: [-0.15, 2.05, -0.9], rot: [-0.12, 0.15, -0.04], s: 1.15, p: { title: 'EXPEDIENTE', color: C.red } },
+      { type: 'lupa', pos: [0.2, 2.0, -0.4], p: { r: 0.55, sweep: 0.4, sweepY: 0.15 } },
+    ],
+    overlays: [{ type: 'pill', text: 'INVESTIGACIÓN ABIERTA', at: 'sigue', red: true }] },
+
+  /* ---------- CÓMO LLEGAMOS ---------- */
+  { id: 'b05', set: 'room', cam: { from: [-1.1, 2.6, 6.4], to: [0.2, 2.3, 5.4], look: [0, 1.3, -1.0], fov: 46 }, keywords: ['1993', 'Jensen Huang', 'CEO'],
+    actors: [
+      { type: 'desk', pos: [0, 0, -0.7], s: 1.35 },
+      { type: 'screen', pos: [-2.0, 2.5, -3.8], p: { kind: 'code', w: 1.7, h: 1.0 } },
+      { type: 'person', pos: [0, 0, -1.4], p: { ...HU93, pose: 'idle' }, out: 'funda' },
+      { type: 'person', pos: [0, 0, -1.4], at: 'funda', enter: 'none', p: { ...HU93, pose: 'hold' } },
+      { type: 'chip', pos: [0, 1.22, -0.5], rot: [0.55, 0, 0], s: 0.5, at: 'funda' },
+      { type: 'person', pos: [-1.3, 0, -1.0], rot: [0, 0.5, 0], at: 'dos', p: { shirt: '#3ee07a', hair: '#7a3b1a', pose: 'idle' } },
+      { type: 'person', pos: [1.3, 0, -1.0], rot: [0, -0.5, 0], at: 'socios', p: { shirt: '#8a6bff', hair: '#3a2a1a', skin: '#c98d62', pose: 'idle' } },
+      { type: 'label', pos: [0, 2.3, -1.4], at: 'CEO', bob: 0.04, p: { text: 'CEO', w: 0.9, h: 0.4, bg: DARK, border: C.gold, color: C.gold, size: 0.62, weight: 900 } },
+    ],
+    overlays: [{ type: 'pill', text: '1993', at: 0.15 }, { type: 'plate', name: 'JENSEN HUANG', role: 'cofundador', at: 'Jensen', out: 'queda', y: 64 }] },
+  { id: 'b06', set: 'void', cam: { from: [1.3, 1.9, 7.6], to: [0.2, 2.3, 8.2], look: [0, 1.5, 0], fov: 46 }, keywords: ['33'],
+    actors: [
+      { type: 'ring', pos: [0, 0.03, 0.2], p: { r: 0.9, color: C.gold } },
+      chair([0, 0, 0.2], 1.2), seated([0, 0, 0.2], 1.2),
+      { type: 'calendar', pos: [-1.0, 2.75, -0.3], rot: [0, 0.25, 0], s: 0.55, p: { top: 'AÑO', big: '1993', color: C.blue } },
+      { type: 'arrow', pos: [-0.45, 2.75, -0.2], rot: [0, 0, -Math.PI / 2], at: 'puesto', enter: 'none', s: 0.6, p: { len: 0.9, color: C.gold, dur: 0.6 } },
+      { type: 'calendar', pos: [1.0, 2.75, -0.3], rot: [0, -0.25, 0], s: 0.55, at: 'Son', p: { top: 'AÑO', big: '2026', color: C.magenta } },
+    ],
+    overlays: [{ type: 'big', text: '33 AÑOS', sub: 'en el mismo puesto', at: '33' }] },
+
+  /* ---------- ACTO 1 ---------- */
+  { id: 'b07', cam: { from: [0.6, 2.4, 8.4], to: [-0.2, 2.3, 7.8], look: [0, 1.4, 0], fov: 46 },
+    actors: [
+      NV([-0.6, 0, -3]), chair([-0.7, 0, 0.2], 1.2),
+      { type: 'person', pos: [0.2, 0, 0.6], rot: [0, Math.PI / 2, 0], p: { ...HU, pose: 'walk' }, move: { to: [1.6, 0, 0.6], at: 0, dur: 2.0 } },
+    ],
+    overlays: [{ type: 'chapter', n: 'ACTO 1', title: 'LA SALIDA', at: 0 }] },
+  { id: 'b08', set: 'room', cam: { from: [1.1, 2.6, 6.4], to: [0.1, 2.3, 5.5], look: [0.1, 1.4, -1.0], fov: 46 }, keywords: ['Huang', 'admite'],
+    actors: [
+      { type: 'desk', pos: [-0.7, 0, -0.9], s: 1.25 },
+      { type: 'laptop', pos: [-0.7, 1.0, -0.8], rot: [0, Math.PI, 0], s: 0.75 },
+      { type: 'person', pos: [-0.7, 0, -1.6], s: 1.15, p: { ...HU, pose: 'idle' }, out: 'escribe' },
+      { type: 'person', pos: [-0.7, 0, -1.6], s: 1.15, at: 'escribe', enter: 'none', p: { ...HU, pose: 'type' }, out: 'admite' },
+      { type: 'person', pos: [-0.7, 0, -1.6], s: 1.15, at: 'admite', enter: 'none', p: { ...HU, pose: 'sad' } },
+      ...[[0.5, 2.5], [1.3, 2.1], [0.75, 1.75], [1.45, 1.35], [0.4, 1.3], [1.0, 2.75]].map(([x, y], i) => ({ type: 'mail', pos: [-0.7, 1.5, -0.7] as V3, s: 0.8, at: 'escribe', bob: 0.04 + i * 0.006,
+        move: { to: [x, y, -0.3 + (i % 3) * 0.25] as V3, at: 'escribe', dur: 0.5 + i * 0.22 } })),
+      { type: 'crowd', pos: [1.1, 0, -1.0], at: 'empleados', enter: 'none', p: { n: 5, area: [1.6, 0.8], seed: 14, stagger: 0.08, sc: 0.62, face: Math.PI } },
+    ],
+    overlays: [{ type: 'pill', text: 'DOMINGO 8 DE NOVIEMBRE', at: 0.1, out: 'admite' }, { type: 'pill', text: 'ADMITE UNA RELACIÓN', at: 'admite', red: true }] },
+  { id: 'b09', cam: { from: [-0.9, 2.5, 8.6], to: [0.3, 2.3, 7.7], look: [0, 1.5, 0], fov: 46 }, keywords: ['NBC News', 'fuente', 'creen'],
+    actors: [
+      { type: 'screen', pos: [-0.8, 1.75, 0], rot: [0, 0.2, 0], s: 1.0, p: { kind: 'text', text: 'NBC NEWS', w: 1.5, h: 0.85, stand: true } },
+      { type: 'box', pos: [-0.8, 0.45, 0], p: { size: [1.0, 0.9, 0.6], color: '#2d1a6e' } },
+      { type: 'building', pos: [1.0, 0, -3.2], at: 'agencias', enter: 'grow', p: { w: 2.1, h: 2.5, d: 1.5, seed: 33, color: '#241659', sign: 'INTELIGENCIA EE.UU.' } },
+      { type: 'ring', pos: [0.95, 0.03, 0.5], at: 'mujer', p: { r: 0.6, color: C.magenta } },
+      { type: 'person', pos: [0.95, 0, 0.5], at: 'mujer', p: { shirt: '#7468c4', pants: '#5b50a8', skin: '#7468c4', hair: '#4a4190', pose: 'idle' } },
+      { type: 'label', pos: [0.95, 2.35, 0.5], at: 'espía', bob: 0.05, p: { text: '?', w: 0.7, h: 0.7, size: 0.95, color: C.gold, weight: 900 } },
+    ],
+    overlays: [{ type: 'pill', text: 'SEGÚN UNA FUENTE DE NBC NEWS', at: 'fuente' }] },
+  { id: 'b10', set: 'room', cam: { from: [-0.9, 2.7, 6.6], to: [0.2, 2.4, 5.7], look: [0, 1.5, -1.0], fov: 46 }, keywords: ['directorio', 'independiente', 'secreto'],
+    actors: [
+      { type: 'desk', pos: [0, 0, -0.8], s: 1.6 },
+      { type: 'crowd', pos: [0, 0, -1.9], enter: 'none', p: { n: 5, area: [3.4, 0.4], seed: 29, stagger: 0, sc: 0.85, face: Math.PI } },
+      { type: 'doc', pos: [-0.6, 1.95, -0.7], rot: [-0.1, 0.2, 0], s: 0.95, at: 'investigación', p: { title: 'INVESTIGACIÓN', color: C.blue } },
+      { type: 'lupa', pos: [-0.4, 1.9, -0.3], at: 'independiente', p: { r: 0.42, sweep: 0.25, sweepY: 0.1 } },
+      { type: 'chip', pos: [0.85, 1.75, -0.6], rot: [1.2, 0, 0], s: 0.55, at: 'motivos' },
+      { type: 'shield', pos: [0.85, 1.85, -0.2], s: 0.95, at: 'filtró', bob: 0.03 },
+    ],
+    overlays: [{ type: 'pill', text: 'INVESTIGACIÓN INDEPENDIENTE', at: 'investigación', out: 'Aclara' }, { type: 'pill', text: 'SEGÚN EL DIRECTORIO', at: 'Aclara' }] },
+  { id: 'b11', cam: { from: [0.9, 2.4, 8.6], to: [-0.2, 2.3, 7.7], look: [0.1, 1.35, 0], fov: 46 }, keywords: ['renuncia'],
+    actors: [
+      NV([0.9, 0, -3.2]),
+      { type: 'ring', pos: [-0.7, 0.03, 0.2], p: { r: 0.85, color: C.red } },
+      chair([-0.7, 0, 0.2], 1.2), seated([-0.7, 0, 0.2], 1.2, { out: 'renuncia' }),
+      { type: 'person', pos: [-0.1, 0, 0.7], rot: [0, Math.PI / 2, 0], at: 'renuncia', enter: 'none', p: { ...HU, pose: 'walk' }, move: { to: [1.25, 0, 0.7], at: 'renuncia', dur: 2.6 } },
+      { type: 'label', pos: [-0.7, 2.75, 0.2], at: 'explica', bob: 0.05, p: { text: '?', w: 0.8, h: 0.8, size: 0.95, color: C.red, weight: 900 } },
+    ],
+    overlays: [{ type: 'pill', text: '12 DE NOVIEMBRE · RENUNCIA', at: 'renuncia', red: true }] },
+  { id: 'b12', set: 'void', cam: { from: [-1.0, 2.3, 8.2], to: [0.2, 2.2, 7.4], look: [0, 1.3, 0], fov: 46 }, keywords: ['Colette Kress', 'interina'],
+    actors: [
+      chair([0.75, 0, 0], 1.2),
+      { type: 'ring', pos: [-0.6, 0.03, 0.4], p: { r: 0.6, color: C.blue } },
+      { type: 'coins', pos: [-1.45, 0, -0.5], enter: 'none', p: { n: 10, dur: 0.01 } },
+      { type: 'person', pos: [-0.6, 0, 0.4], p: { ...KR, pose: 'hold' }, out: 'queda' },
+      { type: 'doc', pos: [-0.6, 1.2, 0.75], s: 0.42, p: { color: C.green }, out: 'queda' },
+      { type: 'person', pos: [-0.6, 0, 0.4], rot: [0, 0.5, 0], at: 'queda', enter: 'none', p: { ...KR, pose: 'point' } },
+      { type: 'label', pos: [0.75, 2.55, 0], at: 'interina', bob: 0.04, p: { text: 'INTERINA', w: 1.35, h: 0.4, bg: C.magenta, size: 0.62, weight: 900 } },
+    ],
+    overlays: [{ type: 'plate', name: 'COLETTE KRESS', role: 'directora financiera', at: 'Colette', y: 68 }] },
+  { id: 'b13', cam: { from: [0.8, 2.5, 8.6], to: [-0.3, 2.3, 7.8], look: [0, 1.4, 0], fov: 46 }, keywords: ['17', 'no'],
+    actors: [
+      { type: 'crowd', pos: [-0.75, 0, 0], enter: 'none', p: { n: 4, area: [1.7, 0.7], seed: 29, stagger: 0, sc: 0.85, face: Math.PI } },
+      { type: 'person', pos: [1.0, 0, 0.3], rot: [0, -0.4, 0], p: { ...HU, pose: 'idle' }, out: 'no' },
+      { type: 'person', pos: [1.0, 0, 0.3], rot: [0, -0.4, 0], at: 'no', enter: 'none', p: { ...HU, pose: 'sad' } },
+      { type: 'cross', pos: [1.0, 2.35, 0.3], at: 'no', p: { size: 0.7 } },
+      { type: 'calendar', pos: [-0.9, 2.75, -0.4], rot: [0, 0.2, 0], s: 0.55, at: 0.1, p: { top: 'NOVIEMBRE', big: '17' } },
+    ],
+    overlays: [{ type: 'pill', text: 'EL DIRECTORIO: NO VUELVE', at: 'no', red: true }] },
+
+  /* ---------- ACTO 2 ---------- */
+  { id: 'b14', set: 'void', cam: { from: [-0.5, 2.3, 8.2], to: [0.2, 2.2, 7.6], look: [0, 1.6, 0], fov: 46 },
+    actors: [{ type: 'chart', pos: [0, 0.5, 0], p: { pts: [2.3, 2.1, 2.2, 1.6, 1.2, 0.5], w: 2.9, h: 2.6, dur: 1.5 } }],
+    overlays: [{ type: 'chapter', n: 'ACTO 2', title: 'LA CAÍDA', at: 0 }] },
+  { id: 'b15', set: 'void', cam: { from: [0.8, 2.4, 8.4], to: [-0.2, 2.3, 7.6], look: [0, 1.75, 0], fov: 46 }, keywords: ['173'],
+    actors: [
+      { type: 'chart', pos: [0, 1.15, 0], p: { pts: [1.5, 1.62, 1.5, 1.7, 1.6, 1.78, 1.72, 1.85], w: 2.9, h: 2.2, dur: 2.4 } },
+    ],
+    overlays: [{ type: 'pill', text: 'ANTES DE LA RENUNCIA', at: 'antes' }, { type: 'big', text: 'US$ 173', sub: 'cierre del 11 de noviembre', at: '173' }] },
+  { id: 'b16', cam: { from: [-1.0, 2.5, 8.8], to: [0.3, 2.3, 7.9], look: [0, 1.45, 0], fov: 46 }, keywords: ['Reuters', 'SEC', 'investiga'],
+    actors: [
+      { type: 'calendar', pos: [-0.95, 2.8, -0.2], rot: [0, 0.2, 0], s: 0.55, at: 0.1, p: { top: 'VIERNES', big: '20' } },
+      { type: 'box', pos: [-0.9, 0.35, 0.3], p: { size: [1.0, 0.7, 0.6], color: '#2d1a6e' } },
+      { type: 'screen', pos: [-0.9, 1.45, 0.3], rot: [0, 0.2, 0], at: 'Reuters', p: { kind: 'text', text: 'REUTERS', w: 1.4, h: 0.8, stand: true } },
+      { type: 'building', pos: [0.95, 0, -2.6], at: 'SEC', enter: 'grow', p: { w: 1.9, h: 2.6, d: 1.4, seed: 51, color: '#241659', sign: 'SEC' } },
+      { type: 'doc', pos: [0.9, 1.1, 0.6], rot: [-0.1, -0.2, 0], s: 0.95, at: 'investiga', p: { title: 'CONTABILIDAD', color: C.green } },
+      { type: 'lupa', pos: [1.0, 1.1, 1.0], at: 'investiga', p: { r: 0.42, sweep: 0.2, sweepY: 0.12 } },
+    ],
+    overlays: [{ type: 'plate', name: 'SEC', role: 'regulador de Wall Street', at: 'SEC', out: 'investiga', y: 66 }, { type: 'pill', text: 'INVESTIGA LA CONTABILIDAD', at: 'investiga', red: true }] },
+  { id: 'b17', set: 'room', cam: { from: [0.9, 2.7, 6.4], to: [-0.1, 2.4, 5.6], look: [0, 1.6, -1.0], fov: 46 }, keywords: ['no', 'sin'],
+    actors: [
+      { type: 'desk', pos: [0, 0, -0.9], s: 1.6 },
+      ...[-1.0, 0, 1.0].map((x, i) => ({ type: 'doc', pos: [x, 1.95, -0.9] as V3, rot: [-0.1, -x * 0.2, 0] as V3, s: 0.72, p: { color: [C.blue, C.red, '#8a6bff'][i] } })),
+      { type: 'lupa', pos: [0, 1.95, -0.4], p: { r: 0.42, sweep: 0.95, sweepY: 0.08 } },
+      { type: 'label', pos: [-1.0, 1.95, -0.6], rot: [0, 0, 0.12], at: 'cierran', p: { text: 'CERRADA', w: 0.95, h: 0.3, bg: '#8d8aa0', size: 0.62, weight: 900 } },
+      { type: 'label', pos: [1.0, 1.95, -0.6], rot: [0, 0, -0.1], at: 'sin', p: { text: 'CERRADA', w: 0.95, h: 0.3, bg: '#8d8aa0', size: 0.62, weight: 900 } },
+    ],
+    overlays: [{ type: 'pill', text: 'INVESTIGAR NO ES PROBAR', at: 'prueba' }] },
+  { id: 'b18', set: 'void', cam: { from: [-0.7, 2.5, 8.4], to: [0.3, 2.3, 7.6], look: [0, 1.75, 0], fov: 46 }, keywords: ['14'],
+    actors: [
+      { type: 'chart', pos: [0, 1.15, 0], p: { pts: [1.95, 1.85, 1.92, 1.8, 1.7, 0.45], w: 2.9, h: 2.2, dur: 1.5, start: 0.3 } },
+      { type: 'arrow', pos: [-0.7, 2.3, 0.3], rot: [0, 0, Math.PI], at: 'caés', enter: 'none', s: 0.8, p: { len: 1.0, color: C.red } },
+    ],
+    overlays: [{ type: 'big', text: '−14%', sub: 'viernes 20 de noviembre', at: '14', red: true }] },
+  { id: 'b19', cam: { from: [0.9, 2.3, 8.6], to: [-0.3, 2.6, 9.0], look: [0, 1.6, 0], fov: 46 }, keywords: ['125', '28'],
+    actors: [
+      { type: 'bars', pos: [0, 0, 0], p: { vals: [2.77, 2.0], colors: [C.gold, C.red], w: 0.95, gap: 0.45, dur: 0.6, stagger: 0.5 } },
+      { type: 'label', pos: [-0.7, 3.02, 0], at: 0.3, p: { text: 'US$ 173', w: 1.15, h: 0.36, bg: DARK, color: C.gold, size: 0.62, weight: 800 } },
+      { type: 'label', pos: [0.7, 2.25, 0], at: '125', p: { text: 'US$ 125', w: 1.15, h: 0.36, bg: DARK, color: C.red, size: 0.62, weight: 800 } },
+      { type: 'arrow', pos: [0.7, 3.25, 0], rot: [0, 0, Math.PI], at: 'perdiste', enter: 'none', s: 0.6, p: { len: 0.9, color: C.red } },
+    ],
+    overlays: [{ type: 'big', text: '−28%', sub: 'en siete jornadas', at: '28', red: true }] },
+
+  /* ---------- ACTO 3 ---------- */
+  { id: 'b20', cam: { from: [-0.6, 2.4, 8.4], to: [0.2, 2.3, 7.8], look: [0, 1.4, 0], fov: 46 },
+    actors: [
+      NV([0.5, 0, -3]), chair([-0.6, 0, 0.2], 1.2),
+      { type: 'person', pos: [1.7, 0, 0.6], rot: [0, -Math.PI / 2, 0], p: { ...HU, pose: 'walk' }, move: { to: [0.3, 0, 0.6], at: 0, dur: 2.0 } },
+    ],
+    overlays: [{ type: 'chapter', n: 'ACTO 3', title: 'LA VUELTA', at: 0 }] },
+  { id: 'b21', set: 'room', cam: { from: [1.0, 2.7, 6.8], to: [0, 2.4, 5.9], look: [0, 1.4, -1.0], fov: 46 }, keywords: ['unanimidad', 'CEO'],
+    actors: [
+      { type: 'crowd', pos: [0, 0, -2.2], enter: 'none', p: { n: 5, area: [3.6, 0.4], seed: 29, stagger: 0, sc: 0.85, face: Math.PI } },
+      ...[-1.44, -0.72, 0, 0.72, 1.44].map((x, i) => ({ type: 'check', pos: [x, 2.15, -2.1] as V3, at: 'vota', p: { size: 0.42 }, s: 1, bob: 0.03 + i * 0.004 })),
+      chair([0, 0, -0.2], 1.15), seated([0, 0, -0.2], 1.15, { at: 'vuelve', enter: 'drop' }),
+      { type: 'label', pos: [0, 3.0, -2.2], at: 'CEO', p: { text: 'CEO', w: 0.95, h: 0.42, bg: DARK, border: C.gold, color: C.gold, size: 0.62, weight: 900 } },
+    ],
+    overlays: [{ type: 'pill', text: 'LUNES 23 DE NOVIEMBRE', at: 0.1, out: 'unanimidad' }, { type: 'pill', text: 'VOTO UNÁNIME', at: 'unanimidad' }] },
+  { id: 'b22', cam: { from: [-0.9, 2.5, 8.6], to: [0.3, 2.3, 7.8], look: [0, 1.5, 0], fov: 46 }, keywords: ['gobierno', 'seguridad'],
+    actors: [
+      { type: 'doc', pos: [-0.8, 1.45, 0.3], rot: [-0.06, 0.25, 0], s: 1.45, p: { title: 'COMUNICADO', color: '#2d1a6e', lines: 7 } },
+      { type: 'building', pos: [1.0, 0, -3.0], at: 'gobierno', enter: 'grow', p: { w: 2.1, h: 2.4, d: 1.5, seed: 61, color: '#241659', sign: 'GOBIERNO' } },
+      { type: 'shield', pos: [0.95, 1.35, 0.6], s: 1.15, at: 'riesgo', bob: 0.04 },
+    ],
+    overlays: [{ type: 'pill', text: 'SEGÚN EL COMUNICADO', at: 'dice' }] },
+  { id: 'b23', set: 'void', cam: { from: [0.9, 2.4, 8.2], to: [-0.2, 2.2, 7.4], look: [0, 1.4, 0], fov: 46 }, keywords: ['Trump', 'CNBC', 'directorio'],
+    actors: [
+      { type: 'ring', pos: [-0.8, 0.03, 0.4], p: { r: 0.6, color: C.gold } },
+      { type: 'person', pos: [-0.8, 0, 0.4], rot: [0, 0.4, 0], p: { ...TR, pose: 'idle' }, out: 'habló' },
+      { type: 'person', pos: [-0.8, 0, 0.4], rot: [0, 0.4, 0], at: 'habló', enter: 'none', p: { ...TR, pose: 'hold' } },
+      { type: 'phone', pos: [-0.62, 1.12, 0.85], rot: [0, 0.4, 0], s: 0.5, at: 'habló' },
+      { type: 'screen', pos: [0.85, 2.35, -0.3], rot: [0, -0.2, 0], at: 'CNBC', p: { kind: 'text', text: 'CNBC', w: 1.4, h: 0.8 } },
+      { type: 'crowd', pos: [0.9, 0, 0.3], at: 'directorio', enter: 'none', p: { n: 4, area: [1.5, 0.6], seed: 29, stagger: 0.07, sc: 0.7, face: Math.PI } },
+    ],
+    overlays: [{ type: 'plate', name: 'DONALD TRUMP', role: 'presidente de EE.UU.', at: 0.1, out: 'habló', y: 67 }, { type: 'pill', text: 'LO CONTÓ ÉL EN CNBC', at: 'habló' }] },
+  { id: 'b24', set: 'void', cam: { from: [-0.8, 2.4, 8.4], to: [0.2, 2.3, 7.6], look: [0, 1.75, 0], fov: 46 }, keywords: ['31', '165'],
+    actors: [
+      { type: 'chart', pos: [0, 1.15, 0], p: { pts: [1.5, 1.2, 0.95, 0.7, 0.45, 1.95], w: 2.9, h: 2.2, dur: 1.6, start: 0.2 } },
+      { type: 'arrow', pos: [0.75, 1.6, 0.3], at: 'sube', enter: 'none', s: 0.8, p: { len: 1.0, color: C.green } },
+    ],
+    overlays: [{ type: 'big', text: '+31%', sub: 'cierra en US$ 165', at: '31' }] },
+  { id: 'b25', cam: { from: [-0.6, 1.8, 8.6], to: [0.5, 3.0, 11.0], look: [0, 1.3, 0], lookTo: [0, 1.9, 0], fov: 46 }, keywords: ['952.000', 'Ninguna'],
+    actors: [
+      { type: 'box', pos: [0, 0.45, 0.4], p: { size: [1.0, 0.9, 1.0], color: '#2d1a6e' } },
+      { type: 'chip', pos: [0, 1.6, 0.4], rot: [1.2, 0, 0], s: 0.85, bob: 0.06 },
+      { type: 'ring', pos: [0, 0.03, 0.4], p: { r: 0.95, color: C.gold } },
+      { type: 'coins', pos: [-1.5, 0, 0], at: 0.2, enter: 'none', p: { n: 30, dur: 1.4 } },
+      { type: 'coins', pos: [-0.9, 0, -0.9], at: '952', enter: 'none', p: { n: 46, dur: 1.6 } },
+      { type: 'coins', pos: [0.9, 0, -0.9], at: '952', enter: 'none', p: { n: 50, dur: 1.8 } },
+      { type: 'coins', pos: [1.5, 0, 0], at: 'dólares', enter: 'none', p: { n: 34, dur: 1.3 } },
+      { type: 'coins', pos: [0, 0, -1.6], at: 'Ninguna', enter: 'none', p: { n: 58, dur: 1.6 } },
+    ],
+    overlays: [{ type: 'pill', text: 'RÉCORD HISTÓRICO', at: 'Ninguna' }, { type: 'big', text: '', count: { to: 952000, pre: 'US$ ', post: ' M' }, sub: 'sumados en un solo día', at: '952', size: 100 }] },
+  { id: 'b26', cam: { from: [0.9, 2.5, 9.0], to: [-0.3, 2.4, 8.2], look: [0, 1.7, 0], fov: 46 }, keywords: ['Taiwán', 'TSMC', '158.000'],
+    actors: [
+      { type: 'globe', pos: [0, 1.9, -0.5], s: 0.75, at: 0.1, out: 'TSMC' },
+      { type: 'building', pos: [0, 0, -2.4], at: 'TSMC', enter: 'grow', p: { w: 2.6, h: 2.4, d: 1.5, seed: 71, color: '#2d1a6e', sign: 'TSMC' } },
+      { type: 'box', pos: [0, 0.6, 0.3], p: { size: [3.4, 1.2, 0.8], color: '#241659' } },
+      { type: 'box', pos: [0, 1.22, 0.3], p: { size: [3.4, 0.06, 0.84], color: C.cyan, glow: true } },
+      ...[-1.2, -0.4, 0.4, 1.2].map((x, i) => ({ type: 'chip', pos: [x, 1.72, 0.3] as V3, rot: [1.25, 0, 0] as V3, s: 0.55, at: 'fabrica', bob: 0.02, p: { core: [C.green, C.cyan, C.green, C.cyan][i] } })),
+      { type: 'coins', pos: [-1.75, 0, -1.0], at: 'suma', enter: 'none', p: { n: 34, dur: 1.2 } },
+      { type: 'coins', pos: [1.75, 0, -1.0], at: '158', enter: 'none', p: { n: 38, dur: 1.2 } },
+    ],
+    overlays: [{ type: 'pill', text: 'TAIWÁN · MARTES 24', at: 'Taiwán' }, { type: 'big', text: '', count: { to: 158000, pre: 'US$ ', post: ' M' }, sub: 'suma TSMC en un día', at: '158', size: 100 }] },
+
+  /* ---------- GIRO ---------- */
+  { id: 'b27', set: 'room', cam: { from: [0.8, 2.5, 5.8], to: [0.1, 2.3, 5.0], look: [0, 1.75, -1.0], fov: 46 }, keywords: ['número'],
+    actors: [
+      { type: 'desk', pos: [0, 0, -1.0], s: 1.5 },
+      { type: 'label', pos: [0, 1.95, -1.0], p: { text: '952.000 M', w: 2.5, h: 0.85, bg: DARK, border: C.gold, color: C.gold, size: 0.58, weight: 900, depth: 0.14 } },
+      { type: 'lupa', pos: [0, 1.95, -0.5], p: { r: 0.55, sweep: 0.8, sweepY: 0.05 } },
+    ] },
+  { id: 'b28', set: 'void', cam: { from: [-0.8, 2.5, 8.6], to: [0.3, 2.3, 7.8], look: [0, 1.85, 0], fov: 46 }, keywords: ['6', '155', '173'],
+    actors: [
+      { type: 'chart', pos: [0, 1.0, 0], p: { pts: [173, 168, 160, 150, 146, 140, 125.5, 165, 155.4].map(price), w: 3.0, h: 2.5, dur: 3.2, refY: price(173.7) } },
+      { type: 'label', pos: [-0.9, 3.45, 0.1], at: 0.2, p: { text: '173', w: 0.7, h: 0.3, bg: DARK, color: C.gold, size: 0.7, weight: 900 } },
+      { type: 'label', pos: [0.45, 1.5, 0.1], at: 2.3, p: { text: '125', w: 0.7, h: 0.3, bg: DARK, color: C.red, size: 0.7, weight: 900 } },
+      { type: 'label', pos: [0.55, 3.1, 0.1], at: 2.9, p: { text: '165', w: 0.7, h: 0.3, bg: DARK, color: C.green, size: 0.7, weight: 900 } },
+      { type: 'label', pos: [1.2, 2.25, 0.1], at: '155', p: { text: '155', w: 0.7, h: 0.3, bg: DARK, color: '#fff', size: 0.7, weight: 900 } },
+    ],
+    overlays: [{ type: 'pill', text: 'MARTES 24: −5,9%', at: '6', red: true }, { type: 'big', text: 'US$ 155', sub: 'antes de la renuncia: US$ 173', at: '155' }] },
+  { id: 'b29', set: 'room', cam: { from: [-0.9, 2.7, 6.4], to: [0.1, 2.4, 5.6], look: [0, 1.6, -1.0], fov: 46 }, keywords: ['sigue', 'SEC'],
+    actors: [
+      { type: 'desk', pos: [0, 0, -0.9], s: 1.7 },
+      { type: 'doc', pos: [-0.85, 2.0, -0.9], rot: [-0.1, 0.18, 0], s: 0.95, p: { title: 'DIRECTORIO', color: C.blue } },
+      { type: 'lupa', pos: [-0.75, 1.9, -0.4], at: 'sigue', p: { r: 0.38, sweep: 0.2, sweepY: 0.1 } },
+      { type: 'doc', pos: [0.85, 2.0, -0.9], rot: [-0.1, -0.18, 0], s: 0.95, at: 'La#2', p: { title: 'SEC', color: C.red } },
+      { type: 'lupa', pos: [0.95, 1.9, -0.4], at: 'SEC', p: { r: 0.38, sweep: 0.2, sweepY: 0.1 } },
+      { type: 'label', pos: [0.85, 1.9, -0.2], at: 'resultado', bob: 0.04, p: { text: '?', w: 0.6, h: 0.6, size: 0.95, color: C.gold, weight: 900 } },
+    ],
+    overlays: [{ type: 'pill', text: 'SIGUE ABIERTA', at: 'sigue', red: true, out: 'La#2' }, { type: 'pill', text: 'SIN RESULTADO CONOCIDO', at: 'resultado', red: true }] },
+  { id: 'b30', cam: { from: [0.9, 2.4, 8.8], to: [-0.3, 2.3, 7.9], look: [0, 1.5, 0], fov: 46 }, keywords: ['pregunta', 'una sola'],
+    actors: [
+      { type: 'ring', pos: [-0.95, 0.03, 0.3], p: { r: 0.6, color: C.cyan } },
+      { type: 'person', pos: [-0.95, 0, 0.3], p: { ...HU, pose: 'idle' } },
+      { type: 'coins', pos: [0.55, 0, 0], enter: 'none', p: { n: 30, dur: 1.4 } },
+      { type: 'coins', pos: [1.3, 0, 0.3], at: 'valor', enter: 'none', p: { n: 22, dur: 1.0 } },
+      { type: 'label', pos: [-0.2, 2.75, 0.2], at: 'pregunta', bob: 0.06, p: { text: '?', w: 1.0, h: 1.0, size: 0.95, color: C.gold, weight: 900 } },
+      { type: 'arrow', pos: [-0.4, 1.3, 0.3], rot: [0, 0, -Math.PI / 2], at: 'depende', enter: 'none', s: 0.55, p: { len: 0.8, color: C.cyan } },
+    ] },
+
+  /* ---------- CIERRE ---------- */
+  { id: 'b31', set: 'void', cam: { from: [-0.9, 2.6, 8.4], to: [0.3, 2.3, 7.5], look: [0, 1.4, 0], fov: 44 }, keywords: ['Nvidia', 'vacía', 'cuarta'],
+    actors: [
+      { type: 'ring', pos: [-0.65, 0.03, 0], p: { r: 0.9, color: C.red } },
+      chair([-0.65, 0, 0], 1.4),
+      { type: 'coins', pos: [0.85, 0, 0], enter: 'none', s: 1.15, p: { n: 22, dur: 0.01 }, out: 'perdiste' },
+      { type: 'coins', pos: [0.85, 0, 0], enter: 'none', s: 1.15, at: 'perdiste', p: { from: 22, n: 16, dur: 1.0 } },
+      { type: 'label', pos: [0.85, 2.7, 0], bob: 0.03, p: { text: 'TU VALOR', w: 1.0, h: 0.34, bg: DARK, color: C.gold, size: 0.62 } },
+    ],
+    overlays: [{ type: 'plate', name: 'NVIDIA', role: 'vos', at: 'Nvidia', out: 'silla' }, { type: 'pill', text: '11 DÍAS SIN CEO', at: '11', red: true, out: 'cuarta' }, { type: 'big', text: '−28%', sub: 'en siete jornadas', at: 'cuarta', red: true }] },
+  { id: 'b32', set: 'void', cam: { from: [0.9, 2.3, 7.8], to: [-0.2, 2.4, 8.4], look: [0, 1.4, 0], fov: 44 }, keywords: ['recuperaste', 'una jornada'],
+    actors: [
+      { type: 'ring', pos: [-0.65, 0.03, 0], p: { r: 0.9, color: C.green } },
+      chair([-0.65, 0, 0], 1.4), seated([-0.65, 0, 0], 1.4, { at: 0.25, enter: 'drop' }),
+      { type: 'coins', pos: [0.85, 0, 0], enter: 'none', s: 1.15, p: { n: 16, dur: 0.01 }, out: 'recuperaste' },
+      { type: 'coins', pos: [0.85, 0, 0], enter: 'none', s: 1.15, at: 'recuperaste', p: { from: 16, n: 21, dur: 1.0 } },
+      { type: 'arrow', pos: [1.55, 0.9, 0], at: 'recuperaste', enter: 'none', s: 0.6, p: { len: 1.4, color: C.green } },
+    ],
+    overlays: [{ type: 'pill', text: '+31% EN UN DÍA', at: 'jornada' }] },
+  { id: 'b33', cam: { from: [-0.7, 2.4, 8.0], to: [0.2, 2.2, 7.2], look: [0, 1.35, 0], fov: 44 }, keywords: ['investiga'],
+    actors: [
+      NV([0, 0, -3.2]),
+      { type: 'ring', pos: [0, 0.03, 0.2], p: { r: 0.95, color: C.gold } },
+      chair([0, 0, 0.2], 1.3), seated([0, 0, 0.2], 1.3),
+      { type: 'lupa', pos: [0.15, 1.55, 1.5], at: 0.15, p: { r: 0.5, sweep: 0.4, sweepY: 0.2 } },
+    ],
+    overlays: [{ type: 'pill', text: 'TODAVÍA SE INVESTIGA', at: 'todavía', red: true }] },
+  { id: 'b34', cam: { from: [0.4, 2.2, 6.8], to: [0, 2.0, 5.8], look: [0, 1.2, 0], fov: 44 },
+    actors: [
+      { type: 'ring', pos: [0, 0.03, 0], p: { r: 0.9, color: C.cyan } },
+      chair([0, 0, 0], 1.2),
+      { type: 'chip', pos: [0, 1.25, 0.25], rot: [1.25, 0, 0], s: 0.6, at: 0.15, bob: 0.05 },
+    ],
+    overlays: [{ type: 'big', text: 'SEGUIME', sub: 'para la próxima historia', at: 0.15, size: 110 }] },
+];

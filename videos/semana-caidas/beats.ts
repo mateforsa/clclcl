@@ -1,0 +1,295 @@
+import type { BeatSpec } from '../../src/Beat';
+import { C } from '../../src/kit/math';
+
+const PI = Math.PI;
+const LABS = ['MAIL', 'AVIONES', 'BANCO', 'VUELOS', 'CELU'];
+const DCOL = [C.cyan, C.gold, C.magenta, C.blue, C.green];
+const VOS = { shirt: C.cyan, hair: '#3a2a1a', skin: '#f2c39b' };
+const CLAYTON = { shirt: '#2b2740', hair: '#8d8aa0', skin: '#f2c39b', pants: '#1a1530' };
+const OBRERO = { shirt: '#ff7a3d', cap: C.gold, pants: '#2a2350', skin: '#c98d62' };
+const DX = [-1.3, -0.65, 0, 0.65, 1.3];
+
+export const BEATS: BeatSpec[] = [
+  /* ---------- GANCHO ---------- */
+  { id: 'b01', set: 'room', cam: { from: [1.0, 2.6, 6.6], to: [0.1, 2.3, 5.6], look: [0, 1.5, -0.6], fov: 46 }, keywords: ['12', 'mail', 'carga'],
+    actors: [
+      { type: 'desk', pos: [0, 0, -0.6], s: 1.2 },
+      { type: 'screen', pos: [0, 1.78, -0.7], p: { kind: 'text', text: 'MAIL', w: 1.7, h: 1.0, stand: true }, out: 'mail' },
+      { type: 'screen', pos: [0, 1.78, -0.7], at: 'mail', enter: 'none', p: { kind: 'off', w: 1.7, h: 1.0, stand: true } },
+      { type: 'spinner', pos: [0, 1.78, -0.6], at: 'mail', p: { r: 0.28 }, out: 'carga' },
+      { type: 'cross', pos: [0, 1.78, -0.55], at: 'carga', p: { size: 0.75 } },
+      { type: 'mail', pos: [-1.05, 2.85, -0.4], rot: [0, 0.3, -0.1], s: 0.5, at: 'Abrís', bob: 0.05 },
+      { type: 'person', pos: [1.05, 0, 0.3], rot: [0, -0.7, 0], p: { ...VOS, pose: 'type' }, out: 'carga' },
+      { type: 'person', pos: [1.05, 0, 0.3], rot: [0, -0.7, 0], at: 'carga', enter: 'none', p: { ...VOS, pose: 'shrug' } },
+    ],
+    overlays: [{ type: 'pill', text: 'JUEVES 12 NOV', at: 0.1, out: 'carga' }, { type: 'pill', text: 'NO CARGA', at: 'carga', red: true }] },
+  { id: 'b02', cam: { from: [1.3, 2.9, 9.2], to: [0.2, 2.4, 8.0], look: [0, 1.1, 0], fov: 46 }, keywords: ['ningún', 'avión'],
+    actors: [
+      { type: 'road', pos: [0, 0, -4], p: { len: 40 } },
+      { type: 'plane', pos: [0, 0, 1.6], s: 0.95, p: { color: C.cyan } },
+      { type: 'plane', pos: [0, 0, -2.4], s: 0.95, p: { color: C.magenta } },
+      { type: 'plane', pos: [0, 0, -6.2], s: 0.95, p: { color: C.gold } },
+      { type: 'tower', pos: [-1.9, 0, -4.5], p: { h: 2.4, alarm: true } },
+      { type: 'cross', pos: [0, 1.7, 2.2], at: 'ningún', p: { size: 1.25 } },
+    ],
+    overlays: [{ type: 'pill', text: 'VIERNES 13 NOV', at: 0.1, out: 'despega' }, { type: 'pill', text: 'NINGÚN DESPEGUE', at: 'despega', red: true }] },
+  { id: 'b03', set: 'void', cam: { from: [-0.7, 2.5, 8.4], to: [0.4, 2.2, 7.4], look: [0, 1.4, 0], fov: 46 }, keywords: ['banco', 'teléfono'],
+    actors: [
+      { type: 'ring', pos: [-0.8, 0.03, 0], p: { r: 0.75, color: C.gold } },
+      { type: 'bank', pos: [-0.8, 0, 0], s: 0.6, p: { sign: 'BANCO' } },
+      { type: 'cross', pos: [-0.8, 0.95, 0.6], at: 'falla', p: { size: 0.9 } },
+      { type: 'phone', pos: [0.95, 1.35, 0.3], rot: [0, -0.25, 0.06], s: 1.7, at: 'martes', bob: 0.04, p: { kind: 'chat' } },
+      { type: 'cross', pos: [0.95, 1.35, 0.6], at: 'teléfono', p: { size: 0.85 } },
+    ],
+    overlays: [{ type: 'tag', text: 'LUNES', at: 0.1, x: 30, y: 36, color: C.blue }, { type: 'tag', text: 'MARTES', at: 'martes', x: 72, y: 36, color: C.blue }] },
+  { id: 'b04', cam: { from: [-3.6, 3.6, 6.0], to: [-2.9, 3.2, 5.2], look: [0.1, 0.0, 0], fov: 46 }, keywords: ['Cinco', 'seis', 'nadie'],
+    actors: [
+      { type: 'dominoes', pos: [0, 0, 0], rot: [0, 0.5, 0], s: 1.25, p: { labels: LABS }, out: 'Cinco' },
+      { type: 'dominoes', pos: [0, 0, 0], rot: [0, 0.5, 0], s: 1.25, at: 'Cinco', enter: 'none', p: { labels: LABS, fall: true, delay: 0.1, step: 0.3 } },
+    ],
+    overlays: [{ type: 'big', text: '5 CAÍDAS', sub: 'en 6 días', at: 'seis', red: true }, { type: 'pill', text: 'SIN ATAQUE, SEGÚN EL GOBIERNO', at: 'nadie' }] },
+
+  /* ---------- CONTEXTO ---------- */
+  { id: 'b05', set: 'void', cam: { from: [0.7, 2.4, 8.0], to: [-0.4, 2.2, 7.2], look: [0, 1.6, 0], fov: 46 }, keywords: ['2024'],
+    actors: [
+      { type: 'calendar', pos: [0.85, 2.1, 0], rot: [0, -0.25, 0.04], s: 0.8, p: { top: 'NOV', big: '2026', color: C.magenta } },
+      { type: 'arrow', pos: [0.2, 2.1, 0.1], rot: [0, 0, PI / 2], s: 0.7, at: 'volver', enter: 'none', p: { len: 0.55, color: C.gold, dur: 0.5 } },
+      { type: 'calendar', pos: [-0.85, 2.1, 0], rot: [0, 0.25, -0.04], s: 0.8, at: 'julio', p: { top: 'JULIO', big: '2024', color: C.blue } },
+      { type: 'clock', pos: [0, 0.75, 0.6], p: { r: 0.5, speed: -6 } },
+    ],
+    overlays: [{ type: 'pill', text: 'JULIO 2024', at: 'julio' }] },
+  { id: 'b06', cam: { from: [0.8, 2.6, 9.4], to: [-0.5, 2.3, 8.4], look: [0, 1.35, 0], fov: 46 }, keywords: ['CrowdStrike', '8,5'],
+    actors: [
+      { type: 'box', pos: [0, 0.15, 0], p: { size: [3.5, 0.3, 0.8], color: '#2d1a6e' } },
+      { type: 'monitors', pos: [0, 0.3, 0], p: {}, out: 'dejó' },
+      { type: 'monitors', pos: [0, 0.3, 0], at: 'dejó', enter: 'none', p: { flip: true, stagger: 0.2 } },
+      { type: 'label', pos: [0, 1.75, 0.8], at: 'actualización', enter: 'drop', p: { text: 'ACTUALIZACIÓN', w: 2.3, h: 0.5, bg: C.gold, color: '#15102b', size: 0.6, weight: 900 }, out: 'dejó' },
+      { type: 'cross', pos: [0, 1.75, 1.0], at: 'fallada', p: { size: 0.8 }, out: 'dejó' },
+    ],
+    overlays: [{ type: 'plate', name: 'CROWDSTRIKE', role: 'julio 2024', at: 'CrowdStrike', out: 'servicio' }, { type: 'big', text: '', count: { to: 8.5, post: ' M', dec: 1 }, sub: 'computadoras, según Microsoft', at: '8,5', red: true }] },
+  { id: 'b07', set: 'void', cam: { from: [-3.2, 3.2, 6.2], to: [-2.6, 3.4, 6.8], look: [0, 0.5, 0], fov: 46 }, keywords: ['solo', 'cinco'],
+    actors: [
+      { type: 'ring', pos: [0, 0.03, 0], p: { r: 0.8, color: C.red }, out: 'Esta' },
+      { type: 'domino', pos: [0, 0, 0], rot: [0, -0.5, 0], s: 1.5, p: { label: 'ERROR', color: C.red, fall: true, delay: 0.7 }, out: 'Esta' },
+      { type: 'dominoes', pos: [0, 0, 0], rot: [0, 0.5, 0], s: 1.3, at: 'Esta', p: { labels: LABS, fall: true, delay: 0.55, step: 0.22 } },
+    ],
+    overlays: [{ type: 'pill', text: '2024: 1 ERROR', at: 0.15, out: 'Esta' }, { type: 'pill', text: '2026: 5 CAÍDAS', at: 'son', red: true }] },
+
+  /* ---------- CAÍDA 1 ---------- */
+  { id: 'b08', set: 'void', cam: { from: [0, 2.2, 7], to: [0, 2.1, 6.2], look: [0, 1.3, 0] },
+    actors: [{ type: 'mail', pos: [0, 1.5, 0], s: 1.6, rot: [0, 0.2, 0] }, { type: 'ring', pos: [0, 0.03, 0], p: { r: 1.1, color: C.red } }],
+    overlays: [{ type: 'chapter', n: 'CAÍDA 1', title: 'EL MAIL', at: 0 }] },
+  { id: 'b09', cam: { from: [1.0, 2.5, 8.8], to: [-0.4, 2.3, 7.8], look: [0, 1.6, 0], fov: 46 }, keywords: ['Microsoft 365', 'Outlook'],
+    actors: [
+      { type: 'server', pos: [0, 0, -0.3], p: {}, out: 'cae' },
+      { type: 'server', pos: [0, 0, -0.3], at: 'cae', enter: 'none', p: { alarm: true } },
+      { type: 'ring', pos: [0, 0.03, -0.3], at: 'cae', p: { r: 1.0, color: C.red } },
+      { type: 'label', pos: [0, 2.4, -0.3], at: 'Microsoft', p: { text: 'MICROSOFT 365', w: 1.9, h: 0.42, bg: '#15102b', color: '#fff', border: C.cyan, size: 0.6 } },
+      ...[[-1.2, 2.95, 0.2, 'Oficinas'], [1.2, 2.9, 0.2, 'mundo'], [-1.25, 1.35, 0.5, 'quedan'], [1.25, 1.3, 0.5, 'Outlook']].flatMap(([x, y, z, at]: any) => ([
+        { type: 'mail', pos: [x, y, z] as any, s: 0.48, bob: 0.05, rot: [0, x > 0 ? -0.3 : 0.3, 0] as any },
+        { type: 'cross', pos: [x, y, z + 0.15] as any, at, bob: 0.05, p: { size: 0.5 } },
+      ])),
+    ],
+    overlays: [{ type: 'pill', text: 'JUEVES 12 NOV', at: 0.1, out: 'Oficinas' }, { type: 'pill', text: 'SIN OUTLOOK', at: 'sin', red: true }] },
+  { id: 'b10', set: 'void', cam: { from: [-0.5, 2.0, 7.6], to: [0.3, 1.9, 6.8], look: [0, 1.0, 0], fov: 46 }, keywords: ['24'],
+    actors: [
+      { type: 'ring', pos: [0, 0.03, 0], p: { r: 1.0, color: C.gold } },
+      { type: 'clock', pos: [0, 1.55, 0], p: { r: 0.95, turns: 2, dur: 2.0 } },
+    ],
+    overlays: [{ type: 'big', text: 'CASI 24 H', sub: 'para volver', at: '24' }] },
+  { id: 'b11', set: 'room', cam: { from: [-0.9, 2.6, 6.4], to: [0.3, 2.3, 5.5], look: [0, 1.55, -0.6], fov: 46 }, keywords: ['preliminar', 'error', 'julio'],
+    actors: [
+      { type: 'desk', pos: [0.25, 0, -0.6], s: 1.2 },
+      { type: 'box', pos: [0.25, 1.42, -0.6], p: { size: [1.5, 0.95, 0.8], color: C.blue } },
+      { type: 'label', pos: [0.25, 1.42, -0.19], p: { text: 'ACTUALIZACIÓN', w: 1.4, h: 0.34, size: 0.62, weight: 900 } },
+      { type: 'calendar', pos: [1.25, 2.75, -1.2], rot: [0, -0.3, 0.05], s: 0.5, at: 'julio', p: { top: 'JULIO', big: '2026', color: C.magenta } },
+      { type: 'bug', pos: [0.25, 1.9, -0.5], at: 'error', move: { to: [0.25, 2.45, -0.3], at: 'error', dur: 0.5 }, p: {} },
+      { type: 'person', pos: [-1.0, 0, 0.3], rot: [0, 0.8, 0], p: { shirt: '#f4f1ff', hair: '#15102b', skin: '#c98d62', pose: 'hold' }, out: 'error' },
+      { type: 'person', pos: [-1.0, 0, 0.3], rot: [0, 0.8, 0], at: 'error', enter: 'none', p: { shirt: '#f4f1ff', hair: '#15102b', skin: '#c98d62', pose: 'point' } },
+    ],
+    overlays: [{ type: 'pill', text: 'INFORME PRELIMINAR', at: 'informe', out: 'escondido' }, { type: 'pill', text: 'UN ERROR ESCONDIDO', at: 'escondido', red: true }] },
+
+  /* ---------- CAÍDA 2 ---------- */
+  { id: 'b12', set: 'void', cam: { from: [0, 2.2, 7], to: [0, 2.1, 6.2], look: [0, 1.0, 0] },
+    actors: [{ type: 'plane', pos: [0, 0.4, 0], rot: [0, 0.7, 0], s: 1.1, p: {} }, { type: 'ring', pos: [0, 0.03, 0], p: { r: 1.3, color: C.red } }],
+    overlays: [{ type: 'chapter', n: 'CAÍDA 2', title: 'LOS AVIONES', at: 0 }] },
+  { id: 'b13', cam: { from: [-0.9, 2.5, 8.8], to: [0.4, 2.3, 7.8], look: [0, 1.6, 0], fov: 46 }, keywords: ['13', '17', '22'],
+    actors: [
+      { type: 'dots', pos: [0, 2.3, -0.3], p: { flip: false }, out: 'pierden' },
+      { type: 'dots', pos: [0, 2.3, -0.3], at: 'pierden', enter: 'none', p: { stagger: 0.16 } },
+      { type: 'box', pos: [0, 0.4, 0.9], p: { size: [2.6, 0.8, 0.5], color: '#2d1a6e' } },
+      ...[-0.7, 0.7].flatMap((x) => ([
+        { type: 'person', pos: [x, 0, 1.5] as any, rot: [0, PI, 0] as any, s: 0.85, p: { shirt: '#2f4fd6', hair: '#15102b', pose: 'type' }, out: 'comunicación' },
+        { type: 'person', pos: [x, 0, 1.5] as any, rot: [0, PI, 0] as any, s: 0.85, at: 'comunicación', enter: 'none' as const, p: { shirt: '#2f4fd6', hair: '#15102b', pose: 'shrug' } },
+      ])),
+    ],
+    overlays: [{ type: 'pill', text: 'VIERNES 13 NOV', at: 0.1, out: '17' }, { type: 'pill', text: '17 DE 22 CENTROS', at: '17', red: true }] },
+  { id: 'b14', cam: { from: [1.2, 2.7, 9.2], to: [0, 2.3, 8.0], look: [0, 1.5, 0], fov: 46 }, keywords: ['FAA', 'frena'],
+    actors: [
+      { type: 'tower', pos: [-0.95, 0, -0.6], s: 0.8, p: { h: 2.3, sign: 'FAA' }, out: 'frena' },
+      { type: 'tower', pos: [-0.95, 0, -0.6], s: 0.8, at: 'frena', enter: 'none', p: { h: 2.3, sign: 'FAA', alarm: true } },
+      { type: 'road', pos: [0.85, 0, -6], s: 0.5, p: { len: 44 } },
+      { type: 'plane', pos: [0.85, 0, 1.4], s: 0.6, p: {} },
+      { type: 'plane', pos: [0.85, 0, -1.2], s: 0.6, p: { color: C.magenta } },
+      { type: 'plane', pos: [0.85, 0, -3.8], s: 0.6, p: { color: C.gold } },
+      { type: 'label', pos: [0.85, 1.75, 1.6], at: 'frena', p: { text: 'PARE', w: 1.0, h: 0.62, bg: C.red, size: 0.62, weight: 900, border: '#fff' } },
+    ],
+    overlays: [{ type: 'plate', name: 'FAA', role: 'agencia federal de aviación', at: 'FAA', out: 'frena' }, { type: 'pill', text: 'DESPEGUES FRENADOS', at: 'frena', red: true }] },
+  { id: 'b15', set: 'void', cam: { from: [0.6, 2.0, 7.8], to: [-0.3, 1.9, 7.0], look: [0, 1.0, 0], fov: 46 }, keywords: ['Cuatro', '2023'],
+    actors: [
+      { type: 'ring', pos: [0, 0.03, 0], p: { r: 1.0, color: C.red } },
+      { type: 'clock', pos: [0, 1.5, 0], p: { r: 0.9, turns: 4.5, dur: 2.4, color: C.red } },
+      { type: 'calendar', pos: [1.05, 2.5, 0.4], rot: [0, -0.3, 0.06], s: 0.45, at: '2023', p: { top: 'ENERO', big: '2023', color: C.blue } },
+    ],
+    overlays: [{ type: 'big', text: '4 H 30', sub: 'sin despegues en todo el país', at: 0.15, red: true }, { type: 'pill', text: 'PRIMERA VEZ DESDE 2023', at: '2023' }] },
+  { id: 'b16', cam: { from: [-0.8, 2.3, 8.8], to: [0.4, 2.1, 7.9], look: [0, 1.35, 0], fov: 46 }, keywords: ['9.000'],
+    actors: [
+      { type: 'box', pos: [0, 1.75, -0.12], p: { size: [2.5, 2.5, 0.12], color: '#15102b' } },
+      { type: 'box', pos: [0, 0.25, -0.12], p: { size: [0.3, 0.5, 0.12], color: '#15102b' } },
+      { type: 'label', pos: [0, 2.72, 0], p: { text: 'SALIDAS', w: 2.2, h: 0.4, color: C.gold, size: 0.7, weight: 900 } },
+      ...[2.22, 1.76, 1.3, 0.84].map((y, i) => ({ type: 'label', pos: [0, y, 0] as any, at: [0.15, 'cancelan', 'más', '9.000'][i], p: { text: 'CANCELADO', w: 2.2, h: 0.38, bg: C.red, size: 0.66, weight: 900 } })),
+    ],
+    overlays: [{ type: 'big', text: '', count: { to: 9000, pre: '+' }, sub: 'vuelos cancelados ese día (FAA)', at: '9.000', red: true }] },
+  { id: 'b17', set: 'void', cam: { from: [0.9, 2.5, 8.2], to: [-0.3, 2.3, 7.4], look: [0, 1.4, 0], fov: 46 }, keywords: ['contratista', 'routers', 'inundaron'],
+    actors: [
+      { type: 'box', pos: [0.2, 0.5, 0], p: { size: [1.5, 1.0, 0.9], color: '#2d1a6e' } },
+      { type: 'router', pos: [0.2, 1.0, 0], p: { old: true }, move: { to: [3.4, 1.6, -1], at: 'cambió', dur: 0.7 } },
+      { type: 'router', pos: [0.2, 1.0, 0], at: 'nuevos', enter: 'drop', p: { led: C.green }, out: 'inundaron' },
+      { type: 'router', pos: [0.2, 1.0, 0], at: 'inundaron', enter: 'none', p: { led: C.red } },
+      { type: 'packets', pos: [0.2, 1.3, 0], at: 'inundaron', enter: 'none', p: { R: 2.6 } },
+      { type: 'person', pos: [-1.2, 0, 0.5], rot: [0, 0.8, 0], at: 'contratista', p: { ...OBRERO, pose: 'hold' }, out: 'inundaron' },
+      { type: 'person', pos: [-1.2, 0, 0.5], rot: [0, 0.8, 0], at: 'inundaron', enter: 'none', p: { ...OBRERO, pose: 'shrug' } },
+      { type: 'label', pos: [0.2, 2.75, 0], at: 'routers', p: { text: 'ROUTER NUEVO', w: 1.6, h: 0.4, bg: '#15102b', border: C.cyan, size: 0.6 }, out: 'inundaron' },
+    ],
+    overlays: [{ type: 'pill', text: 'CAUSA PRELIMINAR', at: 0.1, out: 'inundaron' }, { type: 'pill', text: 'RED INUNDADA DE DATOS', at: 'inundaron', red: true }] },
+  { id: 'b18', cam: { from: [-1.0, 2.4, 8.0], to: [0.3, 2.2, 7.2], look: [0, 1.45, 0], fov: 46 }, keywords: ['frenó', 'investiga'],
+    actors: [
+      { type: 'box', pos: [0, 0.5, 0], p: { size: [1.5, 1.0, 0.9], color: '#2d1a6e' } },
+      { type: 'router', pos: [0, 1.0, 0], p: { led: C.red } },
+      { type: 'ring', pos: [0, 0.03, 0], p: { r: 1.15, color: C.gold } },
+      { type: 'box', pos: [-0.22, 2.45, 0], at: 'frenó', p: { size: [0.24, 0.8, 0.12], color: C.gold, glow: true } },
+      { type: 'box', pos: [0.22, 2.45, 0], at: 'frenó', p: { size: [0.24, 0.8, 0.12], color: C.gold, glow: true } },
+      { type: 'lupa', pos: [0, 1.35, 0.7], at: 'investiga', p: { r: 0.45, sweep: 0.6 } },
+      { type: 'pulse', pos: [1.2, 2.5, 0.2], at: 'qué', p: { text: '?', w: 0.8, h: 0.8, size: 0.95, color: C.red, weight: 900 } },
+    ],
+    overlays: [{ type: 'pill', text: 'INSTALACIÓN FRENADA', at: 'frenó', out: 'investiga', red: true }, { type: 'pill', text: 'TODAVÍA SE INVESTIGA', at: 'investiga' }] },
+
+  /* ---------- CAÍDA 3 ---------- */
+  { id: 'b19', set: 'void', cam: { from: [0, 2.2, 7.4], to: [0, 2.1, 6.6], look: [0, 1.2, 0] },
+    actors: [{ type: 'bank', pos: [-0.6, 0, 0], s: 0.6, p: {} }, { type: 'phone', pos: [1.0, 1.2, 0.4], s: 1.6, rot: [0, -0.3, 0.08], p: { kind: 'chat' } }, { type: 'ring', pos: [0, 0.03, 0], p: { r: 1.5, color: C.red } }],
+    overlays: [{ type: 'chapter', n: 'CAÍDA 3', title: 'PLATA Y TELÉFONO', at: 0 }] },
+  { id: 'b20', cam: { from: [1.3, 2.9, 10.4], to: [-0.3, 2.3, 8.6], look: [0, 1.5, 0], fov: 46 }, keywords: ['16', 'Chase', 'fallas'],
+    actors: [
+      { type: 'bank', pos: [0, 0, -1.2], s: 1.0, p: { sign: 'CHASE', w: 2.4 } },
+      { type: 'crowd', pos: [0, 0, 1.3], at: 'Miles', enter: 'none', p: { n: 10, area: [3.4, 1.4], seed: 17, stagger: 0.08, sc: 0.6, face: PI } },
+      { type: 'phone', pos: [0.95, 1.45, 2.6], rot: [0, -0.2, -0.06], s: 1.15, at: 'fallas', bob: 0.04, p: { kind: 'text', text: 'ERROR' } },
+      { type: 'cross', pos: [0.95, 2.2, 2.7], at: 'internet', p: { size: 0.45 } },
+    ],
+    overlays: [{ type: 'pill', text: 'LUNES 16 NOV', at: 0.1, out: 'reportan' }, { type: 'tag', text: 'el banco más grande de EE.UU.', at: 'banco', x: 50, y: 33, color: C.blue, size: 40, out: 'reportan' }, { type: 'pill', text: 'FALLA LA BANCA ONLINE', at: 'reportan', red: true }] },
+  { id: 'b21', set: 'void', cam: { from: [-0.9, 2.4, 8.0], to: [0.3, 2.2, 7.2], look: [0, 1.35, 0], fov: 46 }, keywords: ['error', 'software', 'propios'],
+    actors: [
+      { type: 'server', pos: [-0.62, 0, 0], p: {} },
+      { type: 'server', pos: [0.62, 0, 0], p: {}, out: 'error' },
+      { type: 'server', pos: [0.62, 0, 0], at: 'error', enter: 'none', p: { alarm: true } },
+      { type: 'bug', pos: [0.62, 1.2, 0.6], at: 'error', s: 1.1, p: {} },
+      { type: 'label', pos: [0, 2.4, 0], p: { text: 'CHASE', w: 1.5, h: 0.44, bg: '#15102b', border: C.gold, color: C.gold, size: 0.66, weight: 900 } },
+      { type: 'ring', pos: [0, 0.03, 0], p: { r: 1.35, color: C.gold } },
+    ],
+    overlays: [{ type: 'pill', text: 'SEGÚN EL BANCO', at: 0.1, out: 'software' }, { type: 'pill', text: 'ERROR DE SOFTWARE', at: 'software', red: true }] },
+  { id: 'b22', cam: { from: [1.4, 2.4, 8.6], to: [0.2, 2.1, 7.6], look: [0, 1.0, 0], fov: 46 }, keywords: ['United', 'hora'],
+    actors: [
+      { type: 'road', pos: [0, 0, -6], p: { len: 44 } },
+      { type: 'plane', pos: [0, 0, 0.4], rot: [0, 0.35, 0], s: 1.0, p: { color: C.blue } },
+      { type: 'label', pos: [0, 1.75, 0.4], at: 'United', p: { text: 'UNITED', w: 1.5, h: 0.44, bg: '#15102b', border: C.blue, size: 0.66, weight: 900 } },
+      { type: 'clock', pos: [1.05, 2.55, 0], at: 'demora', p: { r: 0.42, turns: 1.5, dur: 2.2 } },
+      { type: 'pulse', pos: [-1.05, 2.5, 0], at: 'falla', p: { text: '?', w: 0.8, h: 0.8, size: 0.95, color: C.red, weight: 900 } },
+    ],
+    overlays: [{ type: 'big', text: '1 H 30', sub: 'de demoras en despegues', at: 'hora' }, { type: 'pill', text: 'CAUSA: SIN DETALLAR', at: 'falla', red: true }] },
+  { id: 'b23', set: 'room', cam: { from: [0.9, 2.6, 6.6], to: [-0.2, 2.3, 5.8], look: [0, 1.7, -0.4], fov: 46 }, keywords: ['17', 'iCloud', 'App Store', 'actualización'],
+    actors: [
+      { type: 'person', pos: [0, 0, 0.2], p: { ...VOS, pose: 'hold' }, out: 'fallan' },
+      { type: 'person', pos: [0, 0, 0.2], at: 'fallan', enter: 'none', p: { ...VOS, pose: 'sad' } },
+      { type: 'phone', pos: [0, 1.0, 0.75], s: 0.5, p: { kind: 'off' } },
+      { type: 'label', pos: [-0.62, 2.95, -0.3], at: 'iCloud', bob: 0.04, p: { text: 'iCloud', w: 1.12, h: 0.55, bg: '#f4f1ff', color: '#15102b', size: 0.62, weight: 900 } },
+      { type: 'label', pos: [0.62, 2.95, -0.3], at: 'App', bob: 0.04, p: { text: 'App Store', w: 1.12, h: 0.55, bg: C.blue, size: 0.56, weight: 900 } },
+      { type: 'cross', pos: [-0.62, 3.42, -0.1], at: 'fallan', bob: 0.04, p: { size: 0.36 } },
+      { type: 'cross', pos: [0.62, 3.42, -0.1], at: 'durante', bob: 0.04, p: { size: 0.36 } },
+      { type: 'progress', pos: [0, 2.2, -0.2], at: 'atribuye', p: { w: 2.4, to: 0.62, dur: 1.3, stuck: true } },
+    ],
+    overlays: [{ type: 'pill', text: 'MARTES 17 NOV', at: 0.1, out: 'fallan' }, { type: 'pill', text: 'FALLAN DURANTE HORAS', at: 'fallan', red: true, out: 'empresa' }, { type: 'pill', text: 'UNA ACTUALIZACIÓN INTERNA', at: 'actualización' }] },
+
+  /* ---------- LA DUDA ---------- */
+  { id: 'b24', set: 'void', cam: { from: [-3.4, 3.0, 6.4], to: [-2.6, 2.7, 5.6], look: [-0.2, 1.0, 0.2], fov: 46 }, keywords: ['coincidencia', 'empujó'],
+    actors: [
+      { type: 'dominoes', pos: [0.3, 0, -0.3], rot: [0, 0.5, 0], p: { labels: LABS } },
+      { type: 'person', pos: [-1.6, 0, 0.7], rot: [0, 1.07, 0], at: 'alguien', p: { shirt: '#2b2740', hair: '#15102b', cap: '#15102b', pants: '#15102b', pose: 'point' } },
+      { type: 'pulse', pos: [-0.9, 2.3, 0.35], rot: [0, -0.5, 0], at: 'coincidencia', p: { text: '?', w: 0.9, h: 0.9, size: 0.95, color: C.gold, weight: 900 } },
+    ],
+    overlays: [{ type: 'pill', text: '¿COINCIDENCIA?', at: 'coincidencia' }] },
+  { id: 'b25', cam: { from: [1.3, 2.8, 10.2], to: [-0.3, 2.3, 8.4], look: [0, 1.6, 0], fov: 46 }, keywords: ['18', 'Jay Clayton', 'separadas', 'ataque'],
+    actors: [
+      { type: 'building', pos: [0, 0, -2.4], p: { w: 2.8, h: 1.9, d: 1.4, seed: 23, color: '#3a2a8a' } },
+      { type: 'box', pos: [0, 0.5, 1.0], p: { size: [0.8, 1.0, 0.45], color: '#8a5a3a' } },
+      { type: 'person', pos: [0, 0, 0.5], p: { ...CLAYTON, pose: 'idle' }, out: 'declara' },
+      { type: 'person', pos: [0, 0, 0.5], at: 'declara', enter: 'none', p: { ...CLAYTON, pose: 'shrug' } },
+      ...DX.map((x, i) => ({ type: 'domino', pos: [x * 0.92, 2.3 + (i % 2) * 0.45, 0.6] as any, s: 0.55, at: 'fallas', bob: 0.05, p: { color: DCOL[i] } })),
+      { type: 'label', pos: [0, 1.62, 1.6], at: 'ataque', p: { text: 'ATAQUE', w: 1.3, h: 0.4, bg: '#15102b', border: C.red, size: 0.62, weight: 900 } },
+      { type: 'cross', pos: [0, 1.62, 1.75], at: 'ataque', p: { size: 0.7 } },
+    ],
+    overlays: [{ type: 'pill', text: '18 NOV · CONGRESO', at: '18', out: 'Jay' }, { type: 'plate', name: 'JAY CLAYTON', role: 'jefe de inteligencia', at: 'Jay', out: 'fallas', y: 77 },
+      { type: 'pill', text: 'FALLAS SEPARADAS', at: 'separadas' }] },
+  { id: 'b26', set: 'room', cam: { from: [-0.9, 2.5, 6.6], to: [0.2, 2.2, 5.8], look: [0, 1.5, -0.4], fov: 46 }, keywords: ['nunca', 'tantas'],
+    actors: [
+      { type: 'person', pos: [-1.0, 0, 0.2], rot: [0, 0.4, 0], p: { shirt: '#3b3470', hair: '#7a3b1a', pants: '#1a1530', pose: 'idle' }, out: 'nunca' },
+      { type: 'person', pos: [-1.0, 0, 0.2], rot: [0, 0.4, 0], at: 'nunca', enter: 'none', p: { shirt: '#3b3470', hair: '#7a3b1a', pants: '#1a1530', pose: 'shrug' } },
+      { type: 'bars', pos: [0.5, 0, -0.8], at: 'admite', enter: 'none', p: { vals: [0.35, 0.5, 0.3, 0.45, 2.7], colors: ['#8a6bff', '#8a6bff', '#8a6bff', '#8a6bff', C.red], w: 0.26, gap: 0.06, dur: 0.6, stagger: 0.3 } },
+      { type: 'label', pos: [0.95, 3.0, -0.8], at: 'tantas', p: { text: 'NOV 2026', w: 0.95, h: 0.3, bg: C.red, size: 0.62, weight: 900 } },
+    ],
+    overlays: [{ type: 'plate', name: 'MARKWAYNE MULLIN', role: 'Seguridad Nacional', at: 0.15, out: 'tantas', y: 77 }, { type: 'pill', text: 'NUNCA VIO TANTAS JUNTAS', at: 'tantas', red: true }] },
+  { id: 'b27', set: 'void', cam: { from: [0.8, 2.4, 8.4], to: [-0.4, 2.2, 7.6], look: [0, 1.6, 0], fov: 46 }, keywords: ['abiertas', 'evidencia'],
+    actors: [
+      { type: 'mail', pos: [-1.05, 2.75, 0], s: 0.6, rot: [0, 0.2, 0], bob: 0.04 },
+      { type: 'plane', pos: [1.05, 2.4, 0], s: 0.5, rot: [0.3, 0.9, 0], bob: 0.04 },
+      { type: 'bank', pos: [-1.05, 0.25, 0], s: 0.4, p: {} },
+      { type: 'phone', pos: [1.05, 0.95, 0], s: 1.2, rot: [0, -0.3, 0.05], p: { kind: 'chat' } },
+      { type: 'lupa', pos: [0, 1.75, 0.8], p: { r: 0.5, sweep: 1.0 }, out: 'evidencia' },
+      { type: 'label', pos: [0, 1.75, 0.3], at: 'evidencia', p: { text: 'CAUSA COMÚN', w: 1.6, h: 0.44, bg: '#15102b', border: C.red, size: 0.6, weight: 900 } },
+      { type: 'cross', pos: [0, 1.75, 0.5], at: 'causa', p: { size: 0.8 } },
+    ],
+    overlays: [{ type: 'pill', text: 'INVESTIGACIONES ABIERTAS', at: 0.15, out: 'evidencia' }, { type: 'pill', text: 'SIN EVIDENCIA, POR AHORA', at: 'evidencia' }] },
+  { id: 'b28', cam: { from: [-0.8, 2.5, 8.8], to: [0.4, 2.3, 8.0], look: [0, 1.75, 0], fov: 46 }, keywords: ['cuatro', 'cinco', 'actualización', 'cambio'],
+    actors: [
+      ...([['MICROSOFT · actualización', C.cyan, 0.15], ['FAA · routers nuevos', C.cyan, 'repite'], ['CHASE · versión de software', C.cyan, 'cuatro'], ['APPLE · actualización', C.cyan, 'cinco'], ['UNITED · sin detallar', '#8d8aa0', 'explicaciones']] as any[]).map(([text, col, at], i) => (
+        { type: 'label', pos: [0, 3.05 - i * 0.5, 0] as any, at, p: { text, w: 3.0, h: 0.42, bg: '#15102b', border: col, color: col === C.cyan ? '#fff' : '#8d8aa0', size: 0.5, weight: 800 } })),
+    ],
+    overlays: [{ type: 'big', text: '4 DE 5', sub: 'una actualización o un cambio', at: 'actualización' }] },
+  { id: 'b29', cam: { from: [1.5, 2.4, 7.6], to: [0.9, 2.1, 7.0], look: [0, 0.8, 0], fov: 46 }, keywords: ['Clayton', 'tropiezos'],
+    actors: [
+      { type: 'road', pos: [0, 0, -8], p: { len: 48 } },
+      ...[-4.5, -1.5, 1.5].map((z) => ({ type: 'box', pos: [0, 0.1, z] as any, p: { size: [3.0, 0.22, 0.5], color: C.gold, glow: true, ei: 0.5 } })),
+      { type: 'bumpcar', pos: [0, 0, 0], p: { from: -8.5, speed: 1.9, bumps: [-4.5, -1.5, 1.5] } },
+    ],
+    overlays: [{ type: 'plate', name: 'JAY CLAYTON', role: '22 nov, en CNN', at: 0.15, out: 'modernizan' }, { type: 'pill', text: 'VIENEN MÁS TROPIEZOS', at: 'más', red: true }] },
+
+  /* ---------- CIERRE ---------- */
+  { id: 'b30', cam: { from: [0.6, 4.7, 5.4], to: [-0.3, 4.3, 4.8], look: [0, 0.2, -0.7], fov: 46 }, keywords: ['Cinco', 'seis', 'ninguna'],
+    actors: [
+      ...DX.map((x, i) => ({ type: 'domino', pos: [x, 0, 0] as any, p: { label: LABS[i], color: DCOL[i], fall: true, delay: 0.15 + i * 0.4 } })),
+      ...[-0.975, -0.325, 0.325, 0.975].map((x, i) => ({ type: 'cross', pos: [x, 0.5, 0.5] as any, at: ['ninguna', 'ninguna', 'empujó', 'otra'][i], p: { size: 0.32 } })),
+    ],
+    overlays: [{ type: 'pill', text: 'SEGÚN LO QUE SE SABE HOY', at: 'Según' }] },
+  { id: 'b31', set: 'void', cam: { from: [-2.0, 2.8, 5.6], to: [-1.4, 2.6, 5.0], look: [0, 1.0, -0.5], fov: 46 }, keywords: ['sola', 'cambio'],
+    actors: [
+      { type: 'ring', pos: [0, 0.03, 0], p: { r: 1.0, color: C.cyan } },
+      { type: 'domino', pos: [0, 0, 0], s: 1.5, p: { label: 'CAÍDA', color: C.cyan }, out: 'sola' },
+      { type: 'domino', pos: [0, 0, 0], s: 1.5, at: 'sola', enter: 'none', p: { label: 'CAÍDA', color: C.cyan, fall: true, delay: 0.05, dur: 0.5 } },
+      { type: 'progress', pos: [0, 2.35, -0.6], rot: [0, -0.3, 0], p: { w: 1.8, to: 0.6, dur: 1.0, stuck: true } },
+    ],
+    overlays: [{ type: 'pill', text: 'EN MEDIO DE UN CAMBIO', at: 'medio' }] },
+  { id: 'b32', cam: { from: [0.5, 2.3, 7.6], to: [0, 2.1, 6.8], look: [0, 0.75, 0], fov: 44 },
+    actors: [
+      ...DX.map((x, i) => ({ type: 'domino', pos: [x * 0.8, 0, 0] as any, s: 0.8, at: 0.05 + i * 0.12, enter: 'drop' as const, p: { label: LABS[i], color: DCOL[i] } })),
+      { type: 'ring', pos: [0, 0.03, 0], p: { r: 1.9, color: C.cyan } },
+    ],
+    overlays: [{ type: 'big', text: 'SEGUIME', sub: 'para la próxima historia', at: 0.15, size: 110 }] },
+];
