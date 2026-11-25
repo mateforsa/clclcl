@@ -273,7 +273,7 @@ export const BEATS: BeatSpec[] = [
     overlays: [{ type: 'plate', name: 'JAY CLAYTON', role: '22 nov, en CNN', at: 0.15, out: 'modernizan' }, { type: 'pill', text: 'VIENEN MÁS TROPIEZOS', at: 'más', red: true }] },
 
   /* ---------- CIERRE ---------- */
-  { id: 'b30', cam: { from: [0.6, 4.7, 5.4], to: [-0.3, 4.3, 4.8], look: [0, 0.2, -0.7], fov: 46 }, keywords: ['Cinco', 'seis', 'ninguna'],
+  { id: 'b30', cam: { from: [0.5, 4.9, 6.0], to: [-0.2, 4.5, 5.4], look: [0, 0.2, -0.7], fov: 46 }, keywords: ['Cinco', 'seis', 'ninguna'],
     actors: [
       ...DX.map((x, i) => ({ type: 'domino', pos: [x, 0, 0] as any, p: { label: LABS[i], color: DCOL[i], fall: true, delay: 0.15 + i * 0.4 } })),
       ...[-0.975, -0.325, 0.325, 0.975].map((x, i) => ({ type: 'cross', pos: [x, 0.5, 0.5] as any, at: ['ninguna', 'ninguna', 'empujó', 'otra'][i], p: { size: 0.32 } })),
