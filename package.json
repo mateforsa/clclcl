@@ -1,0 +1,36 @@
+{
+  "name": "clclcl",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mateforsa/clclcl.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mateforsa/clclcl/issues"
+  },
+  "homepage": "https://github.com/mateforsa/clclcl#readme",
+  "dependencies": {
+    "@fontsource/poppins": "^5.3.0",
+    "@react-three/fiber": "^9.8.2",
+    "@remotion/cli": "^4.0.547",
+    "@remotion/three": "^4.0.547",
+    "@types/react": "^19.3.1",
+    "@types/three": "^0.187.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "remotion": "^4.0.547",
+    "three": "^0.187.0",
+    "typescript": "^7.0.2"
+  },
+  "devDependencies": {
+    "tsx": "^4.23.15"
+  }
+}
