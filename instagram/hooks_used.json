@@ -68,5 +68,35 @@
   "video": "huawei-condena",
   "inicio": "E41 segunda persona",
   "cierre": "Seguime genérico"
+ },
+ {
+  "video": "gta-vi-online",
+  "inicio": "C21 pregunta que el espectador ya se hizo",
+  "cierre": "Continuación (parte 4, el día que anuncien el online) + pregunta de dos opciones"
+ },
+ {
+  "video": "starship-atrapada",
+  "inicio": "B11 fecha y hora exactas (en medio de la acción)",
+  "cierre": "Predicción 44 (¿sale en diciembre o se pasa a 2027?) + continuación 5"
+ },
+ {
+  "video": "bitcoin-salidas",
+  "inicio": "D31 contradicción",
+  "cierre": "Pregunta de dos opciones + motivo (cómo cierra noviembre)"
+ },
+ {
+  "video": "hoy-hace-26-nov",
+  "inicio": "I83 aniversario (Hoy, 26 de noviembre, hace 15 años)",
+  "cierre": "Continuación de serie + pedido de tema (fecha de cumpleaños)"
+ },
+ {
+  "video": "black-friday-oferta",
+  "inicio": "F51 objeto con su precio",
+  "cierre": "Guardar para el viernes + mandáselo al que está por comprar + pregunta de memoria"
+ },
+ {
+  "video": "colapinto-qatar",
+  "inicio": "G61 número raro",
+  "cierre": "Pregunta de predicción con un número + nombrar a los más cercanos"
  }
 ]

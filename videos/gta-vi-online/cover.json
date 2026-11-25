@@ -1,0 +1,3 @@
+{ "beat": "b03", "frac": 0.45,
+  "overlay": { "kicker": "GTA VI · PARTE 4",
+    "lines": [ { "t": "¿MÁS GRANDE", "size": 132 }, { "t": "QUE FORTNITE?", "c": "yellow", "size": 122 }, { "t": "EL ONLINE, SEGÚN UN ANALISTA", "size": 60, "c": "cyan" } ] } }

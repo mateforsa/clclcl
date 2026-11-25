@@ -1,0 +1,3 @@
+{ "beat": "b02", "frac": 0.97,
+  "overlay": { "kicker": "COLAPINTO",
+    "lines": [ { "t": "DE 0 A 35", "c": "yellow" }, { "t": "¿Y EN QATAR?", "size": 128 }, { "t": "PUNTOS EN F1 · 6° EN LAS VEGAS", "size": 58, "c": "cyan" } ] } }

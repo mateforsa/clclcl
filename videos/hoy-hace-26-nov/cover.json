@@ -1,0 +1,3 @@
+{ "beat": "b06", "frac": 0.62,
+  "overlay": { "kicker": "HOY HACE 15 AÑOS",
+    "lines": [ { "t": "IBA A DURAR", "size": 128 }, { "t": "2 AÑOS", "c": "yellow", "size": 190 }, { "t": "SIGUE ANDANDO EN MARTE", "size": 72, "c": "cyan" } ] } }

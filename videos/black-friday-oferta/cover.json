@@ -1,0 +1,3 @@
+{ "beat": "b01", "frac": 0.74,
+  "overlay": { "kicker": "BLACK FRIDAY",
+    "lines": [ { "t": "¿40% OFF" }, { "t": "DE VERDAD?", "c": "yellow" }, { "t": "4 CHEQUEOS ANTES DE PAGAR", "size": 68, "c": "cyan" } ] } }
