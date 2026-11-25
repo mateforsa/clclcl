@@ -1,0 +1,3 @@
+{ "beat": "b03", "frac": 0.87,
+  "overlay": { "kicker": "GTA VI · PS5 VS XBOX",
+    "lines": [ { "t": "SE TRABA", "size": 170 }, { "t": "MENOS EN XBOX", "c": "yellow", "size": 122 }, { "t": "según Digital Foundry", "size": 72, "c": "cyan" } ] } }
