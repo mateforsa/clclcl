@@ -12,7 +12,7 @@ Todo lo que hay que cargar en el perfil. Se copia y pega desde **Editar perfil**
 | Categoría | Creador digital |
 | Enlace | el que quieras destacar (TikTok, YouTube); hoy no hay web del canal |
 
-**Biografía** (146 de 150 caracteres):
+**Biografía** (130 de 150 caracteres):
 
 ```
 Historias reales de negocios, tecnología y videojuegos, contadas en 3D.
