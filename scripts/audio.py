@@ -7,6 +7,8 @@ rng = np.random.default_rng(7)
 def rd(p):
     w = wave.open(p); a = np.frombuffer(w.readframes(w.getnframes()), np.int16).astype(np.float32) / 32768; return a
 voice = rd(f"{ROOT}/public/voz.wav"); N = len(voice); T = N / SR
+_r = 20 * np.log10(np.sqrt(np.mean(voice[np.abs(voice) > 1e-4] ** 2)) + 1e-9)
+voice = np.tanh(voice * 10 ** ((-13 - _r) / 20) * 0.9) / 0.9   # todas las voces al mismo nivel antes de mezclar
 tl = np.arange(N) / SR
 def env(n, a=0.005, d=0.2): t = np.arange(n) / SR; return np.minimum(1, t / a) * np.exp(-t / d)
 def tone(f, dur, a=0.005, d=0.2, h=(1,)):

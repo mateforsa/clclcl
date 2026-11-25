@@ -4,10 +4,12 @@ entre frases y escribe public/voz.wav + src/timing.json (beats y palabras)."""
 import json, re, subprocess, base64, os, sys, wave
 import numpy as np
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-VOICE = os.environ.get("VOICE_ID", "QK4xDwo9ESPHA4JNUpX3")
+VOICE = os.environ.get("VOICE_ID", "N6aRe3hk1YqaHDtQpTAH")   # Juanma - Deep Cinematic (Argentina)
+OUT = os.environ.get("OUT", "")  # sufijo para generar muestras sin pisar la voz en uso
 SR = 44100; MAXGAP = 0.30; PAD_IN = 0.04; PAD_OUT = 0.10
 paras = json.load(open(f"{ROOT}/guion/parrafos.json"))
-cache = f"{ROOT}/guion/.voz"; os.makedirs(cache, exist_ok=True)
+paras = [[s for p in paras for s in p]]   # una sola generación: el tono no cambia entre párrafos
+cache = f"{ROOT}/guion/.voz/{VOICE}"; os.makedirs(cache, exist_ok=True)
 G = re.compile(r"\[([^|\]]+)\|([^\]]+)\]")
 
 def tokens(sentence):
@@ -31,8 +33,8 @@ for pi, para in enumerate(paras):
     key = f"{cache}/p{pi:02d}"
     if not (os.path.exists(key + ".json") and json.load(open(key + ".json")).get("text") == spoken):
         body = json.dumps({"text": spoken, "model_id": "eleven_multilingual_v2",
-                           "voice_settings": {"stability": 0.45, "similarity_boost": 0.8, "style": 0.25, "speed": 1.08}})
-        r = subprocess.run(["curl", "-sS", "-m", "180", "-X", "POST",
+                           "voice_settings": {"stability": 0.8, "similarity_boost": 0.8, "style": 0.0, "use_speaker_boost": True, "speed": 1.06}})
+        r = subprocess.run(["curl", "-sS", "-m", "400", "-X", "POST",
             f"https://api.elevenlabs.io/v1/text-to-speech/{VOICE}/with-timestamps?output_format=mp3_44100_128",
             "-H", "Content-Type: application/json", "-d", body], capture_output=True, text=True)
         d = json.loads(r.stdout)
@@ -72,8 +74,8 @@ for pi, para in enumerate(paras):
                       "words": [{"w": w["w"], "s": round(t_out + w["s"] - s0, 3), "e": round(t_out + w["e"] - s0, 3)} for w in words]})
         t_out += dur + gap; bi += 1; prev_end = e0
 out = np.concatenate(audio + [np.zeros(int(0.4 * SR), np.float32)])
-with wave.open(f"{ROOT}/public/voz.wav", "wb") as w:
+with wave.open(f"{ROOT}/public/voz{OUT}.wav", "wb") as w:
     w.setnchannels(1); w.setsampwidth(2); w.setframerate(SR); w.writeframes(np.clip(out, -32768, 32767).astype(np.int16).tobytes())
-json.dump({"duration": round(len(out) / SR, 3), "beats": beats}, open(f"{ROOT}/src/timing.json", "w"), ensure_ascii=False, indent=1)
+json.dump({"duration": round(len(out) / SR, 3), "beats": beats}, open(f"{ROOT}/src/timing{OUT}.json", "w"), ensure_ascii=False, indent=1)
 print("beats", len(beats), "dur", round(len(out) / SR, 2))
 for b in beats: print(b["id"], b["start"], round(b["end"] - b["start"], 2), b["text"][:60])
