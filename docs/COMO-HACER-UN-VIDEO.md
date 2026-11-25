@@ -34,7 +34,22 @@ videos/<slug>/timing.json, events.json, public/voz.wav, public/mix.wav   generad
 7. **Render:** `scripts/render.sh <slug>` -> `out/<slug>/<slug>.mp4` + hojas `out/<slug>/qc0.jpg...` (1 cuadro
    por segundo). Tarda ~25 min y hay un lock: si otro video está renderizando, espera su turno (correrlo con
    run_in_background y timeout largo). Mirar las hojas qc: no puede haber cuadros rotos ni planos vacíos.
-8. Escribir `guion.md`.
+8. **Portada:** crear `videos/<slug>/cover.json` y correr `scripts/cover.sh <slug>` -> `out/<slug>/portada.png`
+   (tarda menos de un minuto). Abrirla con Read y corregir hasta que ningún texto se corte. Formato:
+   ```json
+   { "beat": "b03", "frac": 0.92,
+     "overlay": { "kicker": "NVIDIA",
+       "lines": [ { "t": "EL CEO SE FUE" }, { "t": "Y VOLVIÓ", "c": "yellow" }, { "t": "+US$ 952.000 M EN UN DÍA", "size": 72, "c": "cyan" } ] } }
+   ```
+   `beat` + `frac` eligen el cuadro 3D de fondo (el plano se muestra sin subtítulos ni carteles): elegir uno con
+   un sujeto grande y claro en la mitad superior. `kicker` = etiqueta roja corta con el tema. `lines` = 2 o 3
+   líneas: título gigante en mayúsculas (blanco por defecto; `c`: yellow | red | cyan) y una línea chica de dato.
+   Tamaño por defecto 150: entran ~11 caracteres por línea; para líneas más largas bajar `size` (13 caracteres ≈ 128,
+   24 caracteres ≈ 72). La cifra más fuerte va en amarillo. El título tiene que ser verdad según el video: nada
+   que el propio guion desmienta. Ejemplos aprobados: `videos/*/cover.json`.
+9. Escribir `guion.md`, que además del guion y las fuentes lleva una sección `## Descripción de Instagram` con el
+   texto listo para copiar, en el formato de `instagram/descripciones.md`: gancho en la primera línea, tres datos
+   del video, "Seguime para la próxima historia." y cinco etiquetas.
 
 ## Reglas del guion
 
