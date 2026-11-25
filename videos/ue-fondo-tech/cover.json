@@ -1,0 +1,3 @@
+{ "beat": "b04", "frac": 0.95,
+  "overlay": { "kicker": "UNIÓN EUROPEA", "y": 69,
+    "lines": [ { "t": "PLANEA UN FONDO", "size": 104 }, { "t": "€ 50.000 M", "c": "yellow", "size": 150 }, { "t": "PARA IA Y CUÁNTICA · LA PLATA NO ESTÁ", "size": 50, "c": "cyan" } ] } }
