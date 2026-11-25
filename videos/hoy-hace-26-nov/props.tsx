@@ -140,7 +140,7 @@ const SkyCrane: React.FC<P> = ({ t, p }) => {
         </group>))}
       {[[-0.3, 0.2], [0.3, 0.2], [0, -0.25]].map(([x, z], i) => <B key={i} s={[0.025, L + 0.1, 0.025]} pos={[x, -0.1 - (L + 0.1) / 2, z]} c="#f4f1ff" e="#fff" ei={0.8} />)}
       <group position={[0, ry, 0]} scale={rs}><Rover t={t} tt={0} p={{ arm: false, mast: false }} /></group>
-      {touch && k > 0.97 && <group position={[0, ry, 0]}><Smoke t={t} tt={(t - start - dur * 0.97) * 2.2} p={{ n: 6, spread: 0.9, seed: 8 }} /></group>}
+      {touch && k > 0.97 && <group position={[0, ry, 0]}><Smoke t={t} tt={(t - start - dur * 0.97) * 2.2} p={{ n: 5, spread: 0.9, seed: 8, sz: 0.3 }} /></group>}
     </group>
   );
 };
