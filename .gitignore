@@ -2,3 +2,4 @@ node_modules
 out
 guion/.voz
 .DS_Store
+videos/*/cover.entry.ts

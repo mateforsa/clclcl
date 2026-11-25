@@ -1,3 +1,3 @@
-{ "beat": "b05", "frac": 0.55,
+{ "beat": "b29", "frac": 0.25,
   "overlay": { "kicker": "ARGENTINA",
-    "lines": [ { "t": "RECESIÓN", "size": 170 }, { "t": "TÉCNICA", "c": "yellow", "size": 190 }, { "t": "¿y por qué septiembre dio +1,1%?", "size": 56, "c": "cyan" } ] } }
+    "lines": [ { "t": "SUBIÓ 1,1%", "c": "yellow", "size": 165 }, { "t": "Y HAY RECESIÓN", "size": 112 }, { "t": "técnica: qué significa", "size": 68, "c": "cyan" } ] } }
