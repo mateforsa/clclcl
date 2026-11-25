@@ -1,5 +1,5 @@
-import type { BeatSpec } from './Beat';
-import { C } from './kit/math';
+import type { BeatSpec } from '../../src/Beat';
+import { C } from '../../src/kit/math';
 
 const ROCK = { shirt: C.gold, hair: '#15102b', skin: '#f2c39b' };       // muñeco "Rockstar"
 const KID = { shirt: '#3b3470', hair: '#3a2a1a', skin: '#ffd9b8', cap: '#3b3470' }; // hacker (genérico)

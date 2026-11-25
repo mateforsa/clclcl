@@ -1,12 +1,14 @@
 #!/usr/bin/env python3
 """Mezcla final: voz + música sintetizada (18-20 dB abajo) + SFX sincronizados -> public/mix.wav a -14 LUFS."""
-import json, os, subprocess, wave
+import json, os, subprocess, sys, wave, zlib
 import numpy as np
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__))); SR = 44100
+if len(sys.argv) < 2: sys.exit("uso: audio.py <slug>")
+SLUG = sys.argv[1]; VD = f"{ROOT}/videos/{SLUG}"; H = zlib.crc32(SLUG.encode())
 rng = np.random.default_rng(7)
 def rd(p):
     w = wave.open(p); a = np.frombuffer(w.readframes(w.getnframes()), np.int16).astype(np.float32) / 32768; return a
-voice = rd(f"{ROOT}/public/voz.wav"); N = len(voice); T = N / SR
+voice = rd(f"{VD}/public/voz.wav"); N = len(voice); T = N / SR
 _r = 20 * np.log10(np.sqrt(np.mean(voice[np.abs(voice) > 1e-4] ** 2)) + 1e-9)
 voice = np.tanh(voice * 10 ** ((-13 - _r) / 20) * 0.9) / 0.9   # todas las voces al mismo nivel antes de mezclar
 tl = np.arange(N) / SR
@@ -18,8 +20,10 @@ def lp(x, k):  # pasa-bajos de un polo (k chico = más grave)
     for i in range(len(x)): acc += k * (x[i] - acc); y[i] = acc
     return y
 # ---------- música: Am F C G, 100 bpm ----------
-bpm = 100; beat = 60 / bpm; bar = 4 * beat
-chords = [[57, 60, 64], [53, 57, 60], [48, 52, 55], [55, 59, 62]]
+PROGS = [[[57, 60, 64], [53, 57, 60], [48, 52, 55], [55, 59, 62]], [[50, 53, 57], [46, 50, 53], [53, 57, 60], [48, 52, 55]], [[52, 55, 59], [48, 52, 55], [55, 59, 62], [50, 54, 57]], [[57, 60, 64], [55, 59, 62], [53, 57, 60], [52, 56, 59]]]
+if SLUG == 'gta-vi': bpm, chords = 100, PROGS[0]
+else: bpm, chords = [96, 100, 104, 108][H % 4], PROGS[(H // 4) % 4]   # cada video tiene su tempo y progresión
+beat = 60 / bpm; bar = 4 * beat
 hz = lambda m: 440 * 2 ** ((m - 69) / 12)
 L = np.zeros(N + SR * 4, np.float32); R = np.zeros_like(L)
 def add(buf, x, t0, g=1.0):
@@ -60,7 +64,7 @@ boom = blip(95, 38, 0.7, 0.22) * 1.2 + lp(rng.standard_normal(int(0.7 * SR)), 0.
 tick = blip(1900, 1700, 0.03, 0.008)
 coin = blip(1320, 1320, 0.12, 0.05) + 0.6 * blip(1980, 1980, 0.12, 0.04)
 nr = int(0.5 * SR); riser = lp(rng.standard_normal(nr), 0.2) * np.linspace(0, 1, nr) ** 2
-ev = json.load(open(f"{ROOT}/guion/events.json")); last = {}
+ev = json.load(open(f"{VD}/events.json")); last = {}
 for i, e in enumerate(ev):
     t, k = e["t"], e["k"]
     if t - last.get(k, -9) < 0.07: continue
@@ -84,7 +88,7 @@ rms = lambda x: 20 * np.log10(np.sqrt(np.mean(x[np.abs(x) > 1e-4] ** 2)) + 1e-9)
 music *= 10 ** ((rms(voice) - 19 - rms(music.mean(1))) / 20)
 mix = np.stack([voice, voice], 1) + music + sfx
 mix = np.tanh(mix * 1.0)
-tmp = f"{ROOT}/out/premix.wav"; os.makedirs(f"{ROOT}/out", exist_ok=True)
+tmp = f"{ROOT}/out/premix-{SLUG}.wav"; os.makedirs(f"{ROOT}/out", exist_ok=True)
 with wave.open(tmp, "wb") as w: w.setnchannels(2); w.setsampwidth(2); w.setframerate(SR); w.writeframes((np.clip(mix, -1, 1) * 32767).astype(np.int16).tobytes())
-subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", tmp, "-af", "loudnorm=I=-14:TP=-1.5:LRA=11", "-ar", "48000", f"{ROOT}/public/mix.wav"], check=True)
+subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", tmp, "-af", "loudnorm=I=-14:TP=-1.5:LRA=11", "-ar", "48000", f"{VD}/public/mix.wav"], check=True)
 print("voz rms", round(rms(voice), 1), "musica rms", round(rms(music.mean(1)), 1), "sfx rms", round(rms(sfx.mean(1)), 1), "dur", round(T, 2))
