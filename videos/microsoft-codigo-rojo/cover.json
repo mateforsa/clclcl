@@ -1,0 +1,3 @@
+{ "beat": "b03", "frac": 0.62,
+  "overlay": { "kicker": "SEGÚN REUTERS",
+    "lines": [ { "t": "CÓDIGO ROJO", "c": "yellow", "size": 146 }, { "t": "EN MICROSOFT", "size": 130 }, { "t": "tras casi 24 horas sin correo", "size": 62, "c": "cyan" } ] } }

@@ -1,0 +1,317 @@
+import type { BeatSpec } from '../../src/Beat';
+import { C } from '../../src/kit/math';
+import timing from './timing.json';
+
+// segundo (desde el inicio del plano) en que se dice una palabra mostrada: para animaciones internas de un prop
+const norm = (s: string) => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9$]/g, '');
+const wt = (id: string, word: string): number => {
+  const tb = (timing as any).beats.find((b: any) => b.id === id); if (!tb) return 0;
+  for (const w of tb.words) if (w.w.split(' ').some((x: string) => norm(x).startsWith(norm(word)))) return w.s - tb.start;
+  return 0;
+};
+
+const VOS = { shirt: C.cyan, hair: '#3a2a1a', skin: '#f2c39b' };                    // "vos": una persona cualquiera
+const MIN = { shirt: '#26315f', pants: '#1b2145', hair: '#5a5568', skin: '#f2c39b' }; // funcionario genérico (sin rasgos)
+const ECO = { shirt: '#f4f1ff', hair: '#7a3b1a', skin: '#c98d62' };                 // economista privado genérico
+const PI = Math.PI;
+const MESES = [2.0, 0.9, 1.08, 1.55];   // junio, julio, agosto, septiembre (esquema: -2,5 / +0,4 / +1,1)
+
+export const BEATS: BeatSpec[] = [
+  /* ---------- GANCHO ---------- */
+  { id: 'b01', cam: { from: [0.8, 2.6, 8.8], to: [0, 2.3, 7.6], look: [0, 1.5, 0], fov: 46 }, keywords: ['INDEC', 'recesión', 'técnica'],
+    actors: [
+      { type: 'building', pos: [0, 0, -2.6], p: { w: 2.6, h: 2.6, d: 1.4, seed: 7, color: '#2d1a6e', sign: 'INDEC' } },
+      { type: 'ring', pos: [0, 0.03, 0.5], p: { r: 0.8, color: C.cyan } },
+      { type: 'person', pos: [0, 0, 0.5], p: { ...VOS, pose: 'idle' }, out: 'dato' },
+      { type: 'person', pos: [0, 0, 0.5], p: { ...VOS, pose: 'hold' }, at: 'dato', enter: 'none', out: 'diarios' },
+      { type: 'calendar', pos: [-1.05, 2.0, 0.6], s: 0.6, at: '24', p: { top: 'NOVIEMBRE', big: '24', color: C.blue }, out: 'diarios' },
+      { type: 'paper', pos: [0, 1.25, 1.0], s: 0.55, at: 'dato', p: { text: 'INDEC', sub: 'DATO', color: '#1a1030' }, out: 'diarios' },
+      { type: 'paper', pos: [-0.72, 1.75, 0.9], rot: [0, 0.25, 0.06], s: 0.95, at: 'diarios', p: { text: 'RECESIÓN', sub: 'TÉCNICA' } },
+      { type: 'paper', pos: [0.74, 1.9, 0.7], rot: [0, -0.25, -0.05], s: 0.95, at: 'titulan', p: { text: 'RECESIÓN', sub: 'TÉCNICA' } },
+      { type: 'paper', pos: [0, 0.95, 1.6], rot: [-0.1, 0, 0.03], s: 0.95, at: 'recesión', p: { text: 'RECESIÓN', sub: 'TÉCNICA' } },
+    ],
+    overlays: [{ type: 'pill', text: '24 DE NOVIEMBRE', at: '24', out: 'recesión' }, { type: 'pill', text: 'RECESIÓN TÉCNICA', at: 'recesión', red: true }] },
+  { id: 'b02', set: 'void', cam: { from: [-0.9, 2.5, 8.9], to: [0.2, 2.3, 7.9], look: [0, 1.75, 0], fov: 46 }, keywords: ['creció', '1,1'],
+    actors: [
+      { type: 'chart', pos: [0, 2.0, 0], p: { pts: MESES, lo: 0.4, hi: 2.4, days: ['JUN', 'JUL', 'AGO', 'SEP'], times: [-1, -1, wt('b02', 'creció')], tags: [null, null, null, { text: '+1,1%' }] } },
+      { type: 'person', pos: [-1.3, 0, 2.2], rot: [0, 0.6, 0], s: 0.62, p: { ...VOS, pose: 'idle' }, out: 'creció' },
+      { type: 'person', pos: [-1.3, 0, 2.2], rot: [0, 0.6, 0], s: 0.62, p: { ...VOS, pose: 'point' }, at: 'creció', enter: 'none' },
+    ],
+    overlays: [{ type: 'pill', text: 'EL MISMO DATO', at: 'mismo', out: '1,1' }, { type: 'big', text: '+1,1%', sub: 'septiembre contra agosto', at: '1,1' }] },
+  { id: 'b03', set: 'void', cam: { from: [0.5, 2.3, 7.6], to: [-0.2, 2.2, 6.9], look: [0, 1.55, 0], fov: 46 }, keywords: ['dos'],
+    actors: [
+      { type: 'ring', pos: [0, 0.03, 0.4], p: { r: 0.8, color: C.gold } },
+      { type: 'label', pos: [-0.74, 2.25, 0], rot: [0, 0.15, 0], p: { text: 'RECESIÓN', w: 1.36, h: 0.5, bg: C.red, size: 0.6, weight: 900 } },
+      { type: 'label', pos: [0.74, 2.25, 0], rot: [0, -0.15, 0], at: 0.35, p: { text: '+1,1%', w: 1.36, h: 0.5, bg: '#1f9d55', size: 0.66, weight: 900 } },
+      { type: 'person', pos: [0, 0, 0.4], p: { ...VOS, pose: 'idle' }, out: 'ciertas' },
+      { type: 'person', pos: [0, 0, 0.4], p: { ...VOS, pose: 'shrug' }, at: 'ciertas', enter: 'none' },
+      { type: 'label', pos: [0, 2.9, 0.2], at: 'ciertas', bob: 0.05, p: { text: '?', w: 0.7, h: 0.7, size: 0.95, color: C.gold, weight: 900 } },
+    ],
+    overlays: [{ type: 'pill', text: '¿LAS DOS COSAS?', at: 'dos' }] },
+  { id: 'b04', cam: { from: [1.3, 2.5, 9.2], to: [0.3, 2.2, 8.0], look: [0, 1.35, 0], fov: 46 }, keywords: ['fábrica'],
+    actors: [
+      { type: 'factory', pos: [0.15, 0, 0], s: 0.85, p: { speed: 2.8 } },
+      { type: 'person', pos: [-1.05, 0, 2.2], rot: [0, PI - 0.4, 0], s: 0.7, p: { ...VOS, pose: 'idle' }, out: 'fábrica' },
+      { type: 'person', pos: [-1.05, 0, 2.2], rot: [0, PI - 0.4, 0], s: 0.7, p: { ...VOS, pose: 'point' }, at: 'fábrica', enter: 'none' },
+    ],
+    overlays: [{ type: 'pill', text: 'LA ECONOMÍA, COMO UNA FÁBRICA', at: 'economía' }] },
+  { id: 'b05', cam: { from: [-1.4, 2.6, 8.8], to: [-0.4, 2.3, 7.8], look: [0, 1.45, 0], fov: 46 }, keywords: ['dos', 'recesión', 'técnica'],
+    actors: [
+      { type: 'factory', pos: [-0.1, 0, 0], s: 0.85, p: { prof: [[0, 2.8], [wt('b05', 'menos'), 2.8], [wt('b05', 'menos') + 0.6, 1.5], [wt('b05', 'trimestres'), 1.5], [wt('b05', 'trimestres') + 0.6, 0.5]] } },
+      { type: 'label', pos: [0.5, 2.6, 0.7], at: 'menos', p: { text: 'UN TRIMESTRE: MENOS', w: 1.75, h: 0.36, bg: C.red, size: 0.56, weight: 800 } },
+      { type: 'label', pos: [0.5, 2.15, 0.7], at: 'trimestres', p: { text: 'OTRO TRIMESTRE: MENOS', w: 1.75, h: 0.36, bg: C.red, size: 0.56, weight: 800 } },
+    ],
+    overlays: [{ type: 'pill', text: 'PRODUCE MENOS', at: 'menos', out: 'recesión' }, { type: 'pill', text: 'RECESIÓN TÉCNICA', at: 'recesión', red: true }] },
+  { id: 'b06', set: 'room', cam: { from: [0.7, 2.4, 8.2], to: [-0.3, 2.2, 7.3], look: [0, 1.5, 0], fov: 46 }, keywords: ['regla', 'cuánto', 'quién'],
+    actors: [
+      { type: 'label', pos: [0, 2.75, -1.2], p: { text: '2 TRIMESTRES EN BAJA', w: 3.3, h: 0.62, bg: '#15102b', border: C.cyan, size: 0.5, weight: 800 } },
+      { type: 'person', pos: [0, 0, 0.3], p: { ...VOS, pose: 'idle' }, out: 'No' },
+      { type: 'person', pos: [0, 0, 0.3], p: { ...VOS, pose: 'shrug' }, at: 'No', enter: 'none' },
+      { type: 'label', pos: [-0.9, 2.0, 0.3], rot: [0, 0.2, 0], at: 'cuánto', bob: 0.04, p: { text: '¿CUÁNTO?', w: 1.15, h: 0.46, bg: C.gold, color: '#1a1030', size: 0.6, weight: 900 } },
+      { type: 'label', pos: [0.9, 2.0, 0.3], rot: [0, -0.2, 0], at: 'quién', bob: 0.04, p: { text: '¿A QUIÉN?', w: 1.15, h: 0.46, bg: C.magenta, size: 0.6, weight: 900 } },
+    ],
+    overlays: [{ type: 'pill', text: 'ES UNA REGLA PRÁCTICA', at: 'regla' }] },
+
+  /* ---------- 1: LOS NÚMEROS ---------- */
+  { id: 'b07', set: 'void', cam: { from: [0.6, 2.4, 8.6], to: [0, 2.3, 8.0], look: [0, 1.7, 0], fov: 46 },
+    actors: [{ type: 'chart', pos: [0, 1.9, 0], p: { pts: [2.2, 2.0, 1.6, 1.7, 1.3], lo: 0.6, hi: 2.6, dur: 1.4 } }],
+    overlays: [{ type: 'chapter', n: 'UNO', title: 'LOS NÚMEROS', at: 0 }] },
+  { id: 'b08', set: 'void', cam: { from: [-0.9, 2.7, 8.9], to: [0.3, 2.4, 7.9], look: [0, 1.7, 0], fov: 46 }, keywords: ['PBI', '0,6', 'oficial'],
+    actors: [
+      { type: 'bars', pos: [-0.75, 0, 0], enter: 'none', p: { vals: [2.55], colors: [C.cyan], w: 1.0, dur: 0.5 } },
+      { type: 'label', pos: [-0.75, 2.85, 0], p: { text: '1º TRIM.', w: 1.1, h: 0.36, bg: '#15102b', color: C.cyan, size: 0.62 } },
+      { type: 'bars', pos: [0.75, 0, 0], at: 'PBI', enter: 'none', p: { vals: [2.15], colors: [C.red], w: 1.0, dur: 0.6 } },
+      { type: 'label', pos: [0.75, 2.45, 0], at: 'PBI', p: { text: '2º TRIM.', w: 1.1, h: 0.36, bg: '#15102b', color: C.red, size: 0.62 } },
+      { type: 'box', pos: [0.2, 2.55, 0.52], at: 'baja', p: { size: [2.9, 0.045, 0.04], color: C.gold, glow: true } },
+      { type: 'calendar', pos: [0.75, 1.3, 0.56], s: 0.5, at: 'Segundo', p: { top: 'ABR-JUN', big: '2026', color: C.blue } },
+    ],
+    overlays: [{ type: 'big', text: '-0,6%', sub: 'PBI: 2º trimestre contra el 1º', at: '0,6', red: true }, { type: 'pill', text: 'DATO OFICIAL DEL INDEC', at: 'oficial' }] },
+  { id: 'b09', cam: { from: [1.1, 2.4, 9.0], to: [0.2, 2.2, 8.0], look: [0, 1.5, 0], fov: 46 }, keywords: ['Julio', '2,5'],
+    actors: [
+      { type: 'factory', pos: [0, 0.0, 0], s: 0.9, p: { belt: false, prof: [[0, 2.6], [wt('b09', 'cae'), 2.6], [wt('b09', 'cae') + 0.9, 0.35]] } },
+      { type: 'calendar', pos: [0.6, 2.5, 0.5], s: 0.55, at: 0.15, p: { top: 'JULIO', big: '2026', color: C.red } },
+    ],
+    overlays: [{ type: 'big', text: '-2,5%', sub: 'julio, en un solo mes', at: '2,5', red: true }] },
+  { id: 'b10', set: 'void', cam: { from: [1.0, 2.2, 8.4], to: [-0.2, 2.3, 7.6], look: [0, 1.85, 0], fov: 46 }, keywords: ['0,4', '1,1'],
+    actors: [
+      { type: 'chart', pos: [0, 1.95, 0], p: { pts: MESES, lo: 0.4, hi: 2.4, days: ['JUN', 'JUL', 'AGO', 'SEP'], times: [-1, wt('b10', 'sube'), wt('b10', 'Septiembre') + 0.3],
+        tags: [null, { text: '-2,5%', dy: -0.3 }, { text: '+0,4%', dy: -0.32 }, { text: '+1,1%', dx: -0.15 }] } },
+      { type: 'ring', pos: [0, 0.03, 0.6], p: { r: 1.1, color: C.green } },
+    ],
+    overlays: [{ type: 'pill', text: 'AGOSTO: +0,4%', at: 'Agosto', out: 'Septiembre' }, { type: 'pill', text: 'SEPTIEMBRE: +1,1%', at: 'Septiembre' }] },
+  { id: 'b11', set: 'void', cam: { from: [-1.1, 1.9, 7.9], to: [-0.3, 2.1, 7.3], look: [0.1, 1.85, 0], fov: 46 }, keywords: ['no', 'abajo'],
+    actors: [
+      { type: 'chart', pos: [0, 1.95, 0], p: { pts: MESES, lo: 0.4, hi: 2.4, days: ['JUN', 'JUL', 'AGO', 'SEP'], times: [-1, -1, -1], base: 1.9, baseText: 'NIVEL 2º TRIM.' } },
+      { type: 'box', pos: [0.5, 1.82, 0.12], at: 'tercer', p: { size: [1.95, 0.05, 0.04], color: C.red, glow: true } },
+      { type: 'label', pos: [0.55, 1.5, 0.2], at: 'tercer', p: { text: '3º TRIMESTRE', w: 1.5, h: 0.34, bg: C.red, size: 0.6, weight: 900 } },
+    ],
+    overlays: [{ type: 'pill', text: 'DOS SUBAS NO COMPENSAN', at: 'no', out: 'abajo' }, { type: 'pill', text: 'QUEDA ABAJO DEL SEGUNDO', at: 'abajo', red: true }] },
+  { id: 'b12', set: 'room', cam: { from: [0.9, 2.5, 8.4], to: [-0.2, 2.3, 7.5], look: [0, 1.6, 0], fov: 46 }, keywords: ['privados', '1,8'],
+    actors: [
+      { type: 'screen', pos: [0, 2.35, -0.8], p: { kind: 'code', w: 2.5, h: 1.25 }, out: '1,8' },
+      { type: 'screen', pos: [0, 2.35, -0.8], at: '1,8', enter: 'none', p: { kind: 'text', text: '≈ -1,8%', w: 2.5, h: 1.25 } },
+      { type: 'desk', pos: [0, 0, 0.2] },
+      { type: 'laptop', pos: [-0.35, 0.82, 0.2], rot: [0, PI, 0] },
+      { type: 'laptop', pos: [0.4, 0.82, 0.2], rot: [0, PI, 0] },
+      { type: 'person', pos: [-0.4, 0, 0.95], rot: [0, PI, 0], p: { ...ECO, pose: 'type' } },
+      { type: 'person', pos: [0.45, 0, 0.95], rot: [0, PI, 0], p: { shirt: '#8a6bff', hair: '#15102b', skin: '#f2c39b', pose: 'type' }, out: 'caída' },
+      { type: 'person', pos: [0.45, 0, 0.95], rot: [0, PI, 0], p: { shirt: '#8a6bff', hair: '#15102b', skin: '#f2c39b', pose: 'point' }, at: 'caída', enter: 'none' },
+    ],
+    overlays: [{ type: 'pill', text: 'ESTIMACIÓN PRIVADA', at: 'privados' }] },
+  { id: 'b13', cam: { from: [0.9, 2.7, 8.9], to: [-0.3, 2.4, 7.9], look: [0, 1.75, 0], fov: 46 }, keywords: ['año pasado', '1,2'],
+    actors: [
+      { type: 'box', pos: [0, 0.35, 0], p: { size: [3.3, 0.7, 1.0], color: '#2d1a6e' } },
+      { type: 'crates', pos: [-0.8, 0.7, 0], p: { n: 10, color: C.cyan, size: 0.36 } },
+      { type: 'label', pos: [-0.8, 2.9, 0], p: { text: 'SEP. 2025', w: 1.2, h: 0.36, bg: '#15102b', color: C.cyan, size: 0.6 } },
+      { type: 'crates', pos: [0.8, 0.7, 0], at: 'septiembre', p: { n: 8, color: C.gold, size: 0.36, stagger: 0.1 } },
+      { type: 'label', pos: [0.8, 2.52, 0], at: 'pasado', p: { text: 'SEP. 2026', w: 1.2, h: 0.36, bg: '#15102b', color: C.gold, size: 0.6 } },
+    ],
+    overlays: [{ type: 'big', text: '-1,2%', sub: 'contra septiembre de 2025', at: '1,2', red: true }] },
+  { id: 'b14', cam: { from: [-0.9, 2.4, 9.0], to: [0.3, 2.2, 8.0], look: [0, 1.75, 0], fov: 46 }, keywords: ['Diez', 'quince', '3', '11'],
+    actors: [
+      { type: 'tiles', pos: [0, 0.95, 0], p: {} },
+      { type: 'tiles', pos: [0, 0.95, 0], at: 'Diez', enter: 'none', p: { idx: [0, 1, 3, 4, 5, 7, 8, 10, 11, 13], color: C.red } },
+      { type: 'tiles', pos: [0, 0.95, 0], at: 'Minería', enter: 'none', p: { idx: [12], color: C.green } },
+      { type: 'box', pos: [0, 0.45, 0], p: { size: [3.2, 0.9, 0.5], color: '#241659' } },
+      { type: 'label', pos: [0, 0.5, 0.27], p: { text: '15 SECTORES', w: 2.2, h: 0.42, color: C.cyan, size: 0.62, weight: 800 } },
+    ],
+    overlays: [{ type: 'pill', text: '10 DE 15 CAEN', at: 'sectores', red: true, out: 'Industria' },
+      { type: 'tag', text: 'INDUSTRIA', at: 'Industria', x: 29, y: 71, color: C.red, out: 'Minería' }, { type: 'tag', text: 'COMERCIO', at: 'comercio', x: 71, y: 71, color: C.red, out: 'Minería' },
+      { type: 'pill', text: 'BAJAN MÁS DE 3%', at: 'más', red: true, out: 'Minería' }, { type: 'pill', text: 'MINERÍA: +11%', at: 'Minería' }] },
+
+  /* ---------- 2: EL DÓLAR ---------- */
+  { id: 'b15', set: 'void', cam: { from: [-0.5, 2.3, 7.6], to: [0, 2.2, 7.0], look: [0, 1.7, 0], fov: 46 },
+    actors: [{ type: 'bill', pos: [0, 1.8, 0], p: { w: 2.6 } }],
+    overlays: [{ type: 'chapter', n: 'DOS', title: 'EL DÓLAR', at: 0 }] },
+  { id: 'b16', cam: { from: [0.9, 2.4, 8.8], to: [-0.2, 2.3, 7.8], look: [0, 1.8, 0], fov: 46 }, keywords: ['dólar', '1.593'],
+    actors: [
+      { type: 'building', pos: [-1.5, 0, -3], p: { w: 1.6, h: 2.3, d: 1.4, seed: 12, color: '#241659' } },
+      { type: 'building', pos: [1.5, 0, -3.4], p: { w: 1.6, h: 3.0, d: 1.4, seed: 15, color: '#2d1a6e' } },
+      { type: 'bill', pos: [0, 1.5, 0.3], p: { w: 2.3 }, move: { to: [0, 2.35, 0.3], at: 'llega', dur: 1.0 } },
+      { type: 'arrow', pos: [-1.35, 1.0, 0.2], at: 'llega', enter: 'none', p: { len: 1.5, color: C.gold, dur: 0.9 } },
+      { type: 'arrow', pos: [1.35, 1.0, 0.2], at: 'llega', enter: 'none', p: { len: 1.5, color: C.gold, dur: 0.9 } },
+    ],
+    overlays: [{ type: 'pill', text: 'DÓLAR OFICIAL', at: 'dólar', out: '1.593' }, { type: 'big', text: '', count: { to: 1593, pre: '$ ' }, sub: 'dólar oficial mayorista', at: '1.593' }] },
+  { id: 'b17', set: 'void', cam: { from: [-1.0, 2.6, 8.6], to: [0.1, 2.3, 7.8], look: [0, 1.75, 0], fov: 46 }, keywords: ['CCL', '1.800'],
+    actors: [
+      { type: 'chart', pos: [0, 2.0, 0], p: { pts: [1.25, 1.4, 1.33, 1.6, 1.95, 1.72], lo: 1.0, hi: 2.1, base: 1.8, baseText: '$ 1.800', baseLeft: true, times: [0.2, 0.9, 1.6, wt('b17', 'pasa') - 0.5, wt('b17', 'pasa'), wt('b17', 'durante') + 0.2] } },
+      { type: 'desk', pos: [0, 0, 1.3], s: 0.75 },
+      { type: 'laptop', pos: [0, 0.62, 1.3], rot: [0, PI, 0], s: 0.8 },
+    ],
+    overlays: [{ type: 'pill', text: 'CONTADO CON LIQUIDACIÓN', at: 'contado', out: '1.800' }, { type: 'pill', text: 'PASA LOS $ 1.800', at: '1.800' }] },
+  { id: 'b18', set: 'room', cam: { from: [-0.8, 2.3, 8.2], to: [0.2, 2.2, 7.4], look: [0.1, 1.35, 0], fov: 46 }, keywords: ['súper', 'precios'],
+    actors: [
+      { type: 'shelf', pos: [0, 0, -1.0], p: { w: 3.4, rows: 4 } },
+      { type: 'person', pos: [-1.3, 0, 0.9], rot: [0, PI / 2, 0], p: { ...VOS, pose: 'hold' }, move: { to: [-0.55, 0, 0.9], at: 0, dur: 2.6 } },
+      { type: 'cart', pos: [-0.35, 0, 0.9], s: 0.85, p: { n: 3, stagger: 0.5 }, move: { to: [0.4, 0, 0.9], at: 0, dur: 2.6 } },
+      { type: 'label', pos: [0.55, 2.75, -0.7], at: 'eso', bob: 0.04, p: { text: '$ ?', w: 1.0, h: 0.5, bg: C.gold, color: '#1a1030', size: 0.7, weight: 900 } },
+    ],
+    overlays: [{ type: 'pill', text: 'VOS, EN EL SÚPER', at: 'súper' }] },
+  { id: 'b19', set: 'void', cam: { from: [0.9, 2.6, 8.0], to: [0, 2.3, 7.2], look: [0, 1.6, 0], fov: 46 }, keywords: ['2,2', 'más alta'],
+    actors: [
+      { type: 'ring', pos: [0, 0.73, 0.2], p: { r: 0.9, color: C.gold } },
+      { type: 'box', pos: [0, 0.35, 0.2], p: { size: [2.2, 0.7, 1.3], color: '#2d1a6e' } },
+      { type: 'cart', pos: [0, 0.7, 0.2], rot: [0, -0.5, 0], s: 1.05, p: { n: 6, stagger: 0.35 } },
+      { type: 'calendar', pos: [-1.0, 2.75, 0], s: 0.5, p: { top: 'OCTUBRE', big: '2026', color: C.blue } },
+      { type: 'label', pos: [0.8, 2.7, 0.2], at: 'inflación', bob: 0.04, p: { text: 'IPC', w: 0.9, h: 0.42, bg: C.gold, color: '#1a1030', size: 0.66, weight: 900 } },
+      { type: 'arrow', pos: [-1.1, 0.95, 0.2], s: 0.8, at: 'alta', enter: 'none', p: { len: 0.9, color: C.gold } },
+    ],
+    overlays: [{ type: 'big', text: '2,2%', sub: 'inflación de octubre', at: '2,2' }, { type: 'pill', text: 'LA MÁS ALTA DESDE ABRIL', at: 'alta' }] },
+
+  /* ---------- 3: LAS DOS LECTURAS ---------- */
+  { id: 'b20', set: 'void', cam: { from: [0.5, 2.3, 8.0], to: [0, 2.2, 7.4], look: [0, 1.4, 0], fov: 46 },
+    actors: [
+      { type: 'person', pos: [-0.9, 0, 0], rot: [0, 0.5, 0], p: { ...MIN, pose: 'idle' } },
+      { type: 'person', pos: [0.9, 0, 0], rot: [0, -0.5, 0], p: { ...ECO, pose: 'idle' } },
+      { type: 'label', pos: [-0.9, 2.3, 0], p: { text: 'GOBIERNO', w: 1.4, h: 0.4, bg: C.blue, size: 0.6 } },
+      { type: 'label', pos: [0.9, 2.3, 0], p: { text: 'PRIVADOS', w: 1.4, h: 0.4, bg: C.magenta, size: 0.6 } },
+    ],
+    overlays: [{ type: 'chapter', n: 'TRES', title: 'LAS DOS LECTURAS', at: 0 }] },
+  { id: 'b21', cam: { from: [-0.8, 2.0, 8.0], to: [0.2, 1.9, 7.1], look: [0, 1.0, 0], fov: 46 }, keywords: ['Caputo', 'no le preocupa'],
+    actors: [
+      { type: 'building', pos: [0, 0, -3.2], p: { w: 3.0, h: 2.5, d: 1.4, seed: 23, color: '#2d1a6e', sign: 'ECONOMÍA' } },
+      { type: 'ring', pos: [0, 0.03, 0.3], p: { r: 1.0, color: C.blue } },
+      { type: 'person', pos: [0, 0, 0.1], p: { ...MIN, pose: 'idle' }, out: 'no' },
+      { type: 'person', pos: [0, 0, 0.1], p: { ...MIN, pose: 'shrug' }, at: 'no', enter: 'none' },
+      { type: 'podium', pos: [0, 0, 0.75] },
+      { type: 'bill', pos: [-1.05, 2.35, 0.3], at: 'dólar', bob: 0.04, p: { w: 1.0 } },
+      { type: 'arrow', pos: [1.05, 1.9, 0.3], s: 0.6, at: 'dólar', enter: 'none', p: { len: 0.75, color: C.gold } },
+    ],
+    overlays: [{ type: 'plate', name: 'Luis Caputo', role: 'ministro de Economía', at: 'Luis', y: 70.5 }, { type: 'pill', text: 'DICE QUE NO LE PREOCUPA', at: 'no' }] },
+  { id: 'b22', set: 'void', cam: { from: [0.8, 2.5, 8.4], to: [-0.2, 2.2, 7.6], look: [0, 1.6, 0], fov: 46 }, keywords: ['turbulencia', 'traslado menor'],
+    actors: [
+      { type: 'globe', pos: [0, 2.3, 0], s: 0.8, bob: 0.07 },
+      { type: 'ring', pos: [0, 0.03, 0], p: { r: 1.2, color: C.red } },
+      { type: 'arrow', pos: [-1.3, 3.0, 0.2], rot: [0, 0, PI], at: 'turbulencia', enter: 'none', p: { len: 0.7, color: C.red } },
+      { type: 'arrow', pos: [1.3, 3.0, 0.2], rot: [0, 0, PI], at: 'global', enter: 'none', p: { len: 0.7, color: C.red } },
+      { type: 'bill', pos: [-0.95, 0.85, 1.0], at: 'traslado', p: { w: 0.9 } },
+      { type: 'arrow', pos: [-0.3, 0.85, 1.0], rot: [0, 0, -PI / 2], at: 'menor', enter: 'none', p: { len: 0.35, color: C.gold } },
+      { type: 'label', pos: [0.8, 0.85, 1.0], at: 'precios', p: { text: 'PRECIOS', w: 1.0, h: 0.46, bg: C.gold, color: '#1a1030', size: 0.56, weight: 900 } },
+    ],
+    overlays: [{ type: 'pill', text: 'SEGÚN CAPUTO: TURBULENCIA GLOBAL', at: 'turbulencia', out: 'traslado' }, { type: 'pill', text: 'ESPERA UN TRASLADO MENOR', at: 'traslado' }] },
+  { id: 'b23', set: 'room', cam: { from: [0.9, 2.5, 8.4], to: [-0.1, 2.3, 7.5], look: [0, 1.5, 0], fov: 46 }, keywords: ['definición', 'arbitraria'],
+    actors: [
+      { type: 'label', pos: [0, 3.05, -1.5], p: { text: '2 TRIMESTRES EN BAJA', w: 3.3, h: 0.56, bg: '#15102b', border: C.cyan, size: 0.5, weight: 800, sub: undefined } },
+      { type: 'box', pos: [0, 0.35, -0.1], p: { size: [2.4, 0.7, 1.5], color: '#3b2f7a' } },
+      { type: 'person', pos: [0, 0.7, -0.4], p: { ...MIN, pose: 'idle' }, out: 'dice' },
+      { type: 'person', pos: [0, 0.7, -0.4], p: { ...MIN, pose: 'shrug' }, at: 'dice', enter: 'none' },
+      { type: 'podium', pos: [0, 0.7, 0.25], s: 0.8 },
+      { type: 'crowd', pos: [0, 0, 2.6], enter: 'none', p: { n: 5, area: [3.0, 0.5], seed: 8, stagger: 0, sc: 0.6, pose: 'idle' } },
+    ],
+    overlays: [{ type: 'pill', text: 'SOBRE LA RECESIÓN TÉCNICA', at: 'recesión', out: 'arbitraria' }, { type: 'pill', text: 'CAPUTO: «CASI ARBITRARIA»', at: 'arbitraria' }] },
+  { id: 'b24', cam: { from: [1.0, 2.5, 8.8], to: [0, 2.3, 7.9], look: [0, 1.6, 0], fov: 46 }, keywords: ['PBI', '16'],
+    actors: [
+      { type: 'building', pos: [-0.85, 0, -2.6], p: { w: 2.1, h: 2.5, d: 1.4, seed: 31, color: '#2d1a6e', sign: 'GOBIERNO' } },
+      { type: 'person', pos: [-0.85, 0, 0.5], p: { shirt: '#3b4a8a', hair: '#15102b', skin: '#c98d62', pose: 'idle' }, out: 'esperar' },
+      { type: 'person', pos: [-0.85, 0, 0.5], p: { shirt: '#3b4a8a', hair: '#15102b', skin: '#c98d62', pose: 'point' }, at: 'esperar', enter: 'none' },
+      { type: 'label', pos: [0.75, 1.05, 0.5], at: 'PBI', p: { text: 'PBI', w: 1.2, h: 0.6, bg: '#15102b', border: C.gold, color: C.gold, size: 0.62, weight: 900 } },
+      { type: 'calendar', pos: [0.75, 2.3, 0.5], s: 0.75, at: '16', p: { top: 'DICIEMBRE', big: '16', color: C.blue } },
+    ],
+    overlays: [{ type: 'pill', text: 'EL GOBIERNO PIDE ESPERAR', at: 'pide', out: 'diciembre' }, { type: 'pill', text: 'PBI OFICIAL: 16 DE DICIEMBRE', at: 'diciembre' }] },
+  { id: 'b25', set: 'room', cam: { from: [-0.9, 2.4, 8.2], to: [0.1, 2.2, 7.4], look: [0, 1.45, 0], fov: 46 }, keywords: ['economistas', 'otros datos'],
+    actors: [
+      { type: 'person', pos: [0, 0, -0.5], p: { ...ECO, pose: 'type' } },
+      { type: 'desk', pos: [0, 0, 0.2] },
+      { type: 'laptop', pos: [0, 0.82, 0.2], rot: [0, PI, 0] },
+      { type: 'paper', pos: [-1.05, 2.25, -0.6], rot: [0, 0.25, 0.04], s: 0.85, at: 'otros', p: { text: 'CONSUMO', sub: 'INDEC', color: '#1a1030' } },
+      { type: 'paper', pos: [1.05, 2.25, -0.6], rot: [0, -0.25, -0.04], s: 0.85, at: 'datos', p: { text: 'EMPLEO', sub: 'INDEC', color: '#1a1030' } },
+    ],
+    overlays: [{ type: 'pill', text: 'ECONOMISTAS PRIVADOS', at: 'economistas' }] },
+  { id: 'b26', set: 'void', cam: { from: [0.9, 2.6, 8.8], to: [-0.2, 2.4, 7.9], look: [0, 1.7, 0], fov: 46 }, keywords: ['consumo', '2,4', 'desempleo', '7,9'],
+    actors: [
+      { type: 'box', pos: [0, 0.4, 0], p: { size: [3.3, 0.8, 1.4], color: '#2d1a6e' } },
+      { type: 'cart', pos: [-0.2, 0.8, 0.1], rot: [0, -0.4, 0], s: 1.0, p: { n: 2, stagger: 0 }, out: 'desempleo' },
+      { type: 'arrow', pos: [1.2, 2.9, 0.1], rot: [0, 0, PI], at: 'cayó', enter: 'none', p: { len: 1.2, color: C.red }, out: 'desempleo' },
+      { type: 'label', pos: [-0.2, 2.85, 0.1], p: { text: 'CONSUMO', w: 1.5, h: 0.4, bg: '#15102b', color: C.cyan, size: 0.6 }, out: 'desempleo' },
+      { type: 'crowd', pos: [0, 0.8, 0.1], at: 'desempleo', enter: 'none', p: { n: 6, area: [3.0, 0.6], seed: 14, stagger: 0.08, sc: 0.8, face: PI, pose: 'idle' } },
+      { type: 'label', pos: [0, 2.85, 0.1], at: 'desempleo', p: { text: 'DESEMPLEO', w: 1.7, h: 0.4, bg: '#15102b', color: C.gold, size: 0.6 } },
+    ],
+    overlays: [{ type: 'big', text: '-2,4%', sub: 'consumo privado, 2º trimestre', at: '2,4', red: true, out: 'desempleo' }, { type: 'big', text: '7,9%', sub: 'desempleo, 2º trimestre', at: '7,9' }] },
+
+  /* ---------- ANTECEDENTE ---------- */
+  { id: 'b27', cam: { from: [-1.0, 2.6, 9.0], to: [0.3, 2.3, 8.0], look: [0, 1.6, 0], fov: 46 }, keywords: ['2023', '2024', 'tres'],
+    actors: [
+      { type: 'bars', pos: [-1.2, 0, 0], enter: 'none', p: { vals: [2.7], colors: [C.cyan], w: 0.62, dur: 0.5 } },
+      { type: 'bars', pos: [-0.4, 0, 0], at: 'fines', enter: 'none', p: { vals: [2.25], colors: [C.red], w: 0.62, dur: 0.5 } },
+      { type: 'label', pos: [-0.4, 2.5, 0], at: 'fines', p: { text: 'FIN 2023', w: 0.78, h: 0.26, bg: '#15102b', color: '#fff', size: 0.62 } },
+      { type: 'bars', pos: [0.4, 0, 0], at: 'mediados', enter: 'none', p: { vals: [1.85], colors: [C.red], w: 0.62, dur: 0.5 } },
+      { type: 'label', pos: [0.4, 2.1, 0], at: 'mediados', p: { text: '1º 2024', w: 0.78, h: 0.26, bg: '#15102b', color: '#fff', size: 0.62 } },
+      { type: 'bars', pos: [1.2, 0, 0], at: 'cayó', enter: 'none', p: { vals: [1.55], colors: [C.red], w: 0.62, dur: 0.5 } },
+      { type: 'label', pos: [1.2, 1.8, 0], at: 'cayó', p: { text: '2º 2024', w: 0.78, h: 0.26, bg: '#15102b', color: '#fff', size: 0.62 } },
+    ],
+    overlays: [{ type: 'pill', text: 'YA PASÓ: 2023-2024', at: 'pasó', out: 'tres' }, { type: 'pill', text: 'TRES TRIMESTRES EN BAJA', at: 'tres', red: true }] },
+  { id: 'b28', set: 'void', cam: { from: [0.9, 2.5, 8.8], to: [-0.2, 2.3, 7.9], look: [0, 1.85, 0], fov: 46 }, keywords: ['rebotó', '3,9', 'terminó'],
+    actors: [
+      { type: 'chart', pos: [0, 2.05, 0], p: { pts: [2.3, 1.95, 1.6, 1.3, 2.05], lo: 0.9, hi: 2.5, times: [-1, -1, -1, wt('b28', 'rebotó')], days: ['', 'T4', 'T1', 'T2', 'T3'], tags: [null, null, null, null, { text: '+3,9%', dx: -0.2 }] } },
+      { type: 'check', pos: [-1.0, 2.75, 0.2], at: 'terminó', p: { size: 0.5 } },
+    ],
+    overlays: [{ type: 'pill', text: '3º TRIMESTRE DE 2024', at: 'tercer', out: '3,9' }, { type: 'big', text: '+3,9%', sub: 'rebote, 3º trimestre de 2024', at: '3,9' }] },
+  { id: 'b29', set: 'void', cam: { from: [-0.7, 2.3, 7.8], to: [0.2, 2.2, 7.1], look: [0, 1.6, 0], fov: 46 }, keywords: ['Cuánto'],
+    actors: [
+      { type: 'gear', pos: [-0.4, 1.75, 0], p: { r: 0.72, speed: 0.5 } },
+      { type: 'gear', pos: [0.74, 1.12, 0], p: { r: 0.4, speed: 0.95, dir: -1, color: C.cyan, teeth: 6 } },
+      { type: 'calendar', pos: [0.95, 2.55, 0.2], s: 0.6, at: 'dura', bob: 0.04, p: { top: '¿HASTA?', big: '?', color: C.red } },
+      { type: 'person', pos: [0.85, 0, 1.6], s: 0.7, p: { ...VOS, pose: 'idle' }, out: 'todavía' },
+      { type: 'person', pos: [0.85, 0, 1.6], s: 0.7, p: { ...VOS, pose: 'shrug' }, at: 'todavía', enter: 'none' },
+    ],
+    overlays: [{ type: 'pill', text: 'NO SE SABE', at: 'todavía' }] },
+
+  /* ---------- CIERRE ---------- */
+  { id: 'b30', cam: { from: [-1.3, 2.5, 9.2], to: [-0.3, 2.2, 8.0], look: [0, 1.35, 0], fov: 46 }, keywords: ['fábrica', 'septiembre'],
+    actors: [
+      { type: 'factory', pos: [-0.15, 0, 0], s: 0.85, p: { prof: [[0, 0.45], [wt('b30', 'giraron') - 0.3, 0.45], [wt('b30', 'giraron') + 0.7, 2.2]] } },
+      { type: 'person', pos: [1.0, 0, 2.2], rot: [0, PI + 0.4, 0], s: 0.7, p: { ...VOS, pose: 'idle' }, out: 'giraron' },
+      { type: 'person', pos: [1.0, 0, 2.2], rot: [0, PI + 0.4, 0], s: 0.7, p: { ...VOS, pose: 'point' }, at: 'giraron', enter: 'none' },
+      { type: 'label', pos: [0.5, 2.45, 0.7], at: 'septiembre', bob: 0.04, p: { text: 'SEP: +1,1%', w: 1.4, h: 0.42, bg: '#1f9d55', size: 0.62, weight: 900 } },
+    ],
+    overlays: [{ type: 'pill', text: 'NO ESTÁN APAGADAS', at: 'apagadas' }] },
+  { id: 'b31', cam: { from: [1.0, 2.7, 9.0], to: [0, 2.4, 8.0], look: [0, 1.6, 0], fov: 46 }, keywords: ['menos', 'segunda'],
+    actors: [
+      { type: 'factory', pos: [0, 0, -3.4], s: 0.95, p: { belt: false, speed: 1.2 } },
+      { type: 'box', pos: [0, 0.3, 0.3], p: { size: [3.4, 0.6, 1.0], color: '#241659' } },
+      { type: 'crates', pos: [-1.0, 0.6, 0.3], p: { n: 10, color: C.cyan, size: 0.36 } },
+      { type: 'label', pos: [-1.0, 2.75, 0.3], p: { text: '1º TRIM.', w: 0.95, h: 0.3, bg: '#15102b', color: C.cyan, size: 0.62 } },
+      { type: 'crates', pos: [0, 0.6, 0.3], p: { n: 8, color: C.gold, size: 0.36 } },
+      { type: 'label', pos: [0, 2.37, 0.3], p: { text: '2º TRIM.', w: 0.95, h: 0.3, bg: '#15102b', color: C.gold, size: 0.62 } },
+      { type: 'crates', pos: [1.0, 0.6, 0.3], at: 'produjo', p: { n: 6, color: C.red, size: 0.36, stagger: 0.12 } },
+      { type: 'label', pos: [1.0, 1.99, 0.3], at: 'menos', p: { text: '3º TRIM.', w: 0.95, h: 0.3, bg: '#15102b', color: C.red, size: 0.62 } },
+    ],
+    overlays: [{ type: 'pill', text: 'EL TRIMESTRE ENTERO', at: 'trimestre', out: 'segunda' }, { type: 'pill', text: 'SEGUNDA BAJA SEGUIDA', at: 'segunda', red: true }] },
+  { id: 'b32', set: 'void', cam: { from: [-0.6, 2.4, 8.2], to: [0.2, 2.2, 7.5], look: [0, 1.6, 0], fov: 46 }, keywords: ['dos', '16', 'INDEC'],
+    actors: [
+      { type: 'label', pos: [-0.2, 2.85, 0], p: { text: 'RECESIÓN TÉCNICA', w: 2.4, h: 0.5, bg: C.red, size: 0.56, weight: 900 } },
+      { type: 'label', pos: [-0.2, 2.2, 0], p: { text: 'SEPTIEMBRE: +1,1%', w: 2.4, h: 0.5, bg: '#1f9d55', size: 0.56, weight: 900 } },
+      { type: 'check', pos: [1.35, 2.85, 0.1], at: 'ciertas', p: { size: 0.36 } },
+      { type: 'check', pos: [1.35, 2.2, 0.1], at: 'ciertas', p: { size: 0.36 } },
+      { type: 'calendar', pos: [0, 0.95, 0.6], s: 0.75, at: '16', p: { top: 'DICIEMBRE', big: '16', color: C.blue } },
+      { type: 'ring', pos: [0, 0.03, 0.6], p: { r: 1.0, color: C.cyan } },
+    ],
+    overlays: [{ type: 'pill', text: '16 DE DICIEMBRE: EL PBI', at: 'INDEC' }] },
+  { id: 'b33', cam: { from: [0.6, 2.4, 9.6], to: [0, 2.2, 8.8], look: [0, 1.35, 0], fov: 46 }, keywords: ['Seguime'],
+    actors: [
+      { type: 'factory', pos: [0.2, 0, 0], s: 0.85, p: { speed: 1.8 } },
+      { type: 'ring', pos: [-0.95, 0.03, 2.4], p: { r: 0.5, color: C.cyan } },
+      { type: 'person', pos: [-0.95, 0, 2.4], s: 0.7, p: { ...VOS, pose: 'idle' } },
+    ],
+    overlays: [{ type: 'pill', text: 'SEGUIME', at: 0.1 }] },
+];

@@ -1,0 +1,3 @@
+{ "beat": "b16", "frac": 0.9,
+  "overlay": { "kicker": "MARADONA",
+    "lines": [ { "t": "2 GOLES" }, { "t": "EN 4 MINUTOS", "c": "yellow", "size": 128 }, { "t": "ARGENTINA 2 · INGLATERRA 1 · 1986", "size": 54, "c": "cyan" } ] } }
