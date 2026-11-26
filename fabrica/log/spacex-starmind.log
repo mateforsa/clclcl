@@ -3,3 +3,9 @@
 2026-11-26T14:08:48-03:00 [editor] corrección del desempate: no verifiqué que sea el reel más visto de todo el radar; lo que dice instagram/referencias/2026-11-26.md es que el reel de @xataka sobre el vuelo 15 de Starship es el nº 1 por multiplicador (30,6x su mediana, 1.985.348 vistas, 15/11). scripts/metricas.py --informe no tiene datos todavía.
 2026-11-26T14:12:20-03:00 [guionista] guion escrito: 192 palabras, apertura tipo A2 antes y después (17.000 hoy, un millón autorizado), cierre tipo pregunta de un número + continuación. Datos chequeados con extractos de búsqueda (ninguna página abrió). Cambios: 58 veces en lugar de 59 (17.247 activos al 18/11 según McDowell). Pronunciación a confirmar: Starmind, Viasat, FCC.
 2026-11-26T14:12:21-03:00 [fabrica] etapa -> guion
+2026-11-26T14:13:47-03:00 [verificador] APROBADO: 20 datos, todos con fuente
+2026-11-26T14:13:47-03:00 [fabrica] etapa -> verificado
+2026-11-26T14:14:24-03:00 [fabrica] spacex-starmind: la voz gasta unos 1143 caracteres de ElevenLabs. AVISO: no se puede leer el saldo (la clave no tiene ese permiso); anotalo en fabrica/config.json.
+2026-11-26T14:14:24-03:00 [fabrica] etapa -> esperando_ok_voz
+2026-11-26T14:14:46-03:00 [fabrica] freno de voz: se destraba por el pedido explícito del dueño de correr UN video de prueba de punta a punta (no vale para otros videos)
+2026-11-26T14:14:46-03:00 [dueño] APROBADO (esperando_ok_voz -> voz)
