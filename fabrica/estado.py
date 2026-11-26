@@ -60,6 +60,7 @@ def main():
     rj = sub.add_parser("rechazar"); rj.add_argument("slug"); rj.add_argument("motivo")
     pb = sub.add_parser("publicar"); pb.add_argument("slug"); pb.add_argument("--prueba", action="store_true"); pb.add_argument("--simular", action="store_true")
     av = sub.add_parser("auto-voz"); av.add_argument("slug")
+    ti = sub.add_parser("titulo"); ti.add_argument("slug"); ti.add_argument("titulo")
     sub.add_parser("resumen"); sub.add_parser("tope"); sub.add_parser("panel")
     cr = sub.add_parser("creditos"); cr.add_argument("slug")
     x = a.parse_args(); e = leer(); V = e["videos"]
@@ -119,6 +120,9 @@ def main():
         if disp is not None and c and c > disp: sys.exit(f"NO ALCANZAN los créditos anotados ({disp}) para {c} caracteres.")
         v["etapa"] = "voz"; v["nota"] = ""; v["historial"].append({"etapa": "voz", "cuando": ahora(), "nota": "voz sin OK (regla voz_sin_ok del dueño)"})
         log(x.slug, "fabrica", f"voz SIN OK del dueño (regla voz_sin_ok): ~{c} caracteres"); guardar(e); print(f"{x.slug}: esperando_ok_voz -> voz (automático)")
+    elif x.cmd == "titulo":
+        v = V.get(x.slug) or sys.exit(f"no existe {x.slug}")
+        v["titulo"] = x.titulo; log(x.slug, "fabrica", f"título -> {x.titulo}"); guardar(e); print("ok")
     elif x.cmd == "resumen":
         print(f"Fábrica · {ahora()} · producidos hoy: {len(producidos_hoy(e))} de {CFG['tope_por_dia']}")
         for et in ETAPAS[:-1][::-1]:
