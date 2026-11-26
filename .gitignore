@@ -3,3 +3,5 @@ out
 guion/.voz
 .DS_Store
 videos/*/cover.entry.ts
+instagram/referencias/*-demo.md
+scripts/__pycache__/

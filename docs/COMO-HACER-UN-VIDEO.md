@@ -14,6 +14,20 @@ fecha en la consulta) y los temas salen de ahí: no se reutilizan listas de día
 estadísticas que haya pasado el dueño del canal: al 25/11/2026 el reel que mejor rindió fue el de economía
 argentina (recesión técnica): 77 envíos con 917 espectadores, 39 s de reproducción promedio y 0 comentarios.
 
+## Después del render: Instagram por API
+
+Radar de referencias, publicación y métricas: ver `docs/INSTAGRAM-API.md`. Lo mínimo:
+
+```
+python3 scripts/publicar.py <slug> --simular   # valida MP4, portada y descripción; no publica
+python3 scripts/publicar.py <slug>             # publica, previo OK escrito
+python3 scripts/radar.py                       # qué les reventó a las cuentas de referencia
+python3 scripts/metricas.py                    # métricas propias a las 48 h y a los 7 días
+```
+
+`publicar.py` exige que `guion.md` tenga el bloque "## Descripción de Instagram" con cinco etiquetas y que la
+portada esté en `instagram/portadas/<slug>.jpg` y subida al remoto.
+
 ## Archivos de un video
 
 ```
