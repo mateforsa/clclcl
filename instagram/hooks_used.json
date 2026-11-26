@@ -113,5 +113,10 @@
   "video": "champions-25-nov",
   "inicio": "A7 el marcador (PSG dos, Roma dos)",
   "cierre": "Pregunta de opciones con un nombre (¿Soulé, Lautaro o Julián?) + motivo para seguir (resultados de cada fecha)"
+ },
+ {
+  "video": "hilux-amarok",
+  "inicio": "A10 el ya pasó / despedida (este mes dejan de fabricarse las dos camionetas que conoce todo el país)",
+  "cierre": "Pregunta de dos opciones en una palabra (¿Hilux o Amarok?) + motivo para seguir (mostrar las nuevas cuando salgan)"
  }
 ]
