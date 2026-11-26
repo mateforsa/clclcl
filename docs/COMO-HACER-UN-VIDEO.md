@@ -103,6 +103,8 @@ Usarlo SIEMPRE para:
 - nombres en inglés y siglas, escritos como suenan en castellano con tilde en la sílaba fuerte:
   `[Rókstar Guéims.|Rockstar Games.]`, `[Téik Tu,|Take-Two,]`, `[Iutúb|YouTube]`, `[ge te a seis|GTA VI]`,
   `[jáquer|hacker]`, `[pe ce.|PC.]`, `[si i ou|CEO]`, `[Envidia|Nvidia]`.
+  La hache inglesa NO se escribe con jota (la voz la lee "y"): `[Áilux|Hilux]`, no `Jáilux`. En Argentina se
+  dice "áilux"; usar la forma en que lo diría alguien de acá, sin letras que la voz pueda leer en inglés.
 La puntuación va pegada dentro del grupo, de los dos lados.
 
 ## `beats.ts`
@@ -146,7 +148,8 @@ color, glow), `road`, `arch` (text).
 - `{ type: 'tag', text, at, x, y, color }` etiqueta suelta (x, y en % de pantalla).
 - `{ type: 'photo', src: 'hilux.jpg', at, out, mode: 'card' | 'full', caption, credit, zoom: [1.04, 1.16], pan: [x, y] }`
   foto real con zoom y paneo lentos (sin IA). El archivo va en `videos/<slug>/public/fotos/`. `card` la muestra
-  enmarcada en el centro, sobre la escena 3D; `full` ocupa la pantalla. Usar 2 a 4 por video, de 2 a 4 segundos,
+  enmarcada en el centro, sobre la escena 3D; `full` ocupa la pantalla y solo sirve con fotos de 1.600 px o
+  más (con fotos chicas se ve borroso: usar `card`). Usar 2 a 4 por video, de 2 a 4 segundos,
   en el medio (donde cae la retención). Solo fotos propias, de prensa de la marca o de uso libre, con `credit`.
   Nunca fotos de personas animadas con IA.
 

@@ -62,7 +62,7 @@ export const BEATS: BeatSpec[] = [
       { type: 'crono', pos: [0, 2.55, 0.6], s: 0.8, p: { r: 0.62, per: 1.6, text: '89 SEGUNDOS' } },
     ],
     overlays: [
-      { type: 'photo', src: 'planta-zarate.jpg', at: 0.25, out: 2.9, mode: 'full', caption: 'Planta de Zárate', credit: 'Toyota', zoom: [1.04, 1.14], pan: [-1.5, 0] },
+      { type: 'photo', src: 'planta-zarate.jpg', at: 0.25, out: 2.9, mode: 'card', caption: 'Planta de Zárate', credit: 'Toyota', zoom: [1.04, 1.14], pan: [-1.5, 0] },
       { type: 'pill', text: '1 CADA 89 SEGUNDOS', at: 2.9 }] },
   // 7. el más fabricado, según Toyota  [FOTO hilux-actual]
   { id: 'b07', set: 'room', cam: { from: [0.7, 2.5, 7.4], to: [-0.2, 2.2, 6.6], look: [0, 1.3, 0], fov: 44 }, keywords: ['Toyota', 'más', 'fabricado'],
@@ -103,7 +103,7 @@ export const BEATS: BeatSpec[] = [
       { type: 'label', pos: [0, 0.95, -0.6], at: 'cien', p: { text: '+100 DESTINOS', w: 2.2, h: 0.46, bg: C.green, color: '#0d2b18', size: 0.62, weight: 900 } },
     ],
     overlays: [
-      { type: 'photo', src: 'planta-pacheco.jpg', at: 0.2, out: 2.9, mode: 'full', caption: 'Planta de General Pacheco', credit: 'Volkswagen', zoom: [1.14, 1.04], pan: [1.5, 0] },
+      { type: 'photo', src: 'planta-pacheco.jpg', at: 0.2, out: 2.9, mode: 'card', caption: 'Planta de General Pacheco', credit: 'Volkswagen', zoom: [1.14, 1.04], pan: [1.5, 0] },
       { type: 'pill', text: '6 DE CADA 10 SE EXPORTARON', at: 2.9 }] },
   // 11. ahora vienen los reemplazos
   { id: 'b11', set: 'room', cam: { from: [-0.6, 2.4, 7.4], to: [0, 2.2, 6.8], look: [0, 1.1, 0], fov: 44 }, keywords: ['reemplazos'],
