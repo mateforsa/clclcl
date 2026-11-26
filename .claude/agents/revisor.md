@@ -25,4 +25,8 @@ Veredicto
 - Algo FALLA: `python3 fabrica/estado.py log <slug> revisor "DEVUELTO: <qué, en qué segundo>"` y
   `python3 fabrica/estado.py etapa <slug> render --nota "devuelto por el revisor: ..."`.
 
+Caso especial, duración fuera de 45–70 s: el productor no puede arreglarla sin regenerar la voz, y eso gasta créditos que solo el dueño
+autoriza. No lo devuelvas por eso solo: si el resto PASA, mandalo a `esperando_ok_final` con
+`--nota "AVISO: dura NN s, se pasa del tope; acortarlo exige regenerar la voz"` para que el dueño decida.
+
 Devolvé la lista de los 7 puntos con PASA/FALLA y los valores medidos.

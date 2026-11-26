@@ -1,0 +1,3 @@
+{ "beat": "b14", "frac": 0.97,
+  "overlay": { "kicker": "SPACEX", "y": 52,
+    "lines": [ { "t": "PERMISO PARA", "size": 112 }, { "t": "1.000.000", "c": "yellow", "size": 176 }, { "t": "DE SATÉLITES", "size": 112 }, { "t": "HOY FUNCIONAN UNOS 17.000", "size": 62, "c": "cyan" } ] } }

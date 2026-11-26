@@ -9,3 +9,13 @@
 2026-11-26T14:14:24-03:00 [fabrica] etapa -> esperando_ok_voz
 2026-11-26T14:14:46-03:00 [fabrica] freno de voz: se destraba por el pedido explícito del dueño de correr UN video de prueba de punta a punta (no vale para otros videos)
 2026-11-26T14:14:46-03:00 [dueño] APROBADO (esperando_ok_voz -> voz)
+2026-11-26T14:15:07-03:00 [fabrica] spacex-starmind: la voz gasta unos 1143 caracteres de ElevenLabs. AVISO: no se puede leer el saldo (la clave no tiene ese permiso); anotalo en fabrica/config.json.
+2026-11-26T14:15:07-03:00 [productor] arranco: genero la voz (una sola toma, sin variantes)
+2026-11-26T14:15:17-03:00 [productor] voz lista: 72,75 s, 16 planos (una toma; pasa 2,75 s el tope de 1:10 del guion)
+2026-11-26T14:19:57-03:00 [productor] beats.ts, props.tsx y entry.ts escritos (16 planos); saco stills
+2026-11-26T14:22:39-03:00 [productor] stills revisados y corregidos (carteles encimados, cohete sobre el subtítulo, encuadres); audio mezclado
+2026-11-26T14:23:00-03:00 [fabrica] etapa -> render
+2026-11-26T14:23:00-03:00 [productor] lanzo el render en segundo plano
+2026-11-26T14:24:00-03:00 [productor] portada lista: instagram/portadas/spacex-starmind.jpg
+2026-11-26T14:28:47-03:00 [productor] render listo: out/spacex-starmind/spacex-starmind.mp4, 73 s (1080x1920, 30 fps, hojas qc revisadas sin cuadros rotos)
+2026-11-26T14:28:47-03:00 [fabrica] etapa -> revision
