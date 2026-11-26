@@ -92,7 +92,7 @@ function pinta() {
   const V = D.videos, de = (...e) => V.filter(v => e.includes(v.etapa));
   const frenos = de('esperando_ok_voz', 'esperando_ok_final'), curso = de('voz', 'render', 'revision'), cola = de('idea', 'guion', 'verificado');
   const gal = V.filter(v => 'mini' in v), listos = de('listo');
-  document.getElementById('act').textContent = 'Actualizado ' + hace(D.actualizado) + ' · ' + new Date(D.actualizado).toLocaleString('es-AR');
+  document.getElementById('act').textContent = 'Actualizado ' + hace(D.actualizado) + ' · ' + new Date(D.actualizado).toLocaleString('es-AR', {timeZone:'America/Argentina/Buenos_Aires', hour12:false});
   document.getElementById('tiras').innerHTML = [
     [frenos.length, 'esperan tu OK', 'var(--magenta)'], [curso.length, 'produciendo', 'var(--cyan)'], [cola.length, 'en cola', 'var(--txt)'],
     [`${D.producidos_hoy}/${D.tope}`, 'hoy / tope diario', 'var(--amarillo)'], [D.semana.length, 'terminados esta semana', 'var(--verde)'],
