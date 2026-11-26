@@ -76,7 +76,7 @@ export const BEATS: BeatSpec[] = [
       { type: 'big', text: '1.ª VEZ', sub: 'según la FCC, en la historia de EE.UU.', at: 'primera', y: 62 }] },
 
   // 7. Amazon, Viasat y la Sociedad Astronómica pidieron rechazarla
-  { id: 'b07', cam: { from: [-0.7, 2.2, 9.0], to: [0.2, 2.1, 8.0], look: [0, 1.0, 0], fov: 46 }, keywords: ['Amazon,', 'Viasat', 'Astronómica', 'rechazaran.'],
+  { id: 'b07', cam: { from: [-0.7, 2.2, 9.0], to: [0.2, 2.1, 8.0], look: [0, 1.0, 0], fov: 46 }, keywords: ['Amazon,', 'Viasat', 'Astronómica', 'Estadounidense', 'rechazaran.'],
     actors: [
       { type: 'person', pos: [-1.1, 0, 0], rot: [0, 0.2, 0], s: 0.85, p: { shirt: C.gold, pose: 'hold' } },
       { type: 'label', pos: [-1.1, 1.85, 0.1], at: 0.1, p: { text: 'AMAZON', w: 0.95, h: 0.3, ...LBL } },
@@ -156,7 +156,7 @@ export const BEATS: BeatSpec[] = [
     overlays: [{ type: 'big', text: '0', sub: 'satélites Starmind en órbita hoy', at: 'ninguno', y: 62 }] },
 
   // 13. Primero en 2027, plazo 2040
-  { id: 'b13', cam: { from: [-0.9, 2.4, 9.2], to: [0.1, 2.3, 8.1], look: [0, 1.3, 0], fov: 46 }, keywords: ['2027', '2040'],
+  { id: 'b13', cam: { from: [-0.9, 2.4, 9.2], to: [0.1, 2.3, 8.1], look: [0, 1.3, 0], fov: 46 }, keywords: ['2027', '2040', 'completar'],
     actors: [
       { type: 'rocket', pos: [-0.95, 0, 0], s: 0.8 },
       { type: 'ring', pos: [-0.95, 0.03, 0], p: { r: 0.55, color: C.gold } },

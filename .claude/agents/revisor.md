@@ -25,6 +25,10 @@ Veredicto
 - Algo FALLA: `python3 fabrica/estado.py log <slug> revisor "DEVUELTO: <qué, en qué segundo>"` y
   `python3 fabrica/estado.py etapa <slug> render --nota "devuelto por el revisor: ..."`.
 
+Estilo de la casa, no es falla: en los subtítulos la palabra ya dicha queda atenuada (gris) a propósito; viene del motor (`src/`),
+que no se toca. Anotalo como observación para el dueño solo si una palabra TODAVÍA NO dicha o la activa no se lee.
+Dos palabras pegadas sin espacio sí es falla (el productor lo arregla marcando una de las dos como palabra clave en `beats.ts`).
+
 Caso especial, duración fuera de 45–70 s: el productor no puede arreglarla sin regenerar la voz, y eso gasta créditos que solo el dueño
 autoriza. No lo devuelvas por eso solo: si el resto PASA, mandalo a `esperando_ok_final` con
 `--nota "AVISO: dura NN s, se pasa del tope; acortarlo exige regenerar la voz"` para que el dueño decida.
