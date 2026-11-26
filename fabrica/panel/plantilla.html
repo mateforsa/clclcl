@@ -77,6 +77,8 @@ async function ordenar(boton, cmd, hecho) {
   if (COM) {
     try {
       if ((await COM.canSendToClaude()) === 'available') {
+        // La orden también queda escrita en la base del panel: es lo que Claude lee para saber qué botón fue.
+        try { const db = await window.claude.use('db'); if (db) await db.doc('ordenes/o' + Date.now()).set({cmd, cuando: new Date().toISOString(), estado: 'pendiente'}); } catch (e) {}
         const anchor = await COM.anchorFor(boton);
         await COM.sendToClaude({anchor, text: cmd});
         boton.disabled = true; boton.textContent = hecho; boton.closest('.card').classList.add('enviado');
