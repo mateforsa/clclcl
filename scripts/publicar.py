@@ -84,6 +84,8 @@ def publicar(d):
         try: ok = json.loads(r.stdout).get("success")
         except ValueError: ok = False
         if ok: break
+        # A veces Meta contesta error pero el video sí quedó cargado: el estado del contenedor es lo que manda.
+        if "not in the status to upload" in r.stdout or m.get(cid, fields="status_code").get("status_code") == "FINISHED": ok = True; break
     if not ok: raise m.MetaError(f"la subida falló tras 6 intentos: {(r.stdout or r.stderr)[:300]}")
     print("Video subido:", round(tam / 1e6, 1), "MB")
     for _ in range(60):
