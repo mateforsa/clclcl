@@ -23,10 +23,9 @@ volver a leer las páginas de "Content Publishing", "IG User Media", "Business D
    - Alternativa: en el Explorador de la API Graph generar un token de usuario (dura 1 hora) y cambiarlo por
      uno de 60 días. Ese hay que renovarlo: `python3 scripts/renovar_token.py --renovar`.
 6. **Guardar el token como secreto, nunca en git.**
-   - En la nube: secreto de red del entorno `clclcl` para `graph.facebook.com` (cabecera Authorization, prefijo
-     Bearer) y otro para `rupload.facebook.com` (cabecera Authorization, prefijo **OAuth**: ese prefijo se carga
-     desde la configuración del entorno, el formulario rápido no lo ofrece). El proxy lo agrega solo; los scripts
-     no lo ven.
+   - En la nube: secreto de red del entorno `clclcl` para `graph.facebook.com` y otro igual para
+     `rupload.facebook.com`, los dos con cabecera Authorization y prefijo Bearer (probado el 26/11/2026: la subida
+     acepta Bearer). El proxy lo agrega solo; los scripts no lo ven.
    - En tu computadora: variable de entorno `IG_ACCESS_TOKEN` (y `META_APP_ID`, `META_APP_SECRET` para renovar).
 7. **ID de la cuenta.** `python3 scripts/meta_api.py cuenta` y copiar el número a `ig_user_id` en
    `instagram/config.yaml`.

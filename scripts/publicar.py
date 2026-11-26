@@ -74,8 +74,9 @@ def publicar(d):
     c = m.post(f"{ig}/media", **datos); cid, uri = c["id"], c["uri"]
     print("Contenedor creado:", cid)
     tam = os.path.getsize(MP4)
-    with open(MP4, "rb") as f:
-        r = requests.post(uri, data=f, headers=m._headers({"offset": "0", "file_size": str(tam)}, upload=True), timeout=900)
+    with open(MP4, "rb") as f: cuerpo = f.read()  # en memoria: Meta rechaza la subida si llega en trozos (sin Content-Length)
+    r = requests.post(uri, data=cuerpo, timeout=900, headers=m._headers(
+        {"offset": "0", "file_size": str(tam), "Content-Type": "application/x-www-form-urlencoded"}, upload=True))
     if not (r.ok and r.json().get("success")): raise m.MetaError(f"la subida falló ({r.status_code}): {r.text[:300]}")
     print("Video subido:", round(tam / 1e6, 1), "MB")
     for _ in range(60):
