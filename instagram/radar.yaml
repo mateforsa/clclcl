@@ -1,8 +1,26 @@
 # Cuentas de referencia para scripts/radar.py. Tienen que ser cuentas profesionales (empresa o creador) y públicas.
-# Completar con 5 a 20 usuarios, sin @.
-cuentas: []
-#  - ejemplo_cuenta_1
-#  - ejemplo_cuenta_2
+# Lista inicial armada por Claude el 26/11/2026 con cuentas en español que la API pudo leer; cambiarla por las que elijas (5 a 20, sin @).
+cuentas:
+  # economía y finanzas (Argentina)
+  - finanzasconpedro
+  - jultarres
+  - iprofesional
+  # noticias explicadas y datos
+  - filonewsok
+  - chequeado
+  - elordenmundial
+  - bloomberglinea
+  # tecnología, ciencia y divulgación
+  - xataka
+  - platzi
+  - startupeable
+  - elgatoylacaja
+  - curiosamente
+  - quantumfracture
+  - memoriasdepez
+  # fútbol y videojuegos
+  - sofascore_latam
+  - 3djuegos
 ultimos: 30          # reels a traer por cuenta
 reventado_x: 5       # veces la mediana de vistas de esa cuenta
 ventana_dias: 30     # solo reels publicados en los últimos N días
