@@ -23,3 +23,5 @@
 2026-11-26T14:31:40-03:00 [fabrica] etapa -> render (devuelto por el revisor: subtitulos pegados en 34.3-35.4 s (Estadounidensepidieron) y 61.3-61.9 s (paracompletar), y palabras atenuadas con poco contraste sobre las ventanas de la ciudad. AVISO: dura 73 s, se pasa del tope; acortarlo exige regenerar la voz (decide el dueño))
 2026-11-26T14:32:18-03:00 [productor] arreglo del rechazo: 'Estadounidense' y 'completar' pasan a palabra clave para que el subtítulo no quede pegado; se re-renderiza sin regenerar la voz
 2026-11-26T14:32:18-03:00 [fabrica] etapa -> render (re-render por subtítulos pegados (devuelto por el revisor))
+2026-11-26T14:38:02-03:00 [productor] re-render listo: out/spacex-starmind/spacex-starmind.mp4
+2026-11-26T14:38:02-03:00 [fabrica] etapa -> revision
