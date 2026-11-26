@@ -95,8 +95,8 @@ Para que publique sin que estés, el slug tiene que estar en `instagram/cola.jso
 
 Probado el 26/11/2026: Meta rechaza `trial_params` para esta cuenta con "Application does not have permission for
 this action" (código 10), tanto con subida reanudable como con `video_url`. Un reel normal con la misma app sí se
-publica. La causa no está confirmada: puede ser que la cuenta no tenga la función habilitada (24 seguidores en esa
-fecha) o que la app necesite acceso avanzado. Volver a probar si la opción "Prueba" aparece en la app de Instagram.
+publica. Según leyó el dueño del canal, los reels de prueba se habilitan a partir de 200 seguidores (dato sin
+verificar en la documentación de Meta); el 26/11/2026 la cuenta tenía 24. Volver a probar si la opción "Prueba" aparece en la app de Instagram.
 
 ## Subida de video: falla de a ratos (sin resolver)
 
