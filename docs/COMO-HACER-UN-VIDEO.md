@@ -103,8 +103,9 @@ Usarlo SIEMPRE para:
 - nombres en inglés y siglas, escritos como suenan en castellano con tilde en la sílaba fuerte:
   `[Rókstar Guéims.|Rockstar Games.]`, `[Téik Tu,|Take-Two,]`, `[Iutúb|YouTube]`, `[ge te a seis|GTA VI]`,
   `[jáquer|hacker]`, `[pe ce.|PC.]`, `[si i ou|CEO]`, `[Envidia|Nvidia]`.
-  La hache inglesa NO se escribe con jota (la voz la lee "y"): `[Áilux|Hilux]`, no `Jáilux`. En Argentina se
-  dice "áilux"; usar la forma en que lo diría alguien de acá, sin letras que la voz pueda leer en inglés.
+  Hache aspirada del inglés: escribir la palabra inglesa que suena igual, `[High-lux|Hilux]` (elegido de oído
+  por el dueño el 26/11/2026). Con jota (`Jáilux`) la voz dice "yilux" y sin hache (`Áilux`) dice "ailux".
+  Ante un nombre dudoso, generar 5 o 6 variantes en un audio numerado y que el dueño elija; no adivinar.
 La puntuación va pegada dentro del grupo, de los dos lados.
 
 ## `beats.ts`
