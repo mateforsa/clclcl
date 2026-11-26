@@ -681,7 +681,24 @@
    ],
    "nota": "aprobado por el revisor en 2a vuelta; hueco minimo 14,4 px; espera OK del dueno",
    "caracteres_voz": 961
+  },
+  "hoy-hace-dreamcast": {
+   "titulo": "Hoy hace 28 años: la última consola de Sega",
+   "tema": "Videojuegos (efeméride, serie Hoy hace)",
+   "fuentes": [
+    "https://es.digitaltrends.com/videojuego/dreamcast-ultima-consola-sega/",
+    "https://vandal.elespanol.com/noticia-amp/1350767217/25-anos-del-nacimiento-de-dreamcast-una-consola-de-corta-vida-que-dejo-un-gran-legado/"
+   ],
+   "puntaje": 7.8,
+   "etapa": "idea",
+   "creado": "2026-11-26T20:36:38-03:00",
+   "historial": [
+    {
+     "etapa": "idea",
+     "cuando": "2026-11-26T20:36:38-03:00"
+    }
+   ]
   }
  },
- "actualizado": "2026-11-26T20:16:41-03:00"
+ "actualizado": "2026-11-26T20:36:38-03:00"
 }
