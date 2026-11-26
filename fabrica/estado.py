@@ -59,6 +59,7 @@ def main():
     ap = sub.add_parser("aprobar"); ap.add_argument("slug")
     rj = sub.add_parser("rechazar"); rj.add_argument("slug"); rj.add_argument("motivo")
     pb = sub.add_parser("publicar"); pb.add_argument("slug"); pb.add_argument("--prueba", action="store_true"); pb.add_argument("--simular", action="store_true")
+    av = sub.add_parser("auto-voz"); av.add_argument("slug")
     sub.add_parser("resumen"); sub.add_parser("tope"); sub.add_parser("panel")
     cr = sub.add_parser("creditos"); cr.add_argument("slug")
     x = a.parse_args(); e = leer(); V = e["videos"]
@@ -108,6 +109,16 @@ def main():
             v["link"] = link; v["etapa"] = "publicado"; v["nota"] = ""; v["historial"].append({"etapa": "publicado", "cuando": ahora(), "nota": link or ""})
             log(x.slug, "publicador", f"PUBLICADO: {link}")
         guardar(e); print(f"{x.slug}: {'reel de prueba' if x.prueba else 'publicado'} {link or ''}")
+    elif x.cmd == "auto-voz":
+        # Solo existe porque el dueño lo pidió: "cuando no te doy ok que siga generando videos". Se apaga con voz_sin_ok=false.
+        v = V.get(x.slug) or sys.exit(f"no existe {x.slug}")
+        if not CFG.get("voz_sin_ok"): sys.exit("FRENO: voz_sin_ok está apagado en fabrica/config.json; la voz necesita el OK del dueño.")
+        if v["etapa"] != "esperando_ok_voz": sys.exit(f"{x.slug} no está en esperando_ok_voz (etapa {v['etapa']})")
+        if len(producidos_hoy(e)) >= CFG["tope_por_dia"]: sys.exit(f"Tope diario alcanzado ({CFG['tope_por_dia']}).")
+        c = caracteres(x.slug); disp = CFG.get("creditos_elevenlabs_disponibles")
+        if disp is not None and c and c > disp: sys.exit(f"NO ALCANZAN los créditos anotados ({disp}) para {c} caracteres.")
+        v["etapa"] = "voz"; v["nota"] = ""; v["historial"].append({"etapa": "voz", "cuando": ahora(), "nota": "voz sin OK (regla voz_sin_ok del dueño)"})
+        log(x.slug, "fabrica", f"voz SIN OK del dueño (regla voz_sin_ok): ~{c} caracteres"); guardar(e); print(f"{x.slug}: esperando_ok_voz -> voz (automático)")
     elif x.cmd == "resumen":
         print(f"Fábrica · {ahora()} · producidos hoy: {len(producidos_hoy(e))} de {CFG['tope_por_dia']}")
         for et in ETAPAS[:-1][::-1]:
@@ -119,7 +130,8 @@ def main():
         ideas_hoy = sum(v.get("creado", "")[:10] == hoy() and v["historial"][0]["etapa"] == "idea" for v in V.values())
         print(json.dumps({"producidos_hoy": k, "tope": CFG["tope_por_dia"], "quedan": max(0, CFG["tope_por_dia"] - k), "elige_por_dia": CFG["videos_por_dia"],
                           "elige_por_corrida": CFG.get("videos_por_corrida", 1), "esperando_ok": esp, "max_esperando_ok": CFG.get("max_esperando_ok", 4),
-                          "ideas_creadas_hoy": ideas_hoy, "buscar_temas": esp < CFG.get("max_esperando_ok", 4) and ideas_hoy < CFG["tope_por_dia"]}))
+                          "ideas_creadas_hoy": ideas_hoy, "voz_sin_ok": bool(CFG.get("voz_sin_ok")),
+                          "buscar_temas": esp < CFG.get("max_esperando_ok", 4) and ideas_hoy < CFG["tope_por_dia"] and k < CFG["tope_por_dia"]}))
     elif x.cmd == "creditos":
         c = caracteres(x.slug); disp = CFG.get("creditos_elevenlabs_disponibles")
         if c is None: sys.exit("todavía no hay parrafos.json")

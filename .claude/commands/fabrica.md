@@ -36,12 +36,16 @@ Reglas generales
 4. Si no hay nada aprobado, decilo y listá lo que está esperando OK.
 
 ## hora
-La corrida automática de cada hora. Nadie está mirando: no preguntes nada, no destrabes frenos, no publiques.
+La corrida automática de cada hora. Nadie está mirando: no preguntes nada, no publiques, y no destrabes frenos salvo el de voz con
+`auto-voz` cuando `voz_sin_ok` está encendido.
 1. `git pull` de la rama de trabajo y `python3 fabrica/estado.py tope`.
 2. Si hay videos en `voz`, o en `render`/`guion` con nota de rechazo: hacé **seguir** con esos (de a uno).
 3. Si `buscar_temas` es true: hacé **hoy** pero eligiendo `elige_por_corrida` videos, y pasale al buscador y al editor la lista de
    `fabrica/candidatos/<hoy>.md` para que solo propongan hechos NUEVOS desde la corrida anterior. Agregá los candidatos de esta hora
    al mismo archivo, con la hora. Si no hay nada nuevo que valga (puntaje menor a 7), no elijas nada: es un resultado válido.
+   Si `voz_sin_ok` es true (el dueño pidió que siga produciendo sin esperarlo): cuando el guion quede en `esperando_ok_voz`, corré
+   `python3 fabrica/estado.py auto-voz <slug>` y seguí en la misma corrida con productor → revisor hasta `esperando_ok_final`.
+   Eso es lo único automático: el freno final y la publicación siguen siendo del dueño.
 4. Si `buscar_temas` es false, no busques: ya hay suficientes guiones esperando el OK del dueño, o se llegó al tope del día.
 5. Commit y push. Cerrá con un resumen de 3 líneas como máximo: qué quedó esperando OK (con el comando para aprobar), qué se produjo,
    o "sin novedades". Mandá el panel solo si cambió algo.
