@@ -91,13 +91,12 @@ la nube por cada horario, que abre una sesión nueva en el entorno `clclcl` y co
 
 Para que publique sin que estés, el slug tiene que estar en `instagram/cola.json` con su fecha y hora.
 
-## Reels de prueba: no disponibles todavía
+## Reels de prueba
 
-Probado el 26/11/2026: Meta rechaza `trial_params` para esta cuenta con "Application does not have permission for
-this action" (código 10), tanto con subida reanudable como con `video_url`. Un reel normal con la misma app sí se
-publica. La cuenta SÍ tiene la función: el 26/11/2026 la app de Instagram le muestra "Crear reel de prueba". El
-rechazo es entonces de la app de Meta (en modo desarrollo, acceso estándar); falta averiguar si se destraba
-con acceso avanzado (revisión de Meta). Mientras tanto, los reels de prueba se crean a mano desde la app. Volver a probar si la opción "Prueba" aparece en la app de Instagram.
+`python3 scripts/publicar.py <slug> --prueba`. Hasta la mañana del 26/11/2026 Meta rechazaba `trial_params` con
+"Application does not have permission" (código 10). Ese mismo día, después de que la app de Instagram le mostró
+al dueño la pantalla "Crear reel de prueba", la API empezó a aceptarlo (probado creando un contenedor, sin
+publicar). Falta probar una publicación de prueba completa y si sus métricas salen por la API.
 
 ## Subida de video: falla de a ratos (sin resolver)
 
