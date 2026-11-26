@@ -7,6 +7,13 @@ por palabra. Ejemplo completo y aprobado: `videos/gta-vi/` (leé `parrafos.json`
 Cada video vive en `videos/<slug>/`. NO se toca `src/` ni `scripts/` (son compartidos y otros videos se
 están haciendo al mismo tiempo). Si falta un objeto 3D, se crea en `videos/<slug>/props.tsx` (ver abajo).
 
+## Antes de elegir temas
+
+Cuando se piden videos sin tema, se buscan primero las tendencias de ESE día (WebSearch, modo extendido, con la
+fecha en la consulta) y los temas salen de ahí: no se reutilizan listas de días anteriores. Mirar también las
+estadísticas que haya pasado el dueño del canal: al 25/11/2026 el reel que mejor rindió fue el de economía
+argentina (recesión técnica): 77 envíos con 917 espectadores, 39 s de reproducción promedio y 0 comentarios.
+
 ## Archivos de un video
 
 ```
