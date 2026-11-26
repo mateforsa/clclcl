@@ -29,3 +29,5 @@
 2026-11-26T14:42:20-03:00 [fabrica] etapa -> render (devuelto por el revisor: subtítulos pegados en 19.6-20.4 s (computadoraspara) y 70.3-70.9 s (revisamoscuando); marcar 'computadoras' y 'revisamos' como palabra clave en beats.ts. AVISO: dura 73 s, se pasa del tope; acortarlo exige regenerar la voz (decide el dueño))
 2026-11-26T14:42:51-03:00 [productor] arreglo 2.ª vuelta: 'computadoras' (b05) y 'revisamos' (b16) como palabra clave; re-render sin regenerar voz
 2026-11-26T14:42:51-03:00 [fabrica] etapa -> render (re-render 2 por subtítulos pegados (devuelto por el revisor))
+2026-11-26T14:48:19-03:00 [productor] re-render 2 listo: out/spacex-starmind/spacex-starmind.mp4
+2026-11-26T14:48:19-03:00 [fabrica] etapa -> revision

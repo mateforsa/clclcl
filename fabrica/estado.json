@@ -421,7 +421,7 @@
     "https://www.nbcnews.com/science/space/spacex-fcc-authorizes-1-million-satellites-data-centers-space-rcna611341"
    ],
    "puntaje": 8.5,
-   "etapa": "render",
+   "etapa": "revision",
    "creado": "2026-11-26T14:08:16-03:00",
    "historial": [
     {
@@ -482,11 +482,16 @@
      "etapa": "render",
      "cuando": "2026-11-26T14:42:51-03:00",
      "nota": "re-render 2 por subtítulos pegados (devuelto por el revisor)"
+    },
+    {
+     "etapa": "revision",
+     "cuando": "2026-11-26T14:48:19-03:00",
+     "nota": ""
     }
    ],
-   "nota": "re-render 2 por subtítulos pegados (devuelto por el revisor)",
+   "nota": "",
    "caracteres_voz": 1143
   }
  },
- "actualizado": "2026-11-26T14:42:51-03:00"
+ "actualizado": "2026-11-26T14:48:19-03:00"
 }
