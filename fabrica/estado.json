@@ -412,7 +412,24 @@
      "nota": "importado"
     }
    ]
+  },
+  "spacex-starmind": {
+   "titulo": "SpaceX: permiso para un millón de satélites con centros de datos de IA en órbita",
+   "tema": "negocios y tecnología",
+   "fuentes": [
+    "https://www.cnbc.com/2026/11/25/spacex-fcc-satellite-approval.html",
+    "https://www.nbcnews.com/science/space/spacex-fcc-authorizes-1-million-satellites-data-centers-space-rcna611341"
+   ],
+   "puntaje": 8.5,
+   "etapa": "idea",
+   "creado": "2026-11-26T14:08:16-03:00",
+   "historial": [
+    {
+     "etapa": "idea",
+     "cuando": "2026-11-26T14:08:16-03:00"
+    }
+   ]
   }
  },
- "actualizado": "2026-11-26T14:03:37-03:00"
+ "actualizado": "2026-11-26T14:08:48-03:00"
 }
