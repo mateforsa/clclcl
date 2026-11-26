@@ -1,0 +1,3 @@
+{ "beat": "b01", "frac": 0.3,
+  "overlay": { "kicker": "FINAL DE LA LIBERTADORES", "y": 54,
+    "lines": [ { "t": "A LA FINAL", "size": 150 }, { "t": "EN BICI", "c": "yellow", "size": 190 }, { "t": "600 KM", "size": 170 }, { "t": "DE LA PLATA A MONTEVIDEO", "size": 64, "c": "cyan" } ] } }
