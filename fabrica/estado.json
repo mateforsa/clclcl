@@ -627,10 +627,15 @@
      "etapa": "guion",
      "cuando": "2026-11-26T19:41:13-03:00",
      "nota": ""
+    },
+    {
+     "etapa": "guion",
+     "cuando": "2026-11-26T19:43:33-03:00",
+     "nota": "devuelto por el verificador: plano 13 'todavia no arranca' (fuentes contradictorias al 25-26/11) y plano 7 'un dia despues' (falta 'segun Take-Two'; otras fuentes dicen 20/11)"
     }
    ],
-   "nota": ""
+   "nota": "devuelto por el verificador: plano 13 'todavia no arranca' (fuentes contradictorias al 25-26/11) y plano 7 'un dia despues' (falta 'segun Take-Two'; otras fuentes dicen 20/11)"
   }
  },
- "actualizado": "2026-11-26T19:41:13-03:00"
+ "actualizado": "2026-11-26T19:43:33-03:00"
 }
