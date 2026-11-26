@@ -15,5 +15,9 @@
   "nota": "videos_por_dia = cuántos elige el editor en /fabrica hoy. tope_por_dia = máximo que se pueden producir en un día. creditos_elevenlabs_disponibles: la clave guardada no tiene permiso para leer el saldo; anotá acá los caracteres que te quedan (o null) para que la fábrica avise si no alcanzan. videos_por_corrida = cuántos elige cada corrida horaria. max_esperando_ok = si ya hay esa cantidad esperando tu OK, la corrida horaria no busca temas nuevos. voz_sin_ok = true: la corrida horaria genera la voz sin esperar el OK del dueño (regla que pidió el 26/11/2026); el freno final y la publicación siguen siendo manuales.",
   "videos_por_corrida": 1,
   "max_esperando_ok": 8,
-  "voz_sin_ok": true
+  "voz_sin_ok": true,
+  "panel_artefacto": {
+    "slug": "baa5d3d5-c891-479d-beff-ab3fcd023150",
+    "url": "https://claude.ai/artifact/Q3ngPaTnysyghY75V3zgFZ"
+  }
 }

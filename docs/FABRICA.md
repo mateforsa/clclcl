@@ -47,11 +47,13 @@ hace cada paso y cuándo hay que esperar tu OK.
 
 ## El panel
 
-- **En la nube (claude.ai/code)**: el contenedor no tiene una dirección que puedas abrir desde tu navegador, así que el
-  panel es un archivo estático. Claude te lo manda al chat después de cada paso. Los botones Aprobar / Rechazar copian el
-  comando (`/fabrica aprobar <slug>`) para pegarlo en el chat.
+- **En claude.ai (recomendado)**: https://claude.ai/artifact/Q3ngPaTnysyghY75V3zgFZ — es privado, solo lo ve el dueño de la cuenta.
+  Los botones Aprobar, Rechazar y Publicar le mandan la orden a la sesión de Claude de la fábrica, que la ejecuta y vuelve a
+  publicar el panel con el estado nuevo. La primera vez pide permiso para que el panel le escriba a Claude. Publicar pide dos
+  toques. Si la sesión de la fábrica no está disponible, el botón copia el comando para pegarlo en el chat.
 - **En tu compu**: `python3 fabrica/servidor.py` y abrí `http://localhost:8787`. Se actualiza solo cada 5 segundos y los
-  botones aprueban o rechazan de verdad.
+  botones aprueban, rechazan y publican sin pasar por Claude.
+- **Como archivo** (`fabrica/panel/panel.html`): los botones copian el comando.
 
 El avance del render es una estimación por tiempo (unos 10 minutos por minuto de video): `render.sh` no informa progreso
 y no se modifica.

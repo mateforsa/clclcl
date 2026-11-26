@@ -28,6 +28,8 @@
   .grid { display:grid; grid-template-columns: repeat(auto-fill, minmax(330px, 1fr)); gap:12px; }
   .card { background:var(--panel); border:1px solid var(--linea); border-radius:14px; padding:14px; min-width:0; }
   .card.freno { border-color:var(--magenta); box-shadow:0 0 0 1px rgba(255,61,240,.25), 0 0 26px rgba(255,61,240,.12); }
+  .card.enviado { opacity:.6; }
+  button:disabled { cursor:default; filter:grayscale(.4); }
   .card.curso { border-color:var(--cyan); box-shadow:0 0 26px rgba(34,230,255,.10); }
   .t { font-weight:800; font-size:16px; margin:0 0 4px; overflow-wrap:anywhere; }
   .s { color:var(--suave); font-size:12px; overflow-wrap:anywhere; }
@@ -68,7 +70,29 @@
 </div>
 <div id="aviso" role="status"></div>
 <script>
-let D = /*DATOS*/null, VIVO = false;
+let D = /*DATOS*/null, VIVO = false, COM = null;
+const LOCAL = ['localhost', '127.0.0.1'].includes(location.hostname);
+// En el artefacto de claude.ai: un clic manda la orden a la sesión de Claude, que la ejecuta y vuelve a publicar el panel.
+async function ordenar(boton, cmd, hecho) {
+  if (COM) {
+    try {
+      if ((await COM.canSendToClaude()) === 'available') {
+        const anchor = await COM.anchorFor(boton);
+        await COM.sendToClaude({anchor, text: cmd});
+        boton.disabled = true; boton.textContent = hecho; boton.closest('.card').classList.add('enviado');
+        return aviso('Orden enviada a Claude: ' + cmd + '. El panel se actualiza solo cuando termina.');
+      }
+    } catch (e) { if (e && e.code === 'consent_required') return aviso('Falta tu permiso para que el panel le escriba a Claude. Tocá de nuevo y aceptá.'); }
+  }
+  copiar(cmd, `No pude avisarle a Claude desde acá. Copiado: «${cmd}». Pegalo en el chat.`);
+}
+// Publicar es público: pide un segundo toque en vez de un cartel de confirmación.
+function dosToques(boton, texto) {
+  if (boton.dataset.armado === '1') return true;
+  boton.dataset.armado = '1'; boton.dataset.txt = boton.textContent; boton.textContent = texto;
+  setTimeout(() => { if (boton.isConnected && !boton.disabled) { boton.dataset.armado = ''; boton.textContent = boton.dataset.txt; } }, 5000);
+  return false;
+}
 const NOMBRE = {idea:'idea', guion:'guion', verificado:'verificado', esperando_ok_voz:'espera tu OK · voz', voz:'voz', render:'render',
                 revision:'revisión', esperando_ok_final:'espera tu OK · final', listo:'listo', publicado:'publicado', descartado:'descartado'};
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -76,9 +100,10 @@ const hace = iso => { if (!iso) return ''; const m = Math.max(0, Math.round((Dat
   return m < 1 ? 'recién' : m < 60 ? `hace ${m} min` : m < 1440 ? `hace ${Math.round(m/60)} h` : `hace ${Math.round(m/1440)} d`; };
 function aviso(t) { const a = document.getElementById('aviso'); a.textContent = t; a.style.display = 'block'; clearTimeout(aviso.t); aviso.t = setTimeout(() => a.style.display = 'none', 5000); }
 async function copiar(t, msg) { try { await navigator.clipboard.writeText(t); } catch (e) { const x = document.createElement('textarea'); x.value = t; document.body.appendChild(x); x.select(); document.execCommand('copy'); x.remove(); } aviso(msg || 'Copiado'); }
-async function decidir(slug, ok) {
+async function decidir(slug, ok, boton) {
   const motivo = ok ? '' : (document.getElementById('m-' + slug).value.trim());
   if (!ok && !motivo) return aviso('Escribí el motivo del rechazo: vuelve al agente con ese texto.');
+  if (!VIVO) return ordenar(boton, ok ? `/fabrica aprobar ${slug}` : `/fabrica rechazar ${slug} ${motivo}`, ok ? 'Aprobando…' : 'Rechazando…');
   if (VIVO) {
     const r = await fetch(ok ? '/api/aprobar' : '/api/rechazar', {method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({slug, motivo})});
     const j = await r.json(); aviso(j.msg || (j.ok ? 'Hecho' : 'Error')); return refrescar();
@@ -86,16 +111,14 @@ async function decidir(slug, ok) {
   const cmd = ok ? `/fabrica aprobar ${slug}` : `/fabrica rechazar ${slug} ${motivo}`;
   copiar(cmd, `Copiado: «${cmd}». Pegalo en el chat de Claude para aplicarlo.`);
 }
-async function publicar(slug, prueba) {
-  const que = prueba ? 'como REEL DE PRUEBA (solo lo ven no seguidores)' : 'en el perfil, a la vista de todos';
+async function publicar(slug, prueba, boton) {
+  if (!dosToques(boton, prueba ? '¿Seguro? Tocá de nuevo' : '¿Publicar para todos? Tocá de nuevo')) return;
   if (VIVO) {
-    if (!confirm(`¿Subir «${slug}» a Instagram ${que}? No se puede deshacer desde acá.`)) return;
-    aviso('Subiendo a Instagram… puede tardar un par de minutos.');
+    boton.disabled = true; aviso('Subiendo a Instagram… puede tardar un par de minutos.');
     const r = await fetch('/api/publicar', {method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({slug, prueba})});
     const j = await r.json(); aviso((j.ok ? 'Subido. ' : 'No se pudo subir. ') + (j.msg || '').split('\n').pop()); return refrescar();
   }
-  const cmd = `/fabrica publicar ${slug}${prueba ? ' prueba' : ''}`;
-  copiar(cmd, `Copiado: «${cmd}». Pegalo en el chat de Claude para subirlo.`);
+  ordenar(boton, `/fabrica publicar ${slug}${prueba ? ' prueba' : ''}`, 'Publicando…');
 }
 const chip = v => `<span class="chip e-${v.etapa}">${esc(NOMBRE[v.etapa] || v.etapa)}</span>`;
 const base = v => `<p class="t">${esc(v.titulo)}</p><div class="s">${chip(v)}${esc(v.slug)} · ${esc(v.tema || '')} · ${hace(v.desde)}${v.puntaje ? ' · puntaje ' + v.puntaje : ''}</div>`
@@ -118,9 +141,9 @@ function pinta() {
         : 'Aprobar = marcarlo como listo para subir.' + (v.mp4 ? ' Video: ' + esc(v.mp4) : '')}</div>
       ${v.guion ? `<pre>${esc(v.guion)}</pre>` : ''}
       ${(v.fuentes || []).length ? `<div class="s" style="margin-top:8px">Fuentes: ${v.fuentes.map((f, i) => `<a href="${esc(f)}" target="_blank" rel="noopener">[${i + 1}]</a>`).join(' ')}</div>` : ''}
-      <div class="btns"><button class="ok" onclick="decidir('${v.slug}', true)">Aprobar</button>
+      <div class="btns"><button class="ok" onclick="decidir('${v.slug}', true, this)">Aprobar</button>
         <input type="text" id="m-${v.slug}" placeholder="Motivo del rechazo" aria-label="Motivo del rechazo">
-        <button class="no" onclick="decidir('${v.slug}', false)">Rechazar con motivo</button></div></div>`).join('') + '</div>'
+        <button class="no" onclick="decidir('${v.slug}', false, this)">Rechazar con motivo</button></div></div>`).join('') + '</div>'
     : '<div class="vacio">Nada espera tu aprobación.</div>';
   h += `<h2>Produciendo ahora <span class="c">${curso.length}</span></h2>`;
   h += curso.length ? '<div class="grid">' + curso.map(v => `<div class="card curso">${base(v)}
@@ -137,12 +160,12 @@ function pinta() {
       ${v.descripcion ? `<pre style="max-height:150px">${esc(v.descripcion)}</pre>` : '<div class="s">Sin descripción en guion.md</div>'}
       <div class="btns"><button onclick="copiar(D.videos.find(x=>x.slug==='${v.slug}').titulo,'Título copiado')">Copiar título</button>
       ${v.descripcion ? `<button onclick="copiar(D.videos.find(x=>x.slug==='${v.slug}').descripcion,'Descripción copiada')">Copiar descripción</button>` : ''}</div>
-      ${v.etapa === 'listo' ? `<div class="btns" style="margin-top:0"><button class="pub" onclick="publicar('${v.slug}', false)">Publicar en Instagram</button>
-        <button onclick="publicar('${v.slug}', true)">Reel de prueba</button></div>
+      ${v.etapa === 'listo' ? `<div class="btns" style="margin-top:0"><button class="pub" onclick="publicar('${v.slug}', false, this)">Publicar en Instagram</button>
+        <button onclick="publicar('${v.slug}', true, this)">Reel de prueba</button></div>
         ${v.link_prueba ? `<div class="s">Ya subido como prueba: <a href="${esc(v.link_prueba)}" target="_blank" rel="noopener">ver</a></div>` : ''}
         ${v.mp4 === false ? '<div class="s">El MP4 no está en este entorno: se vuelve a renderizar antes de subir (~10 min).</div>' : ''}` : ''}</div>`).join('') + '</div>';
   // no pisar lo que se está escribiendo en un motivo
-  const escribiendo = document.activeElement && document.activeElement.tagName === 'INPUT';
+  const escribiendo = (document.activeElement && document.activeElement.tagName === 'INPUT') || document.querySelector('.enviado, [data-armado="1"]');
   if (!escribiendo) document.getElementById('cuerpo').innerHTML = h;
 }
 async function refrescar() {
@@ -152,8 +175,10 @@ async function refrescar() {
   pinta();
 }
 pinta();
-if (location.protocol.startsWith('http')) { refrescar(); setInterval(refrescar, 5000); }
-else setInterval(() => { if (!(document.activeElement && document.activeElement.tagName === 'INPUT')) location.reload(); }, 30000);
+if (LOCAL) { refrescar(); setInterval(refrescar, 5000); }
+else if (location.protocol === 'file:') setInterval(() => { if (!(document.activeElement && document.activeElement.tagName === 'INPUT')) location.reload(); }, 30000);
+else if (window.claude && window.claude.use) window.claude.use('comments').then(c => { COM = c; const m = document.getElementById('modo');
+  if (c) { m.textContent = 'conectado a Claude · los botones actúan'; m.className = 'modo vivo'; } });
 </script>
 </body>
 </html>
