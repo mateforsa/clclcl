@@ -128,5 +128,10 @@
   "video": "gta-vi-hacker",
   "inicio": "F52 objeto fuera de lugar (Un Fire Stick. Con esto se robó GTA VI)",
   "cierre": "Continuación de serie con motivo (lo que siga con GTA VI) + pregunta neutra de una palabra (¿Sabías cómo lo hizo?)"
+ },
+ {
+  "video": "spacex-starmind",
+  "inicio": "A2 antes y después en dos frases (funcionan unos 17.000 satélites; autorizaron a una sola empresa hasta un millón)",
+  "cierre": "Pregunta de un número (¿Cuántos creés que llegan a volar? Dejá tu número) + continuación (lo revisamos cuando despegue el primero)"
  }
 ]
