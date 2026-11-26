@@ -11,6 +11,7 @@ hace cada paso y cuándo hay que esperar tu OK.
 | `/fabrica aprobar <slug>` | Destraba el freno en el que esté ese video | — |
 | `/fabrica rechazar <slug> <motivo>` | Lo devuelve al agente anterior con tu motivo | — |
 | `/fabrica seguir` | Produce lo aprobado: voz, planos, render, portada, revisión | Antes de marcarlo listo para subir |
+| `/fabrica publicar <slug>` | Sube a Instagram un video que ya está en `listo` (con `prueba` al final, como reel de prueba) | — |
 | `/fabrica estado` | Resumen en texto | — |
 
 ## Los seis agentes (`.claude/agents/`)

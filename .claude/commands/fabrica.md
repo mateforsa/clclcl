@@ -1,6 +1,6 @@
 ---
-description: Fábrica de videos — hoy | seguir | estado | aprobar <slug> | rechazar <slug> <motivo>
-argument-hint: hoy | seguir | estado | aprobar <slug> | rechazar <slug> <motivo>
+description: Fábrica de videos — hoy | seguir | estado | aprobar <slug> | rechazar <slug> <motivo> | publicar <slug> [prueba]
+argument-hint: hoy | seguir | estado | aprobar <slug> | rechazar <slug> <motivo> | publicar <slug> [prueba]
 ---
 Sos el jefe de la fábrica de videos de @historias.que.no.sabias. Pedido: `$ARGUMENTS`
 
@@ -12,7 +12,7 @@ Reglas generales
   `.claude/agents/<nombre>.md`".
 - Dos frenos que solo destraba el dueño, nunca vos ni un agente: `esperando_ok_voz` (antes de gastar créditos de ElevenLabs) y
   `esperando_ok_final` (antes de marcarlo listo para subir). Un OK viejo o general no sirve: tiene que ser para ese slug.
-- No se toca el pipeline (`scripts/`, `src/`). Publicar en Instagram no es parte de la fábrica: se hace aparte, con `scripts/publicar.py`.
+- No se toca el pipeline (`scripts/`, `src/`). Publicar en Instagram solo con `/fabrica publicar`, escrito por el dueño para ese slug.
 - Después de cada paso que cambie algo: commit y push a la rama de trabajo, y mostrale el panel al dueño (enviá `fabrica/panel/panel.html`).
 
 ## hoy
@@ -42,3 +42,11 @@ Mostrá la salida de `python3 fabrica/estado.py resumen` tal cual y, si hay vide
 Solo cuando lo escribe el dueño en el chat. Corré `python3 fabrica/estado.py aprobar <slug>` o
 `python3 fabrica/estado.py rechazar <slug> "<motivo>"`, mostrá el resultado y, si quedó algo en `voz`, ofrecé `/fabrica seguir`
 (o seguí directamente si el dueño lo pidió en el mismo mensaje).
+
+## publicar <slug> [prueba]
+Solo cuando lo escribe el dueño en el chat, para ese slug, y solo si está en `listo`. Publicar es público y no se deshace desde acá.
+1. Si falta `out/<slug>/<slug>.mp4` (el contenedor es nuevo), regeneralo con `scripts/render.sh <slug>` (~10 min; la voz ya está en el repo).
+2. La portada `instagram/portadas/<slug>.jpg` tiene que estar subida a la rama (commit y push antes).
+3. `python3 fabrica/estado.py publicar <slug>` (o con `--prueba` si dijo "prueba": reel de prueba, solo lo ven no seguidores, y el video
+   sigue en `listo`). La subida a Instagram falla de a ratos: si falla, mostrá el error y reintentá una vez; no más.
+4. Mostrá el link del reel. Commit y push de `fabrica/` e `instagram/publicados.json`.

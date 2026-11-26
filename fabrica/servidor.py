@@ -21,6 +21,7 @@ class H(BaseHTTPRequestHandler):
         d = json.loads(self.rfile.read(int(self.headers.get("Content-Length", 0))) or b"{}"); slug = str(d.get("slug", ""))
         if self.path == "/api/aprobar": cmd = ["aprobar", slug]
         elif self.path == "/api/rechazar": cmd = ["rechazar", slug, str(d.get("motivo") or "sin motivo")]
+        elif self.path == "/api/publicar": cmd = ["publicar", slug] + (["--prueba"] if d.get("prueba") else [])
         else: return self._r(404, "{}")
         r = subprocess.run([sys.executable, f"{D}/estado.py", *cmd], capture_output=True, text=True)
         self._r(200 if r.returncode == 0 else 400, json.dumps({"ok": r.returncode == 0, "msg": (r.stdout + r.stderr).strip()}, ensure_ascii=False))

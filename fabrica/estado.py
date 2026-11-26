@@ -6,6 +6,7 @@
   python3 fabrica/estado.py log <slug> <agente> "texto"
   python3 fabrica/estado.py aprobar <slug>           # destraba el freno en el que esté
   python3 fabrica/estado.py rechazar <slug> "motivo" # vuelve a la etapa anterior con el motivo
+  python3 fabrica/estado.py publicar <slug> [--prueba] [--simular]  # sube a Instagram un video en `listo` (solo por pedido del dueño)
   python3 fabrica/estado.py resumen                  # texto para /fabrica estado
   python3 fabrica/estado.py tope                     # ¿cuántos se pueden producir hoy?
   python3 fabrica/estado.py creditos <slug>          # caracteres de voz que va a gastar y si alcanzan
@@ -57,6 +58,7 @@ def main():
     l = sub.add_parser("log"); l.add_argument("slug"); l.add_argument("agente"); l.add_argument("texto")
     ap = sub.add_parser("aprobar"); ap.add_argument("slug")
     rj = sub.add_parser("rechazar"); rj.add_argument("slug"); rj.add_argument("motivo")
+    pb = sub.add_parser("publicar"); pb.add_argument("slug"); pb.add_argument("--prueba", action="store_true"); pb.add_argument("--simular", action="store_true")
     sub.add_parser("resumen"); sub.add_parser("tope"); sub.add_parser("panel")
     cr = sub.add_parser("creditos"); cr.add_argument("slug")
     x = a.parse_args(); e = leer(); V = e["videos"]
@@ -88,6 +90,24 @@ def main():
         if v["etapa"] not in FRENOS: sys.exit(f"{x.slug} no está esperando aprobación (etapa {v['etapa']})")
         de = v["etapa"]; v["etapa"] = VUELVE[de]; v["nota"] = "RECHAZADO: " + x.motivo; v["historial"].append({"etapa": v["etapa"], "cuando": ahora(), "nota": v["nota"]})
         log(x.slug, "dueño", f"RECHAZADO en {de}: {x.motivo}"); guardar(e); print(f"{x.slug}: vuelve a {v['etapa']}")
+    elif x.cmd == "publicar":
+        v = V.get(x.slug) or sys.exit(f"no existe {x.slug}")
+        if v["etapa"] != "listo": sys.exit(f"Solo se publica lo que está en `listo` (aprobado por el dueño). {x.slug} está en {v['etapa']}.")
+        if not os.path.exists(f"{ROOT}/out/{x.slug}/{x.slug}.mp4"): sys.exit(f"Falta el MP4 (out/ no está en git). Regeneralo con: scripts/render.sh {x.slug}")
+        modo = "--simular" if x.simular else "--confirmado"
+        r = subprocess.run([sys.executable, f"{ROOT}/scripts/publicar.py", x.slug, modo] + (["--prueba"] if x.prueba else []), capture_output=True, text=True, cwd=ROOT)
+        sal = (r.stdout + r.stderr).strip(); print(sal[-1500:])
+        if x.simular: return
+        if r.returncode != 0:
+            log(x.slug, "publicador", "FALLÓ la subida: " + sal[-300:].replace("\n", " | ")); guardar(e); sys.exit(1)
+        reg = [p for p in json.load(open(f"{ROOT}/instagram/publicados.json")) if p["slug"] == x.slug and bool(p.get("prueba")) == x.prueba]
+        link = reg[-1].get("link") if reg else None
+        if x.prueba:
+            v["link_prueba"] = link; log(x.slug, "publicador", f"subido como REEL DE PRUEBA: {link}")
+        else:
+            v["link"] = link; v["etapa"] = "publicado"; v["nota"] = ""; v["historial"].append({"etapa": "publicado", "cuando": ahora(), "nota": link or ""})
+            log(x.slug, "publicador", f"PUBLICADO: {link}")
+        guardar(e); print(f"{x.slug}: {'reel de prueba' if x.prueba else 'publicado'} {link or ''}")
     elif x.cmd == "resumen":
         print(f"Fábrica · {ahora()} · producidos hoy: {len(producidos_hoy(e))} de {CFG['tope_por_dia']}")
         for et in ETAPAS[:-1][::-1]:

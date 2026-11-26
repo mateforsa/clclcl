@@ -47,7 +47,7 @@ def datos():
     e = json.load(open(f"{D}/estado.json")) if os.path.exists(f"{D}/estado.json") else {"videos": {}}
     cfg = json.load(open(f"{D}/config.json")); hoy = dt.datetime.now(AR); out = []
     for slug, v in e["videos"].items():
-        x = {"slug": slug, **{k: v.get(k) for k in ("titulo", "tema", "etapa", "nota", "puntaje", "fuentes", "link", "caracteres_voz")}}
+        x = {"slug": slug, **{k: v.get(k) for k in ("titulo", "tema", "etapa", "nota", "puntaje", "fuentes", "link", "link_prueba", "caracteres_voz")}}
         x["desde"] = v["historial"][-1]["cuando"] if v.get("historial") else v.get("creado")
         if v["etapa"] in EN_CURSO: x["log"] = cola_log(slug); x["progreso"] = progreso(slug, v)
         if v["etapa"] in FRENOS:
@@ -60,7 +60,9 @@ def datos():
         if v["etapa"] in ("esperando_ok_final", "listo", "publicado"): x["descripcion"] = seccion(slug, "Descripción de Instagram")
         out.append(x)
     out.sort(key=lambda x: x["desde"] or "", reverse=True)
-    gal = [x for x in out if x["etapa"] in ("esperando_ok_final", "listo", "publicado")][:18]
+    for x in out:
+        if x["etapa"] == "listo": x["mp4"] = os.path.exists(f"{ROOT}/out/{x['slug']}/{x['slug']}.mp4")
+    gal = sorted([x for x in out if x["etapa"] in ("esperando_ok_final", "listo", "publicado")], key=lambda x: x["etapa"] != "listo")[:18]
     for x in gal: x["mini"] = mini(x["slug"])
     sem = (hoy - dt.timedelta(days=7)).isoformat()
     prod_hoy = sum(any(h["etapa"] == "voz" and h["cuando"][:10] == hoy.strftime("%Y-%m-%d") for h in v.get("historial", [])) for v in e["videos"].values())
