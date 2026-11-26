@@ -1,6 +1,11 @@
 # Cuentas de referencia para scripts/radar.py. Tienen que ser cuentas profesionales (empresa o creador) y públicas.
 # Lista inicial armada por Claude el 26/11/2026 con cuentas en español que la API pudo leer; cambiarla por las que elijas (5 a 20, sin @).
 cuentas:
+  # elegidas por el dueño del canal (26/11/2026)
+  - historias.xpartes
+  - martinpereiraa.ia
+  - noticiasde.ia
+  - academiastark
   # economía y finanzas (Argentina)
   - finanzasconpedro
   - jultarres

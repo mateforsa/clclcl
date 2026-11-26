@@ -117,7 +117,9 @@ def main():
     L += ["", "## 5 ideas para el canal", "", "_Pendiente: las completa Claude a partir de esta lista. Cada idea lleva un tipo de gancho que no esté "
           "en la tabla de arriba y un dato con fuente verificable. No se copia el texto ni el video de nadie._", ""]
     if errores: L += ["## Cuentas que no se pudieron leer", ""] + [f"- {e}" for e in errores] + [""]
-    ruta = f"{ROOT}/instagram/referencias/{fecha}{'-demo' if DEMO else ''}.md"
+    ruta = f"{ROOT}/instagram/referencias/{fecha}{'-demo' if DEMO else ''}.md"; k = 2
+    while os.path.exists(ruta) and not DEMO:  # segunda corrida del mismo día: no pisar el informe anterior
+        ruta = f"{ROOT}/instagram/referencias/{fecha}-{k}.md"; k += 1
     open(ruta, "w").write("\n".join(L))
     if not DEMO:
         db.executemany("update reels set informado_en=? where id=?", [(fecha, x[2]["id"]) for x in nuevos]); db.commit()
