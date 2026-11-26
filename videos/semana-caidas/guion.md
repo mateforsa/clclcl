@@ -84,3 +84,18 @@ Fecha de producción: 25 de noviembre de 2026. Varias investigaciones siguen abi
 
 - "Un contratista cambia un router en Arkansas. Cuatro horas después, ningún avión despega en Estados Unidos. Y fue solo la segunda caída de la semana."
 - "En 2024 una actualización rompió 8,5 millones de computadoras. En noviembre de 2026 pasó algo más raro: cinco caídas distintas en seis días."
+
+## Descripción de Instagram
+
+```
+Mail, aviones, banco y teléfono: cinco caídas en seis días. Y según el gobierno de Estados Unidos, nadie atacó a nadie.
+
+Jueves 12: Microsoft 365 tarda casi 24 horas en volver.
+Viernes 13: se frenan todos los despegues del país durante cuatro horas y media por un cambio de routers.
+Lunes y martes: fallan Chase, United, iCloud y el App Store.
+En cuatro de las cinco explicaciones se repite lo mismo: alguien estaba actualizando algo.
+
+Seguime para la próxima historia.
+
+#tecnologia #internet #microsoft #apple #noticias
+```
