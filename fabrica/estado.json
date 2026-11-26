@@ -547,10 +547,15 @@
      "etapa": "guion",
      "cuando": "2026-11-26T18:45:15-03:00",
      "nota": ""
+    },
+    {
+     "etapa": "guion",
+     "cuando": "2026-11-26T18:46:59-03:00",
+     "nota": "devuelto por el verificador: (1) el cupo de Estudiantes se amplió de 12.000 a casi 14.000 (planos 8 y 9, píldora 35.000÷12.000, títulos, descripción; con 14.000 la cuenta da 2,5, no 'casi tres'); (2) los 121 micros incluyen los de agrupaciones, no son todos 'oficiales del club' (plano 5 y píldora)"
     }
    ],
-   "nota": ""
+   "nota": "devuelto por el verificador: (1) el cupo de Estudiantes se amplió de 12.000 a casi 14.000 (planos 8 y 9, píldora 35.000÷12.000, títulos, descripción; con 14.000 la cuenta da 2,5, no 'casi tres'); (2) los 121 micros incluyen los de agrupaciones, no son todos 'oficiales del club' (plano 5 y píldora)"
   }
  },
- "actualizado": "2026-11-26T18:45:15-03:00"
+ "actualizado": "2026-11-26T18:46:59-03:00"
 }
