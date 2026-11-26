@@ -61,7 +61,8 @@ def validar():
         en_remoto = subprocess.run(["git", "-C", ROOT, "ls-tree", "-r", "--name-only", f"origin/{rama}", "--", PORTADA], capture_output=True, text=True).stdout.strip()
         if not en_remoto: err.append(f"la portada no está subida a origin/{rama}: Meta la descarga desde una URL pública, hacé commit y push")
         d["cover_url"] = f"https://raw.githubusercontent.com/{m.CFG['repo']}/{rama}/{PORTADA}"
-    if os.path.exists(REG) and any(x["slug"] == SLUG and not x.get("prueba") for x in json.load(open(REG))): err.append("ese slug ya figura publicado en instagram/publicados.json")
+    ya = [x for x in (json.load(open(REG)) if os.path.exists(REG) else []) if x["slug"] == SLUG]
+    if any(bool(x.get("prueba")) == PRUEBA for x in ya): err.append("ese slug ya figura publicado " + ("como reel de prueba" if PRUEBA else "") + " en instagram/publicados.json")
     return err, av, d
 
 
