@@ -53,7 +53,7 @@ export const BEATS: BeatSpec[] = [
   },
 
   // 5. Cada satélite sería un centro de datos con energía solar
-  { id: 'b05', set: 'void', cam: { from: [-0.9, 2.2, 7.8], to: [0.3, 2.3, 6.8], look: [0, 1.85, 0], fov: 46 }, keywords: ['centro', 'datos:', 'artificial,', 'solar.'],
+  { id: 'b05', set: 'void', cam: { from: [-0.9, 2.2, 7.8], to: [0.3, 2.3, 6.8], look: [0, 1.85, 0], fov: 46 }, keywords: ['centro', 'datos:', 'computadoras', 'artificial,', 'solar.'],
     actors: [
       { type: 'sat', pos: [0, 2.05, 0], s: 1.15, p: { rackAt: 1.3, sunAt: 5.2, sway: 0.8 }, bob: 0.03 },
       { type: 'label', pos: [0, 3.0, 0.2], at: 'centro', out: 'con', p: { text: 'CENTRO DE DATOS', w: 1.9, h: 0.36, ...GOLD } },
@@ -192,7 +192,7 @@ export const BEATS: BeatSpec[] = [
     overlays: [{ type: 'tag', text: 'DEJÁ TU NÚMERO', at: 'Dejá', x: 50, y: 74.5, color: C.blue, size: 60 }] },
 
   // 16. Seguime: cuando despegue el primero
-  { id: 'b16', set: 'void', cam: { from: [0.7, 2.0, 8.6], to: [0, 2.4, 7.7], look: [0, 1.5, 0], lookTo: [0, 1.75, 0], fov: 46 }, keywords: ['Seguime', 'despegue'],
+  { id: 'b16', set: 'void', cam: { from: [0.7, 2.0, 8.6], to: [0, 2.4, 7.7], look: [0, 1.5, 0], lookTo: [0, 1.75, 0], fov: 46 }, keywords: ['Seguime', 'revisamos', 'despegue'],
     actors: [
       { type: 'box', pos: [0, 0.98, 0], p: { size: [1.5, 0.1, 1.0], color: '#2d1a6e' } },
       { type: 'box', pos: [0, 1.04, 0], p: { size: [1.2, 0.03, 0.8], color: C.cyan, glow: true } },
