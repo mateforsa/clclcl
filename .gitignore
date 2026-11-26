@@ -5,3 +5,6 @@ guion/.voz
 videos/*/cover.entry.ts
 instagram/referencias/*-demo.md
 scripts/__pycache__/
+fabrica/__pycache__/
+fabrica/panel/panel.html
+fabrica/panel/mini/

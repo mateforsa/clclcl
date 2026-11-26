@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fábrica · Historias que no sabías</title>
+<style>
+  :root { --bg:#07070f; --panel:#0f1020; --linea:#23264a; --txt:#e9ebff; --suave:#8b90b8;
+          --cyan:#22e6ff; --magenta:#ff3df0; --amarillo:#ffe14a; --verde:#3dff9a; --rojo:#ff5470; }
+  * { box-sizing: border-box; }
+  body { margin:0; background: radial-gradient(1200px 600px at 80% -10%, #1a1040 0%, transparent 60%), var(--bg);
+         color:var(--txt); font: 15px/1.45 ui-sans-serif, system-ui, "Segoe UI", Roboto, sans-serif; }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 22px 18px 60px; }
+  header { display:flex; flex-wrap:wrap; align-items:baseline; gap:10px 18px; margin-bottom:18px; }
+  h1 { margin:0; font-size:26px; font-weight:900; letter-spacing:.5px; text-transform:uppercase;
+       color:var(--cyan); text-shadow:0 0 14px rgba(34,230,255,.55); }
+  h1 b { color:var(--magenta); text-shadow:0 0 14px rgba(255,61,240,.55); }
+  .meta { color:var(--suave); font-size:13px; }
+  .modo { margin-left:auto; font-size:12px; padding:3px 10px; border-radius:99px; border:1px solid var(--linea); color:var(--suave); }
+  .modo.vivo { color:var(--verde); border-color:var(--verde); }
+  .tiras { display:grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap:10px; margin-bottom:22px; }
+  .tira { background:var(--panel); border:1px solid var(--linea); border-radius:12px; padding:12px 14px; }
+  .tira .n { font-size:28px; font-weight:900; font-variant-numeric: tabular-nums; }
+  .tira .l { color:var(--suave); font-size:12px; text-transform:uppercase; letter-spacing:.8px; }
+  h2 { font-size:13px; letter-spacing:1.6px; text-transform:uppercase; color:var(--amarillo); margin:26px 0 10px;
+       display:flex; align-items:center; gap:8px; }
+  h2 .c { color:var(--suave); font-weight:400; }
+  .grid { display:grid; grid-template-columns: repeat(auto-fill, minmax(330px, 1fr)); gap:12px; }
+  .card { background:var(--panel); border:1px solid var(--linea); border-radius:14px; padding:14px; min-width:0; }
+  .card.freno { border-color:var(--magenta); box-shadow:0 0 0 1px rgba(255,61,240,.25), 0 0 26px rgba(255,61,240,.12); }
+  .card.curso { border-color:var(--cyan); box-shadow:0 0 26px rgba(34,230,255,.10); }
+  .t { font-weight:800; font-size:16px; margin:0 0 4px; overflow-wrap:anywhere; }
+  .s { color:var(--suave); font-size:12px; overflow-wrap:anywhere; }
+  .chip { display:inline-block; font-size:11px; font-weight:800; letter-spacing:.8px; text-transform:uppercase;
+          padding:2px 8px; border-radius:99px; border:1px solid currentColor; margin-right:6px; }
+  .e-idea,.e-guion,.e-verificado { color:var(--suave); } .e-voz,.e-render,.e-revision { color:var(--cyan); }
+  .e-esperando_ok_voz,.e-esperando_ok_final { color:var(--magenta); } .e-listo { color:var(--verde); } .e-publicado { color:var(--amarillo); }
+  .nota { margin-top:8px; padding:8px 10px; border-left:3px solid var(--rojo); background:rgba(255,84,112,.08); font-size:13px; border-radius:0 8px 8px 0; }
+  .barra { height:8px; background:#191b38; border-radius:99px; overflow:hidden; margin:10px 0 4px; }
+  .barra i { display:block; height:100%; background:linear-gradient(90deg, var(--cyan), var(--magenta)); box-shadow:0 0 12px var(--cyan); }
+  pre { margin:8px 0 0; padding:9px 10px; background:#090a18; border:1px solid var(--linea); border-radius:8px; color:#b9c0ee;
+        font: 12px/1.45 ui-monospace, Menlo, Consolas, monospace; white-space:pre-wrap; overflow-wrap:anywhere; max-height:230px; overflow:auto; }
+  .btns { display:flex; flex-wrap:wrap; gap:8px; margin-top:12px; }
+  button { font:inherit; font-weight:800; font-size:13px; padding:8px 14px; border-radius:9px; cursor:pointer; background:transparent; color:var(--txt); border:1px solid var(--linea); }
+  button.ok { color:#04130b; background:var(--verde); border-color:var(--verde); }
+  button.no { color:var(--rojo); border-color:var(--rojo); }
+  button:hover { filter:brightness(1.15); } button:focus-visible { outline:2px solid var(--cyan); outline-offset:2px; }
+  input[type=text] { flex:1 1 180px; min-width:0; font:inherit; font-size:13px; padding:8px 10px; border-radius:9px; background:#090a18; color:var(--txt); border:1px solid var(--linea); }
+  .gal { display:grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap:12px; }
+  .gal .card { display:flex; flex-direction:column; gap:8px; }
+  .gal img { width:100%; aspect-ratio:9/16; object-fit:cover; border-radius:10px; border:1px solid var(--linea); background:#090a18; }
+  .vacio { color:var(--suave); border:1px dashed var(--linea); border-radius:12px; padding:14px; font-size:13px; }
+  a { color:var(--cyan); }
+  #aviso { position:fixed; left:50%; bottom:18px; transform:translateX(-50%); background:#111433; border:1px solid var(--cyan); color:var(--txt);
+           padding:10px 16px; border-radius:10px; font-size:13px; max-width:92vw; display:none; box-shadow:0 0 24px rgba(34,230,255,.25); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Fábrica <b>de historias</b></h1>
+    <span class="meta" id="act"></span>
+    <span class="modo" id="modo">estático</span>
+  </header>
+  <div class="tiras" id="tiras"></div>
+  <div id="cuerpo"></div>
+</div>
+<div id="aviso" role="status"></div>
+<script>
+let D = /*DATOS*/null, VIVO = false;
+const NOMBRE = {idea:'idea', guion:'guion', verificado:'verificado', esperando_ok_voz:'espera tu OK · voz', voz:'voz', render:'render',
+                revision:'revisión', esperando_ok_final:'espera tu OK · final', listo:'listo', publicado:'publicado', descartado:'descartado'};
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const hace = iso => { if (!iso) return ''; const m = Math.max(0, Math.round((Date.now() - new Date(iso)) / 60000));
+  return m < 1 ? 'recién' : m < 60 ? `hace ${m} min` : m < 1440 ? `hace ${Math.round(m/60)} h` : `hace ${Math.round(m/1440)} d`; };
+function aviso(t) { const a = document.getElementById('aviso'); a.textContent = t; a.style.display = 'block'; clearTimeout(aviso.t); aviso.t = setTimeout(() => a.style.display = 'none', 5000); }
+async function copiar(t, msg) { try { await navigator.clipboard.writeText(t); } catch (e) { const x = document.createElement('textarea'); x.value = t; document.body.appendChild(x); x.select(); document.execCommand('copy'); x.remove(); } aviso(msg || 'Copiado'); }
+async function decidir(slug, ok) {
+  const motivo = ok ? '' : (document.getElementById('m-' + slug).value.trim());
+  if (!ok && !motivo) return aviso('Escribí el motivo del rechazo: vuelve al agente con ese texto.');
+  if (VIVO) {
+    const r = await fetch(ok ? '/api/aprobar' : '/api/rechazar', {method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({slug, motivo})});
+    const j = await r.json(); aviso(j.msg || (j.ok ? 'Hecho' : 'Error')); return refrescar();
+  }
+  const cmd = ok ? `/fabrica aprobar ${slug}` : `/fabrica rechazar ${slug} ${motivo}`;
+  copiar(cmd, `Copiado: «${cmd}». Pegalo en el chat de Claude para aplicarlo.`);
+}
+const chip = v => `<span class="chip e-${v.etapa}">${esc(NOMBRE[v.etapa] || v.etapa)}</span>`;
+const base = v => `<p class="t">${esc(v.titulo)}</p><div class="s">${chip(v)}${esc(v.slug)} · ${esc(v.tema || '')} · ${hace(v.desde)}${v.puntaje ? ' · puntaje ' + v.puntaje : ''}</div>`
+  + (v.nota ? `<div class="nota">${esc(v.nota)}</div>` : '');
+function pinta() {
+  const V = D.videos, de = (...e) => V.filter(v => e.includes(v.etapa));
+  const frenos = de('esperando_ok_voz', 'esperando_ok_final'), curso = de('voz', 'render', 'revision'), cola = de('idea', 'guion', 'verificado');
+  const gal = V.filter(v => 'mini' in v), listos = de('listo');
+  document.getElementById('act').textContent = 'Actualizado ' + hace(D.actualizado) + ' · ' + new Date(D.actualizado).toLocaleString('es-AR');
+  document.getElementById('tiras').innerHTML = [
+    [frenos.length, 'esperan tu OK', 'var(--magenta)'], [curso.length, 'produciendo', 'var(--cyan)'], [cola.length, 'en cola', 'var(--txt)'],
+    [`${D.producidos_hoy}/${D.tope}`, 'hoy / tope diario', 'var(--amarillo)'], [D.semana.length, 'terminados esta semana', 'var(--verde)'],
+    [D.creditos == null ? '?' : D.creditos.toLocaleString('es-AR'), 'créditos ElevenLabs', D.creditos == null ? 'var(--suave)' : 'var(--txt)']
+  ].map(([n, l, c]) => `<div class="tira"><div class="n" style="color:${c}">${n}</div><div class="l">${l}</div></div>`).join('');
+  let h = '';
+  h += `<h2>Aprobaciones pendientes <span class="c">${frenos.length}</span></h2>`;
+  h += frenos.length ? '<div class="grid">' + frenos.map(v => `<div class="card freno">${base(v)}
+      <div class="s" style="margin-top:8px">${v.etapa === 'esperando_ok_voz'
+        ? 'Aprobar = generar la voz (gasta ' + (v.caracteres_voz ? '~' + v.caracteres_voz + ' caracteres' : 'créditos') + ' de ElevenLabs) y seguir hasta el render.'
+        : 'Aprobar = marcarlo como listo para subir.' + (v.mp4 ? ' Video: ' + esc(v.mp4) : '')}</div>
+      ${v.guion ? `<pre>${esc(v.guion)}</pre>` : ''}
+      ${(v.fuentes || []).length ? `<div class="s" style="margin-top:8px">Fuentes: ${v.fuentes.map((f, i) => `<a href="${esc(f)}" target="_blank" rel="noopener">[${i + 1}]</a>`).join(' ')}</div>` : ''}
+      <div class="btns"><button class="ok" onclick="decidir('${v.slug}', true)">Aprobar</button>
+        <input type="text" id="m-${v.slug}" placeholder="Motivo del rechazo" aria-label="Motivo del rechazo">
+        <button class="no" onclick="decidir('${v.slug}', false)">Rechazar con motivo</button></div></div>`).join('') + '</div>'
+    : '<div class="vacio">Nada espera tu aprobación.</div>';
+  h += `<h2>Produciendo ahora <span class="c">${curso.length}</span></h2>`;
+  h += curso.length ? '<div class="grid">' + curso.map(v => `<div class="card curso">${base(v)}
+      ${v.progreso != null ? `<div class="barra"><i style="width:${v.progreso}%"></i></div><div class="s">Render: ${v.progreso}% (estimado por tiempo)</div>` : ''}
+      ${(v.log || []).length ? `<pre>${esc(v.log.join('\n'))}</pre>` : ''}</div>`).join('') + '</div>'
+    : '<div class="vacio">No hay ningún video en producción.</div>';
+  h += `<h2>Cola <span class="c">${cola.length}</span></h2>`;
+  h += cola.length ? '<div class="grid">' + cola.map(v => `<div class="card">${base(v)}</div>`).join('') + '</div>' : '<div class="vacio">Cola vacía. Con <b>/fabrica hoy</b> se buscan temas nuevos.</div>';
+  h += `<h2>Videos de la semana <span class="c">${D.semana.length}</span></h2>`;
+  h += D.semana.length ? `<div class="card"><div class="s" style="font-size:13px;line-height:2">${V.filter(v => D.semana.includes(v.slug)).map(v => `${chip(v)}${v.link ? `<a href="${esc(v.link)}" target="_blank" rel="noopener">${esc(v.titulo)}</a>` : esc(v.titulo)} <span>· ${hace(v.desde)}</span>`).join('<br>')}</div></div>` : '<div class="vacio">Todavía ninguno esta semana.</div>';
+  h += `<h2>Portadas terminadas <span class="c">${gal.length}</span></h2><div class="gal">` + gal.map((v, i) => `<div class="card">
+      ${v.mini ? `<img src="${v.mini}" alt="Portada de ${esc(v.titulo)}">` : ''}
+      <div><p class="t">${esc(v.titulo)}</p><div class="s">${chip(v)}${hace(v.desde)}${v.link ? ` · <a href="${esc(v.link)}" target="_blank" rel="noopener">ver reel</a>` : ''}</div></div>
+      ${v.descripcion ? `<pre style="max-height:150px">${esc(v.descripcion)}</pre>` : '<div class="s">Sin descripción en guion.md</div>'}
+      <div class="btns"><button onclick="copiar(D.videos.find(x=>x.slug==='${v.slug}').titulo,'Título copiado')">Copiar título</button>
+      ${v.descripcion ? `<button onclick="copiar(D.videos.find(x=>x.slug==='${v.slug}').descripcion,'Descripción copiada')">Copiar descripción</button>` : ''}</div></div>`).join('') + '</div>';
+  // no pisar lo que se está escribiendo en un motivo
+  const escribiendo = document.activeElement && document.activeElement.tagName === 'INPUT';
+  if (!escribiendo) document.getElementById('cuerpo').innerHTML = h;
+}
+async function refrescar() {
+  try { const r = await fetch('/api/estado', {cache:'no-store'}); if (!r.ok) throw 0; D = await r.json(); VIVO = true; }
+  catch (e) { VIVO = false; }
+  const m = document.getElementById('modo'); m.textContent = VIVO ? 'en vivo' : 'estático · se regenera en cada paso'; m.className = 'modo' + (VIVO ? ' vivo' : '');
+  pinta();
+}
+pinta();
+if (location.protocol.startsWith('http')) { refrescar(); setInterval(refrescar, 5000); }
+else setInterval(() => { if (!(document.activeElement && document.activeElement.tagName === 'INPUT')) location.reload(); }, 30000);
+</script>
+</body>
+</html>
