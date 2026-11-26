@@ -97,3 +97,13 @@ Probado el 26/11/2026: Meta rechaza `trial_params` para esta cuenta con "Applica
 this action" (código 10), tanto con subida reanudable como con `video_url`. Un reel normal con la misma app sí se
 publica. La causa no está confirmada: puede ser que la cuenta no tenga la función habilitada (24 seguidores en esa
 fecha) o que la app necesite acceso avanzado. Volver a probar si la opción "Prueba" aparece en la app de Instagram.
+
+## Subida de video: falla de a ratos (sin resolver)
+
+26/11/2026: la subida a `rupload.facebook.com` devuelve "ProcessingFailedError: Request processing failed" en la
+mayoría de los intentos, con el mismo archivo y el mismo pedido que otras veces funciona. Funcionó 2 veces
+(Hilux y dólar) y falló más de 15, incluso con un archivo que ya había subido bien. No depende de `requests` o
+curl ni de esperar tras crear el contenedor. Hipótesis sin confirmar: límite de Meta por intentos, o el proxy
+de la nube. Si falla, no insistir en bucle: reintentar más tarde o subir a mano. Alternativa a probar: `video_url`
+con el MP4 en una URL pública, que evita ese servidor.
+
