@@ -61,14 +61,14 @@ Notas:
 ## Descripción de Instagram
 
 ```
-Parte 5 de GTA VI: al hacker que filtró el juego le dieron 7 años. Y salió en libertad ese mismo día.
+Le dieron 7 años de prisión. Salió caminando ese mismo día. 🔓
 
-2022: con 17 años, desde un hotel y sin computadora, usó un Fire Stick, la tele y un celular. Publicó unos 90 videos.
-16 de noviembre: se declaró culpable de seis cargos.
-Lunes 23: siete años, según la fiscalía británica. Le contaron el tiempo que ya había pasado encerrado y salió con controles.
+Es el chico que filtró GTA VI con un Fire Stick, la tele de un hotel y un celular. Tenía 17 años.
+Rockstar dice que le costó 5 millones de dólares.
+El juego que filtró vendió 3.790 millones en un día.
 
-Lo que siga con GTA VI lo cuento acá. Seguime para verlo.
-¿Sabías cómo lo hizo?
+¿Sabías cómo lo hizo? 👇
+Parte 5. Seguime, que GTA VI sigue dando historias.
 
 #gta6 #gtavi #rockstargames #videojuegos #hackers
 ```
