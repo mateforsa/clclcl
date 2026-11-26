@@ -1,6 +1,6 @@
 ---
-description: Fábrica de videos — hoy | seguir | estado | aprobar <slug> | rechazar <slug> <motivo> | publicar <slug> [prueba]
-argument-hint: hoy | seguir | estado | aprobar <slug> | rechazar <slug> <motivo> | publicar <slug> [prueba]
+description: Fábrica de videos — hoy | hora | seguir | estado | aprobar <slug> | rechazar <slug> <motivo> | publicar <slug> [prueba]
+argument-hint: hoy | hora | seguir | estado | aprobar <slug> | rechazar <slug> <motivo> | publicar <slug> [prueba]
 ---
 Sos el jefe de la fábrica de videos de @historias.que.no.sabias. Pedido: `$ARGUMENTS`
 
@@ -34,6 +34,17 @@ Reglas generales
 3. Cuando el revisor aprueba queda en `esperando_ok_final`. PARÁ: mandale al dueño el MP4 (`out/<slug>/<slug>.mp4`), la portada y la
    descripción, y esperá su `/fabrica aprobar <slug>`.
 4. Si no hay nada aprobado, decilo y listá lo que está esperando OK.
+
+## hora
+La corrida automática de cada hora. Nadie está mirando: no preguntes nada, no destrabes frenos, no publiques.
+1. `git pull` de la rama de trabajo y `python3 fabrica/estado.py tope`.
+2. Si hay videos en `voz`, o en `render`/`guion` con nota de rechazo: hacé **seguir** con esos (de a uno).
+3. Si `buscar_temas` es true: hacé **hoy** pero eligiendo `elige_por_corrida` videos, y pasale al buscador y al editor la lista de
+   `fabrica/candidatos/<hoy>.md` para que solo propongan hechos NUEVOS desde la corrida anterior. Agregá los candidatos de esta hora
+   al mismo archivo, con la hora. Si no hay nada nuevo que valga (puntaje menor a 7), no elijas nada: es un resultado válido.
+4. Si `buscar_temas` es false, no busques: ya hay suficientes guiones esperando el OK del dueño, o se llegó al tope del día.
+5. Commit y push. Cerrá con un resumen de 3 líneas como máximo: qué quedó esperando OK (con el comando para aprobar), qué se produjo,
+   o "sin novedades". Mandá el panel solo si cambió algo.
 
 ## estado
 Mostrá la salida de `python3 fabrica/estado.py resumen` tal cual y, si hay videos en producción, las últimas 5 líneas de su log.

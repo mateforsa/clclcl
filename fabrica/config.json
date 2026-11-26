@@ -1,8 +1,18 @@
 {
   "videos_por_dia": 2,
   "tope_por_dia": 6,
-  "duracion_seg": [45, 70],
-  "temas": ["negocios y tecnología", "videojuegos", "fútbol", "economía argentina"],
+  "duracion_seg": [
+    45,
+    70
+  ],
+  "temas": [
+    "negocios y tecnología",
+    "videojuegos",
+    "fútbol",
+    "economía argentina"
+  ],
   "creditos_elevenlabs_disponibles": null,
-  "nota": "videos_por_dia = cuántos elige el editor en /fabrica hoy. tope_por_dia = máximo que se pueden producir en un día. creditos_elevenlabs_disponibles: la clave guardada no tiene permiso para leer el saldo; anotá acá los caracteres que te quedan (o null) para que la fábrica avise si no alcanzan."
+  "nota": "videos_por_dia = cuántos elige el editor en /fabrica hoy. tope_por_dia = máximo que se pueden producir en un día. creditos_elevenlabs_disponibles: la clave guardada no tiene permiso para leer el saldo; anotá acá los caracteres que te quedan (o null) para que la fábrica avise si no alcanzan. videos_por_corrida = cuántos elige cada corrida horaria. max_esperando_ok = si ya hay esa cantidad esperando tu OK, la corrida horaria no busca temas nuevos.",
+  "videos_por_corrida": 1,
+  "max_esperando_ok": 4
 }

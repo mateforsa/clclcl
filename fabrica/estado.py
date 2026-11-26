@@ -115,7 +115,11 @@ def main():
             if xs: print(f"\n{et.upper().replace('_', ' ')} ({len(xs)})"); [print(f"  - {s}: {v['titulo']}" + (f"  [{v['nota']}]" if v.get('nota') else "")) for s, v in xs]
         print(f"\nPUBLICADOS: {sum(v['etapa'] == 'publicado' for v in V.values())}")
     elif x.cmd == "tope":
-        k = len(producidos_hoy(e)); print(json.dumps({"producidos_hoy": k, "tope": CFG["tope_por_dia"], "quedan": max(0, CFG["tope_por_dia"] - k), "elige_por_dia": CFG["videos_por_dia"]}))
+        k = len(producidos_hoy(e)); esp = sum(v["etapa"] in FRENOS for v in V.values())
+        ideas_hoy = sum(v.get("creado", "")[:10] == hoy() and v["historial"][0]["etapa"] == "idea" for v in V.values())
+        print(json.dumps({"producidos_hoy": k, "tope": CFG["tope_por_dia"], "quedan": max(0, CFG["tope_por_dia"] - k), "elige_por_dia": CFG["videos_por_dia"],
+                          "elige_por_corrida": CFG.get("videos_por_corrida", 1), "esperando_ok": esp, "max_esperando_ok": CFG.get("max_esperando_ok", 4),
+                          "ideas_creadas_hoy": ideas_hoy, "buscar_temas": esp < CFG.get("max_esperando_ok", 4) and ideas_hoy < CFG["tope_por_dia"]}))
     elif x.cmd == "creditos":
         c = caracteres(x.slug); disp = CFG.get("creditos_elevenlabs_disponibles")
         if c is None: sys.exit("todavía no hay parrafos.json")
