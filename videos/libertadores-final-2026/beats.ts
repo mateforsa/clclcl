@@ -47,7 +47,7 @@ export const BEATS: BeatSpec[] = [
     overlays: [fuente(0.4)] },
 
   // 4. Llegaron el miércoles
-  { id: 'b04', cam: { from: [-0.9, 2.2, 8.9], to: [0.1, 2.1, 7.9], look: [0, 0.85, 0], fov: 46 }, keywords: ['Llegaron', 'miércoles'],
+  { id: 'b04', cam: { from: [-0.9, 2.2, 8.9], to: [0.1, 2.1, 7.9], look: [0, 0.85, 0], fov: 46 }, keywords: ['Llegaron', 'miércoles', 'Observador'],
     actors: [
       { type: 'road', pos: [0, 0, 0.6], rot: [0, PI / 2, 0], p: { len: 30, speed: 0 } },
       { type: 'arch', pos: [0, 0, -0.5], s: 0.7, p: { text: 'MONTEVIDEO' } },
@@ -96,8 +96,8 @@ export const BEATS: BeatSpec[] = [
       { type: 'label', pos: [0.25, 1.35, 1.0], rot: [0, 0, 0.1], at: 'agotaron', p: { text: 'AGOTADAS', w: 2.2, h: 0.56, bg: C.red, color: '#fff', border: '#fff', size: 0.62, weight: 900 } },
     ],
     overlays: [{ type: 'big', text: 'casi 14.000', sub: 'entradas en su tribuna', at: 'casi', y: 62, size: 104 },
-      { type: 'tag', text: 'Categoría 3 · sector de Estudiantes', at: 0.3, out: 'entradas', x: 50, y: 75.3, color: TAG, size: 40 },
-      { type: 'tag', text: 'cupo inicial 12.000, ampliado a casi 14.000', at: 'entradas', out: 'agotaron', x: 50, y: 75.3, color: TAG, size: 34 },
+      { type: 'tag', text: 'Categoría 3 · sector de Estudiantes', at: 0.05, out: 1.45, x: 50, y: 75.3, color: TAG, size: 40 },
+      { type: 'tag', text: 'cupo inicial 12.000, ampliado a casi 14.000', at: 1.45, out: 'agotaron', x: 50, y: 75.3, color: TAG, size: 34 },
       { type: 'tag', text: 'agotadas', at: 'agotaron', x: 50, y: 75.3, color: C.red, size: 52 }] },
 
   // 9. Viajan más del doble; no se sabe cuántos sin entrada
@@ -108,7 +108,7 @@ export const BEATS: BeatSpec[] = [
       { type: 'label', pos: [-0.85, 2.02, 0.1], p: { text: 'ENTRADAS', w: 1.25, h: 0.3, ...GOLD } },
       { type: 'cubes', pos: [0.85, 1.02, 0], at: 0.5, enter: 'none', p: { n: 35, cols: 5, size: 0.2, gap: 0.04, color: RED, stagger: 0.025 } },
       { type: 'label', pos: [0.85, 2.98, 0.1], at: 'viajan', p: { text: 'VIAJAN', w: 1.1, h: 0.3, bg: RED, size: 0.62, weight: 900 } },
-      { type: 'label', pos: [-0.85, 2.6, 0.2], at: 'no', bob: 0.04, p: { text: '?', w: 0.5, h: 0.5, bg: '#15102b', border: C.cyan, color: '#fff', size: 0.8, weight: 900 } },
+      { type: 'label', pos: [0.85, 1.85, 0.45], at: 'no', bob: 0.04, p: { text: '?', w: 0.6, h: 0.6, bg: '#15102b', border: C.cyan, color: '#fff', size: 0.8, weight: 900 } },
     ],
     overlays: [{ type: 'tag', text: 'esquema, no a escala', at: 0.1, x: 29, y: 27.5, color: TAG, size: 30 },
       { type: 'big', text: '35.000 ÷ 14.000 = 2,5', sub: 'los 35.000 son una estimación', at: 'más', y: 62, size: 62 },
@@ -155,7 +155,7 @@ export const BEATS: BeatSpec[] = [
     overlays: [{ type: 'tag', text: '1968', at: 0.1, x: 50, y: 74.5, color: C.blue, size: 64 }] },
 
   // 13. 58 años después: mismo rival, misma cancha
-  { id: 'b13', set: 'void', cam: { from: [0.9, 2.7, 9.2], to: [0.0, 2.4, 8.1], look: [0, 0.75, 0], fov: 46 }, keywords: ['58', 'rival', 'cancha'],
+  { id: 'b13', set: 'void', cam: { from: [0.9, 2.7, 9.2], to: [0.0, 2.4, 8.1], look: [0, 0.75, 0], fov: 46 }, keywords: ['58', 'después', 'rival', 'cancha'],
     actors: [
       { type: 'stadium', pos: [0, 0, -1.3], s: 0.85, p: { tower: false } },
       { type: 'calendar', pos: [-1.0, 2.15, 0.2], rot: [0, 0.2, 0], s: 0.5, p: { top: 'FINAL', big: '1968', color: C.blue } },
@@ -164,7 +164,7 @@ export const BEATS: BeatSpec[] = [
       { type: 'player', pos: [-0.8, 0, 1.3], rot: [0, 0.4, 0], s: 0.7, p: { kit: 'est', pose: 'idle' } },
       { type: 'player', pos: [0.8, 0, 1.3], rot: [0, -0.4, 0], s: 0.7, at: 'rival', p: { kit: 'pal', pose: 'idle', phase: 2, hair: '#3a2a1a', skin: '#c98d62' } },
       { type: 'label', pos: [0.8, 1.42, 1.3], at: 'rival', p: { text: 'MISMO RIVAL', w: 1.3, h: 0.3, bg: GREEN, size: 0.62, weight: 900 } },
-      { type: 'label', pos: [0, 1.35, -0.6], at: 'cancha', p: { text: 'MISMA CANCHA', w: 1.5, h: 0.32, ...GOLD } },
+      { type: 'label', pos: [-0.8, 1.42, 1.3], at: 'cancha', p: { text: 'MISMA CANCHA', w: 1.3, h: 0.3, ...GOLD } },
     ],
     overlays: [{ type: 'big', text: '58 años', sub: '1968 → 2026', at: 0.05, y: 62 }] },
 
