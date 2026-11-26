@@ -91,7 +91,7 @@ export const BEATS: BeatSpec[] = [
     overlays: [{ type: 'tag', text: 'PIDIERON DENEGAR LA SOLICITUD', at: 'pidieron', x: 50, y: 72, color: C.red, size: 46 }] },
 
   // 8. El organismo descartó los tres pedidos
-  { id: 'b08', set: 'room', cam: { from: [0.6, 2.3, 8.0], to: [-0.2, 2.1, 7.1], look: [0, 1.65, 0], fov: 46 }, keywords: ['descartó', 'tres'],
+  { id: 'b08', set: 'room', cam: { from: [0.6, 2.3, 8.0], to: [-0.2, 2.1, 7.1], look: [0, 1.65, 0], fov: 46 }, keywords: ['organismo', 'descartó', 'tres'],
     actors: [
       { type: 'doc', pos: [-1.0, 2.0, 0], s: 0.8, p: { title: 'PEDIDO 1', ph: 1 } },
       { type: 'doc', pos: [0, 2.0, 0], s: 0.8, p: { title: 'PEDIDO 2', ph: 2 } },
@@ -119,7 +119,7 @@ export const BEATS: BeatSpec[] = [
     overlays: [{ type: 'big', text: '600 km', sub: 'por ahora, solo por debajo', at: 'los', y: 62 }] },
 
   // 10. Para ir más arriba: plan final contra la basura espacial
-  { id: 'b10', set: 'void', cam: { from: [0.9, 1.7, 7.9], to: [0.2, 2.1, 7.0], look: [0, 2.0, 0], fov: 46 }, keywords: ['arriba,', 'plan', 'basura'],
+  { id: 'b10', set: 'void', cam: { from: [0.9, 1.7, 7.9], to: [0.2, 2.1, 7.0], look: [0, 2.0, 0], fov: 46 }, keywords: ['arriba,', 'presentar', 'plan', 'basura'],
     actors: [
       { type: 'globe', pos: [0, -1.75, 0], s: 2.3 },
       { type: 'dash', pos: [0, 1.6, 0], p: { w: 3.8, n: 14 } },
@@ -170,7 +170,7 @@ export const BEATS: BeatSpec[] = [
       { type: 'tag', text: 'PLAZO DEL PERMISO: 2040', at: '2040', x: 50, y: 75, color: TAG, size: 48 }] },
 
   // 14. Hoy 17.000, permitidos un millón
-  { id: 'b14', set: 'void', cam: { from: [0.8, 2.4, 8.8], to: [0, 2.2, 7.3], look: [0, 1.5, 0], fov: 46 }, keywords: ['17.000.', 'millón.'],
+  { id: 'b14', set: 'void', cam: { from: [0.8, 2.4, 8.8], to: [0, 2.2, 7.3], look: [0, 1.5, 0], fov: 46 }, keywords: ['17.000.', 'Permitidos,', 'millón.'],
     actors: [
       { type: 'globe', pos: [0, 2.05, 0], s: 0.72 },
       { type: 'dots', pos: [0, 2.05, 0], p: { n: 90, R0: 0.92, R1: 1.1, color: C.cyan, size: 0.12 } },
