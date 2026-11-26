@@ -421,7 +421,7 @@
     "https://www.nbcnews.com/science/space/spacex-fcc-authorizes-1-million-satellites-data-centers-space-rcna611341"
    ],
    "puntaje": 8.5,
-   "etapa": "render",
+   "etapa": "listo",
    "creado": "2026-11-26T14:08:16-03:00",
    "historial": [
     {
@@ -502,11 +502,26 @@
      "etapa": "render",
      "cuando": "2026-11-26T15:12:33-03:00",
      "nota": "devuelto por el revisor: subtítulo con hueco menor a 16 px en 45.2-45.9 s ('SpaceX tiene', 15,0-15,2 px); marcar 'SpaceX' (b10) como palabra clave en beats.ts; en el límite (15,96-16,4): 'noviembre,' (b02), 'primero', 'tiene' y 'lanzar' (b13). AVISO: dura 73 s, se pasa del tope; acortarlo exige regenerar la voz (decide el dueño)"
+    },
+    {
+     "etapa": "revision",
+     "cuando": "2026-11-26T15:33:52-03:00",
+     "nota": "umbral 14 px por decisión del dueño"
+    },
+    {
+     "etapa": "esperando_ok_final",
+     "cuando": "2026-11-26T15:33:52-03:00",
+     "nota": "AVISO: dura 73 s (tope 70); acortarlo exige regenerar la voz. Pronunciación de Starmind, Viasat y FCC a escuchar."
+    },
+    {
+     "etapa": "listo",
+     "cuando": "2026-11-26T15:33:54-03:00",
+     "nota": "aprobado por el dueño desde esperando_ok_final"
     }
    ],
-   "nota": "devuelto por el revisor: subtítulo con hueco menor a 16 px en 45.2-45.9 s ('SpaceX tiene', 15,0-15,2 px); marcar 'SpaceX' (b10) como palabra clave en beats.ts; en el límite (15,96-16,4): 'noviembre,' (b02), 'primero', 'tiene' y 'lanzar' (b13). AVISO: dura 73 s, se pasa del tope; acortarlo exige regenerar la voz (decide el dueño)",
+   "nota": "",
    "caracteres_voz": 1143
   }
  },
- "actualizado": "2026-11-26T15:13:06-03:00"
+ "actualizado": "2026-11-26T15:33:54-03:00"
 }
