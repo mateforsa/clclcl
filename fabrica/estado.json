@@ -607,7 +607,24 @@
    "nota": "",
    "caracteres_voz": 978,
    "link": "https://www.instagram.com/reel/DgOMUrBuXCY/"
+  },
+  "gta-vi-leonida": {
+   "titulo": "Take-Two borró 3.007 copias del GTA VI para PC",
+   "tema": "videojuegos",
+   "fuentes": [
+    "https://www.tomshardware.com/video-games/pc-gaming/take-two-wipes-out-3-007-gta-6-pc-port-repos-from-github-in-massive-dmca-crackdown-as-ai-tools-fuel-wave-of-unofficial-builds",
+    "https://www.heise.de/news/GTA-6-Take-Two-laesst-inoffiziellen-PC-Port-von-GitHub-entfernen-11537065.html"
+   ],
+   "puntaje": 7.5,
+   "etapa": "idea",
+   "creado": "2026-11-26T19:37:58-03:00",
+   "historial": [
+    {
+     "etapa": "idea",
+     "cuando": "2026-11-26T19:37:58-03:00"
+    }
+   ]
   }
  },
- "actualizado": "2026-11-26T19:37:04-03:00"
+ "actualizado": "2026-11-26T19:37:58-03:00"
 }
