@@ -37,7 +37,7 @@ export const BEATS: BeatSpec[] = [
     overlays: [tag('un programador, por su cuenta', 0.15, { size: 44 })] },
 
   // 3. Take-Two reclamó y la bajaron, junto con 3.006 copias
-  { id: 'b03', set: 'void', cam: { from: [0.8, 2.6, 9.0], to: [-0.1, 2.4, 8.0], look: [0, 0.75, 0], fov: 46 }, keywords: ['Take-Two', '3.006'],
+  { id: 'b03', set: 'void', cam: { from: [0.8, 2.6, 9.0], to: [-0.1, 2.4, 8.0], look: [0, 0.75, 0], fov: 46 }, keywords: ['Take-Two', 'reclamó', 'bajaron', '3.006'],
     actors: [
       { type: 'repos', pos: [0, 0.35, -0.4], enter: 'none', p: { cols: 8, rows: 5, cw: 0.32, ch: 0.24, fallAt: 2.0, drop: 0.35, hi: 3, seed: 6 } },
       { type: 'label', pos: [0, 2.3, 0.2], rot: [0, 0, -0.04], at: 'Take-Two', enter: 'drop', p: { text: 'RECLAMO', w: 1.7, h: 0.62, ...DOC, size: 0.4, sub: 'DE TAKE-TWO' } },
@@ -59,7 +59,7 @@ export const BEATS: BeatSpec[] = [
     overlays: [tag('GitHub: donde los programadores publican código', 'donde', { size: 34 })] },
 
   // 5. La versión de Xbox, en una computadora
-  { id: 'b05', set: 'room', cam: { from: [0.8, 2.4, 7.7], to: [-0.1, 2.2, 7.0], look: [0, 0.9, 0], fov: 46 }, keywords: ['Xbox'],
+  { id: 'b05', set: 'room', cam: { from: [0.8, 2.4, 7.7], to: [-0.1, 2.2, 7.0], look: [0, 0.9, 0], fov: 46 }, keywords: ['computadora', 'Xbox'],
     actors: [
       { type: 'console', pos: [-1.05, 0, 0], rot: [0, 0.3, 0], s: 0.9, p: { kind: 'b' } },
       { type: 'label', pos: [-1.05, 1.75, 0], p: { text: 'XBOX', w: 0.95, h: 0.36, bg: '#1f9d55', size: 0.62, weight: 900 } },
@@ -81,7 +81,7 @@ export const BEATS: BeatSpec[] = [
     overlays: [tag('20/11, según Take-Two', 0.05, { size: 46 })] },
 
   // 7. Enseguida nació Leonida, y miles lo copiaron
-  { id: 'b07', cam: { from: [0.9, 2.5, 9.2], to: [0.0, 2.4, 8.3], look: [0, 1.25, 0], fov: 46 }, keywords: ['Enseguida', 'Leonida'],
+  { id: 'b07', cam: { from: [0.9, 2.5, 9.2], to: [0.0, 2.4, 8.3], look: [0, 1.25, 0], fov: 46 }, keywords: ['Enseguida', 'nació', 'Leonida'],
     actors: [
       { type: 'ring', pos: [0, 0.03, 0], p: { r: 1.2, color: C.gold } },
       { type: 'label', pos: [0, 2.9, 0.1], at: 0.05, p: { text: 'LEONIDA', w: 1.6, h: 0.44, ...GOLD } },
@@ -147,7 +147,7 @@ export const BEATS: BeatSpec[] = [
       tag('1 original + 3.006 copias', 'proyectos', { size: 42 })] },
 
   // 13. Según medios especializados, otros siguen con una copia. Todavía no se puede jugar
-  { id: 'b13', set: 'room', cam: { from: [0.8, 2.4, 8.0], to: [-0.1, 2.2, 7.1], look: [0, 1.0, 0], fov: 46 }, keywords: [],
+  { id: 'b13', set: 'room', cam: { from: [0.8, 2.4, 8.0], to: [-0.1, 2.2, 7.1], look: [0, 1.0, 0], fov: 46 }, keywords: ['jugar'],
     actors: [
       { type: 'desk', pos: [0, 0, 0.2], s: 1.25, p: {} },
       { type: 'screen', pos: [0, 1.6, 0.1], s: 0.75, out: 'Todavía', p: { kind: 'code', stand: true } },
@@ -181,5 +181,5 @@ export const BEATS: BeatSpec[] = [
       { type: 'label', pos: [1.0, 1.98, 0.1], at: 'seis', p: { text: '6', w: 0.56, h: 0.56, bg: C.gold, color: '#1a1030', size: 0.74, weight: 900 } },
     ],
     overlays: [{ type: 'tag', text: 'GTA VI · PARTE 6', at: 0.05, x: 50, y: 25.5, color: C.red },
-      { type: 'big', text: 'MANDÁSELO', sub: 'al que lo espera en PC', at: 'Mandáselo', y: 62, size: 104 }] },
+      { type: 'big', text: 'Mandáselo', sub: 'al que lo espera en PC', at: 'Mandáselo', y: 62, size: 104 }] },
 ];
