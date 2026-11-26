@@ -1,0 +1,3 @@
+{ "beat": "b01", "frac": 0.6,
+  "overlay": { "kicker": "GTA VI · PARTE 5",
+    "lines": [ { "t": "7 AÑOS", "c": "yellow", "size": 190 }, { "t": "Y SALIÓ LIBRE", "size": 122 }, { "t": "EL HACKER QUE FILTRÓ GTA VI", "size": 62, "c": "cyan" } ] } }

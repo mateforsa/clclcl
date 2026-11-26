@@ -118,5 +118,15 @@
   "video": "hilux-amarok",
   "inicio": "A10 el ya pasó / despedida (este mes dejan de fabricarse las dos camionetas que conoce todo el país)",
   "cierre": "Pregunta de dos opciones en una palabra (¿Hilux o Amarok?) + motivo para seguir (mostrar las nuevas cuando salgan)"
+ },
+ {
+  "video": "dolar-tres-precios",
+  "inicio": "G70 un precio en pesos (un dólar, tres precios el mismo día)",
+  "cierre": "Pregunta de una palabra (¿Vos cuál mirás? ¿Oficial, blue o MEP?) + motivo para seguir (un número de la economía por día en un minuto)"
+ },
+ {
+  "video": "gta-vi-hacker",
+  "inicio": "F52 objeto fuera de lugar (Un Fire Stick. Con esto se robó GTA VI)",
+  "cierre": "Continuación de serie con motivo (lo que siga con GTA VI) + pregunta neutra de una palabra (¿Sabías cómo lo hizo?)"
  }
 ]
