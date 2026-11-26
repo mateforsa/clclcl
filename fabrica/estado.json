@@ -616,7 +616,7 @@
     "https://www.heise.de/news/GTA-6-Take-Two-laesst-inoffiziellen-PC-Port-von-GitHub-entfernen-11537065.html"
    ],
    "puntaje": 7.5,
-   "etapa": "voz",
+   "etapa": "revision",
    "creado": "2026-11-26T19:37:58-03:00",
    "historial": [
     {
@@ -652,11 +652,21 @@
      "etapa": "voz",
      "cuando": "2026-11-26T19:46:04-03:00",
      "nota": "voz sin OK (regla voz_sin_ok del dueño)"
+    },
+    {
+     "etapa": "render",
+     "cuando": "2026-11-26T19:53:03-03:00",
+     "nota": ""
+    },
+    {
+     "etapa": "revision",
+     "cuando": "2026-11-26T19:57:35-03:00",
+     "nota": ""
     }
    ],
    "nota": "",
    "caracteres_voz": 961
   }
  },
- "actualizado": "2026-11-26T19:46:04-03:00"
+ "actualizado": "2026-11-26T19:57:35-03:00"
 }
