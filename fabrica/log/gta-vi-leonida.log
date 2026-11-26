@@ -6,3 +6,8 @@
 2026-11-26T19:43:33-03:00 [fabrica] etapa -> guion (devuelto por el verificador: plano 13 'todavia no arranca' (fuentes contradictorias al 25-26/11) y plano 7 'un dia despues' (falta 'segun Take-Two'; otras fuentes dicen 20/11))
 2026-11-26T19:44:42-03:00 [guionista] corregido tras devolucion: plano 13 'Todavia no se puede jugar' (sale 'no arranca'), plano 7 'Enseguida nacio Leonida' (sale 'un dia despues'), plano 3 'reclamo y la bajaron'; fila del plano 13 con TweakTown, mixed-news y PC Games Hardware; placa del plano 1 con 'oficiales'; 163 palabras dichas
 2026-11-26T19:44:42-03:00 [fabrica] etapa -> guion (corregido tras devolución del verificador)
+2026-11-26T19:45:25-03:00 [verificador] APROBADO: 19 datos, todos con fuente (segunda vuelta; verificado por extractos de buscador, las paginas no abren desde este entorno). Para el productor: placa del plano 1 debe decir '0 versiones oficiales para PC'; 'esta semana' vale hasta el domingo 29/11; 'todavia no se puede jugar' es al 25-26/11, revisar si se publica mas tarde.
+2026-11-26T19:45:25-03:00 [fabrica] etapa -> verificado
+2026-11-26T19:46:04-03:00 [fabrica] gta-vi-leonida: la voz gasta unos 961 caracteres de ElevenLabs. AVISO: no se puede leer el saldo (la clave no tiene ese permiso); anotalo en fabrica/config.json.
+2026-11-26T19:46:04-03:00 [fabrica] etapa -> esperando_ok_voz
+2026-11-26T19:46:04-03:00 [fabrica] voz SIN OK del dueño (regla voz_sin_ok): ~961 caracteres
