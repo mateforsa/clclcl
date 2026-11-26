@@ -75,10 +75,16 @@ def publicar(d):
     c = m.post(f"{ig}/media", **datos); cid, uri = c["id"], c["uri"]
     print("Contenedor creado:", cid)
     tam = os.path.getsize(MP4)
-    with open(MP4, "rb") as f: cuerpo = f.read()  # en memoria: Meta rechaza la subida si llega en trozos (sin Content-Length)
-    r = requests.post(uri, data=cuerpo, timeout=900, headers=m._headers(
-        {"offset": "0", "file_size": str(tam), "Content-Type": "application/x-www-form-urlencoded"}, upload=True))
-    if not (r.ok and r.json().get("success")): raise m.MetaError(f"la subida falló ({r.status_code}): {r.text[:300]}")
+    # Subida con curl, con el formato exacto de la documentación de Meta.
+    cab = [x for k, v in m._headers({"offset": "0", "file_size": str(tam)}, upload=True).items() for x in ("-H", f"{k}: {v}")]
+    ok, r = False, None
+    for intento in range(6):  # el contenedor tarda unos segundos en aceptar la subida: si se manda enseguida, falla
+        time.sleep(15)
+        r = subprocess.run(["curl", "-sS", "-m", "900", "-X", "POST", uri, *cab, "--data-binary", f"@{MP4}"], capture_output=True, text=True)
+        try: ok = json.loads(r.stdout).get("success")
+        except ValueError: ok = False
+        if ok: break
+    if not ok: raise m.MetaError(f"la subida falló tras 6 intentos: {(r.stdout or r.stderr)[:300]}")
     print("Video subido:", round(tam / 1e6, 1), "MB")
     for _ in range(60):
         st = m.get(cid, fields="status_code,status").get("status_code")
