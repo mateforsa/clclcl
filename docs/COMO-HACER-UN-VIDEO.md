@@ -144,6 +144,11 @@ color, glow), `road`, `arch` (text).
 - `{ type: 'chapter', n: 'PROBLEMA 1', title: 'EL ROBO', at: 0 }` cartel de capítulo a pantalla completa.
 - `{ type: 'plate', name, role, at, out }` placa de nombre.
 - `{ type: 'tag', text, at, x, y, color }` etiqueta suelta (x, y en % de pantalla).
+- `{ type: 'photo', src: 'hilux.jpg', at, out, mode: 'card' | 'full', caption, credit, zoom: [1.04, 1.16], pan: [x, y] }`
+  foto real con zoom y paneo lentos (sin IA). El archivo va en `videos/<slug>/public/fotos/`. `card` la muestra
+  enmarcada en el centro, sobre la escena 3D; `full` ocupa la pantalla. Usar 2 a 4 por video, de 2 a 4 segundos,
+  en el medio (donde cae la retención). Solo fotos propias, de prensa de la marca o de uso libre, con `credit`.
+  Nunca fotos de personas animadas con IA.
 
 ### Props propios de un video
 

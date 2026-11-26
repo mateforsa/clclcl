@@ -1,5 +1,5 @@
 import React from 'react';
-import { AbsoluteFill } from 'remotion';
+import { AbsoluteFill, Img, staticFile } from 'remotion';
 import { C, clamp, eo, lerp, pop } from './math';
 
 export type OverlaySpec =
@@ -8,6 +8,7 @@ export type OverlaySpec =
   | { type: 'chapter'; n: string; title: string; at?: any }
   | { type: 'plate'; name: string; role: string; at?: any; y?: number; out?: any }
   | { type: 'cover'; kicker?: string; lines: { t: string; c?: 'yellow' | 'red' | 'cyan'; size?: number }[]; y?: number; at?: any }
+  | { type: 'photo'; src: string; at?: any; out?: any; mode?: 'full' | 'card'; caption?: string; credit?: string; zoom?: [number, number]; pan?: [number, number]; dur?: number; tilt?: number }
   | { type: 'tag'; text: string; at?: any; x: number; y: number; color?: string; out?: any; size?: number };
 const F = 'Poppins, sans-serif';
 const fmt = (v: number, dec = 0) => v.toFixed(dec).replace('.', ',').replace(/\B(?=(\d{3})+(?!\d))/g, '.');
@@ -53,6 +54,28 @@ export const Overlays: React.FC<{ list: OverlaySpec[]; t: number; when: (a: any)
             {o.lines.map((l, j) => <div key={j} style={{ color: l.c ? col[l.c] : '#fff', fontWeight: 900, fontSize: l.size ?? 150, lineHeight: 1.02, letterSpacing: -2, textShadow: st, whiteSpace: 'nowrap' }}>{l.t}</div>)}
           </div>
         </AbsoluteFill>); }
+      if (o.type === 'photo') {
+        // Foto real animada sin IA: zoom y paneo lentos. `src` es un archivo de videos/<slug>/public/fotos/.
+        const dur = o.dur ?? (o.out !== undefined ? when(o.out) - when(o.at) : 4); const p = clamp(tt / Math.max(dur, 0.1));
+        const [z0, z1] = o.zoom ?? [1.04, 1.16]; const [px, py] = o.pan ?? [0, -2]; const z = lerp(z0, z1, p);
+        const img = <Img src={staticFile('fotos/' + o.src)} style={{ width: '100%', height: '100%', objectFit: 'cover', transform: `scale(${z}) translate(${px * p}%, ${py * p}%)` }} />;
+        const pie = (o.caption || o.credit) && (
+          <div style={{ position: 'absolute', left: 0, right: 0, bottom: 0, padding: '60px 26px 18px', background: 'linear-gradient(transparent, rgba(8,3,24,.92))', color: '#fff' }}>
+            {o.caption && <div style={{ fontWeight: 800, fontSize: 44, lineHeight: 1.1 }}>{o.caption}</div>}
+            {o.credit && <div style={{ fontWeight: 500, fontSize: 24, opacity: 0.75, marginTop: 4 }}>Foto: {o.credit}</div>}
+          </div>);
+        if ((o.mode ?? 'card') === 'full') return (
+          <AbsoluteFill key={i} style={{ opacity: clamp(tt / 0.18), overflow: 'hidden', background: '#0b0420' }}>
+            {img}
+            <AbsoluteFill style={{ background: 'linear-gradient(180deg, rgba(8,3,24,.8) 0%, rgba(8,3,24,0) 30%, rgba(8,3,24,0) 62%, rgba(8,3,24,.9) 100%)' }} />
+            {pie && <div style={{ position: 'absolute', left: 60, right: 140, bottom: '20%' }}>{pie}</div>}
+          </AbsoluteFill>);
+        return (
+          <div key={i} style={{ position: 'absolute', left: '9%', right: '9%', top: '27%', height: '37%', transform: `scale(${k}) rotate(${o.tilt ?? -2}deg)`,
+            border: '12px solid #fff', borderRadius: 26, overflow: 'hidden', boxShadow: '0 30px 80px rgba(0,0,0,.7), 0 0 0 4px #000', background: '#0b0420' }}>
+            {img}{pie}
+          </div>);
+      }
       if (o.type === 'tag') return (
         <div key={i} style={{ position: 'absolute', left: `${o.x}%`, top: `${o.y}%`, transform: `translate(-50%,-50%) scale(${k})`, background: o.color ?? C.blue, color: '#fff', fontWeight: 800, fontSize: o.size ?? 44, padding: '6px 26px', borderRadius: 14, whiteSpace: 'nowrap', boxShadow: '0 8px 30px rgba(0,0,0,.45)' }}>{o.text}</div>);
       return null;
