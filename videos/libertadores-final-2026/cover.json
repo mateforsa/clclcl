@@ -1,3 +1,3 @@
 { "beat": "b01", "frac": 0.3,
-  "overlay": { "kicker": "FINAL DE LA LIBERTADORES", "y": 54,
-    "lines": [ { "t": "A LA FINAL", "size": 150 }, { "t": "EN BICI", "c": "yellow", "size": 190 }, { "t": "600 KM", "size": 170 }, { "t": "DE LA PLATA A MONTEVIDEO", "size": 64, "c": "cyan" } ] } }
+  "overlay": { "kicker": "LIBERTADORES 2026", "y": 60,
+    "lines": [ { "t": "A LA FINAL", "size": 136 }, { "t": "EN BICI", "c": "yellow", "size": 200 }, { "t": "UNOS 600 KM HASTA MONTEVIDEO", "size": 60, "c": "cyan" } ] } }

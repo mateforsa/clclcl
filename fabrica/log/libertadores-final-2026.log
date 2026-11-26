@@ -18,3 +18,6 @@
 2026-11-26T18:59:57-03:00 [productor] stills revisados al 85 % y al 35 % (corregidos encuadres de planos 2, 3, 4, 9 y 14); armando audio
 2026-11-26T19:00:06-03:00 [productor] audio mezclado (62,7 s); lanzando render
 2026-11-26T19:00:06-03:00 [fabrica] etapa -> render
+2026-11-26T19:06:13-03:00 [productor] portada lista: instagram/portadas/libertadores-final-2026.jpg
+2026-11-26T19:06:13-03:00 [productor] render listo: out/libertadores-final-2026/libertadores-final-2026.mp4, 63 s (62,7 s, 1080x1920, 30 fps, -14,2 LUFS). A revisar de oído: pronunciación de Palmeiras (una sola toma, sin variantes)
+2026-11-26T19:06:13-03:00 [fabrica] etapa -> revision
