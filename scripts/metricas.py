@@ -28,12 +28,18 @@ def primera_linea(slug):
 
 def importar():
     reg = leer(REG, []); ids = {x["id"] for x in reg}
-    lineas = {primera_linea(os.path.basename(os.path.dirname(p))): os.path.basename(os.path.dirname(p)) for p in glob.glob(f"{ROOT}/videos/*/guion.md")}
+    clave = lambda t: re.sub(r"[^a-z0-9áéíóúñ]", "", (t or "").lower())[:45]
+    lineas = {clave(primera_linea(os.path.basename(os.path.dirname(p)))): os.path.basename(os.path.dirname(p)) for p in glob.glob(f"{ROOT}/videos/*/guion.md")}
+    try:  # descripciones de la primera tanda, guardadas aparte
+        for slug, txt in re.findall(r"\(`([a-z0-9-]+?)(?:-v2)?\.mp4`\)\s*```\n(.*?)```", open(f"{ROOT}/instagram/descripciones.md").read(), re.S):
+            lineas.setdefault(clave(txt.strip().splitlines()[0]), slug)
+    except OSError: pass
+    lineas.pop("", None)
     j = m.get(f"{m.ig_id()}/media", fields="id,caption,permalink,timestamp,media_product_type", limit=100); n = 0
     for x in j.get("data", []):
         if x["id"] in ids or x.get("media_product_type") != "REELS": continue
         l1 = (x.get("caption") or "").strip().splitlines()[0].strip() if x.get("caption") else ""
-        slug = lineas.get(l1)
+        slug = lineas.get(clave(l1))
         reg.append({"slug": slug or "(sin emparejar)", "id": x["id"], "fecha": x["timestamp"], "link": x.get("permalink"), "prueba": False, "importado": True}); n += 1
     json.dump(reg, open(REG, "w"), ensure_ascii=False, indent=1); print(f"{n} reels importados a instagram/publicados.json")
 

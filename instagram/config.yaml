@@ -1,5 +1,5 @@
 # Configuración de la cuenta para los módulos de Instagram (sin secretos: el token nunca va acá).
-ig_user_id: ""                 # ID numérico de la cuenta profesional (lo da: python3 scripts/meta_api.py cuenta)
+ig_user_id: "17841462912950543"                 # ID numérico de la cuenta profesional (lo da: python3 scripts/meta_api.py cuenta)
 api_version: v27.0             # última versión según la documentación de Meta al 26/11/2026
 rama_portadas: claude/video-3d-low-poly-nc2azi   # rama pública de donde Meta descarga la portada (cover_url)
 repo: mateforsa/clclcl
