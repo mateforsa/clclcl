@@ -26,3 +26,5 @@
 2026-11-27T01:02:12-03:00 [productor] stills de los frames señalados revisados (b03 f220, b05 f563, b10, b13 ~50,2 s): claves con recuadro, sin explosión, torre por debajo de los subtítulos; events y audio regenerados
 2026-11-27T01:02:12-03:00 [fabrica] etapa -> render
 2026-11-27T01:02:12-03:00 [productor] lanzo el render de la corrección
+2026-11-27T01:09:53-03:00 [productor] render listo: out/starship-atrapada-v2/starship-atrapada-v2.mp4, 55 s (54,6 s); corrección del revisor aplicada (claves noviembre/atraparon, plano 10 sin explosión, torre del plano 13 más baja); hojas qc revisadas
+2026-11-27T01:09:53-03:00 [fabrica] etapa -> revision

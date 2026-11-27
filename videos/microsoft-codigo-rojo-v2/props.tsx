@@ -56,11 +56,11 @@ const Office: React.FC<{ t: number; p: any }> = ({ p }) => {
       {[-5, -3.3, -1.65, 0, 1.65, 3.3, 5].map((x) => <B key={x} s={[0.1, 2.9, 0.14]} pos={[x, 2.35, -3.72]} c="#dfe4ea" />)}
       <B s={[14, 0.12, 0.16]} pos={[0, 0.92, -3.7]} c="#dfe4ea" />
       <B s={[14, 0.12, 0.16]} pos={[0, 3.78, -3.7]} c="#dfe4ea" />
-      <B s={[14, 5, 0.2]} pos={[0, 6.3, -3.75]} c={WALLW} />
+      <B s={[14, 5, 0.2]} pos={[0, 6.3, -3.75]} c={p.dim ? '#2a3446' : WALLW} />
       {[-4.4, 4.4].map((x) => <B key={x} s={[0.2, 9, 14]} pos={[x, 4.5, 0]} c="#e3e8ee" />)}
       {/* techo con paneles de luz */}
-      {!p.open && <B s={[9, 0.1, 14]} pos={[0, 4.6, 0]} c="#f3f5f7" />}
-      {!p.open && [-2, 0, 2].map((z) => [-1.8, 1.8].map((x) => <Flat key={x + '' + z} s={[1.4, 0.5]} pos={[x, 4.54, z]} rot={[Math.PI / 2, 0, 0]} c="#ffffff" />))}
+      {!p.open && <B s={[9, 0.1, 14]} pos={[0, 4.6, 0]} c={p.dim ? '#2a3446' : '#f3f5f7'} />}
+      {!p.open && !p.dim && [-2, 0, 2].map((z) => [-1.8, 1.8].map((x) => <Flat key={x + '' + z} s={[1.4, 0.5]} pos={[x, 4.54, z]} rot={[Math.PI / 2, 0, 0]} c="#ffffff" />))}
       {/* planta */}
       <group position={[-3.6, 0, -3.0]}><Cyl r={0.28} h={0.5} r2={0.34} pos={[0, 0.25, 0]} c={SLATE} />
         {[0, 1, 2, 3, 4].map((i) => <mesh key={i} position={[Math.cos(i * 1.3) * 0.2, 0.8 + i * 0.12, Math.sin(i * 1.3) * 0.2]}><icosahedronGeometry args={[0.28, 0]} /><M c={i % 2 ? '#3f8f5a' : '#4fa86a'} /></mesh>)}</group>
@@ -351,7 +351,7 @@ export const Stopwatch: React.FC<P> = ({ t, tt, p }) => {
   return (
     <group>
       <Cyl r={r * 1.08} h={0.2} rot={[Math.PI / 2, 0, 0]} c={STEEL} seg={32} />
-      <Flat s={[r * 2, r * 2]} pos={[0, 0, 0.105]} map={face} />
+      <Flat s={[r * 2, r * 2]} pos={[0, 0, 0.105]} map={face} o={1} />
       <group position={[0, 0, 0.13]} rotation={[0, 0, a]}><B s={[0.05, r * 0.85, 0.02]} pos={[0, r * 0.38, 0]} c={SIG} e={SIG} ei={0.8} /></group>
       <Cyl r={0.06} h={0.05} pos={[0, 0, 0.14]} rot={[Math.PI / 2, 0, 0]} c={SLATE} />
       <Cyl r={0.16} h={0.26} pos={[0, r * 1.18, 0]} c={STEEL} />

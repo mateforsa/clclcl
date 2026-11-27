@@ -54,19 +54,18 @@ export const Stage: React.FC<P> = ({ t, p }) => {
       <pointLight position={[-2.2, 1.6, 0.6]} intensity={9} color={AMBER} distance={6} />
       <Flat s={[24, 24]} pos={[0, 0.02, 0]} rot={[-Math.PI / 2, 0, 0]} map={carpet} />
       <B s={[12, 0.5, 0.2]} pos={[0, 0.25, -3.75]} c="#26384d" />
-      <Flat s={[9, 1.6]} pos={[0, 1.3, -3.64]} map={night} />
-      <Snow t={t} w={8.6} h={1.5} y0={0.55} z={-3.6} />
+      <Flat s={[9, 1.3]} pos={[0, 1.15, -3.64]} map={night} />
+      <Snow t={t} w={8.6} h={1.2} y0={0.55} z={-3.6} />
       <group position={[1.6, 1.25, -5.0]} rotation={[0, -0.35, 0]} scale={0.75}>
         <Cyl r={0.34} h={4.4} rot={[0, 0, Math.PI / 2]} c="#c9d3dc" /><B s={[1.0, 0.06, 4.4]} pos={[0.2, -0.08, 0]} c="#aebbc7" />
         <B s={[0.55, 1.0, 0.06]} pos={[-2.0, 0.55, 0]} c={RED} />
         {Array.from({ length: 10 }, (_, i) => <B key={i} s={[0.1, 0.08, 0.02]} pos={[-1.2 + i * 0.26, 0.1, 0.34]} c={AMBER} e={AMBER} ei={1.2} />)}
       </group>
-      {[-4.5, -3, -1.5, 0, 1.5, 3, 4.5].map((x) => <B key={x} s={[0.1, 1.7, 0.14]} pos={[x, 1.3, -3.56]} c="#0e1724" />)}
-      <B s={[12, 0.12, 0.16]} pos={[0, 2.12, -3.56]} c="#0e1724" />
-      <B s={[12, 0.04, 0.18]} pos={[0, 2.2, -3.54]} c={ICE} e={ICE} ei={0.5} />
-      <B s={[12, 6.6, 0.2]} pos={[0, 5.5, -3.66]} c={NAVY} />
+      {[-4.5, -3, -1.5, 0, 1.5, 3, 4.5].map((x) => <B key={x} s={[0.1, 1.4, 0.14]} pos={[x, 1.15, -3.56]} c="#0e1724" />)}
+      <B s={[12, 0.12, 0.16]} pos={[0, 1.84, -3.56]} c="#0e1724" />
+      <B s={[12, 6.9, 0.2]} pos={[0, 5.35, -3.66]} c={NAVY} />
       {[-4.3, 4.3].map((x) => <B key={x} s={[0.2, 9, 12]} pos={[x, 4.5, 0]} c={NAVY2} />)}
-      {p.sign && <group position={[p.signX ?? -2.35, 1.7, -3.0]}>
+      {p.sign && <group position={[p.signX ?? -2.35, 1.45, -3.0]}>
         <B s={[0.03, 0.5, 0.03]} pos={[0, 0.42, 0]} c="#556" />
         <Label t={t} tt={0} p={{ text: p.sign, w: 1.25, h: 0.32, bg: ICE, color: NAVY, size: 0.62, weight: 900, depth: 0.05 }} />
       </group>}
@@ -80,7 +79,7 @@ export const Stage: React.FC<P> = ({ t, p }) => {
       <group>
         <pointLight position={[0, 3.6, 2.2]} intensity={22} color="#fff4e2" distance={12} />
         <pointLight position={[2.4, 2.0, -1.5]} intensity={8} color={AMBER} distance={6} />
-        <Flat s={[24, 24]} pos={[0, 0.02, 0]} rot={[-Math.PI / 2, 0, 0]} map={parquet} />
+        <Flat s={[24, 24]} pos={[0, 0.02, 0]} rot={[-Math.PI / 2, 0, 0]} map={parquet} c="#5a4a3a" />
         <B s={[12, 0.8, 0.2]} pos={[0, 0.4, -3.75]} c={MAPLE} />
         <B s={[12, 0.08, 0.26]} pos={[0, 0.82, -3.7]} c="#9c7a4c" />
         <B s={[12, 8.4, 0.2]} pos={[0, 5.0, -3.78]} c={PINE} />
@@ -171,8 +170,8 @@ export const Stage: React.FC<P> = ({ t, p }) => {
       {Array.from({ length: 5 }, (_, i) => <B key={i} s={[7, 0.3 * (i + 1), 0.55]} pos={[0, 0.15 * (i + 1), -0.2 - i * 0.55]} c={i % 2 ? '#c9cdd3' : '#bcc1c8'} />)}
       <B s={[7, 1.5, 1.2]} pos={[0, 0.75, -3.15]} c="#c9cdd3" />
       {[-2.4, -1.2, 0, 1.2, 2.4].map((x) => <group key={x} position={[x, 1.5, -3.35]}>
-        <Cyl r={0.22} h={2.6} pos={[0, 1.3, 0]} c="#6b7480" seg={12} /></group>)}
-      <B s={[6.4, 0.35, 0.6]} pos={[0, 4.25, -3.35]} c="#4d5560" />
+        <Cyl r={0.22} h={2.6} pos={[0, 1.3, 0]} c="#4d5560" seg={12} /></group>)}
+      <B s={[6.4, 0.35, 0.6]} pos={[0, 4.25, -3.35]} c="#3a414b" />
     </group>
   );
 };
@@ -363,7 +362,7 @@ export const Folder: React.FC<P> = ({ t, p }) => {
     <B s={[0.3, 0.05, 0.1]} pos={[-0.25, 0.025, -0.36]} c={color} />
     <B s={[0.8, 0.012, 0.56]} pos={[0, 0.056, 0]} c="#f5f1e6" />
     {ks >= 0.15 && <B s={[0.36, 0.008, 0.24]} pos={[0.1, 0.066, 0.05]} rot={[0, 0.2, 0]} c={RED} e={RED} ei={0.5} />}
-    {stamp !== undefined && ks < 1 && <group position={[0.1, 0.08 + down * 0.9, 0.05]} rotation={[0, 0.2, 0]}>
+    {stamp !== undefined && ks > -0.35 && ks < 1 && <group position={[0.1, 0.08 + (ks < 0 ? -ks / 0.35 * 0.5 + 0.4 : down * 0.4), 0.05]} rotation={[0, 0.2, 0]}>
       <B s={[0.38, 0.06, 0.26]} pos={[0, 0.03, 0]} c={RED} /><B s={[0.3, 0.1, 0.2]} pos={[0, 0.11, 0]} c="#3a2a1d" />
       <Cyl r={0.05} h={0.3} pos={[0, 0.3, 0]} c="#3a2a1d" /><mesh position={[0, 0.5, 0]}><sphereGeometry args={[0.1, 10, 8]} /><M c="#2a1e15" /></mesh></group>}
   </group>);

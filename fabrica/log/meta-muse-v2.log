@@ -15,3 +15,5 @@
 2026-11-27T01:02:17-03:00 [oido] oído: 98 % de coincidencia; dudosos: Muse, Signal (seguridad 29 %); diferencias: muse→mius; y muse→imius
 2026-11-27T01:02:22-03:00 [productor] voz lista (48,7 s). Oído: 98 %; dudosos Muse (se oye 'mius') y Signal (29 %). Pruebo variantes
 2026-11-27T01:05:34-03:00 [productor] probadas: Muse -> Miúz (59 %), Signal -> Sígnol (57 %). Regenero la voz (vuelta 1)
+2026-11-27T01:08:51-03:00 [oido] oído: 100 % de coincidencia; dudosos: Muse (seguridad 33 %), Signal (seguridad 40 %); diferencias: 
+2026-11-27T01:08:58-03:00 [productor] voz vuelta 1: 50,5 s, coincidencia 100 %. Muse (33 %) y Signal (40 %) se transcriben bien pero con seguridad baja. PRONUNCIACIÓN SIN RESOLVER: Muse (Miúz) y Signal (Sígnol), para que el dueño las escuche

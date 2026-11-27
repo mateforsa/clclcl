@@ -26,7 +26,7 @@ const chair = (x: number, z: number, rot = 0) => [
 
 export const BEATS: BeatSpec[] = [
   // 1. ¿El 12 de noviembre se te cortó el mail del trabajo? No era tu compu.  (sobre el hombro, empuje lento a la pantalla)
-  { id: 'b01', set: 'room', cam: { from: [1.25, 2.55, 4.0], to: [0.8, 2.4, 3.2], look: [0, 1.2, -0.6], lookTo: [-0.05, 1.25, -0.7], fov: 46 }, keywords: ['12', 'mail'],
+  { id: 'b01', set: 'room', cam: { from: [1.25, 2.55, 4.0], to: [0.8, 2.4, 3.2], look: [0, 1.2, -0.6], lookTo: [-0.05, 1.25, -0.7], fov: 46 }, keywords: ['12', 'noviembre', 'mail'],
     actors: [
       OFFICE,
       { type: 'workdesk', pos: [0, 0, -0.4], p: { mon: { off: 1.25 } } },
@@ -40,7 +40,7 @@ export const BEATS: BeatSpec[] = [
     overlays: [tag('¿SE TE CORTÓ EL MAIL DEL TRABAJO?', 0, { size: 38, y: 68 }), tag('12 DE NOVIEMBRE', '12', { color: SIG, size: 34, y: 74.5 })] },
 
   // 2. Se cayó el correo de empresas de Microsoft casi 24 horas.  (grúa alta que sube sobre el piso: las pantallas caen en cascada)
-  { id: 'b02', set: 'room', cam: { from: [0.3, 4.4, 4.6], to: [-0.2, 6.0, 5.0], look: [0, 0.5, -0.9], lookTo: [0, 0.4, -1.1], fov: 46 }, keywords: ['Microsoft', '24'],
+  { id: 'b02', set: 'room', cam: { from: [0.3, 4.4, 4.6], to: [-0.2, 6.0, 5.0], look: [0, 0.5, -0.9], lookTo: [0, 0.4, -1.1], fov: 46 }, keywords: ['empresas', 'Microsoft', '24'],
     actors: [
       OPEN,
       ...[-1.35, 0, 1.35].flatMap((x, i) => [0.6, -0.9, -2.4].map((z, j) => ({ type: 'workdesk', pos: [x, 0, z] as any, s: 0.72, p: { mon: { off: 0.25 + (i * 3 + j) * 0.17 }, mug: [AMBER, MINT, SIG][(i + j) % 3] } }))),
@@ -54,7 +54,7 @@ export const BEATS: BeatSpec[] = [
     overlays: [tag('CASI 24 HORAS SIN CORREO', 'casi', { color: SIG, size: 50, y: 69 })] },
 
   // 3. Y adentro, según memos que leyó Reuters, se prendió una alarma: Código Rojo.  (órbita baja alrededor de la carpeta; la sala pasa a rojo)
-  { id: 'b03', set: 'room', cam: { from: [-1.3, 2.7, 4.6], to: [1.0, 2.5, 4.1], look: [0, 1.0, -0.4], lookTo: [0.1, 1.1, -0.6], fov: 46 }, keywords: ['Reuters', 'Código', 'Rojo'],
+  { id: 'b03', set: 'room', cam: { from: [-1.3, 2.7, 4.6], to: [1.0, 2.5, 4.1], look: [0, 1.0, -0.4], lookTo: [0.1, 1.1, -0.6], fov: 46 }, keywords: ['adentro', 'Reuters', 'alarma', 'Código', 'Rojo'],
     actors: [
       OPS(2.78),
       { type: 'box', pos: [0, 0.5, 0.4], p: { size: [2.0, 1.0, 1.0], color: '#2a3446' } },
@@ -85,7 +85,7 @@ export const BEATS: BeatSpec[] = [
     overlays: [tag('NO FUE UN ATAQUE', 'ataque', { color: SIG, size: 52, y: 67.5 }), tag('JULIO → NOVIEMBRE: 4 MESES SIN VERLO', 'cuatro', { size: 34, y: 74.5 })] },
 
   // 5. Le sumaron el tráfico de Teams a esos servidores con menos capacidad, y se trabaron.  (lateral alto que corre junto a la cinta)
-  { id: 'b05', set: 'room', cam: { from: [-1.2, 3.4, 4.9], to: [-0.2, 3.1, 4.5], look: [0, 0.75, -0.2], lookTo: [0.2, 0.8, -0.4], fov: 46 }, keywords: ['Teams', 'capacidad'],
+  { id: 'b05', set: 'room', cam: { from: [-1.2, 3.4, 4.9], to: [-0.2, 3.1, 4.5], look: [0, 0.75, -0.2], lookTo: [0.2, 0.8, -0.4], fov: 46 }, keywords: ['Teams', 'servidores', 'capacidad', 'trabaron'],
     actors: [
       DC(4.17),
       { type: 'traffic', pos: [0, 0, 2.2], rot: [0, PI / 2, 0], p: { len: 2.95, gap: 0.55, speed: 0.9, extra: 1.26, jam: 4.17 } },
@@ -112,9 +112,9 @@ export const BEATS: BeatSpec[] = [
   // 7. La meta nueva es resolver una caída global en una hora.  (contrapicado que empuja hacia el cronómetro)
   { id: 'b07', set: 'room', cam: { from: [0.7, 0.9, 5.9], to: [0.1, 1.2, 4.9], look: [0, 1.5, 0], lookTo: [0, 1.7, 0], fov: 46 }, keywords: ['global', 'hora'],
     actors: [
-      OFFICE,
+      { type: 'stage', p: { kind: 'office', dim: true } },
       { type: 'box', pos: [0, 0.35, 0], p: { size: [1.3, 0.7, 0.8], color: SLATE } },
-      { type: 'stopwatch', pos: [0, 1.75, 0.05], s: 0.8, at: 'meta', enter: 'drop', p: { sweep: 0.28 } },
+      { type: 'stopwatch', pos: [0, 1.75, 0.05], s: 0.8, p: { sweep: 0.28 } },
       { type: 'ring', pos: [0, 0.03, 0], at: 'global', p: { r: 1.1, color: MINT } },
       { type: 'person', pos: [-1.3, 0, 0.6], rot: [0, 0.5, 0], p: { ...CO2, pose: 'idle' }, out: 'resolver' },
       { type: 'person', pos: [-1.3, 0, 0.6], rot: [0, 0.5, 0], at: 'resolver', enter: 'none', p: { ...CO2, pose: 'point' } },
@@ -149,7 +149,7 @@ export const BEATS: BeatSpec[] = [
       { type: 'invoice', pos: [0.45, 2.0, -0.3], rot: [0, -0.15, 0.04], s: 1.0, at: 'paga', bob: 0.03 },
       { type: 'ticket', pos: [0.25, 1.55, 0.7], s: 0.7, at: 'descuento', enter: 'pop' },
     ],
-    overlays: [tag('TU EMPRESA PUEDE RECLAMAR UN DESCUENTO', 'reclamar', { color: GREEN, size: 34, y: 70 })] },
+    overlays: [tag('TU EMPRESA PUEDE RECLAMAR UN DESCUENTO', 'empresa', { color: GREEN, size: 34, y: 70 })] },
 
   // 10. No llega solo: según guías especializadas, comprando directo se pide hasta el 31 de diciembre.  (se aleja del escritorio)
   { id: 'b10', set: 'room', cam: { from: [0.15, 1.95, 2.8], to: [-0.15, 2.35, 4.1], look: [0, 1.05, -0.3], lookTo: [0, 1.1, -0.3], fov: 46 }, keywords: ['especializadas', 'comprando', '31'],
@@ -164,7 +164,7 @@ export const BEATS: BeatSpec[] = [
     overlays: [tag('compra directa, según guías especializadas', 'según', { size: 28, y: 75.5, color: 'rgba(31,42,58,.92)' }), tag('HASTA EL 31/12', '31', { color: SIG, size: 60, y: 68.5 })] },
 
   // 11. Mandáselo al de sistemas de tu trabajo.  (vuelve el escritorio de b01; grúa que sube mientras el mail vuela)
-  { id: 'b11', set: 'room', cam: { from: [0.5, 1.8, 3.5], to: [0.35, 2.6, 4.2], look: [0.25, 1.3, -0.5], lookTo: [0.35, 1.25, -0.6], fov: 46 }, keywords: ['sistemas'],
+  { id: 'b11', set: 'room', cam: { from: [0.5, 1.8, 3.5], to: [0.35, 2.6, 4.2], look: [0.25, 1.3, -0.5], lookTo: [0.35, 1.25, -0.6], fov: 46 }, keywords: ['Mandáselo', 'sistemas'],
     actors: [
       OFFICE,
       { type: 'workdesk', pos: [-0.1, 0, -0.4], p: { mon: { mode: 'sent' } } },

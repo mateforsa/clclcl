@@ -74,8 +74,8 @@ export const Stage: React.FC<P> = ({ t, p }) => {
         <Flat s={[4.2, 40]} pos={[0, 0.02, 0]} rot={[-Math.PI / 2, 0, 0]} map={asph} />
         {[-2.1, 2.1].map((x) => <group key={x}>{Array.from({ length: 34 }, (_, i) => <B key={i} s={[0.32, 0.03, 0.6]} pos={[x, 0.03, 8 - i * 0.6 - ((off * 1) % 1.2)]} c={i % 2 ? RED : WHITE} />)}</group>)}
         {Array.from({ length: 14 }, (_, i) => <B key={i} s={[0.1, 0.025, 0.8]} pos={[0, 0.03, 8 - i * 1.8 - (scroll(1.8))]} c="#d8dade" />)}
-        <Flat s={[13, 11]} pos={[0, 3.6, -3.9]} map={sky} />
-        {[-1, 1].map((k) => <Flat key={k} s={[12, 11]} pos={[k * 4.4, 3.6, 0]} rot={[0, -k * Math.PI / 2, 0]} map={sky} />)}
+        <Flat s={[13, 11]} pos={[0, 3.6, -3.84]} map={sky} />
+        {[-1, 1].map((k) => <Flat key={k} s={[12, 11]} pos={[k * 4.34, 3.6, 0]} rot={[0, -k * Math.PI / 2, 0]} map={sky} />)}
         {/* torres de luz (silueta, cabezal abajo del cuadro de subtítulos) */}
         {[-3.4, 3.4].map((x) => <group key={x} position={[x, 0, -2.8]}>
           <Cyl r={0.06} h={2.8} pos={[0, 1.4, 0]} c="#1a1d22" />
@@ -95,8 +95,8 @@ export const Stage: React.FC<P> = ({ t, p }) => {
         {[-2.2, 2.2].map((x) => <group key={x}>
           {Array.from({ length: 20 }, (_, i) => <B key={i} s={[0.3, 0.55, 0.96]} pos={[x, 0.28, 8 - i * 1.0 - off]} c={i % 2 ? '#c9c4bb' : '#b3aea5'} />)}
           <B s={[0.32, 0.08, 20]} pos={[x, 0.58, -2]} c={RED} e={RED} ei={0.3} /></group>)}
-        <Flat s={[13, 11]} pos={[0, 3.6, -3.9]} map={city} />
-        {[-1, 1].map((k) => <Flat key={k} s={[12, 11]} pos={[k * 4.4, 3.6, 0]} rot={[0, -k * Math.PI / 2, 0]} map={city} />)}
+        <Flat s={[13, 11]} pos={[0, 3.6, -3.84]} map={city} />
+        {[-1, 1].map((k) => <Flat key={k} s={[12, 11]} pos={[k * 4.34, 3.6, 0]} rot={[0, -k * Math.PI / 2, 0]} map={city} />)}
       </group>
     );
   }
@@ -287,13 +287,14 @@ export const TimingTower: React.FC<P> = ({ t, tt, p }) => {
         let y = -i * rh;
         if (swap && i === swap.a) y = lerp(-swap.a * rh, -swap.b * rh, k);
         if (swap && i === swap.b) y = lerp(-swap.b * rh, -swap.a * rh, k);
-        const flash = r.flashAt !== undefined && t >= r.flashAt;
+        const flash = r.flashAt !== undefined && t >= r.flashAt; const hi = r.hi || (r.hiAt !== undefined && t >= r.hiAt);
         return (
           <group key={i}>
             <group position={[-w / 2 + 0.3, -i * rh, 0.01]}><B s={[0.5, rh - 0.05, 0.04]} pos={[0, 0, -0.03]} c="#0d0e11" /><Label t={t} tt={tt} p={{ text: r.pos, w: 0.5, h: rh - 0.08, color: AMBER, size: 0.72, weight: 900, depth: 0 }} /></group>
-            <group position={[0.3, y, r.hi ? 0.06 : 0]}>
-              <B s={[w - 0.62, rh - 0.05, 0.04]} pos={[0, 0, -0.02]} c={r.hi ? CELD : flash ? '#7a1a12' : '#0d0e11'} />
-              <group position={[0, 0, 0.01]}><Label t={t} tt={tt} p={{ text: r.name, w: w - 0.8, h: rh - 0.08, color: '#ffffff', size: 0.6, weight: 800, depth: 0 }} /></group>
+            <group position={[0.3, y, hi ? 0.06 : 0]}>
+              <B s={[w - 0.62, rh - 0.05, 0.04]} pos={[0, 0, -0.02]} c={hi ? CELD : flash ? '#7a1a12' : '#0d0e11'} />
+              {flash && r.tag && <group position={[(w - 0.62) / 2 - 0.42, 0, 0.04]}><B s={[0.8, rh - 0.1, 0.03]} c={RED} /><group position={[0, 0, 0.02]}><Label t={t} tt={tt} p={{ text: r.tag, w: 0.74, h: rh - 0.14, color: '#fff', size: 0.72, weight: 900, depth: 0 }} /></group></group>}
+              <group position={[flash && r.tag ? -0.4 : 0, 0, 0.01]}><Label t={t} tt={tt} p={{ text: r.name, w: flash && r.tag ? w - 1.6 : w - 0.8, h: rh - 0.08, color: '#ffffff', size: 0.6, weight: 800, depth: 0 }} /></group>
             </group>
           </group>);
       })}

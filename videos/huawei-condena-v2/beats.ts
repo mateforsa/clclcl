@@ -47,7 +47,7 @@ export const BEATS: BeatSpec[] = [
       { type: 'person', pos: [1.4, 0, 0.6], rot: [0, -1.1, 0], at: 0.35, enter: 'none', p: { ...COP, pose: 'walk' }, move: { to: [0.95, 0, 0.45], at: 0.35, dur: 0.8 }, out: 'Meng' },
       { type: 'person', pos: [0.95, 0, 0.45], rot: [0, -1.1, 0], at: 'Meng', enter: 'none', p: { ...COP, pose: 'idle' } },
       { type: 'ring', pos: [0, 0.03, 0], at: 'Meng', p: { r: 0.55, color: RED } },
-      { type: 'hbox', pos: [-0.75, 0, -1.0], rot: [0, 0.35, 0], s: 0.6, at: 'Huawei', p: {} },
+      { type: 'hbox', pos: [-0.4, 0, -1.25], rot: [0, 0.25, 0], s: 0.6, at: 'Huawei', p: {} },
     ],
     overlays: [
       tag('Meng Wanzhou', 'Meng', { size: 54, y: 67 }),
@@ -55,7 +55,7 @@ export const BEATS: BeatSpec[] = [
     ] },
 
   // 3. Casi ocho años después, un jurado de Brooklyn declara culpable a su empresa en 10 de 12 cargos.  (cenital que gira y sube sobre la mesa del jurado)
-  { id: 'b03', set: 'room', cam: { from: [0.8, 3.3, 4.6], to: [-0.6, 3.7, 4.2], look: [0, 0.3, -0.3], lookTo: [0, 0.35, -0.4], fov: 46, shift: -0.03 }, keywords: ['Brooklyn', 'declara', 'culpable', '10', '12'],
+  { id: 'b03', set: 'room', cam: { from: [0.8, 3.3, 4.6], to: [-0.6, 3.7, 4.2], look: [0, 0.3, -0.3], lookTo: [0, 0.35, -0.4], fov: 46, shift: 0.03 }, keywords: ['Brooklyn', 'declara', 'culpable', '10', '12'],
     actors: [
       JURY,
       { type: 'jury', pos: [0, 0, 0], p: { flip: 3.22, step: 0.11, glow: 4.71 } },
@@ -93,7 +93,7 @@ export const BEATS: BeatSpec[] = [
       { type: 'paper', pos: [0.75, 1.0, 0.45], rot: [-Math.PI / 2, 0, 0.2], s: 0.7, at: 'acuerdo', p: { sign: 0.6, lines: 6 } },
       { type: 'plane', pos: [0, 1.0, 0], at: 'volvió', enter: 'none', p: { from: [0.56, -0.44], to: [-0.8, -0.3], at: 1.14, dur: 1.1, h: 0.6 } },
       { type: 'ring', pos: [-0.8, 0.99, -0.3], at: 'China', p: { r: 0.22, color: AMBER } },
-      { type: 'hbox', pos: [1.25, 0.97, -0.05], rot: [0, -0.2, 0], s: 0.5, at: 'empresa', p: { tape: 3.55 } },
+      { type: 'hbox', pos: [1.05, 0.97, 0.2], rot: [0, -0.2, 0], s: 0.5, at: 'empresa', p: { tape: 3.55 } },
     ],
     overlays: [
       tag('2021: acuerdo y vuelta a China', 'acuerdo', { size: 42, y: 67 }),
@@ -108,7 +108,7 @@ export const BEATS: BeatSpec[] = [
       { type: 'chip', pos: [0.55, 0.96, -0.3], s: 1.2, at: 'chips', p: { s: 0.55 }, move: { to: [0.7, 0.96, 0.5], at: 'más', dur: 0.6 } },
       { type: 'cross', pos: [0.7, 1.55, 0.55], at: 'avanzados', p: { size: 0.45, color: RED } },
       { type: 'cross', pos: [-0.35, 2.0, 0.2], at: 'Google', p: { size: 0.5, color: RED } },
-      { type: 'hbox', pos: [-1.0, 0.96, 0.55], rot: [0, 0.4, 0], s: 0.45, p: {} },
+      { type: 'hbox', pos: [-0.8, 0.96, 0.6], rot: [0, 0.4, 0], s: 0.45, p: {} },
     ],
     overlays: [
       tag('2019: sin apps de Google', 'Google', { size: 42, y: 67 }),
@@ -158,11 +158,11 @@ export const BEATS: BeatSpec[] = [
     actors: [
       CELL,
       { type: 'cell', pos: [-0.9, 0, -0.8], s: 0.9, p: { w: 2.0 } },
-      { type: 'hbox', pos: [0.95, 0, -0.9], rot: [0, -0.3, 0], s: 0.75, at: 'empresa', p: {} },
+      { type: 'hbox', pos: [1.0, 0, -1.1], rot: [0, -0.3, 0], s: 0.75, at: 'empresa', p: {} },
       { type: 'cross', pos: [-0.9, 1.3, -0.6], at: 'presa', p: { size: 0.55, color: RED } },
       { type: 'sack', pos: [0.15, 0, 0.25], at: 'multas', enter: 'drop', p: {} },
       { type: 'sack', pos: [0.6, 0, 0.6], s: 0.85, at: 'multas', enter: 'drop', p: {} },
-      { type: 'crate', pos: [1.3, 0, 0.25], rot: [0, -0.4, 0], at: 'decomisos', enter: 'drop', p: {} },
+      { type: 'crate', pos: [0.9, 0, 0.75], rot: [0, -0.4, 0], at: 'decomisos', enter: 'drop', p: {} },
     ],
     overlays: [
       tag('Una empresa no va presa', 'presa', { size: 44, y: 67 }),
@@ -203,7 +203,7 @@ export const BEATS: BeatSpec[] = [
       { type: 'hbox', pos: [-0.31, 0.47, -0.62], s: 0.5, p: {} },
       { type: 'box', pos: [0.75, 0.45, -1.7], p: { size: [1.3, 0.9, 0.7], color: '#26384d' } },
       { type: 'deskcal', pos: [0.75, 0.9, -1.6], rot: [0, -0.15, 0], s: 0.8, p: { top: 'SEP 2027', day: '14' } },
-      { type: 'clock', pos: [-1.7, 1.35, -3.45], s: 0.8, p: {} },
+      { type: 'clock', pos: [-1.25, 1.15, -3.45], s: 0.7, p: {} },
       { type: 'ring', pos: [-0.31, 0.03, -0.3], at: 'día', p: { r: 0.55, color: AMBER } },
     ],
     overlays: [
