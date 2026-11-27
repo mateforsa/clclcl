@@ -756,7 +756,7 @@
     "https://vandal.elespanol.com/noticia-amp/1350767217/25-anos-del-nacimiento-de-dreamcast-una-consola-de-corta-vida-que-dejo-un-gran-legado/"
    ],
    "puntaje": 7.8,
-   "etapa": "listo",
+   "etapa": "publicado",
    "creado": "2026-11-26T20:36:38-03:00",
    "historial": [
     {
@@ -812,9 +812,14 @@
      "etapa": "listo",
      "cuando": "2026-11-26T22:37:48-03:00",
      "nota": "aprobado por el dueño desde esperando_ok_final"
+    },
+    {
+     "etapa": "publicado",
+     "cuando": "2026-11-27T02:44:16-03:00",
+     "nota": "ya publicado como reel de prueba (DgOlOH7BUFP); el estado no se había actualizado"
     }
    ],
-   "nota": "",
+   "nota": "ya publicado como reel de prueba (DgOlOH7BUFP); el estado no se había actualizado",
    "caracteres_voz": 853,
    "link_prueba": "https://www.instagram.com/reel/DgOlOH7BUFP/"
   },
@@ -1522,7 +1527,24 @@
    "nota": "reel de prueba (versión rehecha a pedido del dueño)",
    "caracteres_voz": 836,
    "link_prueba": "https://www.instagram.com/reel/DgO8DOFx7fH/"
+  },
+  "rockstar-sindicato-no": {
+   "titulo": "Rockstar: 3 de cada 4 empleados votaron NO al sindicato en la semana de GTA VI",
+   "tema": "videojuegos",
+   "fuentes": [
+    "https://kotaku.com/rockstar-games-union-vote-fails-as-75-percent-of-devs-vote-no-2001000621",
+    "https://www.engadget.com/2329177/workers-gta-6-studio-rockstar-games-vote-against-union-recognition/"
+   ],
+   "puntaje": 7.3,
+   "etapa": "idea",
+   "creado": "2026-11-27T02:43:16-03:00",
+   "historial": [
+    {
+     "etapa": "idea",
+     "cuando": "2026-11-27T02:43:16-03:00"
+    }
+   ]
   }
  },
- "actualizado": "2026-11-27T02:34:17-03:00"
+ "actualizado": "2026-11-27T02:44:16-03:00"
 }
