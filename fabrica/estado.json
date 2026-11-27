@@ -2065,7 +2065,24 @@
    ],
    "nota": "",
    "caracteres_voz": 1065
+  },
+  "libertadores-plata-final": {
+   "titulo": "Final de la Libertadores: dos jugadores de Palmeiras valen más que todo Estudiantes",
+   "tema": "fútbol",
+   "fuentes": [
+    "https://eleconomista.com.ar/deportes/diferencia-valor-planteles-estudiantes-palmeiras-final-libertadores-2026-n99987",
+    "https://www.infobae.com/deportes/2026/04/07/comienza-la-fase-de-grupos-de-la-copa-libertadores-y-sudamericana-los-millonarios-premios-que-reparten/"
+   ],
+   "puntaje": 8.3,
+   "etapa": "idea",
+   "creado": "2026-11-27T18:15:26-03:00",
+   "historial": [
+    {
+     "etapa": "idea",
+     "cuando": "2026-11-27T18:15:26-03:00"
+    }
+   ]
   }
  },
- "actualizado": "2026-11-27T18:00:04-03:00"
+ "actualizado": "2026-11-27T18:15:26-03:00"
 }
