@@ -41,5 +41,8 @@ quedan activas y agrandadas; si las dos son largas, marcá una como palabra clav
 Antes de renderizar, recorré cada plano con stills cada 3 frames en la franja de subtítulos (y ≈ 290–390 px): ningún objeto claro
 (cohetes, nubes, banderas, torres, carteles) puede pasar detrás de las palabras.
 
+No inventes carteles 3D con datos que el guion no dice (número de puerta, nombres de lugares, cifras): si hace falta un cartel, que
+repita algo de "## Placas por plano" o sea genérico sin datos.
+
 Si volvés por un rechazo del revisor, leé el motivo en `fabrica/log/<slug>.log`, arreglá solo eso y repetí desde el paso que corresponda.
 No marques nada como listo: eso lo decide el revisor y después el dueño.

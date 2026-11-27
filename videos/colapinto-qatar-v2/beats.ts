@@ -195,7 +195,7 @@ export const BEATS: BeatSpec[] = [
       GAR,
       { type: 'timing', pos: [0.05, 1.75, -0.6], p: { w: 2.2, rh: 0.46, rows: [
         { pos: '1', name: 'TU NOMBRE', hiAt: 1.42 }, { pos: '2', name: 'TU NOMBRE', hiAt: 1.6 }, { pos: '3', name: 'TU NOMBRE', hiAt: 1.78 }] } },
-      { type: 'f1', pos: [0, 0, 1.3], rot: [0, 0.2, 0], s: 0.45, at: 'resultado', enter: 'drop', p: ME },
+      { type: 'f1', pos: [0, 0, 2.1], rot: [0, 0.2, 0], s: 0.45, at: 'resultado', p: ME },
     ],
     overlays: [placa('LOS MÁS CERCANOS, NOMBRADOS', 'nombrados', GREEN)] },
 ];

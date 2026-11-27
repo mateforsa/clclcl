@@ -1306,9 +1306,14 @@
      "etapa": "render",
      "cuando": "2026-11-27T01:12:55-03:00",
      "nota": ""
+    },
+    {
+     "etapa": "render",
+     "cuando": "2026-11-27T01:30:52-03:00",
+     "nota": "devuelto por el revisor: lámpara detrás de subtítulos en plano 5 (19,5-24 s), pared clara detrás de subtítulos en plano 10 (44,5-46,2 s), cartel PUERTA 34 se lee como dato del caso (plano 1 y portada)"
     }
    ],
-   "nota": "",
+   "nota": "devuelto por el revisor: lámpara detrás de subtítulos en plano 5 (19,5-24 s), pared clara detrás de subtítulos en plano 10 (44,5-46,2 s), cartel PUERTA 34 se lee como dato del caso (plano 1 y portada)",
    "caracteres_voz": 880
   },
   "meta-muse-v2": {
@@ -1405,5 +1410,5 @@
    "caracteres_voz": 836
   }
  },
- "actualizado": "2026-11-27T01:23:49-03:00"
+ "actualizado": "2026-11-27T01:30:52-03:00"
 }
