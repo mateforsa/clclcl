@@ -31,20 +31,21 @@ export const Stage: React.FC<P> = ({ t, p }) => {
   const asph = useTex((g, W, H) => {
     g.fillStyle = '#26282d'; g.fillRect(0, 0, W, H); const r = seedR(7);
     for (let i = 0; i < 2400; i++) { g.fillStyle = ['#2f3238', '#1f2125', '#383b42'][i % 3]; g.fillRect(r() * W, r() * H, 3, 3); }
-  }, 512, 512, 'fp1asph');
+  }, 512, 512, 'fp2asph');
   const gravel = useTex((g, W, H) => {
     g.fillStyle = GRAVEL; g.fillRect(0, 0, W, H); const r = seedR(19);
     for (let i = 0; i < 3000; i++) { g.fillStyle = ['#5e5a56', '#7d7873', '#545150'][i % 3]; g.fillRect(r() * W, r() * H, 3, 3); }
-  }, 512, 512, 'fp1grav');
+  }, 512, 512, 'fp2grav');
   const sky = useTex((g, W, H) => {
     const gr = g.createLinearGradient(0, 0, 0, H);
-    gr.addColorStop(0, '#05040f'); gr.addColorStop(0.55, '#0d0b24'); gr.addColorStop(0.74, '#2b1645'); gr.addColorStop(0.84, '#7a2a5c'); gr.addColorStop(0.92, '#d2574a'); gr.addColorStop(1, '#f08a4a');
+    gr.addColorStop(0, '#020208'); gr.addColorStop(0.6, '#05071a'); gr.addColorStop(0.8, '#0c1430'); gr.addColorStop(0.9, '#1a2550'); gr.addColorStop(1, '#2a3566');
     g.fillStyle = gr; g.fillRect(0, 0, W, H);
-    // tribuna principal: silueta con luces chicas, solo en la franja baja
-    g.fillStyle = '#120d1c'; g.fillRect(W * 0.02, H * 0.86, W * 0.62, H * 0.06); g.fillRect(W * 0.06, H * 0.83, W * 0.5, H * 0.03);
-    for (let i = 0; i < 40; i++) { g.fillStyle = i % 4 ? '#ffcf8a' : '#ffffff'; g.fillRect(W * 0.05 + i * 7.6, H * 0.87 + (i % 3) * 5, 3, 2); }
-    g.fillStyle = '#1a1320'; g.beginPath(); g.moveTo(W * 0.62, H); for (let x = W * 0.62; x <= W; x += 12) g.lineTo(x, H * 0.9 - Math.sin(x / 40) * 8); g.lineTo(W, H); g.fill();
-  }, 512, 512, 'fp1sky');
+    // tribuna de noche: silueta con luces chicas, solo en la franja baja; torres de focos bajas
+    g.fillStyle = '#0a0b16'; g.fillRect(W * 0.02, H * 0.86, W * 0.62, H * 0.06); g.fillRect(W * 0.06, H * 0.83, W * 0.5, H * 0.03);
+    for (let i = 0; i < 40; i++) { g.fillStyle = i % 4 ? '#8fa6d8' : '#ffffff'; g.fillRect(W * 0.05 + i * 7.6, H * 0.87 + (i % 3) * 5, 3, 2); }
+    for (let i = 0; i < 6; i++) { const x = W * (0.1 + i * 0.16); g.fillStyle = '#c9d6ff'; g.fillRect(x, H * 0.8, 10, 4); g.fillStyle = '#141828'; g.fillRect(x + 4, H * 0.81, 2, H * 0.05); }
+    g.fillStyle = '#0c0e1a'; g.beginPath(); g.moveTo(W * 0.62, H); for (let x = W * 0.62; x <= W; x += 12) g.lineTo(x, H * 0.9 - Math.sin(x / 40) * 8); g.lineTo(W, H); g.fill();
+  }, 512, 512, 'fp2sky');
   const screens = useTex((g, W, H) => {
     g.fillStyle = '#060a12'; g.fillRect(0, 0, W, H); const r = seedR(23);
     // pantallas de telemetría: solo en la mitad baja, con líneas cian tenues
@@ -54,7 +55,7 @@ export const Stage: React.FC<P> = ({ t, p }) => {
       g.strokeStyle = i % 2 ? '#2a8f97' : '#9a3a6a'; g.lineWidth = 2; g.beginPath(); g.moveTo(x + 6, y + h * 0.7);
       for (let k = 0; k < 20; k++) g.lineTo(x + 6 + k * 5, y + h * (0.25 + r() * 0.5)); g.stroke();
     }
-  }, 512, 512, 'fp1screens');
+  }, 512, 512, 'fp2screens');
   const pitwall = useTex((g, W, H) => {
     g.fillStyle = '#0a0c11'; g.fillRect(0, 0, W, H);
     // garajes: aberturas con luz cálida en la franja baja
@@ -63,11 +64,11 @@ export const Stage: React.FC<P> = ({ t, p }) => {
       g.fillStyle = '#2a2620'; g.fillRect(x, y, w, h); g.fillStyle = '#6b5434'; g.fillRect(x + 4, y + 6, w - 8, h - 6);
       g.fillStyle = '#1a1c22'; g.fillRect(x - 6, y - 10, w + 12, 8);
     }
-  }, 512, 512, 'fp1pit');
+  }, 512, 512, 'fp2pit');
   const press = useTex((g, W, H) => {
     g.fillStyle = '#070a18'; g.fillRect(0, 0, W, H);
     for (let i = 0; i < 8; i++) for (let j = 0; j < 4; j++) { g.fillStyle = (i + j) % 2 ? '#0d1430' : '#0a1026'; g.fillRect(i * 64, H * 0.6 + j * 52, 64, 52); }
-  }, 512, 512, 'fp1press');
+  }, 512, 512, 'fp2press');
   const scroll = (len: number) => ((t * speed) % len + len) % len;
   const walls = (map: THREE.Texture) => (<>
     <Flat s={[13, 11]} pos={[0, 3.6, -3.7]} map={map} />
@@ -79,7 +80,7 @@ export const Stage: React.FC<P> = ({ t, p }) => {
     return (
       <group>
         <pointLight position={[0, 4, 3]} intensity={30} color="#ffe9d6" distance={14} />
-        <pointLight position={[-3, 1.6, -2]} intensity={18} color="#ff7a5a" distance={10} />
+        <pointLight position={[-3, 1.6, -2]} intensity={16} color="#7f9cff" distance={10} />
         <Flat s={[40, 40]} pos={[0, 0.015, 0]} rot={[-Math.PI / 2, 0, 0]} map={gravel} />
         <Flat s={[4.4, 40]} pos={[0, 0.02, 0]} rot={[-Math.PI / 2, 0, 0]} map={asph} />
         {[-2.2, 2.2].map((x) => <group key={x}>{Array.from({ length: 34 }, (_, i) => <B key={i} s={[0.3, 0.03, 0.6]} pos={[x, 0.03, 8 - i * 0.6 - (off % 1.2)]} c={i % 2 ? KERB : WHITE} />)}</group>)}
@@ -263,7 +264,7 @@ export const Tyre: React.FC<P> = ({ t, p }) => {
   const { r = 0.6, w = 0.45, band = AMBER, roll = 0, wear = 0, wearAt = 0, wearDur = 1.6 } = p;
   const k = wear * eio((t - wearAt) / wearDur);
   const rr = r * (1 - 0.12 * k);
-  const tread = useTex((g, W, H) => { g.fillStyle = '#1a1a1c'; g.fillRect(0, 0, W, H); g.fillStyle = '#2c2c30'; for (let i = 0; i < 24; i++) g.fillRect((i * W) / 24, 0, W / 60, H); }, 256, 64, 'fp1tread');
+  const tread = useTex((g, W, H) => { g.fillStyle = '#1a1a1c'; g.fillRect(0, 0, W, H); g.fillStyle = '#2c2c30'; for (let i = 0; i < 24; i++) g.fillRect((i * W) / 24, 0, W / 60, H); }, 256, 64, 'fp2tread');
   return (
     <group rotation={[t * roll, 0, 0]}>
       <mesh rotation={[0, 0, Math.PI / 2]}><cylinderGeometry args={[rr, rr, w, 22]} /><meshStandardMaterial color={k > 0.5 ? '#3a2a24' : '#1d1d20'} map={tread} flatShading /></mesh>

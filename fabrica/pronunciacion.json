@@ -606,5 +606,17 @@
    "Briatoré,",
    "Briatórre,"
   ]
+ },
+ "McLaren": {
+  "dicho": "Mclaren",
+  "estado": "probada",
+  "puntaje": 0.88,
+  "variantes": [
+   "Mac Láren",
+   "Mclaren",
+   "Mac Laren",
+   "Maclárem",
+   "McLaren"
+  ]
  }
 }
