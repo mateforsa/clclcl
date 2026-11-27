@@ -1,2 +1,8 @@
 2026-11-27T10:48:21-03:00 [fabrica] idea creada: Kioscos: cerraron más de 53.000 en tres años, casi uno de cada dos
 2026-11-27T10:48:21-03:00 [editor] elegido: sorpresa 8, vigencia 7, compartible 9, 3D 9 = 8.3 porque es economía con un número concreto que todos ven en su cuadra (lo más compartido del canal: argentina-recesion, 80 shares), se cuenta con persianas de kioscos low-poly y un alfajor, y no vence mañana. Decir 'más de 53.000' y 'quedan menos de 59.000' (dato de la cámara UKRA); la base difiere entre fuentes (112.000 Ámbito, más de 120.000 Infobae). Corrida 10:34.
+2026-11-27T10:53:25-03:00 [guionista] guion escrito: 190 palabras, apertura tipo G64 fracción (casi uno de cada dos kioscos cerró en tres años) con contradicción del alfajor en el plano 3, cierre tipo playbook 4 n.º 69 pregunta a los de adentro (si tenés o tuviste un kiosco, contá qué es lo que más sale hoy)
+2026-11-27T10:53:25-03:00 [fabrica] etapa -> guion
+2026-11-27T10:55:12-03:00 [verificador] APROBADO: 26 datos, todos con fuente (Infobae 26/11/2026 y Ámbito 26/11/2026; UCA 61,1% y 1.171 asalariados confirmados también en el informe ODSA-UCA). Observaciones no bloqueantes: duración estimada 65-70 s, al límite (si pasa de 70 s recortar plano 13); 1944 solo lo da Infobae; placa 11 pone «REEMPLAZO DE COMIDAS» entre comillas aunque Infobae lo parafrasea, no es cita textual del sector; el 85/10 millones se atribuye en placa, no en voz.
+2026-11-27T10:55:12-03:00 [fabrica] etapa -> verificado
+2026-11-27T10:55:12-03:00 [fabrica] etapa -> esperando_ok_voz
+2026-11-27T10:55:57-03:00 [fabrica] voz SIN OK del dueño (regla voz_sin_ok): ~1015 caracteres
