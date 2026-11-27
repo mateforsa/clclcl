@@ -2118,14 +2118,20 @@
     "https://www.infobae.com/deportes/2026/11/27/carlos-sainz-se-enojo-por-una-maniobra-de-franco-colapinto-lo-critico-y-advirtio-quizas-tenga-que-hablar-con-el/"
    ],
    "puntaje": null,
-   "etapa": "idea",
+   "etapa": "guion",
    "creado": "2026-11-27T18:28:52-03:00",
    "historial": [
     {
      "etapa": "idea",
      "cuando": "2026-11-27T18:28:52-03:00"
+    },
+    {
+     "etapa": "guion",
+     "cuando": "2026-11-27T18:35:58-03:00",
+     "nota": ""
     }
-   ]
+   ],
+   "nota": ""
   },
   "fp2-qatar-general": {
    "titulo": "FP2 de Qatar: dos banderas rojas y Mercedes otra vez 1-2",
@@ -2166,5 +2172,5 @@
    "nota": ""
   }
  },
- "actualizado": "2026-11-27T18:35:56-03:00"
+ "actualizado": "2026-11-27T18:35:58-03:00"
 }
