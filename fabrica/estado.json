@@ -1611,7 +1611,24 @@
    ],
    "nota": "",
    "caracteres_voz": 1022
+  },
+  "kioscos-53000": {
+   "titulo": "Kioscos: cerraron más de 53.000 en tres años, casi uno de cada dos",
+   "tema": "economía argentina",
+   "fuentes": [
+    "https://www.ambito.com/economia/crisis-el-comercio-reportan-53000-kioscos-cerrados-que-asumio-javier-milei-n6349905",
+    "https://www.infobae.com/economia/2026/11/26/cerraron-mas-de-50000-kioscos-en-los-ultimos-tres-anos-y-el-sector-perdio-casi-la-mitad-de-sus-locales/"
+   ],
+   "puntaje": 8.3,
+   "etapa": "idea",
+   "creado": "2026-11-27T10:48:21-03:00",
+   "historial": [
+    {
+     "etapa": "idea",
+     "cuando": "2026-11-27T10:48:21-03:00"
+    }
+   ]
   }
  },
- "actualizado": "2026-11-27T10:13:37-03:00"
+ "actualizado": "2026-11-27T10:48:31-03:00"
 }
