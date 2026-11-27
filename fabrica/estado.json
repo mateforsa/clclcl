@@ -1422,7 +1422,7 @@
    "tema": "",
    "fuentes": [],
    "puntaje": null,
-   "etapa": "revision",
+   "etapa": "render",
    "creado": "2026-11-26T23:19:22-03:00",
    "rehace": "colapinto-qatar",
    "publicar_prueba_al_terminar": true,
@@ -1481,11 +1481,16 @@
      "etapa": "revision",
      "cuando": "2026-11-27T02:15:44-03:00",
      "nota": ""
+    },
+    {
+     "etapa": "render",
+     "cuando": "2026-11-27T02:19:50-03:00",
+     "nota": "devuelto por el revisor (3a pasada): el cartel 'OTRO PILOTO +10 s' del plano 8 baja hasta 1560 px (zona segura hasta 1500) en 25,77-27,23 s; subirlo para que el borde inferior quede en 1500 px o más arriba. Lo demás PASA"
     }
    ],
-   "nota": "",
+   "nota": "devuelto por el revisor (3a pasada): el cartel 'OTRO PILOTO +10 s' del plano 8 baja hasta 1560 px (zona segura hasta 1500) en 25,77-27,23 s; subirlo para que el borde inferior quede en 1500 px o más arriba. Lo demás PASA",
    "caracteres_voz": 836
   }
  },
- "actualizado": "2026-11-27T02:15:44-03:00"
+ "actualizado": "2026-11-27T02:19:50-03:00"
 }
