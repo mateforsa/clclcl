@@ -28,3 +28,5 @@
 2026-11-27T01:51:37-03:00 [fabrica] etapa -> render (devuelto por el revisor: uniones de subtítulos bajo 14 px ('puntos|del' 13,89 px a 36,53 s con dos activas; 'se|acerquen' 13,98 px a 51,33-51,73 s): marcar una como palabra clave en beats.ts; y torre de tiempos del plano 8 (26-30 s) pone a OTRO PILOTO en P7 tras la sanción, posición que el guion no da)
 2026-11-27T01:52:31-03:00 [productor] devuelto: marco 'puntos' (plano 10), 'acerquen' (plano 16) y 'Clasifica' (plano 12) como palabras clave; torre del plano 8: tras la sanción la fila de OTRO PILOTO pasa a '· · ·' sin +10 s. Mido uniones
 2026-11-27T01:58:47-03:00 [productor] uniones medidas en todos los frames de los planos 8, 10, 12 y 16: puntos|del 31 px (f1096), se|acerquen 32 px (f1546), Clasifica|el 34 px; lo menor que queda (11-13 px) es dentro de una palabra ('11°.', 'tres'). Torre del plano 8: P7 queda '· · ·'. Re-render
+2026-11-27T02:04:35-03:00 [productor] render listo: out/colapinto-qatar-v2/colapinto-qatar-v2.mp4, 54,5 s (1080x1920, 30 fps, -14,6 LUFS); arreglados uniones de subtítulos y torre del plano 8
+2026-11-27T02:04:35-03:00 [fabrica] etapa -> revision
