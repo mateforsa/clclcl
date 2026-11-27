@@ -23,3 +23,5 @@
 2026-11-26T22:05:00-03:00 [productor] portada lista: instagram/portadas/hoy-hace-dreamcast.jpg (kicker HOY HACE 28 AÑOS, como la entrega 1)
 2026-11-26T22:08:23-03:00 [productor] render listo: out/hoy-hace-dreamcast/hoy-hace-dreamcast.mp4, 53 s (52,9 s; 1080x1920, 30 fps, -14,3 LUFS); hojas qc revisadas sin cuadros rotos
 2026-11-26T22:08:23-03:00 [fabrica] etapa -> revision
+2026-11-26T22:12:09-03:00 [revisor] APROBADO: 1080x1920 30fps h264+aac, 52,877 s (=timing.json); -14,3 LUFS, pico -4,3 dBTP, sin silencios/negros/congelados; 12 planos con camara en movimiento; subtitulos = parrafos.json, huecos min 14,4 px (de|marzo 37,43 s, verificado a ojo ~20 px) y modelo min 15,7 (por|internet. 4,53 s); placas = guion (4 corridas de palabra avisadas, carteles 3D sin datos nuevos, sin logos); portada 1080x1920 legible; 5 etiquetas. Obs: flecha de la placa del plano 10 sale fina (glifo de reserva), se lee.
+2026-11-26T22:12:09-03:00 [fabrica] etapa -> esperando_ok_final
