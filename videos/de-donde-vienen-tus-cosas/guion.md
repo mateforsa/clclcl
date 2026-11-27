@@ -86,7 +86,7 @@ dueño 14:50", y cada "Ojo" de esa sección se respetó.
 | Alrededor del 80% de los establecimientos productivos están en Río Grande y el resto en Ushuaia; régimen de la Ley 19.640 | 3: "Sobre todo, de Río Grande" | [Ministerio de Economía, cadenas de valor de Tierra del Fuego](https://www.argentina.gob.ar/sites/default/files/tierra_del_fuego_-_cadenas_de_valor.pdf), [iProfesional](https://www.iprofesional.com/negocios/295913-industria-consumo-empresa-Tierra-del-Fuego-como-nacio-el-polo-electronico-y-que-se-fabrica-hoy) (ley 19.640 de 1972) |
 | Aluar es la única productora nacional de aluminio primario; su planta de Puerto Madryn tiene capacidad para 460.000 toneladas por año | 5 y 6: "una sola fábrica del país lo hace nuevo, en Puerto Madryn" / "Hasta 460.000 toneladas por año" | [Ministerio de Economía, informe de aluminio 2024](https://www.argentina.gob.ar/sites/default/files/aluminio_2024.pdf) ("Aluar, única productora nacional, con una capacidad instalada de 460 mil toneladas"; "Puerto Madryn... capacidad de producción de 460 mil toneladas por año"), [Wikipedia, Aluar](https://es.wikipedia.org/wiki/Aluar) |
 | El principal destino local de los semielaborados de aluminio son los envases, y dentro de ellos se destaca la chapa para latas | 5: "La lata de gaseosa es de aluminio" | [Ministerio de Economía, informe de aluminio 2024](https://www.argentina.gob.ar/sites/default/files/aluminio_2024.pdf) ("El principal destino son envases. Dentro de ese rubro se destaca por su importancia, la chapa para latas") |
-| Arcor nació en Arroyito, Córdoba, en 1951; el nombre une las primeras letras de Arroyito y Córdoba | 7 y 8: "Arroyito, en Córdoba" / "Ahí nació Arcor en 1951, por ARroyito y CÓRdoba" | [Wikipedia, Arcor](https://es.wikipedia.org/wiki/Arcor) ("Fue fundada en 1951 en la ciudad Arroyito"; "Arcor es la conjunción de las primeras letras del lugar que lo vio nacer, Arroyito y Córdoba"), [La Nación, 17/08/2024](https://www.lanacion.com.ar/economia/comercio-exterior/cuales-son-las-claves-de-la-avanzada-dulce-de-la-argentina-en-el-mundo-nid17082024/) |
+| Arcor nació en Arroyito, Córdoba, en 1951; el nombre une las primeras letras de Arroyito y Córdoba | 7 y 8: "Arroyito, en Córdoba" / "Ahí nació Arcor en 1951, por ARroyito y CÓRdoba" | [Wikipedia, Arcor](https://es.wikipedia.org/wiki/Arcor) ("Fue fundada en 1951 en la ciudad Arroyito"; "Arcor es la conjunción de las primeras letras del lugar que lo vio nacer, Arroyito y Córdoba"), [El Cronista, 05/10/2021](https://www.cronista.com/apertura/empresas/empezaron-con-una-panaderia-y-crearon-la-golosina-preferida-de-los-argentinos-hoy-exportan-a-120-paises/) ("fundaron Arcor en 1951. La sociedad tomó el nombre de su ciudad (Arroyito) y provincia (Córdoba)") |
 | Arcor es la mayor fabricante de caramelos del mundo | 9: "Hoy, el mayor fabricante de caramelos del mundo" | [La Nación, 17/08/2024](https://www.lanacion.com.ar/economia/comercio-exterior/cuales-son-las-claves-de-la-avanzada-dulce-de-la-argentina-en-el-mundo-nid17082024/) ("La Argentina tiene a la mayor fabricante de caramelos del mundo... la cordobesa Arcor nacida en Arroyito") |
 | El Gran Rosario concentra más de 52 millones de toneladas anuales de capacidad de molienda de oleaginosas, el 75% del total nacional | 10 y 11: "El aceite sale de moler granos" / "tres cuartos de lo que el país puede moler está cerca de Rosario" | [La Capital, 30/05/2026](https://www.lacapital.com.ar/economia/el-gran-rosario-volvio-ser-el-principal-nodo-agroexportador-del-mundo-n10262055.html), [Ámbito, 30/05/2026](https://www.ambito.com/economia/una-region-argentina-recupero-el-liderazgo-global-y-volvio-ser-el-principal-nodo-agroexportador-del-mundo-n6283237) |
 | 70 km de costa entre Timbúes y Arroyo Seco, con 30 terminales portuarias | 12: "esa costa" (y placa del plano 12) | [La Capital](https://www.lacapital.com.ar/economia/el-gran-rosario-volvio-ser-el-principal-nodo-agroexportador-del-mundo-n10262055.html) ("A lo largo de 70 kilómetros de costa, entre Timbúes y Arroyo Seco, funcionan 30 terminales portuarias"), [Ámbito](https://www.ambito.com/economia/una-region-argentina-recupero-el-liderazgo-global-y-volvio-ser-el-principal-nodo-agroexportador-del-mundo-n6283237) |
@@ -99,7 +99,7 @@ Límites y cómo los trata el guion:
   bajaron los aranceles a los celulares importados, así que el guion dice "hasta hace poco, 9 de cada 10" con los tres productos y
   el verbo en pasado ("salían"). La placa dice "SEGÚN AFARTE". No se dice que hoy sigan siendo 9 de cada 10.
 - **"Sobre todo, de Río Grande"**: el 80% es de establecimientos productivos, no de unidades fabricadas. El guion no pone número
-  en voz y la placa dice "8 DE CADA 10 FÁBRICAS", no "8 de cada 10 celulares".
+  en voz y la placa dice "8 DE CADA 10 FÁBRICAS DE ELECTRÓNICA", no "8 de cada 10 celulares".
 - **"Lo hace nuevo"** es la forma dicha de "aluminio primario" (el que no sale de reciclar). La placa dice el término exacto.
   El guion no dice que la lata que tenés sea de aluminio de Madryn: dice que la lata es de aluminio y que una sola fábrica del país
   hace aluminio nuevo. Según el mismo informe, la producción local cubre el 67% del consumo de semielaborados: hay latas con chapa
@@ -126,7 +126,7 @@ low-poly con el punto de la ciudad encendido y su nombre (placa de ciudad) más 
 |---|---|---|
 | 1 | `LO QUE TENÉS EN LA MANO TIENE DOMICILIO` | desde el cuadro 0 (gancho en mudo, sobre la mano con el celular) |
 | 2 | `9 DE CADA 10` · `CELULARES, TELES Y AIRES · HASTA HACE POCO` · `SEGÚN AFARTE` | en "9", en "aires" y al final del plano |
-| 3 | `RÍO GRANDE · TIERRA DEL FUEGO` · `8 DE CADA 10 FÁBRICAS DE LA ISLA` | en "Río Grande." (punto del mapa) y al final del plano |
+| 3 | `RÍO GRANDE · TIERRA DEL FUEGO` · `8 DE CADA 10 FÁBRICAS DE ELECTRÓNICA` | en "Río Grande." (punto del mapa) y al final del plano |
 | 4 | `+4 PARADAS` | en "cuatro" |
 | 5 | `PUERTO MADRYN · CHUBUT` · `ALUAR: ÚNICA PRODUCTORA DE ALUMINIO PRIMARIO DEL PAÍS` | en "Madryn." y al final del plano |
 | 6 | `460.000 TONELADAS POR AÑO` · `CAPACIDAD DE LA PLANTA` | en "460.000" y en "año." |
@@ -142,7 +142,7 @@ low-poly con el punto de la ciudad encendido y su nombre (placa de ciudad) más 
 | 16 | `¿DÓNDE SE HIZO LO QUE TENÉS CERCA?` · `CONTALO EN LOS COMENTARIOS` | en "cerca," y en "comentarios." |
 | 17 | `EL LUGAR MÁS RARO GANA` | en "raro." |
 
-Fuentes en pantalla (texto chico, abajo, planos 2 a 15): `FUENTES: LA NACIÓN, MINISTERIO DE ECONOMÍA, LA CAPITAL, ÁMBITO, ARGENTINA.GOB.AR`.
+Fuentes en pantalla (texto chico, abajo, planos 2 a 15): `FUENTES: LA NACIÓN, EL CRONISTA, MINISTERIO DE ECONOMÍA, LA CAPITAL, ÁMBITO, ARGENTINA.GOB.AR`.
 Personas: no aparece ninguna persona real. La mano y los objetos son genéricos: celular, lata, caramelo y botella de aceite sin
 marca ni etiqueta. Aluar, Arcor, INVAP, ARSAT y la Bolsa de Comercio de Rosario van en texto plano, sin logos. El satélite es un
 modelo genérico, sin logo. El mapa es un esquema: las distancias no hacen falta a escala, pero los puntos tienen que caer en la
@@ -167,7 +167,7 @@ Bariloche: ahí se armó el ARSAT-1. En 2014, la Argentina entró al grupo de 8 
 
 Agarrá lo primero que tengas cerca, fijate dónde se hizo y contalo en los comentarios. A ver quién encuentra el lugar más raro.
 
-Fuentes: La Nación, Ministerio de Economía, La Capital, Ámbito, Argentina.gob.ar e iProfesional.
+Fuentes: La Nación, El Cronista, Ministerio de Economía, La Capital, Ámbito, Argentina.gob.ar e iProfesional.
 
 #argentina #industriaargentina #hechoenargentina #ciudades #datoscuriosos
 ```
