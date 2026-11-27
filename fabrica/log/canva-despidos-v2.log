@@ -20,3 +20,6 @@
 2026-11-26T23:50:49-03:00 [productor] QC del primer render: plano 8 arrancaba con el piso vacío ~1 s; corregido (pila y pedestal desde el inicio), events/audio rehechos (-14 LUFS); re-render
 2026-11-26T23:59:22-03:00 [productor] render listo: out/canva-despidos-v2/canva-despidos-v2.mp4, 51 s (1080x1920, 30 fps, audio -14 LUFS); QC sin planos vacíos ni cuadros rotos
 2026-11-26T23:59:22-03:00 [fabrica] etapa -> revision
+2026-11-27T00:02:49-03:00 [oido] oído: 98 % de coincidencia; dudosos: ninguno; diferencias: por ciento→; seis→6; 000→mil
+2026-11-27T00:03:04-03:00 [revisor] DEVUELTO: subtítulos con dos palabras pegadas en 44,67 s (frame 1340, plano 12): 'influye' y 'en' activas a la vez (en.s 44,687 − 0,04 < influye.e 44,664), hueco medido 13,39 px (modelo 13,4), bajo el umbral de 14 px. Resto PASA: 1080x1920 30 fps h264+aac 51,50 s (timing 51,484); -14,0 LUFS, pico -3,3 dBTP, sin silencios; sin negros ni congelados; placas 1-13 iguales al guion (placa 1 con signos); portada OK; 5 etiquetas; Whisper 98 %, sin términos mal entendidos. Evidencia: scratchpad/revC1
+2026-11-27T00:03:04-03:00 [fabrica] etapa -> render (devuelto por el revisor: 'influye'+'en' pegadas en 44,67 s (frame 1340, 13,39 px < 14); marcar una como palabra clave en beats.ts (b12) y re-renderizar)

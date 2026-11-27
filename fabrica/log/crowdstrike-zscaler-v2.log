@@ -15,3 +15,8 @@
 2026-11-26T23:36:24-03:00 [fabrica] voz SIN OK del dueño (regla voz_sin_ok): ~871 caracteres
 2026-11-26T23:59:25-03:00 [fabrica] crowdstrike-zscaler-v2: la voz gasta unos 871 caracteres de ElevenLabs. AVISO: no se puede leer el saldo (la clave no tiene ese permiso); anotalo en fabrica/config.json.
 2026-11-26T23:59:29-03:00 [productor] arranco: créditos ~871 caracteres; genero la voz (una toma)
+2026-11-27T00:00:06-03:00 [oido] oído: 96 % de coincidencia; dudosos: Wiz, Zscaler; diferencias: zscaler→syscailer; →las; 000→mil; wiz→uis; 000→mil; por ciento→
+2026-11-27T00:00:16-03:00 [productor] voz 54,2 s; oído 96%: dudosos Zscaler y Wiz, pruebo variantes
+2026-11-27T00:01:55-03:00 [productor] vuelta 1: Zscaler -> Zí Eskéiler (72%), Wiz -> Güíz (40%); regenero la voz
+2026-11-27T00:02:44-03:00 [oido] oído: 97 % de coincidencia; dudosos: Wiz, Zscaler; diferencias: zscaler→c skyler; wiz→wish; por ciento→
+2026-11-27T00:02:52-03:00 [productor] oído vuelta 1: 97%; Whisper oye C.Skyler y Wish. Pruebo segunda tanda
