@@ -122,7 +122,7 @@ export const BEATS: BeatSpec[] = [
   { id: 'b10', set: 'room', cam: { from: [0.6, 4.2, 5.0], to: [-0.4, 3.0, 5.6], look: [0, 1.2, 0], lookTo: [0, 0.6, 0], fov: 46 }, keywords: ['perdió', 'Golfo'],
     actors: [
       SEA,
-      { type: 'booster', pos: [0.5, 2.6, 0], rot: [0, 0, 0.5], s: 0.6, p: { center: true }, move: { to: [0.0, -1.9, 0.2], at: 0.1, dur: 1.5 } },
+      { type: 'booster', pos: [0.45, 1.45, 0], rot: [0, 0, 0.5], s: 0.6, p: { center: true }, move: { to: [0.0, -1.9, 0.2], at: 0, dur: 1.3 } },
       { type: 'splash', pos: [0.1, 0, 0.2], at: 'perdió', enter: 'none', p: { r: 0.8 } },
       { type: 'ring', pos: [0.1, 0.03, 0.2], at: 'Golfo', p: { r: 0.6, color: '#bfefff' } },
     ],
