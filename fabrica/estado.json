@@ -868,7 +868,92 @@
      "nota": "rehacer anthropic-ipo como reel de prueba, distinto del original"
     }
    ]
+  },
+  "starship-atrapada-v2": {
+   "titulo": "Starship: la nave atrapada en el aire (versión 2)",
+   "tema": "",
+   "fuentes": [],
+   "puntaje": null,
+   "etapa": "idea",
+   "creado": "2026-11-26T23:18:32-03:00",
+   "rehace": "starship-atrapada",
+   "publicar_prueba_al_terminar": true,
+   "historial": [
+    {
+     "etapa": "idea",
+     "cuando": "2026-11-26T23:18:32-03:00",
+     "nota": "rehacer starship-atrapada como reel de prueba, distinto del original"
+    }
+   ]
+  },
+  "microsoft-codigo-rojo-v2": {
+   "titulo": "Microsoft declara un \"Código Rojo\" interno (microsoft-codigo-rojo) (versión 2)",
+   "tema": "",
+   "fuentes": [],
+   "puntaje": null,
+   "etapa": "idea",
+   "creado": "2026-11-26T23:18:32-03:00",
+   "rehace": "microsoft-codigo-rojo",
+   "publicar_prueba_al_terminar": true,
+   "historial": [
+    {
+     "etapa": "idea",
+     "cuando": "2026-11-26T23:18:32-03:00",
+     "nota": "rehacer microsoft-codigo-rojo como reel de prueba, distinto del original"
+    }
+   ]
+  },
+  "canva-despidos-v2": {
+   "titulo": "Canva: 1.271 personas y el año más difícil (versión 2)",
+   "tema": "",
+   "fuentes": [],
+   "puntaje": null,
+   "etapa": "idea",
+   "creado": "2026-11-26T23:18:33-03:00",
+   "rehace": "canva-despidos",
+   "publicar_prueba_al_terminar": true,
+   "historial": [
+    {
+     "etapa": "idea",
+     "cuando": "2026-11-26T23:18:33-03:00",
+     "nota": "rehacer canva-despidos como reel de prueba, distinto del original"
+    }
+   ]
+  },
+  "huawei-condena-v2": {
+   "titulo": "Huawei: culpable en 10 de 12 cargos, casi ocho años después (versión 2)",
+   "tema": "",
+   "fuentes": [],
+   "puntaje": null,
+   "etapa": "idea",
+   "creado": "2026-11-26T23:18:33-03:00",
+   "rehace": "huawei-condena",
+   "publicar_prueba_al_terminar": true,
+   "historial": [
+    {
+     "etapa": "idea",
+     "cuando": "2026-11-26T23:18:33-03:00",
+     "nota": "rehacer huawei-condena como reel de prueba, distinto del original"
+    }
+   ]
+  },
+  "meta-muse-v2": {
+   "titulo": "Muse, el agente de Meta que compra por vos (y que Amazon bloqueó) (versión 2)",
+   "tema": "",
+   "fuentes": [],
+   "puntaje": null,
+   "etapa": "idea",
+   "creado": "2026-11-26T23:18:33-03:00",
+   "rehace": "meta-muse",
+   "publicar_prueba_al_terminar": true,
+   "historial": [
+    {
+     "etapa": "idea",
+     "cuando": "2026-11-26T23:18:33-03:00",
+     "nota": "rehacer meta-muse como reel de prueba, distinto del original"
+    }
+   ]
   }
  },
- "actualizado": "2026-11-26T23:17:40-03:00"
+ "actualizado": "2026-11-26T23:18:33-03:00"
 }

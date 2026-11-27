@@ -76,6 +76,8 @@ let D = /*DATOS*/null, VIVO = false, COM = null;
 const LOCAL = ['localhost', '127.0.0.1'].includes(location.hostname);
 // En el artefacto de claude.ai: un clic manda la orden a la sesión de Claude, que la ejecuta y vuelve a publicar el panel.
 async function ordenar(boton, cmd, hecho) {
+  if (boton.dataset.enviando === '1') return;  // un toque repetido no manda la orden dos veces
+  boton.dataset.enviando = '1'; boton.disabled = true;
   if (COM) {
     try {
       if ((await COM.canSendToClaude()) === 'available') {
