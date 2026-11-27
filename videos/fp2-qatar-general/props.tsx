@@ -450,5 +450,14 @@ export const PitStand: React.FC<P> = ({ t, tt, p }) => {
   );
 };
 
-export const EXTRA = { sessclock: SessionClock, redflag: RedFlag, gravelbits: GravelBits, heap: GravelHeap, radio: RadioWaves, pitstand: PitStand, stage: Stage, f1: Car, pilot: Driver, pitboard: PitBoard, timing: TimingTower, stopwatch: Stopwatch, tyre: Tyre,
+/* ---------- Auto que se va a la leca: se desliza girando y después se inclina y se hunde, todo continuo.
+   Tiempos en segundos del plano (t): p.moveAt/moveDur (deslizamiento y giro), p.sinkAt/sinkDur (inclinación y hundimiento). ---------- */
+export const SlideSink: React.FC<P> = ({ t, tt, p }) => {
+  const { from = [0, 0, 0], to = [0, 0, 0], yaw0 = 0, yaw1 = 0, tilt = [0, 0], sink = 0.1, moveAt = 0, moveDur = 1, sinkAt = 0, sinkDur = 0.8, car = {} } = p;
+  const k = eio(clamp((t - moveAt) / moveDur)); const q = eio(clamp((t - sinkAt) / sinkDur));
+  const x = lerp(from[0], to[0], k), z = lerp(from[2], to[2], k), y = lerp(from[1], to[1], k) - sink * q;
+  return (<group position={[x, y, z]} rotation={[tilt[0] * q, lerp(yaw0, yaw1, k), tilt[1] * q]}><Car t={t} tt={tt} p={car} /></group>);
+};
+
+export const EXTRA = { slidesink: SlideSink, sessclock: SessionClock, redflag: RedFlag, gravelbits: GravelBits, heap: GravelHeap, radio: RadioWaves, pitstand: PitStand, stage: Stage, f1: Car, pilot: Driver, pitboard: PitBoard, timing: TimingTower, stopwatch: Stopwatch, tyre: Tyre,
   lapring: LapRing, wear: WearGauge, stack: Stack, tyreset: TyreSet, mic: Mic, racecard: RaceCard, clock: Clock };

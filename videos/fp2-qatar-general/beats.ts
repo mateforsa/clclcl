@@ -76,8 +76,8 @@ export const BEATS: BeatSpec[] = [
     actors: [
       ST('pista', { trackX: -3.6, barrier: true }),
       { type: 'pitboard', pos: [1.2, 0, -2.0], rot: [0, -0.2, 0], p: { lines: [{ t: 'CURVA' }, { t: '14', c: AMBER }], w: 0.8, pole: 0.5, frame: '#3a4152' } },
-      { type: 'f1', pos: [-1.2, 0, 1.0], rot: [0, PI / 2 + 0.3, 0], s: 0.5, p: ALP, out: 'curva', move: { to: [0.0, 0, -0.4], at: 'perdió', dur: 1.0 } },
-      { type: 'f1', pos: [0.0, -0.1, -0.4], rot: [0.06, PI / 2 + 1.1, 0.05], s: 0.5, at: 'curva', enter: 'none', p: ALP },
+      // un solo auto: se desliza girando de PI/2+0,3 a PI/2+1,1 ('perdió' 1,46 s, 1,1 s) y se inclina y hunde 0,1 de 'curva' (2,41 s) a 'enterrado' (3,94 s)
+      { type: 'slidesink', s: 0.5, p: { car: ALP, from: [-2.4, 0, 2.0], to: [0.0, 0, -0.8], yaw0: PI / 2 + 0.3, yaw1: PI / 2 + 1.1, moveAt: 1.46, moveDur: 1.1, tilt: [0.06, 0.05], sink: 0.2, sinkAt: 2.41, sinkDur: 1.5 } },
       { type: 'heap', pos: [0.0, 0, -0.4], at: 'enterrado', enter: 'grow', p: { pts: [[0.52, -0.08], [0.6, 0.5], [-0.42, -0.1], [-0.35, 0.45], [0.0, 0.75]], r: 0.3, h: 0.24 } },
       { type: 'label', pos: [-0.3, 0.95, -0.3], at: 'Gasly', p: name('GASLY', BLUED) },
     ],
@@ -137,7 +137,7 @@ export const BEATS: BeatSpec[] = [
       { type: 'tyre', pos: [0, 1.5, -0.2], rot: [0, PI / 2, 0], p: { r: 0.62, w: 0.55, band: '#e9edf3', roll: 0.6 } },
       { type: 'lapring', pos: [0, 1.5, -0.2], at: 'limitó', p: { n: 27, r: 0.84, dur: 1.2 } },
       { type: 'label', pos: [0, 1.5, 0.1], at: '27', p: { text: '27', w: 0.6, h: 0.42, color: '#fff', size: 0.9, weight: 900 } },
-      { type: 'tyreset', pos: [0.95, 0, 0.7], rot: [0, -0.4, 0], at: 'juego', p: { band: '#e9edf3' } },
+      { type: 'tyreset', pos: [0.75, 0, 0.7], rot: [0, -0.4, 0], at: 'juego', p: { band: '#e9edf3' } },
     ],
     overlays: [P1('MÁXIMO 27 VUELTAS POR JUEGO DE GOMAS', '27'), P2('REGLA DE PIRELLI', -0.9), FUENTE] },
 

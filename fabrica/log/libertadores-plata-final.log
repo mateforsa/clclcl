@@ -19,3 +19,5 @@
 2026-11-27T19:03:18-03:00 [productor] mezcla -14,5 LUFS integrados, 62,2 s. Lanzo render
 2026-11-27T19:03:18-03:00 [fabrica] etapa -> render
 2026-11-27T19:04:09-03:00 [productor] portada lista: instagram/portadas/libertadores-plata-final.jpg (fondo plano 2, balanza)
+2026-11-27T19:07:52-03:00 [productor] render listo: out/libertadores-plata-final/libertadores-plata-final.mp4, 62 s (1080x1920, 30 fps, -14,5 LUFS). Pasa de 60 s aun con el recorte del plano 9. PRONUNCIACIÓN SIN RESOLVER: Corinthians
+2026-11-27T19:07:52-03:00 [fabrica] etapa -> revision
