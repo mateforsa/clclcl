@@ -82,7 +82,8 @@ export const Stage: React.FC<P> = ({ t, p }) => {
         <pointLight position={[0, 4, 3]} intensity={20} color="#cfe0ff" distance={14} />
         <pointLight position={[-3, 1.2, 1]} intensity={14} color={ORANGE} distance={8} />
         <Flat s={[30, 30]} pos={[0, 0.02, 0]} rot={[-Math.PI / 2, Math.PI / 2, 0]} map={asph} />
-        <Flat s={[60, 22]} pos={[0, 6, -14]} map={night} />
+        <Flat s={[8.8, 9]} pos={[0, 4.4, -3.85]} map={night} />
+        {[-1, 1].map((k) => <Flat key={k} s={[9, 9]} pos={[k * 4.38, 4.4, 0]} rot={[0, -k * Math.PI / 2, 0]} map={night} />)}
         {Array.from({ length: 14 }, (_, i) => { const x = i % 2 ? 3.2 : -3.2, z = 3 - Math.floor(i / 2) * 1.8; const on = 0.6 + 0.4 * Math.max(0, Math.sin(t * 4 - i * 0.6));
           return <mesh key={i} position={[x, 0.08, z]}><sphereGeometry args={[0.07, 8, 6]} /><M c={ORANGE} e={ORANGE} ei={1.5 * on} /></mesh>; })}
       </group>

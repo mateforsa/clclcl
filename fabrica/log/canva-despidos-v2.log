@@ -27,3 +27,6 @@
 2026-11-27T00:04:44-03:00 [productor] stills de subtítulos del plano 12 (frames 1338-1342 y punto medio de las 14 palabras): 'influye' en recuadro y separada de 'en', el renglón no salta. Re-render
 2026-11-27T00:09:53-03:00 [productor] render listo: out/canva-despidos-v2/canva-despidos-v2.mp4, 51 s (1080x1920, 30 fps; 'influye' como palabra clave en b12, mezcla sin cambios)
 2026-11-27T00:09:53-03:00 [fabrica] etapa -> revision
+2026-11-27T00:12:33-03:00 [oido] oído: 98 % de coincidencia; dudosos: ninguno; diferencias: por ciento→; seis→6; 000→mil
+2026-11-27T00:12:40-03:00 [revisor] APROBADO (2a vuelta): 1080x1920 30 fps h264+aac 51,50 s (timing 51,484); -14,0 LUFS, pico -3,3 dBTP, sin silencios; sin negros ni congelados; cámara en movimiento en los 13 planos; 194 uniones medidas (14 con dos activas), mínima 14,73 px (Respuesta|al, 7,6 s); frame 1340 influye|en ahora 31,4 px; placas 1-13 iguales al guion (placa 1 con signos); portada 1080x1920 legible; 5 etiquetas; Whisper 98 %, sin términos mal entendidos. Evidencia: scratchpad/revC2
+2026-11-27T00:12:41-03:00 [fabrica] etapa -> esperando_ok_final
