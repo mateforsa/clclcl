@@ -1,6 +1,6 @@
 import React from 'react';
 import * as THREE from 'three';
-import { M, Label, useTex } from '../../src/kit/Props';
+import { M, Label, useTex, Person } from '../../src/kit/Props';
 import { clamp, eio, eo, lerp, pop, rnd } from '../../src/kit/math';
 
 // Look propio de este video (distinto de los de hoy: escritorio de nogal, Lusail de noche, neón violeta): una maqueta
@@ -316,7 +316,10 @@ export const Coast: React.FC<P> = ({ t, p }) => {
       {bmode !== 'off' && BUILDINGS.map((b, i) => <group key={i} position={[b.x, hCoast(b.x, b.z + b.d / 2) - 0.01, b.z]}>
         <House w={b.w} h={b.h} d={b.d} c={b.c} roof={b.roof} seed={b.seed} ghost={ghost} />
       </group>)}
-      {levee > 0.001 && <mesh position={[0.65, 0.12, 0.62]}><boxGeometry args={[1.9, 0.1, 0.12]} /><meshBasicMaterial color="#ffd27a" wireframe transparent opacity={0.9 * levee} toneMapped={false} /></mesh>}
+      {levee > 0.001 && <group position={[0.65, 0.21, 0.13]}>
+        <mesh renderOrder={3}><boxGeometry args={[1.85, 0.22, 0.08]} /><meshBasicMaterial color="#ffc44d" transparent opacity={0.6 * levee} depthWrite={false} toneMapped={false} /></mesh>
+        <mesh renderOrder={3}><boxGeometry args={[1.85, 0.22, 0.08]} /><meshBasicMaterial color="#fff0c8" wireframe transparent opacity={levee} toneMapped={false} /></mesh>
+      </group>}
       {/* mareógrafo con contador */}
       {p.gauge !== false && <group position={[0.85, 0, 1.6]}>
         {Array.from({ length: 12 }, (_, i) => <Cyl key={i} r={0.022} h={0.1} pos={[0, -0.35 + i * 0.1, 0]} c={i % 2 ? '#d4473a' : '#efece4'} seg={8} />)}
@@ -485,4 +488,21 @@ export const Pedestal: React.FC<P> = ({ p }) => {
   );
 };
 
-export const EXTRA = { world: World, coast: Coast, tiles: Tiles, canals: Canals, study: Study, safe: Safe, table: Table, notebook: Notebook, pedestal: Pedestal, sign: Sign };
+/** Muñeco del kit sin cara: se tapan los dos ojos con una placa del color de la piel, 1 mm delante. */
+export const Faceless: React.FC<P> = (a) => {
+  const p = a.p; const pose = p.pose ?? 'idle'; const ph = p.phase ?? 0; const sway = Math.sin((a.t + ph) * 2.2);
+  const sit = pose === 'sit' || pose === 'sitType';
+  const y0 = (sit ? -0.3 : 0) + (pose === 'cheer' ? Math.abs(Math.sin((a.t + ph) * 7)) * 0.12 : sway * 0.012);
+  return (
+    <group>
+      <Person {...a} />
+      <group position={[0, y0 + 0.7, 0]} rotation={[pose === 'sad' ? 0.25 : 0, 0, sway * 0.015]}>
+        <group position={[0, 0.84, 0]} rotation={[pose === 'sad' ? 0.3 : 0, sway * 0.05, 0]}>
+          <B s={[0.3, 0.12, 0.012]} pos={[0, 0.02, 0.177]} c={p.skin ?? '#f2c39b'} />
+        </group>
+      </group>
+    </group>
+  );
+};
+
+export const EXTRA = { faceless: Faceless, world: World, coast: Coast, tiles: Tiles, canals: Canals, study: Study, safe: Safe, table: Table, notebook: Notebook, pedestal: Pedestal, sign: Sign };

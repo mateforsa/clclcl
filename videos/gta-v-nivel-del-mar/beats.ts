@@ -13,7 +13,8 @@ const fit = (text: string, max: number) => Math.min(max, Math.floor(780 / (text.
 const P1 = (text: string, at: any, o: any = {}) => ({ type: 'tag' as const, text, at, x: 46, y: 63.5, color: PANEL, size: fit(text, 46), ...o });
 const P2 = (text: string, at: any, o: any = {}) => ({ type: 'tag' as const, text, at, x: 46, y: 68, color: PANEL, size: fit(text, 40), ...o });
 const SMALL = (text: string, y: number, at: any = 0.2) => ({ type: 'tag' as const, text, at, x: 46, y, color: 'rgba(7,19,28,.78)', size: 18 });
-const SIM = { type: 'tag' as const, text: 'SIMULACIÓN', at: 0, x: 50, y: 11, color: 'rgba(7,19,28,.88)', size: 36 };
+// at negativo grande = medio segundo antes del inicio del plano: así el pop ya terminó en el cuadro 0
+const SIM = (dur: number) => ({ type: 'tag' as const, text: 'SIMULACIÓN', at: -(dur + 0.5), x: 50, y: 23, color: 'rgba(7,19,28,.88)', size: 36 });
 const F1 = SMALL('FUENTES: INFOBAE (27/11) Y XATAKA (25/11/2026)', 72.2);
 const F2 = (extra = '') => SMALL('SIMULACIÓN SOBRE EL MAPA DE UN JUEGO, NO PRONÓSTICO' + extra, 74.0);
 const ESQ = ' · ESQUEMA, NO A ESCALA';
@@ -27,17 +28,17 @@ export const BEATS: BeatSpec[] = [
     actors: [W,
       { type: 'coast', pos: [0, 0.64, 0], p: { lv: [[0, 0], [1.0, 0.02], [4.8, 0.2]], counter: { from: 2026, to: 2300, at: 0, dur: 1.6 } } },
     ],
-    overlays: [SIM, P1('AÑO 2300', 1.6, { size: 46 }), SMALL('ESQUEMA, NO A ESCALA', 74.0)] },
+    overlays: [SIM(7.007), P1('AÑO 2300', 1.6, { size: 46 }), SMALL('ESQUEMA, NO A ESCALA', 74.0)] },
 
   // 2. Es una simulación de dos científicos alemanes sobre el mapa del juego, que imita a Los Ángeles.
   { id: 'b02', set: 'room', cam: { from: [0.6, 2.5, 4.6], to: [0.1, 2.3, 4.0], look: [0, 1.15, -0.3], fov: 44 }, keywords: ['simulación', 'científicos', 'alemanes', 'juego,', 'Ángeles.'],
     actors: [{ type: 'world', p: { kind: 'lab' } },
       { type: 'table', pos: [0, 0, -0.05], p: { w: 2.0, d: 1.6, h: 0.85 } },
       { type: 'coast', pos: [0, 0.85 + 0.62 * 0.34, -0.05], s: 0.34, p: { lv: [[0, 0], [5.5, 0.18]], gauge: false } },
-      { type: 'person', pos: [-0.8, 0, -1.25], rot: [0, 0.3, 0], p: { ...COAT, hair: '#3a2a1a', pose: 'point' } },
-      { type: 'person', pos: [0.8, 0, -1.25], rot: [0, -0.3, 0], p: { ...COAT, hair: '#b9a27a', pose: 'idle', phase: 1.3 } },
+      { type: 'faceless', pos: [-0.8, 0, -1.25], rot: [0, 0.3, 0], p: { ...COAT, hair: '#3a2a1a', pose: 'point' } },
+      { type: 'faceless', pos: [0.8, 0, -1.25], rot: [0, -0.3, 0], p: { ...COAT, hair: '#b9a27a', pose: 'idle', phase: 1.3 } },
     ],
-    overlays: [SIM, P2('PAUL NÖRENBERG Y HUGUES LANTUIT · UNIVERSIDAD DE POTSDAM', 'alemanes'), P1('LOS SANTOS (GTA V) IMITA A LOS ÁNGELES', 'mapa'), F1, F2()] },
+    overlays: [SIM(5.585), P2('PAUL NÖRENBERG Y HUGUES LANTUIT · UNIVERSIDAD DE POTSDAM', 'alemanes'), P1('LOS SANTOS (GTA V) IMITA A LOS ÁNGELES', 'mapa'), F1, F2()] },
 
   // 3. Rockstar se negó a darles los datos originales, por derechos de publicación. Usaron el mapa de un fan.
   { id: 'b03', set: 'room', cam: { from: [0.2, 2.1, 6.4], to: [0.05, 1.95, 5.8], look: [0.1, 1.05, 0], fov: 44 }, keywords: ['Rockstar', 'darles', 'originales,', 'derechos', 'publicación.', 'fan.'],
@@ -46,10 +47,10 @@ export const BEATS: BeatSpec[] = [
       { type: 'cross', pos: [-0.55, 0.62, 0.48], rot: [0, 0.25, 0], s: 0.5, at: 'negó' },
       { type: 'table', pos: [0.64, 0, 0.12], rot: [0, -0.35, 0], p: { w: 1.2, d: 0.6, h: 1.0 } },
       { type: 'notebook', pos: [0.42, 1.0, -0.013], rot: [0, -0.35 + PI, 0] },
-      { type: 'person', pos: [0.594, 0, -0.483], rot: [0, -0.35, 0], p: { shirt: '#ff8a3d', pants: '#2a3440', skin: '#c98d62', hair: '#15102b', cap: '#20303a', pose: 'type' } },
+      { type: 'faceless', pos: [0.594, 0, -0.483], rot: [0, -0.35, 0], p: { shirt: '#ff8a3d', pants: '#2a3440', skin: '#c98d62', hair: '#15102b', cap: '#20303a', pose: 'type' } },
       { type: 'coast', pos: [0.96, 1.0 + 0.62 * 0.12, 0.26], rot: [0, -0.35, 0], s: 0.12, at: 'mapa', enter: 'grow', p: { gauge: false } },
     ],
-    overlays: [P1('ROCKSTAR SE NEGÓ A DAR LOS DATOS ORIGINALES', 'negó'), P2('MAPA 3D DE UN FAN (SKETCHFAB)', 'fan.'), F1, F2()] },
+    overlays: [P1('ROCKSTAR SE NEGÓ A DAR LOS DATOS ORIGINALES', 'negó'), P2('MAPA 3D DE UN FAN (SKETCHFAB)', 'Usaron'), F1, F2()] },
 
   // 4. Y probaron dos escenarios del IPCC, el panel de clima de la ONU.
   { id: 'b04', set: 'room', cam: { from: [0.35, 3.0, 6.4], to: [-0.1, 2.7, 5.7], look: [0, 0.8, 0], fov: 44 }, keywords: ['escenarios', 'IPCC,', 'ONU.'],
@@ -70,12 +71,12 @@ export const BEATS: BeatSpec[] = [
     overlays: [LEG, P1('EMISIONES ALTAS + MAREJADA', 'emisiones', { out: 5.6 }), P1('MAR A 5,18 M · 2,25 KM²', 5.6), P2('2300: 5,1% BAJO EL AGUA', '5,1%'), F1, F2()] },
 
   // 6. Se corta el puerto. También quedan afectadas la energía y las aguas residuales.
-  { id: 'b06', set: 'room', cam: { from: [-1.6, 2.9, 4.6], to: [-0.9, 2.7, 4.2], look: [-0.8, 1.22, 0.1], lookTo: [-0.7, 1.22, -0.2], fov: 44 }, keywords: ['corta', 'puerto.', 'energía', 'residuales.'],
+  { id: 'b06', set: 'room', cam: { from: [-1.5, 3.2, 5.1], to: [-0.85, 3.0, 4.7], look: [-0.8, 0.98, 0.0], lookTo: [-0.7, 0.98, -0.3], fov: 44 }, keywords: ['corta', 'puerto.', 'energía', 'residuales.'],
     actors: [W,
       { type: 'coast', pos: [0, 0.64, 0], p: { infra: true, lv: [[0, 0.1], [0.4, 0.11], [4.9, 0.24]],
         marks: [{ kind: 'pin', at: 0.67, pos: [-1.0, 0.6, 0.62] }, { kind: 'pin', at: 2.84, pos: [-1.22, 0.62, -0.3] }, { kind: 'pin', at: 3.66, pos: [-0.62, 0.22, -0.32] }] } },
     ],
-    overlays: [P1('2300: PUERTO FUERA DE SERVICIO', 'puerto.'), P2('TAMBIÉN: ENERGÍA Y AGUAS RESIDUALES', 'También'), F1, F2(ESQ)] },
+    overlays: [P1('2300: PUERTO FUERA DE SERVICIO', 'puerto.', { out: 'También' }), P2('TAMBIÉN: ENERGÍA Y AGUAS RESIDUALES', 'También'), F1, F2(ESQ)] },
 
   // 7. Si las emisiones bajan fuerte, se inunda el 2,2%, sin tocar ninguna infraestructura importante.
   { id: 'b07', set: 'room', cam: { from: [-0.5, 4.6, 6.0], to: [-0.1, 4.9, 6.5], look: [0, -0.15, 0.0], lookTo: [0, -0.15, -0.1], fov: 44 }, keywords: ['bajan', '2,2%,', 'infraestructura'],
