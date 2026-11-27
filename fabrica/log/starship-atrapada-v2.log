@@ -35,3 +35,5 @@
 2026-11-27T01:16:37-03:00 [productor] plano 10: la caída arranca más abajo (y 1,45); stills cada 3 frames de 1080 a 1110 más 1120 y 1140: nada claro detrás de los subtítulos
 2026-11-27T01:16:38-03:00 [fabrica] etapa -> render
 2026-11-27T01:16:38-03:00 [productor] lanzo el render de la segunda corrección
+2026-11-27T01:33:18-03:00 [productor] render listo: out/starship-atrapada-v2/starship-atrapada-v2.mp4, 55 s (54,6 s); plano 10 con la caída por debajo de los subtítulos; hojas qc revisadas
+2026-11-27T01:33:18-03:00 [fabrica] etapa -> revision

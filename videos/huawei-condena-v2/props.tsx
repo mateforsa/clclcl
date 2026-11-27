@@ -131,16 +131,13 @@ export const Stage: React.FC<P> = ({ t, p }) => {
         <B s={[3.8, 0.12, 2.4]} pos={[0, 0.9, 0]} c="#3b2a1d" />
         <Flat s={[3.8, 2.4]} pos={[0, 0.962, 0]} rot={[-Math.PI / 2, 0, 0]} map={wood} />
         {[[-1.7, -1.0], [1.7, -1.0], [-1.7, 1.0], [1.7, 1.0]].map(([x, z]) => <B key={x + '' + z} s={[0.12, 0.9, 0.12]} pos={[x, 0.45, z]} c="#2a1e15" />)}
-        {/* lámpara colgante */}
-        <B s={[0.02, 1.4, 0.02]} pos={[0, 4.2, 0.2]} c="#111" />
-        <Cyl r={0.42} h={0.32} r2={0.14} pos={[0, 3.4, 0.2]} c="#1f2f42" e={AMBER} ei={0.25} seg={12} />
       </group>
     );
   }
   if (kind === 'cell') {
     const conc = useTex((g, W, H) => {
-      g.fillStyle = '#8a9097'; g.fillRect(0, 0, W, H); const r = seeded(5);
-      for (let i = 0; i < 900; i++) { g.fillStyle = r() > 0.5 ? '#7d838a' : '#959ba2'; g.fillRect(r() * W, r() * H, 4, 4); }
+      g.fillStyle = '#4e555c'; g.fillRect(0, 0, W, H); const r = seeded(5);
+      for (let i = 0; i < 900; i++) { g.fillStyle = r() > 0.5 ? '#454b52' : '#575e66'; g.fillRect(r() * W, r() * H, 4, 4); }
       g.strokeStyle = 'rgba(40,44,50,.4)'; g.lineWidth = 3; for (let y = 0; y < H; y += 64) { g.beginPath(); g.moveTo(0, y); g.lineTo(W, y); g.stroke(); }
     }, 512, 512, 'hw2conc');
     return (
@@ -148,10 +145,9 @@ export const Stage: React.FC<P> = ({ t, p }) => {
         <pointLight position={[0, 3.4, 2.4]} intensity={20} color="#dfe9f2" distance={12} />
         <pointLight position={[1.6, 1.8, 0.8]} intensity={9} color={AMBER} distance={6} />
         <Flat s={[24, 24]} pos={[0, 0.02, 0]} rot={[-Math.PI / 2, 0, 0]} c="#5b6168" />
-        <mesh position={[0, 1.0, -3.75]}><planeGeometry args={[9, 2.0]} /><meshStandardMaterial map={conc} flatShading /></mesh>
-        <B s={[12, 7.6, 0.2]} pos={[0, 5.8, -3.8]} c="#141c26" />
-        <B s={[12, 0.05, 0.1]} pos={[0, 2.02, -3.68]} c={ICE} e={ICE} ei={0.4} />
-        {[-4.3, 4.3].map((x) => <B key={x} s={[0.2, 9, 12]} pos={[x, 4.5, 0]} c="#2a333d" />)}
+        <mesh position={[0, 0.75, -3.75]}><planeGeometry args={[9, 1.5]} /><meshStandardMaterial map={conc} flatShading /></mesh>
+        <B s={[12, 8.1, 0.2]} pos={[0, 5.55, -3.8]} c="#141c26" />
+        {[-4.3, 4.3].map((x) => <B key={x} s={[0.2, 9, 12]} pos={[x, 4.5, 0]} c="#1c242d" />)}
       </group>
     );
   }
@@ -375,12 +371,12 @@ export const Cell: React.FC<P> = ({ t, p }) => {
     {/* catre al fondo */}
     <B s={[1.5, 0.12, 0.6]} pos={[0, 0.45, -1.0]} c="#596573" /><B s={[1.4, 0.1, 0.55]} pos={[0, 0.56, -1.0]} c="#c7ced6" />
     {[-0.65, 0.65].map((x) => <B key={x} s={[0.06, 0.45, 0.06]} pos={[x, 0.22, -0.8]} c="#3c4652" />)}
-    <B s={[0.4, 0.4, 0.04]} pos={[0.2, 2.0, -1.33]} c="#2a333d" />
+    <B s={[0.4, 0.3, 0.04]} pos={[0.2, 1.5, -1.33]} c="#2a333d" />
     {/* reja: la puerta se corre */}
     {Array.from({ length: 9 }, (_, i) => { const x = -w / 2 + (i * w) / 8; const door = i >= 3 && i <= 5;
-      return <Cyl key={i} r={0.03} h={2.4} pos={[x + (door ? k * 0.75 : 0), 1.2, 0]} c="#3c4652" seg={6} />; })}
-    {[0.1, 1.2, 2.38].map((y) => <B key={y} s={[w + 0.08, 0.06, 0.06]} pos={[0, y, 0]} c="#3c4652" />)}
-    {[-w / 2 - 0.05, w / 2 + 0.05].map((x) => <B key={x} s={[0.12, 2.5, 1.6]} pos={[x, 1.25, -0.8]} c="#7d838a" />)}
+      return <Cyl key={i} r={0.03} h={1.9} pos={[x + (door ? k * 0.75 : 0), 0.95, 0]} c="#2a313a" seg={6} />; })}
+    {[0.1, 1.0, 1.88].map((y) => <B key={y} s={[w + 0.08, 0.06, 0.06]} pos={[0, y, 0]} c="#2a313a" />)}
+    {[-w / 2 - 0.05, w / 2 + 0.05].map((x) => <B key={x} s={[0.12, 2.0, 1.6]} pos={[x, 1.0, -0.8]} c="#3a424b" />)}
   </group>);
 };
 

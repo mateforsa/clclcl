@@ -25,7 +25,7 @@ export const BEATS: BeatSpec[] = [
   // 1. Aeropuerto de Vancouver, diciembre de 2018.  (grúa que baja desde el ventanal nevado hasta la pasajera)
   { id: 'b01', set: 'room', cam: { from: [0.6, 3.4, 7.0], to: [-0.1, 2.0, 6.4], look: [0, 1.9, -2], lookTo: [0, 0.75, 0], fov: 46, shift: -0.04 }, keywords: ['Aeropuerto', 'Vancouver', 'diciembre'],
     actors: [
-      { ...GATE, p: { kind: 'gate', sign: 'PUERTA 34', signX: 0.6 } },
+      GATE,
       { type: 'seats', pos: [0.7, 0, -1.4], p: { n: 4 } },
       { type: 'person', pos: [-1.5, 0, 0.6], rot: [0, Math.PI / 2, 0], p: { ...MENG, pose: 'walk' }, out: '2018', move: { to: [-0.35, 0, 0.6], at: 0, dur: 2.2 } },
       { type: 'person', pos: [-0.35, 0, 0.6], rot: [0, 0.4, 0], at: '2018', enter: 'none', p: { ...MENG, pose: 'idle' } },
@@ -120,7 +120,7 @@ export const BEATS: BeatSpec[] = [
   { id: 'b07', set: 'room', cam: { from: [1.3, 1.2, 6.0], to: [0.5, 2.6, 6.4], look: [0, 0.6, 0], lookTo: [0, 1.0, 0], fov: 46, shift: -0.06 }, keywords: ['2025', 'facturó', 'mejor', 'balance'],
     actors: [
       BANK,
-      { type: 'ingots', pos: [0, 0, -0.2], p: { a: 0, b: 1.53, line: 2.8, H: 1.6 } },
+      { type: 'ingots', pos: [0, 0, -0.2], p: { a: -5, b: -5, line: 2.8, H: 1.6 } },
       { type: 'paper', pos: [1.15, 1.2, -0.1], rot: [0, -0.4, 0], s: 0.8, at: 'balance', p: { lines: 7 } },
     ],
     overlays: [
