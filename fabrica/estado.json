@@ -1574,8 +1574,9 @@
      "nota": "voz sin OK (regla voz_sin_ok del dueño)"
     }
    ],
-   "nota": ""
+   "nota": "",
+   "caracteres_voz": 1022
   }
  },
- "actualizado": "2026-11-27T09:28:08-03:00"
+ "actualizado": "2026-11-27T09:32:21-03:00"
 }

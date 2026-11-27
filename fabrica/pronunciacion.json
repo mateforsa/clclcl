@@ -253,5 +253,53 @@
    "Sígnel",
    "Sícnal"
   ]
+ },
+ "Rockstar": {
+  "dicho": "Rocstar",
+  "estado": "probada",
+  "puntaje": 0.96,
+  "variantes": [
+   "Rókstar",
+   "Rókestar",
+   "Rocstar",
+   "Rock-star",
+   "Rockstar"
+  ]
+ },
+ "IWGB": {
+  "dicho": "i dóbliu ye be",
+  "estado": "probada",
+  "puntaje": 0.9,
+  "variantes": [
+   "ái dóbliu yi bi",
+   "ái dábliu yí bí",
+   "i dóbliu ye be",
+   "i doble ve ge be",
+   "I, W, G, B"
+  ]
+ },
+ "Discord": {
+  "dicho": "Dískord",
+  "estado": "probada",
+  "puntaje": 0.94,
+  "variantes": [
+   "Díscord",
+   "Díscor",
+   "Discord",
+   "Dískord",
+   "Dís-cord"
+  ]
+ },
+ "The Register": {
+  "dicho": "The Register",
+  "estado": "probada",
+  "puntaje": 0.47,
+  "variantes": [
+   "De Réyister",
+   "Da Réyister",
+   "The Réyister",
+   "De Régister",
+   "The Register"
+  ]
  }
 }
