@@ -1536,7 +1536,7 @@
     "https://www.engadget.com/2329177/workers-gta-6-studio-rockstar-games-vote-against-union-recognition/"
    ],
    "puntaje": 7.3,
-   "etapa": "render",
+   "etapa": "revision",
    "creado": "2026-11-27T02:43:16-03:00",
    "historial": [
     {
@@ -1587,11 +1587,16 @@
      "etapa": "render",
      "cuando": "2026-11-27T09:51:06-03:00",
      "nota": "devuelto por el revisor: uniones <14 px (empleados|del 9,8 px 9,27 s; Unido|terminaron 11,3 px 10,0-10,5 s; sentarse|con 10,0 px 34,8 s; según|The Register. 12,9 px 43,9-44,8 s; empleados|del 13,8 px 8,8-9,2 s) -> marcar palabra clave en beats.ts; placas pill/tag por debajo de 1500 px (franja de Instagram); pared lila detrás de los subtítulos en planos interiores (no dichas 2,3-2,6:1); GTA 6 sigue marcado por el oído (probar variantes o dejar PRONUNCIACIÓN SIN RESOLVER)"
+    },
+    {
+     "etapa": "revision",
+     "cuando": "2026-11-27T10:02:31-03:00",
+     "nota": ""
     }
    ],
-   "nota": "devuelto por el revisor: uniones <14 px (empleados|del 9,8 px 9,27 s; Unido|terminaron 11,3 px 10,0-10,5 s; sentarse|con 10,0 px 34,8 s; según|The Register. 12,9 px 43,9-44,8 s; empleados|del 13,8 px 8,8-9,2 s) -> marcar palabra clave en beats.ts; placas pill/tag por debajo de 1500 px (franja de Instagram); pared lila detrás de los subtítulos en planos interiores (no dichas 2,3-2,6:1); GTA 6 sigue marcado por el oído (probar variantes o dejar PRONUNCIACIÓN SIN RESOLVER)",
+   "nota": "",
    "caracteres_voz": 1022
   }
  },
- "actualizado": "2026-11-27T09:59:04-03:00"
+ "actualizado": "2026-11-27T10:02:31-03:00"
 }
