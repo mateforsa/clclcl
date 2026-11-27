@@ -152,7 +152,7 @@ export const BEATS: BeatSpec[] = [
   // 12. UCA: el 61% se saltó una comida en el trabajo por plata
   { id: 'b12', set: 'void', cam: { from: [0.7, 2.5, 7.8], to: [-0.2, 2.3, 7.0], look: [0, 1.1, 0], fov: 44 }, keywords: ['encuesta', 'Universidad', '61%', 'trabajadores', 'plata.'],
     actors: [
-      ...[0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map((i) => ({ type: 'person', pos: [-1.2 + (i % 5) * 0.6, 0, i < 5 ? -0.6 : 0.4] as any, s: 0.72, at: i * 0.05, out: i < 6 ? 'saltó' : undefined,
+      ...[0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map((i) => ({ type: 'person', pos: [-1.2 + (i % 5) * 0.6, 0, i < 5 ? -0.6 : 0.4] as any, s: 0.72, at: i < 5 ? 0 : 0.1 + (i - 5) * 0.05, enter: (i < 5 ? 'none' : 'pop') as any, out: i < 6 ? 'saltó' : undefined,
         p: { shirt: ['#3b4a8a', '#8a6bff', C.cyan, '#2a7a6a', '#6b5aa8'][i % 5], hair: ['#3a2a1a', '#15102b', '#c98a3a', '#7a3b1a'][i % 4], pose: 'idle', phase: i } })),
       ...[0, 1, 2, 3, 4, 5].map((i) => ({ type: 'person', pos: [-1.2 + (i % 5) * 0.6, 0, i < 5 ? -0.6 : 0.4] as any, s: 0.72, at: 'saltó', enter: 'none' as const,
         p: { shirt: ['#3b4a8a', '#8a6bff', C.cyan, '#2a7a6a', '#6b5aa8'][i % 5], hair: ['#3a2a1a', '#15102b', '#c98a3a', '#7a3b1a'][i % 4], pose: 'sad', phase: i } })),
@@ -189,9 +189,9 @@ export const BEATS: BeatSpec[] = [
       { type: 'kiosco', pos: [0.45, 0, -0.9], p: { w: 1.4, h: 1.95, seed: 2 } },
       { type: 'person', pos: [-1.05, 0, 0.1], rot: [0, 0.35, 0], p: { ...KIOSQUERO, pose: 'idle' }, out: 'contá' },
       { type: 'person', pos: [-1.05, 0, 0.1], rot: [0, 0.35, 0], at: 'contá', enter: 'none', p: { ...KIOSQUERO, pose: 'point' } },
-      { type: 'alfajor', pos: [-0.25, 2.05, 0.1], s: 0.45, at: 'sale', bob: 0.05, p: { wrap: C.gold } },
-      { type: 'choco', pos: [0.4, 2.1, 0.1], s: 0.45, at: 'sale', bob: 0.05, p: {} },
-      { type: 'label', pos: [0.95, 2.1, 0.1], at: 'hoy', bob: 0.05, p: { text: '?', w: 0.5, h: 0.5, size: 0.95, color: C.gold, weight: 900 } },
+      { type: 'alfajor', pos: [-0.45, 1.85, 0.45], s: 0.45, at: 'sale', bob: 0.05, p: { wrap: C.gold } },
+      { type: 'choco', pos: [-0.45, 1.4, 0.45], s: 0.45, at: 'sale', bob: 0.05, p: {} },
+      { type: 'label', pos: [-0.45, 2.22, 0.45], at: 'hoy', bob: 0.05, p: { text: '?', w: 0.5, h: 0.5, size: 0.95, color: C.gold, weight: 900 } },
     ],
     overlays: [P1('¿TENÉS O TUVISTE UN KIOSCO?', 'kiosco', { size: 46 }), P2('CONTÁ QUÉ ES LO QUE MÁS SALE HOY', 'sale', { size: 40 })] },
 ];

@@ -1,2 +1,9 @@
 2026-11-27T11:51:36-03:00 [fabrica] idea creada: Colapinto en la FP1 de Qatar: 12°, a 0,028 de Hulkenberg y a medio segundo de Gasly
 2026-11-27T11:51:36-03:00 [fabrica] pedido directo del dueño (sin editor). Datos verificados en fabrica/candidatos/2026-11-27.md, sección 'Pedido del dueño 11:40'.
+2026-11-27T11:55:54-03:00 [guionista] guion escrito: 158 palabras (13 planos, unos 52-56 s), apertura tipo A8 la diferencia (mismo Alpine, Gasly 10° y Colapinto 12°, medio segundo), cierre tipo elegir entre dos con nombres (¿Colapinto o Lindblad?). Sin Hulkenberg. Pronunciación a confirmar: Gasly, Antonelli, Lindblad, Pirelli, Hamilton, Qatar, Colapinto
+2026-11-27T11:55:54-03:00 [fabrica] etapa -> guion
+2026-11-27T11:57:31-03:00 [verificador] APROBADO: 24 datos, todos con fuente (voz, placas y descripcion). Placa 7 va SIN comillas: DESGASTE MUCHO MAS ALTO DE LO ESPERADO (traduccion de 'much higher than expected', RaceFans), como ya preve el guion. Nunca sumo en Qatar chequeado tambien en sprints 2024 (18) y 2025 (20), 0 puntos.
+2026-11-27T11:57:32-03:00 [fabrica] etapa -> verificado
+2026-11-27T11:57:32-03:00 [fabrica] etapa -> esperando_ok_voz
+2026-11-27T11:58:01-03:00 [fabrica] título -> Colapinto en la FP1 de Qatar: 12°, a medio segundo de Gasly
+2026-11-27T11:58:01-03:00 [fabrica] voz SIN OK del dueño (regla voz_sin_ok): ~903 caracteres

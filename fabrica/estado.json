@@ -1682,22 +1682,43 @@
    "caracteres_voz": 1015
   },
   "colapinto-fp1-qatar": {
-   "titulo": "Colapinto en la FP1 de Qatar: 12°, a 0,028 de Hulkenberg y a medio segundo de Gasly",
+   "titulo": "Colapinto en la FP1 de Qatar: 12°, a medio segundo de Gasly",
    "tema": "fórmula 1 (pedido del dueño)",
    "fuentes": [
     "https://www.formula1.com/en/results/2026/races/1301/qatar/practice/1",
     "https://www.racefans.net/2026/11/27/antonelli-quickest-by-half-a-second-on-medium-tyre-compound-in-first-practice/"
    ],
    "puntaje": null,
-   "etapa": "idea",
+   "etapa": "voz",
    "creado": "2026-11-27T11:51:36-03:00",
    "historial": [
     {
      "etapa": "idea",
      "cuando": "2026-11-27T11:51:36-03:00"
+    },
+    {
+     "etapa": "guion",
+     "cuando": "2026-11-27T11:55:54-03:00",
+     "nota": ""
+    },
+    {
+     "etapa": "verificado",
+     "cuando": "2026-11-27T11:57:32-03:00",
+     "nota": ""
+    },
+    {
+     "etapa": "esperando_ok_voz",
+     "cuando": "2026-11-27T11:57:32-03:00",
+     "nota": ""
+    },
+    {
+     "etapa": "voz",
+     "cuando": "2026-11-27T11:58:01-03:00",
+     "nota": "voz sin OK (regla voz_sin_ok del dueño)"
     }
-   ]
+   ],
+   "nota": ""
   }
  },
- "actualizado": "2026-11-27T11:52:01-03:00"
+ "actualizado": "2026-11-27T11:58:01-03:00"
 }
