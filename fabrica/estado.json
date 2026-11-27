@@ -2317,7 +2317,24 @@
    ],
    "nota": "",
    "caracteres_voz": 958
+  },
+  "gta-v-nivel-del-mar": {
+   "titulo": "Científicos inundaron Los Santos de GTA V para mostrar la suba del mar",
+   "tema": "videojuegos",
+   "fuentes": [
+    "https://www.infobae.com/tecno/2026/11/27/cientificos-usaron-el-mapa-de-gta-v-para-simular-el-impacto-de-la-subida-del-nivel-del-mar-en-los-angeles/",
+    "https://www.xataka.com/ecologia-y-naturaleza/unos-geocientificos-alemanes-han-inundado-santos-ciudad-gta-para-ensenarnos-efectos-cambio-climatico-angeles"
+   ],
+   "puntaje": 7.8,
+   "etapa": "idea",
+   "creado": "2026-11-27T19:41:58-03:00",
+   "historial": [
+    {
+     "etapa": "idea",
+     "cuando": "2026-11-27T19:41:58-03:00"
+    }
+   ]
   }
  },
- "actualizado": "2026-11-27T19:31:19-03:00"
+ "actualizado": "2026-11-27T19:41:58-03:00"
 }
