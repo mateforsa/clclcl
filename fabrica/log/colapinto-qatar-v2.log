@@ -35,3 +35,5 @@
 2026-11-27T02:08:05-03:00 [fabrica] etapa -> render (devuelto por el revisor (2a pasada): la torre del plano 8 (25,4-27,4 s) pone a OTRO PILOTO en P6 antes de la sanción; el guion no dice en qué puesto cruzó el sancionado. Que no ocupe una fila numerada. Uniones de subtítulos ya OK (mínimo 14,71 px))
 2026-11-27T02:08:42-03:00 [productor] devuelto otra vez: el sancionado sale de la torre (P6 queda '· · ·'); cartel aparte 'OTRO PILOTO +10 s' delante de la torre, de 'penalización' a 'subió'. Mido uniones del plano 8
 2026-11-27T02:11:00-03:00 [productor] plano 8 medido (154 frames): la menor separación es 11 px dentro de una palabra (f770, 'Una penalización'); entre palabras, todas por encima de 14 px. Re-render
+2026-11-27T02:15:44-03:00 [productor] render listo: out/colapinto-qatar-v2/colapinto-qatar-v2.mp4, 54,5 s (-14,6 LUFS); plano 8 sin el sancionado en filas numeradas (cartel aparte 'OTRO PILOTO +10 s')
+2026-11-27T02:15:44-03:00 [fabrica] etapa -> revision
