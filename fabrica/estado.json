@@ -1625,7 +1625,7 @@
     "https://www.infobae.com/economia/2026/11/26/cerraron-mas-de-50000-kioscos-en-los-ultimos-tres-anos-y-el-sector-perdio-casi-la-mitad-de-sus-locales/"
    ],
    "puntaje": 8.3,
-   "etapa": "esperando_ok_final",
+   "etapa": "listo",
    "creado": "2026-11-27T10:48:21-03:00",
    "historial": [
     {
@@ -1686,6 +1686,11 @@
      "etapa": "esperando_ok_final",
      "cuando": "2026-11-27T12:02:19-03:00",
      "nota": ""
+    },
+    {
+     "etapa": "listo",
+     "cuando": "2026-11-27T12:38:18-03:00",
+     "nota": "aprobado por el dueño desde esperando_ok_final"
     }
    ],
    "nota": "",
@@ -1741,5 +1746,5 @@
    "caracteres_voz": 903
   }
  },
- "actualizado": "2026-11-27T12:35:19-03:00"
+ "actualizado": "2026-11-27T12:38:18-03:00"
 }
