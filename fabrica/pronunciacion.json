@@ -477,5 +477,51 @@
    "Mádrin",
    "Madrinn"
   ]
+ },
+ "Burford": {
+  "dicho": "Bérfor",
+  "estado": "probada",
+  "puntaje": 0.77,
+  "variantes": [
+   "Búrford",
+   "Bérford",
+   "Bórford",
+   "Burford",
+   "Bérfor"
+  ]
+ },
+ "Petersen": {
+  "dicho": "Pítersen",
+  "estado": "probada",
+  "puntaje": 0.66,
+  "variantes": [
+   "Petersen",
+   "Péter-sen",
+   "Pétersen",
+   "Pítersen",
+   "Péitersen"
+  ]
+ },
+ "CIADI": {
+  "dicho": "ce, i, a, de, i",
+  "estado": "probada",
+  "puntaje": 0.59,
+  "variantes": [
+   "ciádi",
+   "ce, i, a, de, i",
+   "siádi",
+   "ciadí"
+  ]
+ },
+ "YPF": {
+  "dicho": "YPF",
+  "estado": "probada",
+  "puntaje": 0.95,
+  "variantes": [
+   "i pe efe",
+   "ye pe efe",
+   "i griega pe efe",
+   "YPF"
+  ]
  }
 }

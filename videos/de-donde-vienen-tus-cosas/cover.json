@@ -1,0 +1,3 @@
+{ "beat": "b05", "frac": 0.95,
+  "overlay": { "kicker": "ARGENTINA", "y": 60,
+    "lines": [ { "t": "LO QUE TENÉS", "size": 128 }, { "t": "TIENE DOMICILIO", "c": "yellow", "size": 112 }, { "t": "5 CIUDADES QUE HACEN TUS COSAS", "size": 56, "c": "cyan" } ] } }

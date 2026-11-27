@@ -10,3 +10,8 @@
 2026-11-27T15:29:05-03:00 [fabrica] etapa -> verificado
 2026-11-27T15:29:05-03:00 [fabrica] etapa -> esperando_ok_voz
 2026-11-27T15:29:31-03:00 [fabrica] voz SIN OK del dueño (regla voz_sin_ok): ~1102 caracteres
+2026-11-27T15:29:54-03:00 [productor] arranco producción: pruebo pronunciación de Burford, Petersen, CIADI e YPF antes de la voz
+2026-11-27T15:29:54-03:00 [fabrica] ypf-burford-ciadi: la voz gasta unos 1102 caracteres de ElevenLabs. AVISO: no se puede leer el saldo (la clave no tiene ese permiso); anotalo en fabrica/config.json.
+2026-11-27T15:32:18-03:00 [productor] pruebas de pronunciación: YPF tal cual (ganadora 95 %); Burford como Búrford, Petersen como Pétersen y CIADI como ciádi (las tres transcriptas exactas por Whisper; las ganadoras por puntaje se oyeron Berfor, Peterson y letra por letra). Genero la voz.
+2026-11-27T15:33:33-03:00 [oido] oído: 99 % de coincidencia; dudosos: CIADI, Petersen (seguridad 11 %); diferencias: ciadi→seattle; petersen→peterson
+2026-11-27T15:34:27-03:00 [productor] vuelta 1 de voz: 68,1 s y Whisper oyó CIADI como 'Seattle' y Petersen como 'Peterson'. Saco el plano 10 (la placa del tribunal en formación pasa al plano 9), CIADI pasa a la ganadora 'ce, i, a, de, i' y regenero (vuelta 2).

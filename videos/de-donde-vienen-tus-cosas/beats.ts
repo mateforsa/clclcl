@@ -10,7 +10,7 @@ import { mp } from './props';
 // Textos 2D con el borde inferior en 1450 px o menos: placa 1 centrada en 64 %, placa 2 en 68,5 %, fuentes en 71,8 % y 74,2 %.
 
 const PANEL = 'rgba(20,10,46,.92)';
-const fit = (text: string, max: number) => Math.min(max, Math.floor(820 / (text.length * 0.66)));
+const fit = (text: string, max: number) => Math.min(max, Math.floor(820 / (text.length * 0.61)));
 const P1 = (text: string, at: any, o: any = {}) => ({ type: 'tag' as const, text, at, x: 47, y: 64, color: PANEL, size: fit(text, 46), ...o });
 const P2 = (text: string, at: any, o: any = {}) => ({ type: 'tag' as const, text, at, x: 47, y: 68.5, color: PANEL, size: fit(text, 40), ...o });
 const FUENTE = [
@@ -36,7 +36,7 @@ const RG8: [number, number][] = [[-0.78, -0.15], [-0.58, -0.15], [-0.8, 0.08], [
 const US2: [number, number][] = [[-0.8, 0.6], [-0.58, 0.62]];
 const KDF = 7, ODF: [number, number, number] = [1.88, 0, -10.78];
 
-export const BEATS: BeatSpec[] = [
+const BEATS0: BeatSpec[] = [
   // 1. Mirá el celular en el que ves esto.
   { id: 'b01', set: 'void', cam: Z({ from: [0.35, 1.7, 3.5], to: [0.05, 1.62, 3.0], look: [0, 1.38, 0], fov: 44 }), keywords: ['celular'],
     actors: [
@@ -101,12 +101,12 @@ export const BEATS: BeatSpec[] = [
     overlays: [P1('ARROYITO · CÓRDOBA', 'Arroyito'), ...FUENTE] },
 
   // 8. Ahí nació Arcor en 1951, por ARroyito y CÓRdoba.
-  { id: 'b08', set: 'void', cam: Z({ from: [-0.45, 2.2, 5.6], to: [0.05, 2.05, 5.0], look: [0, 0.95, -0.4], fov: 42 }), keywords: ['Arcor', '1951,', 'ARroyito', 'CÓRdoba.'],
+  { id: 'b08', set: 'void', cam: Z({ from: [-0.45, 3.1, 5.4], to: [0.05, 2.9, 4.8], look: [0, 0.85, -0.4], fov: 42 }), keywords: ['Arcor', '1951,', 'ARroyito', 'CÓRdoba.'],
     actors: [
-      { type: 'ring', pos: [0, 0.03, -1.4], p: { r: 0.8, color: C.gold } },
-      { type: 'casita', pos: [0, 0, -1.4], at: 'nació', enter: 'drop' },
+      { type: 'ring', pos: [0.95, 0.03, -1.3], p: { r: 0.6, color: C.gold } },
+      { type: 'casita', pos: [0.95, 0, -1.3], rot: [0, -0.4, 0], at: 'nació', enter: 'drop' },
       { type: 'caramelitos', pos: [0, 0, 0.9], enter: 'none', p: { n: 12, seed: 7, area: [2.6, 0.7], stagger: 0.01, drop: 0 } },
-      { type: 'siglas', pos: [0, 2.05, -0.6], at: 'Arcor', p: { hA: W('b08', 'ARroyito'), hB: W('b08', 'CÓRdoba') } },
+      { type: 'siglas', pos: [0, 1.75, -0.6], at: 'Arcor', p: { hA: W('b08', 'ARroyito'), hB: W('b08', 'CÓRdoba') } },
     ],
     overlays: [BIG('1951', '1951', { size: 104 }), P2('AR(royito) + COR(doba) = ARCOR', 'CÓRdoba', { y: 68.8 }), ...FUENTE] },
 
@@ -118,7 +118,7 @@ export const BEATS: BeatSpec[] = [
       { type: 'caramelitos', pos: [0, 0, 0.75], enter: 'none', p: { n: 8, seed: 2, area: [2.6, 0.6], stagger: 0.0, drop: 0 } },
       { type: 'caramelitos', pos: [0, 0, 0.6], at: 'mayor', enter: 'none', p: { n: 16, seed: 9, area: [2.8, 1.0], stagger: 0.07, drop: 2.2 } },
     ],
-    overlays: [P1('MAYOR FABRICANTE DE CARAMELOS DEL MUNDO', 'mayor'), P2('SEGÚN LA NACIÓN', 'mundo'), ...FUENTE] },
+    overlays: [P1('MAYOR FABRICANTE DE CARAMELOS DEL MUNDO', 'mayor', { size: 32 }), P2('SEGÚN LA NACIÓN', 'mundo'), ...FUENTE] },
 
   // 10. El aceite sale de moler granos.
   { id: 'b10', set: 'void', cam: Z({ from: [-0.4, 2.15, 5.0], to: [0.05, 2.0, 4.5], look: [0, 0.85, 0], fov: 42 }), keywords: ['aceite', 'granos.'],
@@ -150,7 +150,7 @@ export const BEATS: BeatSpec[] = [
       P2('70 KM DE COSTA · 30 TERMINALES · TIMBÚES A ARROYO SECO', 'toneladas', { y: 68.8 }), ...FUENTE] },
 
   // 13. Ninguna zona de puertos agrícolas del mundo sacó más (a escala, desde cero)
-  { id: 'b13', set: 'void', cam: Z({ from: [0.4, 2.0, 5.7], to: [0.0, 1.85, 5.1], look: [0, 0.75, 0], fov: 42 }), keywords: ['Ninguna', 'agrícolas', 'Comercio'],
+  { id: 'b13', set: 'void', cam: Z({ from: [0.4, 3.3, 5.4], to: [0.0, 3.1, 4.8], look: [0, 0.55, 0], fov: 42 }), keywords: ['Ninguna', 'agrícolas', 'Comercio'],
     actors: [
       { type: 'box', pos: [0, 0.04, 0], p: { size: [2.8, 0.08, 1.1], color: '#2d1a6e' } },
       { type: 'ranking', pos: [0, 0.08, 0], p: { max: 80, hmax: 1.6, w: 0.72, gap: 0.2, stagger: 0.3, items: [
@@ -163,7 +163,7 @@ export const BEATS: BeatSpec[] = [
   { id: 'b14', set: 'void', cam: Z(MAPCAM(-0.15)), keywords: ['satélite', 'Bariloche.'],
     actors: [
       { type: 'mapa', pos: [0.4, 0, 0.1], p: { dots: ALL, visited: ['rg', 'pm', 'ar', 'ro'], trail: [['rg', 'pm'], ['pm', 'ar'], ['ar', 'ro']], pin: { from: 'ro', to: 'ba', at: W('b14', 'Bariloche') - 0.3, dur: 0.7 } } },
-      { type: 'satelite', pos: [-2.0, 1.2, -1.2], s: 0.55, p: {}, move: { to: [1.0, 1.2, -1.2], at: 0, dur: 3.7 } },
+      { type: 'satelite', pos: [-1.9, 0.6, -1.5], s: 0.55, p: {}, move: { to: [1.2, 0.6, -1.5], at: 0, dur: 3.7 } },
     ],
     overlays: [P2('ARSAT-1 · ARMADO POR INVAP', 'satélite'), P1('BARILOCHE · RÍO NEGRO', 'Bariloche'), ...FUENTE] },
 
@@ -179,10 +179,15 @@ export const BEATS: BeatSpec[] = [
   // 16. Agarrá lo primero que tengas cerca, fijate dónde se hizo y contalo en los comentarios.
   { id: 'b16', set: 'void', cam: Z({ from: [0.5, 2.15, 5.0], to: [0.1, 2.05, 4.4], look: [0, 1.35, 0], fov: 44 }), keywords: ['cerca,', 'comentarios.'],
     actors: [
-      { type: 'agarre', pos: [0, 1.1, 0], p: { t1: W('b16', 'lo') + 0.1, t2: W('b16', 'primero') + 0.15, legs: 0.68, sleeve: '#1b1340', lift: 0.6 } },
+      { type: 'agarre', pos: [0, 1.1, 0], p: { t1: W('b16', 'lo') + 0.1, t2: W('b16', 'primero') + 0.3, legs: 0.68, sleeve: '#1b1340', lift: 0.6 } },
       { type: 'pregunta', pos: [1.05, 2.05, 0.1], at: 'fijate' },
-      { type: 'globito', pos: [-1.05, 1.95, 0.2], rot: [0, 0.2, 0], at: 'contalo', p: { c: C.cyan } },
-      { type: 'globito', pos: [-0.95, 2.55, 0.0], rot: [0, 0.2, 0], at: 'comentarios', p: { c: C.gold, w: 0.7 } },
+      { type: 'globito', pos: [-1.1, 1.95, 0.2], rot: [0, 0.2, 0], at: 'contalo', p: { c: C.cyan, w: 0.78 } },
+      { type: 'globito', pos: [-1.0, 2.55, 0.0], rot: [0, 0.2, 0], at: 'comentarios', p: { c: C.gold, w: 0.7 } },
     ],
     overlays: [P1('¿DÓNDE SE HIZO LO QUE TENÉS CERCA?', 'cerca'), P2('CONTALO EN LOS COMENTARIOS', 'comentarios')] },
 ];
+
+// encuadre vertical: sube el contenido para que nada importante quede detrás de las placas (negativo = más arriba)
+const SHIFT: Record<string, number> = { b01: -0.02, b02: -0.06, b03: -0.02, b04: -0.02, b05: -0.06, b06: -0.07, b07: -0.06, b08: -0.02,
+  b09: -0.05, b10: -0.05, b11: -0.06, b12: -0.06, b13: -0.04, b14: -0.01, b15: -0.02, b16: 0.0 };
+export const BEATS: BeatSpec[] = BEATS0.map((b) => ({ ...b, cam: { ...b.cam, shift: SHIFT[b.id] ?? b.cam.shift } }));
