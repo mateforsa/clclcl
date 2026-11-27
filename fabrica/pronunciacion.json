@@ -454,5 +454,28 @@
    "tres,",
    "... tres"
   ]
+ },
+ "Arcor": {
+  "dicho": "Ar-cor",
+  "estado": "probada",
+  "puntaje": 0.63,
+  "variantes": [
+   "Arcor",
+   "Arcór",
+   "Arkór",
+   "Ar-cor"
+  ]
+ },
+ "Madryn": {
+  "dicho": "Madrinn",
+  "estado": "probada",
+  "puntaje": 0.64,
+  "variantes": [
+   "Madryn",
+   "Madrín",
+   "Madrin",
+   "Mádrin",
+   "Madrinn"
+  ]
  }
 }
