@@ -56,8 +56,8 @@ export const BEATS: BeatSpec[] = [
       { type: 'ring', pos: [-1.15, 0.03, -0.6], p: { r: 0.55, color: C.gold } },
       { type: 'flecha', pos: [-0.38, 1.15, -1.9], at: 'otro', p: { len: 0.85, color: C.cyan, dur: 0.7 } },
       { type: 'edificio', pos: [1.05, 0, -2.2], at: 'tribunal', p: { w: 1.6, h: 2.1, d: 1.0, seed: 8, color: '#2d1a6e', sign: 'CIADI', signSub: 'BANCO MUNDIAL', signSize: 0.62 } },
-      { type: 'ring', pos: [1.0, 0.03, 0.2], at: 'CIADI', p: { r: 0.6, color: C.magenta } },
-      { type: 'balanza', pos: [0.55, 0, 0.2], s: 0.8, at: 'CIADI', p: { n: 11, from: 0, grow: 0.6, dur: 2.4, max: 0.14 } },
+      { type: 'ring', pos: [0.95, 0.03, 1.0], at: 'CIADI', p: { r: 0.5, color: C.magenta } },
+      { type: 'balanza', pos: [0.7, 0, 1.0], s: 0.7, at: 'CIADI', p: { n: 11, from: 0, grow: 0.6, dur: 2.4, max: 0.14 } },
     ],
     overlays: [P1('NUEVO RECLAMO: CIADI', 'CIADI', { size: 48 }), P2('REGISTRADO EL 15/9', 5.4, { out: 'del', size: 40 }),
       P2('DEPENDE DEL BANCO MUNDIAL', 'del', { size: 40 }), FUENTE] },
@@ -86,7 +86,7 @@ export const BEATS: BeatSpec[] = [
     overlays: [P1('EXPROPIACIÓN DE YPF · 2012', '2012', { size: 48 }), FUENTE] },
 
   // 7. reclaman dos sociedades Petersen; Burford tiene intereses en ese juicio
-  { id: 'b07', set: 'room', cam: { from: [0.6, 2.25, 7.0], to: [-0.15, 2.05, 6.3], look: [0, 0.8, -0.8], fov: 44 }, keywords: ['sociedades', 'intereses', 'juicio.'],
+  { id: 'b07', set: 'room', cam: { from: [0.6, 2.25, 7.0], to: [-0.15, 2.05, 6.3], look: [0, 0.8, -0.8], fov: 44 }, keywords: ['Reclaman', 'sociedades', 'intereses', 'juicio.'],
     actors: [
       { type: 'pared', p: {} },
       { type: 'edificio', pos: [-1.15, 0, -1.9], p: { w: 0.95, h: 2.0, d: 0.8, seed: 5, sign: 'PETERSEN', signSize: 0.6 } },
@@ -163,7 +163,7 @@ export const BEATS: BeatSpec[] = [
     overlays: [P1('NUEVA YORK: ~US$ 16.000 M', '16.000', { size: 46 }), P2('CIADI: US$ 14.400 M + INTERESES', '14.400', { size: 40 }), FUENTE] },
 
   // 13. hasta el 2 de diciembre para responder en la Corte Suprema de EE.UU.
-  { id: 'b13', set: 'room', cam: { from: [0.6, 2.25, 6.8], to: [-0.15, 2.05, 6.1], look: [0, 0.8, -0.8], fov: 44 }, keywords: ['Argentina', '2', 'diciembre', 'Suprema', 'Estados'],
+  { id: 'b13', set: 'room', cam: { from: [0.6, 2.25, 6.8], to: [-0.15, 2.05, 6.1], look: [0, 0.8, -0.8], fov: 44 }, keywords: ['Argentina', '2', 'diciembre', 'responder', 'Suprema', 'Estados'],
     actors: [
       { type: 'pared', p: {} },
       { type: 'desk', pos: [0.45, 0, -0.9] },

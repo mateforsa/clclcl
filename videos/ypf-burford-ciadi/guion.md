@@ -28,6 +28,8 @@ Video vertical 1080x1920, 30 fps, unos 0:60 a 0:65, 14 planos, sin carteles de c
 
 ## Guion final (una línea por plano)
 
+> Producción (27/11): la toma con el plano 10 duraba 68,1 s; se sacó "Y el tribunal recién se está formando" (quedan 13 planos, 67,1 s). La placa `TRIBUNAL EN FORMACIÓN` va como cartel 3D en el plano 9, con las sillas `ÁRBITRO · NEUTRAL · ÁRBITRO`. CIADI se dice deletreado ("ce, i, a, de, i").
+
 | # | Tiempo | Texto |
 |---|--------|-------|
 | 1 | 0:00 | Si creés que el juicio por YPF se terminó en marzo, te falta un dato. |

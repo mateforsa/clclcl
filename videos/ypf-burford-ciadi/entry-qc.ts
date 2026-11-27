@@ -1,7 +1,0 @@
-// TEMPORAL (control de calidad): el video sin subtítulos ni placas, para medir la franja de subtítulos. Se borra después.
-import { registerRoot } from 'remotion';
-import timing from './timing.json';
-import { BEATS } from './beats';
-import { EXTRA } from './props';
-import { makeRoot } from '../../src/Video';
-registerRoot(makeRoot(timing, BEATS.map((b) => ({ ...b, noSubs: true, overlays: [] })), EXTRA));
