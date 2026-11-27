@@ -71,7 +71,7 @@ export const Stage: React.FC<P> = ({ t, p }) => {
           <Flat s={[1.08, 0.68]} pos={[0, 0, 0.03]} c={i % 3 === 0 ? '#0f3b2a' : i % 3 === 1 ? '#3b1414' : '#2e2610'} o={on ? 0.95 : 0.6} />
           {[0, 1, 2].map((r) => <Flat key={r} s={[0.2 + ((i * 3 + r) % 5) * 0.14, 0.06]} pos={[-0.3, 0.2 - r * 0.18, 0.04]} c={i % 3 === 0 ? UP : i % 3 === 1 ? DOWN : AMBER} o={0.8} />)}
         </group>; })}
-      <group position={[0, 0.45, -3.6]}><B s={[8.4, 0.34, 0.06]} c="#05090a" /><Flat s={[8.2, 0.26]} pos={[0, 0, 0.04]} map={tick} /></group>
+      {p.ticker !== false && <group position={[0, 0.45, -3.6]}><B s={[8.4, 0.34, 0.06]} c="#05090a" /><Flat s={[8.2, 0.26]} pos={[0, 0, 0.04]} map={tick} /></group>}
     </group>
   );
 };
@@ -177,7 +177,7 @@ export const Lolli: React.FC<P> = ({ t, tt, p }) => {
     <group>
       {len > 0.005 && <B s={[0.07, len, 0.07]} pos={[0, (y0 + y1) / 2, 0]} c={col} e={col} ei={0.9} />}
       <mesh position={[0, y1, 0]}><sphereGeometry args={[r, 10, 8]} /><M c={col} e={col} ei={1.4} /></mesh>
-      {day && <group position={[0, 0.16, 0.25]} rotation={[-0.5, 0, 0]}><Label t={t} tt={tt} p={{ text: day, w: 0.62, h: 0.24, bg: '#1b2a30', color: '#e8f4ef', size: 0.68, weight: 800, depth: 0 }} /></group>}
+      {day && <group position={[0, 0.16, 0.25]} rotation={[-0.5, 0, 0]}><Label t={t} tt={tt} p={{ text: day, w: 0.62, h: 0.3, bg: '#1b2a30', color: '#e8f4ef', size: 0.58, weight: 800, depth: 0 }} /></group>}
       {tag && <group position={[0, y1 + (cur >= 83 ? 0.3 : -0.3), 0.08]}><Label t={t} tt={tt} p={{ text: tag, w: 0.86, h: 0.3, bg: col, color: INK, size: 0.68, weight: 900, depth: 0.03 }} /></group>}
     </group>
   );

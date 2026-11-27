@@ -20,3 +20,6 @@
 2026-11-27T00:01:55-03:00 [productor] vuelta 1: Zscaler -> Zí Eskéiler (72%), Wiz -> Güíz (40%); regenero la voz
 2026-11-27T00:02:44-03:00 [oido] oído: 97 % de coincidencia; dudosos: Wiz, Zscaler; diferencias: zscaler→c skyler; wiz→wish; por ciento→
 2026-11-27T00:02:52-03:00 [productor] oído vuelta 1: 97%; Whisper oye C.Skyler y Wish. Pruebo segunda tanda
+2026-11-27T00:04:41-03:00 [productor] oído vuelta 2: ninguna variante supera a las de la voz actual (Zí Eskéiler 72%, Güíz 40%); no regenero. Glosario: dejo esas dos como probadas (la 2.a tanda había anotado ganadoras peores)
+2026-11-27T00:04:41-03:00 [productor] PRONUNCIACIÓN SIN RESOLVER: Zscaler (Whisper oye C.Skyler; audios en fabrica/pronunciacion/zscaler/todas.mp3)
+2026-11-27T00:04:41-03:00 [productor] PRONUNCIACIÓN SIN RESOLVER: Wiz (Whisper oye Wish/Whiz; audios en fabrica/pronunciacion/wiz/todas.mp3)

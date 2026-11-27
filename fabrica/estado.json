@@ -975,9 +975,14 @@
      "etapa": "render",
      "cuando": "2026-11-27T00:03:52-03:00",
      "nota": "devuelto por el revisor: subtítulos pegados a 9,67 s (días|después, 10,65 px) y 18,73 s (cada|acción, 13,47 px); placas que tapan texto en b11 (39,7 s), b12 (42,5-45,3 s, VIE/MAR/MIÉ cortados) y b13 (45,3-48,1 s, ticker cortado por la raya y la bola)"
+    },
+    {
+     "etapa": "render",
+     "cuando": "2026-11-27T00:09:23-03:00",
+     "nota": ""
     }
    ],
-   "nota": "devuelto por el revisor: subtítulos pegados a 9,67 s (días|después, 10,65 px) y 18,73 s (cada|acción, 13,47 px); placas que tapan texto en b11 (39,7 s), b12 (42,5-45,3 s, VIE/MAR/MIÉ cortados) y b13 (45,3-48,1 s, ticker cortado por la raya y la bola)",
+   "nota": "",
    "caracteres_voz": 854
   },
   "starship-atrapada-v2": {
@@ -1236,5 +1241,5 @@
    "caracteres_voz": 836
   }
  },
- "actualizado": "2026-11-27T00:03:52-03:00"
+ "actualizado": "2026-11-27T00:09:23-03:00"
 }

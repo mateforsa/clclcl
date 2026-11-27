@@ -68,10 +68,16 @@
   ]
  },
  "Zscaler": {
-  "dicho": "Zee-Skeiler",
+  "dicho": "Zí Eskéiler",
   "estado": "probada",
-  "puntaje": 0.6,
+  "puntaje": 0.72,
   "variantes": [
+   "Zi Skéiler",
+   "Zí Eskéiler",
+   "Zeta Skéiler",
+   "Zskéiler",
+   "Zscaler",
+   "Zi-scaler",
    "Zí Esquéiler",
    "Zi Escéler",
    "Zee Scaler",
@@ -80,15 +86,45 @@
   ]
  },
  "Wiz": {
-  "dicho": "Güiz",
+  "dicho": "Güíz",
   "estado": "probada",
   "puntaje": 0.4,
   "variantes": [
+   "Uíz",
+   "Güíz",
+   "Wiz",
+   "Wizz",
+   "Uiss",
    "Güís",
    "Whiz",
    "Guízz",
    "Uízz",
    "Güiz"
+  ]
+ },
+ "SoSoValue": {
+  "dicho": "Sóu sóu Váliu",
+  "estado": "probada",
+  "puntaje": 0.76,
+  "variantes": [
+   "Sóso Váliu",
+   "Soso Váliu",
+   "Sóu sóu Váliu",
+   "Sosováliu",
+   "SoSoValue",
+   "Sóso Vályu"
+  ]
+ },
+ "Bitcoin": {
+  "dicho": "Bítkoin",
+  "estado": "probada",
+  "puntaje": 0.47,
+  "variantes": [
+   "Bítcoin",
+   "Bít coin",
+   "Bítkoin",
+   "Bitcoin",
+   "Bit-coin"
   ]
  }
 }
