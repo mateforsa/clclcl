@@ -54,16 +54,16 @@ export const Stage: React.FC<P> = ({ t, p }) => {
       <pointLight position={[-2.2, 1.6, 0.6]} intensity={9} color={AMBER} distance={6} />
       <Flat s={[24, 24]} pos={[0, 0.02, 0]} rot={[-Math.PI / 2, 0, 0]} map={carpet} />
       <B s={[12, 0.5, 0.2]} pos={[0, 0.25, -3.75]} c="#26384d" />
-      <Flat s={[9, 2.2]} pos={[0, 1.6, -3.86]} map={night} />
-      <Snow t={t} w={8.6} h={2.1} y0={0.55} z={-3.8} />
+      <Flat s={[9, 2.2]} pos={[0, 1.6, -3.64]} map={night} />
+      <Snow t={t} w={8.6} h={2.1} y0={0.55} z={-3.6} />
       <group position={[1.6, 1.25, -5.0]} rotation={[0, -0.35, 0]} scale={0.75}>
         <Cyl r={0.34} h={4.4} rot={[0, 0, Math.PI / 2]} c="#c9d3dc" /><B s={[1.0, 0.06, 4.4]} pos={[0.2, -0.08, 0]} c="#aebbc7" />
         <B s={[0.55, 1.0, 0.06]} pos={[-2.0, 0.55, 0]} c={RED} />
         {Array.from({ length: 10 }, (_, i) => <B key={i} s={[0.1, 0.08, 0.02]} pos={[-1.2 + i * 0.26, 0.1, 0.34]} c={AMBER} e={AMBER} ei={1.2} />)}
       </group>
-      {[-4.5, -3, -1.5, 0, 1.5, 3, 4.5].map((x) => <B key={x} s={[0.1, 2.3, 0.14]} pos={[x, 1.6, -3.72]} c="#0e1724" />)}
-      <B s={[12, 0.12, 0.16]} pos={[0, 2.72, -3.72]} c="#0e1724" />
-      <B s={[12, 0.04, 0.18]} pos={[0, 2.8, -3.7]} c={ICE} e={ICE} ei={0.5} />
+      {[-4.5, -3, -1.5, 0, 1.5, 3, 4.5].map((x) => <B key={x} s={[0.1, 2.3, 0.14]} pos={[x, 1.6, -3.56]} c="#0e1724" />)}
+      <B s={[12, 0.12, 0.16]} pos={[0, 2.72, -3.56]} c="#0e1724" />
+      <B s={[12, 0.04, 0.18]} pos={[0, 2.8, -3.54]} c={ICE} e={ICE} ei={0.5} />
       <B s={[12, 6, 0.2]} pos={[0, 5.8, -3.75]} c={NAVY} />
       {[-4.3, 4.3].map((x) => <B key={x} s={[0.2, 9, 12]} pos={[x, 4.5, 0]} c={NAVY2} />)}
       {p.sign && <group position={[-2.35, 2.25, -3.0]}>
@@ -167,12 +167,12 @@ export const Stage: React.FC<P> = ({ t, p }) => {
       <pointLight position={[0, 3.2, 3.0]} intensity={22} color="#e6eeff" distance={12} />
       <pointLight position={[-1.8, 1.4, 1.2]} intensity={10} color={AMBER} distance={6} />
       <Flat s={[24, 24]} pos={[0, 0.02, 0]} rot={[-Math.PI / 2, 0, 0]} c="#3a4350" />
-      <Flat s={[12, 6]} pos={[0, 3, -5.5]} map={sky} />
-      {Array.from({ length: 6 }, (_, i) => <B key={i} s={[7, 0.3, 0.6]} pos={[0, 0.15 + i * 0.3, -0.2 - i * 0.6]} c={i % 2 ? '#c9cdd3' : '#bcc1c8'} />)}
-      <B s={[7, 0.2, 2]} pos={[0, 1.9, -4.6]} c="#c9cdd3" />
-      {[-2.4, -1.2, 0, 1.2, 2.4].map((x) => <group key={x} position={[x, 2.0, -4.3]}>
+      <Flat s={[9, 8]} pos={[0, 4, -3.86]} map={sky} />
+      {Array.from({ length: 5 }, (_, i) => <B key={i} s={[7, 0.3 * (i + 1), 0.55]} pos={[0, 0.15 * (i + 1), -0.2 - i * 0.55]} c={i % 2 ? '#c9cdd3' : '#bcc1c8'} />)}
+      <B s={[7, 1.5, 1.2]} pos={[0, 0.75, -3.15]} c="#c9cdd3" />
+      {[-2.4, -1.2, 0, 1.2, 2.4].map((x) => <group key={x} position={[x, 1.5, -3.35]}>
         <Cyl r={0.22} h={2.6} pos={[0, 1.3, 0]} c="#dfe3e8" seg={12} /></group>)}
-      <B s={[6.4, 0.35, 0.7]} pos={[0, 4.75, -4.3]} c="#dfe3e8" />
+      <B s={[6.4, 0.35, 0.6]} pos={[0, 4.25, -3.35]} c="#dfe3e8" />
     </group>
   );
 };
@@ -271,11 +271,11 @@ export const Paper: React.FC<P> = ({ t, p }) => {
 
 /* ---------- Banderín con texto sobre un palito ---------- */
 export const Pin: React.FC<P> = ({ t, tt, p }) => {
-  const { text = '', color = RED, h = 0.6 } = p;
+  const { text = '', color = RED, h = 0.6, side = 1 } = p;
   return (<group>
     <mesh position={[0, 0.03, 0]}><sphereGeometry args={[0.06, 10, 8]} /><M c={color} e={color} ei={1} /></mesh>
     <B s={[0.025, h, 0.025]} pos={[0, h / 2, 0]} c="#e6e6e6" />
-    <group position={[0.36, h - 0.12, 0]}><Label t={t} tt={tt} p={{ text, w: 0.68, h: 0.22, bg: color, color: '#fff', size: 0.66, weight: 900, depth: 0.02 }} /></group>
+    <group position={[side * 0.36, h - 0.12, 0]}><Label t={t} tt={tt} p={{ text, w: 0.68, h: 0.22, bg: color, color: '#fff', size: 0.66, weight: 900, depth: 0.02 }} /></group>
   </group>);
 };
 
@@ -414,7 +414,7 @@ export const Form: React.FC<P> = ({ t, tt, p }) => {
     <B s={[0.62, 0.03, 0.01]} pos={[0.33, -0.39, 0.025]} c={NAVY} />
     {on && <B s={[0.03, 0.17, 0.01]} pos={[0.06, -0.3, 0.03]} c={RED} e={RED} ei={1} />}
     {[-0.6, -0.75].map((y, i) => <B key={y} s={[0.9 - i * 0.3, 0.03, 0.01]} pos={[-0.12 - i * 0.15, y, 0.025]} c="#9aa3ad" />)}
-    <B s={[0.06, 1.9, 0.06]} pos={[0, -0.3, -0.12]} rot={[0.25, 0, 0]} c="#3b2a1d" />
+    {[-0.6, 0.6].map((x) => <B key={x} s={[0.06, 1.0, 0.06]} pos={[x, -1.3, -0.04]} c="#3b2a1d" />)}
   </group>);
 };
 

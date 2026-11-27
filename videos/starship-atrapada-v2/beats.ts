@@ -43,7 +43,7 @@ export const BEATS: BeatSpec[] = [
     overlays: [tag('LA "MOSCA": UNOS 50 METROS', 'mosca', { size: 46, y: T1 }), tag('VIENE DEL ESPACIO', 'viene', { color: TEAL, size: 46, y: T2 })] },
 
   // 3. Pasó el 14 de noviembre en Texas, con la nave Starship de SpaceX.  (travelling lateral por la playa)
-  { id: 'b03', set: 'room', cam: { from: [1.3, 1.5, 7.4], to: [-0.6, 1.9, 7.2], look: [0.3, 1.6, 0], lookTo: [-0.2, 1.8, 0], fov: 46 }, keywords: ['14', 'Texas', 'Starship'],
+  { id: 'b03', set: 'room', cam: { from: [1.3, 1.5, 7.4], to: [-0.6, 1.9, 7.2], look: [0.3, 1.6, 0], lookTo: [-0.2, 1.8, 0], fov: 46 }, keywords: ['14', 'noviembre', 'Texas', 'Starship'],
     actors: [
       COAST,
       { type: 'tower', pos: [-1.0, 0, -0.6], s: 0.95, p: { armY: 2.3 } },
@@ -64,7 +64,7 @@ export const BEATS: BeatSpec[] = [
     overlays: [tag('14 VUELTAS A LA TIERRA', '14', { color: ORANGE, size: 50, y: T1 }), tag('22 H 30 MIN', '22', { color: TEAL, size: 50, y: T2 })] },
 
   // 5. Prendió los motores, frenó en el aire y dos brazos de la torre la atraparon.  (contrapicado desde la arena)
-  { id: 'b05', set: 'room', cam: { from: [1.3, 0.45, 6.2], to: [0.6, 0.85, 5.5], look: [0.1, 2.0, 0], lookTo: [-0.1, 2.0, 0], fov: 48 }, keywords: ['motores', 'brazos'],
+  { id: 'b05', set: 'room', cam: { from: [1.3, 0.45, 6.2], to: [0.6, 0.85, 5.5], look: [0.1, 2.0, 0], lookTo: [-0.1, 2.0, 0], fov: 48 }, keywords: ['motores', 'brazos', 'atraparon'],
     actors: [
       COAST,
       { type: 'tower', pos: [-0.95, 0, 0], p: { armY: 2.3, close: 3.95 } },
@@ -122,10 +122,9 @@ export const BEATS: BeatSpec[] = [
   { id: 'b10', set: 'room', cam: { from: [0.6, 4.2, 5.0], to: [-0.4, 3.0, 5.6], look: [0, 1.2, 0], lookTo: [0, 0.6, 0], fov: 46 }, keywords: ['perdió', 'Golfo'],
     actors: [
       SEA,
-      { type: 'booster', pos: [0.5, 2.6, 0], rot: [0, 0, 0.7], s: 0.6, out: 'perdió', p: { center: true }, move: { to: [0.05, 0.4, 0.2], at: 0.1, dur: 0.85 } },
-      { type: 'burst', pos: [0.05, 0.4, 0.2], at: 'perdió', enter: 'none', p: { r: 0.6 } },
-      { type: 'splash', pos: [0.05, 0, 0.2], at: 'perdió', enter: 'none', p: { r: 0.8 } },
-      { type: 'debris', pos: [0.05, 0, 0.2], at: 'Golfo', enter: 'none', p: { n: 12, spread: 1.0, seed: 3 } },
+      { type: 'booster', pos: [0.5, 2.6, 0], rot: [0, 0, 0.5], s: 0.6, p: { center: true }, move: { to: [0.0, -1.9, 0.2], at: 0.1, dur: 1.5 } },
+      { type: 'splash', pos: [0.1, 0, 0.2], at: 'perdió', enter: 'none', p: { r: 0.8 } },
+      { type: 'ring', pos: [0.1, 0.03, 0.2], at: 'Golfo', p: { r: 0.6, color: '#bfefff' } },
     ],
     overlays: [tag('VUELO 15: PROPULSOR PERDIDO', 'perdió', { color: RED, size: 46, y: T1 }), tag('GOLFO DE MÉXICO', 'Golfo', { color: TEAL, size: 46, y: T2 })] },
 
@@ -154,10 +153,10 @@ export const BEATS: BeatSpec[] = [
     overlays: [tag('LAS DOS MITADES EN UN VUELO:', 'dos', { size: 44, y: T1 }), tag('PENDIENTE', 'pendiente', { color: ORANGE, size: 52, y: T2 })] },
 
   // 13. Al 26 de noviembre, el vuelo 16 apunta a diciembre, sin fecha confirmada.  (grúa que sube por el cohete nuevo, de noche)
-  { id: 'b13', set: 'room', cam: { from: [0.7, 0.6, 6.4], to: [0.2, 2.1, 7.3], look: [0, 1.0, 0], lookTo: [0, 1.75, 0], fov: 46 }, keywords: ['16', 'confirmada'],
+  { id: 'b13', set: 'room', cam: { from: [0.7, 0.6, 6.4], to: [0.2, 2.1, 7.3], look: [0, 1.0, 0], lookTo: [0, 1.75, 0], fov: 46 }, keywords: ['noviembre', '16', 'confirmada'],
     actors: [
       NIGHT,
-      { type: 'tower', pos: [-1.05, 0, -0.3], p: { armY: 2.4 } },
+      { type: 'tower', pos: [-1.05, 0, -0.3], p: { H: 2.8, armY: 2.2 } },
       { type: 'booster', pos: [0.45, 0.06, -0.3], s: 0.6 },
       { type: 'ship', pos: [0.45, 1.74, -0.3], s: 0.6, at: 'vuelo', enter: 'drop' },
       { type: 'hourglass', pos: [-0.35, 0.06, 0.9], s: 0.7, at: 'sin' },
