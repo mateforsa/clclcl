@@ -823,7 +823,7 @@
    "tema": "",
    "fuentes": [],
    "puntaje": null,
-   "etapa": "voz",
+   "etapa": "revision",
    "creado": "2026-11-26T23:17:40-03:00",
    "rehace": "crowdstrike-zscaler",
    "publicar_prueba_al_terminar": true,
@@ -872,6 +872,11 @@
      "etapa": "voz",
      "cuando": "2026-11-26T23:36:24-03:00",
      "nota": "voz sin OK (regla voz_sin_ok del dueño)"
+    },
+    {
+     "etapa": "revision",
+     "cuando": "2026-11-27T00:21:51-03:00",
+     "nota": ""
     }
    ],
    "nota": "",
@@ -926,7 +931,7 @@
    "tema": "",
    "fuentes": [],
    "puntaje": null,
-   "etapa": "render",
+   "etapa": "esperando_ok_final",
    "creado": "2026-11-26T23:17:40-03:00",
    "rehace": "anthropic-ipo",
    "publicar_prueba_al_terminar": true,
@@ -985,9 +990,14 @@
      "etapa": "render",
      "cuando": "2026-11-27T00:09:23-03:00",
      "nota": ""
+    },
+    {
+     "etapa": "esperando_ok_final",
+     "cuando": "2026-11-27T00:21:11-03:00",
+     "nota": "Aprobado por el revisor. Observación: Anthropic se oye 'Antropic' (pronunciación sin resolver, decide el dueño)"
     }
    ],
-   "nota": "",
+   "nota": "Aprobado por el revisor. Observación: Anthropic se oye 'Antropic' (pronunciación sin resolver, decide el dueño)",
    "caracteres_voz": 854
   },
   "starship-atrapada-v2": {
@@ -1262,5 +1272,5 @@
    "caracteres_voz": 836
   }
  },
- "actualizado": "2026-11-27T00:18:40-03:00"
+ "actualizado": "2026-11-27T00:21:51-03:00"
 }

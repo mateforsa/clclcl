@@ -28,3 +28,5 @@
 2026-11-27T00:15:50-03:00 [fabrica] etapa -> render
 2026-11-27T00:15:50-03:00 [productor] audio mezclado; lanzo el render
 2026-11-27T00:18:26-03:00 [productor] portada lista: instagram/portadas/crowdstrike-zscaler-v2.jpg (TE DEJÓ SIN VUELO, kicker PANTALLA AZUL); esperando render
+2026-11-27T00:21:51-03:00 [productor] render listo: out/crowdstrike-zscaler-v2/crowdstrike-zscaler-v2.mp4, 55 s (1080x1920, 30 fps, con audio; hojas qc sin cuadros rotos)
+2026-11-27T00:21:51-03:00 [fabrica] etapa -> revision
