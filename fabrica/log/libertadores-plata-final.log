@@ -9,3 +9,4 @@
 2026-11-27T18:26:59-03:00 [dueño] APROBADO (esperando_ok_voz -> voz)
 2026-11-27T18:27:38-03:00 [productor] arranco producción: pruebo pronunciación de Palmeiras, Vitor Roque, Transfermarkt y Corinthians antes de la voz
 2026-11-27T18:27:38-03:00 [fabrica] libertadores-plata-final: la voz gasta unos 994 caracteres de ElevenLabs. AVISO: no se puede leer el saldo (la clave no tiene ese permiso); anotalo en fabrica/config.json.
+2026-11-27T18:29:30-03:00 [productor] pronunciación probada: Palméiras (90%), Vitór Roque (79%, 2 rondas), Trans-fer-mark (71%), Corintians (67%). Genero voz (toma 1)
