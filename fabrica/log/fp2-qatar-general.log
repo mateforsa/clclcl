@@ -2,3 +2,7 @@
 2026-11-27T18:28:52-03:00 [fabrica] pedido directo del dueño. Datos verificados en fabrica/investigacion/fp2-qatar-2026.md
 2026-11-27T18:33:36-03:00 [guionista] guion escrito: 168 palabras (14 planos, unos 55-60 s), apertura tipo G63 un tiempo (13 minutos extra, dos rojas y aun así Mercedes 1-2 sin cerrar vuelta con blandas), cierre tipo un número (¿Cuántas décimas le saca a McLaren el sábado?). Colapinto en una línea (15°). Sin Hamilton ni VSC. Pronunciación a confirmar: Mercedes, Russell, Norris, Leclerc, Briatore, McLaren
 2026-11-27T18:33:36-03:00 [fabrica] etapa -> guion
+2026-11-27T18:35:25-03:00 [verificador] APROBADO: 30 datos, todos con fuente (13 min y 2 rojas: F1REP/TR2/IBGAS; roja 1 Leclerc gravel+pieza: TR2/RF2/TYCGAS; roja 2 Gasly salida curva 14, 22 min: RF2/TYCGAS/IBGAS; Estoy estancado: TYCGAS/IBGAS; Briatore se fue: TYCGAS/IBGAS; Antonelli y Colapinto sin blandas: RF2/F1REP/TYCGAS/IBGAS; ningun Mercedes con blandas: Shovlin F1TEAMS/TR2; 1-2, medias, 15 y diferencias: F1R2/RF2/F1REP/TR2; 7 decimas atribuido a Norris: F1NOR/F1TEAMS; 27 v, 57 v, 2 paradas: F1ANT/TRTYRE/F1SCHED; 1-2 FP1: F1REP/F1R1/RF1; horarios: LNHORA y F1SCHED +6)
+2026-11-27T18:35:25-03:00 [fabrica] etapa -> verificado
+2026-11-27T18:35:26-03:00 [fabrica] etapa -> esperando_ok_voz
+2026-11-27T18:35:56-03:00 [fabrica] voz SIN OK del dueño (regla voz_sin_ok): ~958 caracteres
