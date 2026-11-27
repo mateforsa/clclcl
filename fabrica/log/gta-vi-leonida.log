@@ -34,3 +34,7 @@
 2026-11-26T21:51:20-03:00 [fabrica] regla nueva del dueño anotada en docs/COMO-HACER-UN-VIDEO.md y en el guionista: sin 'parte N' salvo continuación de la misma historia
 2026-11-26T21:52:03-03:00 [guionista] sin 'parte 6' por pedido del dueño: plano 15 queda 'Mandáselo al que lo espera en PC.'; título, título 2, descripción y cabecera sin número; 161 palabras dichas; apertura G67 un cero y cierre H79 pedido de compartir sin cambios. Productor: placa del plano 15 'GTA VI · PARTE 6' -> 'GTA VI', sacar casilleros 1-5 y '6' y la palabra clave 'seis'; kicker de portada -> 'GTA VI'; voz nueva
 2026-11-26T21:52:03-03:00 [fabrica] etapa -> guion (sin 'parte 6' por pedido del dueño)
+2026-11-26T21:52:49-03:00 [verificador] APROBADO: vuelta corta tras rechazo del dueño. Diff HEAD~1 (87c85de) solo saca 'Parte seis.' del plano 15 y el número de parte de título, título 2, descripción y cabecera; sin datos nuevos; los 19 datos de la aprobación anterior siguen con fuente. 'Esta semana' vale si se publica entre vie 27 y dom 29/11 (reclamo mar 24). 161 palabras ~60 s, apertura G67 sin cambios, 5 etiquetas.
+2026-11-26T21:52:49-03:00 [fabrica] etapa -> verificado
+2026-11-26T21:53:13-03:00 [fabrica] etapa -> esperando_ok_voz
+2026-11-26T21:53:14-03:00 [fabrica] voz SIN OK del dueño (regla voz_sin_ok): ~949 caracteres
