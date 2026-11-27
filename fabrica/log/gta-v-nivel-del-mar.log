@@ -10,3 +10,7 @@
 2026-11-27T19:48:33-03:00 [fabrica] etapa -> guion (devuelto por el verificador (2a vuelta): 'mas adelante' para energia/aguas residuales contradice a Infobae (2300); dejarlo sin referencia temporal en voz 7, placa 7 y descripcion)
 2026-11-27T19:49:00-03:00 [guionista] segunda corrección del verificador: plano 7 sin referencia de tiempo para energía y aguas residuales (voz 'También quedan afectadas...', placa 'TAMBIÉN: ENERGÍA Y AGUAS RESIDUALES', descripción); placa 10 sale en 'terraplenes.'. 173 palabras
 2026-11-27T19:49:00-03:00 [fabrica] etapa -> guion
+2026-11-27T19:49:25-03:00 [verificador] APROBADO: 18 datos, todos con fuente (Infobae 27/11/2026 y Xataka 25/11/2026). Energia/aguas residuales sin referencia temporal; plano 10 igual a Infobae; 172 palabras, apertura I82 no repetida, 5 etiquetas
+2026-11-27T19:49:25-03:00 [fabrica] etapa -> verificado
+2026-11-27T19:49:25-03:00 [fabrica] etapa -> esperando_ok_voz
+2026-11-27T19:49:45-03:00 [fabrica] voz SIN OK del dueño (regla voz_sin_ok): ~966 caracteres
