@@ -3,3 +3,5 @@
 2026-11-26T23:23:32-03:00 [fabrica] etapa -> guion
 2026-11-26T23:24:41-03:00 [verificador] APROBADO: 22 datos, todos con fuente (1.271/22%/puesto-rol-mudanza; 4/11/2026 nota de Melanie Perkins CEO; sin desglose de despidos; crecimiento frenado por primera vez en una decada; minimo 6 meses de sueldo; US$10.000 Collective Fund; nota habla de 'new technology' sin nombrar la IA; Canva a AAP: no usar IA para hacer el trabajo de quienes se van; IA informa que productos construye y como los entrega; placas 1-13 y descripcion coinciden). Forma: 149 palabras ~53 s, C30 no repetida, 5 etiquetas.
 2026-11-26T23:24:41-03:00 [fabrica] etapa -> verificado
+2026-11-26T23:25:14-03:00 [fabrica] etapa -> esperando_ok_voz
+2026-11-26T23:25:14-03:00 [fabrica] voz SIN OK del dueño (regla voz_sin_ok): ~818 caracteres
