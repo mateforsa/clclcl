@@ -1391,7 +1391,7 @@
    "tema": "",
    "fuentes": [],
    "puntaje": null,
-   "etapa": "render",
+   "etapa": "revision",
    "creado": "2026-11-26T23:19:22-03:00",
    "rehace": "colapinto-qatar",
    "publicar_prueba_al_terminar": true,
@@ -1425,11 +1425,16 @@
      "etapa": "render",
      "cuando": "2026-11-27T01:14:30-03:00",
      "nota": ""
+    },
+    {
+     "etapa": "revision",
+     "cuando": "2026-11-27T01:44:59-03:00",
+     "nota": ""
     }
    ],
    "nota": "",
    "caracteres_voz": 836
   }
  },
- "actualizado": "2026-11-27T01:40:38-03:00"
+ "actualizado": "2026-11-27T01:44:59-03:00"
 }
