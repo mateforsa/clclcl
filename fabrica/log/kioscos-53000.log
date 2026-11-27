@@ -19,3 +19,5 @@
 2026-11-27T11:15:27-03:00 [fabrica] etapa -> render
 2026-11-27T11:16:05-03:00 [productor] portada lista: instagram/portadas/kioscos-53000.jpg (KIOSCOS / CERRARON / +53.000 / EN 3 AÑOS. Y EL ALFAJOR VENDE MÁS). Render en curso
 2026-11-27T11:19:18-03:00 [productor] QC del primer render: b09 y b13 arrancaban vacíos 1 s; columnas y calendario desde el cuadro 0. Re-render
+2026-11-27T11:23:06-03:00 [productor] render listo: out/kioscos-53000/kioscos-53000.mp4, 64 s (1080x1920, 30 fps, -14,5 LUFS). Portada: instagram/portadas/kioscos-53000.jpg
+2026-11-27T11:23:06-03:00 [fabrica] etapa -> revision
