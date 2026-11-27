@@ -971,7 +971,7 @@
    "tema": "",
    "fuentes": [],
    "puntaje": null,
-   "etapa": "idea",
+   "etapa": "guion",
    "creado": "2026-11-26T23:19:22-03:00",
    "rehace": "colapinto-qatar",
    "publicar_prueba_al_terminar": true,
@@ -980,9 +980,15 @@
      "etapa": "idea",
      "cuando": "2026-11-26T23:19:22-03:00",
      "nota": "rehacer colapinto-qatar como reel de prueba, distinto del original"
+    },
+    {
+     "etapa": "guion",
+     "cuando": "2026-11-26T23:22:13-03:00",
+     "nota": ""
     }
-   ]
+   ],
+   "nota": ""
   }
  },
- "actualizado": "2026-11-26T23:21:46-03:00"
+ "actualizado": "2026-11-26T23:22:13-03:00"
 }
