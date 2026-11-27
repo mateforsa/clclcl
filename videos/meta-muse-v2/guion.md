@@ -66,7 +66,7 @@ está, así que van marcados para que el productor genere variantes numeradas co
 | Fortune | `[Fórchun\|Fortune]` | Fórchun · Fórchiun · Forchun · Fortune | 8 |
 | Reuters | `[Róiters\|Reuters]` | Róiters · Róyters · Roiters · Reuters | 11 |
 | Signal | `[Sígnal\|Signal]` | Sígnal · Síknal · Signal · Sígnol | 11 |
-| Android | `[Ándroid\|Android]` | Ándroid · Android · Ándroid' · Androide | 11 |
+| Android | `[Ándroid\|Android]` | Ándroid · Android · Andróid · Ándroi | 11 |
 | Meta | `[Meta\|Meta]` | Meta · Méta | 2, 12 |
 
 ## Hoja de datos y fuentes
@@ -120,13 +120,13 @@ Aparte de los subtítulos. Mayúsculas y signos tal como van. Sin "parte N" en n
 | 3 | `MUSE` · `VOS APROBÁS LA COMPRA` | `MUSE` en "Muse"; la segunda en "aprobás" |
 | 4 | (sin placa) | |
 | 5 | `AMAZON · BLOQUEADO` · `SEPTIEMBRE 2026` | en "Amazon" y en "septiembre" |
-| 6 | `"NO AVISA QUE ES UNA IA" · SEGÚN AMAZON` | en "avisa" |
+| 6 | `NO AVISA QUE ES UNA IA · SEGÚN AMAZON` | en "avisa" |
 | 7 | `REINO UNIDO · 23-24/11/2026` · `AMAZON: SIGUE CERRADO` | en "Reino" y en "afuera" |
 | 8 | `NEGOCIAN · SEGÚN FORTUNE · 25/11/2026` | en "Fortune" |
 | 9 | `PUBLICIDAD` · `BÚSQUEDAS` | en "publicidad" y en "búsquedas" |
 | 10 | (sin placa) | |
 | 11 | `SIGNAL · ANDROID` · `PERMISO DE NOTIFICACIONES` · `SEGÚN REUTERS` | en "Signal", en "permiso" y en "Reuters" |
-| 12 | `META: "CASOS AISLADOS"` | en "aislados" |
+| 12 | `META: CASOS AISLADOS` | en "aislados" |
 | 13 | `BLACK FRIDAY · 27/11` · `SIN ACUERDO AL 26/11/2026` | en "Black Friday" y en "acuerdo" |
 | 14 | `¿FIRMAN ANTES DE FIN DE AÑO?` · `SÍ / NO` | en "Firman" y en "Sí o no" |
 

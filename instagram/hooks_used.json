@@ -167,7 +167,7 @@
  {
   "video": "bitcoin-salidas-v2",
   "inicio": "A2 antes y después en dos frases, con plata del que mira (100 dólares en Bitcoin en su máximo. El jueves 26 eran unos 48)",
-  "cierre": "H79 pedido de compartir con destinatario (Mandáselo al que compró en 2025), sin Seguime ni pregunta; vuelve a los 100 dólares del inicio"
+  "cierre": "Playbook 4 n.º 26 completar la frase (Completá la frase: con esos 100 dólares, yo hubiera...), vuelve a los 100 dólares del inicio; sin Seguime"
  },
  {
   "video": "huawei-condena-v2",
@@ -183,5 +183,10 @@
   "video": "starship-atrapada-v2",
   "inicio": "J100 comparación con algo conocido (Es como agarrar una mosca con palitos chinos. Pero la mosca mide unos 50 metros y viene del espacio)",
   "cierre": "Pregunta de debate (¿Qué parte te costó creer? Te leo.), sin Seguime ni promesa de continuación"
+ },
+ {
+  "video": "meta-muse-v2",
+  "inicio": "C26 la pregunta cotidiana (¿Este Black Friday comparás precios pestaña por pestaña?)",
+  "cierre": "Predicción de sí o no (¿Firman antes de fin de año? Sí o no, dejá tu apuesta), sin Seguime ni promesa de contarlo"
  }
 ]

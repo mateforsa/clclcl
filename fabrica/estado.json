@@ -877,16 +877,21 @@
      "etapa": "guion",
      "cuando": "2026-11-26T23:21:13-03:00",
      "nota": ""
+    },
+    {
+     "etapa": "guion",
+     "cuando": "2026-11-26T23:23:08-03:00",
+     "nota": "devuelto por el verificador: la placa fija 'precios de cierre' cubre los planos 7 y 8, que muestran apertura (111,50 y ~2 billones al abrir). Limitarla a 9, 11-13 o quitar 'de cierre'. Cierre 25/11 de 82,79 confirmado."
     }
    ],
-   "nota": ""
+   "nota": "devuelto por el verificador: la placa fija 'precios de cierre' cubre los planos 7 y 8, que muestran apertura (111,50 y ~2 billones al abrir). Limitarla a 9, 11-13 o quitar 'de cierre'. Cierre 25/11 de 82,79 confirmado."
   },
   "starship-atrapada-v2": {
    "titulo": "Starship: la nave atrapada en el aire (versión 2)",
    "tema": "",
    "fuentes": [],
    "puntaje": null,
-   "etapa": "idea",
+   "etapa": "guion",
    "creado": "2026-11-26T23:18:32-03:00",
    "rehace": "starship-atrapada",
    "publicar_prueba_al_terminar": true,
@@ -895,8 +900,14 @@
      "etapa": "idea",
      "cuando": "2026-11-26T23:18:32-03:00",
      "nota": "rehacer starship-atrapada como reel de prueba, distinto del original"
+    },
+    {
+     "etapa": "guion",
+     "cuando": "2026-11-26T23:23:04-03:00",
+     "nota": ""
     }
-   ]
+   ],
+   "nota": ""
   },
   "microsoft-codigo-rojo-v2": {
    "titulo": "Microsoft declara un \"Código Rojo\" interno (microsoft-codigo-rojo) (versión 2)",
@@ -966,7 +977,7 @@
    "tema": "",
    "fuentes": [],
    "puntaje": null,
-   "etapa": "idea",
+   "etapa": "guion",
    "creado": "2026-11-26T23:18:33-03:00",
    "rehace": "meta-muse",
    "publicar_prueba_al_terminar": true,
@@ -975,8 +986,14 @@
      "etapa": "idea",
      "cuando": "2026-11-26T23:18:33-03:00",
      "nota": "rehacer meta-muse como reel de prueba, distinto del original"
+    },
+    {
+     "etapa": "guion",
+     "cuando": "2026-11-26T23:23:03-03:00",
+     "nota": ""
     }
-   ]
+   ],
+   "nota": ""
   },
   "colapinto-qatar-v2": {
    "titulo": "Colapinto antes de Qatar: 35 puntos y una pregunta (versión 2)",
@@ -1002,5 +1019,5 @@
    "nota": ""
   }
  },
- "actualizado": "2026-11-26T23:22:51-03:00"
+ "actualizado": "2026-11-26T23:23:08-03:00"
 }
