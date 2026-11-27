@@ -143,7 +143,7 @@ export const BEATS: BeatSpec[] = [
     overlays: [tag('CANVA A LA AGENCIA AAP:', 'dijo', { y: 69.5, size: 48 }), tag('ESOS TRABAJOS NO PASAN A UNA IA', 'trabajos', { size: 44 })] },
 
   // 12. Eso sí, admite que esa tecnología influye en qué productos hace y cómo los entrega.  — travelling a lo largo de la cinta
-  { id: 'b12', set: 'room', cam: { from: [-1.5, 2.6, 6.4], to: [1.2, 2.4, 6.2], look: [-0.5, 1.0, 0], lookTo: [0.6, 0.9, 0], fov: 46 }, keywords: ['tecnología', 'productos', 'entrega'],
+  { id: 'b12', set: 'room', cam: { from: [-1.5, 2.6, 6.4], to: [1.2, 2.4, 6.2], look: [-0.5, 1.0, 0], lookTo: [0.6, 0.9, 0], fov: 46 }, keywords: ['tecnología', 'influye', 'productos', 'entrega'],
     actors: [
       ST('coral'),
       { type: 'belt', pos: [0, 0, 0], p: { len: 3.2, n: 6, v: 0.7 } },
