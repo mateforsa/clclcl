@@ -149,5 +149,16 @@
    "Spéisex",
    "SpaceX"
   ]
+ },
+ "Elon Musk": {
+  "dicho": "Elon Musk",
+  "estado": "probada",
+  "puntaje": 0.92,
+  "variantes": [
+   "Ílon Mask",
+   "Élon Mask",
+   "Ílon Mosk",
+   "Elon Musk"
+  ]
  }
 }

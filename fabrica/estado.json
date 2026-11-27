@@ -1086,7 +1086,8 @@
      "nota": "voz sin OK (regla voz_sin_ok del dueño)"
     }
    ],
-   "nota": ""
+   "nota": "",
+   "caracteres_voz": 832
   },
   "canva-despidos-v2": {
    "titulo": "Canva: 1.271 personas y el año más difícil (versión 2)",
@@ -1284,5 +1285,5 @@
    "caracteres_voz": 836
   }
  },
- "actualizado": "2026-11-27T00:27:40-03:00"
+ "actualizado": "2026-11-27T00:28:45-03:00"
 }
