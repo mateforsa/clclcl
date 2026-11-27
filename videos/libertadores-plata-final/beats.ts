@@ -35,7 +35,7 @@ export const BEATS: BeatSpec[] = [
       { type: 'pile', pos: [-0.2, 0, 0.1], at: '38', enter: 'none', p: { n: 16, dur: 0.9 } },
       { type: 'ring', pos: [0.55, 0.03, 0], at: 'Flaco', p: { r: 0.5, color: GREEN } },
       { type: 'player', pos: [0.55, 0, 0], rot: [0, -0.25, 0], at: 'Flaco', p: { kit: 'pal', phase: 1 } },
-      { type: 'pile', pos: [1.25, 0, 0.1], at: '30', enter: 'none', p: { n: 13, dur: 0.6 } },
+      { type: 'pile', pos: [1.32, 0, 0.1], at: '30', enter: 'none', p: { n: 13, dur: 0.6 } },
     ],
     overlays: [T('VITOR ROQUE · 38 M€', '38', 60, GREEN), T('FLACO LÓPEZ · 30 M€', '30', 66, GREEN), F()] },
   // 4. 68 contra menos de 55
@@ -83,7 +83,7 @@ export const BEATS: BeatSpec[] = [
   { id: 'b08', set: 'void', cam: { from: [-0.5, 1.4, 8.0], to: [0.1, 1.3, 7.4], look: [0, 0.45, 0], fov: 44 }, keywords: ['nueve', 'suyos.'],
     actors: [
       { type: 'cleansky' },
-      { type: 'ranking', pos: [0, 0, 0], p: { kits: ['pal', 'pal', 'pal', 'pal', 'pal', 'pal', 'pal', 'pal', 'pal', 'est'], delay: 0.27, stagger: 0.12 } },
+      { type: 'ranking', pos: [0, 0, 0], p: { kits: ['pal', 'pal', 'pal', 'pal', 'pal', 'pal', 'pal', 'pal', 'pal', 'est'], delay: -0.25, stagger: 0.12 } },
     ],
     overlays: [T('LOS 9 MÁS VALIOSOS: DE PALMEIRAS', 'nueve', 60, GREEN, { size: 40 }), T('EL 1° DE ESTUDIANTES, 10°: TOMÁS PALACIOS · 8 M€', 'suyos', 66, RED, { size: 30 }), F()] },
   // 9. Palmeiras pagó 167,4; Estudiantes 11,5 (solo en placa)
@@ -93,7 +93,7 @@ export const BEATS: BeatSpec[] = [
       { type: 'player', pos: [-1.15, 0, 0.1], rot: [0, 0.3, 0], p: { kit: 'pal' } },
       { type: 'pile', pos: [-0.35, 0, 0], at: 'pagó', enter: 'none', p: { n: 30, dur: 1.4, r: 0.32 } },
       { type: 'player', pos: [0.55, 0, 0.1], rot: [0, -0.3, 0], p: { kit: 'est' } },
-      { type: 'pile', pos: [1.2, 0, 0], at: 'millones', enter: 'none', p: { n: 2, dur: 0.3, r: 0.32 } },
+      { type: 'pile', pos: [1.34, 0, 0], at: 'millones', enter: 'none', p: { n: 2, dur: 0.3, r: 0.32 } },
       { type: 'ring', pos: [-0.35, 0.03, 0], at: '167', p: { r: 0.5, color: C.gold } },
     ],
     overlays: [T('PALMEIRAS PAGÓ 167,4 M€', '167', 60, GREEN), T('ESTUDIANTES: 11,5 M€', 'millones', 66, RED), F()] },

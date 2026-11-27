@@ -1536,7 +1536,7 @@
     "https://www.engadget.com/2329177/workers-gta-6-studio-rockstar-games-vote-against-union-recognition/"
    ],
    "puntaje": 7.3,
-   "etapa": "listo",
+   "etapa": "publicado",
    "creado": "2026-11-27T02:43:16-03:00",
    "historial": [
     {
@@ -1612,9 +1612,14 @@
      "etapa": "listo",
      "cuando": "2026-11-27T11:19:32-03:00",
      "nota": "aprobado por el dueño desde esperando_ok_final"
+    },
+    {
+     "etapa": "publicado",
+     "cuando": "2026-11-27T19:03:03-03:00",
+     "nota": "subido a mano por el dueño (API de Instagram bloqueada)"
     }
    ],
-   "nota": "",
+   "nota": "subido a mano por el dueño (API de Instagram bloqueada)",
    "caracteres_voz": 1022
   },
   "kioscos-53000": {
@@ -1625,7 +1630,7 @@
     "https://www.infobae.com/economia/2026/11/26/cerraron-mas-de-50000-kioscos-en-los-ultimos-tres-anos-y-el-sector-perdio-casi-la-mitad-de-sus-locales/"
    ],
    "puntaje": 8.3,
-   "etapa": "listo",
+   "etapa": "publicado",
    "creado": "2026-11-27T10:48:21-03:00",
    "historial": [
     {
@@ -1691,9 +1696,14 @@
      "etapa": "listo",
      "cuando": "2026-11-27T12:38:18-03:00",
      "nota": "aprobado por el dueño desde esperando_ok_final"
+    },
+    {
+     "etapa": "publicado",
+     "cuando": "2026-11-27T19:03:03-03:00",
+     "nota": "subido a mano por el dueño (API de Instagram bloqueada)"
     }
    ],
-   "nota": "",
+   "nota": "subido a mano por el dueño (API de Instagram bloqueada)",
    "caracteres_voz": 1015
   },
   "colapinto-fp1-qatar": {
@@ -1704,7 +1714,7 @@
     "https://www.racefans.net/2026/11/27/antonelli-quickest-by-half-a-second-on-medium-tyre-compound-in-first-practice/"
    ],
    "puntaje": null,
-   "etapa": "listo",
+   "etapa": "publicado",
    "creado": "2026-11-27T11:51:36-03:00",
    "historial": [
     {
@@ -1760,9 +1770,14 @@
      "etapa": "listo",
      "cuando": "2026-11-27T13:10:16-03:00",
      "nota": "aprobado por el dueño desde esperando_ok_final"
+    },
+    {
+     "etapa": "publicado",
+     "cuando": "2026-11-27T19:03:03-03:00",
+     "nota": "subido a mano por el dueño (API de Instagram bloqueada)"
     }
    ],
-   "nota": "",
+   "nota": "subido a mano por el dueño (API de Instagram bloqueada)",
    "caracteres_voz": 903
   },
   "ludopatia-sponsors-futbol": {
@@ -2214,5 +2229,5 @@
    "caracteres_voz": 958
   }
  },
- "actualizado": "2026-11-27T19:02:08-03:00"
+ "actualizado": "2026-11-27T19:03:03-03:00"
 }

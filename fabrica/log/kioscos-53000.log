@@ -38,3 +38,4 @@
 2026-11-27T12:02:18-03:00 [revisor] APROBADO (3.ª pasada): 1080x1920 30 fps h264+aac 63,97 s (timing 63,976); -14,5 LUFS, pico -4,4 dBTP, sin silencios; sin negros ni congelados; todos los planos con cámara en movimiento; uniones 239/239 en 14 px o más (mínimo 14,52 alfajor|va; de|10 millones 30,35; una|encuesta 30,09 con dos activas); fondo de la franja y=290-390 ≤50/255; plano 15: KIOSCO entero hasta el último cuadro, '?' desde y≈510 fuera de la franja; plano 12 arranca con la fila puesta; portada 1080x1920 legible; 5 etiquetas; pronunciación sin términos fallidos. Observaciones para el dueño: Whisper oye lo→los, hormiga→ormiga y 'persianas' como '%'; el subtítulo dice 'contá, qué es' (coma de la voz).
 2026-11-27T12:02:19-03:00 [fabrica] etapa -> esperando_ok_final
 2026-11-27T12:38:18-03:00 [dueño] APROBADO (esperando_ok_final -> listo)
+2026-11-27T19:03:03-03:00 [fabrica] etapa -> publicado (subido a mano por el dueño (API de Instagram bloqueada))
