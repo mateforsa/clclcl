@@ -65,9 +65,9 @@ const Aisle: React.FC<{ t: number; p: any }> = ({ t, p }) => {
       {dim > 0 && <pointLight position={[0, 2.4, 0.9]} intensity={16 * dim} color="#fff2c8" distance={4} />}
       <Flat s={[30, 30]} pos={[0, 0.02, 0]} rot={[-Math.PI / 2, 0, 0]} map={tiles} c={dim > 0 ? '#777' : '#ffffff'} />
       {/* pared del fondo: franja amarilla baja, todo lo alto en negro */}
-      <B s={[14, 1.2, 0.2]} pos={[0, 0.6, -4.2]} c={YEL} />
-      <B s={[14, 8, 0.2]} pos={[0, 5.2, -4.2]} c={DEEP} />
-      {[-4.4, 4.4].map((x) => <B key={x} s={[0.2, 9, 16]} pos={[x, 4.5, 0]} c={DEEP} />)}
+      <B s={[14, 1.2, 0.2]} pos={[0, 0.6, -3.75]} c={YEL} />
+      <B s={[14, 8, 0.2]} pos={[0, 5.2, -3.75]} c={DEEP} />
+      {[-4.2, 4.2].map((x) => <B key={x} s={[0.2, 9, 16]} pos={[x, 4.5, 0]} c={DEEP} />)}
       <B s={[9, 0.1, 16]} pos={[0, 4.4, 0]} c="#141318" />
       {/* tubos de luz del techo */}
       {[-2.5, -0.5, 1.5].map((z) => <Flat key={z} s={[0.12, 1.4]} pos={[0, 4.34, z]} rot={[Math.PI / 2, 0, 0]} c={dim > 0.5 ? '#333' : '#fffbe8'} />)}
@@ -93,7 +93,7 @@ const Street: React.FC<{ t: number; p: any }> = () => {
       <B s={[30, 9, 0.2]} pos={[0, 4.5, -2.95]} c="#1a1920" />
       <B s={[30, 0.18, 2.2]} pos={[0, 3.55, -1.9]} c="#24232b" />
       {Array.from({ length: 9 }, (_, i) => <Flat key={i} s={[0.5, 0.08]} pos={[-8 + i * 2, 3.455, -1.4]} rot={[Math.PI / 2, 0, 0]} c="#fff1cf" />)}
-      <Pennants y={3.35} z={-0.85} w={14} n={28} />
+      {/* sin banderines al frente: quedaban detrás de los subtítulos */}
     </group>
   );
 };
@@ -351,10 +351,9 @@ export const Warn: React.FC<P> = ({ t }) => {
   const k = 0.8 + 0.2 * Math.abs(Math.sin(t * 5));
   return (
     <group>
-      <mesh rotation={[0, 0, 0]}><cylinderGeometry args={[0.62, 0.62, 0.08, 3]} /><M c={YEL} e={YEL} ei={0.5 * k} /></mesh>
-      <group rotation={[Math.PI / 2, 0, 0]}>
-        <B s={[0.1, 0.36, 0.02]} pos={[0, 0.05, -0.05]} c={INK} rot={[0, 0, 0]} />
-      </group>
+      <mesh rotation={[-Math.PI / 2, 0, 0]}><cylinderGeometry args={[0.62, 0.62, 0.08, 3]} /><M c={YEL} e={YEL} ei={0.5 * k} /></mesh>
+      <B s={[0.1, 0.3, 0.02]} pos={[0, 0.06, 0.05]} c={INK} />
+      <B s={[0.1, 0.1, 0.02]} pos={[0, -0.18, 0.05]} c={INK} />
     </group>
   );
 };

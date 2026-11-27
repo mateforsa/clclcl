@@ -1137,7 +1137,7 @@
    "tema": "",
    "fuentes": [],
    "puntaje": null,
-   "etapa": "revision",
+   "etapa": "esperando_ok_final",
    "creado": "2026-11-26T23:18:32-03:00",
    "rehace": "microsoft-codigo-rojo",
    "publicar_prueba_al_terminar": true,
@@ -1180,6 +1180,11 @@
     {
      "etapa": "revision",
      "cuando": "2026-11-27T01:16:43-03:00",
+     "nota": ""
+    },
+    {
+     "etapa": "esperando_ok_final",
+     "cuando": "2026-11-27T01:21:08-03:00",
      "nota": ""
     }
    ],
@@ -1394,5 +1399,5 @@
    "caracteres_voz": 836
   }
  },
- "actualizado": "2026-11-27T01:16:43-03:00"
+ "actualizado": "2026-11-27T01:21:58-03:00"
 }
