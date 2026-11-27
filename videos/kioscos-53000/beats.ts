@@ -75,7 +75,7 @@ export const BEATS: BeatSpec[] = [
       { type: 'person', pos: [-0.9, 0, 0.35], rot: [0, 1.6, 0], at: 'perdieron', enter: 'none', p: { ...KIOSQUERO, pose: 'walk' }, move: { to: [0.9, 0, 0.9], at: 'perdieron', dur: 2.0 } },
       { type: 'crowd', pos: [0.8, 0, -1.3], at: '72.000', p: { n: 12, area: [1.8, 1.2], seed: 7, sc: 0.6, pose: 'sad', stagger: 0.03 } },
     ],
-    overlays: [{ type: 'big', text: 'UNOS 72.000 EMPLEOS MENOS', at: '72.000', red: true, size: 58, y: 58 },
+    overlays: [{ type: 'big', text: 'UNOS 72.000 EMPLEOS MENOS', at: '72.000', red: true, size: 50, y: 58 },
       P2('1 O 2 EMPLEOS POR KIOSCO · ESTIMACIÓN DE UKRA', 'empleos', { size: 32 }), FUENTE()] },
 
   // 6. la compra al pasar: el chocolate
@@ -93,7 +93,7 @@ export const BEATS: BeatSpec[] = [
   // 7. gasto hormiga: lo primero que se cortó
   { id: 'b07', set: 'void', cam: { from: [-0.5, 2.6, 6.4], to: [0.3, 2.4, 5.8], look: [0, 0.3, -1.0], fov: 44 }, keywords: ['hormiga,', 'cortó.'],
     actors: [
-      { type: 'kiosco', pos: [0.2, 0, -2.4], p: { w: 1.2, h: 1.85, down: W('b07', 'cortó'), dur: 0.5, seed: 1 } },
+      { type: 'kiosco', pos: [0.2, 0, -2.4], p: { w: 1.2, h: 1.55, down: W('b07', 'cortó'), dur: 0.5, seed: 1 } },
       { type: 'hormigas', pos: [0, 0, -1.0], rot: [0, -0.35, 0], s: 1.2, p: { n: 4, speed: 0.45, gap: 0.5, len: 2.0 }, out: 'cortó' },
       { type: 'hormigas', pos: [0, 0, -1.0], rot: [0, -0.35, 0], s: 1.2, at: 'cortó', enter: 'none', p: { n: 4, speed: 0.0, gap: 0.5, len: 2.0, carry: false } },
       { type: 'cross', pos: [0, 0.9, -1.0], at: 'cortó', p: { size: 0.7 } },
@@ -115,7 +115,8 @@ export const BEATS: BeatSpec[] = [
   // 9. 2.º que más crece entre los chocolates (esquema)
   { id: 'b09', set: 'void', cam: { from: [-0.6, 2.5, 8.2], to: [0.2, 2.3, 7.4], look: [0, 1.35, 0], fov: 44 }, keywords: ['crece', 'chocolates,', 'consultora.'],
     actors: [
-      { type: 'bars', pos: [0, 0, 0], at: 0.1, enter: 'none', p: { vals: [2.5, 2.0, 1.4, 0.9], colors: ['#8a6bff', C.gold, '#8a6bff', '#8a6bff'], w: 0.5, gap: 0.22, dur: 0.6, stagger: 0.15 } },
+      { type: 'ring', pos: [0, 0.03, 0.2], p: { r: 1.45, color: '#8a6bff' } },
+      { type: 'bars', pos: [0, 0, 0], at: 0, enter: 'none', p: { vals: [2.5, 2.0, 1.4, 0.9], colors: ['#8a6bff', C.gold, '#8a6bff', '#8a6bff'], w: 0.5, gap: 0.22, dur: 0.6, stagger: 0.15 } },
       { type: 'choco', pos: [-1.08, 2.8, 0], s: 0.45, at: 'crece', p: { wrap: C.blue } },
       { type: 'alfajor', pos: [-0.36, 2.35, 0.1], rot: [0.15, 0.4, 0], s: 0.7, at: 'chocolates', bob: 0.04, p: {} },
       { type: 'choco', pos: [0.36, 1.7, 0], s: 0.45, at: 'chocolates', p: { wrap: '#ff7a3d' } },
@@ -124,7 +125,7 @@ export const BEATS: BeatSpec[] = [
     overlays: [P1('2.º QUE MÁS CRECE ENTRE LOS CHOCOLATES', 'crece', { size: 36 }), P2('SEGÚN NIELSENIQ', 'consultora', { size: 38 }), FUENTE()] },
 
   // 10. 85 por persona al año, +10 millones por día
-  { id: 'b10', set: 'void', cam: { from: [0.8, 2.5, 8.0], to: [-0.1, 2.3, 7.2], look: [0, 1.35, 0], fov: 44 }, keywords: ['argentino', '85', 'millones'],
+  { id: 'b10', set: 'void', cam: { from: [0.8, 2.5, 8.0], to: [-0.1, 2.3, 7.2], look: [0, 1.35, 0], fov: 44 }, keywords: ['argentino', '85', '10 millones'],
     actors: [
       { type: 'ring', pos: [-0.9, 0.03, 0.3], p: { r: 0.6, color: C.cyan } },
       { type: 'person', pos: [-0.9, 0, 0.3], rot: [0, 0.4, 0], p: { ...CLIENTE, pose: 'hold' } },
@@ -149,9 +150,9 @@ export const BEATS: BeatSpec[] = [
     overlays: [P1('REEMPLAZO DE COMIDAS · SEGÚN EL SECTOR', 'reemplaza', { size: 38 }), P2('SUELE VENIR EN PROMO CON GASEOSA', 'comida', { size: 36 }), FUENTE()] },
 
   // 12. UCA: el 61% se saltó una comida en el trabajo por plata
-  { id: 'b12', set: 'void', cam: { from: [0.7, 2.5, 7.8], to: [-0.2, 2.3, 7.0], look: [0, 1.1, 0], fov: 44 }, keywords: ['Universidad', '61%', 'trabajadores', 'plata.'],
+  { id: 'b12', set: 'void', cam: { from: [0.7, 2.5, 7.8], to: [-0.2, 2.3, 7.0], look: [0, 1.1, 0], fov: 44 }, keywords: ['encuesta', 'Universidad', '61%', 'trabajadores', 'plata.'],
     actors: [
-      ...[0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map((i) => ({ type: 'person', pos: [-1.2 + (i % 5) * 0.6, 0, i < 5 ? -0.6 : 0.4] as any, s: 0.72, at: i === 0 ? undefined : 'encuesta', out: i < 6 ? 'saltó' : undefined,
+      ...[0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map((i) => ({ type: 'person', pos: [-1.2 + (i % 5) * 0.6, 0, i < 5 ? -0.6 : 0.4] as any, s: 0.72, at: i * 0.05, out: i < 6 ? 'saltó' : undefined,
         p: { shirt: ['#3b4a8a', '#8a6bff', C.cyan, '#2a7a6a', '#6b5aa8'][i % 5], hair: ['#3a2a1a', '#15102b', '#c98a3a', '#7a3b1a'][i % 4], pose: 'idle', phase: i } })),
       ...[0, 1, 2, 3, 4, 5].map((i) => ({ type: 'person', pos: [-1.2 + (i % 5) * 0.6, 0, i < 5 ? -0.6 : 0.4] as any, s: 0.72, at: 'saltó', enter: 'none' as const,
         p: { shirt: ['#3b4a8a', '#8a6bff', C.cyan, '#2a7a6a', '#6b5aa8'][i % 5], hair: ['#3a2a1a', '#15102b', '#c98a3a', '#7a3b1a'][i % 4], pose: 'sad', phase: i } })),

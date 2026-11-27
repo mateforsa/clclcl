@@ -38,7 +38,8 @@ export const Kiosco: React.FC<P> = ({ t, tt, p }) => {
       </group>}
       <B s={[ow + 0.16, 0.1, 0.12]} pos={[0, oy1 + 0.05, d / 2 + 0.06]} c="#4a4566" />
       {/* cartel genérico */}
-      {sign && <group position={[0, h - 0.17, d / 2 + 0.04]}>
+      {sign && <group position={[0, h + 0.2, d / 2 - 0.08]}>
+        <B s={[0.06, 0.16, 0.06]} pos={[-(w - 0.3) / 2, -0.12, -0.03]} c="#15102b" /><B s={[0.06, 0.16, 0.06]} pos={[(w - 0.3) / 2, -0.12, -0.03]} c="#15102b" />
         <B s={[w - 0.1, 0.26, 0.04]} c="#15102b" e={glow} ei={0.15 * lit} />
         <group position={[0, 0, 0.025]}><Label t={t} tt={tt} p={{ text: sign, w: w - 0.16, h: 0.22, color: lit > 0.5 ? glow : '#8d8aa0', size: 0.8, weight: 900 }} /></group>
       </group>}
