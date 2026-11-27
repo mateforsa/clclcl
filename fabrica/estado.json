@@ -2163,7 +2163,7 @@
     "https://www.infobae.com/deportes/2026/11/27/carlos-sainz-se-enojo-por-una-maniobra-de-franco-colapinto-lo-critico-y-advirtio-quizas-tenga-que-hablar-con-el/"
    ],
    "puntaje": null,
-   "etapa": "render",
+   "etapa": "revision",
    "creado": "2026-11-27T18:28:52-03:00",
    "historial": [
     {
@@ -2214,9 +2214,14 @@
      "etapa": "render",
      "cuando": "2026-11-27T19:19:01-03:00",
      "nota": "devuelto por el revisor: 9 uniones de subtítulos bajo 14 px (mínimo 9,4 px 'enterrado en' 30,93 s; marcar palabra clave en beats.ts) y plano 3 (10-14 s + portada) muestra los autos pegados con destello en el contacto, lo que se lee como 'se tocaron'"
+    },
+    {
+     "etapa": "revision",
+     "cuando": "2026-11-27T19:27:16-03:00",
+     "nota": ""
     }
    ],
-   "nota": "devuelto por el revisor: 9 uniones de subtítulos bajo 14 px (mínimo 9,4 px 'enterrado en' 30,93 s; marcar palabra clave en beats.ts) y plano 3 (10-14 s + portada) muestra los autos pegados con destello en el contacto, lo que se lee como 'se tocaron'",
+   "nota": "",
    "caracteres_voz": 986
   },
   "fp2-qatar-general": {
@@ -2289,5 +2294,5 @@
    "caracteres_voz": 958
   }
  },
- "actualizado": "2026-11-27T19:27:14-03:00"
+ "actualizado": "2026-11-27T19:27:16-03:00"
 }
