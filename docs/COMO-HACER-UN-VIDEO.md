@@ -74,6 +74,10 @@ videos/<slug>/timing.json, events.json, public/voz.wav, public/mix.wav   generad
 
 ## Reglas del guion
 
+- **Nada de "parte N" de una serie temática** (regla del dueño, 27/11/2026): no numerar "GTA VI, parte 6" solo porque el tema se
+  repite. Un video lleva "parte 2" únicamente si continúa exactamente la misma historia que la parte 1 (el mismo hecho, lo que
+  pasó después). Un hecho nuevo sobre el mismo tema es un video suelto, sin número, en voz, placas, portada, títulos y descripción.
+
 - Español rioplatense (voseo). 330-400 palabras = 2:15-2:40. 28-36 frases.
 - **Inicio: rotar.** Leer `instagram/hooks_used.json` y elegir de `instagram/playbook.md` (sección 1) un tipo de
   inicio distinto al de los dos videos anteriores. "Sos [X]" (segunda persona) se usa como máximo en 1 de cada 6

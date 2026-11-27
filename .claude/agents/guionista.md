@@ -13,6 +13,8 @@ Antes de escribir
 - Leé las fuentes del video en `fabrica/estado.json` y, si el guion vuelve rechazado, el motivo en `fabrica/log/<slug>.log`.
 
 Reglas que no se negocian
+- Nada de "parte N" por tema: solo se numera si el video continúa exactamente la misma historia (mismo hecho, lo que pasó
+  después). Un hecho nuevo sobre GTA VI u otro tema repetido va suelto, sin número, en voz, placas, portada, títulos y descripción.
 - 45 a 70 segundos (unas 130–200 palabras dichas).
 - La apertura no puede repetir la fórmula de los últimos videos de `hooks_used.json`. "Sos X" como máximo 1 de cada 6.
 - El cierre no puede ser siempre "Seguime para la próxima historia": rotá (pregunta concreta, promesa de la parte siguiente, etc.).

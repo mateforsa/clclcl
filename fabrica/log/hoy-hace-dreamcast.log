@@ -13,3 +13,6 @@
 2026-11-26T21:50:00-03:00 [fabrica] hoy-hace-dreamcast: la voz gasta unos 853 caracteres de ElevenLabs. AVISO: no se puede leer el saldo (la clave no tiene ese permiso); anotalo en fabrica/config.json.
 2026-11-26T21:50:00-03:00 [fabrica] etapa -> esperando_ok_voz
 2026-11-26T21:50:00-03:00 [fabrica] voz SIN OK del dueño (regla voz_sin_ok): ~853 caracteres
+2026-11-26T21:50:31-03:00 [productor] arranco producción: créditos y voz (una sola toma)
+2026-11-26T21:50:31-03:00 [fabrica] hoy-hace-dreamcast: la voz gasta unos 853 caracteres de ElevenLabs. AVISO: no se puede leer el saldo (la clave no tiene ese permiso); anotalo en fabrica/config.json.
+2026-11-26T21:50:43-03:00 [productor] voz generada (una toma, Juanma): 12 planos, 52,9 s
