@@ -2099,7 +2099,7 @@
     "https://www.infobae.com/deportes/2026/04/07/comienza-la-fase-de-grupos-de-la-copa-libertadores-y-sudamericana-los-millonarios-premios-que-reparten/"
    ],
    "puntaje": 8.3,
-   "etapa": "revision",
+   "etapa": "esperando_ok_final",
    "creado": "2026-11-27T18:15:26-03:00",
    "historial": [
     {
@@ -2144,6 +2144,11 @@
     {
      "etapa": "revision",
      "cuando": "2026-11-27T19:22:11-03:00",
+     "nota": ""
+    },
+    {
+     "etapa": "esperando_ok_final",
+     "cuando": "2026-11-27T19:26:33-03:00",
      "nota": ""
     }
    ],
@@ -2222,7 +2227,7 @@
     "https://www.racefans.net/2026/11/27/antonelli-leads-another-mercedes-one-two-despite-red-flag-interruptions/"
    ],
    "puntaje": null,
-   "etapa": "esperando_ok_final",
+   "etapa": "listo",
    "creado": "2026-11-27T18:28:52-03:00",
    "historial": [
     {
@@ -2273,11 +2278,16 @@
      "etapa": "esperando_ok_final",
      "cuando": "2026-11-27T19:20:04-03:00",
      "nota": ""
+    },
+    {
+     "etapa": "listo",
+     "cuando": "2026-11-27T19:27:14-03:00",
+     "nota": "aprobado por el dueño desde esperando_ok_final"
     }
    ],
    "nota": "",
    "caracteres_voz": 958
   }
  },
- "actualizado": "2026-11-27T19:23:21-03:00"
+ "actualizado": "2026-11-27T19:27:14-03:00"
 }
