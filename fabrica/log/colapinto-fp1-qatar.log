@@ -9,3 +9,4 @@
 2026-11-27T11:58:01-03:00 [fabrica] voz SIN OK del dueño (regla voz_sin_ok): ~903 caracteres
 2026-11-27T11:58:37-03:00 [productor] arranco: pruebas de pronunciación (Gasly, Antonelli, Lindblad, Pirelli, Hamilton, Qatar) antes de la voz
 2026-11-27T11:58:37-03:00 [fabrica] colapinto-fp1-qatar: la voz gasta unos 903 caracteres de ElevenLabs. AVISO: no se puede leer el saldo (la clave no tiene ese permiso); anotalo en fabrica/config.json.
+2026-11-27T12:02:47-03:00 [productor] pruebas de pronunciación: ganadoras Gaslý (67%), Antoneli (75%), Lindblad (54%, dos rondas, Whisper duda), Pireli (72%), Hamilton (99%), Qatar (65%; Catár 64%). Aplicadas en parrafos.json. Genero voz (toma 1)

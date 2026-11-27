@@ -324,5 +324,78 @@
    "contanos qué",
    "contá cuál"
   ]
+ },
+ "Gasly": {
+  "dicho": "Gaslý,",
+  "estado": "probada",
+  "puntaje": 0.67,
+  "variantes": [
+   "Gaslí,",
+   "Gásli,",
+   "Gasly,",
+   "Gaslý,",
+   "Gaslii,"
+  ]
+ },
+ "Antonelli": {
+  "dicho": "Antoneli,",
+  "estado": "probada",
+  "puntaje": 0.75,
+  "variantes": [
+   "Antonéli,",
+   "Antonelli,",
+   "Antonel-li,",
+   "Antonélli,",
+   "Antoneli,"
+  ]
+ },
+ "Lindblad": {
+  "dicho": "Lindblad",
+  "estado": "probada",
+  "puntaje": 0.54,
+  "variantes": [
+   "Lindblad",
+   "Lind-blad",
+   "Lindbladd",
+   "Líndbla",
+   "Lind Blad",
+   "Lindblaad"
+  ]
+ },
+ "Pirelli": {
+  "dicho": "Pireli",
+  "estado": "probada",
+  "puntaje": 0.72,
+  "variantes": [
+   "Piréli",
+   "Pirelli",
+   "Pirelí",
+   "Pirélli",
+   "Pireli"
+  ]
+ },
+ "Hamilton": {
+  "dicho": "Hamilton",
+  "estado": "probada",
+  "puntaje": 0.99,
+  "variantes": [
+   "Hámilton",
+   "Jámilton",
+   "Hamilton",
+   "Ámilton",
+   "Hámilton,"
+  ]
+ },
+ "Qatar": {
+  "dicho": "Qatar",
+  "estado": "probada",
+  "puntaje": 0.65,
+  "variantes": [
+   "Catar",
+   "Cátar",
+   "Katar",
+   "Qatar",
+   "Catár"
+  ]
  }
 }
