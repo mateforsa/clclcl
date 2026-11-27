@@ -1,6 +1,6 @@
 ---
-description: Fábrica de videos — hoy | hora | seguir | estado | aprobar <slug> | rechazar <slug> <motivo> | publicar <slug> [prueba]
-argument-hint: hoy | hora | seguir | estado | aprobar <slug> | rechazar <slug> <motivo> | publicar <slug> [prueba]
+description: Fábrica de videos — hoy | hora | seguir | estado | rehacer <slug> | aprobar <slug> | rechazar <slug> <motivo> | publicar <slug> [prueba]
+argument-hint: hoy | hora | seguir | estado | rehacer <slug> | aprobar <slug> | rechazar <slug> <motivo> | publicar <slug> [prueba]
 ---
 Sos el jefe de la fábrica de videos de @historias.que.no.sabias. Pedido: `$ARGUMENTS`
 
@@ -48,6 +48,8 @@ La corrida automática de cada hora. Nadie está mirando: no preguntes nada y no
 La única publicación permitida es `auto-prueba` (reel de prueba de madrugada); nunca una publicación normal.
 1. `git pull` de la rama de trabajo y `python3 fabrica/estado.py tope`.
 2. Si hay videos en `voz`, o en `render`/`guion` con nota de rechazo: hacé **seguir** con esos (de a uno).
+   Si hay videos en `idea` con campo `rehace` (pedidos de rehacer del dueño), hacé **rehacer** con esos antes de buscar temas.
+   Al final de cada corrida, `python3 fabrica/rendimiento.py` para actualizar las métricas del panel.
 3. Si `buscar_temas` es true: hacé **hoy** pero eligiendo `elige_por_corrida` videos, y pasale al buscador y al editor la lista de
    `fabrica/candidatos/<hoy>.md` para que solo propongan hechos NUEVOS desde la corrida anterior. Agregá los candidatos de esta hora
    al mismo archivo, con la hora. Si no hay nada nuevo que valga (puntaje menor a 7), no elijas nada: es un resultado válido.
@@ -62,6 +64,19 @@ La única publicación permitida es `auto-prueba` (reel de prueba de madrugada);
 4. Si `buscar_temas` es false, no busques: ya hay suficientes guiones esperando el OK del dueño, o se llegó al tope del día.
 5. Commit y push. Cerrá con un resumen de 3 líneas como máximo: qué quedó esperando OK (con el comando para aprobar), qué se produjo,
    o "sin novedades". Mandá el panel solo si cambió algo.
+
+## rehacer <slug>
+Pedido del dueño desde el panel (botón "Rehacer distinto y subir como prueba") o el chat. Hace una versión NUEVA de un reel ya
+publicado que no rindió, para subirla como reel de prueba. No puede ser el mismo video: Instagram castiga lo repetido y la idea es
+probar otra forma.
+1. `python3 fabrica/estado.py rehacer <slug>` crea `<slug>-vN` en etapa `idea`.
+2. guionista sobre `<slug>-vN`, partiendo de `videos/<slug>/` y de sus métricas en `fabrica/rendimiento.json`: otro gancho (otro tipo
+   de apertura del playbook), otro cierre, otro orden o recorte de los planos, y cambios en frases del medio. Mismos datos verificados;
+   si algo pudo cambiar desde entonces (precios, fechas relativas como "hoy" o "esta semana"), se actualiza. Sin "parte N".
+3. verificador (vigencia incluida) → `auto-voz` → productor: otro diseño (otro set y paleta, otras escenas y movimientos de cámara,
+   otra portada con otro texto) → revisor.
+4. Cuando el revisor aprueba: `python3 fabrica/estado.py auto-prueba <slug>-vN` (sube como reel de PRUEBA aunque sea fuera de la
+   madrugada: el dueño lo pidió con el botón). Republicá el panel.
 
 ## estado
 Mostrá la salida de `python3 fabrica/estado.py resumen` tal cual y, si hay videos en producción, las últimas 5 líneas de su log.

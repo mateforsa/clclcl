@@ -8,6 +8,7 @@
   python3 fabrica/estado.py rechazar <slug> "motivo" # vuelve a la etapa anterior con el motivo
   python3 fabrica/estado.py publicar <slug> [--prueba] [--simular]  # sube a Instagram un video en `listo` (solo por pedido del dueño)
   python3 fabrica/estado.py auto-prueba <slug>        # madrugada: sube como reel de prueba sin OK final (ver prueba_automatica)
+  python3 fabrica/estado.py rehacer <slug>           # versión nueva de un reel publicado (otro gancho, portada y diseño) que sale como prueba
   python3 fabrica/estado.py resumen                  # texto para /fabrica estado
   python3 fabrica/estado.py tope                     # ¿cuántos se pueden producir hoy?
   python3 fabrica/estado.py creditos <slug>          # caracteres de voz que va a gastar y si alcanzan
@@ -63,6 +64,7 @@ def main():
     av = sub.add_parser("auto-voz"); av.add_argument("slug")
     ti = sub.add_parser("titulo"); ti.add_argument("slug"); ti.add_argument("titulo")
     apr = sub.add_parser("auto-prueba"); apr.add_argument("slug")
+    rh = sub.add_parser("rehacer"); rh.add_argument("slug")
     sub.add_parser("resumen"); sub.add_parser("tope"); sub.add_parser("panel")
     cr = sub.add_parser("creditos"); cr.add_argument("slug")
     x = a.parse_args(); e = leer(); V = e["videos"]
@@ -129,13 +131,16 @@ def main():
     elif x.cmd == "auto-prueba":
         v = V.get(x.slug) or sys.exit(f"no existe {x.slug}")
         pa = CFG.get("prueba_automatica") or {}
-        if not pa.get("activa"): sys.exit("prueba_automatica está apagada en fabrica/config.json")
+        if pa.get("bloqueada"): sys.exit("BLOQUEADO: una prueba anterior salió publicada normal; el dueño tiene que revisarlo antes de volver a subir pruebas solas")
+        if not pa.get("activa") and not v.get("publicar_prueba_al_terminar"): sys.exit("prueba_automatica está apagada en fabrica/config.json")
         if v["etapa"] != "esperando_ok_final": sys.exit(f"{x.slug} no está aprobado por el revisor (etapa {v['etapa']})")
-        gen = next((h["cuando"] for h in reversed(v["historial"]) if h["etapa"] == "voz"), None)
-        if not gen: sys.exit("no hay registro de cuándo se generó la voz")
-        g = dt.datetime.fromisoformat(gen).astimezone(AR); franja = pa["finde"] if g.weekday() >= 5 else pa["semana"]
-        hhmm = g.strftime("%H:%M")
-        if not (franja[0] <= hhmm <= franja[1]): sys.exit(f"se generó a las {hhmm} ({'finde' if g.weekday() >= 5 else 'semana'}): fuera de la franja {franja[0]}-{franja[1]}")
+        if v.get("publicar_prueba_al_terminar"): gen = None
+        else: gen = next((h["cuando"] for h in reversed(v["historial"]) if h["etapa"] == "voz"), None)
+        if not gen and not v.get("publicar_prueba_al_terminar"): sys.exit("no hay registro de cuándo se generó la voz")
+        g = dt.datetime.fromisoformat(gen).astimezone(AR) if gen else None
+        franja = (pa["finde"] if g.weekday() >= 5 else pa["semana"]) if g else None
+        hhmm = g.strftime("%H:%M") if g else ""
+        if g and not (franja[0] <= hhmm <= franja[1]): sys.exit(f"se generó a las {hhmm} ({'finde' if g.weekday() >= 5 else 'semana'}): fuera de la franja {franja[0]}-{franja[1]}")
         if not os.path.exists(f"{ROOT}/out/{x.slug}/{x.slug}.mp4"): sys.exit("falta el MP4")
         r = subprocess.run([sys.executable, f"{ROOT}/scripts/publicar.py", x.slug, "--confirmado", "--prueba"], capture_output=True, text=True, cwd=ROOT)
         sal = (r.stdout + r.stderr).strip(); print(sal[-1500:])
@@ -143,14 +148,26 @@ def main():
         reg = [p for p in json.load(open(f"{ROOT}/instagram/publicados.json")) if p["slug"] == x.slug]
         link = reg[-1].get("link") if reg else None; fue_prueba = bool(reg and reg[-1].get("prueba"))
         v["link_prueba" if fue_prueba else "link"] = link; v["etapa"] = "publicado"
-        v["nota"] = "reel de prueba automático (madrugada)" if fue_prueba else "AVISO: se pidió prueba y salió NORMAL"
+        v["nota"] = ("reel de prueba (versión rehecha a pedido del dueño)" if v.get("rehace") else "reel de prueba automático (madrugada)") if fue_prueba else "AVISO: se pidió prueba y salió NORMAL"
         v["historial"].append({"etapa": "publicado", "cuando": ahora(), "nota": v["nota"] + " " + (link or "")})
         log(x.slug, "publicador", v["nota"] + " " + (link or ""))
         if not fue_prueba:  # nunca más en automático hasta que el dueño lo revise
-            c = json.load(open(f"{D}/config.json")); c["prueba_automatica"]["activa"] = False
+            c = json.load(open(f"{D}/config.json")); c["prueba_automatica"]["activa"] = False; c["prueba_automatica"]["bloqueada"] = True
             json.dump(c, open(f"{D}/config.json", "w"), ensure_ascii=False, indent=2)
             log(x.slug, "fabrica", "prueba_automatica APAGADA: la prueba salió publicada normal")
         guardar(e); print(f"{x.slug}: {v['nota']} {link or ''}")
+    elif x.cmd == "rehacer":
+        base = x.slug
+        if not os.path.exists(f"{ROOT}/videos/{base}/parrafos.json"): sys.exit(f"no existe videos/{base}")
+        ya = [s for s, v in V.items() if v.get("rehace") == base and v["etapa"] not in ("publicado", "descartado")]
+        if ya: sys.exit(f"ya hay una versión nueva en curso: {ya[0]} ({V[ya[0]]['etapa']})")
+        n = 2
+        while f"{base}-v{n}" in V or os.path.exists(f"{ROOT}/videos/{base}-v{n}"): n += 1
+        nuevo = f"{base}-v{n}"; orig = V.get(base, {})
+        V[nuevo] = {"titulo": (orig.get("titulo") or base) + f" (versión {n})", "tema": orig.get("tema", ""), "fuentes": orig.get("fuentes", []),
+                    "puntaje": None, "etapa": "idea", "creado": ahora(), "rehace": base, "publicar_prueba_al_terminar": True,
+                    "historial": [{"etapa": "idea", "cuando": ahora(), "nota": f"rehacer {base} como reel de prueba, distinto del original"}]}
+        log(nuevo, "dueño", f"pidió rehacer {base} y subirlo como reel de prueba"); guardar(e); print(f"{nuevo}: en cola (rehace {base})")
     elif x.cmd == "resumen":
         print(f"Fábrica · {ahora()} · producidos hoy: {len(producidos_hoy(e))} de {CFG['tope_por_dia']}")
         for et in ETAPAS[:-1][::-1]:

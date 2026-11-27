@@ -124,6 +124,10 @@ async function publicar(slug, prueba, boton) {
   }
   ordenar(boton, `/fabrica publicar ${slug}${prueba ? ' prueba' : ''}`, 'Publicando…');
 }
+function rehacer(slug, boton) {
+  if (!dosToques(boton, '¿Rehacerlo distinto? Tocá de nuevo')) return;
+  ordenar(boton, `/fabrica rehacer ${slug}`, 'Pedido enviado…');
+}
 const chip = v => `<span class="chip e-${v.etapa}">${esc(NOMBRE[v.etapa] || v.etapa)}</span>`;
 const base = v => `<p class="t">${esc(v.titulo)}</p><div class="s">${chip(v)}${esc(v.slug)} · ${esc(v.tema || '')} · ${hace(v.desde)}${v.puntaje ? ' · puntaje ' + v.puntaje : ''}</div>`
   + (v.nota ? `<div class="nota">${esc(v.nota)}</div>` : '');
@@ -157,6 +161,20 @@ function pinta() {
     : '<div class="vacio">No hay ningún video en producción.</div>';
   h += `<h2>Cola <span class="c">${cola.length}</span></h2>`;
   h += cola.length ? '<div class="grid">' + cola.map(v => `<div class="card">${base(v)}</div>`).join('') + '</div>' : '<div class="vacio">Cola vacía. Con <b>/fabrica hoy</b> se buscan temas nuevos.</div>';
+  const R = (D.rendimiento || {}).reels || [];
+  const ORDEN = {'le fue mal': 0, 'va lento': 1, 'normal': 2, 'recién subido': 3, 'va bien': 4, 'le fue bien': 5, 'sin referencia': 6};
+  const COLOR = {'le fue mal': 'var(--rojo)', 'va lento': 'var(--rojo)', 'normal': 'var(--suave)', 'recién subido': 'var(--suave)', 'va bien': 'var(--verde)', 'le fue bien': 'var(--verde)'};
+  const num = n => (n ?? 0).toLocaleString('es-AR');
+  h += `<h2>Cómo les va <span class="c">${R.length} reels · mediana ${num(Math.round((D.rendimiento || {}).mediana_vistas || 0))} vistas · medido ${hace((D.rendimiento || {}).actualizado)}</span></h2>`;
+  h += R.length ? '<div class="grid">' + R.slice().sort((a, b) => (ORDEN[a.veredicto] ?? 9) - (ORDEN[b.veredicto] ?? 9) || (a.views || 0) - (b.views || 0)).map(r => {
+      const mal = r.veredicto === 'le fue mal' || r.veredicto === 'va lento';
+      return `<div class="card" ${mal ? 'style="border-color:var(--rojo)"' : ''}>
+      <p class="t">${esc(r.titulo)}</p>
+      <div class="s"><span class="chip" style="color:${COLOR[r.veredicto] || 'var(--suave)'}">${esc(r.veredicto)}</span>${r.prueba ? '<span class="chip">prueba</span>' : ''}${Math.round(r.edad_h)} h${r.frente_a_mediana != null ? ' · ' + r.frente_a_mediana + '× la mediana' : ''}${r.link && r.link.startsWith('https://') ? ` · <a href="${esc(r.link)}" target="_blank" rel="noopener">ver reel</a>` : ''}</div>
+      <div class="s" style="margin-top:8px;line-height:1.7">${num(r.views)} vistas · ${num(r.reach)} cuentas · ${r.ig_reels_avg_watch_time ? (r.ig_reels_avg_watch_time / 1000).toFixed(1) + ' s promedio' : ''}<br>${num(r.likes)} me gusta · ${num(r.comments)} comentarios · ${num(r.shares)} compartidos · ${num(r.saved)} guardados</div>
+      <div class="btns">${r.rehaciendo ? '<span class="s">Versión nueva en preparación…</span>'
+        : `<button class="${mal ? 'pub' : ''}" onclick="rehacer('${r.slug}', this)">Rehacer distinto y subir como prueba</button>`}</div></div>`; }).join('') + '</div>'
+    : '<div class="vacio">Todavía no hay métricas. Se miden en cada corrida.</div>';
   h += `<h2>Videos de la semana <span class="c">${D.semana.length}</span></h2>`;
   h += D.semana.length ? `<div class="card"><div class="s" style="font-size:13px;line-height:2">${V.filter(v => D.semana.includes(v.slug)).map(v => `${chip(v)}${v.link ? `<a href="${esc(v.link)}" target="_blank" rel="noopener">${esc(v.titulo)}</a>` : esc(v.titulo)} <span>· ${hace(v.desde)}</span>`).join('<br>')}</div></div>` : '<div class="vacio">Todavía ninguno esta semana.</div>';
   h += `<h2>Listos y publicados <span class="c">${gal.length}</span></h2><div class="gal">` + gal.map((v, i) => `<div class="card">

@@ -87,8 +87,14 @@ def datos():
             if f.endswith(".mp4") and f[:-4] not in con_video: os.remove(f"{vd}/{f}")
     sem = (hoy - dt.timedelta(days=7)).isoformat()
     prod_hoy = sum(any(h["etapa"] == "voz" and h["cuando"][:10] == hoy.strftime("%Y-%m-%d") for h in v.get("historial", [])) for v in e["videos"].values())
+    ren = json.load(open(f"{D}/rendimiento.json")) if os.path.exists(f"{D}/rendimiento.json") else {"reels": []}
+    titulos = {x["slug"]: x["titulo"] for x in out}
+    en_curso = {v.get("rehace") for v in e["videos"].values() if v.get("rehace") and v["etapa"] not in ("publicado", "descartado")}
+    for r in ren["reels"]:
+        r["titulo"] = titulos.get(r["slug"]) or r["slug"]; r["rehaciendo"] = r["slug"] in en_curso
     return {"actualizado": e.get("actualizado") or hoy.isoformat(timespec="seconds"), "videos": out, "tope": cfg["tope_por_dia"], "producidos_hoy": prod_hoy,
-            "semana": [x["slug"] for x in out if x["etapa"] in ("listo", "publicado") and (x["desde"] or "") >= sem], "creditos": cfg.get("creditos_elevenlabs_disponibles")}
+            "semana": [x["slug"] for x in out if x["etapa"] in ("listo", "publicado") and (x["desde"] or "") >= sem], "creditos": cfg.get("creditos_elevenlabs_disponibles"),
+            "rendimiento": ren}
 
 
 def main():
