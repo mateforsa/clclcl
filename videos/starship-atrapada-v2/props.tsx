@@ -106,7 +106,7 @@ export const Stage: React.FC<P> = ({ t, p }) => {
         <Flat s={[30, 30]} pos={[0, 9, 0]} rot={[PI / 2, 0, 0]} map={st} />
         {/* sol lejano */}
         <mesh position={[3.6, 4.6, -3.6]}><circleGeometry args={[0.35, 20]} /><meshBasicMaterial color="#fff6dc" toneMapped={false} /></mesh>
-        <Flat s={[2.6, 2.6]} pos={[3.6, 4.6, -3.58]} c="#ffd79a" o={0.25} add />
+        <mesh position={[3.6, 4.6, -3.59]}><circleGeometry args={[0.9, 24]} /><meshBasicMaterial color="#ffd79a" transparent opacity={0.18} toneMapped={false} depthWrite={false} /></mesh>
       </group>
     );
   }

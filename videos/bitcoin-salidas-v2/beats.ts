@@ -19,7 +19,7 @@ export const BEATS: BeatSpec[] = [
       { type: 'stack', pos: [0, 0, 0.1], rot: [0, -0.12, 0], p: { n: 21, to: 10, at: 2.65, dur: 1.6, gap: 0.055 } },
       { type: 'btc', pos: [-1.15, 0.06, 0.8], at: 'Bitcoin', p: { r: 0.34, flat: true } },
       { type: 'btc', pos: [-1.05, 0.15, 0.72], at: 'máximo', p: { r: 0.34, flat: true } },
-      { type: 'calc', pos: [1.2, 0, 0.75], rot: [0, -0.35, 0], at: 'jueves', p: { show: '≈ 48' } },
+      { type: 'calc', pos: [0.95, 0, 1.25], rot: [0, -0.5, 0], s: 0.85, at: 'jueves', p: { show: '≈ 48' } },
     ],
     overlays: [
       { type: 'big', text: 'US$ 100 → US$ 48', at: 0, y: 60, size: 84 },
@@ -27,24 +27,23 @@ export const BEATS: BeatSpec[] = [
     ] },
 
   // 2. Ese máximo fue el 6 de octubre de 2025: unos 126.000 dólares.  (grúa que sube por la ladera hasta la cumbre)
-  { id: 'b02', set: 'room', cam: { from: [-0.4, 0.9, 6.4], to: [-0.9, 2.5, 5.7], look: [-0.9, 1.5, 0], lookTo: [-1.1, 2.55, 0], fov: 46 }, keywords: ['2025', '126.000'],
+  { id: 'b02', set: 'room', cam: { from: [-0.4, 0.9, 6.6], to: [-0.9, 2.3, 6.0], look: [-0.9, 1.9, 0], lookTo: [-1.0, 3.05, 0], fov: 46 }, keywords: ['2025', '126.000'],
     actors: [
       PEAK,
       { type: 'ridge', pos: [0, 0, 0] },
-      { type: 'flag', pos: [PK[0], PK[1], 0.2], at: 'máximo', p: { text: '', w: 0.6, h: 0.36, pole: 0.7, color: K.orange } },
+      { type: 'flag', pos: [PK[0], PK[1], 0.2], at: 'máximo', p: { text: '', w: 0.34, h: 0.2, pole: 0.32, color: K.orange } },
       { type: 'btc', pos: [-0.25, 2.55, 0.9], at: '126.000', bob: 0.05, p: { r: 0.38, spin: 1.2 } },
     ],
     overlays: [
       tag('MÁXIMO: 6/10/2025', '6', { y: 57, color: K.orange2, size: 50 }),
-      { type: 'big', text: '', count: { to: 126000, pre: '1 BITCOIN ≈ US$ ' }, at: '126.000', y: 63, size: 70 },
+      { type: 'big', text: '1 BITCOIN ≈ US$ 126.000', at: '126.000', y: 63, size: 70 },
     ] },
 
   // 3. El 21 de noviembre bajó hasta 55.000, y el jueves rondaba los 61.000.  (travelling lateral bajando por la cresta)
-  { id: 'b03', set: 'room', cam: { from: [-0.9, 2.6, 6.3], to: [0.45, 2.0, 6.4], look: [-0.7, 2.1, 0], lookTo: [0.3, 1.5, 0], fov: 46 }, keywords: ['55.000', '61.000'],
+  { id: 'b03', set: 'room', cam: { from: [-0.8, 2.3, 6.6], to: [0.45, 1.9, 6.4], look: [-0.6, 2.45, 0], lookTo: [0.3, 1.75, 0], fov: 46 }, keywords: ['55.000', '61.000'],
     actors: [
       PEAK,
       { type: 'ridge', pos: [0, 0, 0] },
-      { type: 'flag', pos: [PK[0], PK[1], 0.2], p: { text: '', w: 0.6, h: 0.36, pole: 0.7, color: K.orange } },
       { type: 'rope', pos: [0, 0, 0], at: 'bajó', p: { a: PK, b: VL, dur: 1.2, color: K.red } },
       { type: 'flag', pos: [VL[0], VL[1], 0.82], at: '21', p: { text: '21/11/2026: ≈ 55.000', w: 1.55, h: 0.3, pole: 1.15, side: -1, color: K.red } },
       { type: 'rope', pos: [0, 0, 0], at: 'rondaba', p: { a: VL, b: RS, dur: 0.6, color: K.green } },
@@ -56,7 +55,7 @@ export const BEATS: BeatSpec[] = [
     ] },
 
   // 4. En noviembre se fue la plata de los fondos que compran bitcoins de verdad en Estados Unidos.  (órbita alrededor de los tanques)
-  { id: 'b04', set: 'room', cam: { from: [-1.5, 2.4, 6.0], to: [1.3, 2.1, 6.1], look: [-0.2, 1.25, 0], lookTo: [0.2, 1.2, 0], fov: 46 }, keywords: ['fondos', 'bitcoins', 'verdad'],
+  { id: 'b04', set: 'room', cam: { from: [-1.5, 2.4, 6.0], to: [1.3, 2.1, 6.1], look: [-0.2, 1.25, 0], lookTo: [0.2, 1.2, 0], fov: 46 }, keywords: ['noviembre', 'fondos', 'bitcoins', 'verdad'],
     actors: [
       PLANT,
       { type: 'tank', pos: [-1.15, 0, -0.3], p: { h: 2.1, r: 0.5, level: 0.88, to: 0.62, at: 1.25, dur: 3.2 } },
@@ -82,7 +81,7 @@ export const BEATS: BeatSpec[] = [
       { type: 'ring', pos: [1.25, 0.03, 0.5], at: '5.390', p: { r: 0.7, color: K.red } },
     ],
     overlays: [
-      { type: 'big', text: '', count: { to: 5390, pre: '−US$ ', post: ' MILLONES' }, at: '5.390', red: true, y: 60, size: 76 },
+      { type: 'big', text: '−US$ 5.390 MILLONES', at: '5.390', red: true, y: 60, size: 76 },
       tag('1 AL 25/11/2026 · DATOS: SOSOVALUE', 'SoSoValue', { y: 69, size: 34 }),
     ] },
 
@@ -132,13 +131,13 @@ export const BEATS: BeatSpec[] = [
     actors: [
       DESK,
       { type: 'stack', pos: [0, 0, 0.1], rot: [0, -0.12, 0], p: { n: 10, gap: 0.055 } },
-      { type: 'calc', pos: [1.2, 0, 0.75], rot: [0, -0.35, 0], p: { show: '≈ 48' } },
+      { type: 'calc', pos: [0.95, 0, 1.25], rot: [0, -0.5, 0], s: 0.85, p: { show: '≈ 48' } },
       { type: 'btc', pos: [-1.1, 0.06, 0.8], p: { r: 0.34, flat: true } },
     ],
     overlays: [tag('NO ES CONSEJO DE INVERSIÓN', 'consejo', { y: 60, color: '#b8860b', size: 50 })] },
 
   // 10. Completá la frase: con esos 100 dólares, yo hubiera...  (cenital que gira sobre el fajo que vuelve entero)
-  { id: 'b10', set: 'room', cam: { from: [0.9, 5.8, 1.7], to: [-0.7, 5.6, 2.1], look: [0, 0.2, 0], lookTo: [0, 0.4, 0], fov: 46 }, keywords: ['Completá', '100'],
+  { id: 'b10', set: 'room', cam: { from: [0.9, 5.8, 1.7], to: [-0.7, 5.6, 2.1], look: [0, 0.2, 0], lookTo: [0, 0.4, 0], fov: 46 }, keywords: ['Completá', '100', 'hubiera'],
     actors: [
       DESK,
       { type: 'stack', pos: [0, 0, 0.1], rot: [0, -0.12, 0], p: { n: 21, from: 10, grow: 1.0, gap: 0.055 } },

@@ -20,12 +20,12 @@ const BEACH2 = { shirt: '#3f8f88', pants: '#3a3d44', hair: '#5a3a1a', skin: '#c9
 
 export const BEATS: BeatSpec[] = [
   // 1. Es como agarrar una mosca con palitos chinos.  (empujón bajo, a la altura de la mesa)
-  { id: 'b01', set: 'room', cam: { from: [0.7, 1.15, 6.0], to: [0.1, 1.45, 4.7], look: [0.1, 1.25, 0], lookTo: [0, 1.4, 0], fov: 46 }, keywords: ['mosca', 'chinos'],
+  { id: 'b01', set: 'room', cam: { from: [0.6, 1.3, 5.2], to: [0.1, 1.55, 4.1], look: [0.15, 1.45, 0], lookTo: [0.05, 1.55, 0], fov: 46 }, keywords: ['mosca', 'chinos'],
     actors: [
       KITCHEN,
-      { type: 'bowl', pos: [-0.35, 0, 0.3] },
-      { type: 'sticks', pos: [-0.35, 1.45, 0.3], rot: [0, 0, 0.5], p: { len: 2.6, open: 0.75, gap: 0.1, close: 1.82 } },
-      { type: 'fly', pos: [-0.35, 1.45, 0.3], s: 0.42, p: { buzz: 0.45, stop: 1.8 } },
+      { type: 'bowl', pos: [-0.2, 0, -0.4] },
+      { type: 'sticks', pos: [-0.25, 1.55, 0.3], rot: [0, 0, 0.45], p: { len: 2.3, open: 0.8, gap: 0.14, close: 1.82 } },
+      { type: 'fly', pos: [-0.25, 1.55, 0.3], s: 0.55, p: { buzz: 0.4, stop: 1.8 } },
     ],
     overlays: [tag('UNA MOSCA · DOS PALITOS', 'mosca', { size: 50 })] },
 
@@ -74,12 +74,12 @@ export const BEATS: BeatSpec[] = [
     overlays: [tag('MOTORES ENCENDIDOS', 'motores', { color: ORANGE, size: 48, y: T1 }), tag('FRENA EN EL AIRE', 'frenó', { color: TEAL, size: 48, y: T2 })] },
 
   // 6. Su apodo en inglés significa eso: palitos chinos.  (vista de tres cuartos que gira sobre la mesa)
-  { id: 'b06', set: 'room', cam: { from: [1.3, 2.9, 4.8], to: [-0.7, 2.5, 5.0], look: [0, 1.3, 0], lookTo: [0, 1.35, 0], fov: 46 }, keywords: ['apodo', 'chinos'],
+  { id: 'b06', set: 'room', cam: { from: [1.3, 2.4, 4.8], to: [-0.7, 2.1, 5.0], look: [0, 1.6, 0], lookTo: [0, 1.65, 0], fov: 46 }, keywords: ['apodo', 'chinos'],
     actors: [
       KITCHEN,
-      { type: 'bowl', pos: [0.2, 0, -0.1] },
-      { type: 'ship', pos: [0.1, 1.15, 0.2], s: 0.5, p: { center: true }, bob: 0.03 },
-      { type: 'sticks', pos: [0.1, 1.53, 0.2], rot: [0, PI, 0.38], p: { len: 2.4, open: 0.7, gap: 0.2, close: 2.4 } },
+      { type: 'bowl', pos: [0.9, 0, -1.2] },
+      { type: 'ship', pos: [0.1, 1.55, 0.2], s: 0.55, p: { center: true }, bob: 0.03 },
+      { type: 'sticks', pos: [0.1, 1.95, 0.2], rot: [0, PI, 0.38], p: { len: 2.4, open: 0.7, gap: 0.2, close: 2.4 } },
     ],
     overlays: [tag('"CHOPSTICKS" = PALITOS CHINOS', 'apodo', { size: 44 })] },
 
@@ -157,7 +157,7 @@ export const BEATS: BeatSpec[] = [
   { id: 'b13', set: 'room', cam: { from: [0.7, 0.6, 6.4], to: [0.2, 2.1, 7.3], look: [0, 1.0, 0], lookTo: [0, 1.75, 0], fov: 46 }, keywords: ['16', 'confirmada'],
     actors: [
       NIGHT,
-      { type: 'tower', pos: [-1.05, 0, -0.3], p: { armY: 2.5 } },
+      { type: 'tower', pos: [-1.05, 0, -0.3], p: { armY: 3.2 } },
       { type: 'booster', pos: [-0.25, 0.06, -0.3], s: 0.6 },
       { type: 'ship', pos: [-0.25, 1.74, -0.3], s: 0.6, at: 'vuelo', enter: 'drop' },
       { type: 'hourglass', pos: [0.95, 0.06, 0.5], s: 0.75, at: 'sin' },
@@ -169,8 +169,8 @@ export const BEATS: BeatSpec[] = [
     actors: [
       KITCHEN,
       { type: 'bowl', pos: [-0.2, 0, 0] },
-      { type: 'sticks', pos: [-1.0, 0.66, 0.05], rot: [-PI / 2, 0, 0.05], p: { len: 2.2, open: 0.2, butt: 0.14, hand: false } },
-      { type: 'ship', pos: [0.95, 0.01, -0.2], s: 0.45 },
+      { type: 'sticks', pos: [-0.9, 0.66, 0.05], rot: [-PI / 2, 0, 0.05], p: { len: 1.7, open: 0.2, butt: 0.14, hand: false } },
+      { type: 'ship', pos: [1.05, 0.01, 0.7], s: 0.45 },
       { type: 'fly', pos: [-0.1, 1.45, 0.4], s: 0.4, p: { buzz: 0.4 } },
     ],
     overlays: [tag('¿QUÉ PARTE TE COSTÓ CREER?', 0, { color: ORANGE, size: 50 })] },

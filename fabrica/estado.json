@@ -936,9 +936,14 @@
      "etapa": "render",
      "cuando": "2026-11-27T00:35:08-03:00",
      "nota": "devuelto por el revisor: loudness -15,1 LUFS; bandera tapa subtítulos 5,8-8,8 s y 14,6-16,0 s; calculadora '≈ 48' cortada 2,7-5,4 s; pegadas 'yo|hubiera...' 12 px (50,93 s) y 'noviembre|se' 13 px (17,6-18,2 s, keyword en beats.ts); SoSoValue marcado por el oído sin SIN RESOLVER"
+    },
+    {
+     "etapa": "render",
+     "cuando": "2026-11-27T00:38:24-03:00",
+     "nota": ""
     }
    ],
-   "nota": "devuelto por el revisor: loudness -15,1 LUFS; bandera tapa subtítulos 5,8-8,8 s y 14,6-16,0 s; calculadora '≈ 48' cortada 2,7-5,4 s; pegadas 'yo|hubiera...' 12 px (50,93 s) y 'noviembre|se' 13 px (17,6-18,2 s, keyword en beats.ts); SoSoValue marcado por el oído sin SIN RESOLVER",
+   "nota": "",
    "caracteres_voz": 820
   },
   "anthropic-ipo-v2": {
@@ -1295,5 +1300,5 @@
    "caracteres_voz": 836
   }
  },
- "actualizado": "2026-11-27T00:35:52-03:00"
+ "actualizado": "2026-11-27T00:38:24-03:00"
 }
