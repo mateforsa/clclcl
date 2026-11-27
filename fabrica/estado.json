@@ -1625,7 +1625,7 @@
     "https://www.infobae.com/economia/2026/11/26/cerraron-mas-de-50000-kioscos-en-los-ultimos-tres-anos-y-el-sector-perdio-casi-la-mitad-de-sus-locales/"
    ],
    "puntaje": 8.3,
-   "etapa": "render",
+   "etapa": "revision",
    "creado": "2026-11-27T10:48:21-03:00",
    "historial": [
     {
@@ -1676,9 +1676,14 @@
      "etapa": "render",
      "cuando": "2026-11-27T11:52:01-03:00",
      "nota": "devuelto por el revisor (2.ª pasada): en el plano 15, de 62,9 s al final, el chocolate y el envoltorio rosa tapan el cartel KIOSCO elevado (se lee K■■O)"
+    },
+    {
+     "etapa": "revision",
+     "cuando": "2026-11-27T11:58:19-03:00",
+     "nota": ""
     }
    ],
-   "nota": "devuelto por el revisor (2.ª pasada): en el plano 15, de 62,9 s al final, el chocolate y el envoltorio rosa tapan el cartel KIOSCO elevado (se lee K■■O)",
+   "nota": "",
    "caracteres_voz": 1015
   },
   "colapinto-fp1-qatar": {
@@ -1720,5 +1725,5 @@
    "nota": ""
   }
  },
- "actualizado": "2026-11-27T11:58:01-03:00"
+ "actualizado": "2026-11-27T11:58:19-03:00"
 }
