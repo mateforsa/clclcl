@@ -57,3 +57,4 @@
 2026-11-26T22:29:24-03:00 [fabrica] título -> Take-Two reclamó y GitHub bajó 3.007 proyectos del GTA VI para PC
 2026-11-26T22:37:25-03:00 [dueño] APROBADO (esperando_ok_final -> listo)
 2026-11-26T22:39:05-03:00 [publicador] subido como REEL DE PRUEBA: https://www.instagram.com/reel/DgOhKgqp92s/
+2026-11-26T22:48:53-03:00 [fabrica] corrección: el reel de prueba salió NORMAL (is_shared_to_feed=true); queda como publicado. Publicador corregido: las pruebas ya no mandan share_to_feed y se controla el resultado.

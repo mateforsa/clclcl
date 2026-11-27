@@ -213,6 +213,7 @@
   "id": "18122650391600233",
   "fecha": "2026-11-27T01:39:05+00:00",
   "link": "https://www.instagram.com/reel/DgOhKgqp92s/",
-  "prueba": true
+  "prueba": false,
+  "nota": "se pidió como reel de prueba pero Instagram lo publicó normal (is_shared_to_feed=true)"
  }
 ]

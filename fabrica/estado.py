@@ -102,9 +102,10 @@ def main():
         if x.simular: return
         if r.returncode != 0:
             log(x.slug, "publicador", "FALLÓ la subida: " + sal[-300:].replace("\n", " | ")); guardar(e); sys.exit(1)
-        reg = [p for p in json.load(open(f"{ROOT}/instagram/publicados.json")) if p["slug"] == x.slug and bool(p.get("prueba")) == x.prueba]
+        reg = [p for p in json.load(open(f"{ROOT}/instagram/publicados.json")) if p["slug"] == x.slug]
         link = reg[-1].get("link") if reg else None
-        if x.prueba:
+        if x.prueba and not (reg and reg[-1].get("prueba")): log(x.slug, "publicador", "AVISO: se pidió prueba y Instagram lo publicó NORMAL")
+        if x.prueba and reg and reg[-1].get("prueba"):
             v["link_prueba"] = link; log(x.slug, "publicador", f"subido como REEL DE PRUEBA: {link}")
         else:
             v["link"] = link; v["etapa"] = "publicado"; v["nota"] = ""; v["historial"].append({"etapa": "publicado", "cuando": ahora(), "nota": link or ""})

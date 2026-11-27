@@ -70,8 +70,9 @@ def publicar(d):
     ig = m.ig_id()
     lim = m.get(f"{ig}/content_publishing_limit", fields="quota_usage,config")["data"][0]
     print(f"Límite de Meta: {lim.get('quota_usage')} de {lim.get('config', {}).get('quota_total')} publicaciones en 24 h")
-    datos = {"media_type": "REELS", "upload_type": "resumable", "caption": d["descripción"], "cover_url": d["cover_url"], "share_to_feed": "true"}
-    if PRUEBA: datos["trial_params"] = json.dumps({"graduation_strategy": "MANUAL"})
+    datos = {"media_type": "REELS", "upload_type": "resumable", "caption": d["descripción"], "cover_url": d["cover_url"]}
+    if PRUEBA: datos["trial_params"] = json.dumps({"graduation_strategy": "MANUAL"})  # sin share_to_feed: choca con la prueba
+    else: datos["share_to_feed"] = "true"
     c = m.post(f"{ig}/media", **datos); cid, uri = c["id"], c["uri"]
     print("Contenedor creado:", cid)
     tam = os.path.getsize(MP4)
@@ -95,9 +96,12 @@ def publicar(d):
         time.sleep(10)
     else: raise m.MetaError("el video no terminó de procesarse en 10 minutos; el contenedor sigue vivo 24 h, reintentá")
     mid = m.post(f"{ig}/media_publish", creation_id=cid)["id"]
-    link = m.get(mid, fields="permalink").get("permalink")
+    info = m.get(mid, fields="permalink,is_shared_to_feed"); link = info.get("permalink")
+    salio_prueba = PRUEBA and not info.get("is_shared_to_feed")
+    if PRUEBA and not salio_prueba:
+        print("AVISO: se pidió reel de prueba pero Instagram lo publicó NORMAL (is_shared_to_feed=true). Lo ven tus seguidores.")
     reg = json.load(open(REG)) if os.path.exists(REG) else []
-    reg.append({"slug": SLUG, "id": mid, "fecha": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"), "link": link, "prueba": PRUEBA})
+    reg.append({"slug": SLUG, "id": mid, "fecha": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"), "link": link, "prueba": salio_prueba})
     json.dump(reg, open(REG, "w"), ensure_ascii=False, indent=1)
     print("PUBLICADO:", link)
 
