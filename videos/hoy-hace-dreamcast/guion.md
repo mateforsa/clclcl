@@ -70,7 +70,7 @@ Aparte de los subtítulos. Mayúsculas y signos tal como van.
 | 11 | `DESDE 2001: JUEGOS PARA OTRAS CONSOLAS` · `SONY · NINTENDO · MICROSOFT` | en "2001" y en "Sony" |
 | 12 | `¿TUVISTE UNA?` | en "tuviste" |
 
-Placa fija de serie (esquina superior, todo el video): `HOY HACE · 2`.
+Sin placa fija de serie numerada (regla del dueño del 27/11: nada de "parte N"); la identidad "HOY HACE" va en la portada.
 Personas: no aparece ninguna. Marcas: solo el nombre en texto plano, sin logos (la consola, el módem, la tarjeta de memoria y
 el joystick son objetos low-poly genéricos).
 
