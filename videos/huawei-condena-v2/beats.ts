@@ -117,7 +117,7 @@ export const BEATS: BeatSpec[] = [
     ] },
 
   // 7. Y en 2025 facturó casi como en su mejor año, según su balance.  (grúa que sube junto a las columnas de lingotes)
-  { id: 'b07', set: 'room', cam: { from: [1.3, 1.2, 6.0], to: [0.5, 2.6, 6.4], look: [0, 0.6, 0], lookTo: [0, 1.0, 0], fov: 46, shift: -0.06 }, keywords: ['2025', 'facturó', 'mejor', 'balance'],
+  { id: 'b07', set: 'room', cam: { from: [1.3, 1.2, 6.0], to: [0.5, 2.6, 6.4], look: [0, 0.6, 0], lookTo: [0, 1.0, 0], fov: 46, shift: -0.02 }, keywords: ['2025', 'facturó', 'mejor', 'balance'],
     actors: [
       BANK,
       { type: 'ingots', pos: [0, 0, -0.2], p: { a: -5, b: -5, line: 2.8, H: 1.6 } },
@@ -129,14 +129,14 @@ export const BEATS: BeatSpec[] = [
     ] },
 
   // 8. El veredicto incluye fraude bancario, violar sanciones a Irán y conspirar para robar secretos comerciales.  (contrapicado que corre por la mesa)
-  { id: 'b08', set: 'room', cam: { from: [-1.3, 1.9, 4.4], to: [1.1, 2.1, 4.5], look: [-0.5, 0.7, 0], lookTo: [0.5, 0.7, 0], fov: 46, shift: -0.04 }, keywords: ['veredicto', 'incluye', 'fraude', 'bancario', 'sanciones', 'conspirar', 'secretos', 'comerciales'],
+  { id: 'b08', set: 'room', cam: { from: [-1.3, 1.9, 4.4], to: [1.1, 2.1, 4.5], look: [-0.5, 0.7, 0], lookTo: [0.5, 0.7, 0], fov: 46, shift: 0.04 }, keywords: ['veredicto', 'incluye', 'fraude', 'bancario', 'sanciones', 'conspirar', 'secretos', 'comerciales'],
     actors: [
       JURY,
       { type: 'box', pos: [0, 0.8, 0], p: { size: [3.6, 0.1, 1.3], color: '#5e4329' } },
       ...[[-1.2, 0.8], [1.2, 0.8], [-1.2, -0.8]].map(([x, z]) => ({ type: 'box', pos: [x, 0.4, z * 0.5] as [number, number, number], p: { size: [0.1, 0.8, 0.1], color: '#7a5a35' } })),
-      { type: 'folder', pos: [-1.05, 0.86, 0.1], rot: [0, 0.15, 0], at: 'fraude', enter: 'drop', p: { color: '#c9a86a', stamp: 1.8 } },
-      { type: 'folder', pos: [0, 0.86, 0.05], rot: [0, -0.1, 0], at: 'violar', enter: 'drop', p: { color: '#8fb0c9', stamp: 3.5 } },
-      { type: 'folder', pos: [1.05, 0.86, 0.1], rot: [0, 0.12, 0], at: 'conspirar', enter: 'drop', p: { color: '#b7a3c9', stamp: 5.5 } },
+      { type: 'folder', pos: [-1.05, 0.86, 0.1], rot: [0, 0.15, 0], at: 'fraude', p: { color: '#c9a86a', stamp: 1.8 } },
+      { type: 'folder', pos: [0, 0.86, 0.05], rot: [0, -0.1, 0], at: 'violar', p: { color: '#8fb0c9', stamp: 3.5 } },
+      { type: 'folder', pos: [1.05, 0.86, 0.1], rot: [0, 0.12, 0], at: 'conspirar', p: { color: '#b7a3c9', stamp: 5.5 } },
       { type: 'person', pos: [0, 0, -1.3], s: 0.95, p: { ...SUIT, pose: 'idle' } },
     ],
     overlays: [
@@ -161,9 +161,9 @@ export const BEATS: BeatSpec[] = [
       { type: 'cell', pos: [-0.9, 0, -0.8], s: 0.9, p: { w: 2.0 } },
       { type: 'hbox', pos: [1.2, 0, -1.4], rot: [0, -0.3, 0], s: 0.75, at: 'empresa', p: {} },
       { type: 'cross', pos: [-0.9, 1.3, -0.6], at: 'presa', p: { size: 0.55, color: RED } },
-      { type: 'sack', pos: [0.15, 0, 0.25], at: 'multas', enter: 'drop', p: {} },
-      { type: 'sack', pos: [0.6, 0, 0.6], s: 0.85, at: 'multas', enter: 'drop', p: {} },
-      { type: 'crate', pos: [0.95, 0, 0.45], rot: [0, -0.4, 0], at: 'decomisos', enter: 'drop', p: {} },
+      { type: 'sack', pos: [0.15, 0, 0.25], at: 'multas', p: {} },
+      { type: 'sack', pos: [0.6, 0, 0.6], s: 0.85, at: 'multas', p: {} },
+      { type: 'crate', pos: [0.95, 0, 0.45], rot: [0, -0.4, 0], at: 'decomisos', p: {} },
     ],
     overlays: [
       tag('Una empresa no va presa', 'presa', { size: 44, y: 67 }),
@@ -190,7 +190,7 @@ export const BEATS: BeatSpec[] = [
       { type: 'seats', pos: [0, 0, -0.6], p: { n: 4, empty: 1, glow: 0.74 } },
       { type: 'person', pos: [-0.31, 0.15, -0.55], p: { ...MENG, pose: 'sit' }, out: 'libre' },
       { type: 'person', pos: [-0.31, 0, -0.2], rot: [0, -Math.PI / 2, 0], at: 'libre', enter: 'none', p: { ...MENG, pose: 'walk' }, move: { to: [-2.6, 0, 0.2], at: 'libre', dur: 1.2 } },
-      { type: 'hbox', pos: [-0.31, 0.47, -0.62], s: 0.5, at: 'Huawei', enter: 'drop', p: {} },
+      { type: 'hbox', pos: [-0.31, 0.47, -0.62], s: 0.5, at: 'Huawei', p: {} },
       { type: 'box', pos: [0.75, 0.35, -1.7], p: { size: [1.3, 0.7, 0.7], color: '#26384d' } },
       { type: 'deskcal', pos: [0.75, 0.7, -1.6], rot: [0, -0.15, 0], s: 0.8, at: 'septiembre', p: { top: 'SEP 2027', day: '14' } },
     ],

@@ -1068,7 +1068,7 @@
    "tema": "",
    "fuentes": [],
    "puntaje": null,
-   "etapa": "esperando_ok_final",
+   "etapa": "publicado",
    "creado": "2026-11-26T23:18:32-03:00",
    "rehace": "starship-atrapada",
    "publicar_prueba_al_terminar": true,
@@ -1137,10 +1137,16 @@
      "etapa": "esperando_ok_final",
      "cuando": "2026-11-27T01:37:10-03:00",
      "nota": ""
+    },
+    {
+     "etapa": "publicado",
+     "cuando": "2026-11-27T01:40:26-03:00",
+     "nota": "reel de prueba (versión rehecha a pedido del dueño) https://www.instagram.com/reel/DgO13-Cz3G9/"
     }
    ],
-   "nota": "",
-   "caracteres_voz": 824
+   "nota": "reel de prueba (versión rehecha a pedido del dueño)",
+   "caracteres_voz": 824,
+   "link_prueba": "https://www.instagram.com/reel/DgO13-Cz3G9/"
   },
   "microsoft-codigo-rojo-v2": {
    "titulo": "Microsoft declara un \"Código Rojo\" interno (microsoft-codigo-rojo) (versión 2)",
@@ -1420,5 +1426,5 @@
    "caracteres_voz": 836
   }
  },
- "actualizado": "2026-11-27T01:37:10-03:00"
+ "actualizado": "2026-11-27T01:40:26-03:00"
 }
