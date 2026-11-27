@@ -9,3 +9,5 @@
 2026-11-26T23:35:23-03:00 [fabrica] etapa -> guion (devuelto por el verificador (2.a vuelta): en la hoja de datos (guion.md linea 106) la columna de frase todavia dice placa "US$ 260 -> 235"; pasarla a 237. Lo demas OK.)
 2026-11-26T23:35:47-03:00 [guionista] corregido: hoja de datos línea 106 cita la placa como 'US$ 260 → 237'
 2026-11-26T23:35:47-03:00 [fabrica] etapa -> guion (corregido tras devolución del verificador)
+2026-11-26T23:36:01-03:00 [verificador] APROBADO: 27 datos, todos con fuente (3.a vuelta: ya no queda ningun 235; placa 10 y hoja dicen 260 -> 237, RoboForex y KuCoin; desde be69491 solo cambio la linea 106 de guion.md; parrafos.json sin cambios)
+2026-11-26T23:36:01-03:00 [fabrica] etapa -> verificado

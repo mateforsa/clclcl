@@ -3,3 +3,5 @@
 2026-11-26T23:23:33-03:00 [fabrica] etapa -> guion
 2026-11-26T23:35:31-03:00 [verificador] APROBADO: 22 datos, todos con fuente (maximo 6/10/2025 ~126.000; minimo 21/11/2026 ~55.250; precio 26/11 ~60.400-61.600; cuenta 100->48 entre 47,9 y 48,6; salidas nov 5.390 M al 25/11 SoSoValue, record desde ene-2024; record previo junio 2026 4.510 M; saldo 51.590 M SoSoValue; placas y descripcion OK; ~49 s, A2 no esta en los 6 previos, 5 etiquetas)
 2026-11-26T23:35:31-03:00 [fabrica] etapa -> verificado
+2026-11-26T23:36:06-03:00 [fabrica] etapa -> esperando_ok_voz
+2026-11-26T23:36:07-03:00 [fabrica] voz SIN OK del dueño (regla voz_sin_ok): ~820 caracteres
