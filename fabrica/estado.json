@@ -1971,7 +1971,30 @@
    ],
    "nota": "",
    "caracteres_voz": 1102
+  },
+  "cosecha-record-171": {
+   "titulo": "Cosecha récord: 171 millones de toneladas, 30 millones más en un año",
+   "tema": "Economía argentina",
+   "fuentes": [
+    "https://www.ambito.com/economia/la-cosecha-alcanzo-un-record-historico-y-el-campo-aportaria-casi-u45000-millones-n6349975",
+    "https://www.clarin.com/rural/saliendo-estancamiento-cosecha-granos-record-trae-aluvion-dolares-argentina_0_mjnLdIjqyP.html"
+   ],
+   "puntaje": 8.3,
+   "etapa": "idea",
+   "creado": "2026-11-27T16:42:18-03:00",
+   "historial": [
+    {
+     "etapa": "idea",
+     "cuando": "2026-11-27T16:42:18-03:00"
+    },
+    {
+     "etapa": "idea",
+     "cuando": "2026-11-27T16:42:19-03:00",
+     "nota": ""
+    }
+   ],
+   "nota": ""
   }
  },
- "actualizado": "2026-11-27T16:18:59-03:00"
+ "actualizado": "2026-11-27T16:42:19-03:00"
 }
