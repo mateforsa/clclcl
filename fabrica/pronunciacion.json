@@ -227,5 +227,31 @@
    "el Alpín",
    "Alpínn"
   ]
+ },
+ "Muse": {
+  "dicho": "Miúz",
+  "estado": "probada",
+  "puntaje": 0.59,
+  "variantes": [
+   "Mius",
+   "Miús",
+   "Miuz",
+   "Miúus",
+   "Muse",
+   "Miúz"
+  ]
+ },
+ "Signal": {
+  "dicho": "Sígnol",
+  "estado": "probada",
+  "puntaje": 0.57,
+  "variantes": [
+   "Sígnal",
+   "Síknal",
+   "Signal",
+   "Sígnol",
+   "Sígnel",
+   "Sícnal"
+  ]
  }
 }

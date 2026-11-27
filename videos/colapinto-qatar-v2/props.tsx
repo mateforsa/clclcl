@@ -289,10 +289,12 @@ export const TimingTower: React.FC<P> = ({ t, tt, p }) => {
         if (swap && i === swap.b) y = lerp(-swap.b * rh, -swap.a * rh, k);
         const flash = r.flashAt !== undefined && t >= r.flashAt;
         return (
-          <group key={i} position={[0, y, r.hi ? 0.06 : 0]}>
-            <B s={[w, rh - 0.05, 0.04]} pos={[0, 0, -0.02]} c={r.hi ? CELD : flash ? '#4a1410' : '#0d0e11'} />
-            <group position={[-w / 2 + 0.3, 0, 0.01]}><Label t={t} tt={tt} p={{ text: r.pos, w: 0.5, h: rh - 0.08, color: r.hi ? '#fff' : AMBER, size: 0.72, weight: 900, depth: 0 }} /></group>
-            <group position={[0.15, 0, 0.01]}><Label t={t} tt={tt} p={{ text: r.name, w: w - 0.9, h: rh - 0.08, color: r.hi ? '#fff' : '#e8e2d0', size: 0.6, weight: 800, depth: 0 }} /></group>
+          <group key={i}>
+            <group position={[-w / 2 + 0.3, -i * rh, 0.01]}><B s={[0.5, rh - 0.05, 0.04]} pos={[0, 0, -0.03]} c="#0d0e11" /><Label t={t} tt={tt} p={{ text: r.pos, w: 0.5, h: rh - 0.08, color: AMBER, size: 0.72, weight: 900, depth: 0 }} /></group>
+            <group position={[0.3, y, r.hi ? 0.06 : 0]}>
+              <B s={[w - 0.62, rh - 0.05, 0.04]} pos={[0, 0, -0.02]} c={r.hi ? CELD : flash ? '#7a1a12' : '#0d0e11'} />
+              <group position={[0, 0, 0.01]}><Label t={t} tt={tt} p={{ text: r.name, w: w - 0.8, h: rh - 0.08, color: '#ffffff', size: 0.6, weight: 800, depth: 0 }} /></group>
+            </group>
           </group>);
       })}
     </group>

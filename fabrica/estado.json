@@ -1156,9 +1156,14 @@
      "etapa": "render",
      "cuando": "2026-11-27T00:45:16-03:00",
      "nota": ""
+    },
+    {
+     "etapa": "render",
+     "cuando": "2026-11-27T01:05:10-03:00",
+     "nota": "devuelto por el revisor: subtitulos pegados <14 px (esos|servidores 20,9 s, Mandaselo|al 48,4-49,0 s, de|empresas 5,0 s, una|alarma: 11,1 s, noviembre|se 0,5 s, se|trabaron. 23,0 s, Y|adentro, 8,0 s) y cronometro de b07 (29,7-33,5 s) con cuadrado negro detras de la esfera"
     }
    ],
-   "nota": "",
+   "nota": "devuelto por el revisor: subtitulos pegados <14 px (esos|servidores 20,9 s, Mandaselo|al 48,4-49,0 s, de|empresas 5,0 s, una|alarma: 11,1 s, noviembre|se 0,5 s, se|trabaron. 23,0 s, Y|adentro, 8,0 s) y cronometro de b07 (29,7-33,5 s) con cuadrado negro detras de la esfera",
    "caracteres_voz": 832
   },
   "canva-despidos-v2": {
@@ -1359,5 +1364,5 @@
    "caracteres_voz": 836
   }
  },
- "actualizado": "2026-11-27T01:02:22-03:00"
+ "actualizado": "2026-11-27T01:05:34-03:00"
 }

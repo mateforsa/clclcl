@@ -54,19 +54,19 @@ export const Stage: React.FC<P> = ({ t, p }) => {
       <pointLight position={[-2.2, 1.6, 0.6]} intensity={9} color={AMBER} distance={6} />
       <Flat s={[24, 24]} pos={[0, 0.02, 0]} rot={[-Math.PI / 2, 0, 0]} map={carpet} />
       <B s={[12, 0.5, 0.2]} pos={[0, 0.25, -3.75]} c="#26384d" />
-      <Flat s={[9, 2.2]} pos={[0, 1.6, -3.64]} map={night} />
-      <Snow t={t} w={8.6} h={2.1} y0={0.55} z={-3.6} />
+      <Flat s={[9, 1.6]} pos={[0, 1.3, -3.64]} map={night} />
+      <Snow t={t} w={8.6} h={1.5} y0={0.55} z={-3.6} />
       <group position={[1.6, 1.25, -5.0]} rotation={[0, -0.35, 0]} scale={0.75}>
         <Cyl r={0.34} h={4.4} rot={[0, 0, Math.PI / 2]} c="#c9d3dc" /><B s={[1.0, 0.06, 4.4]} pos={[0.2, -0.08, 0]} c="#aebbc7" />
         <B s={[0.55, 1.0, 0.06]} pos={[-2.0, 0.55, 0]} c={RED} />
         {Array.from({ length: 10 }, (_, i) => <B key={i} s={[0.1, 0.08, 0.02]} pos={[-1.2 + i * 0.26, 0.1, 0.34]} c={AMBER} e={AMBER} ei={1.2} />)}
       </group>
-      {[-4.5, -3, -1.5, 0, 1.5, 3, 4.5].map((x) => <B key={x} s={[0.1, 2.3, 0.14]} pos={[x, 1.6, -3.56]} c="#0e1724" />)}
-      <B s={[12, 0.12, 0.16]} pos={[0, 2.72, -3.56]} c="#0e1724" />
-      <B s={[12, 0.04, 0.18]} pos={[0, 2.8, -3.54]} c={ICE} e={ICE} ei={0.5} />
-      <B s={[12, 6, 0.2]} pos={[0, 5.8, -3.75]} c={NAVY} />
+      {[-4.5, -3, -1.5, 0, 1.5, 3, 4.5].map((x) => <B key={x} s={[0.1, 1.7, 0.14]} pos={[x, 1.3, -3.56]} c="#0e1724" />)}
+      <B s={[12, 0.12, 0.16]} pos={[0, 2.12, -3.56]} c="#0e1724" />
+      <B s={[12, 0.04, 0.18]} pos={[0, 2.2, -3.54]} c={ICE} e={ICE} ei={0.5} />
+      <B s={[12, 6.6, 0.2]} pos={[0, 5.5, -3.66]} c={NAVY} />
       {[-4.3, 4.3].map((x) => <B key={x} s={[0.2, 9, 12]} pos={[x, 4.5, 0]} c={NAVY2} />)}
-      {p.sign && <group position={[-2.35, 2.25, -3.0]}>
+      {p.sign && <group position={[p.signX ?? -2.35, 1.7, -3.0]}>
         <B s={[0.03, 0.5, 0.03]} pos={[0, 0.42, 0]} c="#556" />
         <Label t={t} tt={0} p={{ text: p.sign, w: 1.25, h: 0.32, bg: ICE, color: NAVY, size: 0.62, weight: 900, depth: 0.05 }} />
       </group>}
@@ -81,12 +81,12 @@ export const Stage: React.FC<P> = ({ t, p }) => {
         <pointLight position={[0, 3.6, 2.2]} intensity={22} color="#fff4e2" distance={12} />
         <pointLight position={[2.4, 2.0, -1.5]} intensity={8} color={AMBER} distance={6} />
         <Flat s={[24, 24]} pos={[0, 0.02, 0]} rot={[-Math.PI / 2, 0, 0]} map={parquet} />
-        <B s={[12, 1.3, 0.2]} pos={[0, 0.65, -3.75]} c={MAPLE} />
-        <B s={[12, 0.08, 0.26]} pos={[0, 1.32, -3.7]} c="#9c7a4c" />
-        <B s={[12, 8, 0.2]} pos={[0, 5.3, -3.78]} c={PINE} />
-        {[-2.6, -0.9, 0.9, 2.6].map((x) => <B key={x} s={[1.0, 0.04, 0.05]} pos={[x, 2.05, -3.66]} c="#9c7a4c" />)}
+        <B s={[12, 0.8, 0.2]} pos={[0, 0.4, -3.75]} c={MAPLE} />
+        <B s={[12, 0.08, 0.26]} pos={[0, 0.82, -3.7]} c="#9c7a4c" />
+        <B s={[12, 8.4, 0.2]} pos={[0, 5.0, -3.78]} c={PINE} />
+        
         {[-4.3, 4.3].map((x) => <B key={x} s={[0.2, 9, 12]} pos={[x, 4.5, 0]} c="#1b3e33" />)}
-        <group position={[2.8, 2.25, -3.64]}>
+        <group position={[2.8, 1.6, -3.64]}>
           <Cyl r={0.34} h={0.06} rot={[Math.PI / 2, 0, 0]} c="#f2ecdf" seg={20} />
           <B s={[0.03, 0.26, 0.02]} pos={[0, 0.1, 0.05]} c="#222" />
           <group rotation={[0, 0, -t * 1.2]} position={[0, 0, 0.06]}><B s={[0.02, 0.3, 0.02]} pos={[0, 0.13, 0]} c={RED} /></group>
@@ -104,9 +104,9 @@ export const Stage: React.FC<P> = ({ t, p }) => {
         <pointLight position={[0, 3.5, 2.5]} intensity={22} color="#f3f6ff" distance={12} />
         <pointLight position={[-2.2, 2.2, -1.8]} intensity={9} color={AMBER} distance={6} />
         <Flat s={[24, 24]} pos={[0, 0.02, 0]} rot={[-Math.PI / 2, 0, 0]} map={tiles} />
-        <B s={[12, 2.4, 0.2]} pos={[0, 1.2, -3.75]} c={MARBLE} />
-        <B s={[12, 0.1, 0.28]} pos={[0, 2.42, -3.7]} c="#b8964e" />
-        <B s={[12, 7, 0.2]} pos={[0, 5.9, -3.78]} c="#0f2a24" />
+        <B s={[12, 1.4, 0.2]} pos={[0, 0.7, -3.75]} c={MARBLE} />
+        <B s={[12, 0.1, 0.28]} pos={[0, 1.42, -3.7]} c="#b8964e" />
+        <B s={[12, 8, 0.2]} pos={[0, 5.45, -3.78]} c="#0f2a24" />
         {[-3.3, -1.1, 1.1, 3.3].map((x) => <group key={x} position={[x, 0, -3.3]}>
           <B s={[0.6, 0.2, 0.6]} pos={[0, 0.1, 0]} c="#cfcac0" /><Cyl r={0.22} h={4} pos={[0, 2.2, 0]} c="#1f4a3e" seg={12} /><B s={[0.6, 0.2, 0.6]} pos={[0, 4.25, 0]} c="#cfcac0" /></group>)}
         {[-4.3, 4.3].map((x) => <B key={x} s={[0.2, 9, 12]} pos={[x, 4.5, 0]} c="#173a32" />)}
@@ -149,9 +149,9 @@ export const Stage: React.FC<P> = ({ t, p }) => {
         <pointLight position={[0, 3.4, 2.4]} intensity={20} color="#dfe9f2" distance={12} />
         <pointLight position={[1.6, 1.8, 0.8]} intensity={9} color={AMBER} distance={6} />
         <Flat s={[24, 24]} pos={[0, 0.02, 0]} rot={[-Math.PI / 2, 0, 0]} c="#5b6168" />
-        <mesh position={[0, 1.35, -3.75]}><planeGeometry args={[9, 2.7]} /><meshStandardMaterial map={conc} flatShading /></mesh>
-        <B s={[12, 7, 0.2]} pos={[0, 6.2, -3.8]} c="#141c26" />
-        <B s={[12, 0.05, 0.1]} pos={[0, 2.72, -3.68]} c={ICE} e={ICE} ei={0.4} />
+        <mesh position={[0, 1.0, -3.75]}><planeGeometry args={[9, 2.0]} /><meshStandardMaterial map={conc} flatShading /></mesh>
+        <B s={[12, 7.6, 0.2]} pos={[0, 5.8, -3.8]} c="#141c26" />
+        <B s={[12, 0.05, 0.1]} pos={[0, 2.02, -3.68]} c={ICE} e={ICE} ei={0.4} />
         {[-4.3, 4.3].map((x) => <B key={x} s={[0.2, 9, 12]} pos={[x, 4.5, 0]} c="#2a333d" />)}
       </group>
     );
@@ -171,8 +171,8 @@ export const Stage: React.FC<P> = ({ t, p }) => {
       {Array.from({ length: 5 }, (_, i) => <B key={i} s={[7, 0.3 * (i + 1), 0.55]} pos={[0, 0.15 * (i + 1), -0.2 - i * 0.55]} c={i % 2 ? '#c9cdd3' : '#bcc1c8'} />)}
       <B s={[7, 1.5, 1.2]} pos={[0, 0.75, -3.15]} c="#c9cdd3" />
       {[-2.4, -1.2, 0, 1.2, 2.4].map((x) => <group key={x} position={[x, 1.5, -3.35]}>
-        <Cyl r={0.22} h={2.6} pos={[0, 1.3, 0]} c="#dfe3e8" seg={12} /></group>)}
-      <B s={[6.4, 0.35, 0.6]} pos={[0, 4.25, -3.35]} c="#dfe3e8" />
+        <Cyl r={0.22} h={2.6} pos={[0, 1.3, 0]} c="#6b7480" seg={12} /></group>)}
+      <B s={[6.4, 0.35, 0.6]} pos={[0, 4.25, -3.35]} c="#4d5560" />
     </group>
   );
 };
@@ -342,7 +342,7 @@ export const Ingots: React.FC<P> = ({ t, tt, p }) => {
     return (<group position={[x, 0, 0]}>
       {Array.from({ length: n }, (_, i) => { const y0 = (i * hh) / n; if (y0 >= hv) return null; const hi = Math.min(hh / n - 0.02, hv - y0);
         return <B key={i} s={[0.8, hi, 0.55]} pos={[0, y0 + hi / 2, 0]} c={i % 2 ? c : '#e3b64f'} e="#5a3d00" ei={0.25} />; })}
-      <group position={[0, -0.22, 0.32]}><Label t={t} tt={tt} p={{ text: lab, w: 0.9, h: 0.3, bg: NAVY, color: ICE, size: 0.7, weight: 900, depth: 0.03 }} /></group>
+      <group position={[0, Math.max(0.2, hv * 0.5), 0.3]}><Label t={t} tt={tt} p={{ text: lab, w: 0.9, h: 0.3, bg: NAVY, color: ICE, size: 0.7, weight: 900, depth: 0.03 }} /></group>
     </group>);
   };
   const kl = line !== undefined ? clamp((t - line) / 0.4) : 0;
