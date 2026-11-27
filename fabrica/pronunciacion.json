@@ -14,17 +14,16 @@
   "nota": "pendiente de que el dueño elija número"
  },
  "GTA 6": {
-  "dicho": "ge, te, a seis",
+  "dicho": "ge te a seis",
   "estado": "probada",
-  "puntaje": 0.89,
+  "puntaje": 0.91,
   "variantes": [
-   "ge te a seis",
    "ge, te, a seis",
+   "ge te a seis",
    "gé té á seis",
-   "G T A seis",
-   "GTA seis"
+   "G T A seis"
   ],
-  "nota": "pendiente de que el dueño elija número (sale 'GT 6' en gta-vi-leonida)"
+  "nota": "27/11/2026 rockstar-sindicato-no: 'ge te a seis' sin comas 91 por ciento contra 68 de 'ge, te, a seis' (antes: ge, te, a seis)"
  },
  "Hilux": {
   "dicho": "High-lux",

@@ -133,4 +133,15 @@ export const Progress: React.FC<P> = ({ tt, p }) => {
   </group>);
 };
 
-export const EXTRA = { progress: Progress, papeleta: Papeleta, urna: Urna, mazo: Mazo, estrado: Estrado, mesa: Mesa, silla: Silla, oficina: Oficina, chat: Chat };
+/** Parte alta de las paredes del set 'room' en violeta oscuro (contraste de los subtítulos), con una moldura cian. */
+export const Pared: React.FC<P> = ({ p }) => {
+  const { y0 = 2.3, color = '#24194f' } = p; const h = 8 - y0;
+  return (<group>
+    <mesh position={[0, y0 + h / 2, -3.78]}><boxGeometry args={[9, h, 0.02]} /><meshBasicMaterial color={color} toneMapped={false} /></mesh>
+    {[-1, 1].map((sx) => <mesh key={sx} position={[sx * 4.38, y0 + h / 2, 0]}><boxGeometry args={[0.02, h, 8]} /><meshBasicMaterial color={color} toneMapped={false} /></mesh>)}
+    <B s={[9, 0.06, 0.03]} pos={[0, y0, -3.76]} c={C.cyan} e={C.cyan} ei={1.2} />
+    {[-1, 1].map((sx) => <B key={'m' + sx} s={[0.03, 0.06, 8]} pos={[sx * 4.37, y0, 0]} c={C.cyan} e={C.cyan} ei={1.2} />)}
+  </group>);
+};
+
+export const EXTRA = { pared: Pared, progress: Progress, papeleta: Papeleta, urna: Urna, mazo: Mazo, estrado: Estrado, mesa: Mesa, silla: Silla, oficina: Oficina, chat: Chat };
