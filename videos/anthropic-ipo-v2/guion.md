@@ -105,7 +105,7 @@ Notas y cautelas:
 | 14 | NO ES CONSEJO DE INVERSIÓN |
 | 15 | ¿VUELVE ARRIBA DE US$ 83 ESTE AÑO? · SÍ / NO |
 
-Placa fija chica en los planos 7 a 13: "precios de cierre, en dólares, Nasdaq". La raya de los US$ 83 queda visible en esos planos.
+Placa fija chica en los planos 7 a 13: "en dólares, Nasdaq". La raya de los US$ 83 queda visible en esos planos.
 
 ## Títulos
 

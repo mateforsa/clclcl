@@ -888,9 +888,14 @@
      "etapa": "guion",
      "cuando": "2026-11-26T23:23:08-03:00",
      "nota": "devuelto por el verificador: la placa fija 'precios de cierre' cubre los planos 7 y 8, que muestran apertura (111,50 y ~2 billones al abrir). Limitarla a 9, 11-13 o quitar 'de cierre'. Cierre 25/11 de 82,79 confirmado."
+    },
+    {
+     "etapa": "guion",
+     "cuando": "2026-11-26T23:23:56-03:00",
+     "nota": "corregido tras devolución del verificador"
     }
    ],
-   "nota": "devuelto por el verificador: la placa fija 'precios de cierre' cubre los planos 7 y 8, que muestran apertura (111,50 y ~2 billones al abrir). Limitarla a 9, 11-13 o quitar 'de cierre'. Cierre 25/11 de 82,79 confirmado."
+   "nota": "corregido tras devolución del verificador"
   },
   "starship-atrapada-v2": {
    "titulo": "Starship: la nave atrapada en el aire (versión 2)",
@@ -1031,5 +1036,5 @@
    "nota": ""
   }
  },
- "actualizado": "2026-11-26T23:23:33-03:00"
+ "actualizado": "2026-11-26T23:23:56-03:00"
 }
