@@ -919,7 +919,7 @@
    "tema": "",
    "fuentes": [],
    "puntaje": null,
-   "etapa": "render",
+   "etapa": "revision",
    "creado": "2026-11-26T23:17:40-03:00",
    "rehace": "anthropic-ipo",
    "publicar_prueba_al_terminar": true,
@@ -962,6 +962,11 @@
     {
      "etapa": "render",
      "cuando": "2026-11-26T23:49:44-03:00",
+     "nota": ""
+    },
+    {
+     "etapa": "revision",
+     "cuando": "2026-11-26T23:54:49-03:00",
      "nota": ""
     }
    ],
@@ -1214,5 +1219,5 @@
    "caracteres_voz": 836
   }
  },
- "actualizado": "2026-11-26T23:50:57-03:00"
+ "actualizado": "2026-11-26T23:58:14-03:00"
 }

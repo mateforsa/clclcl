@@ -86,6 +86,20 @@ def cmd_oir(slug):
     for t in terminos:
         ps = [w.probability for w in pal if parecido(t.split()[0], w.word) > 0.7]
         if ps and min(ps) < SEGURIDAD and t not in dudosos: dudosos.append(f"{t} (seguridad {round(100 * min(ps))} %)")
+    # segunda opinión en inglés: Whisper en castellano no conoce muchas marcas extranjeras aunque estén bien dichas
+    wav = f"{vd}/public/voz.wav"; confirmados = []
+    for d in list(dudosos):
+        t = d.split(" (")[0]; primera = norm(t)[0] if norm(t) else ""
+        cerca = [w for w in pal if primera and difflib.SequenceMatcher(None, primera, " ".join(norm(w.word))).ratio() > 0.5]
+        if not cerca: continue
+        bien = 0
+        for w in cerca:
+            tmp = f"/tmp/oido-{os.getpid()}.wav"
+            subprocess.run(["ffmpeg", "-v", "error", "-y", "-ss", str(max(0, w.start - 1.2)), "-t", str(w.end - w.start + 2.4), "-i", wav, tmp])
+            en = oir_palabras(tmp, "en"); os.remove(tmp)
+            if any(parecido(t.split()[0], x.word) > 0.8 and x.probability >= SEGURIDAD for x in en): bien += 1
+        if bien == len(cerca): dudosos.remove(d); confirmados.append(t)
+    if confirmados: print("Bien dichos según la escucha en inglés:", ", ".join(confirmados))
     print("Whisper escuchó:\n " + oido)
     print(f"\nCoincidencia con el guion: {round(100 * sm.ratio())} %")
     if raros: print("Diferencias (guion → lo que se oyó):"); [print(f"  - «{a}» → «{b}»") for a, b in raros]

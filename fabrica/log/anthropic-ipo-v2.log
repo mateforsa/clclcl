@@ -20,3 +20,6 @@
 2026-11-26T23:49:44-03:00 [productor] SFX y mezcla listos (54,97 s). Lanzo render
 2026-11-26T23:49:44-03:00 [fabrica] etapa -> render
 2026-11-26T23:50:57-03:00 [productor] portada lista: instagram/portadas/anthropic-ipo-v2.jpg (diario con el titular + 'LE FALTÓ UNA PARTE' / '21 CENTAVOS BAJO LOS US$ 83', kicker 'ANTHROPIC EN LA BOLSA'). Render en curso
+2026-11-26T23:54:49-03:00 [productor] render listo: out/anthropic-ipo-v2/anthropic-ipo-v2.mp4, 55 s (54,97 s, 1080x1920, 30 fps, con audio). Hojas qc sin cuadros rotos ni planos vacíos. Flojo: plano 13, la esquina del diario queda arriba a la derecha y no tapa del todo el hueco.
+2026-11-26T23:54:49-03:00 [fabrica] etapa -> revision
+2026-11-26T23:56:07-03:00 [oido] oído: 98 % de coincidencia; dudosos: Anthropic (seguridad 58 %); diferencias: anthropic→antropic; dos→2; por ciento→

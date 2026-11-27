@@ -20,7 +20,9 @@ Para el slug en etapa `revision`, controlá `out/<slug>/<slug>.mp4` y dejá cada
 6. Portada: `instagram/portadas/<slug>.jpg` existe, 1080x1920, se lee en miniatura.
 7. guion.md tiene "## Descripción de Instagram" con exactamente 5 etiquetas.
 8. Pronunciación: `python3 fabrica/pronunciacion.py oir <slug>`. Cualquier término en "Términos que NO se entienden como deberían"
-   es FALLA (vuelve al productor para probar variantes y regenerar la voz). Si falta Whisper: `pip install faster-whisper`.
+   es FALLA (vuelve al productor para probar variantes y regenerar la voz).
+   Excepción: si el log ya dice "PRONUNCIACIÓN SIN RESOLVER: <término>" (el productor probó variantes dos veces y Whisper no conoce
+   la palabra), no es FALLA: anotalo como observación para el dueño, que decide de oído. Si falta Whisper: `pip install faster-whisper`.
 
 Veredicto
 - Todo PASA: `python3 fabrica/estado.py log <slug> revisor "APROBADO: ..."` y `python3 fabrica/estado.py etapa <slug> esperando_ok_final`.
