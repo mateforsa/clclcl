@@ -10,3 +10,5 @@
 2026-11-27T00:51:31-03:00 [oido] oído: 95 % de coincidencia; dudosos: Meng (seguridad 52 %), Meng Wanzhou (seguridad 52 %); diferencias: wanzhou→wanyu; ocho→8; no va→nova; arriesga→a riesga; decomisos→de comisos; →de
 2026-11-27T00:51:42-03:00 [productor] voz lista (58,0 s). Oído: 95 %; dudoso Meng Wanzhou (oye 'Wanyu'). Pruebo variantes
 2026-11-27T00:52:45-03:00 [productor] Meng Wanzhou: variante 'Meng Uanshóu' (Whisper la oye exacta en es y en). Regenero la voz (vuelta 2)
+2026-11-27T00:53:50-03:00 [oido] oído: 98 % de coincidencia; dudosos: ninguno; diferencias: ocho→8; →a; decomisos→de comisos
+2026-11-27T00:53:54-03:00 [productor] oído vuelta 2: 98 %, sin términos dudosos (Meng Wanzhou, Huawei, Vancouver, Brooklyn y Google se oyen bien). Voz 58,4 s

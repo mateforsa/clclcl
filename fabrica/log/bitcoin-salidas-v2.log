@@ -29,3 +29,6 @@
 2026-11-27T00:46:18-03:00 [fabrica] etapa -> revision
 2026-11-27T00:50:19-03:00 [productor] loudness: mix.wav subido +0,3 dB (ffmpeg volume, sin tocar scripts/) y MP4 re-multiplexado sin re-render (video copiado). MP4 final con ebur128: -14,8 LUFS integrado, pico real -3,7 dBTP, 52,17 s, 1080x1920, 30 fps
 2026-11-27T00:50:20-03:00 [fabrica] etapa -> revision
+2026-11-27T00:54:49-03:00 [oido] oído: 97 % de coincidencia; dudosos: SoSoValue, Bitcoin (seguridad 48 %), bitcoins (seguridad 48 %); diferencias: sosovalue→so so value; les entro→le centro
+2026-11-27T00:55:01-03:00 [revisor] APROBADO (2.ª vuelta): 1080x1920 30 fps h264+aac 52,18 s (= timing.json); -14,8 LUFS (loudnorm -14,77), pico -3,7 dBTP, sin silencios; sin negros ni congelados; bandera fuera de los subtítulos (planos 2 y 3), '≈ 48' entero (2,7-5,4 s), cifras fijas 126.000 y 5.390; 154 uniones medidas, mínima 14,98 px ('de|inversión.'), 10 con dos activas, mínima 15,14 px; subtítulos = parrafos.json; portada 1080x1920 distinta del original; 5 etiquetas. Obs. para el dueño: Bitcoin, bitcoins y SoSoValue figuran como PRONUNCIACIÓN SIN RESOLVER (escuchar); 'les entró' tiene la s (40,90-40,97 s), Whisper lo corta como 'le centró'. Evidencia: /tmp/claude-0/-home-user-clclcl/77d4c0d7-8052-5ec4-8520-26d10646c242/scratchpad/revB2/
+2026-11-27T00:55:01-03:00 [fabrica] etapa -> esperando_ok_final

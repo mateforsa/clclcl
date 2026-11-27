@@ -6,3 +6,9 @@
 2026-11-26T23:24:35-03:00 [fabrica] etapa -> verificado
 2026-11-26T23:35:26-03:00 [fabrica] etapa -> esperando_ok_voz
 2026-11-26T23:35:26-03:00 [fabrica] voz SIN OK del dueño (regla voz_sin_ok): ~836 caracteres
+2026-11-27T00:52:57-03:00 [productor] arranco producción v2 (etapa voz)
+2026-11-27T00:52:57-03:00 [fabrica] colapinto-qatar-v2: la voz gasta unos 836 caracteres de ElevenLabs. AVISO: no se puede leer el saldo (la clave no tiene ese permiso); anotalo en fabrica/config.json.
+2026-11-27T00:53:18-03:00 [productor] generando voz (una toma, ~836 caracteres)
+2026-11-27T00:53:26-03:00 [productor] voz lista: 53,25 s, 16 planos. Escucho con Whisper
+2026-11-27T00:54:51-03:00 [oido] oído: 96 % de coincidencia; dudosos: Alpine; diferencias: alpine→al pin; →a; tres→3; tres→3; →a; dabi→dhabi
+2026-11-27T00:54:56-03:00 [productor] oído 96 %: Qatar y Abu Dabi bien; Alpine se oye 'al pin'. Pruebo variantes

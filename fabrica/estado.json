@@ -908,7 +908,7 @@
    "tema": "",
    "fuentes": [],
    "puntaje": null,
-   "etapa": "revision",
+   "etapa": "esperando_ok_final",
    "creado": "2026-11-26T23:17:40-03:00",
    "rehace": "bitcoin-salidas",
    "publicar_prueba_al_terminar": true,
@@ -966,6 +966,11 @@
     {
      "etapa": "revision",
      "cuando": "2026-11-27T00:50:20-03:00",
+     "nota": ""
+    },
+    {
+     "etapa": "esperando_ok_final",
+     "cuando": "2026-11-27T00:55:01-03:00",
      "nota": ""
     }
    ],
@@ -1342,5 +1347,5 @@
    "caracteres_voz": 836
   }
  },
- "actualizado": "2026-11-27T00:52:45-03:00"
+ "actualizado": "2026-11-27T00:55:01-03:00"
 }
