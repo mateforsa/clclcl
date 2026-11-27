@@ -127,6 +127,17 @@ Fuentes en pantalla (texto chico, abajo, planos 2 a 10): `FUENTES: INFOBAE (27/1
 Personas: los dos científicos, si aparecen, son muñecos genéricos con placa de nombre, sin caras. Helicóptero, autos y grúas genéricos,
 sin marcas. Los porcentajes de inundación son un esquema: si el agua se dibuja sobre la ciudad, agregar `ESQUEMA, NO A ESCALA`.
 
+## Toma final (productor, 27/11/2026)
+
+- Voz en dos vueltas. La primera duró 61,4 s, así que se sacó el plano 4 (helicóptero; el dato queda en la descripción). Toma
+  final: 59,98 s, 10 planos (b01 a b10 siguen el orden de la tabla sin el plano 4).
+- Pronunciación (probada con `pronunciacion.py probar` antes de la toma): GTA V `[ge, te, a, cinco.|GTA V.]` (ganadora);
+  Vespucci `[Vespuci,|Vespucci,]` (ganadora); IPCC `[i, pe, ce, ce,|IPCC,]` (Whisper oyó "IPCC" en los dos idiomas; la
+  "ganadora" automática `i pe doble ce` se oyó "IPWC" y no se usó). En la escucha final el oído sigue marcando GTA V ("GTA-5") y
+  Vespucci ("Bespuchi"), las dos bien de oído, y oye "doce escenarios" donde dice "dos escenarios": decide el dueño.
+- Mezcla: −14,6 LUFS integrados, pico −4,5 dBTP.
+- Look: maqueta costera en bloque a la hora azul; los porcentajes van en un tablero de 100 cuadros a escala.
+
 ## Títulos
 
 1. **Año 2300: científicos inundaron Los Santos, la ciudad de GTA V**

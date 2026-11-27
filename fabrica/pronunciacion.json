@@ -636,5 +636,33 @@
    "Óu, uáo",
    "Ooh, wow"
   ]
+ },
+ "GTA V": {
+  "dicho": "ge, te, a, cinco.",
+  "estado": "probada",
+  "puntaje": 0.57,
+  "variantes": [
+   "ge te a cinco.",
+   "ge, te, a, cinco.",
+   "yi ti ei cinco.",
+   "ge te a cinco"
+  ]
+ },
+ "IPCC": {
+  "dicho": "i, pe, ce, ce",
+  "estado": "probada",
+  "nota": "«i pe doble ce» se oía «IPWC»; en gta-v-nivel-del-mar se usó «i, pe, ce, ce» y se entiende"
+ },
+ "Vespucci": {
+  "dicho": "Vespuci,",
+  "estado": "probada",
+  "puntaje": 0.67,
+  "variantes": [
+   "Vespuchi,",
+   "Vespúchi,",
+   "Vespuci,",
+   "Vespúcci,",
+   "Bespúchi,"
+  ]
  }
 }

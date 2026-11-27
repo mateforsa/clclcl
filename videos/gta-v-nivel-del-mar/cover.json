@@ -1,0 +1,3 @@
+{ "beat": "b01", "frac": 0.9,
+  "overlay": { "kicker": "GTA V · CIENCIA", "y": 57,
+    "lines": [ { "t": "INUNDARON", "size": 140 }, { "t": "LOS SANTOS", "c": "yellow", "size": 140 }, { "t": "SIMULACIÓN AL AÑO 2300", "size": 72, "c": "cyan" } ] } }

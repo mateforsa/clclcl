@@ -14,3 +14,19 @@
 2026-11-27T19:49:25-03:00 [fabrica] etapa -> verificado
 2026-11-27T19:49:25-03:00 [fabrica] etapa -> esperando_ok_voz
 2026-11-27T19:49:45-03:00 [fabrica] voz SIN OK del dueño (regla voz_sin_ok): ~966 caracteres
+2026-11-27T19:50:04-03:00 [productor] arranco producción: créditos y voz
+2026-11-27T19:50:04-03:00 [fabrica] gta-v-nivel-del-mar: la voz gasta unos 966 caracteres de ElevenLabs. AVISO: no se puede leer el saldo (la clave no tiene ese permiso); anotalo en fabrica/config.json.
+2026-11-27T19:50:13-03:00 [productor] pruebo pronunciaciones de GTA V, IPCC y Vespucci antes de la toma
+2026-11-27T19:51:24-03:00 [productor] pronunciación probada: GTA V -> 'ge, te, a, cinco.' (ganadora 57%); Vespucci -> 'Vespuci,' (ganadora 67%); IPCC -> 'i, pe, ce, ce,' (83%, Whisper oyó IPCC en los dos idiomas; la 'ganadora' 'i pe doble ce' se oyó IPWC, NO usar: el glosario quedó con esa forma y conviene corregirlo)
+2026-11-27T19:51:53-03:00 [oido] oído: 93 % de coincidencia; dudosos: GTA V, IPCC, Vespucci; diferencias: gta v→g t a 5; dos→12; ipcc→i p c c; altas y marejada→alta simarejada; vespucci→bespuchi; →se
+2026-11-27T19:52:12-03:00 [productor] voz 1: 61,4 s y oír sin errores reales (GTA V se oyó 'GTA 5', IPCC 'I, P, C, C', Vespucci 'Bespuchi': todas bien de oído). Pasa de 60 s: saco el plano 4 (helicóptero) y regenero (vuelta 2)
+2026-11-27T19:52:40-03:00 [oido] oído: 95 % de coincidencia; dudosos: GTA V, Vespucci; diferencias: v→5; dos→12; ipcc→ip c c; altas y marejada→alta simarejada; vespucci→bespuchi
+2026-11-27T19:52:48-03:00 [productor] voz 2: 59,98 s, 10 planos. PRONUNCIACIÓN SIN RESOLVER: GTA V (Whisper oye 'GTA-5', que es lo correcto, pero el oído lo marca), Vespucci (se oye 'Bespuchi', la v castellana suena b; el oído lo marca), y 'dos escenarios' Whisper lo oye 'doce escenarios' en las dos vueltas: que el dueño lo escuche en b04
+2026-11-27T20:04:56-03:00 [productor] planos escritos (10): maqueta costera en bloque a la hora azul, tablero de 100 cuadros a escala; primeros stills
+2026-11-27T20:21:57-03:00 [productor] stills revisados (inicio y final de cada plano) y barrido de la franja de subtítulos cada 3 cuadros sin nada claro; anclas y palabras clave verificadas contra timing.json (0 problemas). Audio
+2026-11-27T20:22:09-03:00 [productor] mezcla: -14,6 LUFS integrados, pico -4,5 dBTP, 59,98 s. Lanzo render
+2026-11-27T20:22:09-03:00 [fabrica] etapa -> render
+2026-11-27T20:25:42-03:00 [productor] corrijo el contador de año (quedaba cortado en el borde) y relanzo el render
+2026-11-27T20:30:15-03:00 [productor] QC del render: 'alemanes sobre' se pegaba en el cuadro de transición; agrego palabras clave alemanes, darles, derechos y ciudad. (todas las uniones con <0,04 s y 9+ letras quedan con recuadro). Re-render
+2026-11-27T20:34:30-03:00 [productor] render listo: out/gta-v-nivel-del-mar/gta-v-nivel-del-mar.mp4, 60 s (59,97 s, 1080x1920, 30 fps, -14,6 LUFS, pico -4,6 dBTP); portada en instagram/portadas/gta-v-nivel-del-mar.jpg
+2026-11-27T20:34:30-03:00 [fabrica] etapa -> revision

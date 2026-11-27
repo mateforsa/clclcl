@@ -2326,7 +2326,7 @@
     "https://www.xataka.com/ecologia-y-naturaleza/unos-geocientificos-alemanes-han-inundado-santos-ciudad-gta-para-ensenarnos-efectos-cambio-climatico-angeles"
    ],
    "puntaje": 7.8,
-   "etapa": "voz",
+   "etapa": "revision",
    "creado": "2026-11-27T19:41:58-03:00",
    "historial": [
     {
@@ -2372,10 +2372,21 @@
      "etapa": "voz",
      "cuando": "2026-11-27T19:49:45-03:00",
      "nota": "voz sin OK (regla voz_sin_ok del dueño)"
+    },
+    {
+     "etapa": "render",
+     "cuando": "2026-11-27T20:22:09-03:00",
+     "nota": ""
+    },
+    {
+     "etapa": "revision",
+     "cuando": "2026-11-27T20:34:30-03:00",
+     "nota": ""
     }
    ],
-   "nota": ""
+   "nota": "",
+   "caracteres_voz": 966
   }
  },
- "actualizado": "2026-11-27T19:49:45-03:00"
+ "actualizado": "2026-11-27T20:34:30-03:00"
 }
