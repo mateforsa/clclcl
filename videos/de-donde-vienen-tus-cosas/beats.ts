@@ -49,7 +49,7 @@ export const BEATS: BeatSpec[] = [
   { id: 'b02', set: 'void', cam: Z(MAPCAM(-0.2)), keywords: ['hace', 'poco,', 'celulares,', 'Tierra'],
     actors: [
       { type: 'mapa', pos: [0.5, 0, 0], p: { dots: ALL, pin: { from: null, to: 'rg', at: W('b02', 'Tierra') }, hl: { at: W('b02', 'Tierra') } } },
-      ...Array.from({ length: 10 }, (_, i) => ({ type: 'aparato', pos: [-1.55 + (i % 2) * 0.62, 0, -1.25 + Math.floor(i / 2) * 0.62] as any,
+      ...Array.from({ length: 10 }, (_, i) => ({ type: 'aparato', pos: [-1.3 + (i % 2) * 0.66, 0, -1.3 + Math.floor(i / 2) * 0.62] as any,
         p: { kind: ['phone', 'tv', 'ac'][i % 3], lit: i < 9 ? W('b02', '9') + i * 0.09 : null } })),
     ],
     overlays: [P1('9 DE CADA 10', '9', { size: 50 }), P2('CELULARES, TELES Y AIRES · HASTA HACE POCO', 'aires', { out: 'Tierra' }), P2('SEGÚN AFARTE', 'Tierra'), ...FUENTE] },
@@ -85,7 +85,7 @@ export const BEATS: BeatSpec[] = [
   // 6. Hasta 460.000 toneladas por año.
   { id: 'b06', set: 'void', cam: Z({ from: [0.7, 2.55, 5.3], to: [0.25, 2.35, 4.7], look: [0, 0.75, -0.4], fov: 42 }), keywords: ['460.000'],
     actors: [
-      { type: 'fabrica', pos: [-0.2, 0, -1.6], s: 1.5, p: { lit: C.gold, smoke: true } },
+      { type: 'fabrica', pos: [-0.2, 0, -1.6], s: 1.2, p: { lit: C.gold } },
       { type: 'fabrica', pos: [1.35, 0, -2.2], s: 1.0, p: { lit: C.cyan } },
       { type: 'lingotes', pos: [0, 0, 0.45], at: '460.000', enter: 'none', p: { n: 26, dur: 1.5 } },
       { type: 'lingote', pos: [-0.9, 0, 1.2], p: {} },
@@ -96,17 +96,17 @@ export const BEATS: BeatSpec[] = [
   { id: 'b07', set: 'void', cam: Z(MAPCAM(0.1)), keywords: ['caramelo', 'Arroyito,', 'Córdoba.'],
     actors: [
       { type: 'mapa', pos: [0.68, 0, -0.1], p: { dots: ALL, visited: ['rg', 'pm'], trail: [['rg', 'pm']], pin: { from: 'pm', to: 'ar', at: W('b07', 'Arroyito') - 0.2, dur: 0.7 } } },
-      { type: 'caramelo', pos: [-0.85, 0.75, 0.75], s: 0.95, bob: 0.05, p: {} },
+      { type: 'caramelo', pos: [-0.62, 0.75, 0.75], s: 0.95, bob: 0.05, p: {} },
     ],
     overlays: [P1('ARROYITO · CÓRDOBA', 'Arroyito'), ...FUENTE] },
 
   // 8. Ahí nació Arcor en 1951, por ARroyito y CÓRdoba.
-  { id: 'b08', set: 'void', cam: Z({ from: [-0.45, 2.3, 5.6], to: [0.05, 2.15, 5.0], look: [0, 1.05, -0.3], fov: 42 }), keywords: ['Arcor', '1951,', 'ARroyito', 'CÓRdoba.'],
+  { id: 'b08', set: 'void', cam: Z({ from: [-0.45, 2.2, 5.6], to: [0.05, 2.05, 5.0], look: [0, 0.95, -0.4], fov: 42 }), keywords: ['Arcor', '1951,', 'ARroyito', 'CÓRdoba.'],
     actors: [
-      { type: 'ring', pos: [0, 0.03, -0.9], p: { r: 0.9, color: C.gold } },
-      { type: 'casita', pos: [0, 0, -0.9], at: 'nació', enter: 'drop' },
+      { type: 'ring', pos: [0, 0.03, -1.4], p: { r: 0.8, color: C.gold } },
+      { type: 'casita', pos: [0, 0, -1.4], at: 'nació', enter: 'drop' },
       { type: 'caramelitos', pos: [0, 0, 0.9], enter: 'none', p: { n: 12, seed: 7, area: [2.6, 0.7], stagger: 0.01, drop: 0 } },
-      { type: 'siglas', pos: [0, 1.65, 0.1], p: { tA: W('b08', 'ARroyito'), tB: W('b08', 'CÓRdoba'), join: W('b08', 'CÓRdoba') + 0.4 } },
+      { type: 'siglas', pos: [0, 2.05, -0.6], at: 'Arcor', p: { hA: W('b08', 'ARroyito'), hB: W('b08', 'CÓRdoba') } },
     ],
     overlays: [BIG('1951', '1951', { size: 104 }), P2('AR(royito) + COR(doba) = ARCOR', 'CÓRdoba', { y: 68.8 }), ...FUENTE] },
 
@@ -123,9 +123,9 @@ export const BEATS: BeatSpec[] = [
   // 10. El aceite sale de moler granos.
   { id: 'b10', set: 'void', cam: Z({ from: [-0.4, 2.15, 5.0], to: [0.05, 2.0, 4.5], look: [0, 0.85, 0], fov: 42 }), keywords: ['aceite', 'granos.'],
     actors: [
-      { type: 'granos', pos: [-1.1, 0, 0.35], p: { r: 0.5, h: 0.42 } },
+      { type: 'granos', pos: [-0.95, 0, 0.35], p: { r: 0.45, h: 0.4 } },
       { type: 'molino', pos: [0.05, 0, -0.35], p: { fallAt: W('b10', 'moler') } },
-      { type: 'botella', pos: [1.1, 0, 0.35], p: { fill: 1, fillAt: W('b10', 'moler') - 0.6, dur: 1.4 } },
+      { type: 'botella', pos: [0.92, 0, 0.35], p: { fill: 1, fillAt: W('b10', 'moler') - 0.6, dur: 1.4 } },
     ],
     overlays: [P1('GRANO MOLIDO = ACEITE', 'moler'), ...FUENTE] },
 
@@ -133,8 +133,8 @@ export const BEATS: BeatSpec[] = [
   { id: 'b11', set: 'void', cam: Z(MAPCAM(-0.1)), keywords: ['cuartos', 'Rosario.'],
     actors: [
       { type: 'mapa', pos: [0.55, 0, -0.15], p: { dots: ALL, visited: ['rg', 'pm', 'ar'], trail: [['rg', 'pm'], ['pm', 'ar']], pin: { from: 'ar', to: 'ro', at: W('b11', 'Rosario') - 0.25, dur: 0.55 } } },
-      { type: 'torta', pos: [-1.15, 0.05, 1.0], s: 0.6, at: 'tres', enter: 'none', p: {} },
-      { type: 'granos', pos: [-1.25, 0, -0.4], s: 0.8, p: { r: 0.4, h: 0.32 } },
+      { type: 'torta', pos: [-0.95, 0.05, 0.45], s: 0.6, at: 'tres', enter: 'none', p: {} },
+      { type: 'granos', pos: [-1.05, 0, -0.75], s: 0.7, p: { r: 0.4, h: 0.32 } },
     ],
     overlays: [P2('75% DE LA CAPACIDAD DE MOLIENDA DEL PAÍS', 'tres'), P1('GRAN ROSARIO · SANTA FE', 'Rosario'), ...FUENTE] },
 
@@ -150,10 +150,10 @@ export const BEATS: BeatSpec[] = [
       P2('70 KM DE COSTA · 30 TERMINALES · TIMBÚES A ARROYO SECO', 'toneladas', { y: 68.8 }), ...FUENTE] },
 
   // 13. Ninguna zona de puertos agrícolas del mundo sacó más (a escala, desde cero)
-  { id: 'b13', set: 'void', cam: Z({ from: [0.4, 2.25, 5.7], to: [0.0, 2.05, 5.1], look: [0, 1.05, 0], fov: 42 }), keywords: ['Ninguna', 'agrícolas', 'Comercio'],
+  { id: 'b13', set: 'void', cam: Z({ from: [0.4, 2.0, 5.7], to: [0.0, 1.85, 5.1], look: [0, 0.75, 0], fov: 42 }), keywords: ['Ninguna', 'agrícolas', 'Comercio'],
     actors: [
-      { type: 'box', pos: [0, 0.04, 0], p: { size: [3.5, 0.08, 1.3], color: '#2d1a6e' } },
-      { type: 'ranking', pos: [0, 0.08, 0], p: { max: 80, hmax: 1.9, w: 0.9, gap: 0.28, stagger: 0.3, items: [
+      { type: 'box', pos: [0, 0.04, 0], p: { size: [2.8, 0.08, 1.1], color: '#2d1a6e' } },
+      { type: 'ranking', pos: [0, 0.08, 0], p: { max: 80, hmax: 1.6, w: 0.72, gap: 0.2, stagger: 0.3, items: [
         { v: 75.7, name: 'GRAN ROSARIO', val: '75,7', c: C.gold }, { v: 74.8, name: 'NUEVA ORLEANS', val: '74,8', c: C.cyan }, { v: 60, name: 'SANTOS', val: '60', c: C.magenta }] } },
     ],
     overlays: [P1('N.º 1 DEL MUNDO', 0.04, { size: 50, color: C.blue }), P2('MÁS QUE NUEVA ORLEANS (74,8) Y SANTOS (60)', 'más', { out: 'Bolsa' }),

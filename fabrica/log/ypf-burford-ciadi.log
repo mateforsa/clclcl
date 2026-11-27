@@ -6,3 +6,7 @@
 2026-11-27T15:26:54-03:00 [fabrica] etapa -> guion (devuelto por el verificador: plano 14 'contestarle a la Corte' no coincide con la fuente (BAE: plazo hasta el 2/12 para responder el pedido de revision de los demandantes ante la Corte Suprema de EE.UU.); decir que se responde y ante que corte, en voz y placa)
 2026-11-27T15:28:41-03:00 [guionista] corrección del verificador: plano 14 ahora dice 'La Argentina tiene hasta el 2 de diciembre para responder ese pedido en la Corte Suprema de Estados Unidos. Ese día te cuento qué dijo.'; plano 12 'En Estados Unidos, los demandantes le pidieron a la Corte Suprema que revise el fallo.'; placa 14 'EE.UU.: PLAZO PARA RESPONDER EL PEDIDO · 2 DE DICIEMBRE'. 194 palabras (~65 s a 2,97 p/s; si la toma pasa de 65 s, recortar plano 10).
 2026-11-27T15:28:41-03:00 [fabrica] etapa -> guion
+2026-11-27T15:29:05-03:00 [verificador] APROBADO: 25 datos, todos con fuente (BAE Negocios y Clarin 25/11/2026; plazo 2/12 tambien en carta de prorroga 26-442 en supremecourt.gov). Planos 12 y 14 y placa 14 corregidos coinciden con BAE. 194 palabras, ~65-67 s.
+2026-11-27T15:29:05-03:00 [fabrica] etapa -> verificado
+2026-11-27T15:29:05-03:00 [fabrica] etapa -> esperando_ok_voz
+2026-11-27T15:29:31-03:00 [fabrica] voz SIN OK del dueño (regla voz_sin_ok): ~1102 caracteres

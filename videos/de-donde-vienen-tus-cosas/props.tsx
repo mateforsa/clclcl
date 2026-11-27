@@ -270,20 +270,16 @@ export const Caramelitos: React.FC<P> = ({ tt, p }) => {
       {[-1, 1].map((sx) => <mesh key={sx} position={[sx * 0.72, 0, 0]} rotation={[0, 0, -sx * PI / 2]}><coneGeometry args={[0.2, 0.26, 5]} /><M c={a} /></mesh>)}
     </group>; })}</group>);
 };
-/** Paneles AR + COR que se juntan (texto 3D 2 cm delante del panel). p: tA, tB (cuándo entra cada uno), join */
+/** Paneles AR + COR juntos (se leen ARCOR); en hA se resalta AR y en hB se resalta COR. Texto 3D 2 cm delante del panel. */
 export const Siglas: React.FC<P> = ({ t, tt, p }) => {
-  const { tA = 0, tB = 1, join = 1.6 } = p; const h = 0.62;
-  const kA = eo((t - tA) / 0.4), kB = eo((t - tB) / 0.4), kj = eio((t - join) / 0.4);
-  const wA = 0.9, wB = 1.25; const gap = lerp(0.35, 0.0, kj);
-  const xA = -(wA / 2) - gap / 2 - (1 - kA) * 2.2, xB = wB / 2 + gap / 2 + (1 - kB) * 2.2;
-  const panel = (text: string, w: number, bg: string, x: number, show: number) => show <= 0 ? null : (
-    <group position={[x, 0, 0]} scale={[1, Math.max(0.001, show), 1]}>
-      <B s={[w, h, 0.12]} c={bg} e={bg} ei={0.3} />
-      <group position={[0, 0, 0.06 + 0.02]}><Label t={t} tt={tt} p={{ text, w: w * 0.94, h: h * 0.9, size: 0.86, weight: 900, color: '#1a1030', depth: 0 }} /></group>
+  const { hA = 1, hB = 2 } = p; const h = 0.62; const wA = 0.9, wB = 1.25, gap = 0.08;
+  const kA = clamp((t - hA) / 0.25), kB = clamp((t - hB) / 0.25);
+  const panel = (text: string, w: number, bg: string, x: number, k: number) => (
+    <group position={[x, k * 0.18, k * 0.12]} scale={1 + 0.12 * k}>
+      <B s={[w, h, 0.12]} c={k > 0 ? bg : '#3b3560'} e={bg} ei={0.15 + 0.5 * k} />
+      <group position={[0, 0, 0.06 + 0.02]}><Label t={t} tt={tt} p={{ text, w: w * 0.94, h: h * 0.9, size: 0.86, weight: 900, color: k > 0 ? '#1a1030' : '#f4f1ff', depth: 0 }} /></group>
     </group>);
-  return (<group>{panel('AR', wA, C.cyan, xA, kA)}{panel('COR', wB, C.gold, xB, kB)}
-    {kj >= 1 && <mesh position={[0, -h / 2 - 0.09, 0]}><boxGeometry args={[wA + wB, 0.05, 0.05]} /><M c="#fff" e="#fff" ei={0.6} /></mesh>}
-  </group>);
+  return (<group>{panel('AR', wA, C.cyan, -(wA / 2) - gap / 2 - 0.06 * kA, kA)}{panel('COR', wB, C.gold, wB / 2 + gap / 2 + 0.06 * kB, kB)}</group>);
 };
 /** Casa-fábrica chica (donde nació la empresa), genérica */
 export const Casita: React.FC<P> = () => (
