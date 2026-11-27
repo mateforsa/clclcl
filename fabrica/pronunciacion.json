@@ -160,5 +160,52 @@
    "Ílon Mosk",
    "Elon Musk"
   ]
+ },
+ "Microsoft": {
+  "dicho": "Mái-crosoft",
+  "estado": "probada",
+  "puntaje": 0.99,
+  "variantes": [
+   "Máicrosoft",
+   "Maicrosoft",
+   "Mái-crosoft",
+   "Microsoft",
+   "Máicrosof"
+  ]
+ },
+ "Reuters": {
+  "dicho": "Roiters",
+  "estado": "probada",
+  "puntaje": 0.98,
+  "variantes": [
+   "Róiters",
+   "Roiters",
+   "Róitres",
+   "Reuters",
+   "Róiterz"
+  ]
+ },
+ "Teams": {
+  "dicho": "Tims",
+  "estado": "probada",
+  "puntaje": 0.82,
+  "variantes": [
+   "Tims",
+   "Tíims",
+   "Teams",
+   "Tíms",
+   "Tiims"
+  ]
+ },
+ "Microsoft 365": {
+  "dicho": "Máicrosoft trescientos sesenta y cinco",
+  "estado": "probada",
+  "puntaje": 0.99,
+  "variantes": [
+   "Máicrosoft tres sesenta y cinco",
+   "Máicrosoft trescientos sesenta y cinco",
+   "Mái-crosoft tres sesenta y cinco",
+   "Maicrosoft tres, sesenta y cinco"
+  ]
  }
 }
