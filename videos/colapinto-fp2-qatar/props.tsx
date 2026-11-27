@@ -223,7 +223,7 @@ export const CurveCar: React.FC<P> = ({ t, p }) => {
 export const Almanac: React.FC<P> = ({ t, tt, p }) => {
   const { pages = [{ top: 'VIERNES', big: '27' }], w = 1.5, h = 1.25, band = RED } = p;
   let cur = 0; pages.forEach((pg: any, i: number) => { if (i > 0 && t >= pg.at) cur = i; });
-  const flipK = cur > 0 ? eio((t - pages[cur].at) / 0.45) : 1;
+  const flipK = cur > 0 ? eio((t - pages[cur].at) / 0.4) : 1; // la hoja vieja se achica y cae hacia adelante (nunca sube a la franja de subtítulos)
   const page = (pg: any) => (
     <group>
       <B s={[w, h, 0.04]} pos={[0, -h / 2, 0]} c="#f1ede4" />
@@ -241,7 +241,7 @@ export const Almanac: React.FC<P> = ({ t, tt, p }) => {
       <group position={[0, h + 0.08, 0.05]} rotation={[-0.28, 0, 0]}>
         <B s={[w, h, 0.03]} pos={[0, -h / 2, -0.04]} c="#d8d2c6" />
         {page(pages[cur])}
-        {cur > 0 && flipK < 1 && <group rotation={[-Math.PI * flipK * 0.95, 0, 0]} position={[0, 0, 0.03]}>{page(pages[cur - 1])}</group>}
+        {cur > 0 && flipK < 1 && <group rotation={[flipK * 0.6, 0, 0]} position={[0, -0.35 * flipK, 0.03 + 0.3 * flipK]} scale={Math.max(0.001, 1 - flipK)}>{page(pages[cur - 1])}</group>}
       </group>
     </group>
   );

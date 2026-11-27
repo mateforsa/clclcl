@@ -97,8 +97,8 @@ export const BEATS: BeatSpec[] = [
   { id: 'b06', set: 'room', cam: { from: [-0.4, 1.3, 6.0], to: [0.1, 1.2, 5.4], look: [0.2, 0.55, -0.3], fov: 46 }, keywords: ['frenos,', 'blandas,', 'medias.'],
     actors: [
       ST('taller'),
-      { type: 'brake', pos: [-0.5, 0.95, -0.5], p: { r: 0.75, heat: 1.0 } },
-      { type: 'halflap', pos: [0.62, 1.4, 0.1], at: 'vuelta', p: { r: 0.42, n: 24, stop: 0.5, dur: W('b06', 'medias') - W('b06', 'vuelta'), cutAt: W('b06', 'medias') - W('b06', 'vuelta') } },
+      { type: 'brake', pos: [-0.55, 0.95, -0.5], p: { r: 0.75, heat: 1.0 } },
+      { type: 'halflap', pos: [0.5, 1.55, 0.1], at: 'vuelta', p: { r: 0.42, n: 24, stop: 0.5, dur: W('b06', 'medias') - W('b06', 'vuelta'), cutAt: W('b06', 'medias') - W('b06', 'vuelta') } },
       { type: 'tyre', pos: [0.72, 0.42, 0.45], rot: [0, PI / 2 - 0.45, 0], at: 'blandas', p: { r: 0.4, w: 0.3, band: RED } },
     ],
     overlays: [P1('«TUVIMOS PROBLEMAS CON LOS FRENOS»', 'frenos'), P2('SIN VUELTA CON BLANDAS', 'medias'), FUENTE] },
