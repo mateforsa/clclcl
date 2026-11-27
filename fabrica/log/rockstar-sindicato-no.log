@@ -39,3 +39,5 @@
 2026-11-27T10:05:41-03:00 [fabrica] etapa -> render (devuelto por el revisor: plano 2, 6,07-7,05 s, la placa JENNIFER KOLBE tapa el '6' de la caja de GTA (solo se lee 'GTA'); subir/bajar la placa o mover la caja. Todo lo demás pasa)
 2026-11-27T10:06:15-03:00 [productor] vuelvo por el rechazo: en el plano 2 la placa KOLBE tapa el 6 de la caja; subo caja y cartel ROCKSTAR
 2026-11-27T10:07:09-03:00 [productor] plano 2: caja GTA 6 a x 0,65 y 1,85 y cartel ROCKSTAR a y 2,75; en stills a 4,9 / 6,2 / 7,0 s la caja se ve entera, sin tocar la placa KOLBE (59 %, sin cambios) ni la franja 290-390. Arranca el render
+2026-11-27T10:10:32-03:00 [productor] render listo: out/rockstar-sindicato-no/rockstar-sindicato-no.mp4, 63 s (63,27 s; -14,6 LUFS, mezcla sin cambios). Cuadro a 6,5 s del MP4: caja GTA 6 entera arriba de la placa KOLBE.
+2026-11-27T10:10:32-03:00 [fabrica] etapa -> revision
