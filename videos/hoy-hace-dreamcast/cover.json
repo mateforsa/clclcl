@@ -1,0 +1,3 @@
+{ "beat": "b01", "frac": 0.76,
+  "overlay": { "kicker": "HOY HACE 28 AÑOS",
+    "lines": [ { "t": "LA ÚLTIMA", "size": 150 }, { "t": "DE SEGA", "c": "yellow", "size": 190 }, { "t": "YA TRAÍA MÓDEM EN 1998", "size": 72, "c": "cyan" } ] } }

@@ -20,3 +20,6 @@
 2026-11-26T22:03:44-03:00 [productor] events.json (75 eventos) y mezcla listos
 2026-11-26T22:03:47-03:00 [fabrica] etapa -> render
 2026-11-26T22:03:47-03:00 [productor] render lanzado (scripts/render.sh)
+2026-11-26T22:05:00-03:00 [productor] portada lista: instagram/portadas/hoy-hace-dreamcast.jpg (kicker HOY HACE 28 AÑOS, como la entrega 1)
+2026-11-26T22:08:23-03:00 [productor] render listo: out/hoy-hace-dreamcast/hoy-hace-dreamcast.mp4, 53 s (52,9 s; 1080x1920, 30 fps, -14,3 LUFS); hojas qc revisadas sin cuadros rotos
+2026-11-26T22:08:23-03:00 [fabrica] etapa -> revision
