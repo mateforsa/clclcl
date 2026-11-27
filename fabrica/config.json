@@ -19,5 +19,17 @@
   "panel_artefacto": {
     "slug": "baa5d3d5-c891-479d-beff-ab3fcd023150",
     "url": "https://claude.ai/artifact/Q3ngPaTnysyghY75V3zgFZ"
+  },
+  "prueba_automatica": {
+    "activa": true,
+    "semana": [
+      "00:34",
+      "07:34"
+    ],
+    "finde": [
+      "00:34",
+      "10:34"
+    ],
+    "nota": "Pedido del dueño (27/11/2026): lo que se genera en esa franja (hora de Argentina; semana = lunes a viernes, finde = sábado y domingo) se sube solo como reel de prueba, sin OK final, después de que el revisor lo aprueba. Si una prueba sale publicada normal, esto se apaga solo."
   }
 }

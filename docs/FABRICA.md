@@ -58,6 +58,15 @@ hace cada paso y cuándo hay que esperar tu OK.
 El avance del render es una estimación por tiempo (unos 10 minutos por minuto de video): `render.sh` no informa progreso
 y no se modifica.
 
+## Reels de prueba
+
+- Las pruebas se suben con un enlace público al video (es lo que pide Meta para `trial_params`): una copia comprimida queda unos
+  minutos en la rama pública y después se borra (queda en el historial de git, unos 10 MB por video).
+- Después de publicar, el script le pregunta a Instagram cómo quedó. Si una prueba salió normal, lo avisa y lo registra así.
+- **Madrugada automática** (`prueba_automatica` en `fabrica/config.json`): lo que se genera de lunes a viernes entre 00:34 y 07:34,
+  y sábado y domingo entre 00:34 y 10:34 (hora de Argentina), se sube solo como reel de prueba en cuanto el revisor lo aprueba.
+  Si alguna vez una prueba sale normal, la subida automática se apaga sola.
+
 ## Dónde quedan los MP4
 
 `out/` no está en git y el contenedor de la nube se borra cuando la sesión queda inactiva. Lo que persiste en el repo es

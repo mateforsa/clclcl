@@ -66,37 +66,69 @@ def validar():
     return err, av, d
 
 
+def git(*a): return subprocess.run(["git", "-C", ROOT, *a], capture_output=True, text=True)
+
+
+def subir_publico():
+    """Reels de prueba: Meta solo acepta trial_params con video_url (enlace público), no con subida directa.
+    Se deja una copia comprimida del MP4 en la rama pública, Meta la descarga, y después se borra."""
+    rel = f"instagram/subidas/{SLUG}.mp4"; dst = f"{ROOT}/{rel}"; os.makedirs(os.path.dirname(dst), exist_ok=True)
+    subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", MP4, "-c:v", "libx264", "-crf", "24", "-preset", "medium", "-pix_fmt", "yuv420p",
+                    "-c:a", "aac", "-b:a", "160k", "-movflags", "+faststart", dst], check=True)
+    rama = m.CFG["rama_portadas"]
+    git("add", rel); git("commit", "-q", "-m", f"Subida temporal de {SLUG} para reel de prueba")
+    for _ in range(4):
+        if git("push", "-q", "origin", f"HEAD:{rama}").returncode == 0: break
+        time.sleep(5)
+    else: raise m.MetaError("no se pudo subir el MP4 a la rama pública")
+    url = f"https://raw.githubusercontent.com/{m.CFG['repo']}/{rama}/{rel}"
+    for _ in range(30):
+        if subprocess.run(["curl", "-sfI", "-m", "20", url], capture_output=True).returncode == 0: break
+        time.sleep(5)
+    print("MP4 público:", url, f"({round(os.path.getsize(dst) / 1e6, 1)} MB)")
+    return url, rel
+
+
 def publicar(d):
     ig = m.ig_id()
     lim = m.get(f"{ig}/content_publishing_limit", fields="quota_usage,config")["data"][0]
     print(f"Límite de Meta: {lim.get('quota_usage')} de {lim.get('config', {}).get('quota_total')} publicaciones en 24 h")
-    datos = {"media_type": "REELS", "upload_type": "resumable", "caption": d["descripción"], "cover_url": d["cover_url"]}
-    if PRUEBA: datos["trial_params"] = json.dumps({"graduation_strategy": "MANUAL"})  # sin share_to_feed: choca con la prueba
-    else: datos["share_to_feed"] = "true"
-    c = m.post(f"{ig}/media", **datos); cid, uri = c["id"], c["uri"]
-    print("Contenedor creado:", cid)
-    tam = os.path.getsize(MP4)
-    # Subida con curl, con el formato exacto de la documentación de Meta.
-    cab = [x for k, v in m._headers({"offset": "0", "file_size": str(tam)}, upload=True).items() for x in ("-H", f"{k}: {v}")]
-    ok, r = False, None
-    for intento in range(6):  # el contenedor tarda unos segundos en aceptar la subida: si se manda enseguida, falla
-        time.sleep(15)
-        r = subprocess.run(["curl", "-sS", "-m", "900", "-X", "POST", uri, *cab, "--data-binary", f"@{MP4}"], capture_output=True, text=True)
-        try: ok = json.loads(r.stdout).get("success")
-        except ValueError: ok = False
-        if ok: break
-        # A veces Meta contesta error pero el video sí quedó cargado: el estado del contenedor es lo que manda.
-        if "not in the status to upload" in r.stdout or m.get(cid, fields="status_code").get("status_code") == "FINISHED": ok = True; break
-    if not ok: raise m.MetaError(f"la subida falló tras 6 intentos: {(r.stdout or r.stderr)[:300]}")
-    print("Video subido:", round(tam / 1e6, 1), "MB")
+    datos = {"media_type": "REELS", "caption": d["descripción"], "cover_url": d["cover_url"]}
+    tam = os.path.getsize(MP4); temporal = None
+    if PRUEBA:
+        url, temporal = subir_publico()
+        datos.update(video_url=url, trial_params=json.dumps({"graduation_strategy": "MANUAL"}))  # sin share_to_feed
+        cid = m.post(f"{ig}/media", **datos)["id"]
+        print("Contenedor de PRUEBA creado:", cid)
+    else:
+        datos.update(upload_type="resumable", share_to_feed="true")
+        c = m.post(f"{ig}/media", **datos); cid, uri = c["id"], c["uri"]
+        print("Contenedor creado:", cid)
+        # Subida con curl, con el formato exacto de la documentación de Meta.
+        cab = [x for k, v in m._headers({"offset": "0", "file_size": str(tam)}, upload=True).items() for x in ("-H", f"{k}: {v}")]
+        ok, r = False, None
+        for intento in range(6):  # el contenedor tarda unos segundos en aceptar la subida: si se manda enseguida, falla
+            time.sleep(15)
+            r = subprocess.run(["curl", "-sS", "-m", "900", "-X", "POST", uri, *cab, "--data-binary", f"@{MP4}"], capture_output=True, text=True)
+            try: ok = json.loads(r.stdout).get("success")
+            except ValueError: ok = False
+            if ok: break
+            # A veces Meta contesta error pero el video sí quedó cargado: el estado del contenedor es lo que manda.
+            if "not in the status to upload" in r.stdout or m.get(cid, fields="status_code").get("status_code") == "FINISHED": ok = True; break
+        if not ok: raise m.MetaError(f"la subida falló tras 6 intentos: {(r.stdout or r.stderr)[:300]}")
+        print("Video subido:", round(tam / 1e6, 1), "MB")
     for _ in range(60):
         st = m.get(cid, fields="status_code,status").get("status_code")
         if st == "FINISHED": break
         if st in ("ERROR", "EXPIRED"): raise m.MetaError(f"el contenedor quedó en {st}: {m.get(cid, fields='status').get('status')}")
         time.sleep(10)
     else: raise m.MetaError("el video no terminó de procesarse en 10 minutos; el contenedor sigue vivo 24 h, reintentá")
+    if temporal:  # Meta ya descargó el video: se saca la copia pública
+        git("rm", "-q", temporal); git("commit", "-q", "-m", f"Se borra la subida temporal de {SLUG}"); git("push", "-q", "origin", f"HEAD:{m.CFG['rama_portadas']}")
     mid = m.post(f"{ig}/media_publish", creation_id=cid)["id"]
-    info = m.get(mid, fields="permalink,is_shared_to_feed"); link = info.get("permalink")
+    try: info = m.get(mid, fields="permalink,is_shared_to_feed")
+    except m.MetaError: info = {}  # los reels de prueba a veces no se dejan leer por la API
+    link = info.get("permalink")
     salio_prueba = PRUEBA and not info.get("is_shared_to_feed")
     if PRUEBA and not salio_prueba:
         print("AVISO: se pidió reel de prueba pero Instagram lo publicó NORMAL (is_shared_to_feed=true). Lo ven tus seguidores.")
@@ -116,9 +148,12 @@ for e in err: print("  ERROR:", e)
 if err: sys.exit("No se publica: hay errores.")
 print("  modo:", "reel de prueba (solo no seguidores, se gradúa a mano)" if PRUEBA else "reel normal, también en el feed")
 if SIM:
-    print("\nPasos que haría:\n  1. POST /<ig>/media (media_type=REELS, upload_type=resumable, caption, cover_url" + (", trial_params" if PRUEBA else "") + ")"
-          f"\n  2. POST rupload.facebook.com/ig-api-upload/{m.VER}/<contenedor> con el MP4 ({d['tamaño_MB']} MB)"
-          "\n  3. GET /<contenedor>?fields=status_code hasta FINISHED\n  4. POST /<ig>/media_publish\n  5. Anotar slug, id, fecha y link en instagram/publicados.json")
+    paso2 = ("Copia comprimida del MP4 en la rama pública; Meta la descarga y después se borra" if PRUEBA
+             else f"POST rupload.facebook.com/ig-api-upload/{m.VER}/<contenedor> con el MP4 ({d['tamaño_MB']} MB)")
+    print("\nPasos que haría:\n  1. POST /<ig>/media (media_type=REELS, caption, cover_url, "
+          + ("video_url público + trial_params, SIN share_to_feed" if PRUEBA else "upload_type=resumable, share_to_feed") + ")"
+          + "\n  2. " + paso2 + "\n  3. GET /<contenedor>?fields=status_code hasta FINISHED\n  4. POST /<ig>/media_publish"
+          + "\n  5. Anotar slug, id, fecha y link en instagram/publicados.json")
     sys.exit(0)
 if "--confirmado" not in flags:
     if input(f"\nEscribí PUBLICAR {SLUG} para subirlo a Instagram: ").strip() != f"PUBLICAR {SLUG}": sys.exit("Cancelado.")

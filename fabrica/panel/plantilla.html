@@ -51,6 +51,8 @@
   input[type=text] { flex:1 1 180px; min-width:0; font:inherit; font-size:13px; padding:8px 10px; border-radius:9px; background:#090a18; color:var(--txt); border:1px solid var(--linea); }
   .gal { display:grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap:12px; }
   .gal .card { display:flex; flex-direction:column; gap:8px; }
+  .vid { display:block; width:100%; max-width:360px; margin:10px auto 0; aspect-ratio:9/16; border-radius:10px; border:1px solid var(--linea); background:#000; }
+  details summary { cursor:pointer; margin-top:8px; }
   .gal img { width:100%; aspect-ratio:9/16; object-fit:cover; border-radius:10px; border:1px solid var(--linea); background:#090a18; }
   .vacio { color:var(--suave); border:1px dashed var(--linea); border-radius:12px; padding:14px; font-size:13px; }
   a { color:var(--cyan); }
@@ -141,7 +143,8 @@ function pinta() {
       <div class="s" style="margin-top:8px">${v.etapa === 'esperando_ok_voz'
         ? 'Aprobar = generar la voz (gasta ' + (v.caracteres_voz ? '~' + v.caracteres_voz + ' caracteres' : 'créditos') + ' de ElevenLabs) y seguir hasta el render.'
         : 'Aprobar = marcarlo como listo para subir.' + (v.mp4 ? ' Video: ' + esc(v.mp4) : '')}</div>
-      ${v.guion ? `<pre>${esc(v.guion)}</pre>` : ''}
+      ${v.video ? `<video class="vid" src="${esc(v.video)}" controls playsinline preload="metadata" poster=""></video>` : (v.etapa === 'esperando_ok_final' ? '<div class="s" style="margin-top:8px">El video no está en este entorno: pedime que lo vuelva a generar.</div>' : '')}
+      ${v.guion && v.etapa === 'esperando_ok_voz' ? `<pre>${esc(v.guion)}</pre>` : (v.guion ? `<details><summary class="s">Ver guion</summary><pre>${esc(v.guion)}</pre></details>` : '')}
       ${(v.fuentes || []).length ? `<div class="s" style="margin-top:8px">Fuentes: ${v.fuentes.map((f, i) => `<a href="${esc(f)}" target="_blank" rel="noopener">[${i + 1}]</a>`).join(' ')}</div>` : ''}
       <div class="btns"><button class="ok" onclick="decidir('${v.slug}', true, this)">Aprobar</button>
         <input type="text" id="m-${v.slug}" placeholder="Motivo del rechazo" aria-label="Motivo del rechazo">
@@ -157,7 +160,8 @@ function pinta() {
   h += `<h2>Videos de la semana <span class="c">${D.semana.length}</span></h2>`;
   h += D.semana.length ? `<div class="card"><div class="s" style="font-size:13px;line-height:2">${V.filter(v => D.semana.includes(v.slug)).map(v => `${chip(v)}${v.link ? `<a href="${esc(v.link)}" target="_blank" rel="noopener">${esc(v.titulo)}</a>` : esc(v.titulo)} <span>· ${hace(v.desde)}</span>`).join('<br>')}</div></div>` : '<div class="vacio">Todavía ninguno esta semana.</div>';
   h += `<h2>Listos y publicados <span class="c">${gal.length}</span></h2><div class="gal">` + gal.map((v, i) => `<div class="card">
-      ${v.mini ? `<img src="${v.mini}" alt="Portada de ${esc(v.titulo)}">` : ''}
+      ${v.video ? `<video class="vid" src="${esc(v.video)}" controls playsinline preload="none" poster="${v.mini || ''}"></video>`
+        : (v.mini ? `<img src="${v.mini}" alt="Portada de ${esc(v.titulo)}">` : '')}
       <div><p class="t">${esc(v.titulo)}</p><div class="s">${chip(v)}${hace(v.desde)}${v.link ? ` · <a href="${esc(v.link)}" target="_blank" rel="noopener">ver reel</a>` : ''}</div></div>
       ${v.descripcion ? `<pre style="max-height:150px">${esc(v.descripcion)}</pre>` : '<div class="s">Sin descripción en guion.md</div>'}
       <div class="btns"><button onclick="copiar(D.videos.find(x=>x.slug==='${v.slug}').titulo,'Título copiado')">Copiar título</button>

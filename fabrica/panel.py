@@ -18,6 +18,19 @@ def mini(slug):
     return "data:image/jpeg;base64," + base64.b64encode(open(dst, "rb").read()).decode()
 
 
+def vista(slug):
+    """Versión liviana del MP4 (540x960) para verla en el panel. Devuelve la ruta relativa o None."""
+    src = f"{ROOT}/out/{slug}/{slug}.mp4"; dst = f"{D}/panel/videos/{slug}.mp4"
+    if not os.path.exists(src): return f"videos/{slug}.mp4" if os.path.exists(dst) else None
+    if not os.path.exists(dst) or os.path.getmtime(dst) < os.path.getmtime(src):
+        import subprocess
+        os.makedirs(os.path.dirname(dst), exist_ok=True)
+        subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", src, "-vf", "scale=540:960", "-c:v", "libx264", "-crf", "30", "-preset", "veryfast",
+                        "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "96k", "-movflags", "+faststart", dst + ".tmp.mp4"], check=False)
+        if os.path.exists(dst + ".tmp.mp4"): os.replace(dst + ".tmp.mp4", dst)
+    return f"videos/{slug}.mp4" if os.path.exists(dst) else None
+
+
 def seccion(slug, titulo):
     p = f"{ROOT}/videos/{slug}/guion.md"
     if not os.path.exists(p): return ""
@@ -64,6 +77,14 @@ def datos():
         if x["etapa"] == "listo": x["mp4"] = os.path.exists(f"{ROOT}/out/{x['slug']}/{x['slug']}.mp4")
     gal = sorted([x for x in out if x["etapa"] in ("esperando_ok_final", "listo", "publicado")], key=lambda x: x["etapa"] != "listo")[:18]
     for x in gal: x["mini"] = mini(x["slug"])
+    con_video = {x["slug"] for x in out if x["etapa"] in ("esperando_ok_final", "listo")}
+    for x in out:
+        if x["slug"] in con_video: x["video"] = vista(x["slug"])
+    # se borran las vistas de videos que ya no esperan nada
+    vd = f"{D}/panel/videos"
+    if os.path.isdir(vd):
+        for f in os.listdir(vd):
+            if f.endswith(".mp4") and f[:-4] not in con_video: os.remove(f"{vd}/{f}")
     sem = (hoy - dt.timedelta(days=7)).isoformat()
     prod_hoy = sum(any(h["etapa"] == "voz" and h["cuando"][:10] == hoy.strftime("%Y-%m-%d") for h in v.get("historial", [])) for v in e["videos"].values())
     return {"actualizado": e.get("actualizado") or hoy.isoformat(timespec="seconds"), "videos": out, "tope": cfg["tope_por_dia"], "producidos_hoy": prod_hoy,

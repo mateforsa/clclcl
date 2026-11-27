@@ -7,6 +7,7 @@
   python3 fabrica/estado.py aprobar <slug>           # destraba el freno en el que esté
   python3 fabrica/estado.py rechazar <slug> "motivo" # vuelve a la etapa anterior con el motivo
   python3 fabrica/estado.py publicar <slug> [--prueba] [--simular]  # sube a Instagram un video en `listo` (solo por pedido del dueño)
+  python3 fabrica/estado.py auto-prueba <slug>        # madrugada: sube como reel de prueba sin OK final (ver prueba_automatica)
   python3 fabrica/estado.py resumen                  # texto para /fabrica estado
   python3 fabrica/estado.py tope                     # ¿cuántos se pueden producir hoy?
   python3 fabrica/estado.py creditos <slug>          # caracteres de voz que va a gastar y si alcanzan
@@ -61,6 +62,7 @@ def main():
     pb = sub.add_parser("publicar"); pb.add_argument("slug"); pb.add_argument("--prueba", action="store_true"); pb.add_argument("--simular", action="store_true")
     av = sub.add_parser("auto-voz"); av.add_argument("slug")
     ti = sub.add_parser("titulo"); ti.add_argument("slug"); ti.add_argument("titulo")
+    apr = sub.add_parser("auto-prueba"); apr.add_argument("slug")
     sub.add_parser("resumen"); sub.add_parser("tope"); sub.add_parser("panel")
     cr = sub.add_parser("creditos"); cr.add_argument("slug")
     x = a.parse_args(); e = leer(); V = e["videos"]
@@ -124,6 +126,31 @@ def main():
     elif x.cmd == "titulo":
         v = V.get(x.slug) or sys.exit(f"no existe {x.slug}")
         v["titulo"] = x.titulo; log(x.slug, "fabrica", f"título -> {x.titulo}"); guardar(e); print("ok")
+    elif x.cmd == "auto-prueba":
+        v = V.get(x.slug) or sys.exit(f"no existe {x.slug}")
+        pa = CFG.get("prueba_automatica") or {}
+        if not pa.get("activa"): sys.exit("prueba_automatica está apagada en fabrica/config.json")
+        if v["etapa"] != "esperando_ok_final": sys.exit(f"{x.slug} no está aprobado por el revisor (etapa {v['etapa']})")
+        gen = next((h["cuando"] for h in reversed(v["historial"]) if h["etapa"] == "voz"), None)
+        if not gen: sys.exit("no hay registro de cuándo se generó la voz")
+        g = dt.datetime.fromisoformat(gen).astimezone(AR); franja = pa["finde"] if g.weekday() >= 5 else pa["semana"]
+        hhmm = g.strftime("%H:%M")
+        if not (franja[0] <= hhmm <= franja[1]): sys.exit(f"se generó a las {hhmm} ({'finde' if g.weekday() >= 5 else 'semana'}): fuera de la franja {franja[0]}-{franja[1]}")
+        if not os.path.exists(f"{ROOT}/out/{x.slug}/{x.slug}.mp4"): sys.exit("falta el MP4")
+        r = subprocess.run([sys.executable, f"{ROOT}/scripts/publicar.py", x.slug, "--confirmado", "--prueba"], capture_output=True, text=True, cwd=ROOT)
+        sal = (r.stdout + r.stderr).strip(); print(sal[-1500:])
+        if r.returncode != 0: log(x.slug, "publicador", "FALLÓ la prueba automática: " + sal[-300:].replace("\n", " | ")); guardar(e); sys.exit(1)
+        reg = [p for p in json.load(open(f"{ROOT}/instagram/publicados.json")) if p["slug"] == x.slug]
+        link = reg[-1].get("link") if reg else None; fue_prueba = bool(reg and reg[-1].get("prueba"))
+        v["link_prueba" if fue_prueba else "link"] = link; v["etapa"] = "publicado"
+        v["nota"] = "reel de prueba automático (madrugada)" if fue_prueba else "AVISO: se pidió prueba y salió NORMAL"
+        v["historial"].append({"etapa": "publicado", "cuando": ahora(), "nota": v["nota"] + " " + (link or "")})
+        log(x.slug, "publicador", v["nota"] + " " + (link or ""))
+        if not fue_prueba:  # nunca más en automático hasta que el dueño lo revise
+            c = json.load(open(f"{D}/config.json")); c["prueba_automatica"]["activa"] = False
+            json.dump(c, open(f"{D}/config.json", "w"), ensure_ascii=False, indent=2)
+            log(x.slug, "fabrica", "prueba_automatica APAGADA: la prueba salió publicada normal")
+        guardar(e); print(f"{x.slug}: {v['nota']} {link or ''}")
     elif x.cmd == "resumen":
         print(f"Fábrica · {ahora()} · producidos hoy: {len(producidos_hoy(e))} de {CFG['tope_por_dia']}")
         for et in ETAPAS[:-1][::-1]:

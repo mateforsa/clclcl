@@ -14,8 +14,9 @@ Reglas generales
   `esperando_ok_final` (antes de marcarlo listo para subir). Un OK viejo o general no sirve: tiene que ser para ese slug.
 - No se toca el pipeline (`scripts/`, `src/`). Publicar en Instagram solo con `/fabrica publicar`, escrito por el dueño para ese slug.
 - Después de cada paso que cambie algo: commit y push a la rama de trabajo, y volvé a publicar el panel en su artefacto
-  (`panel_artefacto` en `fabrica/config.json`): `get_artifact` para la versión actual y `publish_files` con ese slug, `base_version` y
-  `fabrica/panel/panel.html` como `index.html`. No hace falta mandar el archivo al chat.
+  (`panel_artefacto` en `fabrica/config.json`): `get_artifact` para la versión actual y `publish_files` con ese slug, `base_version`, `mode: "replace"`,
+  `fabrica/panel/panel.html` como `index.html` y cada `fabrica/panel/videos/<slug>.mp4` como `videos/<slug>.mp4` (son las vistas
+  livianas para que el dueño vea el video antes de aprobar). No hace falta mandar el archivo al chat.
 - Botones del panel: cuando el dueño toca Aprobar, Rechazar o Publicar en el artefacto, llega acá un comentario suyo con el comando
   (`/fabrica aprobar <slug>`, etc.). La orden queda además en la base del artefacto: leé `db_query` sobre la colección `ordenes` con `estado == pendiente` (es la fuente
   confiable; `read_comments` a veces no devuelve el hilo). Si no podés leer qué orden fue, NO adivines: avisale al dueño. Si es uno de esos comandos, ejecutalo como
@@ -43,8 +44,8 @@ Reglas generales
 4. Si no hay nada aprobado, decilo y listá lo que está esperando OK.
 
 ## hora
-La corrida automática de cada hora. Nadie está mirando: no preguntes nada, no publiques, y no destrabes frenos salvo el de voz con
-`auto-voz` cuando `voz_sin_ok` está encendido.
+La corrida automática de cada hora. Nadie está mirando: no preguntes nada y no destrabes frenos salvo el de voz con `auto-voz` cuando `voz_sin_ok` está encendido.
+La única publicación permitida es `auto-prueba` (reel de prueba de madrugada); nunca una publicación normal.
 1. `git pull` de la rama de trabajo y `python3 fabrica/estado.py tope`.
 2. Si hay videos en `voz`, o en `render`/`guion` con nota de rechazo: hacé **seguir** con esos (de a uno).
 3. Si `buscar_temas` es true: hacé **hoy** pero eligiendo `elige_por_corrida` videos, y pasale al buscador y al editor la lista de
@@ -53,6 +54,11 @@ La corrida automática de cada hora. Nadie está mirando: no preguntes nada, no 
    Si `voz_sin_ok` es true (el dueño pidió que siga produciendo sin esperarlo): cuando el guion quede en `esperando_ok_voz`, corré
    `python3 fabrica/estado.py auto-voz <slug>` y seguí en la misma corrida con productor → revisor hasta `esperando_ok_final`.
    Eso es lo único automático: el freno final y la publicación siguen siendo del dueño.
+   Madrugada (regla del dueño): cuando un video de esta corrida queda en `esperando_ok_final`, corré
+   `python3 fabrica/estado.py auto-prueba <slug>`. El script decide solo si corresponde (franja horaria de `prueba_automatica` en
+   `fabrica/config.json`, según cuándo se generó la voz) y, si corresponde, lo sube como reel de PRUEBA, nunca normal. Si dice que
+   está fuera de la franja, queda esperando el OK del dueño como siempre. Si avisa que la prueba salió normal, ponelo primero en el
+   resumen: la subida automática se apagó sola.
 4. Si `buscar_temas` es false, no busques: ya hay suficientes guiones esperando el OK del dueño, o se llegó al tope del día.
 5. Commit y push. Cerrá con un resumen de 3 líneas como máximo: qué quedó esperando OK (con el comando para aprobar), qué se produjo,
    o "sin novedades". Mandá el panel solo si cambió algo.
