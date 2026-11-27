@@ -1066,7 +1066,7 @@
    "tema": "",
    "fuentes": [],
    "puntaje": null,
-   "etapa": "esperando_ok_final",
+   "etapa": "publicado",
    "creado": "2026-11-26T23:18:33-03:00",
    "rehace": "canva-despidos",
    "publicar_prueba_al_terminar": true,
@@ -1120,10 +1120,16 @@
      "etapa": "esperando_ok_final",
      "cuando": "2026-11-27T00:12:41-03:00",
      "nota": ""
+    },
+    {
+     "etapa": "publicado",
+     "cuando": "2026-11-27T00:16:52-03:00",
+     "nota": "reel de prueba (versión rehecha a pedido del dueño) https://www.instagram.com/reel/DgOsWlzinGT/"
     }
    ],
-   "nota": "",
-   "caracteres_voz": 818
+   "nota": "reel de prueba (versión rehecha a pedido del dueño)",
+   "caracteres_voz": 818,
+   "link_prueba": "https://www.instagram.com/reel/DgOsWlzinGT/"
   },
   "huawei-condena-v2": {
    "titulo": "Huawei: culpable en 10 de 12 cargos, casi ocho años después (versión 2)",
@@ -1251,5 +1257,5 @@
    "caracteres_voz": 836
   }
  },
- "actualizado": "2026-11-27T00:13:19-03:00"
+ "actualizado": "2026-11-27T00:16:52-03:00"
 }

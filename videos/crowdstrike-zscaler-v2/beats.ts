@@ -95,7 +95,7 @@ export const BEATS: BeatSpec[] = [
   { id: 'b07', set: 'room', cam: { from: [-0.6, 1.9, 7.4], to: [0.1, 1.65, 6.0], look: [0, 1.35, 0], lookTo: [0, 1.25, 0], fov: 46 }, keywords: ['lunes', 'Zscaler', 'internet'],
     actors: [
       TERMINAL,
-      { type: 'calendar', pos: [-0.95, 2.5, -1.2], rot: [0, 0.3, 0], s: 0.45, at: 'lunes', p: { top: 'NOV 2026', big: '23', color: TEAL } },
+      { type: 'calendar', pos: [-1.15, 2.95, -2.6], rot: [0, 0.2, 0], s: 0.5, at: 'lunes', p: { top: 'NOV 2026', big: '23', color: TEAL } },
       { type: 'scanner', pos: [0.15, 0, -0.4], at: 'Zscaler', p: { start: 0.9, name: 'ZSCALER' } },
       { type: 'person', pos: [-0.95, 0, 0.9], rot: [0, 0.6, 0], s: 0.85, at: 'compra', p: { shirt: RED, pants: '#2a2a2a', hair: '#15102b', skin: '#f2c39b', pose: 'point' } },
     ],

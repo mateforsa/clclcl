@@ -68,13 +68,14 @@ export const Stage: React.FC<P> = ({ t, p }) => {
   if (kind === 'peak') return (
     <group>
       <color attach="background" args={['#0b1626']} />
-      <fog attach="fog" args={['#3a3550', 12, 40]} />
+      <fog attach="fog" args={['#4a4060', 7, 16]} />
       <pointLight position={[3, 4, 4]} intensity={30} color="#ffb27a" distance={16} />
       <pointLight position={[-4, 3, 2]} intensity={14} color="#7fa8ff" distance={14} />
-      <Flat s={[70, 36]} pos={[0, 12, -16]} map={sky} />
+      <Flat s={[16, 14]} pos={[0, 5.5, -3.7]} map={sky} />
+      {[-4.2, 4.2].map((x) => <Flat key={x} s={[14, 14]} pos={[x, 5.5, 0]} rot={[0, x < 0 ? Math.PI / 2 : -Math.PI / 2, 0]} map={sky} />)}
       {/* sierras lejanas */}
       {Array.from({ length: 11 }, (_, i) => { const r = rnd(40 + i); const x = -12 + i * 2.4 + r() * 0.8; const h = 2.2 + r() * 3.2;
-        return <mesh key={i} position={[x, h / 2 - 0.1, -9 - r() * 3]}><coneGeometry args={[1.8 + r(), h, 5]} /><M c={i % 2 ? '#2d3a5c' : '#36446a'} /></mesh>; })}
+        return <mesh key={i} position={[x * 0.6, h * 0.35 - 0.1, -3.0 - r() * 0.5]}><coneGeometry args={[1.2 + r() * 0.6, h * 0.7, 5]} /><M c={i % 2 ? '#2d3a5c' : '#36446a'} /></mesh>; })}
       <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, 0.006, 0]}><planeGeometry args={[80, 80]} /><M c="#3c3f4a" /></mesh>
       {Array.from({ length: 9 }, (_, i) => { const r = rnd(70 + i); return <mesh key={i} position={[-3.5 + i * 0.9, 0.12, 1.4 + r() * 1.5]}><dodecahedronGeometry args={[0.12 + r() * 0.16, 0]} /><M c="#55586a" /></mesh>; })}
     </group>
@@ -277,7 +278,7 @@ export const Months: React.FC<P> = ({ t, tt, p }) => {
         <Label t={t} tt={tt} p={{ text: MES[i % 12], w: cw - 0.04, h: ch, bg: lit ? K.red : row === 2 ? '#e7edf2' : '#c9d4dd', color: lit ? '#fff' : '#13202b', size: 0.5, weight: 900, depth: 0.04 }} />
       </group>;
     })}
-    {['2024', '2025', '2026'].map((y, r) => <group key={y} position={[-(cols / 2) * cw - 0.32, 2.2 - r * (ch + 0.06), 0]}>
+    {['2024', '2025', '2026'].map((y, r) => <group key={y} position={[-(cols / 2) * cw - 0.27, 2.2 - r * (ch + 0.06), 0]}>
       <Label t={t} tt={tt} p={{ text: y, w: 0.5, h: 0.24, color: '#e7edf2', size: 0.62, weight: 800, depth: 0 }} /></group>)}
   </group>);
 };

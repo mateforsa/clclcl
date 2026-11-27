@@ -29,3 +29,5 @@
 2026-11-27T00:04:54-03:00 [productor] vuelvo por el rechazo del revisor: palabras clave en b04/b06, reencuadre de b11/b12, ticker fuera en b13, 'esperaban de 70 a 78' más grande. Sin regenerar voz
 2026-11-27T00:09:23-03:00 [productor] arreglos del revisor hechos y revisados en stills (b04, b06 en f289-291 y f561-563; b07, b10-b13 al 85 %): 'después,' y 'acción' como palabra clave (renglón no salta); b11/b12/b10 reencuadrados (cámara más baja, LED más abajo) para que las placas no tapen días ni etiquetas; ticker de la pizarra fuera en planos 7-13; etiquetas de día más altas (MIÉ con tilde entera); b07 sin etiqueta US$ 83 bajo la placa; 'esperaban de 70 a 78' de 36 a 46 px. Lanzo render
 2026-11-27T00:09:23-03:00 [fabrica] etapa -> render
+2026-11-27T00:16:28-03:00 [productor] render listo: out/anthropic-ipo-v2/anthropic-ipo-v2.mp4, 55 s (54,97 s, 1080x1920, voz sin regenerar). Hojas qc sin cuadros rotos; placas ya no tapan textos de la pizarra
+2026-11-27T00:16:28-03:00 [fabrica] etapa -> revision

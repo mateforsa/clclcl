@@ -13,7 +13,7 @@ const [PK, VL, RS] = RIDGE;
 
 export const BEATS: BeatSpec[] = [
   // 1. 100 dólares en Bitcoin en su máximo. El jueves 26 eran unos 48.  (grúa que baja desde arriba del escritorio; el fajo se vuela hasta 48%)
-  { id: 'b01', set: 'room', cam: { from: [0.1, 6.2, 2.4], to: [0.35, 3.7, 4.6], look: [0, 0.3, 0], lookTo: [0.05, 0.75, 0], fov: 46 }, keywords: ['100', 'Bitcoin', '48'],
+  { id: 'b01', set: 'room', cam: { from: [0.1, 6.2, 3.0], to: [0.35, 3.7, 5.2], look: [0, 0.3, 0.9], lookTo: [0.05, 0.6, 1.0], fov: 46 }, keywords: ['100', 'Bitcoin', '48'],
     actors: [
       DESK,
       { type: 'stack', pos: [0, 0, 0.1], rot: [0, -0.12, 0], p: { n: 21, to: 10, at: 2.65, dur: 1.6, gap: 0.055 } },
@@ -23,7 +23,7 @@ export const BEATS: BeatSpec[] = [
     ],
     overlays: [
       { type: 'big', text: 'US$ 100 → US$ 48', at: 0, y: 60, size: 84 },
-      tag('100 × 61.000 ÷ 126.000 ≈ 48 · SIN COMISIONES', '48', { y: 71.5, size: 30 }),
+      tag('100 × 61.000 ÷ 126.000 ≈ 48 · SIN COMISIONES', '48', { y: 71.5, size: 32 }),
     ] },
 
   // 2. Ese máximo fue el 6 de octubre de 2025: unos 126.000 dólares.  (grúa que sube por la ladera hasta la cumbre)
@@ -40,7 +40,7 @@ export const BEATS: BeatSpec[] = [
     ] },
 
   // 3. El 21 de noviembre bajó hasta 55.000, y el jueves rondaba los 61.000.  (travelling lateral bajando por la cresta)
-  { id: 'b03', set: 'room', cam: { from: [-0.9, 2.6, 5.9], to: [0.75, 1.9, 5.6], look: [-0.7, 2.1, 0], lookTo: [0.65, 1.45, 0], fov: 46 }, keywords: ['55.000', '61.000'],
+  { id: 'b03', set: 'room', cam: { from: [-0.9, 2.6, 6.3], to: [0.45, 2.0, 6.4], look: [-0.7, 2.1, 0], lookTo: [0.3, 1.5, 0], fov: 46 }, keywords: ['55.000', '61.000'],
     actors: [
       PEAK,
       { type: 'ridge', pos: [0, 0, 0] },
@@ -87,24 +87,24 @@ export const BEATS: BeatSpec[] = [
     ] },
 
   // 6. Es el mes con más salidas desde que nacieron, en 2024.  (paneo lateral por la pared de meses; el último se prende rojo)
-  { id: 'b06', set: 'room', cam: { from: [-0.9, 2.0, 6.2], to: [0.6, 1.85, 5.8], look: [-0.3, 1.75, -0.5], lookTo: [0.35, 1.7, -0.5], fov: 46 }, keywords: ['salidas', '2024'],
+  { id: 'b06', set: 'room', cam: { from: [-0.5, 2.0, 8.0], to: [0.3, 1.85, 7.6], look: [-0.25, 1.6, -0.5], lookTo: [0.05, 1.55, -0.5], fov: 46 }, keywords: ['salidas', '2024'],
     actors: [
       PLANT,
       { type: 'box', pos: [0, 1.75, -0.62], p: { size: [3.7, 1.55, 0.1], color: K.steel2 } },
-      { type: 'months', pos: [0.15, 0, -0.5], p: { stagger: 0.018, hot: 0.95, cw: 0.26 } },
+      { type: 'months', pos: [0.22, 0, -0.5], p: { stagger: 0.018, hot: 0.95, cw: 0.235 } },
       { type: 'tank', pos: [-1.25, 0, 0.6], s: 0.55, p: { h: 1.6, r: 0.5, level: 0.5, to: 0.3, at: 0.9, dur: 2.5 } },
       { type: 'drain', pos: [1.0, 0, 0.8], s: 0.7 },
     ],
-    overlays: [tag('RÉCORD MENSUAL DESDE ENERO DE 2024', 'más', { y: 64, color: K.red, size: 40 })] },
+    overlays: [tag('RÉCORD MENSUAL DESDE ENERO DE 2024', 'más', { y: 68, color: K.red, size: 40 })] },
 
   // 7. El récord anterior era de junio: 4.510 millones.  (tilt hacia abajo siguiendo las barras que cuelgan)
   { id: 'b07', set: 'room', cam: { from: [0.6, 3.1, 6.2], to: [-0.3, 2.3, 5.6], look: [0, 2.6, 0], lookTo: [0, 1.6, 0], fov: 46 }, keywords: ['récord', 'junio', '4.510'],
     actors: [
       PLANT,
       { type: 'shelf', pos: [0, 2.95, 0], p: { w: 2.8 } },
-      { type: 'dropbar', pos: [-0.6, 2.93, 0], at: 'junio', p: { v: 2.2 * 4510 / 5390, color: '#c27a5c', w: 0.75 } },
+      { type: 'dropbar', pos: [-0.6, 2.93, 0], at: 'récord', p: { v: 2.2 * 4510 / 5390, color: '#c27a5c', w: 0.75 } },
       { type: 'dropbar', pos: [0.6, 2.93, 0], at: '4.510', p: { v: 2.2, color: K.red, w: 0.75, dur: 1.0 } },
-      { type: 'label', pos: [-0.6, 3.15, 0], at: 'junio', p: { text: 'JUN', w: 0.7, h: 0.28, color: '#fff', size: 0.7, weight: 900, depth: 0 } },
+      { type: 'label', pos: [-0.6, 3.15, 0], at: 'récord', p: { text: 'JUN', w: 0.7, h: 0.28, color: '#fff', size: 0.7, weight: 900, depth: 0 } },
       { type: 'label', pos: [0.6, 3.15, 0], at: '4.510', p: { text: 'NOV', w: 0.7, h: 0.28, color: '#fff', size: 0.7, weight: 900, depth: 0 } },
     ],
     overlays: [

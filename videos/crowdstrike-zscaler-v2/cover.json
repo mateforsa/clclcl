@@ -1,0 +1,3 @@
+{ "beat": "b01", "frac": 0.9,
+  "overlay": { "y": 58, "kicker": "PANTALLA AZUL",
+    "lines": [ { "t": "TE DEJÓ", "size": 160 }, { "t": "SIN VUELO", "c": "yellow", "size": 150 }, { "t": "AHORA COMPRA POR CASI US$ 44.000 M", "size": 56, "c": "cyan" } ] } }
