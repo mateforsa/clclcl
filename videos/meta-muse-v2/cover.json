@@ -1,0 +1,3 @@
+{ "beat": "b13", "frac": 0.75,
+  "overlay": { "kicker": "BLACK FRIDAY", "y": 70,
+    "lines": [ { "t": "EL BOT DE META", "size": 116 }, { "t": "NO ENTRA A AMAZON", "c": "yellow", "size": 88 }, { "t": "BLOQUEADO · SIN ACUERDO AL 26/11/2026", "size": 46, "c": "cyan" } ] } }

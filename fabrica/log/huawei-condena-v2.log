@@ -17,3 +17,5 @@
 2026-11-27T01:12:55-03:00 [productor] mezcla: -14,5 LUFS integrado, pico -4,5 dBFS. Paso a render
 2026-11-27T01:12:55-03:00 [fabrica] etapa -> render
 2026-11-27T01:14:33-03:00 [productor] portada: 'LA DETUVIERON / EN 2018 / SU EMPRESA: CULPABLE' sobre la sala de embarque nevada -> instagram/portadas/huawei-condena-v2.jpg
+2026-11-27T01:22:58-03:00 [productor] render listo: out/huawei-condena-v2/huawei-condena-v2.mp4, 58 s (1080x1920, 30 fps, -14,6 LUFS). Hojas qc revisadas: sin cuadros rotos ni planos vacíos
+2026-11-27T01:22:58-03:00 [fabrica] etapa -> revision

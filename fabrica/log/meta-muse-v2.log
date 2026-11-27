@@ -19,3 +19,7 @@
 2026-11-27T01:08:58-03:00 [productor] voz vuelta 1: 50,5 s, coincidencia 100 %. Muse (33 %) y Signal (40 %) se transcriben bien pero con seguridad baja. PRONUNCIACIÓN SIN RESOLVER: Muse (Miúz) y Signal (Sígnol), para que el dueño las escuche
 2026-11-27T01:15:11-03:00 [productor] beats.ts + props.tsx (look Black Friday: súper, galería con persianas, sala de reuniones, banco de pruebas). Saco stills
 2026-11-27T01:21:58-03:00 [productor] stills revisados (3 vueltas): encuadres alejados, carteles 3D dentro del cuadro y fuera de la franja de subtítulos, banderines quitados de la galería. Placa 2 'BUSCA · COMPARA · ARMA EL CARRITO' entra en 'busca' (la frase 2 no dice 'carrito')
+2026-11-27T01:22:10-03:00 [productor] events + mezcla: -14,2 LUFS integrado, pico -4,0 dBTP
+2026-11-27T01:22:10-03:00 [fabrica] etapa -> render
+2026-11-27T01:22:10-03:00 [productor] lanzo render
+2026-11-27T01:23:49-03:00 [productor] portada lista: instagram/portadas/meta-muse-v2.jpg (BLACK FRIDAY / EL BOT DE META / NO ENTRA A AMAZON / bloqueado · sin acuerdo al 26/11/2026; fondo: carrito frente a la persiana)
