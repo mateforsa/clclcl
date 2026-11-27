@@ -7,3 +7,5 @@
 2026-11-26T23:25:03-03:00 [fabrica] etapa -> guion (corregido tras devolución del verificador)
 2026-11-26T23:35:23-03:00 [verificador] DEVUELTO (2.a vuelta): la placa 10 ya dice 260 -> 237 y la cuenta 208,97 x 1,135 = 237,18 tiene fuente (RoboForex, KuCoin). El diff solo toca guion.md (placa 10, nota del productor y fila de la hoja). Pero queda un '235': guion.md linea 106, columna 'Frase del guion' de la hoja de datos, sigue diciendo placa "US$ 260 -> 235". Cambiar a "US$ 260 -> 237"; no hace falta nada mas.
 2026-11-26T23:35:23-03:00 [fabrica] etapa -> guion (devuelto por el verificador (2.a vuelta): en la hoja de datos (guion.md linea 106) la columna de frase todavia dice placa "US$ 260 -> 235"; pasarla a 237. Lo demas OK.)
+2026-11-26T23:35:47-03:00 [guionista] corregido: hoja de datos línea 106 cita la placa como 'US$ 260 → 237'
+2026-11-26T23:35:47-03:00 [fabrica] etapa -> guion (corregido tras devolución del verificador)

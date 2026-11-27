@@ -852,9 +852,14 @@
      "etapa": "guion",
      "cuando": "2026-11-26T23:35:23-03:00",
      "nota": "devuelto por el verificador (2.a vuelta): en la hoja de datos (guion.md linea 106) la columna de frase todavia dice placa \"US$ 260 -> 235\"; pasarla a 237. Lo demas OK."
+    },
+    {
+     "etapa": "guion",
+     "cuando": "2026-11-26T23:35:47-03:00",
+     "nota": "corregido tras devolución del verificador"
     }
    ],
-   "nota": "devuelto por el verificador (2.a vuelta): en la hoja de datos (guion.md linea 106) la columna de frase todavia dice placa \"US$ 260 -> 235\"; pasarla a 237. Lo demas OK."
+   "nota": "corregido tras devolución del verificador"
   },
   "bitcoin-salidas-v2": {
    "titulo": "Bitcoin: salida récord de los fondos, y el saldo sigue en positivo (versión 2)",
@@ -1152,5 +1157,5 @@
    "caracteres_voz": 836
   }
  },
- "actualizado": "2026-11-26T23:35:31-03:00"
+ "actualizado": "2026-11-26T23:35:47-03:00"
 }
