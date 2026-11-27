@@ -730,7 +730,7 @@
     "https://vandal.elespanol.com/noticia-amp/1350767217/25-anos-del-nacimiento-de-dreamcast-una-consola-de-corta-vida-que-dejo-un-gran-legado/"
    ],
    "puntaje": 7.8,
-   "etapa": "voz",
+   "etapa": "render",
    "creado": "2026-11-26T20:36:38-03:00",
    "historial": [
     {
@@ -766,11 +766,16 @@
      "etapa": "voz",
      "cuando": "2026-11-26T21:50:00-03:00",
      "nota": "voz sin OK (regla voz_sin_ok del dueño)"
+    },
+    {
+     "etapa": "render",
+     "cuando": "2026-11-26T22:03:47-03:00",
+     "nota": ""
     }
    ],
    "nota": "",
    "caracteres_voz": 853
   }
  },
- "actualizado": "2026-11-26T22:03:12-03:00"
+ "actualizado": "2026-11-26T22:03:47-03:00"
 }
