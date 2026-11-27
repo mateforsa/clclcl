@@ -86,7 +86,7 @@ export const BEATS: BeatSpec[] = [
     overlays: [P2('SENADO · JUEVES 26/11', 'Senado', { size: 44 }), { type: 'big', text: '72 A 0', at: '72', size: 120, y: 36 }] },
 
   // 6. uno de cada tres equipos tendrá que buscar otra marca
-  { id: 'b06', set: 'room', cam: { from: [-0.6, 2.4, 7.4], to: [0.2, 2.2, 6.7], look: [0, 0.65, -0.8], fov: 44 }, keywords: ['tres', 'Profesional', 'buscar'],
+  { id: 'b06', set: 'room', cam: { from: [-0.6, 2.4, 7.4], to: [0.2, 2.2, 6.7], look: [0, 0.65, -0.8], fov: 44 }, keywords: ['tres', 'equipos', 'Profesional', 'buscar'],
     actors: [
       { type: 'pared', p: {} },
       ...[0, 1, 2, 3, 4, 5].map((i) => ({ type: 'camiseta', pos: [-1.0 + (i % 3) * 1.0, 0, i < 3 ? -1.8 : -0.4] as any, s: i < 3 ? 0.5 : 0.55, at: i < 3 ? undefined : 0.1 + (i - 3) * 0.12,
@@ -128,8 +128,8 @@ export const BEATS: BeatSpec[] = [
     actors: [
       { type: 'pared', p: {} },
       { type: 'desk', pos: [0, 0, -0.4] },
-      { type: 'ley', pos: [-0.45, 0.83, -0.3], rot: [-PI / 2 + 0.35, 0, 0.12], s: 0.75, p: { w: 0.8, h: 1.05 } },
-      { type: 'reloj', pos: [0.55, 0.8, -0.3], s: 0.75, p: { dur: 6, flip: W('b10', 'todavía') - 0.25 } },
+      { type: 'ley', pos: [-0.45, 0.98, -0.3], rot: [-PI / 2 + 0.35, 0, 0.12], s: 0.75, p: { w: 0.8, h: 1.05 } },
+      { type: 'reloj', pos: [0.55, 0.82, -0.3], s: 0.75, p: { dur: 6 } },
       { type: 'cross', pos: [-0.45, 1.45, 0.1], s: 0.4, at: 'rige' },
     ],
     overlays: [P1('TODAVÍA NO RIGE', 'rige', { red: true, size: 50 })] },
@@ -141,7 +141,7 @@ export const BEATS: BeatSpec[] = [
       { type: 'desk', pos: [0, 0, -0.3] },
       { type: 'person', pos: [0, 0, -1.0], p: { ...FUNCIONARIO, pose: 'idle' }, out: 'vetarla' },
       { type: 'person', pos: [0, 0, -1.0], at: 'vetarla', enter: 'none', p: { ...FUNCIONARIO, pose: 'shrug' } },
-      { type: 'ley', pos: [0, 0.82, -0.15], rot: [-PI / 2 + 0.3, 0, 0], s: 0.6, p: { w: 0.8, h: 1.05 } },
+      { type: 'ley', pos: [0, 0.94, -0.15], rot: [-PI / 2 + 0.3, 0, 0], s: 0.6, p: { w: 0.8, h: 1.05 } },
       { type: 'calendar', pos: [-0.95, 1.6, 0.1], rot: [0, 0.3, 0], s: 0.5, at: '10', p: { top: 'DÍAS HÁBILES', big: '10', color: C.blue } },
       { type: 'cross', pos: [0.95, 1.75, 0.1], s: 0.4, at: 'vetarla' },
       { type: 'check', pos: [0.95, 1.05, 0.1], s: 0.45, at: 'promulgada' },
@@ -166,7 +166,7 @@ export const BEATS: BeatSpec[] = [
       { type: 'ring', pos: [0, 0.03, 0.2], p: { r: 1.4, color: '#8a6bff' } },
       { type: 'box', pos: [-0.65, 0.4, 0], p: { size: [0.75, 0.8, 0.75], color: '#8a6bff', glow: true, ei: 0.4 } },
       { type: 'bars', pos: [0.65, 0, 0], at: 'triple', enter: 'none', p: { vals: [2.4], colors: [C.gold], w: 0.75, dur: 0.6 } },
-      { type: 'box', pos: [0.65, 0.4, 0], out: 'triple', p: { size: [0.75, 0.8, 0.75], color: C.gold, glow: true, ei: 0.4 } },
+      { type: 'box', pos: [0.65, 0.4, 0], out: W('b13', 'triple') + 0.25, p: { size: [0.75, 0.8, 0.75], color: C.gold, glow: true, ei: 0.4 } },
       { type: 'panel', pos: [-0.65, 1.05, 0.0], at: 'marcas', p: { text: 'MARCAS DE SIEMPRE', w: 1.2, h: 0.28, size: 0.55, color: '#fff' } },
       { type: 'panel', pos: [0.65, 1.05, 0.0], at: 'apuestas', out: 'triple', p: { text: 'APUESTAS', w: 1.1, h: 0.28, size: 0.6, color: C.gold } },
       { type: 'panel', pos: [0.65, 2.65, 0.0], at: 'triple', p: { text: 'APUESTAS', w: 1.1, h: 0.28, size: 0.6, color: C.gold } },
