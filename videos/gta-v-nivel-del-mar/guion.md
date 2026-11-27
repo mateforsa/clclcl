@@ -18,7 +18,7 @@ Video vertical 1080x1920, 30 fps, unos 0:57 a 0:60, 11 planos, sin carteles de c
   edificios copiados del juego. En el plano 1 el agua sube desde el cuadro 0 y tapa el muelle, con un contador de año que llega a
   2300. En el plano 11 la misma ciudad, el agua baja al nivel de hoy y un auto genérico pasea por la costanera.
 - **Re-ganchos:** "simulación" (0:06), Rockstar se negó (0:12), el helicóptero (0:18), dos escenarios (0:22), 5,1% (0:27), puerto
-  y energía cortados (0:34), 2,2% (0:38), Vespucci contra el estudio de 2013 (0:44), "no es una predicción" (0:52). Ningún tramo pasa
+  cortado y, más adelante, energía y aguas residuales (0:34), 2,2% (0:38), Vespucci contra el estudio de 2013 (0:44), "no es una predicción" (0:52). Ningún tramo pasa
   de 8 s sin dato nuevo.
 - **Checker de la skill:** 85/100, cero fallas graves. Los tres avisos leves son del lector en inglés: no lee números escritos con
   letras ("dos mil trescientos" en el gancho), por eso cree que no hay re-ganchos, y no reconoce "Mandáselo" como pedido.
@@ -36,10 +36,10 @@ Tiempos estimados a unas 2,9 palabras dichas por segundo; los reales salen de `t
 | 4 | 0:18 | Chequearon la costa en helicóptero, dentro del juego. |
 | 5 | 0:21 | Y probaron dos escenarios del IPCC, el panel de clima de la ONU. |
 | 6 | 0:27 | Con emisiones altas y marejada, en 2300 se inunda el 5,1% de la ciudad. |
-| 7 | 0:34 | Se cortan el puerto y las plantas de energía de la costa. |
+| 7 | 0:34 | Se corta el puerto. Y más adelante, también la energía y las aguas residuales. |
 | 8 | 0:38 | Si las emisiones bajan fuerte, se inunda el 2,2%, sin tocar ninguna infraestructura importante. |
 | 9 | 0:44 | Y en Vespucci, la playa del juego, quedan expuestos los mismos canales que un estudio de 2013 marcó en Los Ángeles. |
-| 10 | 0:52 | Los autores avisan que no es una predicción: el mapa no tiene edificios que frenen el agua. |
+| 10 | 0:52 | Los autores avisan que no es una predicción: el mapa no distingue edificios ni terraplenes. |
 | 11 | 0:57 | Mandáselo al que todavía pasea por Los Santos. |
 
 ## PRONUNCIACIÓN A CONFIRMAR
@@ -74,7 +74,7 @@ entran cifras que están en esas dos páginas.
 | Dato | Frase del guion | Fuente |
 |---|---|---|
 | Los Santos es la ciudad ficticia de GTA V, inspirada en Los Ángeles | 1 y 2: "Los Santos, la ciudad de GTA V" / "el mapa del juego, que imita a Los Ángeles" | [Infobae](https://www.infobae.com/tecno/2026/11/27/cientificos-usaron-el-mapa-de-gta-v-para-simular-el-impacto-de-la-subida-del-nivel-del-mar-en-los-angeles/) ("la ciudad ficticia de Grand Theft Auto V (GTA 5), inspirada en Los Ángeles"); [Xataka](https://www.xataka.com/ecologia-y-naturaleza/unos-geocientificos-alemanes-han-inundado-santos-ciudad-gta-para-ensenarnos-efectos-cambio-climatico-angeles) ("un escenario que imita a otro") |
-| Con emisiones altas y marejada, el puerto deja de funcionar en 2300 | 1 y 7: "Se inunda el puerto de Los Santos" / "Se cortan el puerto y las plantas de energía de la costa" | [Infobae](https://www.infobae.com/tecno/2026/11/27/cientificos-usaron-el-mapa-de-gta-v-para-simular-el-impacto-de-la-subida-del-nivel-del-mar-en-los-angeles/) ("El escenario de altas emisiones proyecta la inundación del puerto y las plantas de energía costeras de Los Santos hacia el año 2300"; "El puerto, las instalaciones de aguas residuales y las plantas de energía costeras dejarían de funcionar") |
+| Con emisiones altas y marejada, el puerto deja de funcionar en 2300. Energía y aguas residuales: Infobae las pone en 2300 y Xataka en 2500, por eso van sin año | 1 y 7: "Se inunda el puerto de Los Santos" / "Se corta el puerto. Y más adelante, también la energía y las aguas residuales." | [Infobae](https://www.infobae.com/tecno/2026/11/27/cientificos-usaron-el-mapa-de-gta-v-para-simular-el-impacto-de-la-subida-del-nivel-del-mar-en-los-angeles/) ("El escenario de altas emisiones proyecta la inundación del puerto y las plantas de energía costeras de Los Santos hacia el año 2300"; "El puerto, las instalaciones de aguas residuales y las plantas de energía costeras dejarían de funcionar") |
 | Los científicos Paul Nörenberg y Hugues Lantuit; geocientíficos de la Universidad de Potsdam, Alemania | 2: "dos científicos alemanes" (placa con nombres y Potsdam) | [Infobae](https://www.infobae.com/tecno/2026/11/27/cientificos-usaron-el-mapa-de-gta-v-para-simular-el-impacto-de-la-subida-del-nivel-del-mar-en-los-angeles/) (nombres); [Xataka](https://www.xataka.com/ecologia-y-naturaleza/unos-geocientificos-alemanes-han-inundado-santos-ciudad-gta-para-ensenarnos-efectos-cambio-climatico-angeles) ("geocientíficos de la Universidad de Potsdam, en Alemania") |
 | Es una estimación sobre el mapa del videojuego; salió de una tesis de maestría | 2: "Es una simulación ... sobre el mapa del juego" | [Infobae](https://www.infobae.com/tecno/2026/11/27/cientificos-usaron-el-mapa-de-gta-v-para-simular-el-impacto-de-la-subida-del-nivel-del-mar-en-los-angeles/) ("Esta estimación se refiere específicamente al mapa del videojuego"; "El trabajo surgió como parte de una tesis de maestría") |
 | Rockstar Games se negó a dar los datos originales por derechos de publicación; usaron un mapa 3D de un fan (Sketchfab, usuario Somnit, resolución de unos 2 m) | 3: "Rockstar se negó a darles los datos originales, por derechos de publicación. Usaron el mapa de un fan." | [Infobae](https://www.infobae.com/tecno/2026/11/27/cientificos-usaron-el-mapa-de-gta-v-para-simular-el-impacto-de-la-subida-del-nivel-del-mar-en-los-angeles/) ("Rockstar Games se negó a proporcionar los datos originales por cuestiones de derechos de publicación. Ante esa negativa, los investigadores recurrieron a un mapa tridimensional creado y difundido por un fanático"; "Rockstar Games, la desarrolladora, rechazó entregar los datos originales por derechos de publicación"; "publicado en Sketchfab por un usuario identificado como Somnit, con una resolución de unos 2 metros") |
@@ -83,7 +83,7 @@ entran cifras que están en esas dos páginas.
 | Emisiones altas + marejada: el mar llega a 5,18 m en 2300; 2,25 km² inundados, 5,08% de la superficie (titular y Xataka: 5,1%) | 6: "en 2300 se inunda el 5,1% de la ciudad" (placa: 5,18 m y 2,25 km²) | [Infobae](https://www.infobae.com/tecno/2026/11/27/cientificos-usaron-el-mapa-de-gta-v-para-simular-el-impacto-de-la-subida-del-nivel-del-mar-en-los-angeles/) ("el 5,1 % de la superficie de Los Santos quedaría bajo el agua hacia 2300"; "5,18 metros en 2300 ... 2,25 kilómetros cuadrados inundados, el 5,08%"); [Xataka](https://www.xataka.com/ecologia-y-naturaleza/unos-geocientificos-alemanes-han-inundado-santos-ciudad-gta-para-ensenarnos-efectos-cambio-climatico-angeles) ("la pérdida sería del 5,1%, con el agua subiendo hasta a 5,18 metros") |
 | Mitigación fuerte: en 2300 la inundación se limita al 2,2% y ninguna infraestructura importante resulta afectada | 8: "se inunda el 2,2%, sin tocar ninguna infraestructura importante" | [Infobae](https://www.infobae.com/tecno/2026/11/27/cientificos-usaron-el-mapa-de-gta-v-para-simular-el-impacto-de-la-subida-del-nivel-del-mar-en-los-angeles/); [Xataka](https://www.xataka.com/ecologia-y-naturaleza/unos-geocientificos-alemanes-han-inundado-santos-ciudad-gta-para-ensenarnos-efectos-cambio-climatico-angeles) ("Con el escenario optimista, para 2300 ... un 2,2%") |
 | Vespucci es la versión del juego de Venice Beach; para Venice Beach y la marina, el modelo del juego y un estudio de 2013 sobre Los Ángeles señalan los mismos canales y frentes de playa como las áreas más expuestas | 9: "en Vespucci ... quedan expuestos los mismos canales que un estudio de 2013 marcó en Los Ángeles" | [Infobae](https://www.infobae.com/tecno/2026/11/27/cientificos-usaron-el-mapa-de-gta-v-para-simular-el-impacto-de-la-subida-del-nivel-del-mar-en-los-angeles/) (estudio de 2013, canales); [Xataka](https://www.xataka.com/ecologia-y-naturaleza/unos-geocientificos-alemanes-han-inundado-santos-ciudad-gta-para-ensenarnos-efectos-cambio-climatico-angeles) ("Vespucci, que equivale a Venice Beach") |
-| La simulación es estática; tiende a sobrestimar porque el mapa no distingue edificios ni terraplenes; los mapas no son predicciones | 10: "no es una predicción: el mapa no tiene edificios que frenen el agua" | [Infobae](https://www.infobae.com/tecno/2026/11/27/cientificos-usaron-el-mapa-de-gta-v-para-simular-el-impacto-de-la-subida-del-nivel-del-mar-en-los-angeles/) ("el mapa no distingue edificios ni terraplenes que frenarían el avance. Los mapas, dicen los autores, no son predicciones de dónde llegaría el agua en un evento concreto") |
+| La simulación es estática; tiende a sobrestimar porque el mapa no distingue edificios ni terraplenes; los mapas no son predicciones | 10: "no es una predicción: el mapa no distingue edificios ni terraplenes" | [Infobae](https://www.infobae.com/tecno/2026/11/27/cientificos-usaron-el-mapa-de-gta-v-para-simular-el-impacto-de-la-subida-del-nivel-del-mar-en-los-angeles/) ("el mapa no distingue edificios ni terraplenes que frenarían el avance. Los mapas, dicen los autores, no son predicciones de dónde llegaría el agua en un evento concreto") |
 | Año 2500, emisiones altas: nivel de 8,22 m, 6,5% anegado (el IPCC da baja confianza a ese horizonte) | solo en la descripción | [Infobae](https://www.infobae.com/tecno/2026/11/27/cientificos-usaron-el-mapa-de-gta-v-para-simular-el-impacto-de-la-subida-del-nivel-del-mar-en-los-angeles/) |
 
 Límites y cómo los trata el guion:
@@ -92,11 +92,12 @@ Límites y cómo los trata el guion:
   autores dicen que no es una predicción. Nunca se dice "Los Ángeles se va a inundar".
 - **5,1% y no 5,08%.** Infobae da las dos (titular y cuerpo); Xataka da 5,1%. La voz y la placa usan 5,1%; la placa chica agrega 2,25 km².
 - **Xataka contra Infobae en el año de la infraestructura.** Xataka dice que "para 2500" se afectarían aguas residuales y energía;
-  Infobae dice 2300 con emisiones altas y marejada. Se sigue a Infobae, que es más detallado y cita los números del estudio.
+  Infobae dice 2300 con emisiones altas y marejada. Como no coinciden, en 2300 queda solo el puerto (que Infobae pone en 2300) y la
+  energía y las aguas residuales van sin año ("y más adelante"), en voz, placa 7 y descripción (corrección del verificador, 27/11/2026).
 - **Xataka nombra el Quinto Informe del IPCC;** Infobae agrega que probaron también las proyecciones más nuevas (hasta 2150). El guion
   dice solo "dos escenarios del IPCC".
-- **"El mapa no tiene edificios"**: Infobae dice que el mapa "no distingue edificios ni terraplenes". La voz simplifica a "no tiene
-  edificios que frenen el agua"; si se prefiere exacto, la placa dice `NO DISTINGUE EDIFICIOS NI TERRAPLENES`.
+- **"El mapa no distingue edificios ni terraplenes"**: voz y placa 10 dicen lo mismo que Infobae, sin simplificar (corrección del
+  verificador, 27/11/2026).
 - **Sin GTA VI.** Xataka arranca hablando de la fiebre por GTA VI; no se usa. El video no conecta con la serie de GTA VI.
 - Quedaron afuera por duración: tesis de maestría, 31 puntos (solo placa), Sketchfab y Somnit (solo placa y descripción), Ballona
   Creek y el aeropuerto, Fort Zancudo, Chumash (Malibú), el 2500 (solo descripción), la diferencia de 24% a 40% con las proyecciones
@@ -115,7 +116,7 @@ sin logos del juego ni de la empresa, sin la tipografía de GTA y sin capturas d
 | 4 | `31 PUNTOS DE PLAYA, CHEQUEADOS EN HELICÓPTERO` | en "helicóptero" |
 | 5 | `IPCC: EL PANEL DE CLIMA DE LA ONU` · `2 ESCENARIOS` | en "IPCC" y en "dos escenarios" (o al final del plano si la palabra cae antes) |
 | 6 | `EMISIONES ALTAS + MAREJADA` · `2300: 5,1% BAJO EL AGUA` · `MAR A 5,18 M · 2,25 KM²` | en "emisiones", en "5,1%" y al final del plano |
-| 7 | `PUERTO Y PLANTAS DE ENERGÍA: FUERA DE SERVICIO` | en "puerto" |
+| 7 | `2300: PUERTO FUERA DE SERVICIO` · `MÁS ADELANTE: ENERGÍA Y AGUAS RESIDUALES` | en "puerto." y en "más adelante" |
 | 8 | `EMISIONES BAJAN: 2,2%` · `SIN INFRAESTRUCTURA IMPORTANTE AFECTADA` | en "2,2%" y en "importante." |
 | 9 | `VESPUCCI = VENICE BEACH` · `MISMOS CANALES QUE UN ESTUDIO DE 2013` | en "Vespucci" y en "2013" |
 | 10 | `NO ES UNA PREDICCIÓN` · `EL MAPA NO DISTINGUE EDIFICIOS NI TERRAPLENES` | en "predicción:" y en "agua." |
@@ -138,7 +139,7 @@ Año 2300: el puerto de Los Santos, la ciudad de GTA V, bajo el agua. Es una sim
 
 Dos geocientíficos de la Universidad de Potsdam, Paul Nörenberg y Hugues Lantuit, usaron el mapa del juego, que imita a Los Ángeles, para medir qué partes quedarían inundadas si sube el mar.
 Rockstar Games se negó a darles los datos originales por derechos de publicación, así que usaron un mapa 3D hecho por un fan, publicado en Sketchfab. Para fijar la orilla chequearon 31 puntos de playa en helicóptero dentro del juego.
-Con dos escenarios del IPCC: con emisiones altas y marejada, el mar llega a 5,18 metros en 2300 y se inunda el 5,1% de la ciudad (2,25 km²); se cortan el puerto, las plantas de energía y las de aguas residuales. Con emisiones en fuerte baja, el 2,2%, sin infraestructura importante afectada. Para 2500, con emisiones altas, el 6,5%.
+Con dos escenarios del IPCC: con emisiones altas y marejada, el mar llega a 5,18 metros en 2300 y se inunda el 5,1% de la ciudad (2,25 km²) y se corta el puerto; más adelante, también la energía y las aguas residuales. Con emisiones en fuerte baja, el 2,2%, sin infraestructura importante afectada. Para 2500, con emisiones altas, el 6,5%.
 En Vespucci, la Venice Beach del juego, quedan expuestos los mismos canales que marcó un estudio de 2013 sobre Los Ángeles.
 Los autores aclaran que sus mapas no son predicciones: el modelo no distingue edificios ni terraplenes.
 

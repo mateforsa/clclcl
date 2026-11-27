@@ -2342,10 +2342,15 @@
      "etapa": "guion",
      "cuando": "2026-11-27T19:47:20-03:00",
      "nota": "devuelto por el verificador: energia/aguas residuales en 2300 contradicho por Xataka (2500) en plano 7, placa 7 y descripcion; plano 10 'no tiene edificios' -> 'no distingue edificios'"
+    },
+    {
+     "etapa": "guion",
+     "cuando": "2026-11-27T19:48:02-03:00",
+     "nota": ""
     }
    ],
-   "nota": "devuelto por el verificador: energia/aguas residuales en 2300 contradicho por Xataka (2500) en plano 7, placa 7 y descripcion; plano 10 'no tiene edificios' -> 'no distingue edificios'"
+   "nota": ""
   }
  },
- "actualizado": "2026-11-27T19:47:20-03:00"
+ "actualizado": "2026-11-27T19:48:02-03:00"
 }
