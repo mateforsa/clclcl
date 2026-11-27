@@ -931,7 +931,7 @@
    "tema": "",
    "fuentes": [],
    "puntaje": null,
-   "etapa": "esperando_ok_final",
+   "etapa": "publicado",
    "creado": "2026-11-26T23:17:40-03:00",
    "rehace": "anthropic-ipo",
    "publicar_prueba_al_terminar": true,
@@ -995,10 +995,16 @@
      "etapa": "esperando_ok_final",
      "cuando": "2026-11-27T00:21:11-03:00",
      "nota": "Aprobado por el revisor. Observación: Anthropic se oye 'Antropic' (pronunciación sin resolver, decide el dueño)"
+    },
+    {
+     "etapa": "publicado",
+     "cuando": "2026-11-27T00:24:17-03:00",
+     "nota": "reel de prueba (versión rehecha a pedido del dueño) https://www.instagram.com/reel/DgOtKVxx9Ft/"
     }
    ],
-   "nota": "Aprobado por el revisor. Observación: Anthropic se oye 'Antropic' (pronunciación sin resolver, decide el dueño)",
-   "caracteres_voz": 854
+   "nota": "reel de prueba (versión rehecha a pedido del dueño)",
+   "caracteres_voz": 854,
+   "link_prueba": "https://www.instagram.com/reel/DgOtKVxx9Ft/"
   },
   "starship-atrapada-v2": {
    "titulo": "Starship: la nave atrapada en el aire (versión 2)",
@@ -1272,5 +1278,5 @@
    "caracteres_voz": 836
   }
  },
- "actualizado": "2026-11-27T00:21:51-03:00"
+ "actualizado": "2026-11-27T00:24:17-03:00"
 }
