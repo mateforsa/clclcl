@@ -837,9 +837,14 @@
      "etapa": "guion",
      "cuando": "2026-11-26T23:21:46-03:00",
      "nota": ""
+    },
+    {
+     "etapa": "guion",
+     "cuando": "2026-11-26T23:24:07-03:00",
+     "nota": "devuelto por el verificador: placa del plano 10 dice 260 -> 235; la fuente da 260,41 -> 237,18 (RoboForex). Corregir a 237 con fuente o sacar el valor posterior de la placa. Todo lo demas verificado."
     }
    ],
-   "nota": ""
+   "nota": "devuelto por el verificador: placa del plano 10 dice 260 -> 235; la fuente da 260,41 -> 237,18 (RoboForex). Corregir a 237 con fuente o sacar el valor posterior de la placa. Todo lo demas verificado."
   },
   "bitcoin-salidas-v2": {
    "titulo": "Bitcoin: salida récord de los fondos, y el saldo sigue en positivo (versión 2)",
@@ -869,7 +874,7 @@
    "tema": "",
    "fuentes": [],
    "puntaje": null,
-   "etapa": "guion",
+   "etapa": "voz",
    "creado": "2026-11-26T23:17:40-03:00",
    "rehace": "anthropic-ipo",
    "publicar_prueba_al_terminar": true,
@@ -893,9 +898,24 @@
      "etapa": "guion",
      "cuando": "2026-11-26T23:23:56-03:00",
      "nota": "corregido tras devolución del verificador"
+    },
+    {
+     "etapa": "verificado",
+     "cuando": "2026-11-26T23:24:20-03:00",
+     "nota": ""
+    },
+    {
+     "etapa": "esperando_ok_voz",
+     "cuando": "2026-11-26T23:24:42-03:00",
+     "nota": ""
+    },
+    {
+     "etapa": "voz",
+     "cuando": "2026-11-26T23:24:42-03:00",
+     "nota": "voz sin OK (regla voz_sin_ok del dueño)"
     }
    ],
-   "nota": "corregido tras devolución del verificador"
+   "nota": ""
   },
   "starship-atrapada-v2": {
    "titulo": "Starship: la nave atrapada en el aire (versión 2)",
@@ -948,7 +968,7 @@
    "tema": "",
    "fuentes": [],
    "puntaje": null,
-   "etapa": "guion",
+   "etapa": "verificado",
    "creado": "2026-11-26T23:18:33-03:00",
    "rehace": "canva-despidos",
    "publicar_prueba_al_terminar": true,
@@ -962,6 +982,11 @@
      "etapa": "guion",
      "cuando": "2026-11-26T23:23:32-03:00",
      "nota": ""
+    },
+    {
+     "etapa": "verificado",
+     "cuando": "2026-11-26T23:24:41-03:00",
+     "nota": ""
     }
    ],
    "nota": ""
@@ -971,7 +996,7 @@
    "tema": "",
    "fuentes": [],
    "puntaje": null,
-   "etapa": "guion",
+   "etapa": "verificado",
    "creado": "2026-11-26T23:18:33-03:00",
    "rehace": "huawei-condena",
    "publicar_prueba_al_terminar": true,
@@ -984,6 +1009,11 @@
     {
      "etapa": "guion",
      "cuando": "2026-11-26T23:22:41-03:00",
+     "nota": ""
+    },
+    {
+     "etapa": "verificado",
+     "cuando": "2026-11-26T23:24:40-03:00",
      "nota": ""
     }
    ],
@@ -1017,7 +1047,7 @@
    "tema": "",
    "fuentes": [],
    "puntaje": null,
-   "etapa": "guion",
+   "etapa": "verificado",
    "creado": "2026-11-26T23:19:22-03:00",
    "rehace": "colapinto-qatar",
    "publicar_prueba_al_terminar": true,
@@ -1031,10 +1061,16 @@
      "etapa": "guion",
      "cuando": "2026-11-26T23:22:13-03:00",
      "nota": ""
+    },
+    {
+     "etapa": "verificado",
+     "cuando": "2026-11-26T23:24:35-03:00",
+     "nota": ""
     }
    ],
-   "nota": ""
+   "nota": "",
+   "caracteres_voz": 836
   }
  },
- "actualizado": "2026-11-26T23:23:56-03:00"
+ "actualizado": "2026-11-26T23:24:42-03:00"
 }

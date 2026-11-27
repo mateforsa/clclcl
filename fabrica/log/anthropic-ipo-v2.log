@@ -5,3 +5,7 @@
 2026-11-26T23:23:08-03:00 [fabrica] etapa -> guion (devuelto por el verificador: la placa fija 'precios de cierre' cubre los planos 7 y 8, que muestran apertura (111,50 y ~2 billones al abrir). Limitarla a 9, 11-13 o quitar 'de cierre'. Cierre 25/11 de 82,79 confirmado.)
 2026-11-26T23:23:56-03:00 [guionista] corregido tras devolución del verificador: la placa fija de los planos 7 a 13 pasa a decir 'en dólares, Nasdaq' (sin 'de cierre')
 2026-11-26T23:23:56-03:00 [fabrica] etapa -> guion (corregido tras devolución del verificador)
+2026-11-26T23:24:20-03:00 [verificador] APROBADO: 22 datos, todos con fuente. Segunda vuelta: la placa fija de los planos 7-13 ahora dice 'en dólares, Nasdaq' (git diff HEAD~1: única línea cambiada), sin contradicción con apertura (7, 8) ni porcentaje (10). Cierre 25/11 = 82,79 (investor.anthropic.com, MLQ.ai, JBizNews, GuruFocus). Vigencia: verificado el jueves 26/11 23:24 ART, antes de la rueda corta del viernes 27 (cierre 13:00 ET / 15:00 ART); si ANT cierra arriba de 83 antes de publicar, revisar la pregunta final.
+2026-11-26T23:24:20-03:00 [fabrica] etapa -> verificado
+2026-11-26T23:24:42-03:00 [fabrica] etapa -> esperando_ok_voz
+2026-11-26T23:24:42-03:00 [fabrica] voz SIN OK del dueño (regla voz_sin_ok): ~854 caracteres
