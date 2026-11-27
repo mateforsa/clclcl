@@ -403,7 +403,7 @@ export const RedFlag: React.FC<P> = ({ t, p }) => {
     <group>
       <Cyl r={0.025} h={pole} pos={[0, pole / 2, 0]} c={STEEL} />
       {Array.from({ length: 5 }, (_, i) => { const x = (i + 0.5) * (w / 5); const z = Math.sin(t * 6 + phase - i * 0.9) * 0.05 * (i / 4 + 0.2);
-        return <B key={i} s={[w / 5 + 0.005, h, 0.02]} pos={[x + 0.02, pole - h / 2, z]} c={RED} e={RED} ei={0.6} />; })}
+        return <B key={i} s={[w / 5 + 0.005, h, 0.02]} pos={[x + 0.02, pole - h / 2, z]} c="#e0140a" e="#c00a04" ei={1.0} />; })}
     </group>
   );
 };

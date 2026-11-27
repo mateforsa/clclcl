@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react';
-import { M, Label } from '../../src/kit/Props';
+import { M, Label, useTex } from '../../src/kit/Props';
 import { C, clamp, eio, eo, lerp, pop, rnd } from '../../src/kit/math';
 
 type P = { t: number; tt: number; p: any };
@@ -261,6 +261,12 @@ export const Titles: React.FC<P> = ({ tt, p }) => {
 export const Equis: React.FC<P> = ({ p }) => { const { size = 0.5 } = p; return (
   <group><B s={[size * 1.3, size * 0.2, 0.06]} rot={[0, 0, PI / 4]} c={RED} e={RED} ei={1.4} /><B s={[size * 1.3, size * 0.2, 0.06]} rot={[0, 0, -PI / 4]} c={RED} e={RED} ei={1.4} /></group>); };
 
-export const EXTRA = { panel: Panel, player: Player, balanza: Balanza, col: Col, pile: Pile, fajos: Fajos, stadium: Stadium, clock: Clock, cup: Cup, medal: Medal,
+/** Cielo igual al del set pero sin estrellas: tapa los puntos claros que caían detrás de la franja de subtítulos. */
+export const CleanSky: React.FC<P> = () => {
+  const tx = useTex((g, W, H) => { const gr = g.createLinearGradient(0, 0, 0, H); gr.addColorStop(0, '#0b0520'); gr.addColorStop(0.62, '#2a1066'); gr.addColorStop(0.8, '#a02a8c'); gr.addColorStop(1, '#a02a8c'); g.fillStyle = gr; g.fillRect(0, 0, W, H); }, 256, 512, 'cleansky');
+  return <mesh position={[0, 16, -41.9]}><planeGeometry args={[130, 70]} /><meshBasicMaterial map={tx} toneMapped={false} fog={false} /></mesh>;
+};
+
+export const EXTRA = { cleansky: CleanSky, panel: Panel, player: Player, balanza: Balanza, col: Col, pile: Pile, fajos: Fajos, stadium: Stadium, clock: Clock, cup: Cup, medal: Medal,
   flag: Flag, ranking: Ranking, ball: Ball, pitch: Pitch, score: Score, shelf: Shelf, titles: Titles, equis: Equis };
 void useMemo; void rnd;

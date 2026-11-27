@@ -27,6 +27,8 @@ unos 55 a 60 s a 2,8-3 palabras por segundo. Los tiempos reales salen de `timing
 
 ## Guion final (una línea por plano)
 
+**Producción (27/11):** la toma 1 duró 62,0 s, así que se sacó el plano 7 (Briatore), que queda solo en la descripción. El video final tiene 13 planos y 59,15 s; los ids de `beats.ts` van de b01 a b13 (b07 = plano 8 de esta tabla).
+
 | # | Tiempo aprox. | Frase |
 |---|---|---|
 | 1 | 0:00 | Trece minutos extra: eso se estiró la segunda práctica de Qatar. |
