@@ -34,7 +34,7 @@ const CUR = { cx: 0.9, cz: 0.2, r0: 0.9, r1: 2.9 };  // curva 1
 
 export const BEATS: BeatSpec[] = [
   // 1. «Corre como si fuera domingo». Carlos Sainz lo dijo de Colapinto, después de la segunda práctica de Qatar.
-  { id: 'b01', set: 'room', cam: { from: [0.6, 1.6, 6.6], to: [0.15, 1.45, 5.8], look: [0, 0.45, -0.5], lookTo: [0, 0.42, -0.5], fov: 46 }, keywords: ['domingo».', 'Sainz', 'Colapinto,', 'Qatar.'],
+  { id: 'b01', set: 'room', cam: { from: [0.6, 1.6, 6.6], to: [0.15, 1.45, 5.8], look: [0, 0.45, -0.5], lookTo: [0, 0.42, -0.5], fov: 46 }, keywords: ['domingo».', 'Sainz', 'Colapinto,', 'después', 'Qatar.'],
     actors: [
       ST('mesa', { track: false }),
       { type: 'almanac', pos: [0, 0, -0.9], p: { pages: [{ top: 'VIERNES', big: '27' }] } },
@@ -57,13 +57,13 @@ export const BEATS: BeatSpec[] = [
     overlays: [P1('CURVA 1', '1,'), P2('COLAPINTO (ALPINE) POR ADENTRO', 'adentro'), FUENTE] },
 
   // 3. Casi se tocan, y atrás Russell soltó por radio: «Oh, wow».  (de frente, al ras: rueda con rueda; atrás el plateado)
-  { id: 'b03', set: 'room', cam: { from: [1.1, 1.2, 5.4], to: [0.5, 1.15, 4.7], look: [0, 0.0, -0.6], lookTo: [0, 0.05, -0.8], fov: 46 }, keywords: ['tocan,', 'Russell', '«Oh, wow».'],
+  { id: 'b03', set: 'room', cam: { from: [1.0, 1.35, 6.3], to: [0.45, 1.3, 5.6], look: [0, 0.0, -0.6], lookTo: [0, 0.05, -0.8], fov: 46 }, keywords: ['tocan,', 'Russell', '«Oh, wow».'],
     actors: [
       ST('mesa', { speed: 6 }),
-      { type: 'f1', pos: [-0.36, 0, 0.5], s: 0.45, p: { ...COLA, speed: 16 } },
-      { type: 'f1', pos: [0.36, 0, 0.35], s: 0.45, p: { ...SAI, speed: 16 } },
+      { type: 'f1', pos: [-0.62, 0, 0.5], s: 0.45, p: { ...COLA, speed: 16 } },
+      { type: 'f1', pos: [0.62, 0, 0.35], s: 0.45, p: { ...SAI, speed: 16 } },
       { type: 'f1', pos: [0.0, 0, -1.9], s: 0.45, p: { ...RUS, speed: 16 } },
-      { type: 'flash', pos: [0.0, 0.14, 0.95], at: 'tocan', p: { color: AMBER } },
+      { type: 'box', pos: [0.0, 0.026, 0.45], at: 'tocan', enter: 'grow', p: { size: [0.04, 0.004, 1.6], color: LIME, glow: true, ei: 1.2 } },
       { type: 'ring', pos: [0.0, 0.03, -1.9], at: 'Russell', p: { r: 0.45, color: '#7ad0ff' } },
       { type: 'radio', pos: [0.0, 0.45, -1.8], at: 'radio', p: { color: AMBER, r: 0.25, loops: 4 } },
     ],
@@ -81,7 +81,7 @@ export const BEATS: BeatSpec[] = [
     overlays: [P1('«YA VAN UN PAR DE VIERNES»', 'viernes'), P2('SAINZ (WILLIAMS)', 'viernes'), FUENTE] },
 
   // 5. Pero en la tabla terminó en el puesto 15, a más de dos segundos y medio del primero.  (torre de tiempos en la pizarra)
-  { id: 'b05', set: 'room', cam: { from: [0.8, 1.45, 5.6], to: [0.2, 1.4, 5.0], look: [0, 1.05, -0.8], fov: 46 }, keywords: ['tabla', '15,', 'primero.'],
+  { id: 'b05', set: 'room', cam: { from: [0.8, 1.45, 5.6], to: [0.2, 1.4, 5.0], look: [0, 1.05, -0.8], fov: 46 }, keywords: ['tabla', 'terminó', '15,', 'segundos', 'primero.'],
     actors: [
       ST('pizarra'),
       { type: 'tower', pos: [0.15, 1.75, -1.4], p: { w: 2.3, rh: 0.5, rows: [
@@ -94,7 +94,7 @@ export const BEATS: BeatSpec[] = [
     overlays: [P1('COLAPINTO 15° · 1:25.733', '15'), P2('A 2,656 S DE ANTONELLI (1°)', 'primero'), FUENTE] },
 
   // 6. Tuvo problemas de frenos, y su vuelta con gomas blandas, las más rápidas, quedó a medias.  (disco al rojo; vuelta cortada)
-  { id: 'b06', set: 'room', cam: { from: [-0.4, 1.3, 6.0], to: [0.1, 1.2, 5.4], look: [0.2, 0.55, -0.3], fov: 46 }, keywords: ['frenos,', 'blandas,', 'medias.'],
+  { id: 'b06', set: 'room', cam: { from: [-0.4, 1.3, 6.0], to: [0.1, 1.2, 5.4], look: [0.2, 0.55, -0.3], fov: 46 }, keywords: ['problemas', 'frenos,', 'blandas,', 'medias.'],
     actors: [
       ST('taller'),
       { type: 'brake', pos: [-0.55, 0.95, -0.5], p: { r: 0.75, heat: 1.0 } },
@@ -104,7 +104,7 @@ export const BEATS: BeatSpec[] = [
     overlays: [P1('«TUVIMOS PROBLEMAS CON LOS FRENOS»', 'frenos'), P2('SIN VUELTA CON BLANDAS', 'medias'), FUENTE] },
 
   // 7. La cortó la bandera roja de Gasly, su compañero, enterrado en la leca.  (Alpine de casco blanco hundido en la grava)
-  { id: 'b07', set: 'room', cam: { from: [1.0, 1.9, 6.2], to: [0.4, 1.7, 5.5], look: [0, -0.25, -0.6], fov: 46 }, keywords: ['roja', 'Gasly,', 'leca.'],
+  { id: 'b07', set: 'room', cam: { from: [1.0, 1.9, 6.2], to: [0.4, 1.7, 5.5], look: [0, -0.25, -0.6], fov: 46 }, keywords: ['roja', 'Gasly,', 'compañero,', 'enterrado', 'leca.'],
     actors: [
       ST('leca'),
       { type: 'f1', pos: [-0.45, -0.13, -0.3], rot: [0.05, 0.85, 0.07], s: 0.5, p: GAS },

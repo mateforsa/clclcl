@@ -2217,7 +2217,7 @@
     "https://www.racefans.net/2026/11/27/antonelli-leads-another-mercedes-one-two-despite-red-flag-interruptions/"
    ],
    "puntaje": null,
-   "etapa": "revision",
+   "etapa": "esperando_ok_final",
    "creado": "2026-11-27T18:28:52-03:00",
    "historial": [
     {
@@ -2263,11 +2263,16 @@
      "etapa": "revision",
      "cuando": "2026-11-27T19:16:51-03:00",
      "nota": ""
+    },
+    {
+     "etapa": "esperando_ok_final",
+     "cuando": "2026-11-27T19:20:04-03:00",
+     "nota": ""
     }
    ],
    "nota": "",
    "caracteres_voz": 958
   }
  },
- "actualizado": "2026-11-27T19:19:01-03:00"
+ "actualizado": "2026-11-27T19:20:04-03:00"
 }
