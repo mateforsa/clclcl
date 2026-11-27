@@ -31,8 +31,8 @@ export const BEATS: BeatSpec[] = [
       { type: 'ring', pos: [-0.55, 0.03, -0.2], p: { r: 0.6, color: C.magenta } },
       { type: 'person', pos: [-0.55, 0, -0.2], rot: [0, 0.35, 0], p: { ...JEFA, pose: 'idle' }, out: 'publicación' },
       { type: 'person', pos: [-0.55, 0, -0.2], rot: [0, 0.35, 0], at: 'publicación', enter: 'none', p: { ...JEFA, pose: 'point' } },
-      { type: 'label', pos: [0.85, 2.05, -0.6], at: 'Rockstar', p: NOMBRE('ROCKSTAR') },
-      { type: 'gamebox', pos: [0.85, 1.05, -0.4], s: 0.75, at: 'GTA', bob: 0.04, p: JUEGO },
+      { type: 'label', pos: [0.62, 2.75, -0.6], at: 'Rockstar', p: NOMBRE('ROCKSTAR') },
+      { type: 'gamebox', pos: [0.65, 1.85, -0.4], s: 0.75, at: 'GTA', bob: 0.04, p: JUEGO },
     ],
     overlays: [
       { type: 'big', text: 'JENNIFER KOLBE', sub: 'JEFA DE PUBLICACIÓN DE ROCKSTAR', at: 'jefa', size: 78, y: 59 },
