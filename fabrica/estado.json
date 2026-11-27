@@ -1066,7 +1066,7 @@
    "tema": "",
    "fuentes": [],
    "puntaje": null,
-   "etapa": "render",
+   "etapa": "revision",
    "creado": "2026-11-26T23:18:33-03:00",
    "rehace": "canva-despidos",
    "publicar_prueba_al_terminar": true,
@@ -1110,9 +1110,14 @@
      "etapa": "render",
      "cuando": "2026-11-27T00:03:04-03:00",
      "nota": "devuelto por el revisor: 'influye'+'en' pegadas en 44,67 s (frame 1340, 13,39 px < 14); marcar una como palabra clave en beats.ts (b12) y re-renderizar"
+    },
+    {
+     "etapa": "revision",
+     "cuando": "2026-11-27T00:09:53-03:00",
+     "nota": ""
     }
    ],
-   "nota": "devuelto por el revisor: 'influye'+'en' pegadas en 44,67 s (frame 1340, 13,39 px < 14); marcar una como palabra clave en beats.ts (b12) y re-renderizar",
+   "nota": "",
    "caracteres_voz": 818
   },
   "huawei-condena-v2": {
@@ -1241,5 +1246,5 @@
    "caracteres_voz": 836
   }
  },
- "actualizado": "2026-11-27T00:09:23-03:00"
+ "actualizado": "2026-11-27T00:09:53-03:00"
 }
