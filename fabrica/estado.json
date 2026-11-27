@@ -1906,7 +1906,7 @@
     "https://www.clarin.com/economia/juicio-ypf-gobierno-dice-fondo-burford-reclama-us-14400-millones-nueva-demanda-inicio-ciadi_0_Tp61FKCNn5.html"
    ],
    "puntaje": 7.8,
-   "etapa": "revision",
+   "etapa": "render",
    "creado": "2026-11-27T15:20:55-03:00",
    "historial": [
     {
@@ -1952,11 +1952,16 @@
      "etapa": "revision",
      "cuando": "2026-11-27T16:05:51-03:00",
      "nota": ""
+    },
+    {
+     "etapa": "render",
+     "cuando": "2026-11-27T16:11:14-03:00",
+     "nota": "devuelto por el revisor: b07 cuadros 1013-1016 (33,8 s) la cabeza del muñeco Burford tapa el cartel 3D BURFORD durante el rebote de entrada; corregir y re-renderizar, sin voz"
     }
    ],
-   "nota": "",
+   "nota": "devuelto por el revisor: b07 cuadros 1013-1016 (33,8 s) la cabeza del muñeco Burford tapa el cartel 3D BURFORD durante el rebote de entrada; corregir y re-renderizar, sin voz",
    "caracteres_voz": 1102
   }
  },
- "actualizado": "2026-11-27T16:05:51-03:00"
+ "actualizado": "2026-11-27T16:11:14-03:00"
 }
