@@ -193,5 +193,10 @@
   "video": "canva-despidos-v2",
   "inicio": "C30 la pregunta que se responde al final (¿La inteligencia artificial dejó sin puesto a 1.271 personas en Canva? Si trabajás, es tu pregunta. Respuesta al final.)",
   "cierre": "Pregunta de una palabra sobre el trabajo propio (Y en tu trabajo, ¿ya cambió algo? Contalo en una palabra.), sin Seguime; vuelve al plano 2 (es tu pregunta)"
+ },
+ {
+  "video": "rockstar-sindicato-no",
+  "inicio": "J91 cita real y corta, con autor («Si quieren un sindicato, van a tener un sindicato.» Lo dijo la jefa de publicación de Rockstar), contradicha en el plano 4 (tres de cada cuatro dijeron que no); no es Sos X",
+  "cierre": "Continuación con motivo concreto, playbook 3 n.º 5 (Cuando salga el fallo, te lo cuento acá), tras callback a la cita (El equipo ya votó. Falta que hable el tribunal); sin Seguime ni pregunta"
  }
 ]

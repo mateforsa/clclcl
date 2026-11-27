@@ -1536,7 +1536,7 @@
     "https://www.engadget.com/2329177/workers-gta-6-studio-rockstar-games-vote-against-union-recognition/"
    ],
    "puntaje": 7.3,
-   "etapa": "idea",
+   "etapa": "voz",
    "creado": "2026-11-27T02:43:16-03:00",
    "historial": [
     {
@@ -1552,10 +1552,30 @@
      "etapa": "idea",
      "cuando": "2026-11-27T09:20:40-03:00",
      "nota": "se retoma: fuentes accesibles"
+    },
+    {
+     "etapa": "guion",
+     "cuando": "2026-11-27T09:25:55-03:00",
+     "nota": ""
+    },
+    {
+     "etapa": "verificado",
+     "cuando": "2026-11-27T09:27:37-03:00",
+     "nota": ""
+    },
+    {
+     "etapa": "esperando_ok_voz",
+     "cuando": "2026-11-27T09:27:37-03:00",
+     "nota": ""
+    },
+    {
+     "etapa": "voz",
+     "cuando": "2026-11-27T09:28:08-03:00",
+     "nota": "voz sin OK (regla voz_sin_ok del dueño)"
     }
    ],
-   "nota": "se retoma: fuentes accesibles"
+   "nota": ""
   }
  },
- "actualizado": "2026-11-27T09:20:45-03:00"
+ "actualizado": "2026-11-27T09:28:08-03:00"
 }
