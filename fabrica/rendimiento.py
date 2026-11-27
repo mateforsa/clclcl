@@ -31,6 +31,8 @@ def main():
         edad = (AHORA - dt.datetime.fromisoformat(ts)).total_seconds() / 3600
         filas.append({"slug": p["slug"], "id": p["id"], "link": p.get("link"), "prueba": bool(p.get("prueba")), "edad_h": round(edad, 1),
                       **{k: v.get(k) for k in METRICAS.split(",")}})
+    if reg and not filas:  # Meta no respondió nada (token vencido, acceso bloqueado): no pisar las métricas anteriores
+        sys.exit("Instagram no devolvió métricas de ningún reel; dejo fabrica/rendimiento.json como estaba.")
     # referencia: los reels con 48 h o más; si todavía no hay suficientes, los de 24 h o más
     maduros = [f["views"] or 0 for f in filas if f["edad_h"] >= 48]
     if len(maduros) < 5: maduros = [f["views"] or 0 for f in filas if f["edad_h"] >= 24]
