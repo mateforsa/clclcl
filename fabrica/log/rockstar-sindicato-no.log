@@ -17,3 +17,8 @@
 2026-11-27T09:31:11-03:00 [productor] genero la voz (ronda 1)
 2026-11-27T09:31:39-03:00 [oido] oído: 96 % de coincidencia; dudosos: GTA 6; diferencias: gta→g t a; tres→3; cuatro→4; 1 163→1163; cinco→5
 2026-11-27T09:32:21-03:00 [productor] oído ronda 1: 96 %; Rockstar, Discord, The Register e IWGB se oyen bien. Whisper marca GTA 6 (oye 'G, T a 6', letras correctas). Se mantiene la forma del glosario 'ge, te, a seis' como pidió el dueño; en una prueba aparte 'ge te a seis' sin comas sacó 91 % contra 68 % (dato para el dueño, no se cambió el glosario). Voz 63,3 s, sin segunda ronda.
+2026-11-27T09:35:57-03:00 [productor] beats.ts, entry.ts y props.tsx escritos (17 planos, voz 63,7 s); saco stills
+2026-11-27T09:42:01-03:00 [productor] stills revisados y corregidos (sin ciudad detrás de los subtítulos; barrido cada 3 cuadros de la franja de subtítulos limpio). Mezclo audio
+2026-11-27T09:42:10-03:00 [fabrica] etapa -> render
+2026-11-27T09:42:10-03:00 [productor] audio mezclado a -13,9 LUFS; arranca el render
+2026-11-27T09:43:54-03:00 [productor] portada lista: instagram/portadas/rockstar-sindicato-no.jpg (3 DE CADA 4 / VOTARON NO / AL SINDICATO · 1.163 CONTRA 381)

@@ -63,7 +63,7 @@ export const Mazo: React.FC<P> = ({ tt, p }) => {
   return (<group>
     <B s={[0.9, 0.14, 0.5]} pos={[0, 0.07, 0]} c="#5a3a22" />
     <B s={[0.6, 0.06, 0.34]} pos={[0, 0.17, 0]} c="#8a5a3a" />
-    <group position={[0.75, 0.3, 0]} rotation={[0, 0, -a]}>
+    <group position={[0.75, 0.3, 0]} rotation={[0, 0, a]}>
       <B s={[0.9, 0.08, 0.08]} pos={[-0.4, 0, 0]} c="#c98a3a" />
       <B s={[0.3, 0.42, 0.3]} pos={[-0.8, 0, 0]} c="#8a5a3a" />
       <B s={[0.32, 0.07, 0.32]} pos={[-0.8, 0.12, 0]} c={C.gold} e={C.gold} ei={0.8} />
@@ -124,4 +124,13 @@ export const Chat: React.FC<P> = ({ tt, p }) => {
   </group>);
 };
 
-export const EXTRA = { papeleta: Papeleta, urna: Urna, mazo: Mazo, estrado: Estrado, mesa: Mesa, silla: Silla, oficina: Oficina, chat: Chat, label2: Label };
+/** Barra que se llena hasta `to`. */
+export const Progress: React.FC<P> = ({ tt, p }) => {
+  const { w = 2, h = 0.3, dur = 1.2, to = 1, color = C.green } = p; const k = Math.max(0.001, eo(tt / dur) * to);
+  return (<group>
+    <B s={[w + 0.1, h + 0.1, 0.08]} c="#f4f1ff" /><B s={[w, h, 0.1]} c="#15102b" />
+    <B s={[w * k, h * 0.7, 0.12]} pos={[-w / 2 + (w * k) / 2, 0, 0.01]} c={color} e={color} ei={1.2} />
+  </group>);
+};
+
+export const EXTRA = { progress: Progress, papeleta: Papeleta, urna: Urna, mazo: Mazo, estrado: Estrado, mesa: Mesa, silla: Silla, oficina: Oficina, chat: Chat };

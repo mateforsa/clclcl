@@ -1,0 +1,3 @@
+{ "beat": "b04", "frac": 0.97,
+  "overlay": { "kicker": "ROCKSTAR", "y": 60,
+    "lines": [ { "t": "3 DE CADA 4", "c": "yellow", "size": 150 }, { "t": "VOTARON NO", "size": 150 }, { "t": "AL SINDICATO · 1.163 CONTRA 381", "size": 58, "c": "cyan" } ] } }
