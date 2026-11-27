@@ -1764,7 +1764,24 @@
    ],
    "nota": "",
    "caracteres_voz": 903
+  },
+  "ludopatia-sponsors-futbol": {
+   "titulo": "Ley de ludopatía: el fútbol pierde US$ 20 millones de sponsors de apuestas",
+   "tema": "fútbol / economía argentina",
+   "fuentes": [
+    "https://www.lanacion.com.ar/deportes/futbol/ludopatia-los-clubes-de-futbol-que-tienen-sponsors-ligados-al-juego-y-que-pasara-con-ellos-tras-la-nid27112026/",
+    "https://tn.com.ar/politica/2026/11/27/que-cambia-con-la-ley-de-prevencion-de-ludopatia-nuevas-restricciones-para-apostar-y-cambios-en-la-publicidad-en-el-futbol/"
+   ],
+   "puntaje": 7.8,
+   "etapa": "idea",
+   "creado": "2026-11-27T13:43:04-03:00",
+   "historial": [
+    {
+     "etapa": "idea",
+     "cuando": "2026-11-27T13:43:04-03:00"
+    }
+   ]
   }
  },
- "actualizado": "2026-11-27T13:10:16-03:00"
+ "actualizado": "2026-11-27T13:43:04-03:00"
 }
