@@ -823,7 +823,7 @@
    "tema": "",
    "fuentes": [],
    "puntaje": null,
-   "etapa": "verificado",
+   "etapa": "voz",
    "creado": "2026-11-26T23:17:40-03:00",
    "rehace": "crowdstrike-zscaler",
    "publicar_prueba_al_terminar": true,
@@ -862,6 +862,16 @@
      "etapa": "verificado",
      "cuando": "2026-11-26T23:36:01-03:00",
      "nota": ""
+    },
+    {
+     "etapa": "esperando_ok_voz",
+     "cuando": "2026-11-26T23:36:24-03:00",
+     "nota": ""
+    },
+    {
+     "etapa": "voz",
+     "cuando": "2026-11-26T23:36:24-03:00",
+     "nota": "voz sin OK (regla voz_sin_ok del dueño)"
     }
    ],
    "nota": ""
@@ -1130,9 +1140,14 @@
      "etapa": "guion",
      "cuando": "2026-11-26T23:25:06-03:00",
      "nota": "devuelto por el verificador: el inicio C26 repite el de microsoft-codigo-rojo-v2 (dos videos antes en hooks_used.json); elegir otro tipo (no C26 ni J100) y corregir la afirmacion falsa de guion.md. Los datos estan todos OK."
+    },
+    {
+     "etapa": "guion",
+     "cuando": "2026-11-26T23:36:15-03:00",
+     "nota": "corregido tras devolución del verificador"
     }
    ],
-   "nota": "devuelto por el verificador: el inicio C26 repite el de microsoft-codigo-rojo-v2 (dos videos antes en hooks_used.json); elegir otro tipo (no C26 ni J100) y corregir la afirmacion falsa de guion.md. Los datos estan todos OK."
+   "nota": "corregido tras devolución del verificador"
   },
   "colapinto-qatar-v2": {
    "titulo": "Colapinto antes de Qatar: 35 puntos y una pregunta (versión 2)",
@@ -1174,5 +1189,5 @@
    "caracteres_voz": 836
   }
  },
- "actualizado": "2026-11-26T23:36:07-03:00"
+ "actualizado": "2026-11-26T23:36:24-03:00"
 }

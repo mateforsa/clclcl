@@ -11,3 +11,5 @@
 2026-11-26T23:35:47-03:00 [fabrica] etapa -> guion (corregido tras devolución del verificador)
 2026-11-26T23:36:01-03:00 [verificador] APROBADO: 27 datos, todos con fuente (3.a vuelta: ya no queda ningun 235; placa 10 y hoja dicen 260 -> 237, RoboForex y KuCoin; desde be69491 solo cambio la linea 106 de guion.md; parrafos.json sin cambios)
 2026-11-26T23:36:01-03:00 [fabrica] etapa -> verificado
+2026-11-26T23:36:24-03:00 [fabrica] etapa -> esperando_ok_voz
+2026-11-26T23:36:24-03:00 [fabrica] voz SIN OK del dueño (regla voz_sin_ok): ~871 caracteres
