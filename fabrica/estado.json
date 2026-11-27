@@ -2352,10 +2352,15 @@
      "etapa": "guion",
      "cuando": "2026-11-27T19:48:33-03:00",
      "nota": "devuelto por el verificador (2a vuelta): 'mas adelante' para energia/aguas residuales contradice a Infobae (2300); dejarlo sin referencia temporal en voz 7, placa 7 y descripcion"
+    },
+    {
+     "etapa": "guion",
+     "cuando": "2026-11-27T19:49:00-03:00",
+     "nota": ""
     }
    ],
-   "nota": "devuelto por el verificador (2a vuelta): 'mas adelante' para energia/aguas residuales contradice a Infobae (2300); dejarlo sin referencia temporal en voz 7, placa 7 y descripcion"
+   "nota": ""
   }
  },
- "actualizado": "2026-11-27T19:48:33-03:00"
+ "actualizado": "2026-11-27T19:49:00-03:00"
 }
