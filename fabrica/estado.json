@@ -2099,7 +2099,7 @@
     "https://www.infobae.com/deportes/2026/04/07/comienza-la-fase-de-grupos-de-la-copa-libertadores-y-sudamericana-los-millonarios-premios-que-reparten/"
    ],
    "puntaje": 8.3,
-   "etapa": "revision",
+   "etapa": "render",
    "creado": "2026-11-27T18:15:26-03:00",
    "historial": [
     {
@@ -2135,9 +2135,14 @@
      "etapa": "revision",
      "cuando": "2026-11-27T19:07:52-03:00",
      "nota": ""
+    },
+    {
+     "etapa": "render",
+     "cuando": "2026-11-27T19:15:47-03:00",
+     "nota": "devuelto por el revisor: 7 uniones de subtitulos bajo 14 px (Dos|jugadores 0,23 s; Estudiantes|entero 13,17 s; valiosos|de 29,43 s; dos|brasileños 38,40 s; y|Flamengo 40,60 s; El|subcampeón 45,60 s; Libertadores|y 49,57 s), marcar una de cada par como palabra clave en beats.ts"
     }
    ],
-   "nota": "",
+   "nota": "devuelto por el revisor: 7 uniones de subtitulos bajo 14 px (Dos|jugadores 0,23 s; Estudiantes|entero 13,17 s; valiosos|de 29,43 s; dos|brasileños 38,40 s; y|Flamengo 40,60 s; El|subcampeón 45,60 s; Libertadores|y 49,57 s), marcar una de cada par como palabra clave en beats.ts",
    "caracteres_voz": 994
   },
   "colapinto-fp2-qatar": {
@@ -2254,5 +2259,5 @@
    "caracteres_voz": 958
   }
  },
- "actualizado": "2026-11-27T19:12:55-03:00"
+ "actualizado": "2026-11-27T19:15:47-03:00"
 }
