@@ -597,26 +597,51 @@
   ]
  },
  "Briatore": {
-  "dicho": "Briatoré,",
+  "dicho": "Briatóre,",
   "estado": "probada",
-  "puntaje": 0.57,
+  "puntaje": 0.55,
   "variantes": [
    "Briatóre,",
    "Briatore,",
-   "Briatoré,",
-   "Briatórre,"
+   "Bria-tóre,",
+   "Briatóreh,",
+   "Briatoré,"
   ]
  },
  "McLaren": {
-  "dicho": "Mclaren",
+  "dicho": "Mac Laren",
   "estado": "probada",
-  "puntaje": 0.88,
+  "puntaje": 0.65,
   "variantes": [
    "Mac Láren",
-   "Mclaren",
    "Mac Laren",
-   "Maclárem",
-   "McLaren"
+   "McLaren",
+   "Mak Láren",
+   "Mac Lárren"
+  ]
+ },
+ "Sainz": {
+  "dicho": "Sáintz",
+  "estado": "probada",
+  "puntaje": 0.92,
+  "variantes": [
+   "Sáinz",
+   "Sainz",
+   "Sáins",
+   "Sáinth",
+   "Sáintz"
+  ]
+ },
+ "Oh, wow": {
+  "dicho": "Oh, guau",
+  "estado": "probada",
+  "puntaje": 0.78,
+  "variantes": [
+   "Ou, uáu",
+   "Oh, guau",
+   "Oh, wow",
+   "Óu, uáo",
+   "Ooh, wow"
   ]
  }
 }

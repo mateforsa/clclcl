@@ -10,3 +10,7 @@
 2026-11-27T18:38:50-03:00 [fabrica] etapa -> verificado
 2026-11-27T18:38:50-03:00 [fabrica] etapa -> esperando_ok_voz
 2026-11-27T18:39:07-03:00 [fabrica] voz SIN OK del dueño (regla voz_sin_ok): ~986 caracteres
+2026-11-27T18:39:26-03:00 [productor] arranco producción: etapa voz, chequeo créditos
+2026-11-27T18:39:27-03:00 [fabrica] colapinto-fp2-qatar: la voz gasta unos 986 caracteres de ElevenLabs. AVISO: no se puede leer el saldo (la clave no tiene ese permiso); anotalo en fabrica/config.json.
+2026-11-27T18:39:41-03:00 [productor] pruebo pronunciación antes de la voz: Sainz y Oh, wow (Russell ya está probada en el glosario)
+2026-11-27T18:40:57-03:00 [productor] pronunciación probada: Sainz -> Sáintz (92 %), Oh, wow -> Oh, guau (78 %), Russell -> forma del glosario (Russell). Genero la voz

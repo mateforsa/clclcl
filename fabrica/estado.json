@@ -2156,7 +2156,8 @@
      "nota": "voz sin OK (regla voz_sin_ok del dueño)"
     }
    ],
-   "nota": ""
+   "nota": "",
+   "caracteres_voz": 986
   },
   "fp2-qatar-general": {
    "titulo": "FP2 de Qatar: dos banderas rojas y Mercedes otra vez 1-2",
@@ -2198,5 +2199,5 @@
    "caracteres_voz": 958
   }
  },
- "actualizado": "2026-11-27T18:39:13-03:00"
+ "actualizado": "2026-11-27T18:40:57-03:00"
 }
