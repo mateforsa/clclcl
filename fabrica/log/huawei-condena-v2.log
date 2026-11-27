@@ -12,3 +12,4 @@
 2026-11-27T00:52:45-03:00 [productor] Meng Wanzhou: variante 'Meng Uanshóu' (Whisper la oye exacta en es y en). Regenero la voz (vuelta 2)
 2026-11-27T00:53:50-03:00 [oido] oído: 98 % de coincidencia; dudosos: ninguno; diferencias: ocho→8; →a; decomisos→de comisos
 2026-11-27T00:53:54-03:00 [productor] oído vuelta 2: 98 %, sin términos dudosos (Meng Wanzhou, Huawei, Vancouver, Brooklyn y Google se oyen bien). Voz 58,4 s
+2026-11-27T01:00:25-03:00 [productor] beats.ts, entry.ts y props.tsx propios (sala de embarque nevada, jurado, banco, mapa, celda, escalinata). Saco stills
