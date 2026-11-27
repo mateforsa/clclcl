@@ -25,3 +25,5 @@
 2026-11-27T01:05:10-03:00 [fabrica] etapa -> render (devuelto por el revisor: subtitulos pegados <14 px (esos|servidores 20,9 s, Mandaselo|al 48,4-49,0 s, de|empresas 5,0 s, una|alarma: 11,1 s, noviembre|se 0,5 s, se|trabaron. 23,0 s, Y|adentro, 8,0 s) y cronometro de b07 (29,7-33,5 s) con cuadrado negro detras de la esfera)
 2026-11-27T01:06:10-03:00 [productor] vuelvo por rechazo del revisor: claves noviembre, empresas, adentro, alarma, servidores, trabaron, Mandáselo; cronómetro b07 con esfera transparente y en pantalla desde el inicio; fondo oscuro detrás del subtítulo en b07; placa b09 desde 'empresa'
 2026-11-27T01:08:15-03:00 [productor] stills de los frames señalados revisados (f20, f150, f249, f333, f627, f696, b07, b09, f1460-1471): claves en recuadro sin renglones saltados, cronómetro sin cuadrado negro y presente desde el inicio, subtítulo de b07 sobre fondo oscuro; eventos + mezcla rehechos; render lanzado
+2026-11-27T01:16:43-03:00 [productor] render listo: out/microsoft-codigo-rojo-v2/microsoft-codigo-rojo-v2.mp4, 51 s (rehecho tras el rechazo; hojas qc sin cuadros rotos)
+2026-11-27T01:16:43-03:00 [fabrica] etapa -> revision

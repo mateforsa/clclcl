@@ -1122,9 +1122,14 @@
      "etapa": "render",
      "cuando": "2026-11-27T01:14:24-03:00",
      "nota": "devuelto por el revisor: plano 10, 36,30-36,87 s, el propulsor blanco cae por detrás de 'Esta vez se' y les quita contraste; moverlo o bajarlo para que no cruce la franja de subtítulos (~y 290-390)"
+    },
+    {
+     "etapa": "render",
+     "cuando": "2026-11-27T01:16:38-03:00",
+     "nota": ""
     }
    ],
-   "nota": "devuelto por el revisor: plano 10, 36,30-36,87 s, el propulsor blanco cae por detrás de 'Esta vez se' y les quita contraste; moverlo o bajarlo para que no cruce la franja de subtítulos (~y 290-390)",
+   "nota": "",
    "caracteres_voz": 824
   },
   "microsoft-codigo-rojo-v2": {
@@ -1132,7 +1137,7 @@
    "tema": "",
    "fuentes": [],
    "puntaje": null,
-   "etapa": "render",
+   "etapa": "revision",
    "creado": "2026-11-26T23:18:32-03:00",
    "rehace": "microsoft-codigo-rojo",
    "publicar_prueba_al_terminar": true,
@@ -1171,9 +1176,14 @@
      "etapa": "render",
      "cuando": "2026-11-27T01:05:10-03:00",
      "nota": "devuelto por el revisor: subtitulos pegados <14 px (esos|servidores 20,9 s, Mandaselo|al 48,4-49,0 s, de|empresas 5,0 s, una|alarma: 11,1 s, noviembre|se 0,5 s, se|trabaron. 23,0 s, Y|adentro, 8,0 s) y cronometro de b07 (29,7-33,5 s) con cuadrado negro detras de la esfera"
+    },
+    {
+     "etapa": "revision",
+     "cuando": "2026-11-27T01:16:43-03:00",
+     "nota": ""
     }
    ],
-   "nota": "devuelto por el revisor: subtitulos pegados <14 px (esos|servidores 20,9 s, Mandaselo|al 48,4-49,0 s, de|empresas 5,0 s, una|alarma: 11,1 s, noviembre|se 0,5 s, se|trabaron. 23,0 s, Y|adentro, 8,0 s) y cronometro de b07 (29,7-33,5 s) con cuadrado negro detras de la esfera",
+   "nota": "",
    "caracteres_voz": 832
   },
   "canva-despidos-v2": {
@@ -1384,5 +1394,5 @@
    "caracteres_voz": 836
   }
  },
- "actualizado": "2026-11-27T01:15:19-03:00"
+ "actualizado": "2026-11-27T01:16:43-03:00"
 }
