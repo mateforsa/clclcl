@@ -151,8 +151,8 @@ export const BEATS: BeatSpec[] = [
       { type: 'label', pos: [-0.85, 0.55, 0.37], p: { text: 'ÁREA', w: 1.1, h: 0.24, bg: DARK, color: '#fff', size: 0.75, weight: 900 } },
       { type: 'label', pos: [0.85, 0.55, 0.37], p: { text: 'COSECHA', w: 1.1, h: 0.24, bg: DARK, color: '#fff', size: 0.75, weight: 900 } },
     ],
-    overlays: [S1('SUPERFICIE: +2,1%', '2,1%'), S2('44,6 MILLONES DE HECTÁREAS (RÉCORD)', '2,1%', { size: 28, out: '21%' }),
-      S2('COSECHA: +21%', '21%', { color: '#1f9d55', size: 40 }), ...FUENTES] },
+    overlays: [S1('SUPERFICIE: +2,1%', '2,1%'), S2('44,6 MILLONES DE HECTÁREAS (RÉCORD)', '2,1%', { size: 28, out: '21%#2' }),
+      S2('COSECHA: +21%', '21%#2', { color: '#1f9d55', size: 40 }), ...FUENTES] },
 
   // 10. una consultora cuenta 164,4: no suma el maíz para forraje (la vaca)
   { id: 'b10', set: 'void', cam: { from: [-0.6, 2.3, 8.4], to: [0.2, 2.1, 7.6], look: [0, 1.05, 0], fov: 44, shift: -0.08 }, keywords: ['consultora', '164,4', 'millones:', 'forraje.'],
