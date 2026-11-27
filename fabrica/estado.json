@@ -1121,7 +1121,7 @@
    "tema": "",
    "fuentes": [],
    "puntaje": null,
-   "etapa": "guion",
+   "etapa": "voz",
    "creado": "2026-11-26T23:18:33-03:00",
    "rehace": "meta-muse",
    "publicar_prueba_al_terminar": true,
@@ -1145,9 +1145,24 @@
      "etapa": "guion",
      "cuando": "2026-11-26T23:36:15-03:00",
      "nota": "corregido tras devolución del verificador"
+    },
+    {
+     "etapa": "verificado",
+     "cuando": "2026-11-26T23:37:20-03:00",
+     "nota": ""
+    },
+    {
+     "etapa": "esperando_ok_voz",
+     "cuando": "2026-11-26T23:38:04-03:00",
+     "nota": ""
+    },
+    {
+     "etapa": "voz",
+     "cuando": "2026-11-26T23:38:04-03:00",
+     "nota": "voz sin OK (regla voz_sin_ok del dueño)"
     }
    ],
-   "nota": "corregido tras devolución del verificador"
+   "nota": ""
   },
   "colapinto-qatar-v2": {
    "titulo": "Colapinto antes de Qatar: 35 puntos y una pregunta (versión 2)",
@@ -1189,5 +1204,5 @@
    "caracteres_voz": 836
   }
  },
- "actualizado": "2026-11-26T23:36:36-03:00"
+ "actualizado": "2026-11-26T23:38:04-03:00"
 }

@@ -5,3 +5,7 @@
 2026-11-26T23:25:06-03:00 [fabrica] etapa -> guion (devuelto por el verificador: el inicio C26 repite el de microsoft-codigo-rojo-v2 (dos videos antes en hooks_used.json); elegir otro tipo (no C26 ni J100) y corregir la afirmacion falsa de guion.md. Los datos estan todos OK.)
 2026-11-26T23:36:15-03:00 [guionista] guion corregido: 147 palabras, apertura cambiada de C26 a F54 algo que crece en pantalla (Un carrito que se llena solo. Lo arma un bot de Meta), cierre tipo predicción sí/no sin cambios; corregida la afirmación falsa sobre hooks_used.json
 2026-11-26T23:36:15-03:00 [fabrica] etapa -> guion (corregido tras devolución del verificador)
+2026-11-26T23:37:20-03:00 [verificador] APROBADO: 22 datos, todos con fuente (re-verificado tras el cambio de apertura: F54 no repite C26/J100; carrito/busca/compara/aprobás respaldado por Digiday, cryptobriefing, GeekWire; sin acuerdo Meta-Amazon anunciado al 26/11 segun OODAloop, AndroidHeadlines, TechCrunch, The Paypers). 147 palabras, ~49 s, 5 etiquetas.
+2026-11-26T23:37:20-03:00 [fabrica] etapa -> verificado
+2026-11-26T23:38:04-03:00 [fabrica] etapa -> esperando_ok_voz
+2026-11-26T23:38:04-03:00 [fabrica] voz SIN OK del dueño (regla voz_sin_ok): ~801 caracteres

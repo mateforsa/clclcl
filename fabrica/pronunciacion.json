@@ -30,5 +30,41 @@
   "dicho": "High-lux",
   "estado": "confirmada",
   "nota": "elegida por el dueño de oído (variante 5), 26/11/2026"
+ },
+ "Anthropic": {
+  "dicho": "Ántropic",
+  "estado": "probada",
+  "puntaje": 0.62,
+  "variantes": [
+   "Antrópic",
+   "Ántropic",
+   "Anzrópic",
+   "Antrópik",
+   "Anthrópic"
+  ]
+ },
+ "Canva": {
+  "dicho": "Cánvah",
+  "estado": "probada",
+  "puntaje": 0.59,
+  "variantes": [
+   "Canva",
+   "Cánva",
+   "Kánva",
+   "Cánvah",
+   "Can-va"
+  ]
+ },
+ "Claude": {
+  "dicho": "Clod",
+  "estado": "probada",
+  "puntaje": 0.73,
+  "variantes": [
+   "Clod",
+   "Clood",
+   "Cláud",
+   "Clóud",
+   "Clóod"
+  ]
  }
 }
