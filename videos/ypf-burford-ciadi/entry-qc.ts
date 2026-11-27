@@ -1,4 +1,4 @@
-// SOLO control de calidad del productor (se borra antes de entregar): el video sin subtítulos ni placas
+// TEMPORAL (control de calidad): el video sin subtítulos ni placas, para medir la franja de subtítulos. Se borra después.
 import { registerRoot } from 'remotion';
 import timing from './timing.json';
 import { BEATS } from './beats';

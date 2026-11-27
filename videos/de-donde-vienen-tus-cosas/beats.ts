@@ -57,7 +57,7 @@ const BEATS0: BeatSpec[] = [
   // 3. Sobre todo, de Río Grande. (la isla de cerca: 8 fábricas en Río Grande, 2 en Ushuaia)
   { id: 'b03', set: 'void', cam: Z({ from: [0.25, 3.0, 3.3], to: [-0.1, 2.75, 2.9], look: [-0.35, 0, 0.15], fov: 42 }), keywords: ['Grande.'],
     actors: [
-      { type: 'mapa', pos: ODF, p: { k: KDF, only: 'tdf', pin: { from: null, to: 'rg', at: W('b03', 'Río') }, pinS: 1.5 } },
+      { type: 'mapa', pos: ODF, p: { k: KDF, only: 'tdf', pin: { from: null, to: 'rg', at: W('b03', 'Río') }, pinS: 1.3, dropH: 0.5 } },
       ...RG8.map(([x, z], i) => ({ type: 'fabrica', pos: [x, 0.08, z] as any, s: 0.15, p: { lit: C.cyan, color: '#3b2f7a' } })),
       ...US2.map(([x, z]) => ({ type: 'fabrica', pos: [x, 0.08, z] as any, s: 0.15, p: { lit: '#8d7fd0', color: '#2d1a6e' } })),
     ],
@@ -77,7 +77,7 @@ const BEATS0: BeatSpec[] = [
     actors: [
       { type: 'mapa', pos: [0.62, 0, -0.1], p: { dots: ALL, visited: ['rg'], pin: { from: 'rg', to: 'pm', at: W('b05', 'Puerto') - 0.25, dur: 0.75 } } },
       { type: 'fabrica', pos: [...mp('pm', 1, [0.62 - 0.32, 0, -0.1])] as any, s: 0.2, at: 'fábrica', p: { lit: C.gold, smoke: true } },
-      { type: 'lata', pos: [-0.95, 0.72, 0.55], s: 0.9, p: { band: C.magenta } },
+      { type: 'lata', pos: [-0.95, 0.68, 0.55], s: 0.9, p: { band: C.magenta } },
       { type: 'lingote', pos: [-1.0, 0, 1.45], at: 'aluminio', p: {} },
     ],
     overlays: [P2('ALUAR: ÚNICA PRODUCTORA DE ALUMINIO PRIMARIO DEL PAÍS', 'fábrica'), P1('PUERTO MADRYN · CHUBUT', 'Madryn'), ...FUENTE] },
@@ -87,7 +87,7 @@ const BEATS0: BeatSpec[] = [
     actors: [
       { type: 'fabrica', pos: [-0.2, 0, -1.6], s: 1.2, p: { lit: C.gold } },
       { type: 'fabrica', pos: [1.35, 0, -2.2], s: 1.0, p: { lit: C.cyan } },
-      { type: 'lingotes', pos: [0, 0, 0.45], at: '460.000', enter: 'none', p: { n: 26, dur: 1.5 } },
+      { type: 'lingotes', pos: [0, 0, 0.45], at: '460.000', enter: 'none', p: { dur: 1.5 } },
       { type: 'lingote', pos: [-0.9, 0, 1.2], p: {} },
     ],
     overlays: [BIG('460.000', '460.000', { count: { to: 460000 }, sub: 'TONELADAS POR AÑO', size: 104 }), P2('CAPACIDAD DE LA PLANTA', 'año', { y: 68.8 }), ...FUENTE] },
@@ -104,24 +104,23 @@ const BEATS0: BeatSpec[] = [
   { id: 'b08', set: 'void', cam: Z({ from: [-0.45, 3.1, 5.4], to: [0.05, 2.9, 4.8], look: [0, 0.85, -0.4], fov: 42 }), keywords: ['Arcor', '1951,', 'ARroyito', 'CÓRdoba.'],
     actors: [
       { type: 'ring', pos: [0.95, 0.03, -1.3], p: { r: 0.6, color: C.gold } },
-      { type: 'casita', pos: [0.95, 0, -1.3], rot: [0, -0.4, 0], at: 'nació', enter: 'drop' },
-      { type: 'caramelitos', pos: [0, 0, 0.9], enter: 'none', p: { n: 12, seed: 7, area: [2.6, 0.7], stagger: 0.01, drop: 0 } },
+      { type: 'casita', pos: [0.95, 0, -1.3], rot: [0, -0.4, 0] },
+      { type: 'caramelitos', pos: [0, 0, 0.9], enter: 'none', p: { n: 7, seed: 7, area: [2.6, 0.7], stagger: 0, drop: 0 } },
       { type: 'siglas', pos: [0, 1.75, -0.6], at: 'Arcor', p: { hA: W('b08', 'ARroyito'), hB: W('b08', 'CÓRdoba') } },
     ],
     overlays: [BIG('1951', '1951', { size: 104 }), P2('AR(royito) + COR(doba) = ARCOR', 'CÓRdoba', { y: 68.8 }), ...FUENTE] },
 
   // 9. El mayor fabricante de caramelos del mundo.
-  { id: 'b09', set: 'void', cam: Z({ from: [0.5, 2.25, 5.4], to: [0.1, 2.05, 4.8], look: [0, 1.15, 0], fov: 42 }), keywords: ['fabricante', 'caramelos'],
+  { id: 'b09', set: 'void', cam: Z({ from: [0.5, 2.85, 5.3], to: [0.1, 2.65, 4.7], look: [0, 1.1, 0], fov: 42 }), keywords: ['fabricante', 'caramelos'],
     actors: [
       { type: 'ring', pos: [0, 0.03, -0.3], p: { r: 1.1, color: C.gold } },
       { type: 'globe', pos: [0, 1.25, -0.4], s: 0.8 },
-      { type: 'caramelitos', pos: [0, 0, 0.75], enter: 'none', p: { n: 8, seed: 2, area: [2.6, 0.6], stagger: 0.0, drop: 0 } },
-      { type: 'caramelitos', pos: [0, 0, 0.6], at: 'mayor', enter: 'none', p: { n: 16, seed: 9, area: [2.8, 1.0], stagger: 0.07, drop: 2.2 } },
+      { type: 'caramelitos', pos: [0, 0, 1.1], at: 'mayor', enter: 'none', p: { n: 9, seed: 9, area: [2.8, 0.7], stagger: 0.09, drop: 2.2 } },
     ],
     overlays: [P1('MAYOR FABRICANTE DE CARAMELOS DEL MUNDO', 'mayor', { size: 32 }), P2('SEGÚN LA NACIÓN', 'mundo'), ...FUENTE] },
 
   // 10. El aceite sale de moler granos.
-  { id: 'b10', set: 'void', cam: Z({ from: [-0.4, 2.15, 5.0], to: [0.05, 2.0, 4.5], look: [0, 0.85, 0], fov: 42 }), keywords: ['aceite', 'granos.'],
+  { id: 'b10', set: 'void', cam: Z({ from: [-0.4, 2.9, 5.0], to: [0.05, 2.7, 4.5], look: [0, 0.7, 0], fov: 42 }), keywords: ['aceite', 'granos.'],
     actors: [
       { type: 'granos', pos: [-0.95, 0, 0.35], p: { r: 0.45, h: 0.4 } },
       { type: 'molino', pos: [0.05, 0, -0.35], p: { fallAt: W('b10', 'moler') } },
@@ -139,12 +138,12 @@ const BEATS0: BeatSpec[] = [
     overlays: [P2('75% DE LA CAPACIDAD DE MOLIENDA DEL PAÍS', 'tres'), P1('GRAN ROSARIO · SANTA FE', 'Rosario'), ...FUENTE] },
 
   // 12. En 2025, esa costa despachó 75,7 millones de toneladas.
-  { id: 'b12', set: 'void', cam: Z({ from: [1.9, 3.1, 4.7], to: [1.5, 2.85, 4.1], look: [0.1, 0.35, -0.6], fov: 42 }), keywords: ['despachó', '75,7 millones', 'toneladas.'],
+  { id: 'b12', set: 'void', cam: Z({ from: [1.6, 4.4, 4.4], to: [1.25, 4.1, 3.9], look: [0.1, 0.2, -0.5], fov: 42 }), keywords: ['despachó', '75,7 millones', 'toneladas.'],
     actors: [
-      { type: 'rio', pos: [0.55, 0, -1], p: { w: 1.8, len: 14 } },
-      ...[-2.2, -0.2, 1.8].map((z) => ({ type: 'terminal', pos: [-0.85, 0, z] as any, p: { n: 3 } })),
+      { type: 'rio', pos: [0.55, 0, -0.6], p: { w: 1.8, len: 8 } },
+      ...[-1.4, 0.6].map((z) => ({ type: 'terminal', pos: [-0.85, 0, z] as any, p: { n: 3, h: 1.15 } })),
       { type: 'barco', pos: [0.15, 0, -0.2], p: { loadAt: 0.2 } },
-      { type: 'barco', pos: [0.95, 0, -3.6], p: { loadAt: -5 }, move: { to: [0.95, 0, 1.2], at: 0, dur: 5.6 } },
+      { type: 'barco', pos: [0.95, 0, -2.8], p: { loadAt: -5 }, move: { to: [0.95, 0, 1.6], at: 0, dur: 5.6 } },
     ],
     overlays: [BIG('75,7 MILLONES', '75', { count: { to: 75.7, dec: 1, post: ' MILLONES' }, sub: 'DE TONELADAS · 2025', size: 86 }),
       P2('70 KM DE COSTA · 30 TERMINALES · TIMBÚES A ARROYO SECO', 'toneladas', { y: 68.8 }), ...FUENTE] },
@@ -160,10 +159,10 @@ const BEATS0: BeatSpec[] = [
       P2('SEGÚN LA BOLSA DE COMERCIO DE ROSARIO', 'Bolsa'), ...FUENTE] },
 
   // 14. Lo que te pasa por arriba: un satélite armado en Bariloche.
-  { id: 'b14', set: 'void', cam: Z(MAPCAM(-0.15)), keywords: ['satélite', 'Bariloche.'],
+  { id: 'b14', set: 'void', cam: Z({ from: [0.1, 6.1, 4.9], to: [-0.25, 5.8, 4.4], look: [-0.15, 0, 0.25], fov: 40 }), keywords: ['satélite', 'Bariloche.'],
     actors: [
       { type: 'mapa', pos: [0.4, 0, 0.1], p: { dots: ALL, visited: ['rg', 'pm', 'ar', 'ro'], trail: [['rg', 'pm'], ['pm', 'ar'], ['ar', 'ro']], pin: { from: 'ro', to: 'ba', at: W('b14', 'Bariloche') - 0.3, dur: 0.7 } } },
-      { type: 'satelite', pos: [-1.9, 0.6, -1.5], s: 0.55, p: {}, move: { to: [1.2, 0.6, -1.5], at: 0, dur: 3.7 } },
+      { type: 'satelite', pos: [-1.9, 0.5, -1.5], s: 0.55, p: {}, move: { to: [1.2, 0.5, -1.5], at: 0, dur: 3.7 } },
     ],
     overlays: [P2('ARSAT-1 · ARMADO POR INVAP', 'satélite'), P1('BARILOCHE · RÍO NEGRO', 'Bariloche'), ...FUENTE] },
 
@@ -187,7 +186,9 @@ const BEATS0: BeatSpec[] = [
     overlays: [P1('¿DÓNDE SE HIZO LO QUE TENÉS CERCA?', 'cerca'), P2('CONTALO EN LOS COMENTARIOS', 'comentarios')] },
 ];
 
+// dónde empieza el velo oscuro del piso (más lejos donde hay objetos atrás)
+const VELO: Record<string, number> = { b06: -3, b12: -4 };
 // encuadre vertical: sube el contenido para que nada importante quede detrás de las placas (negativo = más arriba)
-const SHIFT: Record<string, number> = { b01: -0.02, b02: -0.06, b03: -0.02, b04: -0.02, b05: -0.06, b06: -0.07, b07: -0.06, b08: -0.02,
-  b09: -0.05, b10: -0.05, b11: -0.06, b12: -0.06, b13: -0.04, b14: -0.01, b15: -0.02, b16: 0.0 };
-export const BEATS: BeatSpec[] = BEATS0.map((b) => ({ ...b, cam: { ...b.cam, shift: SHIFT[b.id] ?? b.cam.shift } }));
+const SHIFT: Record<string, number> = { b01: -0.02, b02: -0.045, b03: -0.02, b04: -0.02, b05: -0.045, b06: -0.07, b07: -0.045, b08: -0.02,
+  b09: -0.04, b10: -0.05, b11: -0.045, b12: 0.03, b13: -0.04, b14: 0.0, b15: -0.02, b16: 0.0 };
+export const BEATS: BeatSpec[] = BEATS0.map((b) => ({ ...b, cam: { ...b.cam, shift: SHIFT[b.id] ?? b.cam.shift }, actors: [{ type: 'velo', p: { z0: VELO[b.id] ?? -4 } }, ...b.actors] }));

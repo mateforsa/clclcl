@@ -19,3 +19,7 @@
 2026-11-27T15:14:10-03:00 [oido] oído: 95 % de coincidencia; dudosos: ninguno; diferencias: 9→nueve; 10→diez; madryn→madrin; 000→mil; arroyito→arrollito; arroyito→arrollito; 8→ocho; tengas→tenga
 2026-11-27T15:14:16-03:00 [productor] toma 2: 66,6 s, 16 planos. Oído: Arcor y Madrín bien, sin términos dudosos (Arroyito→'Arrollito' es el yeísmo, tengas→tenga es de Whisper). No hay PRONUNCIACIÓN SIN RESOLVER
 2026-11-27T15:27:02-03:00 [productor] beats.ts, props.tsx y entry.ts escritos (16 planos: mapa low-poly con pin viajero + objeto por parada); primeros stills
+2026-11-27T15:44:52-03:00 [productor] stills revisados (16 planos, inicio y final de cada plano); barrido de la franja de subtítulos cada 3 cuadros sobre un render de control sin textos: fondo ≤ 51/255 en todos los planos (máx. en planos de mapa = grilla/sky, sin objetos claros); uniones de subtítulos simuladas: mínimo 14,8 px. Audio mezclado
+2026-11-27T15:44:52-03:00 [fabrica] etapa -> render
+2026-11-27T15:49:03-03:00 [productor] render listo: out/de-donde-vienen-tus-cosas/de-donde-vienen-tus-cosas.mp4, 67 s (66,63 s; 1080x1920 30 fps h264+aac; -14,9 LUFS, pico -4,6 dBFS; sin negros ni congelados). Portada: instagram/portadas/de-donde-vienen-tus-cosas.jpg. guion.md actualizado con los recortes (sin 'Hay cuatro más', sin 'Hoy,', sin plano 17) y las formas Ar-cor / Madrín
+2026-11-27T15:49:03-03:00 [fabrica] etapa -> revision

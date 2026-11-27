@@ -86,7 +86,7 @@ const Dot: React.FC<{ pos: V3; c: string; r?: number; ei?: number }> = ({ pos, c
  *  hl: { at } enciende Tierra del Fuego, andes (bool), pinS (escala del pin)
  */
 export const Mapa: React.FC<P> = ({ t, p }) => {
-  const { k = 1, only, dots = [], visited = [], pin, trail = [], hl, andes = true, pinS = 1, cap = '#3a2a8a' } = p;
+  const { k = 1, only, dots = [], visited = [], pin, trail = [], hl, andes = true, pinS = 1, cap = '#3a2a8a', dropH = 1.6 } = p;
   const g = hl ? eo((t - hl.at) / 0.4) : 0;
   const P0 = (key: string): V3 => mp(key, k);
   const segDots = (a: string, b: string, kk: number, key: string) => { const A = P0(a), Bp = P0(b); const n = 16; const hgt = 0.25 + 0.05 * Math.hypot(A[0] - Bp[0], A[2] - Bp[2]);
@@ -95,7 +95,7 @@ export const Mapa: React.FC<P> = ({ t, p }) => {
   if (pin) {
     const tk = (t - (pin.at ?? 0)) / (pin.dur ?? 0.7); pk = eio(tk);
     if (pin.from) { const A = P0(pin.from), Bp = P0(pin.to); pinPos = arc(A, Bp, pk, 0.25 + 0.05 * Math.hypot(A[0] - Bp[0], A[2] - Bp[2])); arrived = clamp((t - (pin.at ?? 0) - (pin.dur ?? 0.7)) / 0.3); }
-    else if (t >= (pin.at ?? 0)) { const Bp = P0(pin.to); const d = eo(tk * 1.4); pinPos = [Bp[0], Bp[1] + (1 - d) * 1.6, Bp[2]]; arrived = clamp((t - (pin.at ?? 0) - 0.5) / 0.3); }
+    else if (t >= (pin.at ?? 0)) { const Bp = P0(pin.to); const d = eo(tk * 1.4); pinPos = [Bp[0], Bp[1] + (1 - d) * dropH, Bp[2]]; arrived = clamp((t - (pin.at ?? 0) - 0.5) / 0.3); }
   }
   return (
     <group>
@@ -176,7 +176,7 @@ export const Agarre: React.FC<P> = ({ t, p }) => {
   const { t1 = 0.4, t2 = 0.9, skin = '#e3ad80', sleeve = '#2f6bff', lift = 0.75, legs = 0 } = p;
   const r = 0.27, h = 0.62;
   const down = eio(t / t1); const grip = eio((t - t1) / 0.2); const up = eio((t - t2) / 0.6);
-  const handY = lerp(1.4, 0, down) + up * lift; const jarY = up * lift;
+  const handY = lerp(0.7, 0, down) + up * lift; const jarY = up * lift;
   return (<group>
     {/* mesa */}
     <B s={[2.6, 0.1, 1.5]} pos={[0, -h / 2 - 0.05 - 0.01, -0.1]} c="#8a5a3a" />
@@ -214,12 +214,14 @@ const Ingot: React.FC<{ pos: V3; k?: number }> = ({ pos, k = 1 }) => (
   </group>
 );
 export const Lingote: React.FC<P> = ({ tt }) => (<group rotation={[0, PI / 4, 0]} scale={[1.6, 1, 0.8]}><Ingot pos={[0, 0, 0]} k={pop(tt)} /></group>);
-/** pila de lingotes que crece (n por capas) */
+/** pila de lingotes que crece: pirámide de 4-3-2-1 por fila, dos filas, sin que se toquen */
 export const Lingotes: React.FC<P> = ({ tt, p }) => {
-  const { n = 24, dur = 1.4 } = p; const vis = Math.round(n * eo(tt / dur)); const out: JSX.Element[] = []; let i = 0;
-  for (let layer = 0; layer < 6 && i < n; layer++) { const cols = 4 - Math.floor(layer / 2), rows = 2; for (let r = 0; r < rows; r++) for (let c = 0; c < cols && i < n; c++, i++) {
-    if (i >= vis) continue; const x = (c - (cols - 1) / 2) * 0.5, z = (r - 0.5) * 0.42; const rot = layer % 2 ? PI / 2 : 0;
-    out.push(<group key={i} position={[layer % 2 ? z : x, layer * 0.15, layer % 2 ? x * 0.84 : z]} rotation={[0, rot + PI / 4, 0]} scale={[1.0, 1, 0.55]}><Ingot pos={[0, 0, 0]} k={0.82} /></group>); } }
+  const { dur = 1.4 } = p; const out: JSX.Element[] = []; let i = 0; const n = 20;
+  for (let l = 0; l < 4; l++) for (let r = 0; r < 2; r++) for (let c = 0; c < 4 - l; c++, i++) {
+    const k = pop(tt - (i / n) * dur); if (k <= 0) continue;
+    const x = (c - (3 - l) / 2) * 0.5, z = (r - 0.5) * 0.27;
+    out.push(<group key={i} position={[x, l * 0.145 + 0.07, z]} scale={k}><B s={[0.44, 0.135, 0.22]} c="#c6cad8" e="#8f93a8" ei={0.3} /><B s={[0.36, 0.01, 0.16]} pos={[0, 0.0725, 0]} c="#e4e6f0" /></group>);
+  }
   return <group>{out}</group>;
 };
 /** Fábrica genérica: nave con techo en serrucho y chimenea. p: color, lit, w */
@@ -261,9 +263,11 @@ export const Caramelo: React.FC<P> = ({ t, p }) => {
 /** caramelitos chicos (lluvia/pila) */
 export const Caramelitos: React.FC<P> = ({ tt, p }) => {
   const { n = 14, seed = 3, area = [2.2, 1.2], stagger = 0.06, drop = 2 } = p;
-  const pts = useMemo(() => { const r = rnd(seed); return Array.from({ length: n }, () => [(r() - 0.5) * area[0], (r() - 0.5) * area[1], r() * PI, Math.floor(r() * 3)]); }, [n, seed]);
+  const pts = useMemo(() => { const r = rnd(seed); const out: number[][] = []; let tries = 0;   // separados: ninguno atraviesa a otro
+    while (out.length < n && tries++ < 4000) { const q = [(r() - 0.5) * area[0], (r() - 0.5) * area[1], r() * PI, Math.floor(r() * 3)]; if (out.every((o) => Math.hypot(o[0] - q[0], o[1] - q[1]) > 0.58)) out.push(q); }
+    return out; }, [n, seed]);
   const cols = [[C.gold, C.red], [C.cyan, '#f4f1ff'], [C.magenta, C.gold]];
-  return (<group>{pts.map(([x, z, ry, ci], i) => { const k = eo((tt - i * stagger) / 0.45); if (tt - i * stagger <= 0) return null; const [a, b] = cols[ci];
+  return (<group>{pts.map(([x, z, ry, ci], i) => { const k = drop > 0 ? eo((tt - i * stagger) / 0.45) : 1; if (tt - i * stagger < 0 || (drop > 0 && tt - i * stagger <= 0)) return null; const [a, b] = cols[ci];
     return <group key={i} position={[x, 0.12 + (1 - k) * drop, z]} rotation={[0, ry, 0]} scale={0.32}>
       <mesh scale={[1.25, 0.8, 0.8]}><icosahedronGeometry args={[0.42, 0]} /><M c={a} e={a} ei={0.25} /></mesh>
       <mesh scale={[1.26, 0.25, 0.81]}><icosahedronGeometry args={[0.42, 0]} /><M c={b} /></mesh>
@@ -338,11 +342,11 @@ export const Rio: React.FC<P> = ({ t, p }) => {
 };
 /** Terminal: silos + cinta hasta el muelle */
 export const Terminal: React.FC<P> = ({ p }) => {
-  const { n = 3 } = p;
+  const { n = 3, h = 1.3 } = p;
   return (<group>
     {Array.from({ length: n }, (_, i) => <group key={i} position={[0, 0, (i - (n - 1) / 2) * 0.62]}>
-      <Cyl r={0.28} h={1.3} seg={10} pos={[0, 0.65, 0]} c="#b9b3cf" />
-      <mesh position={[0, 1.42, 0]}><coneGeometry args={[0.3, 0.25, 10]} /><M c="#8d8aa0" /></mesh>
+      <Cyl r={0.28} h={h} seg={10} pos={[0, h / 2, 0]} c="#b9b3cf" />
+      <mesh position={[0, h + 0.12, 0]}><coneGeometry args={[0.3, 0.25, 10]} /><M c="#8d8aa0" /></mesh>
     </group>)}
     <B s={[0.9, 0.08, 0.1]} pos={[0.6, 1.25, 0]} rot={[0, 0, -0.35]} c={C.gold} e={C.gold} ei={0.5} />
     <B s={[0.08, 1.1, 0.08]} pos={[0.55, 0.55, 0]} c="#5a4a9a" />
@@ -353,7 +357,7 @@ export const Barco: React.FC<P> = ({ t, p }) => {
   const { loadAt = 0, color = '#8f2b3e', len = 2.0 } = p; const k = eo((t - loadAt) / 0.8);
   return (<group rotation={[0, 0, Math.sin(t * 1.6) * 0.02]}>
     <B s={[0.62, 0.3, len]} pos={[0, 0.15, 0]} c={color} />
-    <mesh position={[0, 0.15, len / 2 + 0.2]} rotation={[0, 0, 0]}><cylinderGeometry args={[0.0, 0.31, 0.4, 4, 1]} /><M c={color} /></mesh>
+    <group position={[0, 0.15, len / 2 + 0.2]} rotation={[PI / 2, 0, 0]} scale={[1, 1, 0.68]}><mesh rotation={[0, PI / 4, 0]}><cylinderGeometry args={[0.0, 0.44, 0.4, 4, 1]} /><M c={color} /></mesh></group>
     <B s={[0.64, 0.06, len]} pos={[0, 0.32, 0]} c="#2b2350" />
     <B s={[0.5, 0.4, 0.36]} pos={[0, 0.55, -len / 2 + 0.22]} c="#d9d2f5" />
     <B s={[0.52, 0.06, 0.2]} pos={[0, 0.62, -len / 2 + 0.05]} c="#15102b" />
@@ -428,7 +432,15 @@ export const Pregunta: React.FC<P> = ({ t, tt }) => (
   </group>
 );
 
+/** Velo oscuro sobre el piso lejano: apaga la grilla que queda detrás de los subtítulos (se funde de a poco). p: z0 (dónde empieza) */
+export const Velo: React.FC<P> = ({ p }) => {
+  const { z0 = -5, len = 60, fade = 6 } = p;
+  const tx = useTex((g, W, H) => { const gr = g.createLinearGradient(0, H, 0, 0); gr.addColorStop(0, 'rgba(20,10,46,0)'); gr.addColorStop(Math.min(1, fade / len), 'rgba(20,10,46,1)'); gr.addColorStop(1, 'rgba(20,10,46,1)'); g.fillStyle = gr; g.fillRect(0, 0, W, H); }, 8, 256, 'velo' + len + fade);
+  return <mesh rotation={[-PI / 2, 0, 0]} position={[0, 0.02, z0 - len / 2]}><planeGeometry args={[120, len]} /><meshBasicMaterial map={tx} transparent depthWrite={false} toneMapped={false} /></mesh>;
+};
+
 export const EXTRA: Record<string, React.FC<P>> = {
+  velo: Velo,
   mapa: Mapa, mano: Mano, agarre: Agarre, lata: Lata, lingote: Lingote, lingotes: Lingotes, fabrica: Fabrica, aparato: Aparato,
   caramelo: Caramelo, caramelitos: Caramelitos, siglas: Siglas, casita: Casita, botella: Botella, molino: Molino, granos: Granos,
   torta: Torta, rio: Rio, terminal: Terminal, barco: Barco, satelite: Satelite, orbita: Orbita, ranking: Ranking, globito: Globito,

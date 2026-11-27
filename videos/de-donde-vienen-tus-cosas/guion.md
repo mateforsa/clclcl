@@ -36,12 +36,12 @@ Video vertical 1080x1920, 30 fps, unos 0:64 a 0:68, 17 planos, sin carteles de c
 | 1 | 0:00 | Mirá el celular en el que ves esto. |
 | 2 | 0:03 | Hasta hace poco, 9 de cada 10 celulares, teles y aires del país salían de Tierra del Fuego. |
 | 3 | 0:09 | Sobre todo, de Río Grande. |
-| 4 | 0:10 | Lo que tenés en la mano tiene domicilio. Hay cuatro más. |
+| 4 | 0:10 | Lo que tenés en la mano tiene domicilio. |
 | 5 | 0:14 | La lata de gaseosa es de aluminio. Y una sola fábrica del país lo hace nuevo, en Puerto Madryn. |
 | 6 | 0:20 | Hasta 460.000 toneladas por año. |
 | 7 | 0:23 | El caramelo tiene dirección: Arroyito, en Córdoba. |
 | 8 | 0:25 | Ahí nació Arcor en 1951, por ARroyito y CÓRdoba. |
-| 9 | 0:29 | Hoy, el mayor fabricante de caramelos del mundo. |
+| 9 | 0:29 | El mayor fabricante de caramelos del mundo. |
 | 10 | 0:32 | El aceite sale de moler granos. |
 | 11 | 0:34 | Y tres cuartos de lo que el país puede moler está cerca de Rosario. |
 | 12 | 0:39 | En 2025, esa costa despachó 75,7 millones de toneladas. |
@@ -49,7 +49,6 @@ Video vertical 1080x1920, 30 fps, unos 0:64 a 0:68, 17 planos, sin carteles de c
 | 14 | 0:49 | Y lo que te pasa por arriba: un satélite armado en Bariloche. |
 | 15 | 0:53 | En 2014, con él, la Argentina entró al grupo de 8 países que fabricaban satélites así. |
 | 16 | 0:59 | Agarrá lo primero que tengas cerca, fijate dónde se hizo y contalo en los comentarios. |
-| 17 | 1:04 | A ver quién encuentra el lugar más raro. |
 
 Tiempos estimados a unas 2,97 palabras dichas por segundo (el ritmo real de `kioscos-53000`: 190 palabras en 63,98 s); da unos
 67 s. Los reales salen de `timing.json` después de la voz. Si la toma pasa de 68 s, lo primero que se recorta es "Hay cuatro más"
@@ -117,6 +116,12 @@ Límites y cómo los trata el guion:
 - **Mar del Plata** (49% de los desembarques, [Ministerio de Economía, pesca 2024](https://www.argentina.gob.ar/sites/default/files/pesca_y_acuicultura_2024.pdf))
   quedó afuera solo por duración; puede ir en la descripción o en un video aparte. Campana y Tucumán, afuera (ver arriba).
 
+## Nota del productor (voz, 27/11/2026)
+
+La primera toma duró 72,2 s. Siguiendo el orden de recorte de arriba se sacaron "Hay cuatro más" (plano 4), "Hoy," (plano 9) y
+el plano 17 (la frase queda en la descripción): la toma final dura 66,6 s, 16 planos. Pronunciación: Arcor va como
+`[Ar-cor|Arcor]` (probada en dos rondas) y Madryn como `[Madrín.|Madryn.]` (la toma 1 se oyó "Puerto Madre").
+
 ## Placas por plano
 
 Aparte de los subtítulos. Mayúsculas y signos tal como van. Sin "parte N" en ningún lado. En cada parada, el mapa de la Argentina
@@ -127,7 +132,7 @@ low-poly con el punto de la ciudad encendido y su nombre (placa de ciudad) más 
 | 1 | `LO QUE TENÉS EN LA MANO TIENE DOMICILIO` | desde el cuadro 0 (gancho en mudo, sobre la mano con el celular) |
 | 2 | `9 DE CADA 10` · `CELULARES, TELES Y AIRES · HASTA HACE POCO` · `SEGÚN AFARTE` | en "9", en "aires" y al final del plano |
 | 3 | `RÍO GRANDE · TIERRA DEL FUEGO` · `8 DE CADA 10 FÁBRICAS DE ELECTRÓNICA` | en "Río Grande." (punto del mapa) y al final del plano |
-| 4 | `+4 PARADAS` | en "cuatro" |
+| 4 | (sin placa: "Hay cuatro más" se recortó) | |
 | 5 | `PUERTO MADRYN · CHUBUT` · `ALUAR: ÚNICA PRODUCTORA DE ALUMINIO PRIMARIO DEL PAÍS` | en "Madryn." y al final del plano |
 | 6 | `460.000 TONELADAS POR AÑO` · `CAPACIDAD DE LA PLANTA` | en "460.000" y en "año." |
 | 7 | `ARROYITO · CÓRDOBA` | en "Arroyito," |
@@ -140,7 +145,6 @@ low-poly con el punto de la ciudad encendido y su nombre (placa de ciudad) más 
 | 14 | `BARILOCHE · RÍO NEGRO` · `ARSAT-1 · ARMADO POR INVAP` | en "Bariloche." y al final del plano |
 | 15 | `2014` · `1 DE 8 PAÍSES CON SATÉLITES GEOESTACIONARIOS PROPIOS` · `2.º DE AMÉRICA, DESPUÉS DE EE. UU.` | en "2014,", en "8" y al final del plano |
 | 16 | `¿DÓNDE SE HIZO LO QUE TENÉS CERCA?` · `CONTALO EN LOS COMENTARIOS` | en "cerca," y en "comentarios." |
-| 17 | `EL LUGAR MÁS RARO GANA` | en "raro." |
 
 Fuentes en pantalla (texto chico, abajo, planos 2 a 15): `FUENTES: LA NACIÓN, EL CRONISTA, MINISTERIO DE ECONOMÍA, LA CAPITAL, ÁMBITO, ARGENTINA.GOB.AR`.
 Personas: no aparece ninguna persona real. La mano y los objetos son genéricos: celular, lata, caramelo y botella de aceite sin
