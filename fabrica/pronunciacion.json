@@ -531,25 +531,26 @@
   ]
  },
  "Transfermarkt": {
-  "dicho": "Trans-fer-mark",
+  "dicho": "Transférmark",
   "estado": "probada",
-  "puntaje": 0.71,
+  "puntaje": 0.76,
   "variantes": [
-   "Tránsfermark",
-   "Trans-fer-mark",
-   "Tránsfer Market",
-   "Tránsfermarkt"
+   "Transfermarkt",
+   "Tráns-fer-mark",
+   "Transfer-márkt",
+   "Transférmark"
   ]
  },
  "Corinthians": {
-  "dicho": "Corintians",
+  "dicho": "Corinthians",
   "estado": "probada",
-  "puntaje": 0.67,
+  "puntaje": 0.7,
   "variantes": [
-   "Corintians",
-   "Corínthians",
-   "Corín-tians",
-   "Corinchans"
+   "Corínchians",
+   "Corintiáns",
+   "Corínt-ians",
+   "Corinthians",
+   "Korintians"
   ]
  }
 }
