@@ -962,6 +962,11 @@
      "etapa": "revision",
      "cuando": "2026-11-27T00:46:18-03:00",
      "nota": ""
+    },
+    {
+     "etapa": "revision",
+     "cuando": "2026-11-27T00:50:20-03:00",
+     "nota": ""
     }
    ],
    "nota": "",
@@ -1241,7 +1246,8 @@
      "nota": "voz sin OK (regla voz_sin_ok del dueño)"
     }
    ],
-   "nota": ""
+   "nota": "",
+   "caracteres_voz": 880
   },
   "meta-muse-v2": {
    "titulo": "Muse, el agente de Meta que compra por vos (y que Amazon bloqueó) (versión 2)",
@@ -1331,5 +1337,5 @@
    "caracteres_voz": 836
   }
  },
- "actualizado": "2026-11-27T00:49:38-03:00"
+ "actualizado": "2026-11-27T00:50:20-03:00"
 }

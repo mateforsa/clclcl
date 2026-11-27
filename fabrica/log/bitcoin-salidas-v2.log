@@ -27,3 +27,5 @@
 2026-11-27T00:38:24-03:00 [fabrica] etapa -> render
 2026-11-27T00:46:18-03:00 [productor] render listo: out/bitcoin-salidas-v2/bitcoin-salidas-v2.mp4, 52 s (1080x1920, 30 fps; hojas qc sin cuadros rotos). MP4 medido con ebur128: -15,1 LUFS integrado, igual que mix.wav: es el techo de la normalización de scripts/audio.py para esta mezcla (no se toca scripts/)
 2026-11-27T00:46:18-03:00 [fabrica] etapa -> revision
+2026-11-27T00:50:19-03:00 [productor] loudness: mix.wav subido +0,3 dB (ffmpeg volume, sin tocar scripts/) y MP4 re-multiplexado sin re-render (video copiado). MP4 final con ebur128: -14,8 LUFS integrado, pico real -3,7 dBTP, 52,17 s, 1080x1920, 30 fps
+2026-11-27T00:50:20-03:00 [fabrica] etapa -> revision
