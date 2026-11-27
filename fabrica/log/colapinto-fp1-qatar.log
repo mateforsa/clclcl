@@ -7,3 +7,5 @@
 2026-11-27T11:57:32-03:00 [fabrica] etapa -> esperando_ok_voz
 2026-11-27T11:58:01-03:00 [fabrica] título -> Colapinto en la FP1 de Qatar: 12°, a medio segundo de Gasly
 2026-11-27T11:58:01-03:00 [fabrica] voz SIN OK del dueño (regla voz_sin_ok): ~903 caracteres
+2026-11-27T11:58:37-03:00 [productor] arranco: pruebas de pronunciación (Gasly, Antonelli, Lindblad, Pirelli, Hamilton, Qatar) antes de la voz
+2026-11-27T11:58:37-03:00 [fabrica] colapinto-fp1-qatar: la voz gasta unos 903 caracteres de ElevenLabs. AVISO: no se puede leer el saldo (la clave no tiene ese permiso); anotalo en fabrica/config.json.
