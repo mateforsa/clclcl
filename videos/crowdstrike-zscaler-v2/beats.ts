@@ -36,7 +36,7 @@ export const BEATS: BeatSpec[] = [
     overlays: [tag('VUELO CANCELADO', 0, { color: RED, size: 56, y: 69 }), tag('19/7/2024', '2024', { color: TEAL, size: 48, y: 75.5 })] },
 
   // 2. En las computadoras de la aerolínea, una pantalla azul.  (travelling lateral por la fila de mostradores)
-  { id: 'b02', set: 'room', cam: { from: [-1.3, 1.9, 5.2], to: [0.9, 1.8, 5.0], look: [-0.6, 1.45, 0], lookTo: [0.4, 1.45, 0], fov: 46 }, keywords: ['computadoras', 'azul'],
+  { id: 'b02', set: 'room', cam: { from: [-1.3, 1.9, 5.2], to: [0.9, 1.8, 5.0], look: [-0.6, 1.45, 0], lookTo: [0.4, 1.45, 0], fov: 46 }, keywords: ['computadoras', 'aerolínea', 'azul'],
     actors: [
       TERMINAL,
       { type: 'kiosk', pos: [-1.3, 0, -0.3], p: { sign: '1', blue: 0.3 } },
@@ -72,7 +72,7 @@ export const BEATS: BeatSpec[] = [
     ] },
 
   // 5. La aerolínea Delta dice que perdió unos 500 millones de dólares.  (órbita de noche alrededor del avión)
-  { id: 'b05', set: 'room', cam: { from: [2.6, 1.5, 6.4], to: [-1.0, 1.9, 6.6], look: [0, 1.0, 0], lookTo: [0, 1.1, 0], fov: 46 }, keywords: ['Delta', '500'],
+  { id: 'b05', set: 'room', cam: { from: [2.6, 1.5, 6.4], to: [-1.0, 1.9, 6.6], look: [0, 1.0, 0], lookTo: [0, 1.1, 0], fov: 46 }, keywords: ['aerolínea', 'Delta', '500', 'dólares'],
     actors: [
       TARMAC,
       { type: 'jet', pos: [0, 0, -1.0], rot: [0, -0.35, 0], s: 0.85, p: {} },
@@ -92,7 +92,7 @@ export const BEATS: BeatSpec[] = [
     overlays: [tag('−36% EN DOS SEMANAS', 'tercio', { color: RED, size: 58, y: 70 })] },
 
   // 7. Y este lunes compra Zscaler, que filtra el internet de otras empresas.  (empujón frontal hacia el arco de seguridad)
-  { id: 'b07', set: 'room', cam: { from: [-0.6, 1.9, 7.4], to: [0.1, 1.65, 6.0], look: [0, 1.35, 0], lookTo: [0, 1.25, 0], fov: 46 }, keywords: ['lunes', 'Zscaler', 'internet'],
+  { id: 'b07', set: 'room', cam: { from: [-0.6, 1.9, 7.4], to: [0.1, 1.65, 6.0], look: [0, 1.35, 0], lookTo: [0, 1.25, 0], fov: 46 }, keywords: ['lunes', 'Zscaler', 'internet', 'empresas'],
     actors: [
       TERMINAL,
       { type: 'calendar', pos: [-1.15, 2.95, -2.6], rot: [0, 0.2, 0], s: 0.5, at: 'lunes', p: { top: 'NOV 2026', big: '23', color: TEAL } },
@@ -102,7 +102,7 @@ export const BEATS: BeatSpec[] = [
     overlays: [tag('23/11/2026 · DOS AÑOS DESPUÉS', 'lunes', { color: TEAL, size: 44, y: 75.5 }), tag('COMPRA ZSCALER', 'Zscaler', { color: RED, size: 56, y: 69 })] },
 
   // 8. Paga casi 44.000 millones de dólares, todo en acciones.  (picado que se desliza a lo largo de la mesa)
-  { id: 'b08', set: 'room', cam: { from: [-1.3, 3.3, 5.0], to: [0.9, 2.9, 5.4], look: [-0.3, 1.0, -0.4], lookTo: [0.3, 1.1, -0.4], fov: 46 }, keywords: ['44.000', 'acciones'],
+  { id: 'b08', set: 'room', cam: { from: [-1.3, 3.3, 5.0], to: [0.9, 2.9, 5.4], look: [-0.3, 1.0, -0.4], lookTo: [0.3, 1.1, -0.4], fov: 46 }, keywords: ['44.000', 'millones', 'acciones'],
     actors: [
       BOARD,
       { type: 'table', pos: [0, 0, -0.4], p: { w: 3.6, d: 1.5 } },
@@ -135,7 +135,7 @@ export const BEATS: BeatSpec[] = [
     overlays: [tag('CROWDSTRIKE −9%', '9', { color: RED, size: 54, y: 69 }), tag('OFERTA: US$ 260 → 237 POR ACCIÓN', 'menos', { color: INK, size: 42, y: 75.5 })] },
 
   // 11. Faltan los reguladores: no cierra antes de agosto de 2027.  (órbita lenta frente al estrado)
-  { id: 'b11', set: 'room', cam: { from: [-1.4, 2.1, 6.6], to: [1.0, 2.3, 6.4], look: [0, 1.4, -0.5], fov: 46 }, keywords: ['reguladores', 'agosto'],
+  { id: 'b11', set: 'room', cam: { from: [-1.4, 2.1, 6.6], to: [1.0, 2.3, 6.4], look: [0, 1.4, -0.5], fov: 46 }, keywords: ['reguladores', 'cierra', 'agosto'],
     actors: [
       HALL,
       { type: 'bench', pos: [0, 0, -1.6] },
@@ -170,5 +170,5 @@ export const BEATS: BeatSpec[] = [
       { type: 'bag', pos: [0.62, 0.0, 0.85], p: { color: ORANGE } },
       { type: 'hourglass', pos: [0.62, 0.5, 0.35], s: 0.35, at: 'decidan', p: {} },
     ],
-    overlays: [tag('CUANDO DECIDAN LOS REGULADORES,', 'decidan', { color: INK, size: 44, y: 73 }), tag('LO CUENTO ACÁ', 'decidan', { color: INK, size: 44, y: 78.5 })] },
+    overlays: [tag('CUANDO DECIDAN LOS REGULADORES,', 'decidan', { color: INK, size: 44, y: 68.5 }), tag('LO CUENTO ACÁ', 'decidan', { color: INK, size: 44, y: 74 })] },
 ];

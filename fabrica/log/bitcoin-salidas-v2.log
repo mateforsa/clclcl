@@ -19,3 +19,4 @@
 2026-11-27T00:18:40-03:00 [productor] portada: instagram/portadas/bitcoin-salidas-v2.jpg (escritorio con el fajo volándose; 'US$ 100 / QUEDARON EN 48 / COMPRADOS EN EL MÁXIMO · AL 26/11/2026')
 2026-11-27T00:27:40-03:00 [productor] render listo: out/bitcoin-salidas-v2/bitcoin-salidas-v2.mp4, 52 s (1080x1920, 30 fps, audio ok; hojas qc sin cuadros rotos)
 2026-11-27T00:27:40-03:00 [fabrica] etapa -> revision
+2026-11-27T00:33:33-03:00 [oido] oído: 97 % de coincidencia; dudosos: SoSoValue, Bitcoin (seguridad 48 %), bitcoins (seguridad 48 %); diferencias: sosovalue→so so value; les entro→le centro
