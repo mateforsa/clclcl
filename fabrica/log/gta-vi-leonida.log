@@ -50,3 +50,5 @@
 2026-11-26T22:18:06-03:00 [fabrica] etapa -> render (devuelto por el revisor: palabras pegadas (<14 px) cuando dos vecinas están activas a la vez: otros|siguen 12,4 px (50,00 s, b13), robados|de 13,0 px (22,67 s, b06), únicos|que 13,2 px (41,33 s, b11); arreglo: marcar una de cada par como palabra clave en beats.ts)
 2026-11-26T22:19:19-03:00 [productor] vuelvo por devolucion del revisor: palabras clave 'robados' (b06), 'únicos' (b11) y 'siguen' (b13); simulador: sin pares de dos activas bajo 14 px en esos planos, sin cortes variables
 2026-11-26T22:21:07-03:00 [productor] stills full-res en planos 6, 11 y 13 (punto medio de cada palabra y frames 679-681, 1239-1241, 1499-1501): renglon fijo, cada par separado por la pildora (~30 px tinta a tinta); 73 eventos sin cambios; audio mezclado; lanzo el render (espera el lock si hay otro)
+2026-11-26T22:25:10-03:00 [productor] render listo (pares de dos activas): out/gta-vi-leonida/gta-vi-leonida.mp4, 60 s (1080x1920, 30 fps, h264+aac 60,37 s / audio 60,35 s); en el MP4 los frames 680, 1240 y 1500 tienen cada par separado por la pildora de palabra clave
+2026-11-26T22:25:10-03:00 [fabrica] etapa -> revision
