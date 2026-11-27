@@ -38,3 +38,11 @@
 2026-11-26T21:52:49-03:00 [fabrica] etapa -> verificado
 2026-11-26T21:53:13-03:00 [fabrica] etapa -> esperando_ok_voz
 2026-11-26T21:53:14-03:00 [fabrica] voz SIN OK del dueño (regla voz_sin_ok): ~949 caracteres
+2026-11-26T21:53:29-03:00 [productor] vuelvo por rechazo del dueño: saco 'parte 6' (voz nueva, placa b15, portada); genero la voz
+2026-11-26T21:53:29-03:00 [fabrica] gta-vi-leonida: la voz gasta unos 949 caracteres de ElevenLabs. AVISO: no se puede leer el saldo (la clave no tiene ese permiso); anotalo en fabrica/config.json.
+2026-11-26T21:53:49-03:00 [productor] voz lista: 60,4 s, 15 planos (plano 15 sin 'Parte seis', 2,0 s); edito b15
+2026-11-26T21:56:05-03:00 [productor] b15 sin 'PARTE 6' (tag 'GTA VI', sin casilleros 1-6, sin keyword 'seis'); 73 eventos; audio mezclado (-14 LUFS); stills palabra por palabra en planos 3, 5, 7, 13 y 15: sin palabras pegadas ni renglones que salten, placa Mandáselo con la tilde dentro
+2026-11-26T21:56:34-03:00 [productor] portada lista: instagram/portadas/gta-vi-leonida.jpg (kicker GTA VI); lanzo el render (espera el lock si hay otro)
+2026-11-26T21:56:34-03:00 [fabrica] etapa -> render
+2026-11-26T22:03:12-03:00 [productor] render listo (sin 'parte 6'): out/gta-vi-leonida/gta-vi-leonida.mp4, 60 s (1080x1920, 30 fps, h264+aac 60,37 s / audio 60,35 s, -14,3 LUFS, pico -4,2 dBFS); hojas qc revisadas
+2026-11-26T22:03:12-03:00 [fabrica] etapa -> revision

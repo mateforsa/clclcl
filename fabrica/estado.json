@@ -616,7 +616,7 @@
     "https://www.heise.de/news/GTA-6-Take-Two-laesst-inoffiziellen-PC-Port-von-GitHub-entfernen-11537065.html"
    ],
    "puntaje": 7.5,
-   "etapa": "voz",
+   "etapa": "revision",
    "creado": "2026-11-26T19:37:58-03:00",
    "historial": [
     {
@@ -707,10 +707,20 @@
      "etapa": "voz",
      "cuando": "2026-11-26T21:53:14-03:00",
      "nota": "voz sin OK (regla voz_sin_ok del dueño)"
+    },
+    {
+     "etapa": "render",
+     "cuando": "2026-11-26T21:56:34-03:00",
+     "nota": ""
+    },
+    {
+     "etapa": "revision",
+     "cuando": "2026-11-26T22:03:12-03:00",
+     "nota": ""
     }
    ],
    "nota": "",
-   "caracteres_voz": 961
+   "caracteres_voz": 949
   },
   "hoy-hace-dreamcast": {
    "titulo": "Hoy hace 28 años: la última consola de Sega",
@@ -762,5 +772,5 @@
    "caracteres_voz": 853
   }
  },
- "actualizado": "2026-11-26T21:53:14-03:00"
+ "actualizado": "2026-11-26T22:03:12-03:00"
 }

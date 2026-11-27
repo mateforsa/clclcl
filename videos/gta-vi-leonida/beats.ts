@@ -171,15 +171,13 @@ export const BEATS: BeatSpec[] = [
     overlays: [tag('Rockstar no anunció versión de PC', 'no', { out: 'Oficiales', size: 42 }),
       { type: 'big', text: '0', sub: 'versiones oficiales para PC', at: 'Oficiales', y: 62, red: true, size: 150 }] },
 
-  // 15. Parte seis. Mandáselo al que lo espera en PC
-  { id: 'b15', set: 'room', cam: { from: [0.6, 2.4, 7.6], to: [-0.1, 2.2, 6.8], look: [0, 1.0, 0], fov: 46 }, keywords: ['seis', 'Mandáselo', 'PC'],
+  // 15. Mandáselo al que lo espera en PC (sin número de parte, pedido del dueño)
+  { id: 'b15', set: 'room', cam: { from: [0.6, 2.4, 7.6], to: [-0.1, 2.2, 6.8], look: [0, 1.0, 0], fov: 46 }, keywords: ['Mandáselo', 'PC'],
     actors: [
       { type: 'person', pos: [-0.75, 0, 0.3], rot: [0, 0.4, 0], s: 0.8, p: { ...DEV, shirt: C.cyan, cap: undefined, pose: 'hold' } },
       { type: 'phone', pos: [-0.3, 1.0, 0.6], rot: [0, 0.3, 0], s: 0.8, bob: 0.03, p: { kind: 'chat' }, move: { to: [0.55, 1.0, 0.6], at: 'Mandáselo', dur: 0.6 } },
       { type: 'person', pos: [1.1, 0, 0.3], rot: [0, -0.5, 0], s: 0.8, at: 'al', p: { shirt: C.magenta, hair: '#15102b', skin: '#c98d62', pose: 'cheer' } },
-      ...[1, 2, 3, 4, 5].map((n, i) => ({ type: 'label', pos: [-1.3 + i * 0.42, 1.95, 0] as any, at: 0.05 + i * 0.07, p: { text: String(n), w: 0.36, h: 0.36, bg: '#2d1a6e', color: '#9a8fd0', size: 0.7, weight: 900 } })),
-      { type: 'label', pos: [1.0, 1.98, 0.1], at: 'seis', p: { text: '6', w: 0.56, h: 0.56, bg: C.gold, color: '#1a1030', size: 0.74, weight: 900 } },
     ],
-    overlays: [{ type: 'tag', text: 'GTA VI · PARTE 6', at: 0.05, x: 50, y: 25.5, color: C.red },
+    overlays: [{ type: 'tag', text: 'GTA VI', at: 0.05, x: 50, y: 25.5, color: C.red },
       { type: 'big', text: 'Mandáselo', sub: 'al que lo espera en PC', at: 'Mandáselo', y: 62, size: 104 }] },
 ];
