@@ -5,3 +5,5 @@
 2026-11-27T16:46:18-03:00 [fabrica] etapa -> guion
 2026-11-27T16:47:38-03:00 [verificador] DEVUELTO: 25 datos OK, 1 DISTINTO. La placa de fuentes (planos 2 a 13: 'FUENTES: ÁMBITO Y CLARÍN, 27/11/2026') y la descripción ('Fuentes: Ámbito y Clarín (27/11/2026)') fechan a Clarín el 27/11, pero la nota de Clarín se publicó el 26/11/2026 a las 16:58 de Argentina (datePublished 2026-11-26T19:58:02Z; Ámbito sí es del 27/11 09:55). Corregir a 'ÁMBITO 27/11/2026 Y CLARÍN 26/11/2026' o sacar la fecha. Todas las cifras están OK y bien atribuidas.
 2026-11-27T16:47:38-03:00 [fabrica] etapa -> guion (devuelto por el verificador: fecha de Clarín mal en la placa de fuentes y en la descripción (es 26/11/2026, no 27/11/2026); lo demás OK)
+2026-11-27T16:48:08-03:00 [guionista] corregida la fecha de Clarín (26/11/2026, no 27/11) en la placa de fuentes de los planos 2 a 13 y en la descripción de Instagram; nada más cambia
+2026-11-27T16:48:08-03:00 [fabrica] etapa -> guion

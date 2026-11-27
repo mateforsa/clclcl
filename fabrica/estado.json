@@ -2001,10 +2001,15 @@
      "etapa": "guion",
      "cuando": "2026-11-27T16:47:38-03:00",
      "nota": "devuelto por el verificador: fecha de Clarín mal en la placa de fuentes y en la descripción (es 26/11/2026, no 27/11/2026); lo demás OK"
+    },
+    {
+     "etapa": "guion",
+     "cuando": "2026-11-27T16:48:08-03:00",
+     "nota": ""
     }
    ],
-   "nota": "devuelto por el verificador: fecha de Clarín mal en la placa de fuentes y en la descripción (es 26/11/2026, no 27/11/2026); lo demás OK"
+   "nota": ""
   }
  },
- "actualizado": "2026-11-27T16:47:38-03:00"
+ "actualizado": "2026-11-27T16:48:08-03:00"
 }

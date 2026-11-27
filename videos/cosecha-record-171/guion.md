@@ -123,7 +123,7 @@ Aparte de los subtítulos. Mayúsculas y signos tal como van. Sin "parte N" en n
 | 13 | `SOJA: US$ 21.300 MILLONES` · `MAÍZ: CASI US$ 10.000 MILLONES` · `SEGÚN AGRITREND` | en "21.300 millones." la primera; las otras dos al final del plano |
 | 14 | `¿QUÉ SE SIEMBRA CERCA TUYO?` · `CONTÁ EL PUEBLO Y EL CULTIVO` | en "siembra" y en "cultivo." |
 
-Fuentes en pantalla (texto chico, abajo, planos 2 a 13): `FUENTES: ÁMBITO Y CLARÍN, 27/11/2026 · DATOS: SECRETARÍA DE AGRICULTURA Y AGRITREND`.
+Fuentes en pantalla (texto chico, abajo, planos 2 a 13): `FUENTES: ÁMBITO (27/11) Y CLARÍN (26/11/2026) · DATOS: SECRETARÍA DE AGRICULTURA Y AGRITREND`.
 Personas: no aparece ninguna persona real. Si hay productores o camioneros, son muñecos genéricos. Marcas: ninguna; silos, camiones,
 cosechadoras y bolsas sin logo. Agritrend, la Secretaría y los diarios van en texto plano, sin logos ni escudos. Las montañas de
 granos y las pilas de billetes son un esquema: si llevan números, agregar `ESQUEMA, NO A ESCALA`.
@@ -146,7 +146,7 @@ La consultora Agritrend calcula menos, 164,4 millones, porque no cuenta el maíz
 
 Contá qué se siembra cerca de donde vivís: el pueblo y el cultivo.
 
-Fuentes: Ámbito y Clarín (27/11/2026), con datos de la Secretaría de Agricultura y de Agritrend.
+Fuentes: Ámbito (27/11/2026) y Clarín (26/11/2026), con datos de la Secretaría de Agricultura y de Agritrend.
 
 #cosecha #maiz #campo #argentina #agro
 ```
