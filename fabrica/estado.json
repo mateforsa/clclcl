@@ -1368,7 +1368,7 @@
    "tema": "",
    "fuentes": [],
    "puntaje": null,
-   "etapa": "revision",
+   "etapa": "publicado",
    "creado": "2026-11-26T23:18:33-03:00",
    "rehace": "meta-muse",
    "publicar_prueba_al_terminar": true,
@@ -1417,17 +1417,28 @@
      "etapa": "revision",
      "cuando": "2026-11-27T02:21:57-03:00",
      "nota": ""
+    },
+    {
+     "etapa": "esperando_ok_final",
+     "cuando": "2026-11-27T02:26:51-03:00",
+     "nota": ""
+    },
+    {
+     "etapa": "publicado",
+     "cuando": "2026-11-27T02:28:47-03:00",
+     "nota": "reel de prueba (versión rehecha a pedido del dueño) https://www.instagram.com/reel/DgO7cZmJn6X/"
     }
    ],
-   "nota": "",
-   "caracteres_voz": 801
+   "nota": "reel de prueba (versión rehecha a pedido del dueño)",
+   "caracteres_voz": 801,
+   "link_prueba": "https://www.instagram.com/reel/DgO7cZmJn6X/"
   },
   "colapinto-qatar-v2": {
    "titulo": "Colapinto antes de Qatar: 35 puntos y una pregunta (versión 2)",
    "tema": "",
    "fuentes": [],
    "puntaje": null,
-   "etapa": "render",
+   "etapa": "revision",
    "creado": "2026-11-26T23:19:22-03:00",
    "rehace": "colapinto-qatar",
    "publicar_prueba_al_terminar": true,
@@ -1491,11 +1502,16 @@
      "etapa": "render",
      "cuando": "2026-11-27T02:19:50-03:00",
      "nota": "devuelto por el revisor (3a pasada): el cartel 'OTRO PILOTO +10 s' del plano 8 baja hasta 1560 px (zona segura hasta 1500) en 25,77-27,23 s; subirlo para que el borde inferior quede en 1500 px o más arriba. Lo demás PASA"
+    },
+    {
+     "etapa": "revision",
+     "cuando": "2026-11-27T02:28:47-03:00",
+     "nota": ""
     }
    ],
-   "nota": "devuelto por el revisor (3a pasada): el cartel 'OTRO PILOTO +10 s' del plano 8 baja hasta 1560 px (zona segura hasta 1500) en 25,77-27,23 s; subirlo para que el borde inferior quede en 1500 px o más arriba. Lo demás PASA",
+   "nota": "",
    "caracteres_voz": 836
   }
  },
- "actualizado": "2026-11-27T02:22:01-03:00"
+ "actualizado": "2026-11-27T02:28:47-03:00"
 }
