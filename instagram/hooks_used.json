@@ -173,5 +173,15 @@
   "video": "huawei-condena-v2",
   "inicio": "B11 fecha y lugar en medio de la acción, con la persona primero (Aeropuerto de Vancouver, diciembre de 2018. Canadá detiene a Meng Wanzhou...)",
   "cierre": "Continuación con fecha concreta, playbook 3.1 (Seguime y ese día te cuento cómo termina), tras callback a la persona del gancho (Meng ya está libre. La pena de Huawei llega el 14 de septiembre de 2027)"
+ },
+ {
+  "video": "microsoft-codigo-rojo-v2",
+  "inicio": "C26 la pregunta cotidiana (¿El 12 de noviembre se te cortó el mail del trabajo? No era tu compu.)",
+  "cierre": "H79 pedido de compartir con destinatario y motivo con fecha (Mandáselo al de sistemas de tu trabajo, tras el plazo del 31 de diciembre para reclamar el descuento), sin Seguime ni pregunta"
+ },
+ {
+  "video": "starship-atrapada-v2",
+  "inicio": "J100 comparación con algo conocido (Es como agarrar una mosca con palitos chinos. Pero la mosca mide unos 50 metros y viene del espacio)",
+  "cierre": "Pregunta de debate (¿Qué parte te costó creer? Te leo.), sin Seguime ni promesa de continuación"
  }
 ]

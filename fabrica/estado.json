@@ -903,7 +903,7 @@
    "tema": "",
    "fuentes": [],
    "puntaje": null,
-   "etapa": "idea",
+   "etapa": "guion",
    "creado": "2026-11-26T23:18:32-03:00",
    "rehace": "microsoft-codigo-rojo",
    "publicar_prueba_al_terminar": true,
@@ -912,8 +912,14 @@
      "etapa": "idea",
      "cuando": "2026-11-26T23:18:32-03:00",
      "nota": "rehacer microsoft-codigo-rojo como reel de prueba, distinto del original"
+    },
+    {
+     "etapa": "guion",
+     "cuando": "2026-11-26T23:22:51-03:00",
+     "nota": ""
     }
-   ]
+   ],
+   "nota": ""
   },
   "canva-despidos-v2": {
    "titulo": "Canva: 1.271 personas y el año más difícil (versión 2)",
@@ -996,5 +1002,5 @@
    "nota": ""
   }
  },
- "actualizado": "2026-11-26T23:22:41-03:00"
+ "actualizado": "2026-11-26T23:22:51-03:00"
 }
