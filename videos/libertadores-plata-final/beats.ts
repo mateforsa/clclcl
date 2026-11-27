@@ -142,7 +142,7 @@ export const BEATS: BeatSpec[] = [
       { type: 'ring', pos: [-0.45, 0.03, 0.3], p: { r: 1.0, color: C.gold } },
       { type: 'box', pos: [1.05, 0.3, -1.15], p: { size: [1.3, 0.6, 1.6], color: '#2d1a6e' } },
       { type: 'pitch', pos: [1.05, 0.6, -1.15], at: 'cancha', p: { w: 1.2, d: 1.5 } },
-      { type: 'ball', pos: [1.05, 0.7, -1.15], at: 'define', enter: 'drop', p: { r: 0.09 } },
+      { type: 'ball', pos: [1.05, 0.7, -1.15], at: 'define', p: { r: 0.09 } },
     ],
     overlays: [T('EN LA BALANZA: PALMEIRAS', 'Palmeiras', 60, GREEN), T('EN LA CANCHA: EL SÁBADO', 'sábado', 66, C.magenta), F('ESQUEMA, NO A ESCALA')] },
   // 14. dejá tu resultado exacto

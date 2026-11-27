@@ -1,0 +1,3 @@
+{ "beat": "b02", "frac": 0.9,
+  "overlay": { "kicker": "FINAL LIBERTADORES", "y": 58,
+    "lines": [ { "t": "2 DE PALMEIRAS", "size": 118 }, { "t": "VALEN MÁS", "c": "yellow", "size": 150 }, { "t": "QUE TODO ESTUDIANTES", "size": 76, "c": "cyan" } ] } }
