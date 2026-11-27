@@ -24,3 +24,5 @@
 2026-11-27T17:23:51-03:00 [fabrica] etapa -> render
 2026-11-27T17:23:51-03:00 [productor] eventos y mezcla listos; lanzo el render
 2026-11-27T17:24:29-03:00 [productor] portada lista: instagram/portadas/cosecha-record-171.jpg (plano 5, COSECHA RÉCORD · 171 MILLONES DE TONELADAS · Y LA SOJA BAJÓ)
+2026-11-27T17:28:17-03:00 [productor] render listo: out/cosecha-record-171/cosecha-record-171.mp4, 64 s (1080x1920 30 fps h264+aac, -14,4 LUFS, pico -3,0 dBTP, sin negros ni congelados; sin el viejo plano 10)
+2026-11-27T17:28:17-03:00 [fabrica] etapa -> revision
