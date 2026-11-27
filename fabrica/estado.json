@@ -1990,7 +1990,7 @@
     "https://www.clarin.com/rural/saliendo-estancamiento-cosecha-granos-record-trae-aluvion-dolares-argentina_0_mjnLdIjqyP.html"
    ],
    "puntaje": 8.3,
-   "etapa": "render",
+   "etapa": "revision",
    "creado": "2026-11-27T16:42:18-03:00",
    "historial": [
     {
@@ -2046,11 +2046,16 @@
      "etapa": "render",
      "cuando": "2026-11-27T17:33:40-03:00",
      "nota": "devuelto por el revisor: unión 'de|toneladas,' a 11,7 px (6,6-7,3 s); placa SOJA tapa el cartel 'DÓLARES · A ESCALA DESDE CERO' (56,8-58,9 s); planta de soja atraviesa el tanque de agua (62,9-64,1 s)"
+    },
+    {
+     "etapa": "revision",
+     "cuando": "2026-11-27T17:43:07-03:00",
+     "nota": ""
     }
    ],
-   "nota": "devuelto por el revisor: unión 'de|toneladas,' a 11,7 px (6,6-7,3 s); placa SOJA tapa el cartel 'DÓLARES · A ESCALA DESDE CERO' (56,8-58,9 s); planta de soja atraviesa el tanque de agua (62,9-64,1 s)",
+   "nota": "",
    "caracteres_voz": 1065
   }
  },
- "actualizado": "2026-11-27T17:34:51-03:00"
+ "actualizado": "2026-11-27T17:43:07-03:00"
 }
