@@ -1625,7 +1625,7 @@
     "https://www.infobae.com/economia/2026/11/26/cerraron-mas-de-50000-kioscos-en-los-ultimos-tres-anos-y-el-sector-perdio-casi-la-mitad-de-sus-locales/"
    ],
    "puntaje": 8.3,
-   "etapa": "revision",
+   "etapa": "render",
    "creado": "2026-11-27T10:48:21-03:00",
    "historial": [
     {
@@ -1661,11 +1661,16 @@
      "etapa": "revision",
      "cuando": "2026-11-27T11:23:06-03:00",
      "nota": ""
+    },
+    {
+     "etapa": "render",
+     "cuando": "2026-11-27T11:32:42-03:00",
+     "nota": "devuelto por el revisor: subtítulos pegados 'de|10 millones' (12,3 px, 35 s) y 'una|encuesta' (11,9 px, 41,4 s); placa 'UNOS 72.000 EMPLEOS MENOS' se sale del recuadro (15-17 s); cartel KIOSCO tapado por la persiana en planos 1, 5 y 14"
     }
    ],
-   "nota": "",
+   "nota": "devuelto por el revisor: subtítulos pegados 'de|10 millones' (12,3 px, 35 s) y 'una|encuesta' (11,9 px, 41,4 s); placa 'UNOS 72.000 EMPLEOS MENOS' se sale del recuadro (15-17 s); cartel KIOSCO tapado por la persiana en planos 1, 5 y 14",
    "caracteres_voz": 1015
   }
  },
- "actualizado": "2026-11-27T11:26:24-03:00"
+ "actualizado": "2026-11-27T11:32:42-03:00"
 }
