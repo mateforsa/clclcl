@@ -2074,7 +2074,7 @@
     "https://www.infobae.com/deportes/2026/04/07/comienza-la-fase-de-grupos-de-la-copa-libertadores-y-sudamericana-los-millonarios-premios-que-reparten/"
    ],
    "puntaje": 8.3,
-   "etapa": "esperando_ok_voz",
+   "etapa": "voz",
    "creado": "2026-11-27T18:15:26-03:00",
    "historial": [
     {
@@ -2095,11 +2095,16 @@
      "etapa": "esperando_ok_voz",
      "cuando": "2026-11-27T18:22:32-03:00",
      "nota": ""
+    },
+    {
+     "etapa": "voz",
+     "cuando": "2026-11-27T18:26:59-03:00",
+     "nota": "aprobado por el dueño desde esperando_ok_voz"
     }
    ],
    "nota": "",
    "caracteres_voz": 994
   }
  },
- "actualizado": "2026-11-27T18:25:09-03:00"
+ "actualizado": "2026-11-27T18:26:59-03:00"
 }
