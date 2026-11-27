@@ -701,10 +701,16 @@
      "etapa": "guion",
      "cuando": "2026-11-26T21:45:32-03:00",
      "nota": ""
+    },
+    {
+     "etapa": "guion",
+     "cuando": "2026-11-26T21:47:15-03:00",
+     "nota": "devuelto por el verificador: plano 10 y placa 10 (prensa: Sony y Nintendo) sin fuente, y Microsoft queda afuera; plano 11 'Desde entonces' se oye como desde 1983, tiene que decir desde 2001"
     }
    ],
-   "nota": ""
+   "nota": "devuelto por el verificador: plano 10 y placa 10 (prensa: Sony y Nintendo) sin fuente, y Microsoft queda afuera; plano 11 'Desde entonces' se oye como desde 1983, tiene que decir desde 2001",
+   "caracteres_voz": 903
   }
  },
- "actualizado": "2026-11-26T21:45:32-03:00"
+ "actualizado": "2026-11-26T21:47:15-03:00"
 }
