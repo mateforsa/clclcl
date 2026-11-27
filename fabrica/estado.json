@@ -1536,7 +1536,7 @@
     "https://www.engadget.com/2329177/workers-gta-6-studio-rockstar-games-vote-against-union-recognition/"
    ],
    "puntaje": 7.3,
-   "etapa": "revision",
+   "etapa": "render",
    "creado": "2026-11-27T02:43:16-03:00",
    "historial": [
     {
@@ -1592,11 +1592,16 @@
      "etapa": "revision",
      "cuando": "2026-11-27T10:02:31-03:00",
      "nota": ""
+    },
+    {
+     "etapa": "render",
+     "cuando": "2026-11-27T10:05:41-03:00",
+     "nota": "devuelto por el revisor: plano 2, 6,07-7,05 s, la placa JENNIFER KOLBE tapa el '6' de la caja de GTA (solo se lee 'GTA'); subir/bajar la placa o mover la caja. Todo lo demás pasa"
     }
    ],
-   "nota": "",
+   "nota": "devuelto por el revisor: plano 2, 6,07-7,05 s, la placa JENNIFER KOLBE tapa el '6' de la caja de GTA (solo se lee 'GTA'); subir/bajar la placa o mover la caja. Todo lo demás pasa",
    "caracteres_voz": 1022
   }
  },
- "actualizado": "2026-11-27T10:02:31-03:00"
+ "actualizado": "2026-11-27T10:05:41-03:00"
 }
