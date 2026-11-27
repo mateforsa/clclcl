@@ -817,7 +817,58 @@
    "nota": "",
    "caracteres_voz": 853,
    "link_prueba": "https://www.instagram.com/reel/DgOlOH7BUFP/"
+  },
+  "crowdstrike-zscaler-v2": {
+   "titulo": "CrowdStrike compra Zscaler: de la pantalla azul al contrato más grande (versión 2)",
+   "tema": "",
+   "fuentes": [],
+   "puntaje": null,
+   "etapa": "idea",
+   "creado": "2026-11-26T23:17:40-03:00",
+   "rehace": "crowdstrike-zscaler",
+   "publicar_prueba_al_terminar": true,
+   "historial": [
+    {
+     "etapa": "idea",
+     "cuando": "2026-11-26T23:17:40-03:00",
+     "nota": "rehacer crowdstrike-zscaler como reel de prueba, distinto del original"
+    }
+   ]
+  },
+  "bitcoin-salidas-v2": {
+   "titulo": "Bitcoin: salida récord de los fondos, y el saldo sigue en positivo (versión 2)",
+   "tema": "",
+   "fuentes": [],
+   "puntaje": null,
+   "etapa": "idea",
+   "creado": "2026-11-26T23:17:40-03:00",
+   "rehace": "bitcoin-salidas",
+   "publicar_prueba_al_terminar": true,
+   "historial": [
+    {
+     "etapa": "idea",
+     "cuando": "2026-11-26T23:17:40-03:00",
+     "nota": "rehacer bitcoin-salidas como reel de prueba, distinto del original"
+    }
+   ]
+  },
+  "anthropic-ipo-v2": {
+   "titulo": "Anthropic: la campana, el récord y la caída bajo el precio inicial (versión 2)",
+   "tema": "",
+   "fuentes": [],
+   "puntaje": null,
+   "etapa": "idea",
+   "creado": "2026-11-26T23:17:40-03:00",
+   "rehace": "anthropic-ipo",
+   "publicar_prueba_al_terminar": true,
+   "historial": [
+    {
+     "etapa": "idea",
+     "cuando": "2026-11-26T23:17:40-03:00",
+     "nota": "rehacer anthropic-ipo como reel de prueba, distinto del original"
+    }
+   ]
   }
  },
- "actualizado": "2026-11-26T23:14:55-03:00"
+ "actualizado": "2026-11-26T23:17:40-03:00"
 }
