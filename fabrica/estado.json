@@ -1788,7 +1788,7 @@
     "https://tn.com.ar/politica/2026/11/27/que-cambia-con-la-ley-de-prevencion-de-ludopatia-nuevas-restricciones-para-apostar-y-cambios-en-la-publicidad-en-el-futbol/"
    ],
    "puntaje": 7.8,
-   "etapa": "listo",
+   "etapa": "publicado",
    "creado": "2026-11-27T13:43:04-03:00",
    "historial": [
     {
@@ -1844,9 +1844,14 @@
      "etapa": "listo",
      "cuando": "2026-11-27T14:43:04-03:00",
      "nota": "aprobado por el dueño desde esperando_ok_final"
+    },
+    {
+     "etapa": "publicado",
+     "cuando": "2026-11-27T19:28:46-03:00",
+     "nota": "subido a mano como REEL DE PRUEBA por el dueño (API de Instagram bloqueada)"
     }
    ],
-   "nota": "",
+   "nota": "subido a mano como REEL DE PRUEBA por el dueño (API de Instagram bloqueada)",
    "caracteres_voz": 1020
   },
   "de-donde-vienen-tus-cosas": {
@@ -1857,7 +1862,7 @@
     "https://www.argentina.gob.ar/sites/default/files/aluminio_2024.pdf"
    ],
    "puntaje": null,
-   "etapa": "listo",
+   "etapa": "publicado",
    "creado": "2026-11-27T15:00:43-03:00",
    "historial": [
     {
@@ -1913,9 +1918,14 @@
      "etapa": "listo",
      "cuando": "2026-11-27T17:27:22-03:00",
      "nota": "aprobado por el dueño desde esperando_ok_final"
+    },
+    {
+     "etapa": "publicado",
+     "cuando": "2026-11-27T19:28:46-03:00",
+     "nota": "subido a mano como REEL DE PRUEBA por el dueño (API de Instagram bloqueada)"
     }
    ],
-   "nota": "",
+   "nota": "subido a mano como REEL DE PRUEBA por el dueño (API de Instagram bloqueada)",
    "caracteres_voz": 1117
   },
   "ypf-burford-ciadi": {
@@ -1926,7 +1936,7 @@
     "https://www.clarin.com/economia/juicio-ypf-gobierno-dice-fondo-burford-reclama-us-14400-millones-nueva-demanda-inicio-ciadi_0_Tp61FKCNn5.html"
    ],
    "puntaje": 7.8,
-   "etapa": "listo",
+   "etapa": "publicado",
    "creado": "2026-11-27T15:20:55-03:00",
    "historial": [
     {
@@ -1992,9 +2002,14 @@
      "etapa": "listo",
      "cuando": "2026-11-27T17:27:22-03:00",
      "nota": "aprobado por el dueño desde esperando_ok_final"
+    },
+    {
+     "etapa": "publicado",
+     "cuando": "2026-11-27T19:28:46-03:00",
+     "nota": "subido a mano como REEL DE PRUEBA por el dueño (API de Instagram bloqueada)"
     }
    ],
-   "nota": "",
+   "nota": "subido a mano como REEL DE PRUEBA por el dueño (API de Instagram bloqueada)",
    "caracteres_voz": 1102
   },
   "cosecha-record-171": {
@@ -2005,7 +2020,7 @@
     "https://www.clarin.com/rural/saliendo-estancamiento-cosecha-granos-record-trae-aluvion-dolares-argentina_0_mjnLdIjqyP.html"
    ],
    "puntaje": 8.3,
-   "etapa": "listo",
+   "etapa": "publicado",
    "creado": "2026-11-27T16:42:18-03:00",
    "historial": [
     {
@@ -2086,9 +2101,14 @@
      "etapa": "listo",
      "cuando": "2026-11-27T19:02:08-03:00",
      "nota": "aprobado por el dueño desde esperando_ok_final"
+    },
+    {
+     "etapa": "publicado",
+     "cuando": "2026-11-27T19:28:46-03:00",
+     "nota": "subido a mano como REEL DE PRUEBA por el dueño (API de Instagram bloqueada)"
     }
    ],
-   "nota": "",
+   "nota": "subido a mano como REEL DE PRUEBA por el dueño (API de Instagram bloqueada)",
    "caracteres_voz": 1065
   },
   "libertadores-plata-final": {
@@ -2294,5 +2314,5 @@
    "caracteres_voz": 958
   }
  },
- "actualizado": "2026-11-27T19:27:16-03:00"
+ "actualizado": "2026-11-27T19:28:46-03:00"
 }

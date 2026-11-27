@@ -47,3 +47,4 @@
 2026-11-27T11:19:32-03:00 [dueño] APROBADO (esperando_ok_final -> listo)
 2026-11-27T11:26:24-03:00 [fabrica] orden del panel: publicar. No se pudo: la API de Meta responde 'API access blocked' (OAuthException 200). Queda en listo.
 2026-11-27T19:03:03-03:00 [fabrica] etapa -> publicado (subido a mano por el dueño (API de Instagram bloqueada))
+2026-11-27T19:28:46-03:00 [fabrica] el dueño lo subió como reel de prueba (no normal), 208 vistas a las 19:28

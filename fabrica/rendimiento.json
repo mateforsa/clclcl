@@ -603,7 +603,7 @@
    "link": "https://www.instagram.com/reel/DgO8DOFx7fH/",
    "prueba": true,
    "edad_h": 6.0,
-   "views": 1519,
+   "views": 1667,
    "reach": 1311,
    "ig_reels_avg_watch_time": 21791,
    "shares": 1,
@@ -612,7 +612,86 @@
    "comments": 5,
    "total_interactions": 71,
    "veredicto": "va bien",
-   "frente_a_mediana": 7.89
+   "frente_a_mediana": 7.89,
+   "nota": "actualizado a mano 27/11 19:28"
+  },
+  {
+   "slug": "kioscos-53000",
+   "id": "manual",
+   "link": null,
+   "prueba": false,
+   "edad_h": 4.5,
+   "views": 1379,
+   "veredicto": "va bien",
+   "manual": true,
+   "nota": "vistas cargadas a mano desde la captura del dueño (27/11 19:28)"
+  },
+  {
+   "slug": "colapinto-fp1-qatar",
+   "id": "manual",
+   "link": null,
+   "prueba": false,
+   "edad_h": 4.5,
+   "views": 2128,
+   "veredicto": "va bien",
+   "manual": true,
+   "nota": "vistas cargadas a mano desde la captura del dueño (27/11 19:28)"
+  },
+  {
+   "slug": "rockstar-sindicato-no",
+   "id": "manual",
+   "link": null,
+   "prueba": true,
+   "edad_h": 4.5,
+   "views": 208,
+   "veredicto": "normal",
+   "manual": true,
+   "nota": "vistas cargadas a mano desde la captura del dueño (27/11 19:28)"
+  },
+  {
+   "slug": "ludopatia-sponsors-futbol",
+   "id": "manual",
+   "link": null,
+   "prueba": true,
+   "edad_h": 0.5,
+   "views": 0,
+   "veredicto": "recién subido",
+   "manual": true,
+   "nota": "vistas cargadas a mano desde la captura del dueño (27/11 19:28)"
+  },
+  {
+   "slug": "de-donde-vienen-tus-cosas",
+   "id": "manual",
+   "link": null,
+   "prueba": true,
+   "edad_h": 0.5,
+   "views": 0,
+   "veredicto": "recién subido",
+   "manual": true,
+   "nota": "vistas cargadas a mano desde la captura del dueño (27/11 19:28)"
+  },
+  {
+   "slug": "ypf-burford-ciadi",
+   "id": "manual",
+   "link": null,
+   "prueba": true,
+   "edad_h": 0.5,
+   "views": 0,
+   "veredicto": "recién subido",
+   "manual": true,
+   "nota": "vistas cargadas a mano desde la captura del dueño (27/11 19:28)"
+  },
+  {
+   "slug": "cosecha-record-171",
+   "id": "manual",
+   "link": null,
+   "prueba": true,
+   "edad_h": 0.5,
+   "views": 0,
+   "veredicto": "recién subido",
+   "manual": true,
+   "nota": "vistas cargadas a mano desde la captura del dueño (27/11 19:28)"
   }
- ]
+ ],
+ "nota": "API de Instagram bloqueada desde las 10:30 del 27/11; los reels nuevos tienen vistas cargadas a mano"
 }
