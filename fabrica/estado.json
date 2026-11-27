@@ -2129,9 +2129,14 @@
      "etapa": "guion",
      "cuando": "2026-11-27T18:35:58-03:00",
      "nota": ""
+    },
+    {
+     "etapa": "guion",
+     "cuando": "2026-11-27T18:37:40-03:00",
+     "nota": "devuelto por el verificador: plano 1, Sainz dijo la frase después de la segunda práctica (ante los medios), no en la práctica; cambiar 'en la segunda práctica' por 'después de la segunda práctica' en parrafos.json, guion.md y hooks_used.json. Lo demás está verificado."
     }
    ],
-   "nota": ""
+   "nota": "devuelto por el verificador: plano 1, Sainz dijo la frase después de la segunda práctica (ante los medios), no en la práctica; cambiar 'en la segunda práctica' por 'después de la segunda práctica' en parrafos.json, guion.md y hooks_used.json. Lo demás está verificado."
   },
   "fp2-qatar-general": {
    "titulo": "FP2 de Qatar: dos banderas rojas y Mercedes otra vez 1-2",
@@ -2173,5 +2178,5 @@
    "caracteres_voz": 958
   }
  },
- "actualizado": "2026-11-27T18:36:22-03:00"
+ "actualizado": "2026-11-27T18:38:01-03:00"
 }

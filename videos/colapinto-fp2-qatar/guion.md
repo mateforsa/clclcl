@@ -34,7 +34,7 @@ Leclerc, Briatore, los minutos extra ni Mercedes.
 
 | # | Tiempo aprox. | Frase |
 |---|---|---|
-| 1 | 0:00 | «Corre como si fuera domingo». Carlos Sainz lo dijo de Colapinto, en la segunda práctica de Qatar. |
+| 1 | 0:00 | «Corre como si fuera domingo». Carlos Sainz lo dijo de Colapinto, después de la segunda práctica de Qatar. |
 | 2 | 0:05 | En la curva 1, Colapinto se le tiró por adentro y lo pasó. |
 | 3 | 0:10 | Casi se tocan, y atrás Russell soltó por radio: «Oh, wow». |
 | 4 | 0:13 | Sainz dijo que ya van un par de viernes así. |
@@ -136,7 +136,7 @@ un esquema: si se dibujan barras, agregar `ESQUEMA, NO A ESCALA`.
 
 ## Títulos
 
-1. **«Corre como si fuera domingo»: Sainz, enojado con Colapinto en Qatar**
+1. **Sainz, enojado con Colapinto después de la segunda práctica de Qatar**
 2. **Colapinto pasó a Sainz por adentro, casi se tocan y terminó 15° en la segunda práctica de Qatar**
 3. **Frenos, una roja y Sainz enojado: el viernes de Colapinto en Qatar**
 

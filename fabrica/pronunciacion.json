@@ -552,5 +552,59 @@
    "Corinthians",
    "Korintians"
   ]
+ },
+ "Mercedes": {
+  "dicho": "Mercedes",
+  "estado": "probada",
+  "puntaje": 0.74,
+  "variantes": [
+   "Mercedes",
+   "Mersédes",
+   "Merzédes",
+   "Mercédes"
+  ]
+ },
+ "Russell": {
+  "dicho": "Russell,",
+  "estado": "probada",
+  "puntaje": 0.72,
+  "variantes": [
+   "Rásel,",
+   "Rúsel,",
+   "Rásell,",
+   "Russell,"
+  ]
+ },
+ "Norris": {
+  "dicho": "Norris,",
+  "estado": "probada",
+  "puntaje": 0.75,
+  "variantes": [
+   "Nóris,",
+   "Norris,",
+   "Nórris,"
+  ]
+ },
+ "Leclerc": {
+  "dicho": "Leclerc",
+  "estado": "probada",
+  "puntaje": 0.91,
+  "variantes": [
+   "Leclér",
+   "Leclerc",
+   "Leclérc",
+   "Le Clér"
+  ]
+ },
+ "Briatore": {
+  "dicho": "Briatoré,",
+  "estado": "probada",
+  "puntaje": 0.57,
+  "variantes": [
+   "Briatóre,",
+   "Briatore,",
+   "Briatoré,",
+   "Briatórre,"
+  ]
  }
 }
