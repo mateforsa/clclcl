@@ -70,7 +70,7 @@ export const BEATS: BeatSpec[] = [
     overlays: [tag('la versión de Xbox, en una computadora', 'andar', { size: 40 })] },
 
   // 6. Según Take-Two, el 20/11 se difundieron archivos robados
-  { id: 'b06', set: 'void', cam: { from: [-0.8, 2.5, 9.0], to: [0.2, 2.3, 8.0], look: [0, 1.1, 0], fov: 46 }, keywords: ['Take-Two', '20', 'difundieron'],
+  { id: 'b06', set: 'void', cam: { from: [-0.8, 2.5, 9.0], to: [0.2, 2.3, 8.0], look: [0, 1.1, 0], fov: 46 }, keywords: ['Take-Two', '20', 'difundieron', 'robados'],
     actors: [
       { type: 'ring', pos: [0.3, 0.03, 0], p: { r: 1.1, color: C.red } },
       { type: 'console', pos: [0.3, 0, 0], rot: [0, -0.3, 0], s: 0.85, p: { kind: 'b' } },
@@ -123,7 +123,7 @@ export const BEATS: BeatSpec[] = [
     overlays: [tag('Leonida no traía el juego', 0.1, { out: 'Cada', size: 44 }), tag('cada uno ponía los archivos', 'Cada', { size: 44 })] },
 
   // 11. Para Take-Two, los únicos que servían eran los filtrados
-  { id: 'b11', set: 'void', cam: { from: [0.8, 2.5, 8.6], to: [-0.1, 2.3, 7.7], look: [0, 1.1, 0], fov: 46 }, keywords: ['Take-Two'],
+  { id: 'b11', set: 'void', cam: { from: [0.8, 2.5, 8.6], to: [-0.1, 2.3, 7.7], look: [0, 1.1, 0], fov: 46 }, keywords: ['Take-Two', 'únicos'],
     actors: [
       { type: 'person', pos: [-1.0, 0, 0.3], rot: [0, 0.6, 0], s: 0.95, p: { ...TT, pose: 'point' } },
       { type: 'label', pos: [-0.95, 2.05, 0.3], p: { text: 'TAKE-TWO', w: 1.2, h: 0.34, ...DARK } },
@@ -147,7 +147,7 @@ export const BEATS: BeatSpec[] = [
       tag('1 original + 3.006 copias', 'proyectos', { size: 42 })] },
 
   // 13. Según medios especializados, otros siguen con una copia. Todavía no se puede jugar
-  { id: 'b13', set: 'room', cam: { from: [0.8, 2.4, 8.0], to: [-0.1, 2.2, 7.1], look: [0, 1.0, 0], fov: 46 }, keywords: ['jugar'],
+  { id: 'b13', set: 'room', cam: { from: [0.8, 2.4, 8.0], to: [-0.1, 2.2, 7.1], look: [0, 1.0, 0], fov: 46 }, keywords: ['jugar', 'siguen'],
     actors: [
       { type: 'desk', pos: [0, 0, 0.2], s: 1.25, p: {} },
       { type: 'screen', pos: [0, 1.6, 0.1], s: 0.75, out: 'Todavía', p: { kind: 'code', stand: true } },
