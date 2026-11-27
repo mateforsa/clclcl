@@ -198,15 +198,9 @@
   ]
  },
  "Microsoft 365": {
-  "dicho": "Máicrosoft trescientos sesenta y cinco",
+  "dicho": "Máicrosoft tres sesenta y cinco",
   "estado": "probada",
-  "puntaje": 0.99,
-  "variantes": [
-   "Máicrosoft tres sesenta y cinco",
-   "Máicrosoft trescientos sesenta y cinco",
-   "Mái-crosoft tres sesenta y cinco",
-   "Maicrosoft tres, sesenta y cinco"
-  ]
+  "nota": "corregido a mano: 'trescientos sesenta y cinco' no es como se dice el producto"
  },
  "Meng Wanzhou": {
   "dicho": "Meng Uanshóu",
@@ -221,5 +215,17 @@
    "Meng Uanyó"
   ],
   "nota": "Whisper eligió por puntaje \"Meng Uanyó\" pero la transcribe \"Menguaño\"; la 5 (Meng Uanshóu) se transcribe exacta en castellano y en inglés. Elegida por el productor de huawei-condena-v2; pendiente de que el dueño elija número"
+ },
+ "Alpine": {
+  "dicho": "Alpáin",
+  "estado": "probada",
+  "puntaje": 0.89,
+  "variantes": [
+   "Alpín",
+   "Alpáin",
+   "Alpine",
+   "el Alpín",
+   "Alpínn"
+  ]
  }
 }
