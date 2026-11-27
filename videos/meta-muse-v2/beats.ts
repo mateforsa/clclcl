@@ -34,13 +34,13 @@ export const BEATS: BeatSpec[] = [
     overlays: [tag('SE LLENA SOLO', 0, { color: TAG, size: 66, y: 70 })] },
 
   // 2. Lo arma un bot de Meta, que busca y compara por vos.  (picado en tres cuartos que gira: el haz barre la góndola)
-  { id: 'b02', set: 'room', cam: { from: [2.6, 4.2, 4.6], to: [1.7, 3.8, 4.0], look: [0, 0.45, -0.6], lookTo: [-0.1, 0.45, -0.8], fov: 46 }, keywords: ['Meta', 'compara'],
+  { id: 'b02', set: 'room', cam: { from: [2.6, 4.2, 4.6], to: [1.7, 3.8, 4.0], look: [0, 0.8, -0.6], lookTo: [-0.1, 0.8, -0.8], fov: 46 }, keywords: ['Meta', 'compara'],
     actors: [
       AISLE({ noflags: true }),
       { type: 'shelf', pos: [0, 0, -1.7], p: { w: 3.4, seed: 11, hl: [6, 12], glow: 2.35, levels: 3 } },
       { type: 'shelf', pos: [-1.95, 0, 0.2], rot: [0, PI / 2, 0], p: { w: 3.0, seed: 4, levels: 3 } },
       { type: 'cart', pos: [0.1, 0, 0.5], rot: [0, PI / 2, 0], p: { n: 9, full: true, seed: 3, scan: 1.7 } },
-      { type: 'check', pos: [0.75, 2.05, -1.45], at: 'vos', p: { size: 0.45 } },
+      { type: 'check', pos: [0.6, 1.75, -1.45], at: 'vos', p: { size: 0.45 } },
     ],
     overlays: [tag('META', 'Meta', { size: 60, y: 67 }), tag('BUSCA · COMPARA · ARMA EL CARRITO', 'busca', { size: 38, y: 74, color: TEAL })] },
 

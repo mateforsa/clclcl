@@ -1406,7 +1406,7 @@
    "tema": "",
    "fuentes": [],
    "puntaje": null,
-   "etapa": "revision",
+   "etapa": "render",
    "creado": "2026-11-26T23:19:22-03:00",
    "rehace": "colapinto-qatar",
    "publicar_prueba_al_terminar": true,
@@ -1445,11 +1445,16 @@
      "etapa": "revision",
      "cuando": "2026-11-27T01:44:59-03:00",
      "nota": ""
+    },
+    {
+     "etapa": "render",
+     "cuando": "2026-11-27T01:51:37-03:00",
+     "nota": "devuelto por el revisor: uniones de subtítulos bajo 14 px ('puntos|del' 13,89 px a 36,53 s con dos activas; 'se|acerquen' 13,98 px a 51,33-51,73 s): marcar una como palabra clave en beats.ts; y torre de tiempos del plano 8 (26-30 s) pone a OTRO PILOTO en P7 tras la sanción, posición que el guion no da"
     }
    ],
-   "nota": "",
+   "nota": "devuelto por el revisor: uniones de subtítulos bajo 14 px ('puntos|del' 13,89 px a 36,53 s con dos activas; 'se|acerquen' 13,98 px a 51,33-51,73 s): marcar una como palabra clave en beats.ts; y torre de tiempos del plano 8 (26-30 s) pone a OTRO PILOTO en P7 tras la sanción, posición que el guion no da",
    "caracteres_voz": 836
   }
  },
- "actualizado": "2026-11-27T01:50:07-03:00"
+ "actualizado": "2026-11-27T01:51:37-03:00"
 }
