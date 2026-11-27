@@ -1,0 +1,3 @@
+{ "beat": "b01", "frac": 0.8,
+  "overlay": { "y": 58, "kicker": "COLAPINTO",
+    "lines": [ { "t": "NUNCA SUMÓ", "size": 140 }, { "t": "EN QATAR", "c": "yellow", "size": 150 }, { "t": "¿Y EL DOMINGO 29?", "size": 76, "c": "cyan" } ] } }

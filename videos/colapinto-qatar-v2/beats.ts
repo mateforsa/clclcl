@@ -44,8 +44,8 @@ export const BEATS: BeatSpec[] = [
     actors: [
       L({ speed: 7 }),
       { type: 'f1', pos: [0, 0, 0], s: 0.62, p: { ...ME, speed: 14 } },
-      { type: 'label', pos: [0, 1.25, 0], at: 'Colapinto', bob: 0.03, p: { text: 'COLAPINTO', w: 1.7, h: 0.36, bg: CEL, color: NAVY, size: 0.66, weight: 900 } },
-      { type: 'pitboard', pos: [0.75, 0, -0.9], rot: [0, -0.25, 0], at: 'nunca', p: { lines: [{ t: 'QATAR' }, { t: '0 PTS', c: '#ff5a4e' }], w: 1.0, pole: 0.6, frame: RED } },
+      { type: 'label', pos: [-0.3, 1.25, 0], at: 'Colapinto', bob: 0.03, p: { text: 'COLAPINTO', w: 1.4, h: 0.36, bg: CEL, color: NAVY, size: 0.66, weight: 900 } },
+      { type: 'pitboard', pos: [0.95, 0, -1.2], rot: [0, -0.3, 0], at: 'nunca', p: { lines: [{ t: 'QATAR' }, { t: '0 PTS', c: '#ff5a4e' }], w: 0.9, pole: 0.6, frame: RED } },
     ],
     overlays: [placa('QATAR: 0 PUNTOS EN SU CARRERA', 'nunca', RED)] },
 
@@ -67,7 +67,7 @@ export const BEATS: BeatSpec[] = [
       L(),
       { type: 'finish', pos: [0, 0, -0.4], s: 0.9, p: { w: 4.2, h: 1.6 } },
       { type: 'f1', pos: [-0.2, 0, -3.5], s: 0.55, p: { ...ME, speed: 14 }, move: { to: [-0.2, 0, 1.2], at: 0.3, dur: 1.5 } },
-      { type: 'pitboard', pos: [0.75, 0, 0.6], rot: [0, -0.4, 0], at: '14', p: { lines: [{ t: 'P14' }], w: 0.9, pole: 0.8 } },
+      { type: 'pitboard', pos: [0.4, 0, -0.3], rot: [0, -0.3, 0], at: '14', p: { lines: [{ t: 'P14' }], w: 0.9, pole: 0.8 } },
     ],
     overlays: [placa('2025: 14°', '2025')] },
 
@@ -89,7 +89,7 @@ export const BEATS: BeatSpec[] = [
       { type: 'f1', pos: [-0.5, 0, -0.2], rot: [0, 0.9, 0], s: 0.58, p: ME },
       { type: 'pilot', pos: [0.75, 0, 0.5], rot: [0, -0.4, 0], s: 0.78, out: 'cero', p: { ...PILOT, pose: 'idle' } },
       { type: 'pilot', pos: [0.75, 0, 0.5], rot: [0, -0.4, 0], s: 0.78, at: 'cero', enter: 'none', p: { ...PILOT, pose: 'shrug' } },
-      { type: 'pitboard', pos: [0.05, 0, -1.2], rot: [0, 0.1, 0], at: 'cero', p: { lines: [{ t: '2025' }, { t: '0 PTS', c: '#ff5a4e' }], w: 0.95, pole: 1.0, frame: RED } },
+      { type: 'pitboard', pos: [-0.75, 0, -1.4], rot: [0, 0.2, 0], at: 'cero', p: { lines: [{ t: '2025' }, { t: '0 PTS', c: '#ff5a4e' }], w: 0.95, pole: 1.25, frame: RED } },
     ],
     overlays: [placa('2025 CON ALPINE: 0', 'Alpine', RED)] },
 
@@ -100,8 +100,8 @@ export const BEATS: BeatSpec[] = [
       ...[0, 1, 2, 3, 4, 5, 6, 7].map((i) => ({ type: 'f1', pos: [i % 2 ? 0.7 : -0.7, 0, 2 - (8 - i) * 0.8] as [number, number, number], rot: [0, PI, 0] as [number, number, number], s: 0.42, p: RIV[i % 4] })),
       { type: 'f1', pos: [-0.7, 0, 2.0], rot: [0, PI, 0], s: 0.42, p: { ...ME, speed: 0 }, move: { to: [-0.7, 0, 0.4], at: 'cruzó', dur: 0.9 } },
       { type: 'ring', pos: [-0.7, 0.05, 2.0], at: 'largó', out: 'cruzó', p: { r: 0.6, color: AMBER } },
-      { type: 'pitboard', pos: [1.05, 0, 1.6], rot: [0, -0.3, 0], s: 1.1, at: 'largó', out: 'séptimo', p: { lines: [{ t: 'P9' }], w: 0.8, pole: 0.7 } },
-      { type: 'pitboard', pos: [1.05, 0, 1.6], rot: [0, -0.3, 0], s: 1.1, at: 'séptimo', p: { lines: [{ t: 'P7', c: AMBER }], w: 0.8, pole: 0.7, frame: GREEN } },
+      { type: 'pitboard', pos: [0.6, 0, 1.2], rot: [0, -0.3, 0], s: 1.1, at: 'largó', out: 'séptimo', p: { lines: [{ t: 'P9' }], w: 0.8, pole: 0.7 } },
+      { type: 'pitboard', pos: [0.6, 0, 1.2], rot: [0, -0.3, 0], s: 1.1, at: 'séptimo', p: { lines: [{ t: 'P7', c: AMBER }], w: 0.8, pole: 0.7, frame: GREEN } },
     ],
     overlays: [placa('LAS VEGAS: LARGÓ 9° · LLEGÓ 7°', 'Vegas')] },
 
@@ -111,23 +111,22 @@ export const BEATS: BeatSpec[] = [
       BOARD,
       { type: 'timing', pos: [0, 1.95, 0], p: { w: 2.6, rh: 0.5, swap: { a: 1, b: 2, at: 1.86 }, rows: [
         { pos: 'P5', name: '· · ·' }, { pos: 'P6', name: 'OTRO PILOTO', flashAt: 0.32, tag: '+10 s' }, { pos: 'P7', name: 'COLAPINTO', hi: true }, { pos: 'P8', name: '· · ·' }] } },
-      { type: 'check', pos: [1.0, 0.25, 0.4], at: 'mejor', p: { size: 0.4 } },
     ],
     overlays: [placa('SANCIÓN A OTRO PILOTO: 6°', 'sexto', GREEN)] },
 
   // 9. Y con eso cortó seis carreras seguidas sin sumar.  (travelling por la fila de seis ceros hasta la tarjeta verde)
-  { id: 'b09', set: 'room', cam: { from: [-0.6, 1.5, 6.0], to: [0.4, 1.4, 5.6], look: [-0.4, 0.9, 0], lookTo: [0.2, 0.9, 0], fov: 46 }, keywords: ['seis', 'sumar'],
+  { id: 'b09', set: 'room', cam: { from: [-0.6, 1.5, 6.0], to: [0.3, 1.4, 5.8], look: [-0.4, 0.9, 0], lookTo: [0.05, 0.9, 0], fov: 46 }, keywords: ['seis', 'sumar'],
     actors: [
       DUSK(),
-      ...[0, 1, 2, 3, 4, 5].map((i) => ({ type: 'racecard', pos: [-1.4 + i * 0.4, 0, -0.3 - i * 0.02] as [number, number, number], s: 0.85, ...(i < 2 ? {} : { at: 0.1 * i }),
+      ...[0, 1, 2, 3, 4, 5].map((i) => ({ type: 'racecard', pos: [-1.3 + i * 0.36, 0, -0.3 - i * 0.02] as [number, number, number], s: 0.85, ...(i < 2 ? {} : { at: 0.1 * i }),
         p: { top: '', big: '0', color: '#3a1d1d', w: 0.4, h: 0.56 } })),
-      { type: 'racecard', pos: [1.05, 0, -0.1], s: 0.95, at: 'seguidas', p: { top: 'LAS VEGAS', big: '6°', color: GREEN, hi: true, w: 0.62, h: 0.7 } },
-      { type: 'check', pos: [1.05, 1.7, 0.0], at: 'sumar', p: { size: 0.4 } },
+      { type: 'racecard', pos: [1.05, 0, -0.1], s: 0.82, at: 'seguidas', p: { top: 'LAS VEGAS', big: '6°', color: GREEN, hi: true, w: 0.62, h: 0.7 } },
+      { type: 'check', pos: [1.05, 1.55, 0.0], at: 'sumar', p: { size: 0.4 } },
     ],
     overlays: [placa('6 CARRERAS SIN PUNTOS: SE TERMINÓ', 'cortó')] },
 
   // 10. Llega 12° en el campeonato, a tres puntos del 11°.  (órbita alrededor de los escalones)
-  { id: 'b10', set: 'room', cam: { from: [1.4, 1.4, 5.6], to: [-0.9, 1.6, 5.8], look: [0, 0.75, 0], fov: 46 }, keywords: ['12', 'tres'],
+  { id: 'b10', set: 'room', cam: { from: [1.4, 1.4, 5.6], to: [-0.9, 1.6, 5.8], look: [0, 0.75, 0], fov: 46 }, keywords: ['12', 'campeonato', 'tres'],
     actors: [
       BOARD,
       { type: 'step', pos: [-0.6, 0, 0], p: { h: 0.95, w: 1.05, color: GRAPH, text: '11°' } },
@@ -142,20 +141,20 @@ export const BEATS: BeatSpec[] = [
   { id: 'b11', set: 'room', cam: { from: [0.4, 2.6, 6.4], to: [-0.2, 2.1, 5.4], look: [0, 0.8, -0.5], lookTo: [0, 0.9, -0.8], fov: 46 }, keywords: ['Qatar', 'anteúltima'],
     actors: [
       L({ speed: 5 }),
-      ...[0, 1, 2].map((i) => ({ type: 'racecard', pos: [-1.5 + i * 0.6, 0, -1.2] as [number, number, number], s: 0.75, p: { top: '', big: '✓', color: '#4a4f57', w: 0.5, h: 0.6 } })),
+      ...[0, 1, 2].map((i) => ({ type: 'racecard', pos: [-1.3 + i * 0.55, 0, -1.2] as [number, number, number], s: 0.75, p: { top: '', big: '✓', color: '#4a4f57', w: 0.5, h: 0.6 } })),
       { type: 'racecard', pos: [0.4, 0, -1.0], s: 1.0, at: 'Qatar', p: { top: 'QATAR', big: '29 NOV', color: MAROON, hi: true, w: 0.9, h: 0.85 } },
-      { type: 'racecard', pos: [1.45, 0, -1.2], s: 0.75, at: 'anteúltima', p: { top: '', big: '?', color: '#4a4f57', w: 0.5, h: 0.6 } },
+      { type: 'racecard', pos: [1.3, 0, -1.2], s: 0.75, at: 'anteúltima', p: { top: '', big: '?', color: '#4a4f57', w: 0.5, h: 0.6 } },
       { type: 'f1', pos: [-0.3, 0, 1.0], s: 0.5, p: { ...ME, speed: 14 } },
     ],
     overlays: [placa('ANTEÚLTIMA FECHA', 'anteúltima')] },
 
   // 12. Clasifica el sábado a las tres de la tarde, hora argentina.  (el auto sale del box y la cámara retrocede)
-  { id: 'b12', set: 'room', cam: { from: [0.3, 1.0, 4.4], to: [-0.4, 1.35, 5.8], look: [0, 1.0, -0.5], lookTo: [0, 1.1, -0.5], fov: 46 }, keywords: ['sábado', 'tres'],
+  { id: 'b12', set: 'room', cam: { from: [0.3, 1.0, 4.4], to: [-0.4, 1.35, 5.8], look: [0, 1.0, -0.5], lookTo: [0, 1.1, -0.5], fov: 46 }, keywords: ['sábado', 'tres', 'argentina'],
     actors: [
       GAR,
-      { type: 'clock', pos: [-1.0, 1.95, -3.55], at: 'tres', p: { h: 3, m: 0, r: 0.55 } },
+      { type: 'clock', pos: [1.0, 1.95, -3.55], at: 'tres', p: { h: 3, m: 0, r: 0.55 } },
       { type: 'f1', pos: [0.25, 0, -1.6], s: 0.58, p: { ...ME, speed: 0 }, move: { to: [0.25, 0, 0.6], at: 'Clasifica', dur: 2.6 } },
-      { type: 'pilot', pos: [0.95, 0, 0.0], rot: [0, -0.5, 0], s: 0.7, p: { suit: NAVY, accent: CEL, helmet: '#d9dde2', pose: 'point' } },
+      { type: 'pilot', pos: [-0.95, 0, -0.6], rot: [0, 0.5, 0], s: 0.7, p: { suit: NAVY, accent: CEL, helmet: '#d9dde2', pose: 'point' } },
     ],
     overlays: [placa('CLASIFICACIÓN: SÁBADO 28 · 15:00 (ARG)', 'Clasifica')] },
 
@@ -180,7 +179,7 @@ export const BEATS: BeatSpec[] = [
     overlays: [placa('¿EN QUÉ PUESTO TERMINA?', 'qué')] },
 
   // 15. Dejá un solo número en los comentarios.  (grúa que sube con los globos de números)
-  { id: 'b15', set: 'room', cam: { from: [0.5, 0.7, 5.4], to: [-0.2, 1.3, 5.8], look: [0, 1.0, 0], lookTo: [0, 1.2, 0], fov: 46 }, keywords: ['número'],
+  { id: 'b15', set: 'room', cam: { from: [0.5, 0.7, 5.4], to: [-0.2, 1.3, 5.8], look: [0, 1.0, 0], lookTo: [0, 1.2, 0], fov: 46 }, keywords: ['número', 'comentarios'],
     actors: [
       BOARD,
       { type: 'pilot', pos: [-0.85, 0, 0.6], rot: [0, 0.4, 0], s: 0.8, p: { ...PILOT, pose: 'point' } },

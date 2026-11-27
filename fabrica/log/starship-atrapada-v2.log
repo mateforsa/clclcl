@@ -28,3 +28,6 @@
 2026-11-27T01:02:12-03:00 [productor] lanzo el render de la corrección
 2026-11-27T01:09:53-03:00 [productor] render listo: out/starship-atrapada-v2/starship-atrapada-v2.mp4, 55 s (54,6 s); corrección del revisor aplicada (claves noviembre/atraparon, plano 10 sin explosión, torre del plano 13 más baja); hojas qc revisadas
 2026-11-27T01:09:53-03:00 [fabrica] etapa -> revision
+2026-11-27T01:14:18-03:00 [oido] oído: 100 % de coincidencia; dudosos: ninguno; diferencias: 
+2026-11-27T01:14:24-03:00 [revisor] DEVUELTO (2a vuelta): plano 10, 36,30-36,87 s (f1089-1106): el propulsor blanco que cae pasa por detrás de 'Esta vez se' (activa 'vez', blanca sobre blanco) y les quita contraste. Esto ya estaba en la 1a vuelta y no lo marqué. Lo demás PASA: uniones arregladas ('noviembre|en' 30,9 px, 'la|atraparon.' 31,0 px; ninguna unión real bajo 14 px; el 12,7 px de 'vez|se' en f1103 es el cohete detrás, a ojo hay unos 21 px); salpicón sin fuego en plano 10; torre del plano 13 ya no toca 'diciembre'; 54,6 s, -14,0 LUFS, -4,2 dBTP, sin silencios/negros/congelados, 5 etiquetas, pronunciación 100 %.
+2026-11-27T01:14:24-03:00 [fabrica] etapa -> render (devuelto por el revisor: plano 10, 36,30-36,87 s, el propulsor blanco cae por detrás de 'Esta vez se' y les quita contraste; moverlo o bajarlo para que no cruce la franja de subtítulos (~y 290-390))

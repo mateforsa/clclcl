@@ -80,7 +80,7 @@ export const Stage: React.FC<P> = ({ t, p }) => {
         <pointLight position={[0, 3.6, 2.2]} intensity={22} color="#fff4e2" distance={12} />
         <pointLight position={[2.4, 2.0, -1.5]} intensity={8} color={AMBER} distance={6} />
         <Flat s={[24, 24]} pos={[0, 0.02, 0]} rot={[-Math.PI / 2, 0, 0]} map={parquet} c="#5a4a3a" />
-        <B s={[12, 0.8, 0.2]} pos={[0, 0.4, -3.75]} c={MAPLE} />
+        <B s={[12, 0.8, 0.2]} pos={[0, 0.4, -3.75]} c="#7a5a3a" />
         <B s={[12, 0.08, 0.26]} pos={[0, 0.82, -3.7]} c="#9c7a4c" />
         <B s={[12, 8.4, 0.2]} pos={[0, 5.0, -3.78]} c={PINE} />
         
@@ -229,7 +229,7 @@ export const Jury: React.FC<P> = ({ t, p }) => {
   for (let i = 0; i < 5; i++) { const x = -1.32 + i * 0.66; seats.push(seat(x, -0.95, 0, n++)); seats.push(seat(x, 0.95, Math.PI, n++)); }
   seats.push(seat(-1.95, 0, Math.PI / 2, n++)); seats.push(seat(1.95, 0, -Math.PI / 2, n++));
   return (<group>
-    <B s={[3.4, 0.1, 1.3]} pos={[0, 0.78, 0]} c="#b88e5a" />
+    <B s={[3.4, 0.1, 1.3]} pos={[0, 0.78, 0]} c="#5e4329" />
     {[[-1.5, -0.5], [1.5, -0.5], [-1.5, 0.5], [1.5, 0.5]].map(([x, z]) => <B key={x + '' + z} s={[0.1, 0.78, 0.1]} pos={[x, 0.39, z]} c="#7a5a35" />)}
     {seats}
     {Array.from({ length: 12 }, (_, i) => {

@@ -1,0 +1,3 @@
+{ "beat": "b01", "frac": 0.55,
+  "overlay": { "kicker": "HUAWEI", "y": 60,
+    "lines": [ { "t": "LA DETUVIERON", "size": 118 }, { "t": "EN 2018", "c": "yellow" }, { "t": "SU EMPRESA: CULPABLE", "c": "red", "size": 84 } ] } }

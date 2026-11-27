@@ -25,7 +25,7 @@ export const BEATS: BeatSpec[] = [
   // 1. Aeropuerto de Vancouver, diciembre de 2018.  (grúa que baja desde el ventanal nevado hasta la pasajera)
   { id: 'b01', set: 'room', cam: { from: [0.6, 3.4, 7.0], to: [-0.1, 2.0, 6.4], look: [0, 1.9, -2], lookTo: [0, 0.75, 0], fov: 46, shift: -0.04 }, keywords: ['Aeropuerto', 'Vancouver', 'diciembre'],
     actors: [
-      { ...GATE, p: { kind: 'gate', sign: 'PUERTA 34', signX: -1.3 } },
+      { ...GATE, p: { kind: 'gate', sign: 'PUERTA 34', signX: 0.6 } },
       { type: 'seats', pos: [0.7, 0, -1.4], p: { n: 4 } },
       { type: 'person', pos: [-1.5, 0, 0.6], rot: [0, Math.PI / 2, 0], p: { ...MENG, pose: 'walk' }, out: '2018', move: { to: [-0.35, 0, 0.6], at: 0, dur: 2.2 } },
       { type: 'person', pos: [-0.35, 0, 0.6], rot: [0, 0.4, 0], at: '2018', enter: 'none', p: { ...MENG, pose: 'idle' } },
@@ -43,11 +43,12 @@ export const BEATS: BeatSpec[] = [
       { type: 'person', pos: [0, 0, 0], at: 'detiene', enter: 'none', p: { ...MENG, pose: 'sad' } },
       { type: 'bag', pos: [0.45, 0, 0.15], rot: [0, -0.3, 0], p: { color: '#7b2d3a' } },
       { type: 'person', pos: [-1.3, 0, 0.5], rot: [0, 1.1, 0], at: 0.2, enter: 'none', p: { ...COP, pose: 'walk' }, move: { to: [-0.7, 0, 0.35], at: 0.2, dur: 0.8 }, out: 'a' },
-      { type: 'person', pos: [-0.7, 0, 0.35], rot: [0, 1.1, 0], at: 'a', enter: 'none', p: { ...COP, pose: 'point' } },
+      { type: 'person', pos: [-0.7, 0, 0.35], rot: [0, 1.1, 0], at: 'a', enter: 'none', p: { ...COP, pose: 'point' }, out: 'fundador' },
+      { type: 'person', pos: [-0.7, 0, 0.35], rot: [0, 1.1, 0], at: 'fundador', enter: 'none', p: { ...COP, pose: 'idle' } },
       { type: 'person', pos: [1.4, 0, 0.6], rot: [0, -1.1, 0], at: 0.35, enter: 'none', p: { ...COP, pose: 'walk' }, move: { to: [0.95, 0, 0.45], at: 0.35, dur: 0.8 }, out: 'Meng' },
-      { type: 'person', pos: [0.95, 0, 0.45], rot: [0, -1.1, 0], at: 'Meng', enter: 'none', p: { ...COP, pose: 'idle' } },
+      { type: 'person', pos: [0.95, 0, 0.45], rot: [0, -1.1, 0], at: 'Meng', enter: 'none', p: { ...COP, pose: 'idle' }, out: 'Huawei' },
+      { type: 'person', pos: [0.95, 0, 0.45], rot: [0, -1.1, 0], at: 'Huawei', enter: 'none', p: { ...COP, pose: 'hold' } },
       { type: 'ring', pos: [0, 0.03, 0], at: 'Meng', p: { r: 0.55, color: RED } },
-      { type: 'hbox', pos: [-0.4, 0, -1.25], rot: [0, 0.25, 0], s: 0.6, at: 'Huawei', p: {} },
     ],
     overlays: [
       tag('Meng Wanzhou', 'Meng', { size: 54, y: 67 }),
@@ -90,7 +91,7 @@ export const BEATS: BeatSpec[] = [
       MAP,
       { type: 'maptop', pos: [0, 0.97, 0] },
       { type: 'pin', pos: [0.56, 0.97, -0.44], p: { text: 'VANCOUVER', color: STEEL, h: 0.4, side: -1 } },
-      { type: 'paper', pos: [0.75, 1.0, 0.45], rot: [-Math.PI / 2, 0, 0.2], s: 0.7, at: 'acuerdo', p: { sign: 0.6, lines: 6 } },
+      { type: 'paper', pos: [0.45, 1.0, 0.6], rot: [-Math.PI / 2, 0, 0.2], s: 0.7, at: 'acuerdo', p: { sign: 0.6, lines: 6 } },
       { type: 'plane', pos: [0, 1.0, 0], at: 'volvió', enter: 'none', p: { from: [0.56, -0.44], to: [-0.8, -0.3], at: 1.14, dur: 1.1, h: 0.6 } },
       { type: 'ring', pos: [-0.8, 0.99, -0.3], at: 'China', p: { r: 0.22, color: AMBER } },
       { type: 'hbox', pos: [1.05, 0.97, 0.2], rot: [0, -0.2, 0], s: 0.5, at: 'empresa', p: { tape: 3.55 } },
@@ -131,7 +132,7 @@ export const BEATS: BeatSpec[] = [
   { id: 'b08', set: 'room', cam: { from: [-1.3, 1.9, 4.4], to: [1.1, 2.1, 4.5], look: [-0.5, 0.7, 0], lookTo: [0.5, 0.7, 0], fov: 46, shift: -0.04 }, keywords: ['veredicto', 'incluye', 'fraude', 'bancario', 'sanciones', 'conspirar', 'secretos', 'comerciales'],
     actors: [
       JURY,
-      { type: 'box', pos: [0, 0.8, 0], p: { size: [3.6, 0.1, 1.3], color: '#b88e5a' } },
+      { type: 'box', pos: [0, 0.8, 0], p: { size: [3.6, 0.1, 1.3], color: '#5e4329' } },
       ...[[-1.2, 0.8], [1.2, 0.8], [-1.2, -0.8]].map(([x, z]) => ({ type: 'box', pos: [x, 0.4, z * 0.5] as [number, number, number], p: { size: [0.1, 0.8, 0.1], color: '#7a5a35' } })),
       { type: 'folder', pos: [-1.05, 0.86, 0.1], rot: [0, 0.15, 0], at: 'fraude', enter: 'drop', p: { color: '#c9a86a', stamp: 1.8 } },
       { type: 'folder', pos: [0, 0.86, 0.05], rot: [0, -0.1, 0], at: 'violar', enter: 'drop', p: { color: '#8fb0c9', stamp: 3.5 } },
@@ -147,7 +148,7 @@ export const BEATS: BeatSpec[] = [
   { id: 'b09', set: 'room', cam: { from: [0.9, 1.4, 6.2], to: [0.2, 2.3, 6.4], look: [0, 0.7, -0.5], lookTo: [0, 1.4, -1.4], fov: 46, shift: -0.04 }, keywords: ['Huawei', 'apelar'],
     actors: [
       STEPS,
-      { type: 'hbox', pos: [-0.4, 0, 0.6], rot: [0, 0.2, 0], s: 0.7, p: {}, move: { to: [-0.4, 0.3, -0.25], at: 'apelar', dur: 0.6 } },
+      { type: 'hbox', pos: [-0.4, 0, 0.6], rot: [0, 0.2, 0], s: 0.7, p: {}, move: { to: [-0.4, 0.6, -0.8], at: 'apelar', dur: 0.5 } },
       { type: 'person', pos: [0.7, 0, 0.5], rot: [0, -0.4, 0], at: 'anunció', p: { ...SUIT2, pose: 'point' } },
       { type: 'arrow', pos: [-0.4, 1.1, -0.4], at: 'apelar', s: 0.7, p: { len: 0.9, color: AMBER } },
     ],
@@ -158,11 +159,11 @@ export const BEATS: BeatSpec[] = [
     actors: [
       CELL,
       { type: 'cell', pos: [-0.9, 0, -0.8], s: 0.9, p: { w: 2.0 } },
-      { type: 'hbox', pos: [1.0, 0, -1.1], rot: [0, -0.3, 0], s: 0.75, at: 'empresa', p: {} },
+      { type: 'hbox', pos: [1.2, 0, -1.4], rot: [0, -0.3, 0], s: 0.75, at: 'empresa', p: {} },
       { type: 'cross', pos: [-0.9, 1.3, -0.6], at: 'presa', p: { size: 0.55, color: RED } },
       { type: 'sack', pos: [0.15, 0, 0.25], at: 'multas', enter: 'drop', p: {} },
       { type: 'sack', pos: [0.6, 0, 0.6], s: 0.85, at: 'multas', enter: 'drop', p: {} },
-      { type: 'crate', pos: [0.9, 0, 0.75], rot: [0, -0.4, 0], at: 'decomisos', enter: 'drop', p: {} },
+      { type: 'crate', pos: [0.95, 0, 0.45], rot: [0, -0.4, 0], at: 'decomisos', enter: 'drop', p: {} },
     ],
     overlays: [
       tag('Una empresa no va presa', 'presa', { size: 44, y: 67 }),

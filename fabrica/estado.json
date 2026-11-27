@@ -1068,7 +1068,7 @@
    "tema": "",
    "fuentes": [],
    "puntaje": null,
-   "etapa": "revision",
+   "etapa": "render",
    "creado": "2026-11-26T23:18:32-03:00",
    "rehace": "starship-atrapada",
    "publicar_prueba_al_terminar": true,
@@ -1117,9 +1117,14 @@
      "etapa": "revision",
      "cuando": "2026-11-27T01:09:53-03:00",
      "nota": ""
+    },
+    {
+     "etapa": "render",
+     "cuando": "2026-11-27T01:14:24-03:00",
+     "nota": "devuelto por el revisor: plano 10, 36,30-36,87 s, el propulsor blanco cae por detrás de 'Esta vez se' y les quita contraste; moverlo o bajarlo para que no cruce la franja de subtítulos (~y 290-390)"
     }
    ],
-   "nota": "",
+   "nota": "devuelto por el revisor: plano 10, 36,30-36,87 s, el propulsor blanco cae por detrás de 'Esta vez se' y les quita contraste; moverlo o bajarlo para que no cruce la franja de subtítulos (~y 290-390)",
    "caracteres_voz": 824
   },
   "microsoft-codigo-rojo-v2": {
@@ -1246,7 +1251,7 @@
    "tema": "",
    "fuentes": [],
    "puntaje": null,
-   "etapa": "voz",
+   "etapa": "render",
    "creado": "2026-11-26T23:18:33-03:00",
    "rehace": "huawei-condena",
    "publicar_prueba_al_terminar": true,
@@ -1275,6 +1280,11 @@
      "etapa": "voz",
      "cuando": "2026-11-26T23:35:26-03:00",
      "nota": "voz sin OK (regla voz_sin_ok del dueño)"
+    },
+    {
+     "etapa": "render",
+     "cuando": "2026-11-27T01:12:55-03:00",
+     "nota": ""
     }
    ],
    "nota": "",
@@ -1334,7 +1344,7 @@
    "tema": "",
    "fuentes": [],
    "puntaje": null,
-   "etapa": "voz",
+   "etapa": "render",
    "creado": "2026-11-26T23:19:22-03:00",
    "rehace": "colapinto-qatar",
    "publicar_prueba_al_terminar": true,
@@ -1363,11 +1373,16 @@
      "etapa": "voz",
      "cuando": "2026-11-26T23:35:26-03:00",
      "nota": "voz sin OK (regla voz_sin_ok del dueño)"
+    },
+    {
+     "etapa": "render",
+     "cuando": "2026-11-27T01:14:30-03:00",
+     "nota": ""
     }
    ],
    "nota": "",
    "caracteres_voz": 836
   }
  },
- "actualizado": "2026-11-27T01:09:53-03:00"
+ "actualizado": "2026-11-27T01:14:33-03:00"
 }
