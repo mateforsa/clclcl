@@ -1,0 +1,3 @@
+{ "beat": "b01", "frac": 0.95,
+  "overlay": { "y": 60, "kicker": "COLAPINTO · QATAR",
+    "lines": [ { "t": "12° EN LA", "size": 140 }, { "t": "PRÁCTICA 1", "c": "yellow", "size": 128 }, { "t": "A MEDIO SEGUNDO DE GASLY", "size": 66, "c": "cyan" } ] } }
