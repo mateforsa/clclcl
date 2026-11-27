@@ -19,6 +19,10 @@ Cómo
 Pasos
 1. `python3 fabrica/estado.py creditos <slug>` y después `python3 scripts/voice.py <slug>` (una sola toma; si la voz ya existe y el
    texto no cambió, no la regeneres).
+   Después de la voz, escuchala: `python3 fabrica/pronunciacion.py oir <slug>`. Si marca términos dudosos (se entienden mal o
+   Whisper duda), para cada uno corré `python3 fabrica/pronunciacion.py probar "<término>" "<frase corta con ##>" <4 a 6 variantes>`,
+   usá en `parrafos.json` la forma confirmada del glosario o, si no hay, la ganadora, y regenerá la voz. Máximo dos vueltas; si
+   sigue dudoso, anotalo en el log como "PRONUNCIACIÓN SIN RESOLVER: <término>" para el dueño.
 2. Escribí `beats.ts` y `entry.ts`: un plano por línea, cámara en movimiento en todos, overlays legibles dentro de la zona segura.
 3. `scripts/stills.sh <slug>` y mirá los stills con Read. Corregí lo que se vea mal antes de renderizar.
 4. `npx tsx scripts/events.ts <slug>` y `python3 scripts/audio.py <slug>` (mezcla a −14 LUFS).

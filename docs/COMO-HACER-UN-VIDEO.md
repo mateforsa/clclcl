@@ -74,6 +74,11 @@ videos/<slug>/timing.json, events.json, public/voz.wav, public/mix.wav   generad
 
 ## Reglas del guion
 
+- **Pronunciación** (pedido del dueño, 27/11/2026): toda voz se escucha con `python3 fabrica/pronunciacion.py oir <slug>` (Whisper).
+  Los términos dudosos se prueban con `pronunciacion.py probar` y las formas buenas quedan en `fabrica/pronunciacion.json`. Las
+  "confirmadas" las eligió el dueño de oído; las "probadas" las eligió Whisper. Ojo: Whisper corrige solo las marcas que conoce, por
+  eso también se mira su seguridad en cada palabra.
+
 - **Nada de "parte N" de una serie temática** (regla del dueño, 27/11/2026): no numerar "GTA VI, parte 6" solo porque el tema se
   repite. Un video lleva "parte 2" únicamente si continúa exactamente la misma historia que la parte 1 (el mismo hecho, lo que
   pasó después). Un hecho nuevo sobre el mismo tema es un video suelto, sin número, en voz, placas, portada, títulos y descripción.

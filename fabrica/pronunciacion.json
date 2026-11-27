@@ -1,0 +1,34 @@
+{
+ "GitHub": {
+  "dicho": "Guít-jab",
+  "estado": "probada",
+  "puntaje": 0.87,
+  "variantes": [
+   "Guit jab",
+   "Git jab",
+   "Guít-jab",
+   "Gitjab",
+   "Güit job",
+   "GitHub"
+  ],
+  "nota": "pendiente de que el dueño elija número"
+ },
+ "GTA 6": {
+  "dicho": "ge, te, a seis",
+  "estado": "probada",
+  "puntaje": 0.89,
+  "variantes": [
+   "ge te a seis",
+   "ge, te, a seis",
+   "gé té á seis",
+   "G T A seis",
+   "GTA seis"
+  ],
+  "nota": "pendiente de que el dueño elija número (sale 'GT 6' en gta-vi-leonida)"
+ },
+ "Hilux": {
+  "dicho": "High-lux",
+  "estado": "confirmada",
+  "nota": "elegida por el dueño de oído (variante 5), 26/11/2026"
+ }
+}

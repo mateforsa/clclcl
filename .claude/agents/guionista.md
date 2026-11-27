@@ -20,6 +20,8 @@ Reglas que no se negocian
 - El cierre no puede ser siempre "Seguime para la próxima historia": rotá (pregunta concreta, promesa de la parte siguiente, etc.).
 - Cada número, fecha, nombre y cita tiene que salir de una fuente con enlace. Si un dato no tiene fuente, no lo escribas.
   Lo estimado o atribuido se dice así ("según X").
+- Antes de escribir un nombre extranjero, sigla o marca, mirá `python3 fabrica/pronunciacion.py glosario`: si está, usá esa forma
+  exacta en `[dicho|mostrado]` (las "confirmada" las eligió el dueño de oído). Si no está, marcalo "PRONUNCIACIÓN A CONFIRMAR".
 - Números y nombres extranjeros con la sintaxis `[dicho|mostrado]`. Si una pronunciación es dudosa, anotala en guion.md como
   "PRONUNCIACIÓN A CONFIRMAR" para que el productor genere variantes numeradas: no adivines.
 

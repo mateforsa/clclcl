@@ -26,3 +26,4 @@
 2026-11-26T22:12:09-03:00 [revisor] APROBADO: 1080x1920 30fps h264+aac, 52,877 s (=timing.json); -14,3 LUFS, pico -4,3 dBTP, sin silencios/negros/congelados; 12 planos con camara en movimiento; subtitulos = parrafos.json, huecos min 14,4 px (de|marzo 37,43 s, verificado a ojo ~20 px) y modelo min 15,7 (por|internet. 4,53 s); placas = guion (4 corridas de palabra avisadas, carteles 3D sin datos nuevos, sin logos); portada 1080x1920 legible; 5 etiquetas. Obs: flecha de la placa del plano 10 sale fina (glifo de reserva), se lee.
 2026-11-26T22:12:09-03:00 [fabrica] etapa -> esperando_ok_final
 2026-11-26T22:37:48-03:00 [dueño] APROBADO (esperando_ok_final -> listo)
+2026-11-26T23:06:21-03:00 [oido] oído: 99 % de coincidencia; dudosos: ninguno; diferencias: conta a→contada
