@@ -57,13 +57,13 @@ export const BEATS: BeatSpec[] = [
     overlays: [P1('CURVA 1', '1,'), P2('COLAPINTO (ALPINE) POR ADENTRO', 'adentro'), FUENTE] },
 
   // 3. Casi se tocan, y atrás Russell soltó por radio: «Oh, wow».  (de frente, al ras: rueda con rueda; atrás el plateado)
-  { id: 'b03', set: 'room', cam: { from: [1.0, 1.35, 6.3], to: [0.45, 1.3, 5.6], look: [0, 0.0, -0.6], lookTo: [0, 0.05, -0.8], fov: 46 }, keywords: ['tocan,', 'Russell', '«Oh, wow».'],
+  { id: 'b03', set: 'room', cam: { from: [0.8, 1.25, 5.5], to: [0.35, 1.2, 4.9], look: [0, -0.15, -0.6], lookTo: [0, -0.1, -0.8], fov: 46 }, keywords: ['tocan,', 'Russell', '«Oh, wow».'],
     actors: [
       ST('mesa', { speed: 6 }),
-      { type: 'f1', pos: [-0.62, 0, 0.5], s: 0.45, p: { ...COLA, speed: 16 } },
-      { type: 'f1', pos: [0.62, 0, 0.35], s: 0.45, p: { ...SAI, speed: 16 } },
-      { type: 'f1', pos: [0.0, 0, -1.9], s: 0.45, p: { ...RUS, speed: 16 } },
-      { type: 'box', pos: [0.0, 0.026, 0.45], at: 'tocan', enter: 'grow', p: { size: [0.04, 0.004, 1.6], color: LIME, glow: true, ei: 1.2 } },
+      { type: 'f1', pos: [-0.5, 0, 0.5], s: 0.38, p: { ...COLA, speed: 16 } },
+      { type: 'f1', pos: [0.5, 0, 0.35], s: 0.38, p: { ...SAI, speed: 16 } },
+      { type: 'f1', pos: [0.0, 0, -1.9], s: 0.38, p: { ...RUS, speed: 16 } },
+      { type: 'box', pos: [0.0, 0.026, 0.45], at: 'tocan', enter: 'grow', p: { size: [0.035, 0.004, 1.4], color: LIME, glow: true, ei: 1.2 } },
       { type: 'ring', pos: [0.0, 0.03, -1.9], at: 'Russell', p: { r: 0.45, color: '#7ad0ff' } },
       { type: 'radio', pos: [0.0, 0.45, -1.8], at: 'radio', p: { color: AMBER, r: 0.25, loops: 4 } },
     ],

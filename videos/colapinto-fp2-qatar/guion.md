@@ -32,21 +32,21 @@ Leclerc, Briatore, los minutos extra ni Mercedes.
 
 ## Guion final (una línea por plano)
 
+**Toma final (27/11, productor):** 11 planos, 53,7 s. Se sacaron el plano 5 («Puede ser», queda en la descripción) y el 10 (Sainz 16°) porque la primera toma duraba 65,8 s. Las secciones de abajo conservan la numeración original de 13 planos.
+
 | # | Tiempo aprox. | Frase |
 |---|---|---|
 | 1 | 0:00 | «Corre como si fuera domingo». Carlos Sainz lo dijo de Colapinto, después de la segunda práctica de Qatar. |
-| 2 | 0:05 | En la curva 1, Colapinto se le tiró por adentro y lo pasó. |
-| 3 | 0:10 | Casi se tocan, y atrás Russell soltó por radio: «Oh, wow». |
-| 4 | 0:13 | Sainz dijo que ya van un par de viernes así. |
-| 5 | 0:17 | Le preguntaron si va a hablar con él. Contestó: «Puede ser». |
-| 6 | 0:20 | Pero en la tabla terminó en el puesto 15, a más de dos segundos y medio del primero. |
-| 7 | 0:26 | Tuvo problemas de frenos, y su vuelta con gomas blandas, las más rápidas, quedó a medias. |
-| 8 | 0:32 | La cortó la bandera roja de Gasly, su compañero, enterrado en la leca. |
-| 9 | 0:36 | Gasly dio apenas 14 vueltas, y aun así terminó casi un segundo adelante. |
-| 10 | 0:40 | Y Sainz, el que se quejó, quedó justo atrás, en el puesto 16. |
-| 11 | 0:45 | El viernes anterior, en Las Vegas, el enojado era Colapinto, que pidió por radio: «Lo tienen que penalizar». |
-| 12 | 0:51 | El sábado a las tres de la tarde clasifican. Ahí sí, todos corren como si fuera domingo. |
-| 13 | 0:56 | En una práctica, ¿vos te tirabas por adentro? Contalo abajo. |
+| 2 | 0:06 | En la curva 1, Colapinto se le tiró por adentro y lo pasó. |
+| 3 | 0:09 | Casi se tocan, y atrás Russell soltó por radio: «Oh, wow». |
+| 4 | 0:14 | Sainz dijo que ya van un par de viernes así. |
+| 5 | 0:16 | Pero en la tabla terminó en el puesto 15, a más de dos segundos y medio del primero. |
+| 6 | 0:21 | Tuvo problemas de frenos, y su vuelta con gomas blandas, las más rápidas, quedó a medias. |
+| 7 | 0:27 | La cortó la bandera roja de Gasly, su compañero, enterrado en la leca. |
+| 8 | 0:31 | Gasly dio apenas 14 vueltas, y aun así terminó casi un segundo adelante. |
+| 9 | 0:36 | El viernes anterior, en Las Vegas, el enojado era Colapinto, que pidió por radio: «Lo tienen que penalizar». |
+| 10 | 0:43 | El sábado a las tres de la tarde clasifican. Ahí sí, todos corren como si fuera domingo. |
+| 11 | 0:49 | En una práctica, ¿vos te tirabas por adentro? Contalo abajo. |
 
 ## PRONUNCIACIÓN A CONFIRMAR
 
@@ -66,6 +66,9 @@ el productor genera variantes numeradas para que se elija de oído.
 
 Números: con `[dicho|mostrado]` (1, 15, 14, 16). "Dos segundos y medio", "casi un segundo" y "las tres de la tarde" se dicen
 y se muestran igual; la cifra exacta va en placa.
+
+
+**Resultado de la prueba (productor, 27/11):** Sainz `[Sáintz|Sainz]` (probada, 92 %); «Oh, wow» `[«Oh, guau».|«Oh, wow».]` (probada, 78 %, con las comillas dentro del grupo); Russell `[Russell|Russell]` (forma del glosario; Whisper oye «Rossell», 44 %: SIN RESOLVER); Qatar `[Qatar.|Qatar.]` (glosario; seguridad 54 %: SIN RESOLVER); Gasly `[Gaslý|Gasly]` (glosario).
 
 ## Hoja de datos y fuentes
 
