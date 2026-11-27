@@ -207,5 +207,19 @@
    "Mái-crosoft tres sesenta y cinco",
    "Maicrosoft tres, sesenta y cinco"
   ]
+ },
+ "Meng Wanzhou": {
+  "dicho": "Meng Uanshóu",
+  "estado": "probada",
+  "puntaje": 0.63,
+  "variantes": [
+   "Meng Uanyóu",
+   "Meng Uanchóu",
+   "Meng Uan-yóu",
+   "Meng Wanzhou",
+   "Meng Uanshóu",
+   "Meng Uanyó"
+  ],
+  "nota": "Whisper eligió por puntaje \"Meng Uanyó\" pero la transcribe \"Menguaño\"; la 5 (Meng Uanshóu) se transcribe exacta en castellano y en inglés. Elegida por el productor de huawei-condena-v2; pendiente de que el dueño elija número"
  }
 }
