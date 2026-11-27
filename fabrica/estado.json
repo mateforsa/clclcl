@@ -1842,7 +1842,7 @@
     "https://www.argentina.gob.ar/sites/default/files/aluminio_2024.pdf"
    ],
    "puntaje": null,
-   "etapa": "guion",
+   "etapa": "voz",
    "creado": "2026-11-27T15:00:43-03:00",
    "historial": [
     {
@@ -1863,10 +1863,25 @@
      "etapa": "guion",
      "cuando": "2026-11-27T15:09:16-03:00",
      "nota": ""
+    },
+    {
+     "etapa": "verificado",
+     "cuando": "2026-11-27T15:09:41-03:00",
+     "nota": ""
+    },
+    {
+     "etapa": "esperando_ok_voz",
+     "cuando": "2026-11-27T15:09:41-03:00",
+     "nota": ""
+    },
+    {
+     "etapa": "voz",
+     "cuando": "2026-11-27T15:09:59-03:00",
+     "nota": "voz sin OK (regla voz_sin_ok del dueño)"
     }
    ],
    "nota": ""
   }
  },
- "actualizado": "2026-11-27T15:09:16-03:00"
+ "actualizado": "2026-11-27T15:09:59-03:00"
 }
