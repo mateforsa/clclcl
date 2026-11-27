@@ -1699,7 +1699,7 @@
     "https://www.racefans.net/2026/11/27/antonelli-quickest-by-half-a-second-on-medium-tyre-compound-in-first-practice/"
    ],
    "puntaje": null,
-   "etapa": "render",
+   "etapa": "revision",
    "creado": "2026-11-27T11:51:36-03:00",
    "historial": [
     {
@@ -1730,11 +1730,16 @@
      "etapa": "render",
      "cuando": "2026-11-27T12:23:13-03:00",
      "nota": ""
+    },
+    {
+     "etapa": "revision",
+     "cuando": "2026-11-27T12:35:19-03:00",
+     "nota": ""
     }
    ],
    "nota": "",
    "caracteres_voz": 903
   }
  },
- "actualizado": "2026-11-27T12:29:23-03:00"
+ "actualizado": "2026-11-27T12:35:19-03:00"
 }

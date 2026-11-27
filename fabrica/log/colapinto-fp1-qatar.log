@@ -17,3 +17,5 @@
 2026-11-27T12:23:13-03:00 [fabrica] etapa -> render
 2026-11-27T12:23:16-03:00 [productor] arranca el render (espera el lock si otro video está renderizando)
 2026-11-27T12:29:23-03:00 [productor] mirando las hojas qc: plano 7 arrancaba sin el medidor y plano 12 arrancaba vacío; ahora el medidor y el reloj de las 3 están desde el cuadro 0. Re-render
+2026-11-27T12:35:19-03:00 [productor] render listo: out/colapinto-fp1-qatar/colapinto-fp1-qatar.mp4, 58,5 s (1080x1920, 30 fps, h264+aac). -14,1 LUFS, pico -4,3 dBTP, sin negros, congelados ni silencios. Uniones de subtítulos medidas en el MP4: 1485 cuadros, mínimo 14,0 px ('el campeón, y' 10,7 s y '«Es donde más' 34,6 s). Franja 290-390 limpia. Plano 8 (cita) se mantiene: no pasa de 60 s. Portada: instagram/portadas/colapinto-fp1-qatar.jpg. PRONUNCIACIÓN SIN RESOLVER: Lindblad (se oye 'Limblad', planos 11 y 13)
+2026-11-27T12:35:19-03:00 [fabrica] etapa -> revision
