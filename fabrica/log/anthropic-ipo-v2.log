@@ -11,3 +11,4 @@
 2026-11-26T23:24:42-03:00 [fabrica] voz SIN OK del dueño (regla voz_sin_ok): ~854 caracteres
 2026-11-26T23:35:53-03:00 [productor] arranco producción (retomo tras corte): voz
 2026-11-26T23:35:53-03:00 [fabrica] anthropic-ipo-v2: la voz gasta unos 854 caracteres de ElevenLabs. AVISO: no se puede leer el saldo (la clave no tiene ese permiso); anotalo en fabrica/config.json.
+2026-11-26T23:36:36-03:00 [oido] oído: 96 % de coincidencia; dudosos: Anthropic (seguridad 52 %); diferencias: anthropic→antropic; dos→2; caen→cae en; por ciento→
