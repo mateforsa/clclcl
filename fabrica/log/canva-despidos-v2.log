@@ -11,3 +11,10 @@
 2026-11-26T23:36:35-03:00 [oido] oído: 97 % de coincidencia; dudosos: ninguno; diferencias: sin puesto→su impuesto; por ciento→; canva→kamba
 2026-11-26T23:37:30-03:00 [productor] oído vuelta 1: Whisper oyó 'Kamba' en el plano 11 (97 % de coincidencia). probar Canva: 5 variantes, todas entendidas; ganadora 'Cánvah' (59 %, Canva 56 %). Aplicada como [Cánvah|Canva] y regenero voz
 2026-11-26T23:37:56-03:00 [oido] oído: 98 % de coincidencia; dudosos: ninguno; diferencias: por ciento→; seis→6; 000→mil
+2026-11-26T23:39:41-03:00 [productor] oído vuelta 2: 98 % de coincidencia, 'Canva' entendido en los 4 lugares, sin dudosos. Diferencias solo de formato (22%, 6, 10 mil). Voz final 51,1 s
+2026-11-26T23:42:26-03:00 [productor] beats.ts/entry.ts/props.tsx escritos: set propio de maqueta (petróleo/coral/tinta), robot + silla vacía como metáfora; corro stills
+2026-11-26T23:44:36-03:00 [productor] stills revisados (2 vueltas): ventanas bajadas y oscurecidas detrás de subtítulos, encuadres corregidos en planos 2, 6, 10 y 11; frames de 'inteligencia artificial' revisados, sin palabras pegadas
+2026-11-26T23:44:47-03:00 [productor] events.ts: 63 eventos; audio.py: mezcla a -14,0 LUFS (pico -3,3 dBTP). Lanzo render
+2026-11-26T23:44:47-03:00 [fabrica] etapa -> render
+2026-11-26T23:45:41-03:00 [productor] portada: '¿FUE LA IA? / 1.271 PERSONAS / LO QUE RESPONDIÓ LA EMPRESA' sobre el plano 1 (robot junto a la silla vacía) -> instagram/portadas/canva-despidos-v2.jpg
+2026-11-26T23:50:49-03:00 [productor] QC del primer render: plano 8 arrancaba con el piso vacío ~1 s; corregido (pila y pedestal desde el inicio), events/audio rehechos (-14 LUFS); re-render

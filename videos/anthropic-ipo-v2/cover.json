@@ -1,0 +1,3 @@
+{ "beat": "b03", "frac": 0.9,
+  "overlay": { "y": 60, "kicker": "ANTHROPIC EN LA BOLSA",
+    "lines": [ { "t": "LE FALTÓ", "size": 160 }, { "t": "UNA PARTE", "c": "yellow", "size": 160 }, { "t": "21 CENTAVOS BAJO LOS US$ 83", "size": 64, "c": "cyan" } ] } }

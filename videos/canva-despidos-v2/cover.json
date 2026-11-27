@@ -1,0 +1,3 @@
+{ "beat": "b01", "frac": 0.8,
+  "overlay": { "kicker": "CANVA",
+    "lines": [ { "t": "¿FUE LA IA?", "size": 150 }, { "t": "1.271 PERSONAS", "c": "yellow", "size": 118 }, { "t": "LO QUE RESPONDIÓ LA EMPRESA", "size": 64, "c": "cyan" } ] } }
