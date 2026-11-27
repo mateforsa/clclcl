@@ -22,3 +22,5 @@
 2026-11-27T09:42:10-03:00 [fabrica] etapa -> render
 2026-11-27T09:42:10-03:00 [productor] audio mezclado a -13,9 LUFS; arranca el render
 2026-11-27T09:43:54-03:00 [productor] portada lista: instagram/portadas/rockstar-sindicato-no.jpg (3 DE CADA 4 / VOTARON NO / AL SINDICATO · 1.163 CONTRA 381)
+2026-11-27T09:45:33-03:00 [productor] render listo: out/rockstar-sindicato-no/rockstar-sindicato-no.mp4, 64 s (63,7 s; 1080x1920, 30 fps, -14,0 LUFS). Hojas qc sin cuadros rotos ni planos vacíos. Plano 13 se mantiene (toma de 63,7 s < 70 s).
+2026-11-27T09:45:33-03:00 [fabrica] etapa -> revision
