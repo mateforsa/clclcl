@@ -842,9 +842,14 @@
      "etapa": "guion",
      "cuando": "2026-11-26T23:24:07-03:00",
      "nota": "devuelto por el verificador: placa del plano 10 dice 260 -> 235; la fuente da 260,41 -> 237,18 (RoboForex). Corregir a 237 con fuente o sacar el valor posterior de la placa. Todo lo demas verificado."
+    },
+    {
+     "etapa": "guion",
+     "cuando": "2026-11-26T23:25:03-03:00",
+     "nota": "corregido tras devolución del verificador"
     }
    ],
-   "nota": "devuelto por el verificador: placa del plano 10 dice 260 -> 235; la fuente da 260,41 -> 237,18 (RoboForex). Corregir a 237 con fuente o sacar el valor posterior de la placa. Todo lo demas verificado."
+   "nota": "corregido tras devolución del verificador"
   },
   "bitcoin-salidas-v2": {
    "titulo": "Bitcoin: salida récord de los fondos, y el saldo sigue en positivo (versión 2)",
@@ -922,7 +927,7 @@
    "tema": "",
    "fuentes": [],
    "puntaje": null,
-   "etapa": "guion",
+   "etapa": "verificado",
    "creado": "2026-11-26T23:18:32-03:00",
    "rehace": "starship-atrapada",
    "publicar_prueba_al_terminar": true,
@@ -936,6 +941,11 @@
      "etapa": "guion",
      "cuando": "2026-11-26T23:23:04-03:00",
      "nota": ""
+    },
+    {
+     "etapa": "verificado",
+     "cuando": "2026-11-26T23:24:59-03:00",
+     "nota": ""
     }
    ],
    "nota": ""
@@ -945,7 +955,7 @@
    "tema": "",
    "fuentes": [],
    "puntaje": null,
-   "etapa": "guion",
+   "etapa": "verificado",
    "creado": "2026-11-26T23:18:32-03:00",
    "rehace": "microsoft-codigo-rojo",
    "publicar_prueba_al_terminar": true,
@@ -958,6 +968,11 @@
     {
      "etapa": "guion",
      "cuando": "2026-11-26T23:22:51-03:00",
+     "nota": ""
+    },
+    {
+     "etapa": "verificado",
+     "cuando": "2026-11-26T23:24:59-03:00",
      "nota": ""
     }
    ],
@@ -1072,5 +1087,5 @@
    "caracteres_voz": 836
   }
  },
- "actualizado": "2026-11-26T23:24:42-03:00"
+ "actualizado": "2026-11-26T23:25:03-03:00"
 }
