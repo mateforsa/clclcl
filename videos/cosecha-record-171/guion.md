@@ -30,19 +30,23 @@ Video vertical 1080x1920, 30 fps, unos 0:60 a 0:65, 14 planos, sin carteles de c
 | # | Tiempo | Texto |
 |---|--------|-------|
 | 1 | 0:00 | La soja bajó. Y aun así la Argentina cosechó más granos que nunca. |
-| 2 | 0:04 | 171 millones de toneladas, según la Secretaría de Agricultura. |
-| 3 | 0:08 | Son 30 millones más que en la campaña anterior. |
-| 4 | 0:11 | Entonces, ¿quién empujó el récord? |
-| 5 | 0:13 | El maíz: llegó a 72,5 millones de toneladas. |
-| 6 | 0:17 | Son más de 20 millones extra, de un solo cultivo. |
-| 7 | 0:21 | Y hoy es el cultivo más grande del país. |
-| 8 | 0:24 | La soja, en cambio, bajó de 51,5 a 49,3 millones. |
-| 9 | 0:30 | Lo sembrado creció apenas un 2,1%. La cosecha, un 21%. |
-| 10 | 0:35 | Cada hectárea rindió más, según la Secretaría, por el buen clima y más tecnología. |
-| 11 | 0:40 | Una consultora privada cuenta menos, 164,4 millones: no suma el maíz para forraje. |
-| 12 | 0:46 | Según esa consultora, las exportaciones de granos llegarían a 44.869 millones de dólares. |
-| 13 | 0:53 | Y la soja, aunque bajó, sigue siendo la que más dólares trae: unos 21.300 millones. |
-| 14 | 0:59 | Contá qué se siembra cerca de donde vivís: el pueblo y el cultivo. |
+| 2 | 0:05 | 171 millones de toneladas, según la Secretaría de Agricultura. |
+| 3 | 0:10 | Son 30 millones más que en la campaña anterior. |
+| 4 | 0:13 | Entonces, ¿quién empujó el récord? |
+| 5 | 0:16 | El maíz: llegó a 72,5 millones de toneladas. |
+| 6 | 0:20 | Son más de 20 millones extra, de un solo cultivo. |
+| 7 | 0:23 | Y hoy es el cultivo más grande del país. |
+| 8 | 0:26 | La soja, en cambio, bajó de 51,5 a 49,3 millones. |
+| 9 | 0:32 | El área sembrada creció apenas un 2,1%. La cosecha, un 21%. |
+| 10 | 0:38 | Una consultora privada cuenta menos, 164,4 millones: no suma el maíz para forraje. |
+| 11 | 0:45 | Según esa consultora, las exportaciones de granos llegarían a 44.869 millones de dólares. |
+| 12 | 0:52 | Y la soja, aunque bajó, sigue siendo la que más dólares trae: unos 21.300 millones. |
+| 13 | 0:59 | Contá qué se siembra cerca de donde vivís: el pueblo y el cultivo. |
+
+**Cambios del productor (27/11/2026):** la primera toma dio 67,5 s, más del tope de 65: se sacó el plano "Cada hectárea rindió
+más, según la Secretaría, por el buen clima y más tecnología" (el dato queda en la descripción). Whisper oía "los sembrados" en
+"Lo sembrado"; se probaron 4 variantes y ganó "El área sembrada". Toma final: 64,07 s, 13 planos, Whisper 100 %. Tiempos reales
+en `timing.json`; las placas de abajo siguen la numeración vieja (el viejo plano 10 ya no está; 11 a 14 pasaron a 10 a 13).
 
 Tiempos estimados a unas 2,9 palabras dichas por segundo (`kioscos-53000`: 190 palabras en 63,98 s); a 2,7 da unos 68 s. Los reales
 salen de `timing.json` después de la voz. Si la toma pasa de 65 s, el plano 10 es el primero que se puede recortar (el dato del

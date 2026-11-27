@@ -502,5 +502,16 @@
    "i griega pe efe",
    "YPF"
   ]
+ },
+ "lo sembrado": {
+  "dicho": "El área sembrada",
+  "estado": "probada",
+  "puntaje": 0.61,
+  "variantes": [
+   "Lo sembrado",
+   "Lo que se sembró",
+   "La superficie sembrada",
+   "El área sembrada"
+  ]
  }
 }

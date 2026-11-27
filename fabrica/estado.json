@@ -1842,7 +1842,7 @@
     "https://www.argentina.gob.ar/sites/default/files/aluminio_2024.pdf"
    ],
    "puntaje": null,
-   "etapa": "esperando_ok_final",
+   "etapa": "listo",
    "creado": "2026-11-27T15:00:43-03:00",
    "historial": [
     {
@@ -1893,6 +1893,11 @@
      "etapa": "esperando_ok_final",
      "cuando": "2026-11-27T15:56:45-03:00",
      "nota": ""
+    },
+    {
+     "etapa": "listo",
+     "cuando": "2026-11-27T17:27:22-03:00",
+     "nota": "aprobado por el dueño desde esperando_ok_final"
     }
    ],
    "nota": "",
@@ -1906,7 +1911,7 @@
     "https://www.clarin.com/economia/juicio-ypf-gobierno-dice-fondo-burford-reclama-us-14400-millones-nueva-demanda-inicio-ciadi_0_Tp61FKCNn5.html"
    ],
    "puntaje": 7.8,
-   "etapa": "esperando_ok_final",
+   "etapa": "listo",
    "creado": "2026-11-27T15:20:55-03:00",
    "historial": [
     {
@@ -1967,6 +1972,11 @@
      "etapa": "esperando_ok_final",
      "cuando": "2026-11-27T16:18:59-03:00",
      "nota": ""
+    },
+    {
+     "etapa": "listo",
+     "cuando": "2026-11-27T17:27:22-03:00",
+     "nota": "aprobado por el dueño desde esperando_ok_final"
     }
    ],
    "nota": "",
@@ -1980,7 +1990,7 @@
     "https://www.clarin.com/rural/saliendo-estancamiento-cosecha-granos-record-trae-aluvion-dolares-argentina_0_mjnLdIjqyP.html"
    ],
    "puntaje": 8.3,
-   "etapa": "voz",
+   "etapa": "render",
    "creado": "2026-11-27T16:42:18-03:00",
    "historial": [
     {
@@ -2021,10 +2031,16 @@
      "etapa": "voz",
      "cuando": "2026-11-27T16:48:49-03:00",
      "nota": "voz sin OK (regla voz_sin_ok del dueño)"
+    },
+    {
+     "etapa": "render",
+     "cuando": "2026-11-27T17:23:51-03:00",
+     "nota": ""
     }
    ],
-   "nota": ""
+   "nota": "",
+   "caracteres_voz": 1065
   }
  },
- "actualizado": "2026-11-27T16:48:49-03:00"
+ "actualizado": "2026-11-27T17:27:22-03:00"
 }

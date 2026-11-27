@@ -11,3 +11,16 @@
 2026-11-27T16:48:31-03:00 [fabrica] etapa -> verificado
 2026-11-27T16:48:31-03:00 [fabrica] etapa -> esperando_ok_voz
 2026-11-27T16:48:49-03:00 [fabrica] voz SIN OK del dueño (regla voz_sin_ok): ~1065 caracteres
+2026-11-27T16:49:17-03:00 [fabrica] cosecha-record-171: la voz gasta unos 1065 caracteres de ElevenLabs. AVISO: no se puede leer el saldo (la clave no tiene ese permiso); anotalo en fabrica/config.json.
+2026-11-27T16:49:17-03:00 [productor] generando voz (una toma)
+2026-11-27T16:49:29-03:00 [productor] toma 1 dio 67,5 s (>65): saco el plano 10 (Cada hectárea rindió más...) y regenero la voz
+2026-11-27T16:49:38-03:00 [productor] voz lista: 13 planos, 64,2 s; la escucho con Whisper
+2026-11-27T16:49:52-03:00 [oido] oído: 99 % de coincidencia; dudosos: ninguno; diferencias: lo sembrado→los sembrados
+2026-11-27T16:50:22-03:00 [productor] Whisper oyó 'los sembrados' por 'lo sembrado'; probé 4 variantes, gana 'El área sembrada' (61 %); regenero la voz (vuelta 2)
+2026-11-27T16:50:42-03:00 [oido] oído: 100 % de coincidencia; dudosos: ninguno; diferencias: 
+2026-11-27T16:50:47-03:00 [productor] voz final 64,1 s, Whisper 100 %; armo los planos
+2026-11-27T16:58:02-03:00 [productor] beats.ts, entry.ts y props.tsx escritos (13 planos); saco stills
+2026-11-27T17:20:28-03:00 [productor] stills revisados; franja de subtítulos medida cada 3 frames sin texto (máx p99,5 = 50/255, media ≤ 42); uniones de subtítulos medidas: claves Agricultura., millones, toneladas., granos
+2026-11-27T17:23:51-03:00 [fabrica] etapa -> render
+2026-11-27T17:23:51-03:00 [productor] eventos y mezcla listos; lanzo el render
+2026-11-27T17:24:29-03:00 [productor] portada lista: instagram/portadas/cosecha-record-171.jpg (plano 5, COSECHA RÉCORD · 171 MILLONES DE TONELADAS · Y LA SOJA BAJÓ)

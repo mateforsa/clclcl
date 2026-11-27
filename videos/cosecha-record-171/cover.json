@@ -1,0 +1,3 @@
+{ "beat": "b05", "frac": 0.95,
+  "overlay": { "kicker": "CAMPO",
+    "lines": [ { "t": "COSECHA" }, { "t": "RÉCORD", "c": "yellow", "size": 165 }, { "t": "171 MILLONES DE TONELADAS", "size": 64, "c": "cyan" }, { "t": "Y LA SOJA BAJÓ", "size": 64 } ] } }
