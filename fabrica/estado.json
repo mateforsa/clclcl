@@ -1842,15 +1842,26 @@
     "https://www.argentina.gob.ar/sites/default/files/aluminio_2024.pdf"
    ],
    "puntaje": null,
-   "etapa": "idea",
+   "etapa": "guion",
    "creado": "2026-11-27T15:00:43-03:00",
    "historial": [
     {
      "etapa": "idea",
      "cuando": "2026-11-27T15:00:43-03:00"
+    },
+    {
+     "etapa": "guion",
+     "cuando": "2026-11-27T15:06:25-03:00",
+     "nota": ""
+    },
+    {
+     "etapa": "guion",
+     "cuando": "2026-11-27T15:08:30-03:00",
+     "nota": "devuelto por el verificador: placa 3 'FÁBRICAS DE LA ISLA' -> son fábricas de electrónica; Arcor nombre/1951 necesita segunda fuente no Wikipedia (Cronista 2021) en hoja, fuentes en pantalla y descripción"
     }
-   ]
+   ],
+   "nota": "devuelto por el verificador: placa 3 'FÁBRICAS DE LA ISLA' -> son fábricas de electrónica; Arcor nombre/1951 necesita segunda fuente no Wikipedia (Cronista 2021) en hoja, fuentes en pantalla y descripción"
   }
  },
- "actualizado": "2026-11-27T15:00:43-03:00"
+ "actualizado": "2026-11-27T15:08:30-03:00"
 }
