@@ -687,9 +687,14 @@
      "etapa": "guion",
      "cuando": "2026-11-26T21:51:02-03:00",
      "nota": "RECHAZADO por el dueño: sacar 'parte 6' (voz, placas, portada, títulos, descripción). Numerar partes solo si continúa la misma historia."
+    },
+    {
+     "etapa": "guion",
+     "cuando": "2026-11-26T21:52:03-03:00",
+     "nota": "sin 'parte 6' por pedido del dueño"
     }
    ],
-   "nota": "RECHAZADO por el dueño: sacar 'parte 6' (voz, placas, portada, títulos, descripción). Numerar partes solo si continúa la misma historia.",
+   "nota": "sin 'parte 6' por pedido del dueño",
    "caracteres_voz": 961
   },
   "hoy-hace-dreamcast": {
@@ -742,5 +747,5 @@
    "caracteres_voz": 853
   }
  },
- "actualizado": "2026-11-26T21:51:20-03:00"
+ "actualizado": "2026-11-26T21:52:03-03:00"
 }

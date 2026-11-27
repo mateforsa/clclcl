@@ -1,7 +1,7 @@
-# GTA VI, parte 6: Take-Two reclamó y GitHub bajó 3.007 proyectos del GTA VI para PC
+# Take-Two reclamó y GitHub bajó 3.007 proyectos del GTA VI para PC
 
-Video vertical 1080x1920, 30 fps, unos 60-63 s estimados, 15 planos, sin carteles de capítulo. Voz: una sola toma (163 palabras dichas, 151 mostradas, tras la corrección pedida por el verificador). Todavía sin voz ni tiempos reales.
-Parte 6 de la serie GTA VI (`gta-vi`, `gta-vi-parte-2`, `gta-vi-xbox-ps5`, `gta-vi-online`, `gta-vi-hacker`). No repite datos de las otras partes, salvo "sin versión de PC", que acá es el tema.
+Video vertical 1080x1920, 30 fps, unos 60-63 s estimados, 15 planos, sin carteles de capítulo. Voz: una sola toma (161 palabras dichas, 149 mostradas; se sacó "Parte seis." del plano 15 por pedido del dueño). Todavía sin voz ni tiempos reales.
+Video suelto, sin número de parte: es un hecho nuevo, no continúa otra historia (regla del dueño: solo se numera si sigue exactamente la misma historia). En el canal hay otros videos de GTA VI (`gta-vi`, `gta-vi-parte-2`, `gta-vi-xbox-ps5`, `gta-vi-online`, `gta-vi-hacker`); este no repite sus datos, salvo "sin versión de PC", que acá es el tema.
 Inicio: G67, un cero ("Cero versiones de GTA VI para PC"). Cierre: H79, pedido de compartir con destinatario concreto, sin "Seguime" y sin pregunta. El último plano antes del cierre vuelve al cero del inicio.
 
 **Tratamiento:** el video cuenta la noticia. No dice cómo conseguir ni usar el proyecto, no nombra al programador, ni la copia que sigue activa, ni el sitio que lista los proyectos. En pantalla tampoco deben aparecer esos nombres, ni enlaces, ni capturas del repositorio.
@@ -31,7 +31,7 @@ Tiempos estimados a 2,7 palabras por segundo. Los reales salen de la voz.
 | 12 | 0:44 | GitHub bajó 3.007 proyectos con un solo reclamo. |
 | 13 | 0:48 | Pero, según medios especializados, otros siguen con una copia. Todavía no se puede jugar. |
 | 14 | 0:53 | Rockstar no anunció versión de PC. Oficiales, sigue habiendo cero. |
-| 15 | 0:57 | Parte seis. Mandáselo al que lo espera en PC. |
+| 15 | 0:57 | Mandáselo al que lo espera en PC. |
 
 ## Hoja de datos y fuentes
 
@@ -59,13 +59,14 @@ Notas:
 - **Placa del plano 1:** tiene que decir "0 versiones oficiales para PC" (con "oficiales"), aunque la voz no lo diga.
 - "Esta semana" (plano 3): el reclamo es del martes 24 y el video es del jueves 26. Si se publica desde el lunes 30, cambiar por "la semana pasada".
 - Un extracto aislado dice que GitHub repuso el código: parece referirse a otro caso viejo (Multi Theft Auto). El resto de las fuentes, con una comprobación del 26/11, dice que sigue caído. No se usó.
+- **Plano 15 y portada, sin número:** la placa de arriba del plano 15 dice "GTA VI" (antes "GTA VI · PARTE 6") y la grande "Mandáselo" / "al que lo espera en PC". Sin la fila de casilleros 1 a 5 ni el "6". El kicker de la portada también queda "GTA VI".
 - "Ingeniería inversa: desarmar un juego para ver cómo funciona" es una explicación del término, no un dato de las fuentes.
 - "3.006 copias" y "3.007 proyectos" son la misma cuenta (original más forks). En el guion ya no aparece "un día después"; si una placa muestra fechas, que sea "20/11, según Take-Two". En pantalla conviene mostrar "1 + 3.006 = 3.007" para que no parezca un error.
 
 ## Títulos
 
 1. **Take-Two reclamó y GitHub bajó 3.007 proyectos del GTA VI para PC**
-2. **GTA VI, parte 6: el proyecto para jugarlo en PC que bajaron con un solo reclamo**
+2. **GTA VI: el proyecto para jugarlo en PC que bajaron con un solo reclamo**
 3. **Cero versiones oficiales de GTA VI para PC. Y 3.007 proyectos dados de baja.**
 
 ## Descripción de Instagram
@@ -77,7 +78,7 @@ Se llamaba Leonida: un proyecto no oficial para correr en PC la versión de Xbox
 Take-Two presentó un reclamo de derechos de autor y GitHub bajó el original y 3.006 copias.
 Según medios especializados, otros programadores siguen. Rockstar no anunció versión de PC.
 
-Parte 6 de GTA VI. Mandáselo al que lo está esperando en PC.
+Mandáselo al que lo está esperando en PC.
 
 #gta6 #gtavi #rockstargames #videojuegos #pcgaming
 ```

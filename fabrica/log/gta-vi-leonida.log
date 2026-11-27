@@ -32,3 +32,5 @@
 2026-11-26T21:51:02-03:00 [dueño] RECHAZADO en esperando_ok_final: no quiero que sea parte x parte x, no me gusta. Si va a ser un video por partes que sea de lo mismo exactamente, que siga la historia en la segunda parte.
 2026-11-26T21:51:02-03:00 [fabrica] etapa -> guion (RECHAZADO por el dueño: sacar 'parte 6' (voz, placas, portada, títulos, descripción). Numerar partes solo si continúa la misma historia.)
 2026-11-26T21:51:20-03:00 [fabrica] regla nueva del dueño anotada en docs/COMO-HACER-UN-VIDEO.md y en el guionista: sin 'parte N' salvo continuación de la misma historia
+2026-11-26T21:52:03-03:00 [guionista] sin 'parte 6' por pedido del dueño: plano 15 queda 'Mandáselo al que lo espera en PC.'; título, título 2, descripción y cabecera sin número; 161 palabras dichas; apertura G67 un cero y cierre H79 pedido de compartir sin cambios. Productor: placa del plano 15 'GTA VI · PARTE 6' -> 'GTA VI', sacar casilleros 1-5 y '6' y la palabra clave 'seis'; kicker de portada -> 'GTA VI'; voz nueva
+2026-11-26T21:52:03-03:00 [fabrica] etapa -> guion (sin 'parte 6' por pedido del dueño)
