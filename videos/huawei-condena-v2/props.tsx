@@ -358,7 +358,7 @@ export const Folder: React.FC<P> = ({ t, p }) => {
     <B s={[0.3, 0.05, 0.1]} pos={[-0.25, 0.025, -0.36]} c={color} />
     <B s={[0.8, 0.012, 0.56]} pos={[0, 0.056, 0]} c="#f5f1e6" />
     {ks >= 0.15 && <B s={[0.36, 0.008, 0.24]} pos={[0.1, 0.066, 0.05]} rot={[0, 0.2, 0]} c={RED} e={RED} ei={0.5} />}
-    {stamp !== undefined && ks > -0.35 && ks < 1 && <group position={[0.1, 0.08 + (ks < 0 ? -ks / 0.35 * 0.5 + 0.4 : down * 0.4), 0.05]} rotation={[0, 0.2, 0]}>
+    {stamp !== undefined && ks > -0.35 && ks < 1 && <group position={[0.1, 0.08 + (ks < 0 ? -ks / 0.35 * 0.25 + 0.3 : down * 0.3), 0.05]} rotation={[0, 0.2, 0]}>
       <B s={[0.38, 0.06, 0.26]} pos={[0, 0.03, 0]} c={RED} /><B s={[0.3, 0.1, 0.2]} pos={[0, 0.11, 0]} c="#3a2a1d" />
       <Cyl r={0.05} h={0.3} pos={[0, 0.3, 0]} c="#3a2a1d" /><mesh position={[0, 0.5, 0]}><sphereGeometry args={[0.1, 10, 8]} /><M c="#2a1e15" /></mesh></group>}
   </group>);
