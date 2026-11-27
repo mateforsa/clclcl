@@ -1833,7 +1833,24 @@
    ],
    "nota": "",
    "caracteres_voz": 1020
+  },
+  "de-donde-vienen-tus-cosas": {
+   "titulo": "Lo que tenés en la mano tiene domicilio: las ciudades que fabrican tus cosas",
+   "tema": "argentina productiva (pedido del dueño)",
+   "fuentes": [
+    "https://www.lanacion.com.ar/economia/electronica-tierra-del-fuego-industria-nid2180148/",
+    "https://www.argentina.gob.ar/sites/default/files/aluminio_2024.pdf"
+   ],
+   "puntaje": null,
+   "etapa": "idea",
+   "creado": "2026-11-27T15:00:43-03:00",
+   "historial": [
+    {
+     "etapa": "idea",
+     "cuando": "2026-11-27T15:00:43-03:00"
+    }
+   ]
   }
  },
- "actualizado": "2026-11-27T14:43:04-03:00"
+ "actualizado": "2026-11-27T15:00:43-03:00"
 }
