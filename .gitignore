@@ -9,3 +9,4 @@ fabrica/__pycache__/
 fabrica/panel/panel.html
 fabrica/panel/mini/
 fabrica/panel/videos/
+fabrica/estado.json.lock

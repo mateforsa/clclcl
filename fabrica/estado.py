@@ -54,6 +54,8 @@ def caracteres(slug):
 
 
 def main():
+    # un solo estado.py a la vez: varios agentes en paralelo se pisaban los cambios de etapa
+    import fcntl; global _candado; _candado = open(EST + ".lock", "w"); fcntl.flock(_candado, fcntl.LOCK_EX)
     a = argparse.ArgumentParser(); sub = a.add_subparsers(dest="cmd", required=True)
     n = sub.add_parser("nuevo"); n.add_argument("slug"); n.add_argument("--titulo", required=True); n.add_argument("--tema", default=""); n.add_argument("--fuentes", nargs="*", default=[]); n.add_argument("--puntaje", type=float)
     t = sub.add_parser("etapa"); t.add_argument("slug"); t.add_argument("etapa", choices=ETAPAS + ["descartado"]); t.add_argument("--nota", default="")
