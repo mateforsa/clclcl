@@ -216,16 +216,9 @@
   "nota": "Whisper eligió por puntaje \"Meng Uanyó\" pero la transcribe \"Menguaño\"; la 5 (Meng Uanshóu) se transcribe exacta en castellano y en inglés. Elegida por el productor de huawei-condena-v2; pendiente de que el dueño elija número"
  },
  "Alpine": {
-  "dicho": "Alpáin",
-  "estado": "probada",
-  "puntaje": 0.89,
-  "variantes": [
-   "Alpín",
-   "Alpáin",
-   "Alpine",
-   "el Alpín",
-   "Alpínn"
-  ]
+  "dicho": "Alpín",
+  "estado": "confirmada",
+  "nota": "el dueño (27/11): se dice ALPIN, no Alpáin"
  },
  "Muse": {
   "dicho": "Miúz",
