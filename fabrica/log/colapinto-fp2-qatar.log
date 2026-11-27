@@ -23,3 +23,5 @@
 2026-11-27T19:09:01-03:00 [productor] audio: 66 eventos, mezcla -14,2 LUFS. Paso a render (espera turno si hay otro)
 2026-11-27T19:09:01-03:00 [fabrica] etapa -> render
 2026-11-27T19:09:44-03:00 [productor] portada lista: instagram/portadas/colapinto-fp2-qatar.jpg (CASI SE TOCAN / Y SAINZ SE ENOJÓ / PRÁCTICA 2 · TERMINÓ 15°). Render en curso
+2026-11-27T19:12:55-03:00 [productor] render listo: out/colapinto-fp2-qatar/colapinto-fp2-qatar.mp4, 54 s (53,67 s; 1080x1920, 30 fps, -14,2 LUFS). Hojas qc revisadas sin cuadros rotos ni planos vacíos. guion.md todavía lista 13 planos (la voz tiene 11: se sacaron el 10 y el 5 por duración)
+2026-11-27T19:12:55-03:00 [fabrica] etapa -> revision
