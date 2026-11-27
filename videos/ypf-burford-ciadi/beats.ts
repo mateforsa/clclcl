@@ -19,7 +19,7 @@ export const BEATS: BeatSpec[] = [
   // 1. el mazo baja en Nueva York y la pila se cae de la balanza
   { id: 'b01', set: 'void', cam: { from: [0.7, 2.4, 8.3], to: [0.05, 2.2, 7.4], look: [0, 0.75, 0], fov: 44 }, keywords: ['creés', 'juicio', 'YPF'],
     actors: [
-      { type: 'edificio', pos: [0, 0, -2.4], p: { w: 2.2, h: 2.1, d: 1.0, seed: 3, cols: 5, sign: 'NUEVA YORK' } },
+      { type: 'edificio', pos: [-0.6, 0, -2.4], p: { w: 1.9, h: 2.1, d: 1.0, seed: 3, cols: 5, sign: 'NUEVA YORK' } },
       { type: 'desk', pos: [-0.75, 0, 0.6], s: 0.7 },
       { type: 'mazo', pos: [-0.85, 0.574, 0.6], s: 1.1, p: { hit: 2.37 } },
       { type: 'ring', pos: [0.45, 0.03, 0.4], p: { r: 0.75, color: C.gold } },
@@ -140,9 +140,9 @@ export const BEATS: BeatSpec[] = [
   // 11. en Estados Unidos, los demandantes le piden a la Corte Suprema que revise el fallo
   { id: 'b11', set: 'void', cam: { from: [0.6, 2.35, 7.6], to: [-0.15, 2.15, 6.8], look: [0, 0.8, -1.0], fov: 44 }, keywords: ['demandantes', 'revise', 'Corte'],
     actors: [
-      { type: 'edificio', pos: [0.2, 0, -2.6], p: { w: 2.2, h: 2.2, d: 1.0, seed: 11, cols: 6, color: '#2d1a6e', sign: 'CORTE SUPREMA · EE.UU.', signSize: 0.52 } },
-      { type: 'person', pos: [-1.0, 0, -0.4], rot: [0, 0.5, 0], at: 'demandantes', p: { ...TRAJE, pose: 'hold' } },
-      { type: 'person', pos: [-0.35, 0, -0.2], rot: [0, 0.2, 0], at: 1.55, p: { ...TRAJE2, pose: 'hold' } },
+      { type: 'edificio', pos: [0.2, 0, -2.6], p: { w: 2.2, h: 2.5, d: 1.0, seed: 11, cols: 6, color: '#2d1a6e', sign: 'CORTE SUPREMA · EE.UU.', signSize: 0.52 } },
+      { type: 'person', pos: [-1.0, 0, -0.4], rot: [0, 0.5, 0], s: 0.9, at: 'demandantes', p: { ...TRAJE, pose: 'hold' } },
+      { type: 'person', pos: [-0.35, 0, -0.2], rot: [0, 0.2, 0], s: 0.9, at: 1.55, p: { ...TRAJE2, pose: 'hold' } },
       { type: 'papel', pos: [0.7, 1.15, -0.2], rot: [0, -0.2, 0], p: { text: 'FALLO', w: 0.7, h: 0.8 } },
       { type: 'lupa', pos: [0.62, 0.98, 0.15], rot: [0, -0.2, 0.2], s: 0.8, at: 'revise' },
     ],
@@ -150,15 +150,15 @@ export const BEATS: BeatSpec[] = [
       P1('LA CORTE TODAVÍA NO DECIDIÓ SI LO TOMA', 'revise', { size: 38 }), FUENTE] },
 
   // 12. las dos balanzas: 16.000 en Nueva York, 14.400 en el CIADI
-  { id: 'b12', set: 'void', cam: { from: [-0.5, 2.35, 7.4], to: [0.2, 2.15, 6.6], look: [-0.2, 0.85, 0], fov: 44 }, keywords: ['16.000 millones.', '14.400,', 'tribunal.'],
+  { id: 'b12', set: 'void', cam: { from: [-0.5, 2.4, 8.4], to: [0.15, 2.2, 7.6], look: [-0.05, 0.8, 0], fov: 44 }, keywords: ['16.000 millones.', '14.400,', 'tribunal.'],
     actors: [
-      { type: 'ring', pos: [-0.55, 0.03, 0], p: { r: 0.7, color: C.gold } },
-      { type: 'balanza', pos: [-1.0, 0, 0], s: 0.85, p: { n: 10, max: 0.15, ref: 10 } },
-      { type: 'panel', pos: [-1.0, 2.1, 0], p: { text: 'NUEVA YORK', w: 0.95, h: 0.24, size: 0.62, color: C.gold } },
-      { type: 'ring', pos: [1.05, 0.03, 0], at: 'Ahora', p: { r: 0.7, color: C.magenta } },
-      { type: 'balanza', pos: [0.5, 0, 0], s: 0.85, at: 'Ahora', p: { n: 9, from: 0, grow: 0.35, dur: 1.0, max: 0.135, ref: 10 } },
-      { type: 'panel', pos: [0.5, 2.1, 0], at: 'Ahora', p: { text: 'CIADI', w: 0.95, h: 0.24, size: 0.62, color: C.magenta } },
-      { type: 'panel', pos: [-0.25, 0.75, 0.3], p: { text: 'ESQUEMA, NO A ESCALA', w: 1.2, h: 0.18, size: 0.62, color: '#b9a3e8', bg: '#1b1340' } },
+      { type: 'ring', pos: [-0.45, 0.03, 0], p: { r: 0.6, color: C.gold } },
+      { type: 'balanza', pos: [-0.8, 0, 0], s: 0.75, p: { n: 10, max: 0.15, ref: 10 } },
+      { type: 'panel', pos: [-0.8, 1.95, 0], p: { text: 'NUEVA YORK', w: 0.95, h: 0.24, size: 0.62, color: C.gold } },
+      { type: 'ring', pos: [1.05, 0.03, 0], at: 'Ahora', p: { r: 0.6, color: C.magenta } },
+      { type: 'balanza', pos: [0.7, 0, 0], s: 0.75, at: 'Ahora', p: { n: 9, from: 0, grow: 0.35, dur: 1.0, max: 0.135, ref: 10 } },
+      { type: 'panel', pos: [0.7, 1.95, 0], at: 'Ahora', p: { text: 'CIADI', w: 0.95, h: 0.24, size: 0.62, color: C.magenta } },
+      { type: 'panel', pos: [-0.05, 0.6, 0.3], p: { text: 'ESQUEMA, NO A ESCALA', w: 1.0, h: 0.18, size: 0.62, color: '#b9a3e8', bg: '#1b1340' } },
     ],
     overlays: [P1('NUEVA YORK: ~US$ 16.000 M', '16.000', { size: 46 }), P2('CIADI: US$ 14.400 M + INTERESES', '14.400', { size: 40 }), FUENTE] },
 
