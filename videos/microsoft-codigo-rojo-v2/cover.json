@@ -1,0 +1,3 @@
+{ "beat": "b01", "frac": 0.9,
+  "overlay": { "kicker": "12 DE NOVIEMBRE",
+    "lines": [ { "t": "¿SIN MAIL?", "c": "yellow", "size": 150 }, { "t": "NO ERA TU COMPU", "size": 112 }, { "t": "tu empresa puede reclamar un descuento", "size": 46, "c": "cyan" } ] } }

@@ -264,7 +264,7 @@ export const FlipCal: React.FC<P> = ({ t, tt, p }) => {
 export const Traffic: React.FC<P> = ({ tt, p }) => {
   const { len = 3.2, gap = 0.36, speed = 1.0, jam, extra, color = '#8fa3b8', color2 = '#7b6bff', T = 7 } = p;
   const spawns: { s: number; teams: boolean }[] = [];
-  for (let s = -len / speed; s < T; ) { const teams = extra !== undefined && s >= extra; spawns.push({ s, teams }); s += (teams ? gap / 2.2 : gap) / speed; }
+  for (let s = -len / speed; s < T; ) { const teams = extra !== undefined && s >= extra; spawns.push({ s, teams }); s += (teams ? gap / 1.7 : gap) / speed; }
   let rank = 0; const travel = len / speed;
   const belt = jam !== undefined && tt >= jam ? 0 : tt * speed;
   return (

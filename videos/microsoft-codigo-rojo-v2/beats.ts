@@ -54,11 +54,11 @@ export const BEATS: BeatSpec[] = [
     overlays: [tag('CASI 24 HORAS SIN CORREO', 'casi', { color: SIG, size: 50, y: 69 })] },
 
   // 3. Y adentro, según memos que leyó Reuters, se prendió una alarma: Código Rojo.  (órbita baja alrededor de la carpeta; la sala pasa a rojo)
-  { id: 'b03', set: 'room', cam: { from: [-1.3, 2.3, 4.6], to: [1.0, 2.1, 4.1], look: [0, 1.25, -0.4], lookTo: [0.1, 1.35, -0.6], fov: 46 }, keywords: ['Reuters', 'Código', 'Rojo'],
+  { id: 'b03', set: 'room', cam: { from: [-1.3, 2.7, 4.6], to: [1.0, 2.5, 4.1], look: [0, 1.0, -0.4], lookTo: [0.1, 1.1, -0.6], fov: 46 }, keywords: ['Reuters', 'Código', 'Rojo'],
     actors: [
       OPS(2.78),
-      { type: 'box', pos: [0, 0.4, 1.0], p: { size: [2.0, 0.8, 1.0], color: '#2a3446' } },
-      { type: 'folder', pos: [0, 0.81, 1.05], rot: [0, -0.15, 0], s: 0.85, at: 'memos', enter: 'none', p: { open: 0.1 } },
+      { type: 'box', pos: [0, 0.5, 0.4], p: { size: [2.0, 1.0, 1.0], color: '#2a3446' } },
+      { type: 'folder', pos: [0, 1.01, 0.45], rot: [0, -0.15, 0], s: 0.85, at: 'memos', enter: 'none', p: { open: 0.1 } },
       { type: 'siren', pos: [-1.6, 3.15, -3.5], s: 1.2, p: { on: 2.78 } },
       { type: 'siren', pos: [1.6, 3.15, -3.5], s: 1.2, p: { on: 2.78 } },
       { type: 'person', pos: [-1.2, 0, -1.4], rot: [0, 0.3, 0], s: 0.95, p: { ...OPR, pose: 'idle' }, out: 'prendió' },
@@ -85,14 +85,14 @@ export const BEATS: BeatSpec[] = [
     overlays: [tag('NO FUE UN ATAQUE', 'ataque', { color: SIG, size: 52, y: 67.5 }), tag('JULIO → NOVIEMBRE: 4 MESES SIN VERLO', 'cuatro', { size: 34, y: 74.5 })] },
 
   // 5. Le sumaron el tráfico de Teams a esos servidores con menos capacidad, y se trabaron.  (lateral alto que corre junto a la cinta)
-  { id: 'b05', set: 'room', cam: { from: [-1.7, 3.3, 4.6], to: [-0.6, 3.0, 4.2], look: [0, 0.75, -0.2], lookTo: [0.25, 0.8, -0.5], fov: 46 }, keywords: ['Teams', 'capacidad'],
+  { id: 'b05', set: 'room', cam: { from: [-1.2, 3.4, 4.9], to: [-0.2, 3.1, 4.5], look: [0, 0.75, -0.2], lookTo: [0.2, 0.8, -0.4], fov: 46 }, keywords: ['Teams', 'capacidad'],
     actors: [
       DC(4.17),
-      { type: 'traffic', pos: [0, 0, 2.2], rot: [0, PI / 2, 0], p: { len: 2.95, gap: 0.42, speed: 1.0, extra: 1.26, jam: 4.17 } },
+      { type: 'traffic', pos: [0, 0, 2.2], rot: [0, PI / 2, 0], p: { len: 2.95, gap: 0.55, speed: 0.9, extra: 1.26, jam: 4.17 } },
       { type: 'rack', pos: [-0.95, 0, -1.2], p: { seed: 1, dark: 2.76 } },
       { type: 'rack', pos: [0, 0, -1.2], p: { seed: 2, red: 4.17 } },
       { type: 'rack', pos: [0.95, 0, -1.2], p: { seed: 3, dark: 2.9 } },
-      { type: 'cross', pos: [-0.95, 1.3, -0.7], s: 0.4, at: 'menos' },
+      { type: 'cross', pos: [-0.8, 1.3, -0.7], s: 0.4, at: 'menos' },
       { type: 'cross', pos: [0.95, 1.3, -0.7], s: 0.4, at: 'capacidad' },
     ],
     overlays: [tag('+ TRÁFICO DE TEAMS', 'Teams', { color: VIOLET, size: 50, y: 67.5 }), tag('- CAPACIDAD', 'capacidad', { color: SIG, size: 50, y: 74.5 })] },
@@ -104,8 +104,8 @@ export const BEATS: BeatSpec[] = [
       { type: 'maptable', pos: [0, 0, 0], p: { pins: [[-1.25, -0.45], [-0.8, 0.45], [-0.15, -0.55], [0.2, 0.35], [0.85, -0.5], [1.25, 0.45]], travel: { at: 1.36, dur: 3.9 } } },
       { type: 'folder', pos: [1.0, 0.93, 0.7], rot: [0, -0.4, 0], s: 0.4, at: 'memo', p: { open: 0.15 } },
       { type: 'person', pos: [-1.0, 0, 1.45], rot: [0, PI * 0.85, 0], p: { ...OPR, pose: 'hold' } },
-      { type: 'flipcal', pos: [0, 1.55, -1.6], s: 0.8, at: 'tardaba', p: { months: ['DÍA 1', 'DÍA 2', 'DÍA 3', 'DÍA 4', 'DÍA 5', 'DÍA 6'], start: 0.2, every: 0.42 } },
-      { type: 'box', pos: [0, 0.55, -1.6], at: 'tardaba', enter: 'grow', p: { size: [0.06, 1.1, 0.06], color: '#59626e' } },
+      { type: 'flipcal', pos: [0, 1.35, -1.6], s: 0.75, at: 'tardaba', p: { months: ['DÍA 1', 'DÍA 2', 'DÍA 3', 'DÍA 4', 'DÍA 5', 'DÍA 6'], start: 0.2, every: 0.42 } },
+      { type: 'box', pos: [0, 0.5, -1.6], at: 'tardaba', enter: 'grow', p: { size: [0.06, 1.0, 0.06], color: '#59626e' } },
     ],
     overlays: [tag('ARREGLO URGENTE: 5 A 6 DÍAS', 'cinco', { color: DARKAMB, size: 46, y: 70 })] },
 
@@ -127,11 +127,12 @@ export const BEATS: BeatSpec[] = [
   { id: 'b08', set: 'room', cam: { from: [-1.1, 3.1, 4.1], to: [0.6, 2.95, 3.9], look: [-0.1, 0.75, -0.5], lookTo: [0.2, 0.75, -0.6], fov: 46 }, keywords: ['interno', 'promesa'],
     actors: [
       OFFICE,
-      { type: 'box', pos: [0, 0.38, 0.7], p: { size: [1.9, 0.76, 1.0], color: '#f4f6f8' } },
-      { type: 'folder', pos: [0, 0.77, 0.75], rot: [0, 0.1, 0], s: 0.95, p: { open: 0, stamp: 0.64 } },
-      { type: 'glass', pos: [0, 0, -0.7], p: { w: 4.4, h: 2.6 } },
+      { type: 'box', pos: [0, 0.45, 0.2], p: { size: [1.9, 0.9, 1.0], color: '#f4f6f8' } },
+      { type: 'folder', pos: [0, 0.91, 0.25], rot: [0, 0.1, 0], s: 0.95, p: { open: 0, stamp: 0.64 } },
+      { type: 'glass', pos: [0, 0, -0.9], p: { w: 4.4, h: 2.6 } },
       { type: 'person', pos: [-1.1, 0, 1.3], rot: [0, PI * 0.9, 0], s: 0.95, p: { ...OPR, pose: 'hold' } },
-      { type: 'person', pos: [-0.6, 0, -1.7], at: 'clientes', p: { ...CO1, pose: 'idle' } },
+      { type: 'person', pos: [-1.6, 0, -1.8], rot: [0, PI / 2, 0], p: { ...CO1, pose: 'walk' }, move: { to: [-0.6, 0, -1.8], at: 0, dur: 2.4 }, out: 'clientes' },
+      { type: 'person', pos: [-0.6, 0, -1.8], at: 'clientes', enter: 'none', p: { ...CO1, pose: 'idle' } },
       { type: 'person', pos: [0.2, 0, -1.9], at: 'clientes', p: { ...CO2, pose: 'shrug', phase: 1 } },
       { type: 'person', pos: [1.0, 0, -1.7], at: 'clientes', p: { ...YOU, pose: 'idle', phase: 2 } },
     ],
@@ -145,8 +146,8 @@ export const BEATS: BeatSpec[] = [
       { type: 'workdesk', pos: [1.6, 0, -1.6], s: 0.85, p: { mon: {}, mug: MINT } },
       { type: 'person', pos: [-0.75, 0, 0.1], rot: [0, 0.35, 0], p: { ...CO1, pose: 'hold' }, out: 'reclamar' },
       { type: 'person', pos: [-0.75, 0, 0.1], rot: [0, 0.35, 0], at: 'reclamar', enter: 'none', p: { ...CO1, pose: 'point' } },
-      { type: 'invoice', pos: [0.35, 1.85, 0.0], rot: [0, -0.15, 0.04], s: 1.0, at: 'paga', bob: 0.03 },
-      { type: 'ticket', pos: [0.3, 1.25, 0.75], s: 0.7, at: 'descuento', enter: 'pop' },
+      { type: 'invoice', pos: [0.45, 2.0, -0.3], rot: [0, -0.15, 0.04], s: 1.0, at: 'paga', bob: 0.03 },
+      { type: 'ticket', pos: [0.25, 1.55, 0.7], s: 0.7, at: 'descuento', enter: 'pop' },
     ],
     overlays: [tag('TU EMPRESA PUEDE RECLAMAR UN DESCUENTO', 'reclamar', { color: GREEN, size: 34, y: 70 })] },
 

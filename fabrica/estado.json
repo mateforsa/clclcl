@@ -823,7 +823,7 @@
    "tema": "",
    "fuentes": [],
    "puntaje": null,
-   "etapa": "revision",
+   "etapa": "esperando_ok_final",
    "creado": "2026-11-26T23:17:40-03:00",
    "rehace": "crowdstrike-zscaler",
    "publicar_prueba_al_terminar": true,
@@ -887,6 +887,11 @@
      "etapa": "revision",
      "cuando": "2026-11-27T00:39:17-03:00",
      "nota": ""
+    },
+    {
+     "etapa": "esperando_ok_final",
+     "cuando": "2026-11-27T00:45:52-03:00",
+     "nota": ""
     }
    ],
    "nota": "",
@@ -897,7 +902,7 @@
    "tema": "",
    "fuentes": [],
    "puntaje": null,
-   "etapa": "render",
+   "etapa": "revision",
    "creado": "2026-11-26T23:17:40-03:00",
    "rehace": "bitcoin-salidas",
    "publicar_prueba_al_terminar": true,
@@ -945,6 +950,11 @@
     {
      "etapa": "render",
      "cuando": "2026-11-27T00:38:24-03:00",
+     "nota": ""
+    },
+    {
+     "etapa": "revision",
+     "cuando": "2026-11-27T00:46:18-03:00",
      "nota": ""
     }
    ],
@@ -1080,7 +1090,7 @@
    "tema": "",
    "fuentes": [],
    "puntaje": null,
-   "etapa": "voz",
+   "etapa": "render",
    "creado": "2026-11-26T23:18:32-03:00",
    "rehace": "microsoft-codigo-rojo",
    "publicar_prueba_al_terminar": true,
@@ -1109,6 +1119,11 @@
      "etapa": "voz",
      "cuando": "2026-11-26T23:35:26-03:00",
      "nota": "voz sin OK (regla voz_sin_ok del dueño)"
+    },
+    {
+     "etapa": "render",
+     "cuando": "2026-11-27T00:45:16-03:00",
+     "nota": ""
     }
    ],
    "nota": "",
@@ -1310,5 +1325,5 @@
    "caracteres_voz": 836
   }
  },
- "actualizado": "2026-11-27T00:42:22-03:00"
+ "actualizado": "2026-11-27T00:46:18-03:00"
 }
