@@ -13,3 +13,6 @@
 2026-11-27T00:08:19-03:00 [oido] oído: 97 % de coincidencia; dudosos: SoSoValue, Bitcoin (seguridad 48 %), bitcoins (seguridad 48 %); diferencias: sosovalue→so so value; les entro→le centro
 2026-11-27T00:08:28-03:00 [productor] oído vuelta 2 (97%): SoSoValue ahora se oye 'So-So Value' (resuelto; el oído lo sigue marcando solo por los espacios). 'les entró' -> 'le centró' es unión de palabras de Whisper, se oye bien la frase. PRONUNCIACIÓN SIN RESOLVER: Bitcoin / bitcoins (se transcribe bien siempre, pero Whisper da 48% de seguridad; ninguna variante pasa de 47%: que lo confirme el dueño de oído, audios en fabrica/pronunciacion/bitcoin/todas.mp3)
 2026-11-27T00:13:19-03:00 [productor] beats.ts + props.tsx (sets propios: escritorio nocturno, montaña al atardecer, planta de tanques). Stills
+2026-11-27T00:17:06-03:00 [productor] stills revisados y corregidos (cielo de la montaña, placas cortadas en planos 3 y 6, plano 7 vacío al inicio). Events + mezcla
+2026-11-27T00:17:14-03:00 [fabrica] etapa -> render
+2026-11-27T00:17:14-03:00 [productor] mezcla lista (-14 LUFS). Lanzo render
