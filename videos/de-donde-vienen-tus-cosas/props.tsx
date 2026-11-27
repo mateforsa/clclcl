@@ -173,7 +173,7 @@ export const Mano: React.FC<P> = ({ t, p }) => {
 
 /** Frasco genérico (sin etiqueta) sobre una mesa; la mano baja, lo agarra y lo levanta. p: t1 (llega), t2 (levanta) */
 export const Agarre: React.FC<P> = ({ t, p }) => {
-  const { t1 = 0.4, t2 = 0.9, skin = '#e3ad80', sleeve = '#2f6bff', lift = 0.75 } = p;
+  const { t1 = 0.4, t2 = 0.9, skin = '#e3ad80', sleeve = '#2f6bff', lift = 0.75, legs = 0 } = p;
   const r = 0.27, h = 0.62;
   const down = eio(t / t1); const grip = eio((t - t1) / 0.2); const up = eio((t - t2) / 0.6);
   const handY = lerp(1.4, 0, down) + up * lift; const jarY = up * lift;
@@ -181,12 +181,13 @@ export const Agarre: React.FC<P> = ({ t, p }) => {
     {/* mesa */}
     <B s={[2.6, 0.1, 1.5]} pos={[0, -h / 2 - 0.05 - 0.01, -0.1]} c="#8a5a3a" />
     <B s={[2.6, 0.06, 0.04]} pos={[0, -h / 2 - 0.03, 0.66]} c={C.gold} e={C.gold} ei={0.5} />
+    {legs > 0 && [[-1.2, -0.75], [1.2, -0.75], [-1.2, 0.55], [1.2, 0.55]].map(([x, z], i) => <B key={i} s={[0.1, legs, 0.1]} pos={[x, -h / 2 - 0.11 - legs / 2, z]} c="#5c3a26" />)}
     <group position={[0, jarY, 0]} rotation={[0, up * 0.6, 0]}>
       <Cyl r={r} h={h} seg={10} c="#46c7b8" e="#46c7b8" ei={0.15} />
       <Cyl r={r * 0.82} h={0.12} seg={10} pos={[0, h / 2 + 0.06, 0]} c="#f4f1ff" />
       <Cyl r={r * 1.01} h={0.14} seg={10} pos={[0, 0.02, 0]} c="#2d1a6e" />
     </group>
-    <group position={[0, handY + 0.2, 0]}>
+    <group position={[0, handY - 0.1, 0]} rotation={[0, 0, PI]}>
       <HandShape ow={r + 0.01} od={r} grip={grip} skin={skin} sleeve={sleeve} />
     </group>
   </group>);
@@ -348,7 +349,7 @@ export const Terminal: React.FC<P> = ({ p }) => {
       <mesh position={[0, 1.42, 0]}><coneGeometry args={[0.3, 0.25, 10]} /><M c="#8d8aa0" /></mesh>
     </group>)}
     <B s={[0.9, 0.08, 0.1]} pos={[0.6, 1.25, 0]} rot={[0, 0, -0.35]} c={C.gold} e={C.gold} ei={0.5} />
-    <B s={[0.08, 1.1, 0.08]} pos={[1.02, 0.55, 0]} c="#5a4a9a" />
+    <B s={[0.08, 1.1, 0.08]} pos={[0.55, 0.55, 0]} c="#5a4a9a" />
   </group>);
 };
 /** Barco granelero genérico (sin nombre). p: load (cuándo se llena), speed, at */
