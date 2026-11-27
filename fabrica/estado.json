@@ -1773,7 +1773,7 @@
     "https://tn.com.ar/politica/2026/11/27/que-cambia-con-la-ley-de-prevencion-de-ludopatia-nuevas-restricciones-para-apostar-y-cambios-en-la-publicidad-en-el-futbol/"
    ],
    "puntaje": 7.8,
-   "etapa": "esperando_ok_final",
+   "etapa": "listo",
    "creado": "2026-11-27T13:43:04-03:00",
    "historial": [
     {
@@ -1824,11 +1824,16 @@
      "etapa": "esperando_ok_final",
      "cuando": "2026-11-27T14:29:43-03:00",
      "nota": ""
+    },
+    {
+     "etapa": "listo",
+     "cuando": "2026-11-27T14:43:04-03:00",
+     "nota": "aprobado por el dueño desde esperando_ok_final"
     }
    ],
    "nota": "",
    "caracteres_voz": 1020
   }
  },
- "actualizado": "2026-11-27T14:29:43-03:00"
+ "actualizado": "2026-11-27T14:43:04-03:00"
 }
