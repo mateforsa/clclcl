@@ -1907,10 +1907,15 @@
      "etapa": "guion",
      "cuando": "2026-11-27T15:26:54-03:00",
      "nota": "devuelto por el verificador: plano 14 'contestarle a la Corte' no coincide con la fuente (BAE: plazo hasta el 2/12 para responder el pedido de revision de los demandantes ante la Corte Suprema de EE.UU.); decir que se responde y ante que corte, en voz y placa"
+    },
+    {
+     "etapa": "guion",
+     "cuando": "2026-11-27T15:28:41-03:00",
+     "nota": ""
     }
    ],
-   "nota": "devuelto por el verificador: plano 14 'contestarle a la Corte' no coincide con la fuente (BAE: plazo hasta el 2/12 para responder el pedido de revision de los demandantes ante la Corte Suprema de EE.UU.); decir que se responde y ante que corte, en voz y placa"
+   "nota": ""
   }
  },
- "actualizado": "2026-11-27T15:27:02-03:00"
+ "actualizado": "2026-11-27T15:28:41-03:00"
 }

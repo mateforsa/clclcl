@@ -5,7 +5,7 @@ viernes 27/11/2026, corrida de las 14:34 (candidato 4). Tema sensible (economía
 qué etapa está. Sin opinión política, sin nombrar gobiernos ni dirigentes en la voz (la expropiación se dice con el año, 2012),
 sin decir que la Argentina "debe" ni que "tiene que pagar": es un reclamo, no una condena.
 Video vertical 1080x1920, 30 fps, unos 0:60 a 0:65, 14 planos, sin carteles de capítulo. Voz: Juanma (ElevenLabs), una sola toma.
-186 palabras dichas (contadas sobre la parte "dicho" de `parrafos.json`).
+194 palabras dichas (contadas sobre la parte "dicho" de `parrafos.json`).
 
 - **Inicio:** J99 el error común (playbook 1, sección J): "Si creés que el juicio por YPF se terminó en marzo, te falta un dato."
   Golpe 2: lo que pasó en marzo (Nueva York revocó la condena; había cerca de 16.000 millones en juego). Golpe 3, la contradicción:
@@ -13,15 +13,16 @@ Video vertical 1080x1920, 30 fps, unos 0:60 a 0:65, 14 planos, sin carteles de c
   H76 (`de-donde-vienen-tus-cosas`) y E47 (`ludopatia-sponsors-futbol`); el último J (J91) fue `rockstar-sindicato-no`, hace cuatro
   videos, y J99 no se usó nunca.
 - **Cierre:** continuación con fecha concreta (playbook 3, n.º 1 "La sentencia sale en [fecha]... te cuento cómo termina", adaptado
-  a un plazo real): "La Argentina tiene hasta el 2 de diciembre para contestarle a la Corte. Ese día te cuento qué dijo." Viene
+  a un plazo real): "La Argentina tiene hasta el 2 de diciembre para responder ese pedido en la Corte Suprema de Estados Unidos.
+  Ese día te cuento qué dijo." Viene
   después del callback a los dos números (plano 13). Sin "Seguime para la próxima historia", sin pregunta.
 - **Imagen que abre y cierra:** una balanza low-poly con una pila de billetes en un platillo. Plano 1: un mazo de juez baja en un
   edificio con cartel `NUEVA YORK` y la pila se cae de la balanza. Plano 4: una flecha sale del edificio de Nueva York hacia otro edificio
   con cartel `CIADI · BANCO MUNDIAL` (la ciudad de la sede no está en las fuentes: sin mapa ni ciudad) y la pila se vuelve a armar en otra balanza, un poco más baja. Plano 13: las dos
   balanzas lado a lado, 16.000 contra 14.400. Las pilas son un esquema, no a escala.
 - **Re-ganchos:** el dato que falta (0:00), 16.000 millones (0:10), el "pero" de Burford (0:14), 14.400 (0:19), 2012 (0:26),
-  Petersen (0:30), "es un reclamo" (0:39), 5 a 10 años (0:45), la Corte Suprema (0:48), callback de los dos números (0:54),
-  2 de diciembre (0:59). Ningún tramo pasa de 8 s sin dato nuevo.
+  Petersen (0:30), "es un reclamo" (0:39), 5 a 10 años (0:45), la Corte Suprema (0:47), callback de los dos números (0:52),
+  2 de diciembre (0:57). Ningún tramo pasa de 8 s sin dato nuevo.
 - **Checker de la skill:** 85/100, cero fallas graves. Los tres avisos leves son del lector en inglés (no lee "YPF" escrito como se
   dice, ni números con letras, ni un cierre en castellano).
 
@@ -40,12 +41,12 @@ Video vertical 1080x1920, 30 fps, unos 0:60 a 0:65, 14 planos, sin carteles de c
 | 9 | 0:39 | Esto es un reclamo. Ahí todavía no hay ningún fallo. |
 | 10 | 0:42 | Y el tribunal recién se está formando. |
 | 11 | 0:45 | Según Clarín, estos casos duran de 5 a 10 años. |
-| 12 | 0:48 | En Estados Unidos tampoco terminó: los demandantes pidieron que la Corte Suprema revise el fallo. |
-| 13 | 0:54 | En Nueva York eran 16.000 millones. Ahora son 14.400, en otro tribunal. |
-| 14 | 0:59 | La Argentina tiene hasta el 2 de diciembre para contestarle a la Corte. Ese día te cuento qué dijo. |
+| 12 | 0:47 | En Estados Unidos, los demandantes le pidieron a la Corte Suprema que revise el fallo. |
+| 13 | 0:52 | En Nueva York eran 16.000 millones. Ahora son 14.400, en otro tribunal. |
+| 14 | 0:57 | La Argentina tiene hasta el 2 de diciembre para responder ese pedido en la Corte Suprema de Estados Unidos. Ese día te cuento qué dijo. |
 
-Tiempos estimados a unas 2,9 palabras dichas por segundo (el ritmo de `rockstar-sindicato-no` y `kioscos-53000`): unos 64 s. Los
-reales salen de `timing.json` después de la voz. Si la toma pasa de 65 s, el plano 10 es el primero que se puede recortar (el dato
+Tiempos estimados a unas 2,97 palabras dichas por segundo (el ritmo real de `kioscos-53000`: 190 palabras en 63,98 s): unos 65 s;
+a 2,9 darían unos 67 s. Los reales salen de `timing.json` después de la voz. Si la toma pasa de 65 s, el plano 10 es el primero que se puede recortar (el dato
 pasa a la placa del plano 9).
 
 ## PRONUNCIACIÓN A CONFIRMAR
@@ -86,8 +87,8 @@ por eso el guion no dice "hoy"). Solo entran datos que están en esas dos págin
 | El proceso está en la etapa de conformación del tribunal: un árbitro propuesto por cada parte y un tercero neutral (por eso todavía no hay laudo) | 9 y 10: "Ahí todavía no hay ningún fallo" / "Y el tribunal recién se está formando" | [Clarín](https://www.clarin.com/economia/juicio-ypf-gobierno-dice-fondo-burford-reclama-us-14400-millones-nueva-demanda-inicio-ciadi_0_Tp61FKCNn5.html) ("Todavía la demanda está en proceso de conformación del tribunal, con un integrante propuesto por cada parte más un tercero neutral"), [BAE Negocios](https://www.baenegocios.com/economia/juicio-por-ypf-burford-reclama-usd-14-400-millones-en-un-nuevo-arbitraje-contra-la-argentina/) ("recién transita la etapa de conformación del tribunal") |
 | Suelen ser procesos de entre 5 y 10 años hasta una resolución definitiva | 11: "Según Clarín, estos casos duran de 5 a 10 años" | [Clarín](https://www.clarin.com/economia/juicio-ypf-gobierno-dice-fondo-burford-reclama-us-14400-millones-nueva-demanda-inicio-ciadi_0_Tp61FKCNn5.html) ("Suelen ser procesos largos, de entre 5 y 10 años hasta conocer una resolución definitiva") |
 | Promedio de los arbitrajes del CIADI: 47 meses, según su informe anual 2026 (sin contar anulaciones) | placa del plano 11 | [BAE Negocios](https://www.baenegocios.com/economia/juicio-por-ypf-burford-reclama-usd-14-400-millones-en-un-nuevo-arbitraje-contra-la-argentina/) |
-| Petersen y Eton Park pidieron el 30 de septiembre que la Corte Suprema de EE.UU. revise el fallo de la Cámara; la Corte todavía no decidió si acepta el recurso | 12: "los demandantes pidieron que la Corte Suprema revise el fallo" | [BAE Negocios](https://www.baenegocios.com/economia/juicio-por-ypf-burford-reclama-usd-14-400-millones-en-un-nuevo-arbitraje-contra-la-argentina/) ("Petersen y Eton Park solicitaron el 30 de septiembre que la Corte Suprema de EEUU revise el fallo"; "todavía no decidió si aceptar el recurso"), [Clarín](https://www.clarin.com/economia/juicio-ypf-gobierno-dice-fondo-burford-reclama-us-14400-millones-nueva-demanda-inicio-ciadi_0_Tp61FKCNn5.html) ("dejó como única ventana en ese país una elevación a la Corte Suprema") |
-| La Argentina y YPF tienen plazo hasta el 2 de diciembre para responder | 14: "La Argentina tiene hasta el 2 de diciembre para contestarle a la Corte" | [BAE Negocios](https://www.baenegocios.com/economia/juicio-por-ypf-burford-reclama-usd-14-400-millones-en-un-nuevo-arbitraje-contra-la-argentina/) ("tanto la Argentina como YPF tienen plazo hasta el 2 de diciembre para responder") |
+| Petersen y Eton Park pidieron el 30 de septiembre que la Corte Suprema de EE.UU. revise el fallo de la Cámara; la Corte todavía no decidió si acepta el recurso | 12: "En Estados Unidos, los demandantes le pidieron a la Corte Suprema que revise el fallo" | [BAE Negocios](https://www.baenegocios.com/economia/juicio-por-ypf-burford-reclama-usd-14-400-millones-en-un-nuevo-arbitraje-contra-la-argentina/) ("Petersen y Eton Park solicitaron el 30 de septiembre que la Corte Suprema de EEUU revise el fallo"; "todavía no decidió si aceptar el recurso"), [Clarín](https://www.clarin.com/economia/juicio-ypf-gobierno-dice-fondo-burford-reclama-us-14400-millones-nueva-demanda-inicio-ciadi_0_Tp61FKCNn5.html) ("dejó como única ventana en ese país una elevación a la Corte Suprema") |
+| La Argentina y YPF tienen plazo hasta el 2 de diciembre para responder el pedido de revisión ante la Corte Suprema de EE.UU. | 14: "La Argentina tiene hasta el 2 de diciembre para responder ese pedido en la Corte Suprema de Estados Unidos" | [BAE Negocios](https://www.baenegocios.com/economia/juicio-por-ypf-burford-reclama-usd-14-400-millones-en-un-nuevo-arbitraje-contra-la-argentina/) ("tanto la Argentina como YPF tienen plazo hasta el 2 de diciembre para responder") |
 
 Límites y cómo los trata el guion:
 - **El monto es lo que dice el informe oficial que pide Burford**, no lo que se debe. La voz lo atribuye en el mismo plano 5
@@ -101,7 +102,9 @@ Límites y cómo los trata el guion:
   en el plano 5; dice "Ahora pide".
 - **5 a 10 años es de Clarín** y la voz lo atribuye. BAE da otro dato (47 meses de promedio, informe del CIADI); va solo en placa,
   atribuido, para no mezclar las dos cifras en la voz.
-- **El 2 de diciembre** es el plazo para responder el pedido a la Corte Suprema (BAE). La Corte todavía no decidió si toma el caso:
+- **El 2 de diciembre** es el plazo para responder el pedido de revisión que Petersen y Eton Park presentaron ante la Corte
+  Suprema de EE.UU. (BAE); la Corte no le preguntó nada a la Argentina. La voz nombra la Corte Suprema de Estados Unidos en el
+  plano 14 para que no se confunda con el CIADI del plano 13. La Corte todavía no decidió si toma el caso:
   el cierre promete contar qué contestó la Argentina, no qué decidió la Corte.
 - **Sin política:** Clarín menciona que la expropiación fue "durante el gobierno de Cristina Kirchner"; el guion dice solo "en
   2012", como BAE en su primera línea. No se nombra a ningún gobierno ni dirigente en la voz. Santilli y Abad solo en placa o
@@ -129,7 +132,7 @@ Aparte de los subtítulos. Mayúsculas y signos tal como van. Sin "parte N" en n
 | 11 | `5 A 10 AÑOS · SEGÚN CLARÍN` · `PROMEDIO DEL CIADI: 47 MESES · INFORME ANUAL 2026` | en "5" y al final del plano |
 | 12 | `EE.UU.: PIDIERON QUE LA CORTE SUPREMA REVISE EL FALLO` · `LA CORTE TODAVÍA NO DECIDIÓ SI LO TOMA` | en "Corte Suprema" y en "fallo." |
 | 13 | `NUEVA YORK: ~US$ 16.000 M` · `CIADI: US$ 14.400 M + INTERESES` | en "16.000 millones." y en "14.400," |
-| 14 | `PLAZO PARA RESPONDER: 2 DE DICIEMBRE` · `ESE DÍA TE CUENTO` | en "2 de diciembre" y en "cuento" |
+| 14 | `EE.UU.: PLAZO PARA RESPONDER EL PEDIDO · 2 DE DICIEMBRE` · `ESE DÍA TE CUENTO` | en "2 de diciembre" y en "cuento" |
 
 Fuentes en pantalla (texto chico, abajo, planos 2 a 14): `FUENTES: BAE NEGOCIOS Y CLARÍN, 25/11/2026`.
 Personas: no aparece ninguna persona real con cara. Si hace falta un juez o un árbitro, muñeco genérico sin nombre. Marcas: sin
