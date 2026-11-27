@@ -175,7 +175,7 @@ export const Cart: React.FC<P> = ({ t, tt, p }) => {
       {/* productos */}
       {items.map((it, i) => {
         let y = it.y, s = 1;
-        if (!full) { const t0 = (fill?.at ?? 0) + i * (fill?.every ?? 0.18); const k = tt - t0; if (fill === undefined || k < 0) return null; y += (1 - eo(k / 0.3)) * 1.4; s = Math.min(1, 0.4 + k * 3); }
+        if (!full) { const t0 = (fill?.at ?? 0) + i * (fill?.every ?? 0.18); const k = tt - t0; if (fill === undefined || k < 0) return null; y += (1 - eo(k / 0.3)) * (fill.drop ?? 1.4); s = Math.min(1, 0.4 + k * 3); }
         return <B key={i} s={[it.w * s, it.h * s, 0.2 * s]} pos={[it.x, y + it.h / 2 - 0.08, it.z]} rot={[0, it.ry, 0]} c={it.c} />;
       })}
     </group>

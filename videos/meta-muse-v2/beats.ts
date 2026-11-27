@@ -29,7 +29,7 @@ export const BEATS: BeatSpec[] = [
       { type: 'shelf', pos: [1.95, 0, -1.2], rot: [0, -PI / 2, 0], p: { w: 3.4, seed: 5, levels: 3 } },
       { type: 'shelf', pos: [0, 0, -3.3], p: { w: 3.6, seed: 8, levels: 3 } },
       { type: 'spot', pos: [0, 0, 0.3], p: { r: 0.85 } },
-      { type: 'cart', pos: [0, 0, 0.3], rot: [0, -0.35, 0], p: { n: 9, fill: { at: -0.5, every: 0.16 }, seed: 3 } },
+      { type: 'cart', pos: [0, 0, 0.3], rot: [0, -0.35, 0], p: { n: 9, fill: { at: -0.5, every: 0.16, drop: 0.6 }, seed: 3 } },
     ],
     overlays: [tag('SE LLENA SOLO', 0, { color: TAG, size: 66, y: 70 })] },
 
@@ -91,7 +91,7 @@ export const BEATS: BeatSpec[] = [
       { type: 'gate', pos: [0, 0, -0.2], p: { green: 0, red: 0.98 } },
       { type: 'person', pos: [0, 0, 0.9], rot: [0, PI, 0], p: { ...W2, pose: 'walk' }, move: { to: [0, 0, -1.6], at: 0, dur: 0.9 }, out: 'bot' },
       { type: 'cart', pos: [0, 0, 1.6], rot: [0, PI / 2, 0], p: { full: true, seed: 3 }, move: { to: [0, 0, 0.75], at: 'bot', dur: 0.5 } },
-      { type: 'label', pos: [0, 1.7, 0.75], at: 'inteligencia', bob: 0.04, p: { text: '?', w: 0.5, h: 0.5, bg: TAG, color: '#fff', size: 0.8, weight: 900 } },
+      { type: 'label', pos: [0, 1.5, 0.75], at: 'inteligencia', bob: 0.04, p: { text: '?', w: 0.5, h: 0.5, bg: TAG, color: '#fff', size: 0.8, weight: 900 } },
     ],
     overlays: [tag('NO AVISA QUE ES UNA IA · SEGÚN AMAZON', 'avisa', { color: TAG, size: 36, y: 72 })] },
 
@@ -171,7 +171,7 @@ export const BEATS: BeatSpec[] = [
     overlays: [tag('META: CASOS AISLADOS', 'aislados', { size: 50, y: 70 })] },
 
   // 13. Y hasta el jueves 26 no hubo acuerdo.  (se aleja y sube: el carrito lleno sigue frente a la persiana)
-  { id: 'b13', set: 'room', cam: { from: [0.35, 1.75, 5.0], to: [-0.3, 2.3, 5.7], look: [0, 1.2, -1.2], lookTo: [0, 1.15, -1.3], fov: 46 }, keywords: ['jueves', 'acuerdo'],
+  { id: 'b13', set: 'room', cam: { from: [0.35, 1.75, 5.0], to: [-0.3, 2.3, 5.7], look: [0, 1.1, -1.2], lookTo: [0, 1.0, -1.3], fov: 46 }, keywords: ['jueves', 'acuerdo'],
     actors: [
       STREET,
       { type: 'store', pos: [0, 0, -1.6], s: 0.85, p: { w: 2.4, seed: 5, sign: 'AMAZON', closed: true } },

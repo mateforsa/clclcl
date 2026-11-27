@@ -1422,7 +1422,7 @@
    "tema": "",
    "fuentes": [],
    "puntaje": null,
-   "etapa": "revision",
+   "etapa": "render",
    "creado": "2026-11-26T23:19:22-03:00",
    "rehace": "colapinto-qatar",
    "publicar_prueba_al_terminar": true,
@@ -1471,11 +1471,16 @@
      "etapa": "revision",
      "cuando": "2026-11-27T02:04:35-03:00",
      "nota": ""
+    },
+    {
+     "etapa": "render",
+     "cuando": "2026-11-27T02:08:05-03:00",
+     "nota": "devuelto por el revisor (2a pasada): la torre del plano 8 (25,4-27,4 s) pone a OTRO PILOTO en P6 antes de la sanción; el guion no dice en qué puesto cruzó el sancionado. Que no ocupe una fila numerada. Uniones de subtítulos ya OK (mínimo 14,71 px)"
     }
    ],
-   "nota": "",
+   "nota": "devuelto por el revisor (2a pasada): la torre del plano 8 (25,4-27,4 s) pone a OTRO PILOTO en P6 antes de la sanción; el guion no dice en qué puesto cruzó el sancionado. Que no ocupe una fila numerada. Uniones de subtítulos ya OK (mínimo 14,71 px)",
    "caracteres_voz": 836
   }
  },
- "actualizado": "2026-11-27T02:04:35-03:00"
+ "actualizado": "2026-11-27T02:08:05-03:00"
 }
