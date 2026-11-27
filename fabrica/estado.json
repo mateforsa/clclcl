@@ -823,7 +823,7 @@
    "tema": "",
    "fuentes": [],
    "puntaje": null,
-   "etapa": "render",
+   "etapa": "revision",
    "creado": "2026-11-26T23:17:40-03:00",
    "rehace": "crowdstrike-zscaler",
    "publicar_prueba_al_terminar": true,
@@ -882,9 +882,14 @@
      "etapa": "render",
      "cuando": "2026-11-27T00:32:05-03:00",
      "nota": "devuelto por el revisor: 6 uniones de subtitulos bajo 14 px (5,8 / 18,3 / 21,4 / 29,3-30,0 / 32,4 / 45,2 s) y placa 'LO CUENTO ACÁ' (plano 13, y 78,5%) dentro de la franja inferior de 420 px"
+    },
+    {
+     "etapa": "revision",
+     "cuando": "2026-11-27T00:39:17-03:00",
+     "nota": ""
     }
    ],
-   "nota": "devuelto por el revisor: 6 uniones de subtitulos bajo 14 px (5,8 / 18,3 / 21,4 / 29,3-30,0 / 32,4 / 45,2 s) y placa 'LO CUENTO ACÁ' (plano 13, y 78,5%) dentro de la franja inferior de 420 px",
+   "nota": "",
    "caracteres_voz": 871
   },
   "bitcoin-salidas-v2": {
@@ -1300,5 +1305,5 @@
    "caracteres_voz": 836
   }
  },
- "actualizado": "2026-11-27T00:38:24-03:00"
+ "actualizado": "2026-11-27T00:39:22-03:00"
 }

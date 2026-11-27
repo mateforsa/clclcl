@@ -79,7 +79,7 @@ export const BEATS: BeatSpec[] = [
       KITCHEN,
       { type: 'bowl', pos: [0.9, 0, -1.2] },
       { type: 'ship', pos: [0.1, 1.55, 0.2], s: 0.55, p: { center: true }, bob: 0.03 },
-      { type: 'sticks', pos: [0.1, 1.95, 0.2], rot: [0, PI, 0.38], p: { len: 2.4, open: 0.7, gap: 0.2, close: 2.4 } },
+      { type: 'sticks', pos: [0.1, 1.8, 0.2], rot: [0, PI, 0.38], p: { len: 2.4, open: 0.7, gap: 0.2, close: 2.4 } },
     ],
     overlays: [tag('"CHOPSTICKS" = PALITOS CHINOS', 'apodo', { size: 44 })] },
 
@@ -157,10 +157,10 @@ export const BEATS: BeatSpec[] = [
   { id: 'b13', set: 'room', cam: { from: [0.7, 0.6, 6.4], to: [0.2, 2.1, 7.3], look: [0, 1.0, 0], lookTo: [0, 1.75, 0], fov: 46 }, keywords: ['16', 'confirmada'],
     actors: [
       NIGHT,
-      { type: 'tower', pos: [-1.05, 0, -0.3], p: { armY: 3.2 } },
-      { type: 'booster', pos: [-0.25, 0.06, -0.3], s: 0.6 },
-      { type: 'ship', pos: [-0.25, 1.74, -0.3], s: 0.6, at: 'vuelo', enter: 'drop' },
-      { type: 'hourglass', pos: [0.95, 0.06, 0.5], s: 0.75, at: 'sin' },
+      { type: 'tower', pos: [-1.05, 0, -0.3], p: { armY: 2.4 } },
+      { type: 'booster', pos: [0.45, 0.06, -0.3], s: 0.6 },
+      { type: 'ship', pos: [0.45, 1.74, -0.3], s: 0.6, at: 'vuelo', enter: 'drop' },
+      { type: 'hourglass', pos: [-0.35, 0.06, 0.9], s: 0.7, at: 'sin' },
     ],
     overlays: [tag('VUELO 16 · DICIEMBRE', '16', { color: TEAL, size: 50, y: T1 }), tag('SIN FECHA CONFIRMADA (AL 26/11/2026)', 'sin', { size: 36, y: T2 })] },
 

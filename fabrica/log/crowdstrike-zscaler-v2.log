@@ -35,3 +35,5 @@
 2026-11-27T00:32:05-03:00 [fabrica] etapa -> render (devuelto por el revisor: 6 uniones de subtitulos bajo 14 px (5,8 / 18,3 / 21,4 / 29,3-30,0 / 32,4 / 45,2 s) y placa 'LO CUENTO ACÁ' (plano 13, y 78,5%) dentro de la franja inferior de 420 px)
 2026-11-27T00:32:51-03:00 [productor] devuelto: marco claves aerolínea (b02, b05), dólares (b05), empresas (b07), millones (b08), cierra (b11); subo placas del plano 13 a y 68,5/74 %. Sin regenerar voz
 2026-11-27T00:33:50-03:00 [productor] stills de f174, f548, f642, f878-899, f973, f1356 y plano 13 revisados: cada par separado por recuadro, un solo renglón, sin saltos; placa 13 con borde inferior ~1455 px. Relanzo render (audio sin cambios)
+2026-11-27T00:39:16-03:00 [productor] render listo: out/crowdstrike-zscaler-v2/crowdstrike-zscaler-v2.mp4, 55 s (corregidas uniones de subtítulos y placa 13; hojas qc sin cuadros rotos)
+2026-11-27T00:39:17-03:00 [fabrica] etapa -> revision
