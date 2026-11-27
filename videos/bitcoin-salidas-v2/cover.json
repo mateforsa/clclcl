@@ -1,0 +1,3 @@
+{ "beat": "b01", "frac": 0.66,
+  "overlay": { "kicker": "BITCOIN", "y": 58,
+    "lines": [ { "t": "US$ 100" }, { "t": "QUEDARON EN 48", "c": "yellow", "size": 116 }, { "t": "COMPRADOS EN EL MÁXIMO · AL 26/11/2026", "size": 48, "c": "cyan" } ] } }
