@@ -1882,7 +1882,24 @@
    ],
    "nota": "",
    "caracteres_voz": 1117
+  },
+  "ypf-burford-ciadi": {
+   "titulo": "Juicio por YPF: Burford ahora pide US$ 14.400 millones en otro tribunal",
+   "tema": "Economía argentina",
+   "fuentes": [
+    "https://www.baenegocios.com/economia/juicio-por-ypf-burford-reclama-usd-14-400-millones-en-un-nuevo-arbitraje-contra-la-argentina/",
+    "https://www.clarin.com/economia/juicio-ypf-gobierno-dice-fondo-burford-reclama-us-14400-millones-nueva-demanda-inicio-ciadi_0_Tp61FKCNn5.html"
+   ],
+   "puntaje": 7.8,
+   "etapa": "idea",
+   "creado": "2026-11-27T15:20:55-03:00",
+   "historial": [
+    {
+     "etapa": "idea",
+     "cuando": "2026-11-27T15:20:55-03:00"
+    }
+   ]
   }
  },
- "actualizado": "2026-11-27T15:14:16-03:00"
+ "actualizado": "2026-11-27T15:20:55-03:00"
 }
