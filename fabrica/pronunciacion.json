@@ -126,5 +126,28 @@
    "Bitcoin",
    "Bit-coin"
   ]
+ },
+ "Starship": {
+  "dicho": "Estárship",
+  "estado": "probada",
+  "puntaje": 0.97,
+  "variantes": [
+   "Stárship",
+   "Estárship",
+   "Stárchip",
+   "Starship"
+  ]
+ },
+ "SpaceX": {
+  "dicho": "Espéis Ex",
+  "estado": "probada",
+  "puntaje": 0.98,
+  "variantes": [
+   "Espéis Ex",
+   "Spéis Ex",
+   "Espéis Equis",
+   "Spéisex",
+   "SpaceX"
+  ]
  }
 }

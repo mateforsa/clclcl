@@ -887,7 +887,7 @@
    "tema": "",
    "fuentes": [],
    "puntaje": null,
-   "etapa": "render",
+   "etapa": "revision",
    "creado": "2026-11-26T23:17:40-03:00",
    "rehace": "bitcoin-salidas",
    "publicar_prueba_al_terminar": true,
@@ -920,6 +920,11 @@
     {
      "etapa": "render",
      "cuando": "2026-11-27T00:17:14-03:00",
+     "nota": ""
+    },
+    {
+     "etapa": "revision",
+     "cuando": "2026-11-27T00:27:40-03:00",
      "nota": ""
     }
    ],
@@ -1042,7 +1047,8 @@
      "nota": "voz sin OK (regla voz_sin_ok del dueño)"
     }
    ],
-   "nota": ""
+   "nota": "",
+   "caracteres_voz": 824
   },
   "microsoft-codigo-rojo-v2": {
    "titulo": "Microsoft declara un \"Código Rojo\" interno (microsoft-codigo-rojo) (versión 2)",
@@ -1278,5 +1284,5 @@
    "caracteres_voz": 836
   }
  },
- "actualizado": "2026-11-27T00:24:17-03:00"
+ "actualizado": "2026-11-27T00:27:40-03:00"
 }
