@@ -937,7 +937,7 @@
    "tema": "",
    "fuentes": [],
    "puntaje": null,
-   "etapa": "idea",
+   "etapa": "guion",
    "creado": "2026-11-26T23:18:33-03:00",
    "rehace": "huawei-condena",
    "publicar_prueba_al_terminar": true,
@@ -946,8 +946,14 @@
      "etapa": "idea",
      "cuando": "2026-11-26T23:18:33-03:00",
      "nota": "rehacer huawei-condena como reel de prueba, distinto del original"
+    },
+    {
+     "etapa": "guion",
+     "cuando": "2026-11-26T23:22:41-03:00",
+     "nota": ""
     }
-   ]
+   ],
+   "nota": ""
   },
   "meta-muse-v2": {
    "titulo": "Muse, el agente de Meta que compra por vos (y que Amazon bloqueó) (versión 2)",
@@ -990,5 +996,5 @@
    "nota": ""
   }
  },
- "actualizado": "2026-11-26T23:22:13-03:00"
+ "actualizado": "2026-11-26T23:22:41-03:00"
 }

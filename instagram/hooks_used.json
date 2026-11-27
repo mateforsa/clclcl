@@ -163,5 +163,15 @@
   "video": "colapinto-qatar-v2",
   "inicio": "B11 fecha y hora exactas (Domingo 29, una de la tarde. Colapinto larga en Qatar, donde nunca sumó un punto)",
   "cierre": "Pregunta de predicción con un solo número (¿En qué puesto termina Colapinto en Qatar? Dejá un solo número en los comentarios) + premio: los más cercanos salen nombrados en el video del resultado, sin Seguime"
+ },
+ {
+  "video": "bitcoin-salidas-v2",
+  "inicio": "E49 vos como cliente + G68 una cuenta (Si ponías 100 dólares en Bitcoin en su máximo, el jueves 26 te quedaban unos 48)",
+  "cierre": "Pregunta de un número (¿Vos a cuánto lo compraste? Dejá el número, o un cero si nunca entraste), sin Seguime ni promesa de continuación"
+ },
+ {
+  "video": "huawei-condena-v2",
+  "inicio": "B11 fecha y lugar en medio de la acción, con la persona primero (Aeropuerto de Vancouver, diciembre de 2018. Canadá detiene a Meng Wanzhou...)",
+  "cierre": "Continuación con fecha concreta, playbook 3.1 (Seguime y ese día te cuento cómo termina), tras callback a la persona del gancho (Meng ya está libre. La pena de Huawei llega el 14 de septiembre de 2027)"
  }
 ]
