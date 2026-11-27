@@ -25,3 +25,6 @@
 2026-11-27T01:34:23-03:00 [productor] devolución: saco la lámpara del plano 5 y 6, oscurezco y bajo pared/reja/celda del plano 10, saco 'PUERTA 34', lingotes del plano 7 ya a su altura final; bajo sello (8), formulario (11) y calendario (12-13). Barrido de la franja de subtítulos cada 3 frames
 2026-11-27T01:40:38-03:00 [productor] barrido de la franja de subtítulos cada 3 frames (585 cuadros): limpio tras sacar lámpara, oscurecer celda y escalinata, y cambiar caídas por apariciones (planos 8, 10, 12). Portada regenerada sin 'PUERTA 34'. Re-render
 2026-11-27T01:40:38-03:00 [fabrica] etapa -> render
+2026-11-27T01:50:03-03:00 [fabrica] etapa -> revision (re-render tras devolución (lámpara, pared, PUERTA 34))
+2026-11-27T01:50:07-03:00 [productor] render listo (corrección 1): out/huawei-condena-v2/huawei-condena-v2.mp4, 58 s (1080x1920, 30 fps, -14,6 LUFS). Hojas qc revisadas: sin cuadros rotos
+2026-11-27T01:50:07-03:00 [fabrica] etapa -> revision

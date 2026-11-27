@@ -25,9 +25,9 @@ export const BEATS: BeatSpec[] = [
   { id: 'b01', set: 'room', cam: { from: [1.9, 1.6, 4.6], to: [1.3, 1.45, 3.7], look: [0, 0.5, 0], lookTo: [-0.1, 0.45, 0], fov: 46 }, keywords: ['carrito'],
     actors: [
       AISLE(),
-      { type: 'shelf', pos: [-1.9, 0, -0.6], rot: [0, PI / 2, 0], p: { w: 4.2, seed: 2 } },
-      { type: 'shelf', pos: [1.95, 0, -1.2], rot: [0, -PI / 2, 0], p: { w: 3.4, seed: 5 } },
-      { type: 'shelf', pos: [0, 0, -3.3], p: { w: 3.6, seed: 8 } },
+      { type: 'shelf', pos: [-1.9, 0, -0.6], rot: [0, PI / 2, 0], p: { w: 4.2, seed: 2, levels: 3 } },
+      { type: 'shelf', pos: [1.95, 0, -1.2], rot: [0, -PI / 2, 0], p: { w: 3.4, seed: 5, levels: 3 } },
+      { type: 'shelf', pos: [0, 0, -3.3], p: { w: 3.6, seed: 8, levels: 3 } },
       { type: 'spot', pos: [0, 0, 0.3], p: { r: 0.85 } },
       { type: 'cart', pos: [0, 0, 0.3], rot: [0, -0.35, 0], p: { n: 9, fill: { at: -0.5, every: 0.16 }, seed: 3 } },
     ],
@@ -37,8 +37,8 @@ export const BEATS: BeatSpec[] = [
   { id: 'b02', set: 'room', cam: { from: [2.6, 4.2, 4.6], to: [1.7, 3.8, 4.0], look: [0, 0.45, -0.6], lookTo: [-0.1, 0.45, -0.8], fov: 46 }, keywords: ['Meta', 'compara'],
     actors: [
       AISLE({ noflags: true }),
-      { type: 'shelf', pos: [0, 0, -1.7], p: { w: 3.4, seed: 11, hl: [6, 12], glow: 2.35 } },
-      { type: 'shelf', pos: [-1.95, 0, 0.2], rot: [0, PI / 2, 0], p: { w: 3.0, seed: 4 } },
+      { type: 'shelf', pos: [0, 0, -1.7], p: { w: 3.4, seed: 11, hl: [6, 12], glow: 2.35, levels: 3 } },
+      { type: 'shelf', pos: [-1.95, 0, 0.2], rot: [0, PI / 2, 0], p: { w: 3.0, seed: 4, levels: 3 } },
       { type: 'cart', pos: [0.1, 0, 0.5], rot: [0, PI / 2, 0], p: { n: 9, full: true, seed: 3, scan: 1.7 } },
       { type: 'check', pos: [0.75, 2.05, -1.45], at: 'vos', p: { size: 0.45 } },
     ],
@@ -184,7 +184,7 @@ export const BEATS: BeatSpec[] = [
     overlays: [tag('SIN ACUERDO AL 26/11/2026', 'acuerdo', { color: TAG, size: 46, y: 70 })] },
 
   // 14. ¿Firman antes de fin de año? Sí o no, dejá tu apuesta.  (órbita alta sobre el acuerdo sin firmar)
-  { id: 'b14', set: 'room', cam: { from: [1.1, 3.5, 3.3], to: [-0.8, 3.35, 3.3], look: [0, 0.55, -0.1], lookTo: [0, 0.6, -0.1], fov: 46 }, keywords: ['Firman', 'apuesta'],
+  { id: 'b14', set: 'room', cam: { from: [1.1, 2.0, 3.4], to: [-0.8, 1.95, 3.4], look: [0, 0.85, -0.1], lookTo: [0, 0.88, -0.1], fov: 46 }, keywords: ['Firman', 'apuesta'],
     actors: [
       MEET,
       { type: 'table', pos: [0, 0, 0], p: { w: 2.0, d: 1.2 } },

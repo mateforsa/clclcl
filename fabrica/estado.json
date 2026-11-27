@@ -1288,7 +1288,7 @@
    "tema": "",
    "fuentes": [],
    "puntaje": null,
-   "etapa": "render",
+   "etapa": "revision",
    "creado": "2026-11-26T23:18:33-03:00",
    "rehace": "huawei-condena",
    "publicar_prueba_al_terminar": true,
@@ -1331,6 +1331,16 @@
     {
      "etapa": "render",
      "cuando": "2026-11-27T01:40:38-03:00",
+     "nota": ""
+    },
+    {
+     "etapa": "revision",
+     "cuando": "2026-11-27T01:50:03-03:00",
+     "nota": "re-render tras devolución (lámpara, pared, PUERTA 34)"
+    },
+    {
+     "etapa": "revision",
+     "cuando": "2026-11-27T01:50:07-03:00",
      "nota": ""
     }
    ],
@@ -1441,5 +1451,5 @@
    "caracteres_voz": 836
   }
  },
- "actualizado": "2026-11-27T01:46:52-03:00"
+ "actualizado": "2026-11-27T01:50:07-03:00"
 }
