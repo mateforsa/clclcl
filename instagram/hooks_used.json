@@ -188,5 +188,10 @@
   "video": "meta-muse-v2",
   "inicio": "C26 la pregunta cotidiana (¿Este Black Friday comparás precios pestaña por pestaña?)",
   "cierre": "Predicción de sí o no (¿Firman antes de fin de año? Sí o no, dejá tu apuesta), sin Seguime ni promesa de contarlo"
+ },
+ {
+  "video": "canva-despidos-v2",
+  "inicio": "C30 la pregunta que se responde al final (¿La inteligencia artificial dejó sin puesto a 1.271 personas en Canva? Si trabajás, es tu pregunta. Respuesta al final.)",
+  "cierre": "Pregunta de una palabra sobre el trabajo propio (Y en tu trabajo, ¿ya cambió algo? Contalo en una palabra.), sin Seguime; vuelve al plano 2 (es tu pregunta)"
  }
 ]

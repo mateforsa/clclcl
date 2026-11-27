@@ -42,9 +42,9 @@ Qué cambia contra el original:
 | 10 | 0:46 | Completá la frase: con esos 100 dólares, yo hubiera... |
 
 141 palabras dichas (contadas sobre el lado izquierdo de `[dicho|mostrado]`, máximo 150).
-Re-ganchos: 100 → 48 en el primer plano (0:00), la fecha y el máximo (0:06), el mínimo y el rebote (0:11), el cambio de
-tema a los fondos (0:17), 5.390 millones (0:23), "récord desde que nacieron" (0:28), el récord anterior (0:32) y el "Pero"
-del saldo a favor (0:36). Ningún tramo pasa de 7 s sin un número nuevo.
+Re-ganchos: 100 → 48 en el primer plano (0:00), la fecha y el máximo (0:05), el mínimo y el rebote (0:11), el cambio de
+tema a los fondos (0:17), 5.390 millones (0:23), "récord desde que nacieron" (0:28), el récord anterior (0:33) y el "Pero"
+del saldo a favor (0:37). Ningún tramo pasa de 7 s sin un número nuevo.
 El cierre vuelve al gancho: los mismos 100 dólares del primer plano.
 
 ### La cuenta del gancho (propia)
