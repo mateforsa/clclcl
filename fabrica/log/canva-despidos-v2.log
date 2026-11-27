@@ -18,3 +18,5 @@
 2026-11-26T23:44:47-03:00 [fabrica] etapa -> render
 2026-11-26T23:45:41-03:00 [productor] portada: '¿FUE LA IA? / 1.271 PERSONAS / LO QUE RESPONDIÓ LA EMPRESA' sobre el plano 1 (robot junto a la silla vacía) -> instagram/portadas/canva-despidos-v2.jpg
 2026-11-26T23:50:49-03:00 [productor] QC del primer render: plano 8 arrancaba con el piso vacío ~1 s; corregido (pila y pedestal desde el inicio), events/audio rehechos (-14 LUFS); re-render
+2026-11-26T23:59:22-03:00 [productor] render listo: out/canva-despidos-v2/canva-despidos-v2.mp4, 51 s (1080x1920, 30 fps, audio -14 LUFS); QC sin planos vacíos ni cuadros rotos
+2026-11-26T23:59:22-03:00 [fabrica] etapa -> revision

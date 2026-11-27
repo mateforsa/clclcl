@@ -874,7 +874,8 @@
      "nota": "voz sin OK (regla voz_sin_ok del dueño)"
     }
    ],
-   "nota": ""
+   "nota": "",
+   "caracteres_voz": 871
   },
   "bitcoin-salidas-v2": {
    "titulo": "Bitcoin: salida récord de los fondos, y el saldo sigue en positivo (versión 2)",
@@ -1054,7 +1055,7 @@
    "tema": "",
    "fuentes": [],
    "puntaje": null,
-   "etapa": "render",
+   "etapa": "revision",
    "creado": "2026-11-26T23:18:33-03:00",
    "rehace": "canva-despidos",
    "publicar_prueba_al_terminar": true,
@@ -1087,6 +1088,11 @@
     {
      "etapa": "render",
      "cuando": "2026-11-26T23:44:47-03:00",
+     "nota": ""
+    },
+    {
+     "etapa": "revision",
+     "cuando": "2026-11-26T23:59:22-03:00",
      "nota": ""
     }
    ],
@@ -1219,5 +1225,5 @@
    "caracteres_voz": 836
   }
  },
- "actualizado": "2026-11-26T23:58:14-03:00"
+ "actualizado": "2026-11-26T23:59:29-03:00"
 }
