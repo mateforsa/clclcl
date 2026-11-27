@@ -1068,7 +1068,7 @@
    "tema": "",
    "fuentes": [],
    "puntaje": null,
-   "etapa": "revision",
+   "etapa": "esperando_ok_final",
    "creado": "2026-11-26T23:18:32-03:00",
    "rehace": "starship-atrapada",
    "publicar_prueba_al_terminar": true,
@@ -1131,6 +1131,11 @@
     {
      "etapa": "revision",
      "cuando": "2026-11-27T01:33:18-03:00",
+     "nota": ""
+    },
+    {
+     "etapa": "esperando_ok_final",
+     "cuando": "2026-11-27T01:37:10-03:00",
      "nota": ""
     }
    ],
@@ -1415,5 +1420,5 @@
    "caracteres_voz": 836
   }
  },
- "actualizado": "2026-11-27T01:34:23-03:00"
+ "actualizado": "2026-11-27T01:37:10-03:00"
 }
