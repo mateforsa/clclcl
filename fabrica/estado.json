@@ -1288,7 +1288,7 @@
    "tema": "",
    "fuentes": [],
    "puntaje": null,
-   "etapa": "revision",
+   "etapa": "publicado",
    "creado": "2026-11-26T23:18:33-03:00",
    "rehace": "huawei-condena",
    "publicar_prueba_al_terminar": true,
@@ -1342,10 +1342,26 @@
      "etapa": "revision",
      "cuando": "2026-11-27T01:50:07-03:00",
      "nota": ""
+    },
+    {
+     "etapa": "esperando_ok_final",
+     "cuando": "2026-11-27T01:53:27-03:00",
+     "nota": ""
+    },
+    {
+     "etapa": "publicado",
+     "cuando": "2026-11-27T01:56:40-03:00",
+     "nota": "reel de prueba (versión rehecha a pedido del dueño) https://www.instagram.com/reel/DgO3wZjTou6/"
+    },
+    {
+     "etapa": "publicado",
+     "cuando": "2026-11-27T01:56:45-03:00",
+     "nota": ""
     }
    ],
    "nota": "",
-   "caracteres_voz": 880
+   "caracteres_voz": 880,
+   "link_prueba": "https://www.instagram.com/reel/DgO3wZjTou6/"
   },
   "meta-muse-v2": {
    "titulo": "Muse, el agente de Meta que compra por vos (y que Amazon bloqueó) (versión 2)",
@@ -1456,5 +1472,5 @@
    "caracteres_voz": 836
   }
  },
- "actualizado": "2026-11-27T01:51:37-03:00"
+ "actualizado": "2026-11-27T01:56:45-03:00"
 }

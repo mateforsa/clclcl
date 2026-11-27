@@ -287,14 +287,14 @@ export const TimingTower: React.FC<P> = ({ t, tt, p }) => {
         let y = -i * rh;
         if (swap && i === swap.a) y = lerp(-swap.a * rh, -swap.b * rh, k);
         if (swap && i === swap.b) y = lerp(-swap.b * rh, -swap.a * rh, k);
-        const flash = r.flashAt !== undefined && t >= r.flashAt; const hi = r.hi || (r.hiAt !== undefined && t >= r.hiAt);
+        const after = r.nameAt !== undefined && t >= r.nameAt; const flash = !after && r.flashAt !== undefined && t >= r.flashAt; const nm = after ? r.nameAfter : r.name; const hi = r.hi || (r.hiAt !== undefined && t >= r.hiAt);
         return (
           <group key={i}>
             <group position={[-w / 2 + 0.3, -i * rh, 0.01]}><B s={[0.5, rh - 0.05, 0.04]} pos={[0, 0, -0.03]} c="#0d0e11" /><Label t={t} tt={tt} p={{ text: r.pos, w: 0.5, h: rh - 0.08, color: AMBER, size: 0.72, weight: 900, depth: 0 }} /></group>
             <group position={[0.3, y, hi ? 0.06 : 0]}>
               <B s={[w - 0.62, rh - 0.05, 0.04]} pos={[0, 0, -0.02]} c={hi ? CELD : flash ? '#7a1a12' : '#0d0e11'} />
               {flash && r.tag && <group position={[(w - 0.62) / 2 - 0.42, 0, 0.04]}><B s={[0.8, rh - 0.1, 0.03]} c={RED} /><group position={[0, 0, 0.02]}><Label t={t} tt={tt} p={{ text: r.tag, w: 0.74, h: rh - 0.14, color: '#fff', size: 0.72, weight: 900, depth: 0 }} /></group></group>}
-              <group position={[flash && r.tag ? -0.4 : 0, 0, 0.01]}><Label t={t} tt={tt} p={{ text: r.name, w: flash && r.tag ? w - 1.6 : w - 0.8, h: rh - 0.08, color: '#ffffff', size: 0.6, weight: 800, depth: 0 }} /></group>
+              <group position={[flash && r.tag ? -0.4 : 0, 0, 0.01]}><Label t={t} tt={tt} p={{ text: nm, w: flash && r.tag ? w - 1.6 : w - 0.8, h: rh - 0.08, color: '#ffffff', size: 0.6, weight: 800, depth: 0 }} /></group>
             </group>
           </group>);
       })}

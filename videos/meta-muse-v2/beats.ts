@@ -183,7 +183,7 @@ export const BEATS: BeatSpec[] = [
     ],
     overlays: [tag('SIN ACUERDO AL 26/11/2026', 'acuerdo', { color: TAG, size: 46, y: 70 })] },
 
-  // 14. ¿Firman antes de fin de año? Sí o no, dejá tu apuesta.  (órbita alta sobre el acuerdo sin firmar)
+  // 14. ¿Firman antes de fin de año? Sí o no, dejá tu apuesta.  (órbita a la altura de la mesa: la pared oscura queda detrás del subtítulo)
   { id: 'b14', set: 'room', cam: { from: [1.1, 2.0, 3.4], to: [-0.8, 1.95, 3.4], look: [0, 0.85, -0.1], lookTo: [0, 0.88, -0.1], fov: 46 }, keywords: ['Firman', 'apuesta'],
     actors: [
       MEET,
@@ -191,8 +191,8 @@ export const BEATS: BeatSpec[] = [
       { type: 'contract', pos: [0, 0.8, 0] },
       { type: 'person', pos: [-1.3, 0, -0.1], rot: [0, PI / 2, 0], p: { ...A, pose: 'idle' } },
       { type: 'person', pos: [1.3, 0, -0.1], rot: [0, -PI / 2, 0], p: { ...Z, pose: 'idle' } },
-      { type: 'check', pos: [-0.55, 1.45, 0.1], at: 'Sí', p: { size: 0.5 } },
-      { type: 'cross', pos: [0.55, 1.45, 0.1], at: 'no', p: { size: 0.4 } },
+      { type: 'check', pos: [-0.38, 1.3, 0.1], at: 'Sí', p: { size: 0.32 } },
+      { type: 'cross', pos: [0.38, 1.3, 0.1], at: 'no', p: { size: 0.26 } },
     ],
     overlays: [tag('¿FIRMAN ANTES DE FIN DE AÑO?', 'Firman', { size: 42, y: 67, color: INK }), tag('SÍ / NO', 'Sí', { size: 58, y: 74.5, color: TEAL })] },
 ];

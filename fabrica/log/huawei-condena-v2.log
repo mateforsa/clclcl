@@ -29,3 +29,7 @@
 2026-11-27T01:50:07-03:00 [productor] render listo (corrección 1): out/huawei-condena-v2/huawei-condena-v2.mp4, 58 s (1080x1920, 30 fps, -14,6 LUFS). Hojas qc revisadas: sin cuadros rotos
 2026-11-27T01:50:07-03:00 [fabrica] etapa -> revision
 2026-11-27T01:51:27-03:00 [oido] oído: 98 % de coincidencia; dudosos: ninguno; diferencias: ocho→8; →a; decomisos→de comisos
+2026-11-27T01:53:27-03:00 [revisor] APROBADO (2a pasada, render 04:49): 1080x1920 30fps h264+aac 58,47 s (timing 58,45); -14,6 LUFS, -4,5 dBTP; sin silencios/negros/congelados; 13 planos con cámara en movimiento; franja de subtítulos limpia en los 1754 frames (sin lámpara en 5-6 ni pared en 10); uniones mín 14,94 px una activa y 18,21 px dos activas (191 medidas, 0 sin medida); placas = guion; PUERTA 34 quitado del video y la portada; portada 1080x1920 distinta del original; 5 etiquetas; pronunciación sin términos fallidos.
+2026-11-27T01:53:27-03:00 [fabrica] etapa -> esperando_ok_final
+2026-11-27T01:56:40-03:00 [publicador] reel de prueba (versión rehecha a pedido del dueño) https://www.instagram.com/reel/DgO3wZjTou6/
+2026-11-27T01:56:45-03:00 [fabrica] etapa -> publicado

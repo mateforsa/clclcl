@@ -110,7 +110,7 @@ export const BEATS: BeatSpec[] = [
     actors: [
       BOARD,
       { type: 'timing', pos: [0, 1.95, 0], p: { w: 2.6, rh: 0.5, swap: { a: 1, b: 2, at: 1.86 }, rows: [
-        { pos: 'P5', name: '· · ·' }, { pos: 'P6', name: 'OTRO PILOTO', flashAt: 0.32, tag: '+10 s' }, { pos: 'P7', name: 'COLAPINTO', hi: true }, { pos: 'P8', name: '· · ·' }] } },
+        { pos: 'P5', name: '· · ·' }, { pos: 'P6', name: 'OTRO PILOTO', flashAt: 0.32, tag: '+10 s', nameAfter: '· · ·', nameAt: 1.86 }, { pos: 'P7', name: 'COLAPINTO', hi: true }, { pos: 'P8', name: '· · ·' }] } },
     ],
     overlays: [placa('SANCIÓN A OTRO PILOTO: 6°', 'sexto', GREEN)] },
 
@@ -126,7 +126,7 @@ export const BEATS: BeatSpec[] = [
     overlays: [placa('6 CARRERAS SIN PUNTOS: SE TERMINÓ', 'cortó')] },
 
   // 10. Llega 12° en el campeonato, a tres puntos del 11°.  (órbita alrededor de los escalones)
-  { id: 'b10', set: 'room', cam: { from: [1.4, 1.4, 5.6], to: [-0.9, 1.6, 5.8], look: [0, 0.75, 0], fov: 46 }, keywords: ['12', 'campeonato', 'tres'],
+  { id: 'b10', set: 'room', cam: { from: [1.4, 1.4, 5.6], to: [-0.9, 1.6, 5.8], look: [0, 0.75, 0], fov: 46 }, keywords: ['12', 'campeonato', 'tres', 'puntos'],
     actors: [
       BOARD,
       { type: 'step', pos: [-0.6, 0, 0], p: { h: 0.95, w: 1.05, color: GRAPH, text: '11°' } },
@@ -149,7 +149,7 @@ export const BEATS: BeatSpec[] = [
     overlays: [placa('ANTEÚLTIMA FECHA', 'anteúltima')] },
 
   // 12. Clasifica el sábado a las tres de la tarde, hora argentina.  (el auto sale del box y la cámara retrocede)
-  { id: 'b12', set: 'room', cam: { from: [0.3, 1.0, 4.4], to: [-0.4, 1.35, 5.8], look: [0, 1.0, -0.5], lookTo: [0, 1.1, -0.5], fov: 46 }, keywords: ['sábado', 'tres', 'argentina'],
+  { id: 'b12', set: 'room', cam: { from: [0.3, 1.0, 4.4], to: [-0.4, 1.35, 5.8], look: [0, 1.0, -0.5], lookTo: [0, 1.1, -0.5], fov: 46 }, keywords: ['Clasifica', 'sábado', 'tres', 'argentina'],
     actors: [
       GAR,
       { type: 'clock', pos: [1.0, 1.95, -3.55], at: 'tres', p: { h: 3, m: 0, r: 0.55 } },
@@ -190,7 +190,7 @@ export const BEATS: BeatSpec[] = [
     overlays: [placa('COMENTÁ UN SOLO NÚMERO', 'número')] },
 
   // 16. Los que más se acerquen salen nombrados en el video del resultado.  (avance hacia la torre con los nombres)
-  { id: 'b16', set: 'room', cam: { from: [0.8, 1.2, 6.8], to: [0.1, 1.15, 6.0], look: [0, 1.05, 0], lookTo: [0, 1.0, 0], fov: 46 }, keywords: ['nombrados', 'resultado'],
+  { id: 'b16', set: 'room', cam: { from: [0.8, 1.2, 6.8], to: [0.1, 1.15, 6.0], look: [0, 1.05, 0], lookTo: [0, 1.0, 0], fov: 46 }, keywords: ['acerquen', 'nombrados', 'resultado'],
     actors: [
       GAR,
       { type: 'timing', pos: [0.05, 1.75, -0.6], p: { w: 2.2, rh: 0.46, rows: [
