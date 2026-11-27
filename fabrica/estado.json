@@ -953,7 +953,24 @@
      "nota": "rehacer meta-muse como reel de prueba, distinto del original"
     }
    ]
+  },
+  "colapinto-qatar-v2": {
+   "titulo": "Colapinto antes de Qatar: 35 puntos y una pregunta (versión 2)",
+   "tema": "",
+   "fuentes": [],
+   "puntaje": null,
+   "etapa": "idea",
+   "creado": "2026-11-26T23:19:22-03:00",
+   "rehace": "colapinto-qatar",
+   "publicar_prueba_al_terminar": true,
+   "historial": [
+    {
+     "etapa": "idea",
+     "cuando": "2026-11-26T23:19:22-03:00",
+     "nota": "rehacer colapinto-qatar como reel de prueba, distinto del original"
+    }
+   ]
   }
  },
- "actualizado": "2026-11-26T23:18:33-03:00"
+ "actualizado": "2026-11-26T23:19:22-03:00"
 }
