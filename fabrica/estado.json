@@ -847,9 +847,14 @@
      "etapa": "guion",
      "cuando": "2026-11-26T23:25:03-03:00",
      "nota": "corregido tras devolución del verificador"
+    },
+    {
+     "etapa": "guion",
+     "cuando": "2026-11-26T23:35:23-03:00",
+     "nota": "devuelto por el verificador (2.a vuelta): en la hoja de datos (guion.md linea 106) la columna de frase todavia dice placa \"US$ 260 -> 235\"; pasarla a 237. Lo demas OK."
     }
    ],
-   "nota": "corregido tras devolución del verificador"
+   "nota": "devuelto por el verificador (2.a vuelta): en la hoja de datos (guion.md linea 106) la columna de frase todavia dice placa \"US$ 260 -> 235\"; pasarla a 237. Lo demas OK."
   },
   "bitcoin-salidas-v2": {
    "titulo": "Bitcoin: salida récord de los fondos, y el saldo sigue en positivo (versión 2)",
@@ -927,7 +932,7 @@
    "tema": "",
    "fuentes": [],
    "puntaje": null,
-   "etapa": "verificado",
+   "etapa": "voz",
    "creado": "2026-11-26T23:18:32-03:00",
    "rehace": "starship-atrapada",
    "publicar_prueba_al_terminar": true,
@@ -946,6 +951,16 @@
      "etapa": "verificado",
      "cuando": "2026-11-26T23:24:59-03:00",
      "nota": ""
+    },
+    {
+     "etapa": "esperando_ok_voz",
+     "cuando": "2026-11-26T23:35:25-03:00",
+     "nota": ""
+    },
+    {
+     "etapa": "voz",
+     "cuando": "2026-11-26T23:35:26-03:00",
+     "nota": "voz sin OK (regla voz_sin_ok del dueño)"
     }
    ],
    "nota": ""
@@ -955,7 +970,7 @@
    "tema": "",
    "fuentes": [],
    "puntaje": null,
-   "etapa": "verificado",
+   "etapa": "voz",
    "creado": "2026-11-26T23:18:32-03:00",
    "rehace": "microsoft-codigo-rojo",
    "publicar_prueba_al_terminar": true,
@@ -974,6 +989,16 @@
      "etapa": "verificado",
      "cuando": "2026-11-26T23:24:59-03:00",
      "nota": ""
+    },
+    {
+     "etapa": "esperando_ok_voz",
+     "cuando": "2026-11-26T23:35:26-03:00",
+     "nota": ""
+    },
+    {
+     "etapa": "voz",
+     "cuando": "2026-11-26T23:35:26-03:00",
+     "nota": "voz sin OK (regla voz_sin_ok del dueño)"
     }
    ],
    "nota": ""
@@ -1021,7 +1046,7 @@
    "tema": "",
    "fuentes": [],
    "puntaje": null,
-   "etapa": "verificado",
+   "etapa": "voz",
    "creado": "2026-11-26T23:18:33-03:00",
    "rehace": "huawei-condena",
    "publicar_prueba_al_terminar": true,
@@ -1040,6 +1065,16 @@
      "etapa": "verificado",
      "cuando": "2026-11-26T23:24:40-03:00",
      "nota": ""
+    },
+    {
+     "etapa": "esperando_ok_voz",
+     "cuando": "2026-11-26T23:35:26-03:00",
+     "nota": ""
+    },
+    {
+     "etapa": "voz",
+     "cuando": "2026-11-26T23:35:26-03:00",
+     "nota": "voz sin OK (regla voz_sin_ok del dueño)"
     }
    ],
    "nota": ""
@@ -1077,7 +1112,7 @@
    "tema": "",
    "fuentes": [],
    "puntaje": null,
-   "etapa": "verificado",
+   "etapa": "voz",
    "creado": "2026-11-26T23:19:22-03:00",
    "rehace": "colapinto-qatar",
    "publicar_prueba_al_terminar": true,
@@ -1096,11 +1131,21 @@
      "etapa": "verificado",
      "cuando": "2026-11-26T23:24:35-03:00",
      "nota": ""
+    },
+    {
+     "etapa": "esperando_ok_voz",
+     "cuando": "2026-11-26T23:35:26-03:00",
+     "nota": ""
+    },
+    {
+     "etapa": "voz",
+     "cuando": "2026-11-26T23:35:26-03:00",
+     "nota": "voz sin OK (regla voz_sin_ok del dueño)"
     }
    ],
    "nota": "",
    "caracteres_voz": 836
   }
  },
- "actualizado": "2026-11-26T23:25:14-03:00"
+ "actualizado": "2026-11-26T23:35:26-03:00"
 }

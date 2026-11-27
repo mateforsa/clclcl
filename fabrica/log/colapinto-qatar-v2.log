@@ -4,3 +4,5 @@
 2026-11-26T23:24:29-03:00 [fabrica] colapinto-qatar-v2: la voz gasta unos 836 caracteres de ElevenLabs. AVISO: no se puede leer el saldo (la clave no tiene ese permiso); anotalo en fabrica/config.json.
 2026-11-26T23:24:35-03:00 [verificador] APROBADO: 22 datos, todos con fuente (horarios Qatar 2026 PL1 10:30/PL2 14/PL3 11:30/Q sáb 15/carrera dom 29 13 h ARG; Qatar 2024 abandono vuelta 1 y 2025 14°; 0 pts 2025; 35 pts y 12° a 3 de Lindblad 38; Las Vegas 9°->7° en pista->6° por 10 s a Leclerc, iguala Canadá; corta 6 sin puntos Bakú-Malasia-Singapur-Austin-México-Brasil; anteúltima, Abu Dabi 6/12). Vigente hasta la clasificación del sábado 28 15:00 ARG: si se publica después, revisar. 149 palabras (~60 s), apertura B11 no usada en los 4 previos, 5 etiquetas.
 2026-11-26T23:24:35-03:00 [fabrica] etapa -> verificado
+2026-11-26T23:35:26-03:00 [fabrica] etapa -> esperando_ok_voz
+2026-11-26T23:35:26-03:00 [fabrica] voz SIN OK del dueño (regla voz_sin_ok): ~836 caracteres

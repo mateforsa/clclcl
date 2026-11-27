@@ -3,3 +3,5 @@
 2026-11-26T23:22:51-03:00 [fabrica] etapa -> guion
 2026-11-26T23:24:59-03:00 [verificador] APROBADO: 24 datos, todos con fuente (caída 12/11 jueves 16:20-16:10 UTC casi 24 h, Exchange Online, no ataque, arreglo de julio, tráfico de Teams + 14% menos capacidad, Código Rojo por memos que vio Reuters, 5-6 días de arreglo urgente, meta 1 hora, memo interno no publicado, crédito SLA no automático, 31/12 compra directa atribuido a guías, revendedor antes; placas, descripción, 150 palabras ~58 s, 5 etiquetas, C26 no usado en publicados). Observación: meta-muse-v2 (también en guion) usa la misma apertura C26.
 2026-11-26T23:24:59-03:00 [fabrica] etapa -> verificado
+2026-11-26T23:35:26-03:00 [fabrica] etapa -> esperando_ok_voz
+2026-11-26T23:35:26-03:00 [fabrica] voz SIN OK del dueño (regla voz_sin_ok): ~832 caracteres

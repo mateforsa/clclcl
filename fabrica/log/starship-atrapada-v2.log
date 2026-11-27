@@ -3,3 +3,5 @@
 2026-11-26T23:23:04-03:00 [fabrica] etapa -> guion
 2026-11-26T23:24:58-03:00 [verificador] APROBADO: 22 datos, todos con fuente (guion, placas y descripcion; verificado la noche del 26/11/2026)
 2026-11-26T23:24:59-03:00 [fabrica] etapa -> verificado
+2026-11-26T23:35:25-03:00 [fabrica] etapa -> esperando_ok_voz
+2026-11-26T23:35:26-03:00 [fabrica] voz SIN OK del dueño (regla voz_sin_ok): ~824 caracteres
