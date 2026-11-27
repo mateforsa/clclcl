@@ -109,9 +109,9 @@ export const BEATS: BeatSpec[] = [
   { id: 'b08', set: 'room', cam: { from: [-1.1, 0.9, 6.6], to: [0.6, 1.3, 6.0], look: [0, 1.0, 0], lookTo: [0, 1.15, 0], fov: 46 }, keywords: ['penalización', 'sexto'],
     actors: [
       BOARD,
-      { type: 'timing', pos: [0, 1.95, 0], p: { w: 2.6, rh: 0.5, swap: { a: 1, b: 2, at: 1.86 }, rows: [
+      { type: 'timing', pos: [0, 2.45, 0], p: { w: 2.6, rh: 0.5, swap: { a: 1, b: 2, at: 1.86 }, rows: [
         { pos: 'P5', name: '· · ·' }, { pos: 'P6', name: '· · ·' }, { pos: 'P7', name: 'COLAPINTO', hi: true }, { pos: 'P8', name: '· · ·' }] } },
-      { type: 'label', pos: [0, 0.2, 2.0], rot: [-0.3, 0, 0], at: 'penalización', out: 'subió', p: { text: 'OTRO PILOTO  +10 s', w: 1.5, h: 0.3, bg: RED, size: 0.62, weight: 900 } },
+      { type: 'label', pos: [0, 0.5, 2.0], rot: [-0.3, 0, 0], at: 'penalización', out: 'subió', p: { text: 'OTRO PILOTO  +10 s', w: 1.5, h: 0.3, bg: RED, size: 0.62, weight: 900 } },
     ],
     overlays: [placa('SANCIÓN A OTRO PILOTO: 6°', 'sexto', GREEN)] },
 

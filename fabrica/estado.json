@@ -1368,7 +1368,7 @@
    "tema": "",
    "fuentes": [],
    "puntaje": null,
-   "etapa": "render",
+   "etapa": "revision",
    "creado": "2026-11-26T23:18:33-03:00",
    "rehace": "meta-muse",
    "publicar_prueba_al_terminar": true,
@@ -1412,9 +1412,14 @@
      "etapa": "render",
      "cuando": "2026-11-27T01:46:52-03:00",
      "nota": "devuelto por el revisor: objetos claros detrás de los subtítulos en 0,77-1,80 s (cajas de la góndola, plano 1) y 46,13-50,47 s (madera clara detrás de toda la línea, plano 14; 'o no,' 2,6:1, 'antes de' 3,2:1). Bajar/mover cámara o fondo oscuro detrás de la franja y 290-390"
+    },
+    {
+     "etapa": "revision",
+     "cuando": "2026-11-27T02:21:57-03:00",
+     "nota": ""
     }
    ],
-   "nota": "devuelto por el revisor: objetos claros detrás de los subtítulos en 0,77-1,80 s (cajas de la góndola, plano 1) y 46,13-50,47 s (madera clara detrás de toda la línea, plano 14; 'o no,' 2,6:1, 'antes de' 3,2:1). Bajar/mover cámara o fondo oscuro detrás de la franja y 290-390",
+   "nota": "",
    "caracteres_voz": 801
   },
   "colapinto-qatar-v2": {
@@ -1492,5 +1497,5 @@
    "caracteres_voz": 836
   }
  },
- "actualizado": "2026-11-27T02:19:50-03:00"
+ "actualizado": "2026-11-27T02:22:01-03:00"
 }
