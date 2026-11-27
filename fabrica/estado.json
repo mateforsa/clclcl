@@ -823,7 +823,7 @@
    "tema": "",
    "fuentes": [],
    "puntaje": null,
-   "etapa": "esperando_ok_final",
+   "etapa": "publicado",
    "creado": "2026-11-26T23:17:40-03:00",
    "rehace": "crowdstrike-zscaler",
    "publicar_prueba_al_terminar": true,
@@ -892,10 +892,16 @@
      "etapa": "esperando_ok_final",
      "cuando": "2026-11-27T00:45:52-03:00",
      "nota": ""
+    },
+    {
+     "etapa": "publicado",
+     "cuando": "2026-11-27T00:49:38-03:00",
+     "nota": "reel de prueba (versión rehecha a pedido del dueño) https://www.instagram.com/reel/DgOwDSUqtyE/"
     }
    ],
-   "nota": "",
-   "caracteres_voz": 871
+   "nota": "reel de prueba (versión rehecha a pedido del dueño)",
+   "caracteres_voz": 871,
+   "link_prueba": "https://www.instagram.com/reel/DgOwDSUqtyE/"
   },
   "bitcoin-salidas-v2": {
    "titulo": "Bitcoin: salida récord de los fondos, y el saldo sigue en positivo (versión 2)",
@@ -1325,5 +1331,5 @@
    "caracteres_voz": 836
   }
  },
- "actualizado": "2026-11-27T00:46:18-03:00"
+ "actualizado": "2026-11-27T00:49:38-03:00"
 }
