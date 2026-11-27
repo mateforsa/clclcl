@@ -25,10 +25,16 @@ export const Player: React.FC<P> = ({ t, p }) => {
   const { kit = 'est', pose = 'idle', phase = 0, skin = '#e3ad80', hair = '#15102b' } = p;
   const shirt = kit === 'pal' ? GREEN : kit === 'gris' ? GRAY : RED; const shorts = kit === 'gris' ? '#2a2350' : WHITE; const socks = kit === 'gris' ? '#2a2350' : shirt;
   const w = Math.sin((t + phase) * 11), sway = Math.sin((t + phase) * 2.2);
-  let aL: V3 = [0, 0, -0.1 - sway * 0.03], aR: V3 = [0, 0, 0.1 + sway * 0.03];
+  // p.from: segundo del plano en que empieza la pose; hasta ahí está en idle y pasa a la pose en 0,35 s (sin salto)
+  const k = p.from === undefined ? 1 : eo((t - p.from) / 0.35);
+  const i0: V3 = [0, 0, -0.1 - sway * 0.03], i1: V3 = [0, 0, 0.1 + sway * 0.03];
+  let aL: V3 = i0, aR: V3 = i1;
   if (pose === 'cheer') { aL = [0, 0, -2.6 - w * 0.12]; aR = [0, 0, 2.6 + w * 0.12]; }
   if (pose === 'sad') { aL = [0.1, 0, -0.05]; aR = [0.1, 0, 0.05]; }
-  const y0 = pose === 'cheer' ? Math.abs(Math.sin((t + phase) * 7)) * 0.1 : sway * 0.012;
+  const mix = (a: V3, b: V3): V3 => [lerp(a[0], b[0], k), lerp(a[1], b[1], k), lerp(a[2], b[2], k)];
+  aL = mix(i0, aL); aR = mix(i1, aR);
+  const sadK = pose === 'sad' ? k : 0;
+  const y0 = lerp(sway * 0.012, pose === 'cheer' ? Math.abs(Math.sin((t + phase) * 7)) * 0.1 : sway * 0.012, k);
   const arm = (x: number, r: V3) => (
     <group position={[x, 0.58, 0]} rotation={r}><B s={[0.14, 0.26, 0.15]} pos={[0, -0.1, 0]} c={shirt} /><B s={[0.11, 0.3, 0.12]} pos={[0, -0.36, 0]} c={skin} /><B s={[0.12, 0.12, 0.13]} pos={[0, -0.54, 0]} c={skin} /></group>);
   return (
@@ -38,11 +44,11 @@ export const Player: React.FC<P> = ({ t, p }) => {
           <B s={[0.2, 0.26, 0.22]} pos={[0, -0.1, 0]} c={shorts} /><B s={[0.14, 0.2, 0.15]} pos={[0, -0.32, 0]} c={skin} />
           <B s={[0.15, 0.22, 0.16]} pos={[0, -0.52, 0]} c={socks} /><B s={[0.18, 0.09, 0.27]} pos={[0, -0.68, 0.04]} c="#0d0a1c" />
         </group>))}
-      <group position={[0, 0.7, 0]} rotation={[pose === 'sad' ? 0.25 : 0, 0, sway * 0.015]}>
+      <group position={[0, 0.7, 0]} rotation={[0.25 * sadK, 0, sway * 0.015]}>
         <B s={[0.52, 0.62, 0.29]} pos={[0, 0.32, 0]} c={shirt} e={shirt} ei={0.15} />
         {kit === 'est' && [-0.15, 0, 0.15].map((x) => <B key={x} s={[0.07, 0.62, 0.3]} pos={[x, 0.32, 0]} c={WHITE} e={WHITE} ei={0.1} />)}
         {arm(-0.33, aL)}{arm(0.33, aR)}
-        <group position={[0, 0.84, 0]} rotation={[pose === 'sad' ? 0.3 : 0, sway * 0.05, 0]}>
+        <group position={[0, 0.84, 0]} rotation={[0.3 * sadK, sway * 0.05, 0]}>
           <B s={[0.37, 0.36, 0.34]} c={skin} /><B s={[0.43, 0.17, 0.4]} pos={[0, 0.2, -0.01]} c={hair} /><B s={[0.43, 0.2, 0.12]} pos={[0, 0.06, -0.16]} c={hair} />
         </group>
       </group>

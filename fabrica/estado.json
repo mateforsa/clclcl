@@ -2212,7 +2212,7 @@
     "https://www.racefans.net/2026/11/27/antonelli-leads-another-mercedes-one-two-despite-red-flag-interruptions/"
    ],
    "puntaje": null,
-   "etapa": "render",
+   "etapa": "revision",
    "creado": "2026-11-27T18:28:52-03:00",
    "historial": [
     {
@@ -2253,11 +2253,16 @@
      "etapa": "render",
      "cuando": "2026-11-27T19:07:18-03:00",
      "nota": "devuelto por el revisor: salto de pose del Alpine en el plano 5 a los 18,80 s (f563->f564), hacerlo continuo"
+    },
+    {
+     "etapa": "revision",
+     "cuando": "2026-11-27T19:16:51-03:00",
+     "nota": ""
     }
    ],
-   "nota": "devuelto por el revisor: salto de pose del Alpine en el plano 5 a los 18,80 s (f563->f564), hacerlo continuo",
+   "nota": "",
    "caracteres_voz": 958
   }
  },
- "actualizado": "2026-11-27T19:15:47-03:00"
+ "actualizado": "2026-11-27T19:16:51-03:00"
 }

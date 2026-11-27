@@ -10,7 +10,7 @@ const F = (text = FUENTE) => ({ type: 'tag' as const, text, at: 0, x: 46, y: 73.
 
 export const BEATS: BeatSpec[] = [
   // 1. la balanza: dos de verde contra todo el plantel rojo y blanco
-  { id: 'b01', set: 'void', cam: { from: [0.5, 1.5, 7.8], to: [0, 1.4, 7.2], look: [0, 0.95, 0], fov: 44 }, keywords: ['Palmeiras', 'Estudiantes'],
+  { id: 'b01', set: 'void', cam: { from: [0.5, 1.5, 7.8], to: [0, 1.4, 7.2], look: [0, 0.95, 0], fov: 44 }, keywords: ['jugadores', 'Palmeiras', 'Estudiantes'],
     actors: [
       { type: 'cleansky' },
       { type: 'ring', pos: [0, 0.03, 0], p: { r: 1.3, color: C.gold } },
@@ -39,7 +39,7 @@ export const BEATS: BeatSpec[] = [
     ],
     overlays: [T('VITOR ROQUE · 38 M€', '38', 60, GREEN), T('FLACO LÓPEZ · 30 M€', '30', 66, GREEN), F()] },
   // 4. 68 contra menos de 55
-  { id: 'b04', set: 'void', cam: { from: [-0.6, 1.6, 9.2], to: [0.1, 1.5, 8.5], look: [0, 1.0, 0], fov: 44 }, keywords: ['68.', '55.'],
+  { id: 'b04', set: 'void', cam: { from: [-0.6, 1.6, 9.2], to: [0.1, 1.5, 8.5], look: [0, 1.0, 0], fov: 44 }, keywords: ['68.', 'Estudiantes', '55.'],
     actors: [
       { type: 'cleansky' },
       { type: 'col', pos: [-0.7, 0, 0], p: { h: 2.0, from: 0.35, grow: 0.04, dur: 0.6, color: GREEN, top: 'pal2' } },
@@ -52,8 +52,7 @@ export const BEATS: BeatSpec[] = [
     actors: [
       { type: 'cleansky' },
       { type: 'ring', pos: [-0.25, 0.03, 0], p: { r: 0.6, color: C.cyan } },
-      { type: 'player', pos: [-0.25, 0, 0], p: { kit: 'pal' }, out: 'argentino' },
-      { type: 'player', pos: [-0.25, 0, 0], at: 'argentino', enter: 'none', p: { kit: 'pal', pose: 'cheer' } },
+      { type: 'player', pos: [-0.25, 0, 0], p: { kit: 'pal', pose: 'cheer', from: 1.24 } },
       { type: 'flag', pos: [0.55, 0, -0.5], at: 'argentino' },
     ],
     overlays: [{ type: 'plate', name: 'Flaco López', role: 'Palmeiras', at: 'Flaco', y: 58 }, T('ARGENTINO', 'argentino', 66, '#3d8fd1', { size: 56 }), F()] },
@@ -80,7 +79,7 @@ export const BEATS: BeatSpec[] = [
     ],
     overlays: [T('PALMEIRAS: 218,58 M€', '218', 60, GREEN), T('CASI 4 VECES MÁS', 'millones', 66, C.magenta), F()] },
   // 8. los nueve más valiosos son de Palmeiras
-  { id: 'b08', set: 'void', cam: { from: [-0.5, 1.4, 8.0], to: [0.1, 1.3, 7.4], look: [0, 0.45, 0], fov: 44 }, keywords: ['nueve', 'suyos.'],
+  { id: 'b08', set: 'void', cam: { from: [-0.5, 1.4, 8.0], to: [0.1, 1.3, 7.4], look: [0, 0.45, 0], fov: 44 }, keywords: ['nueve', 'valiosos', 'suyos.'],
     actors: [
       { type: 'cleansky' },
       { type: 'ranking', pos: [0, 0, 0], p: { kits: ['pal', 'pal', 'pal', 'pal', 'pal', 'pal', 'pal', 'pal', 'pal', 'est'], delay: -0.25, stagger: 0.12 } },
@@ -98,22 +97,19 @@ export const BEATS: BeatSpec[] = [
     ],
     overlays: [T('PALMEIRAS PAGÓ 167,4 M€', '167', 60, GREEN), T('ESTUDIANTES: 11,5 M€', 'millones', 66, RED), F()] },
   // 10. pero Estudiantes ya eliminó a dos brasileños
-  { id: 'b10', set: 'void', cam: { from: [-0.6, 1.4, 8.2], to: [0.1, 1.3, 7.5], look: [0, 0.6, 0], fov: 44 }, keywords: ['Estudiantes', 'Corinthians'],
+  { id: 'b10', set: 'void', cam: { from: [-0.6, 1.4, 8.2], to: [0.1, 1.3, 7.5], look: [0, 0.6, 0], fov: 44 }, keywords: ['Estudiantes', 'brasileños:', 'Corinthians', 'Flamengo.'],
     actors: [
       { type: 'cleansky' },
       { type: 'ring', pos: [0, 0.03, 0.4], p: { r: 0.55, color: RED } },
-      { type: 'player', pos: [0, 0, 0.4], p: { kit: 'est' }, out: 'eliminó' },
-      { type: 'player', pos: [0, 0, 0.4], at: 'eliminó', enter: 'none', p: { kit: 'est', pose: 'cheer' } },
-      { type: 'player', pos: [-1.05, 0, -0.6], rot: [0, 0.3, 0], s: 0.85, p: { kit: 'gris' }, out: 'Corinthians' },
-      { type: 'player', pos: [-1.05, 0, -0.6], rot: [0, 0.3, 0], s: 0.85, at: 'Corinthians', enter: 'none', p: { kit: 'gris', pose: 'sad' } },
+      { type: 'player', pos: [0, 0, 0.4], p: { kit: 'est', pose: 'cheer', from: 1.26 } },
+      { type: 'player', pos: [-1.05, 0, -0.6], rot: [0, 0.3, 0], s: 0.85, p: { kit: 'gris', pose: 'sad', from: 3.06 } },
       { type: 'equis', pos: [-1.05, 1.0, -0.05], at: 'Corinthians', p: { size: 0.55 } },
-      { type: 'player', pos: [1.05, 0, -0.6], rot: [0, -0.3, 0], s: 0.85, p: { kit: 'gris', phase: 2 }, out: 'Flamengo' },
-      { type: 'player', pos: [1.05, 0, -0.6], rot: [0, -0.3, 0], s: 0.85, at: 'Flamengo', enter: 'none', p: { kit: 'gris', pose: 'sad', phase: 2 } },
+      { type: 'player', pos: [1.05, 0, -0.6], rot: [0, -0.3, 0], s: 0.85, p: { kit: 'gris', pose: 'sad', phase: 2, from: 4.11 } },
       { type: 'equis', pos: [1.05, 1.0, -0.05], at: 'Flamengo', p: { size: 0.55 } },
     ],
     overlays: [T('YA ELIMINÓ A CORINTHIANS', 'Corinthians', 60, RED), T('Y A FLAMENGO', 'Flamengo', 66, RED), F()] },
   // 11. premios: campeón US$ 25 M, subcampeón US$ 7 M
-  { id: 'b11', set: 'void', cam: { from: [0.6, 1.5, 8.6], to: [-0.1, 1.4, 7.9], look: [0, 0.75, 0], fov: 44 }, keywords: ['campeón', '25', '7.'],
+  { id: 'b11', set: 'void', cam: { from: [0.6, 1.5, 8.6], to: [-0.1, 1.4, 7.9], look: [0, 0.75, 0], fov: 44 }, keywords: ['campeón', '25', 'subcampeón,', '7.'],
     actors: [
       { type: 'cleansky' },
       { type: 'ring', pos: [-0.8, 0.03, 0], p: { r: 0.75, color: C.gold } },
@@ -125,7 +121,7 @@ export const BEATS: BeatSpec[] = [
     overlays: [T('CAMPEÓN: US$ 25 MILLONES', '25', 60, '#b87a00'), T('PREMIOS DE LA CONMEBOL', 'Conmebol', 66, DARK, { out: '7' }),
       T('SUBCAMPEÓN: US$ 7 MILLONES', '7', 66, '#5b6b8a'), F()] },
   // 12. quinta Libertadores y corta siete títulos brasileños
-  { id: 'b12', set: 'void', cam: { from: [-0.5, 1.5, 8.4], to: [0.1, 1.4, 7.7], look: [0, 0.8, 0], fov: 44 }, keywords: ['Estudiantes', 'quinta', 'brasileños'],
+  { id: 'b12', set: 'void', cam: { from: [-0.5, 1.5, 8.4], to: [0.1, 1.4, 7.7], look: [0, 0.8, 0], fov: 44 }, keywords: ['Estudiantes', 'quinta', 'Libertadores', 'brasileños'],
     actors: [
       { type: 'cleansky' },
       { type: 'shelf', pos: [0, 1.3, -0.6], p: { n: 5, have: 4, at5: 1.89 } },
