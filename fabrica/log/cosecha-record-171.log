@@ -7,3 +7,7 @@
 2026-11-27T16:47:38-03:00 [fabrica] etapa -> guion (devuelto por el verificador: fecha de Clarín mal en la placa de fuentes y en la descripción (es 26/11/2026, no 27/11/2026); lo demás OK)
 2026-11-27T16:48:08-03:00 [guionista] corregida la fecha de Clarín (26/11/2026, no 27/11) en la placa de fuentes de los planos 2 a 13 y en la descripción de Instagram; nada más cambia
 2026-11-27T16:48:08-03:00 [fabrica] etapa -> guion
+2026-11-27T16:48:31-03:00 [verificador] APROBADO: 26 datos, todos con fuente (fechas de fuentes corregidas: Ámbito 27/11/2026, Clarín 26/11/2026)
+2026-11-27T16:48:31-03:00 [fabrica] etapa -> verificado
+2026-11-27T16:48:31-03:00 [fabrica] etapa -> esperando_ok_voz
+2026-11-27T16:48:49-03:00 [fabrica] voz SIN OK del dueño (regla voz_sin_ok): ~1065 caracteres

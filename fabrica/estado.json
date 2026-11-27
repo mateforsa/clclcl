@@ -1980,7 +1980,7 @@
     "https://www.clarin.com/rural/saliendo-estancamiento-cosecha-granos-record-trae-aluvion-dolares-argentina_0_mjnLdIjqyP.html"
    ],
    "puntaje": 8.3,
-   "etapa": "guion",
+   "etapa": "voz",
    "creado": "2026-11-27T16:42:18-03:00",
    "historial": [
     {
@@ -2006,10 +2006,25 @@
      "etapa": "guion",
      "cuando": "2026-11-27T16:48:08-03:00",
      "nota": ""
+    },
+    {
+     "etapa": "verificado",
+     "cuando": "2026-11-27T16:48:31-03:00",
+     "nota": ""
+    },
+    {
+     "etapa": "esperando_ok_voz",
+     "cuando": "2026-11-27T16:48:31-03:00",
+     "nota": ""
+    },
+    {
+     "etapa": "voz",
+     "cuando": "2026-11-27T16:48:49-03:00",
+     "nota": "voz sin OK (regla voz_sin_ok del dueño)"
     }
    ],
    "nota": ""
   }
  },
- "actualizado": "2026-11-27T16:48:08-03:00"
+ "actualizado": "2026-11-27T16:48:49-03:00"
 }
