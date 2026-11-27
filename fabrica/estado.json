@@ -1536,7 +1536,7 @@
     "https://www.engadget.com/2329177/workers-gta-6-studio-rockstar-games-vote-against-union-recognition/"
    ],
    "puntaje": 7.3,
-   "etapa": "esperando_ok_final",
+   "etapa": "listo",
    "creado": "2026-11-27T02:43:16-03:00",
    "historial": [
     {
@@ -1607,6 +1607,11 @@
      "etapa": "esperando_ok_final",
      "cuando": "2026-11-27T10:13:37-03:00",
      "nota": ""
+    },
+    {
+     "etapa": "listo",
+     "cuando": "2026-11-27T11:19:32-03:00",
+     "nota": "aprobado por el dueño desde esperando_ok_final"
     }
    ],
    "nota": "",
@@ -1620,7 +1625,7 @@
     "https://www.infobae.com/economia/2026/11/26/cerraron-mas-de-50000-kioscos-en-los-ultimos-tres-anos-y-el-sector-perdio-casi-la-mitad-de-sus-locales/"
    ],
    "puntaje": 8.3,
-   "etapa": "voz",
+   "etapa": "render",
    "creado": "2026-11-27T10:48:21-03:00",
    "historial": [
     {
@@ -1646,10 +1651,16 @@
      "etapa": "voz",
      "cuando": "2026-11-27T10:55:57-03:00",
      "nota": "voz sin OK (regla voz_sin_ok del dueño)"
+    },
+    {
+     "etapa": "render",
+     "cuando": "2026-11-27T11:15:27-03:00",
+     "nota": ""
     }
    ],
-   "nota": ""
+   "nota": "",
+   "caracteres_voz": 1015
   }
  },
- "actualizado": "2026-11-27T10:55:57-03:00"
+ "actualizado": "2026-11-27T11:19:32-03:00"
 }

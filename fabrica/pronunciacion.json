@@ -300,5 +300,29 @@
    "De Régister",
    "The Register"
   ]
+ },
+ "salteó": {
+  "dicho": "saltó",
+  "estado": "probada",
+  "puntaje": 0.7,
+  "variantes": [
+   "salteó",
+   "sal-teó",
+   "saltió",
+   "saltó",
+   "salteó,"
+  ]
+ },
+ "contá qué": {
+  "dicho": "contá qué",
+  "estado": "probada",
+  "puntaje": 0.71,
+  "variantes": [
+   "contá qué",
+   "contá, qué",
+   "contá: qué",
+   "contanos qué",
+   "contá cuál"
+  ]
  }
 }

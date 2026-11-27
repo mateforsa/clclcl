@@ -35,10 +35,10 @@ Video vertical 1080x1920, 30 fps, unos 0:63 a 0:70, 15 planos, sin carteles de c
 | 9 | 0:28 | Es de lo que más crece entre los chocolates, según una consultora. |
 | 10 | 0:32 | Cada argentino come en promedio 85 alfajores por año: más de 10 millones por día. |
 | 11 | 0:38 | Según el sector, para una parte de la gente reemplaza una comida. |
-| 12 | 0:42 | En una encuesta de la Universidad Católica, el 61% de los trabajadores se salteó una comida en el trabajo por plata. |
+| 12 | 0:42 | En una encuesta de la Universidad Católica, el 61% de los trabajadores se saltó una comida en el trabajo por plata. |
 | 13 | 0:50 | El gremio existe desde 1944 y nunca registró una caída así. |
 | 14 | 0:56 | Más de 53.000 persianas bajas. Y el alfajor, cada vez más vendido. |
-| 15 | 1:01 | Si tenés o tuviste un kiosco, contá qué es lo que más sale hoy. |
+| 15 | 1:00 | Si tenés o tuviste un kiosco, contá, qué es lo que más sale hoy. |
 
 Tiempos estimados a unas 2,9 palabras dichas por segundo (el ritmo de `rockstar-sindicato-no`); a 2,7 (el de
 `dolar-tres-precios`) da unos 70 s. Los reales salen de `timing.json` después de la voz. Si la toma pasa de 70 s, el plano 13 es el
@@ -113,8 +113,8 @@ Aparte de los subtítulos. Mayúsculas y signos tal como van. Sin "parte N" en n
 | 8 | `A CONTRAMANO` | en "contramano." |
 | 9 | `2.º QUE MÁS CRECE ENTRE LOS CHOCOLATES` · `SEGÚN NIELSENIQ` | en "crece" y en "consultora." |
 | 10 | `85 ALFAJORES POR PERSONA AL AÑO` · `+10 MILLONES POR DÍA` · `SEGÚN EL SECTOR` | en "85", en "millones" y al final del plano |
-| 11 | `«REEMPLAZO DE COMIDAS» · SEGÚN EL SECTOR` · `SUELE VENIR EN PROMO CON GASEOSA` | en "reemplaza" y en "comida." |
-| 12 | `61% SE SALTEÓ UNA COMIDA EN EL TRABAJO POR PLATA` · `UCA · ENCUESTA A 1.171 ASALARIADOS FORMALES` | en "61%" y en "plata." |
+| 11 | `REEMPLAZO DE COMIDAS · SEGÚN EL SECTOR` · `SUELE VENIR EN PROMO CON GASEOSA` | en "reemplaza" y en "comida." |
+| 12 | `61%` · `SE SALTÓ UNA COMIDA EN EL TRABAJO POR PLATA` · `UCA · ENCUESTA A 1.171 ASALARIADOS FORMALES` | en "61%" y en "plata." |
 | 13 | `UKRA · DESDE 1944` · `NUNCA REGISTRÓ UNA CAÍDA ASÍ EN SU PADRÓN` | en "1944" y en "así." |
 | 14 | `+53.000 PERSIANAS BAJAS` · `EL ALFAJOR, CADA VEZ MÁS VENDIDO` | en "persianas" y en "vendido." |
 | 15 | `¿TENÉS O TUVISTE UN KIOSCO?` · `CONTÁ QUÉ ES LO QUE MÁS SALE HOY` | en "kiosco," y en "sale" |
@@ -157,3 +157,11 @@ npx tsx scripts/events.ts kioscos-53000 && python3 scripts/audio.py kioscos-5300
 scripts/render.sh kioscos-53000              # out/kioscos-53000/kioscos-53000.mp4
 scripts/cover.sh kioscos-53000               # out/kioscos-53000/portada.png
 ```
+
+## Notas de producción (27/11/2026)
+
+- Voz final 63,98 s (no hizo falta sacar el plano 13). Segunda toma por pronunciación: Whisper oyó «salió» en «se salteó» y
+  «contacte» en «contá qué». Probadas con `pronunciacion.py probar`: «saltó» ganó (70 %; es la forma de Infobae) y «contá, qué»
+  fue la única variante que Whisper transcribió bien. La placa del plano 12 dice «SE SALTÓ» para coincidir con la voz.
+- Placa del plano 11 sin comillas (es paráfrasis, pedido del verificador).
+- Sin «ESQUEMA, NO A ESCALA» en los planos 9 y 13: las columnas no llevan números.
