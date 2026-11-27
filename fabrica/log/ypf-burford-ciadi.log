@@ -21,3 +21,5 @@
 2026-11-27T16:00:29-03:00 [productor] events + audio: 89 eventos, mezcla -14,5 LUFS integrados. Claves agregadas: Reclaman (b07), responder (b13). Paso a render
 2026-11-27T16:00:29-03:00 [fabrica] etapa -> render
 2026-11-27T16:02:13-03:00 [productor] portada lista: instagram/portadas/ypf-burford-ciadi.jpg (JUICIO POR YPF / BURFORD PIDE / US$ 14.400 M / NUEVO RECLAMO EN EL CIADI · TODAVÍA NO HAY FALLO), sobre el plano 4 (edificios NUEVA YORK y CIADI · BANCO MUNDIAL). b04: la balanza del CIADI pasó adelante para que la pila no tape el cartel. Render en curso
+2026-11-27T16:05:51-03:00 [productor] render listo: out/ypf-burford-ciadi/ypf-burford-ciadi.mp4, 67 s (67,13 s; 1080x1920, 30 fps, h264+aac; -14,5 LUFS, pico -4,4 dBTP; 0 cuadros rotos en los 2014). 13 planos (sin el plano 10 del guion; la placa del tribunal en formación va en el plano 9). Portada: instagram/portadas/ypf-burford-ciadi.jpg. Sin logos: edificios genéricos con carteles NUEVA YORK, CIADI · BANCO MUNDIAL, CORTE SUPREMA · EE.UU. y PETERSEN en texto plano. PRONUNCIACIÓN SIN RESOLVER: Petersen, CIADI (ver arriba).
+2026-11-27T16:05:51-03:00 [fabrica] etapa -> revision

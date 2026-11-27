@@ -472,28 +472,14 @@
   "nota": "«Madrinn» se oía «Madre»; «Madrín» se entiende en la voz final de de-donde-vienen-tus-cosas"
  },
  "Burford": {
-  "dicho": "Bérfor",
+  "dicho": "Búrford",
   "estado": "probada",
-  "puntaje": 0.77,
-  "variantes": [
-   "Búrford",
-   "Bérford",
-   "Bórford",
-   "Burford",
-   "Bérfor"
-  ]
+  "nota": "«Bérfor» ganó la prueba pero Whisper lo oye «Berfor»; «Búrford» se entiende en la voz final de ypf-burford-ciadi"
  },
  "Petersen": {
-  "dicho": "Pítersen",
+  "dicho": "Pétersen",
   "estado": "probada",
-  "puntaje": 0.66,
-  "variantes": [
-   "Petersen",
-   "Péter-sen",
-   "Pétersen",
-   "Pítersen",
-   "Péitersen"
-  ]
+  "nota": "todas las variantes se transcriben «Peterson»; queda la forma local, sin resolver"
  },
  "CIADI": {
   "dicho": "ce, i, a, de, i",
