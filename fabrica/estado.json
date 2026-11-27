@@ -857,7 +857,7 @@
    "tema": "",
    "fuentes": [],
    "puntaje": null,
-   "etapa": "idea",
+   "etapa": "guion",
    "creado": "2026-11-26T23:17:40-03:00",
    "rehace": "anthropic-ipo",
    "publicar_prueba_al_terminar": true,
@@ -866,8 +866,14 @@
      "etapa": "idea",
      "cuando": "2026-11-26T23:17:40-03:00",
      "nota": "rehacer anthropic-ipo como reel de prueba, distinto del original"
+    },
+    {
+     "etapa": "guion",
+     "cuando": "2026-11-26T23:21:13-03:00",
+     "nota": ""
     }
-   ]
+   ],
+   "nota": ""
   },
   "starship-atrapada-v2": {
    "titulo": "Starship: la nave atrapada en el aire (versión 2)",
@@ -972,5 +978,5 @@
    ]
   }
  },
- "actualizado": "2026-11-26T23:19:22-03:00"
+ "actualizado": "2026-11-26T23:21:13-03:00"
 }
