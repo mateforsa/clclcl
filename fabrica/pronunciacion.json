@@ -506,5 +506,49 @@
    "La superficie sembrada",
    "El área sembrada"
   ]
+ },
+ "Palmeiras": {
+  "dicho": "Palméiras",
+  "estado": "probada",
+  "puntaje": 0.9,
+  "variantes": [
+   "Palmeiras",
+   "Palméiras",
+   "Pal-méi-ras",
+   "Palmeyras"
+  ]
+ },
+ "Vitor Roque": {
+  "dicho": "Vítor Roque",
+  "estado": "probada",
+  "puntaje": 0.7,
+  "variantes": [
+   "Vítor Roque",
+   "Vítor Róque",
+   "Bítor Róke",
+   "Vítor Rróque"
+  ]
+ },
+ "Transfermarkt": {
+  "dicho": "Trans-fer-mark",
+  "estado": "probada",
+  "puntaje": 0.71,
+  "variantes": [
+   "Tránsfermark",
+   "Trans-fer-mark",
+   "Tránsfer Market",
+   "Tránsfermarkt"
+  ]
+ },
+ "Corinthians": {
+  "dicho": "Corintians",
+  "estado": "probada",
+  "puntaje": 0.67,
+  "variantes": [
+   "Corintians",
+   "Corínthians",
+   "Corín-tians",
+   "Corinchans"
+  ]
  }
 }

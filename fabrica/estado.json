@@ -2104,7 +2104,41 @@
    ],
    "nota": "",
    "caracteres_voz": 994
+  },
+  "colapinto-fp2-qatar": {
+   "titulo": "Colapinto en la FP2 de Qatar: 15°, frenos, y Sainz enojado",
+   "tema": "fórmula 1 (pedido del dueño)",
+   "fuentes": [
+    "https://www.formula1.com/en/results/2026/races/1301/qatar/practice/2",
+    "https://www.infobae.com/deportes/2026/11/27/carlos-sainz-se-enojo-por-una-maniobra-de-franco-colapinto-lo-critico-y-advirtio-quizas-tenga-que-hablar-con-el/"
+   ],
+   "puntaje": null,
+   "etapa": "idea",
+   "creado": "2026-11-27T18:28:52-03:00",
+   "historial": [
+    {
+     "etapa": "idea",
+     "cuando": "2026-11-27T18:28:52-03:00"
+    }
+   ]
+  },
+  "fp2-qatar-general": {
+   "titulo": "FP2 de Qatar: dos banderas rojas y Mercedes otra vez 1-2",
+   "tema": "fórmula 1 (pedido del dueño)",
+   "fuentes": [
+    "https://www.formula1.com/en/latest/article/fp2-antonelli-tops-extended-second-practice-from-russell-and-norris-in-qatar.6jAa2kcIAVqOPHW30oipfm",
+    "https://www.racefans.net/2026/11/27/antonelli-leads-another-mercedes-one-two-despite-red-flag-interruptions/"
+   ],
+   "puntaje": null,
+   "etapa": "idea",
+   "creado": "2026-11-27T18:28:52-03:00",
+   "historial": [
+    {
+     "etapa": "idea",
+     "cuando": "2026-11-27T18:28:52-03:00"
+    }
+   ]
   }
  },
- "actualizado": "2026-11-27T18:26:59-03:00"
+ "actualizado": "2026-11-27T18:28:52-03:00"
 }
