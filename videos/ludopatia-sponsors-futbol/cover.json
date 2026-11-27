@@ -1,0 +1,3 @@
+{ "beat": "b01", "frac": 0.35,
+  "overlay": { "kicker": "LEY DE LUDOPATÍA", "y": 62,
+    "lines": [ { "t": "LANÚS DIJO", "size": 150 }, { "t": "NO A US$ 750.000", "c": "yellow", "size": 112 }, { "t": "1 DE CADA 3 EQUIPOS, A BUSCAR OTRA MARCA", "size": 44, "c": "cyan" } ] } }

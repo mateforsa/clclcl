@@ -22,6 +22,10 @@ Video vertical 1080x1920, 30 fps, unos 0:62 a 0:65, 16 planos, sin carteles de c
 
 ## Guion final (una línea por plano)
 
+> **Productor, 27/11/2026:** la primera toma duró 66,1 s (más de 65), así que se sacó el plano 6 ("Prohíbe que las empresas de apuestas
+> patrocinen equipos, estadios y camisetas."), como estaba previsto. El video quedó en 15 planos y 61,2 s: los planos 7 a 16 de
+> estas tablas son `b06` a `b15` en `beats.ts`. La placa `SIN APUESTAS EN CAMISETAS NI ESTADIOS` no se usa.
+
 | # | Tiempo | Texto |
 |---|--------|-------|
 | 1 | 0:00 | Lanús le dijo que no a 750.000 dólares por año. |

@@ -397,5 +397,62 @@
    "Qatar",
    "Catár"
   ]
+ },
+ "Betsson": {
+  "dicho": "Betsón",
+  "estado": "probada",
+  "puntaje": 0.52,
+  "variantes": [
+   "Bétson",
+   "Bétsson",
+   "Betsón",
+   "Béts-son",
+   "Betsson"
+  ]
+ },
+ "Betano": {
+  "dicho": "Betano.",
+  "estado": "probada",
+  "puntaje": 0.59,
+  "variantes": [
+   "Betáno.",
+   "Be-tá-no.",
+   "Betano.",
+   "Betánno.",
+   "Bettáno."
+  ]
+ },
+ "Mapei": {
+  "dicho": "Ma-péi,",
+  "estado": "probada",
+  "puntaje": 0.47,
+  "variantes": [
+   "Mapéi,",
+   "Mapei,",
+   "Ma-péi,",
+   "Mápei,"
+  ]
+ },
+ "River": {
+  "dicho": "Ríber,",
+  "estado": "probada",
+  "puntaje": 0.64,
+  "variantes": [
+   "Ríver,",
+   "Ríber,",
+   "River,",
+   "Ríbe,"
+  ]
+ },
+ "tres": {
+  "dicho": "tres,",
+  "estado": "probada",
+  "puntaje": 0.86,
+  "variantes": [
+   "tres",
+   "trés",
+   "tres,",
+   "... tres"
+  ]
  }
 }
