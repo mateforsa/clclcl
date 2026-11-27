@@ -75,16 +75,17 @@ export const Stage: React.FC<P> = ({ t, p }) => {
     {[-1, 1].map((k) => <Flat key={k} s={[12, 11]} pos={[k * 4.34, 3.6, 0]} rot={[0, -k * Math.PI / 2, 0]} map={map} />)}
   </>);
 
-  if (kind === 'tarde') {
-    const off = scroll(1.2);
+  if (kind === 'tarde' || kind === 'pista') {
+    const off = scroll(1.2); const tx = p.trackX ?? 0;
     return (
       <group>
         <pointLight position={[0, 4, 3]} intensity={30} color="#ffe9d6" distance={14} />
         <pointLight position={[-3, 1.6, -2]} intensity={16} color="#7f9cff" distance={10} />
         <Flat s={[40, 40]} pos={[0, 0.015, 0]} rot={[-Math.PI / 2, 0, 0]} map={gravel} />
-        <Flat s={[4.4, 40]} pos={[0, 0.02, 0]} rot={[-Math.PI / 2, 0, 0]} map={asph} />
-        {[-2.2, 2.2].map((x) => <group key={x}>{Array.from({ length: 34 }, (_, i) => <B key={i} s={[0.3, 0.03, 0.6]} pos={[x, 0.03, 8 - i * 0.6 - (off % 1.2)]} c={i % 2 ? KERB : WHITE} />)}</group>)}
-        {[-2.0, 2.0].map((x) => <B key={'l' + x} s={[0.06, 0.025, 40]} pos={[x, 0.028, 0]} c="#e8e8e8" />)}
+        <Flat s={[4.4, 40]} pos={[tx, 0.02, 0]} rot={[-Math.PI / 2, 0, 0]} map={asph} />
+        {p.barrier && <group position={[0, 0, -2.6]}>{Array.from({ length: 16 }, (_, i) => <group key={i}>{[0, 1, 2].map((j) => <Cyl key={j} r={0.2} h={0.17} pos={[-3.2 + i * 0.42, 0.09 + j * 0.17, 0]} c={j === 1 ? (i % 2 ? RED : WHITE) : '#17181c'} seg={10} />)}</group>)}</group>}
+        {[tx - 2.2, tx + 2.2].map((x) => <group key={x}>{Array.from({ length: 34 }, (_, i) => <B key={i} s={[0.3, 0.03, 0.6]} pos={[x, 0.03, 8 - i * 0.6 - (off % 1.2)]} c={i % 2 ? KERB : WHITE} />)}</group>)}
+        {[tx - 2.0, tx + 2.0].map((x) => <B key={'l' + x} s={[0.06, 0.025, 40]} pos={[x, 0.028, 0]} c="#e8e8e8" />)}
         {walls(sky)}
       </group>
     );
@@ -373,5 +374,81 @@ export const Clock: React.FC<P> = ({ p }) => {
   );
 };
 
-export const EXTRA = { stage: Stage, f1: Car, pilot: Driver, pitboard: PitBoard, timing: TimingTower, stopwatch: Stopwatch, tyre: Tyre,
+/* ---------- Reloj de sesión: panel con texto (p.text) que cambia a p.text2 en p.at2; barra de tiempo restante ---------- */
+export const SessionClock: React.FC<P> = ({ t, tt, p }) => {
+  const { w = 2.4, h = 1.0, text = 'FP2', text2, at2 = 999, color = WHITE, color2 = AMBER, bar0 = 0.3, bar1 = 0.04, barDur = 1.6, ext = 0.55, extDur = 0.8, top = 'TIEMPO DE SESIÓN' } = p;
+  const second = t >= at2; const k2 = second ? eo((t - at2) / 0.25) : 0;
+  const bw = w - 0.3; const base = lerp(bar0, bar1, eio(tt / barDur)); const e = second ? ext * eo((t - at2) / extDur) : 0;
+  return (
+    <group>
+      <Cyl r={0.05} h={1.2} pos={[-w / 2 + 0.25, -h / 2 - 0.6, -0.05]} c={STEEL} />
+      <Cyl r={0.05} h={1.2} pos={[w / 2 - 0.25, -h / 2 - 0.6, -0.05]} c={STEEL} />
+      <B s={[w + 0.12, h + 0.12, 0.1]} pos={[0, 0, -0.07]} c="#2a3040" />
+      <B s={[w, h, 0.04]} pos={[0, 0, -0.02]} c="#05070c" />
+      <group position={[0, h * 0.34, 0.02]}><Label t={t} tt={tt} p={{ text: top, w: w * 0.9, h: 0.18, color: '#8a93ad', size: 0.8, weight: 800, depth: 0 }} /></group>
+      <group position={[0, h * 0.02, 0.02]} scale={second ? Math.max(0.01, k2) : 1}>
+        <Label t={t} tt={tt} p={{ text: second ? text2 : text, w: w * 0.9, h: 0.5, color: second ? color2 : color, size: 0.9, weight: 900, depth: 0 }} />
+      </group>
+      <B s={[bw, 0.09, 0.02]} pos={[0, -h * 0.36, 0.0]} c="#1b2130" />
+      <B s={[Math.max(0.001, base * bw), 0.09, 0.02]} pos={[-bw / 2 + (base * bw) / 2, -h * 0.36, 0.02]} c={TEAL} e={TEAL} ei={0.8} />
+      {e > 0.001 && <B s={[e * bw, 0.09, 0.02]} pos={[-bw / 2 + base * bw + (e * bw) / 2, -h * 0.36, 0.02]} c={AMBER} e={AMBER} ei={1} />}
+    </group>
+  );
+};
+
+/* ---------- Bandera roja en un mástil que flamea ---------- */
+export const RedFlag: React.FC<P> = ({ t, p }) => {
+  const { pole = 1.3, w = 0.7, h = 0.45, phase = 0 } = p;
+  return (
+    <group>
+      <Cyl r={0.025} h={pole} pos={[0, pole / 2, 0]} c={STEEL} />
+      {Array.from({ length: 5 }, (_, i) => { const x = (i + 0.5) * (w / 5); const z = Math.sin(t * 6 + phase - i * 0.9) * 0.05 * (i / 4 + 0.2);
+        return <B key={i} s={[w / 5 + 0.005, h, 0.02]} pos={[x + 0.02, pole - h / 2, z]} c={RED} e={RED} ei={0.6} />; })}
+    </group>
+  );
+};
+
+/* ---------- Piedritas de leca desparramadas: salen de [0,0,0] hacia afuera durante p.dur ---------- */
+export const GravelBits: React.FC<P> = ({ tt, p }) => {
+  const { n = 26, rx = 1.2, rz = 0.8, dur = 0.7, seed = 5, dir = 1 } = p; const r = seedR(seed); const k = eo(tt / dur);
+  return (
+    <group>{Array.from({ length: n }, (_, i) => { const a = r() * Math.PI * 2, d = 0.25 + r() * 0.75, sz = 0.04 + r() * 0.05;
+      const x = Math.cos(a) * d * rx * dir, z = Math.sin(a) * d * rz; const c = ['#8a847c', '#6e6a66', '#a39c92'][i % 3];
+      return <B key={i} s={[sz, sz * 0.7, sz]} pos={[x * k, sz * 0.35 + Math.sin(k * Math.PI) * 0.25 * (1 - d * 0.5), z * k]} rot={[r() * 2, r() * 3, 0]} c={c} />; })}</group>
+  );
+};
+
+/* ---------- Montículos de leca (para tapar las ruedas de un auto enterrado) ---------- */
+export const GravelHeap: React.FC<P> = ({ p }) => {
+  const { pts = [[0, 0]], r = 0.32, h = 0.22 } = p;
+  return (<group>{pts.map(([x, z]: number[], i: number) => (
+    <mesh key={i} position={[x, h / 2, z]} rotation={[0, i * 0.7, 0]}><coneGeometry args={[r, h, 7]} /><M c={i % 2 ? '#77726c' : '#6a6560'} /></mesh>))}</group>);
+};
+
+/* ---------- Ondas de radio que salen de un punto (arcos que crecen y se apagan) ---------- */
+export const RadioWaves: React.FC<P> = ({ tt, p }) => {
+  const { n = 3, period = 0.9, max = 0.9, color = TEAL, dir = 1 } = p;
+  return (<group rotation={[0, 0, dir > 0 ? 0 : Math.PI]}>{Array.from({ length: n }, (_, i) => {
+    const ph = ((tt / period + i / n) % 1 + 1) % 1; const r = 0.15 + ph * max; const o = 1 - ph;
+    return (<mesh key={i} rotation={[0, 0, -Math.PI / 4]}><torusGeometry args={[r, 0.025, 4, 16, Math.PI / 2]} /><meshBasicMaterial color={color} transparent opacity={o} toneMapped={false} /></mesh>);
+  })}</group>);
+};
+
+/* ---------- Puesto del muro de boxes: mesa con pantallas apagadas y una silla; auriculares sobre la mesa ---------- */
+export const PitStand: React.FC<P> = ({ t, tt, p }) => {
+  const { chair = true, headset = true } = p;
+  return (
+    <group>
+      <B s={[1.9, 0.08, 0.7]} pos={[0, 0.9, -0.35]} c="#2a2f3a" />
+      <B s={[1.9, 0.9, 0.06]} pos={[0, 0.45, -0.68]} c="#1b1f28" />
+      {[-0.6, 0.0, 0.6].map((x) => <group key={x}><B s={[0.52, 0.34, 0.04]} pos={[x, 1.2, -0.6]} rot={[-0.15, 0, 0]} c="#0b1a24" /><B s={[0.46, 0.02, 0.01]} pos={[x, 1.12, -0.57]} rot={[-0.15, 0, 0]} c={TEAL} e={TEAL} ei={0.5} /></group>)}
+      {headset && <group position={[0.35, 0.96, -0.15]}><mesh rotation={[Math.PI / 2, 0, 0]}><torusGeometry args={[0.1, 0.018, 4, 10, Math.PI]} /><M c="#1b1e23" /></mesh>
+        {[-1, 1].map((s) => <B key={s} s={[0.07, 0.05, 0.1]} pos={[0.1 * s, 0, 0]} c="#2b2f35" />)}</group>}
+      {chair && <group position={[0, 0, 0.45]}><B s={[0.5, 0.06, 0.5]} pos={[0, 0.5, 0]} c="#333a48" /><B s={[0.5, 0.6, 0.06]} pos={[0, 0.82, 0.24]} c="#333a48" />
+        <Cyl r={0.03} h={0.48} pos={[0, 0.24, 0]} c={STEEL} /></group>}
+    </group>
+  );
+};
+
+export const EXTRA = { sessclock: SessionClock, redflag: RedFlag, gravelbits: GravelBits, heap: GravelHeap, radio: RadioWaves, pitstand: PitStand, stage: Stage, f1: Car, pilot: Driver, pitboard: PitBoard, timing: TimingTower, stopwatch: Stopwatch, tyre: Tyre,
   lapring: LapRing, wear: WearGauge, stack: Stack, tyreset: TyreSet, mic: Mic, racecard: RaceCard, clock: Clock };
