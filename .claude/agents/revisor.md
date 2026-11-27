@@ -28,7 +28,8 @@ Veredicto
 
 Estilo de la casa, no es falla: en los subtítulos la palabra ya dicha queda atenuada (gris) a propósito; viene del motor (`src/`),
 que no se toca. Anotalo como observación para el dueño solo si una palabra TODAVÍA NO dicha o la activa no se lee.
-Dos palabras pegadas sí es falla: hueco menor a 14 px entre la palabra activa y su vecina, medido en todas las uniones del video (umbral fijado por el dueño el 26/11/2026:
+Medí también los frames en que DOS palabras están activas a la vez (el motor marca activa una palabra desde `s − 0,04` hasta `e`;
+si la siguiente empieza antes de 0,04 s, en ese frame las dos van en negrita y agrandadas). Dos palabras pegadas sí es falla: hueco menor a 14 px entre la palabra activa y su vecina, medido en todas las uniones del video (umbral fijado por el dueño el 26/11/2026:
 el motor deja 15–18 px en cualquier unión, y eso es aceptable; lo que se ve pegado es de 13 px para abajo) (el productor lo arregla marcando una de las dos como palabra clave en `beats.ts`).
 
 Caso especial, duración fuera de 45–70 s: el productor no puede arreglarla sin regenerar la voz, y eso gasta créditos que solo el dueño

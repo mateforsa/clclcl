@@ -31,5 +31,8 @@ Pasos
 Subtítulos: si dos palabras largas caen en el mismo renglón (más de ~20 letras entre las dos) se ven pegadas. Poné una de las dos
 en `keywords` del plano: el recuadro las separa en dos renglones. Revisalo en los stills antes del render.
 
+Ojo con los frames de transición: si una palabra empieza menos de 0,04 s después de que termina la anterior, durante un frame las dos
+quedan activas y agrandadas; si las dos son largas, marcá una como palabra clave.
+
 Si volvés por un rechazo del revisor, leé el motivo en `fabrica/log/<slug>.log`, arreglá solo eso y repetí desde el paso que corresponda.
 No marques nada como listo: eso lo decide el revisor y después el dueño.
