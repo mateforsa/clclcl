@@ -226,10 +226,10 @@ export const TimingTower: React.FC<P> = ({ t, tt, p }) => {
         return (
           <group key={i} position={[(1 - k) * -0.6, -i * rh, 0]} scale={[1, Math.max(0.01, k), 1]}>
             <group position={[-w / 2 + 0.32, 0, 0.01]}><B s={[0.56, rh - 0.06, 0.04]} pos={[0, 0, -0.03]} c={r.dots ? '#141824' : PINK} />
-              <Label t={t} tt={tt} p={{ text: r.pos, w: 0.56, h: rh - 0.1, color: r.dots ? '#6d7590' : '#fff', size: 0.72, weight: 900, depth: 0 }} /></group>
+              <group position={[0, 0, 0.02]}><Label t={t} tt={tt} p={{ text: r.pos, w: 0.56, h: rh - 0.1, color: r.dots ? '#6d7590' : '#fff', size: 0.72, weight: 900, depth: 0 }} /></group></group>
             <group position={[0.32, 0, r.hi ? 0.05 : 0]}>
               <B s={[w - 0.64, rh - 0.06, 0.04]} pos={[0, 0, -0.02]} c={r.dots ? '#141824' : r.hi ? BLUE : '#e9edf3'} />
-              <Label t={t} tt={tt} p={{ text: r.name, w: w - 0.8, h: rh - 0.1, color: r.dots ? '#6d7590' : r.hi ? '#fff' : INK, size: 0.6, weight: 800, depth: 0 }} />
+              <group position={[0, 0, 0.02]}><Label t={t} tt={tt} p={{ text: r.name, w: w - 0.8, h: rh - 0.1, color: r.dots ? '#6d7590' : r.hi ? '#fff' : INK, size: 0.6, weight: 800, depth: 0 }} /></group>
             </group>
           </group>);
       })}

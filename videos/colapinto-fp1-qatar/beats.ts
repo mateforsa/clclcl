@@ -50,10 +50,10 @@ export const BEATS: BeatSpec[] = [
     actors: [
       ST('tarde'),
       { type: 'timing', pos: [0.15, 2.2, -0.8], p: { w: 2.5, rh: 0.48, rows: [
-        { pos: '1', name: 'ANTONELLI', at: 0.75 },
-        { pos: '', name: '· · ·', dots: true, at: 2.0 },
-        { pos: '12', name: 'COLAPINTO +2,192', hi: true, at: 2.5 }] } },
-      { type: 'f1', pos: [-0.75, 0, 0.0], rot: [0, 0.5, 0], s: 0.42, at: 'Antonelli', p: SILVER },
+        { pos: '1', name: 'ANTONELLI' },
+        { pos: '', name: '· · ·', dots: true },
+        { pos: '12', name: 'COLAPINTO +2,192', hi: true }] } },
+      { type: 'f1', pos: [-0.75, 0, 0.0], rot: [0, 0.5, 0], s: 0.42, p: SILVER },
       { type: 'ring', pos: [-0.75, 0.04, 0.0], at: 'campeón', p: { r: 0.55, color: AMBER } },
     ],
     overlays: [P1('1° ANTONELLI (MERCEDES) · 1:23.217', 'Antonelli'), P2('COLAPINTO A 2,192 S · 28 VUELTAS', 'segundos'), FUENTE] },
@@ -126,12 +126,12 @@ export const BEATS: BeatSpec[] = [
     overlays: [P1('QATAR 2024: ABANDONO · 0 PUNTOS', 'Qatar'), P2('QATAR 2025: 14° · 0 PUNTOS', 'punto'), FUENTE] },
 
   // 10. Y hay algo en juego: es 12° en el campeonato, con 35 puntos.  (se apilan 35 fichas, una por punto)
-  { id: 'b10', set: 'room', cam: { from: [1.1, 1.1, 5.8], to: [-0.3, 1.4, 6.0], look: [0, 0.65, 0], lookTo: [0, 0.75, 0], fov: 46 }, keywords: ['12', 'campeonato', '35'],
+  { id: 'b10', set: 'room', cam: { from: [1.1, 1.1, 5.8], to: [0.4, 1.35, 6.0], look: [0.1, 0.65, 0], lookTo: [0.15, 0.75, 0], fov: 46 }, keywords: ['12', 'campeonato', '35'],
     actors: [
       ST('data'),
-      { type: 'stack', pos: [0.45, 0, -0.1], at: 'campeonato', enter: 'none', p: { n: 35, every: 0.033, top: '35', topBg: BLUE } },
-      { type: 'pilot', pos: [-0.6, 0, -0.2], rot: [0, 0.35, 0], s: 0.78, p: { ...FRANCO, pose: 'idle' } },
-      { type: 'racecard', pos: [-0.75, 0, -1.4], s: 0.85, at: '12', p: { top: 'CAMPEONATO', big: '12°', w: 1.1, h: 0.8, hi: true } },
+      { type: 'stack', pos: [0.2, 0, -0.1], at: 'campeonato', enter: 'none', p: { n: 35, every: 0.033, top: '35', topBg: BLUE } },
+      { type: 'pilot', pos: [-0.75, 0, -0.2], rot: [0, 0.35, 0], s: 0.78, p: { ...FRANCO, pose: 'idle' } },
+      { type: 'racecard', pos: [1.1, 0, -1.6], rot: [0, -0.2, 0], s: 0.85, at: '12', p: { top: 'CAMPEONATO', big: '12°', w: 1.1, h: 0.8, hi: true } },
     ],
     overlays: [P1('CAMPEONATO: COLAPINTO 12° · 35 PUNTOS', '35'), FUENTE] },
 
@@ -151,8 +151,8 @@ export const BEATS: BeatSpec[] = [
       ST('press'),
       { type: 'clock', pos: [-0.75, 1.75, -2.0], p: { h: 3, m: 0, r: 0.42 } },
       { type: 'clock', pos: [0.75, 1.75, -2.0], at: 'sábado', p: { h: 1, m: 0, r: 0.42, rim: PINK } },
-      { type: 'racecard', pos: [-0.75, 0, -1.2], s: 0.8, at: 'tres', p: { top: 'SÁBADO 28', big: '15:00', w: 1.1, h: 0.8 } },
-      { type: 'racecard', pos: [0.75, 0, -1.2], s: 0.8, at: 'domingo', p: { top: 'DOMINGO 29', big: '13:00', w: 1.1, h: 0.8, hi: true } },
+      { type: 'racecard', pos: [-0.75, 0.3, -1.4], s: 0.8, at: 'tres', p: { top: 'SÁBADO 28', big: '15:00', w: 1.1, h: 0.8 } },
+      { type: 'racecard', pos: [0.75, 0.3, -1.4], s: 0.8, at: 'domingo', p: { top: 'DOMINGO 29', big: '13:00', w: 1.1, h: 0.8, hi: true } },
       { type: 'f1', pos: [-2.6, 0, 0.9], rot: [0, PI / 2, 0], s: 0.42, p: { ...ALP, speed: 10 }, move: { to: [2.8, 0, 0.9], at: 'Clasifica', dur: 2.4 } },
     ],
     overlays: [P1('CLASIFICACIÓN: SÁBADO 28 · 15:00 (ARG)', 'tarde'), P2('CARRERA: DOMINGO 29 · 13:00 (ARG)', 'una'), FUENTE] },
