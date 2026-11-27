@@ -1,0 +1,3 @@
+{ "beat": "b03", "frac": 0.45,
+  "overlay": { "kicker": "COLAPINTO · QATAR", "y": 60,
+    "lines": [ { "t": "CASI SE TOCAN", "size": 120 }, { "t": "Y SAINZ SE ENOJÓ", "c": "yellow", "size": 104 }, { "t": "PRÁCTICA 2 · TERMINÓ 15°", "size": 66, "c": "cyan" } ] } }

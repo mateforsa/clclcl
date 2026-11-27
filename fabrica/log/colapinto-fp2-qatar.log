@@ -19,3 +19,7 @@
 2026-11-27T18:43:07-03:00 [oido] oído: 98 % de coincidencia; dudosos: Qatar (seguridad 54 %), Russell (seguridad 44 %); diferencias: russell→rossell; ya van→llaban; dos→2
 2026-11-27T18:43:14-03:00 [productor] voz 2 (última ronda): 53,7 s, 11 planos. Oído 98 %. PRONUNCIACIÓN SIN RESOLVER: Russell (Whisper oye 'Rossell', seguridad 44 %; forma del glosario). PRONUNCIACIÓN SIN RESOLVER: Qatar (seguridad 54 %; forma del glosario por indicación del dueño). Sainz (Sáintz), Oh, wow (Oh, guau) y Gasly bien.
 2026-11-27T18:50:26-03:00 [productor] beats.ts, entry.ts y props.tsx escritos (11 planos, diorama de escritorio); saco stills
+2026-11-27T19:08:53-03:00 [productor] stills revisados (85 %, 60 %, 40 %) y barrido de la franja de subtítulos cada 3 cuadros: corregido el almanaque del plano 10 (la hoja subía a la franja) y el aro del plano 6; at/out/keywords verificados contra timing.json
+2026-11-27T19:09:01-03:00 [productor] audio: 66 eventos, mezcla -14,2 LUFS. Paso a render (espera turno si hay otro)
+2026-11-27T19:09:01-03:00 [fabrica] etapa -> render
+2026-11-27T19:09:44-03:00 [productor] portada lista: instagram/portadas/colapinto-fp2-qatar.jpg (CASI SE TOCAN / Y SAINZ SE ENOJÓ / PRÁCTICA 2 · TERMINÓ 15°). Render en curso
