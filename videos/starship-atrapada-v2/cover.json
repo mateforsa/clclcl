@@ -1,0 +1,3 @@
+{ "beat": "b01", "frac": 0.95,
+  "overlay": { "y": 60, "kicker": "STARSHIP",
+    "lines": [ { "t": "UNA MOSCA", "size": 150 }, { "t": "DE 50 METROS", "c": "yellow", "size": 128 }, { "t": "Y LA AGARRARON CON PALITOS", "size": 56, "c": "cyan" } ] } }

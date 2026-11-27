@@ -8,6 +8,7 @@ import { SLATE, SIG, AMBER, MINT } from './props';
 // Textos 2D: exactamente los de "## Placas por plano" de guion.md, entre el 64% y el 77% de alto, x 46%.
 // Los 5 a 6 días (b06) y la hora (b07) van en planos separados, sin flecha ni comparación entre ellos.
 const OFFICE = { type: 'stage', p: { kind: 'office' } };
+const OPEN = { type: 'stage', p: { kind: 'office', open: true } };
 const DC = (red?: number) => ({ type: 'stage', p: { kind: 'dc', red } });
 const OPS = (red?: number) => ({ type: 'stage', p: { kind: 'ops', red } });
 const GREEN = '#0e7a55', VIOLET = '#5a4bd6', DARKAMB = '#a86400';
@@ -25,13 +26,13 @@ const chair = (x: number, z: number, rot = 0) => [
 
 export const BEATS: BeatSpec[] = [
   // 1. ¿El 12 de noviembre se te cortó el mail del trabajo? No era tu compu.  (sobre el hombro, empuje lento a la pantalla)
-  { id: 'b01', set: 'room', cam: { from: [1.0, 2.15, 3.6], to: [0.45, 1.95, 2.7], look: [0, 1.35, -0.6], lookTo: [-0.05, 1.4, -0.7], fov: 46 }, keywords: ['12', 'mail'],
+  { id: 'b01', set: 'room', cam: { from: [1.25, 2.55, 4.0], to: [0.8, 2.4, 3.2], look: [0, 1.2, -0.6], lookTo: [-0.05, 1.25, -0.7], fov: 46 }, keywords: ['12', 'mail'],
     actors: [
       OFFICE,
       { type: 'workdesk', pos: [0, 0, -0.4], p: { mon: { off: 1.25 } } },
-      ...chair(0, 0.45),
-      { type: 'person', pos: [0, 0, 0.5], rot: [0, PI, 0], p: { ...YOU, pose: 'sitType' }, out: 'cortó' },
-      { type: 'person', pos: [0, 0, 0.5], rot: [0, PI, 0], at: 'cortó', enter: 'none', p: { ...YOU, pose: 'sit' } },
+      ...chair(-0.35, 0.45),
+      { type: 'person', pos: [-0.35, 0, 0.5], rot: [0, PI * 1.1, 0], p: { ...YOU, pose: 'sitType' }, out: 'cortó' },
+      { type: 'person', pos: [-0.35, 0, 0.5], rot: [0, PI * 1.1, 0], at: 'cortó', enter: 'none', p: { ...YOU, pose: 'sit' } },
       { type: 'workdesk', pos: [-1.7, 0, -2.0], s: 0.85, p: { mon: { off: 0.2 }, mug: MINT } },
       { type: 'workdesk', pos: [1.7, 0, -2.0], s: 0.85, at: 'compu', enter: 'none', p: { mon: { off: 0 } } },
       { type: 'person', pos: [1.25, 0, -0.5], rot: [0, -0.5, 0], at: 'No#2', p: { ...CO1, pose: 'shrug' } },
@@ -41,7 +42,7 @@ export const BEATS: BeatSpec[] = [
   // 2. Se cayó el correo de empresas de Microsoft casi 24 horas.  (grúa alta que sube sobre el piso: las pantallas caen en cascada)
   { id: 'b02', set: 'room', cam: { from: [0.3, 4.4, 4.6], to: [-0.2, 6.0, 5.0], look: [0, 0.5, -0.9], lookTo: [0, 0.4, -1.1], fov: 46 }, keywords: ['Microsoft', '24'],
     actors: [
-      OFFICE,
+      OPEN,
       ...[-1.35, 0, 1.35].flatMap((x, i) => [0.6, -0.9, -2.4].map((z, j) => ({ type: 'workdesk', pos: [x, 0, z] as any, s: 0.72, p: { mon: { off: 0.25 + (i * 3 + j) * 0.17 }, mug: [AMBER, MINT, SIG][(i + j) % 3] } }))),
       { type: 'person', pos: [-1.35, 0, 1.15], rot: [0, PI, 0], s: 0.75, p: { ...YOU, pose: 'sitType' }, out: 'empresas' },
       { type: 'person', pos: [-1.35, 0, 1.15], rot: [0, PI * 0.8, 0], s: 0.75, at: 'empresas', enter: 'none', p: { ...YOU, pose: 'shrug' } },
@@ -84,15 +85,15 @@ export const BEATS: BeatSpec[] = [
     overlays: [tag('NO FUE UN ATAQUE', 'ataque', { color: SIG, size: 52, y: 67.5 }), tag('JULIO → NOVIEMBRE: 4 MESES SIN VERLO', 'cuatro', { size: 34, y: 74.5 })] },
 
   // 5. Le sumaron el tráfico de Teams a esos servidores con menos capacidad, y se trabaron.  (lateral alto que corre junto a la cinta)
-  { id: 'b05', set: 'room', cam: { from: [-1.7, 2.9, 4.4], to: [-0.5, 2.6, 4.0], look: [0, 0.9, -0.3], lookTo: [0.25, 1.0, -0.6], fov: 46 }, keywords: ['Teams', 'capacidad'],
+  { id: 'b05', set: 'room', cam: { from: [-1.7, 3.3, 4.6], to: [-0.6, 3.0, 4.2], look: [0, 0.75, -0.2], lookTo: [0.25, 0.8, -0.5], fov: 46 }, keywords: ['Teams', 'capacidad'],
     actors: [
       DC(4.17),
       { type: 'traffic', pos: [0, 0, 2.2], rot: [0, PI / 2, 0], p: { len: 2.95, gap: 0.42, speed: 1.0, extra: 1.26, jam: 4.17 } },
       { type: 'rack', pos: [-0.95, 0, -1.2], p: { seed: 1, dark: 2.76 } },
       { type: 'rack', pos: [0, 0, -1.2], p: { seed: 2, red: 4.17 } },
       { type: 'rack', pos: [0.95, 0, -1.2], p: { seed: 3, dark: 2.9 } },
-      { type: 'cross', pos: [-0.95, 2.45, -0.85], s: 0.5, at: 'menos' },
-      { type: 'cross', pos: [0.95, 2.45, -0.85], s: 0.5, at: 'capacidad' },
+      { type: 'cross', pos: [-0.95, 1.3, -0.7], s: 0.4, at: 'menos' },
+      { type: 'cross', pos: [0.95, 1.3, -0.7], s: 0.4, at: 'capacidad' },
     ],
     overlays: [tag('+ TRÁFICO DE TEAMS', 'Teams', { color: VIOLET, size: 50, y: 67.5 }), tag('- CAPACIDAD', 'capacidad', { color: SIG, size: 50, y: 74.5 })] },
 
@@ -101,19 +102,19 @@ export const BEATS: BeatSpec[] = [
     actors: [
       OPS(),
       { type: 'maptable', pos: [0, 0, 0], p: { pins: [[-1.25, -0.45], [-0.8, 0.45], [-0.15, -0.55], [0.2, 0.35], [0.85, -0.5], [1.25, 0.45]], travel: { at: 1.36, dur: 3.9 } } },
-      { type: 'folder', pos: [1.05, 0.93, 1.25], rot: [0, -0.4, 0], s: 0.45, at: 'memo', p: { open: 0.15 } },
+      { type: 'folder', pos: [1.0, 0.93, 0.7], rot: [0, -0.4, 0], s: 0.4, at: 'memo', p: { open: 0.15 } },
       { type: 'person', pos: [-1.0, 0, 1.45], rot: [0, PI * 0.85, 0], p: { ...OPR, pose: 'hold' } },
-      { type: 'flipcal', pos: [0, 1.95, -1.6], s: 1.0, at: 'tardaba', p: { months: ['DÍA 1', 'DÍA 2', 'DÍA 3', 'DÍA 4', 'DÍA 5', 'DÍA 6'], start: 0.2, every: 0.42 } },
-      { type: 'box', pos: [0, 0.7, -1.6], at: 'tardaba', enter: 'grow', p: { size: [0.06, 1.4, 0.06], color: '#59626e' } },
+      { type: 'flipcal', pos: [0, 1.55, -1.6], s: 0.8, at: 'tardaba', p: { months: ['DÍA 1', 'DÍA 2', 'DÍA 3', 'DÍA 4', 'DÍA 5', 'DÍA 6'], start: 0.2, every: 0.42 } },
+      { type: 'box', pos: [0, 0.55, -1.6], at: 'tardaba', enter: 'grow', p: { size: [0.06, 1.1, 0.06], color: '#59626e' } },
     ],
     overlays: [tag('ARREGLO URGENTE: 5 A 6 DÍAS', 'cinco', { color: DARKAMB, size: 46, y: 70 })] },
 
   // 7. La meta nueva es resolver una caída global en una hora.  (contrapicado que empuja hacia el cronómetro)
-  { id: 'b07', set: 'room', cam: { from: [0.7, 0.9, 5.4], to: [0.1, 1.25, 4.3], look: [0, 1.6, 0], lookTo: [0, 1.85, 0], fov: 46 }, keywords: ['global', 'hora'],
+  { id: 'b07', set: 'room', cam: { from: [0.7, 0.9, 5.9], to: [0.1, 1.2, 4.9], look: [0, 1.5, 0], lookTo: [0, 1.7, 0], fov: 46 }, keywords: ['global', 'hora'],
     actors: [
       OFFICE,
       { type: 'box', pos: [0, 0.35, 0], p: { size: [1.3, 0.7, 0.8], color: SLATE } },
-      { type: 'stopwatch', pos: [0, 1.85, 0.05], s: 0.95, at: 'meta', enter: 'drop', p: { sweep: 0.28 } },
+      { type: 'stopwatch', pos: [0, 1.75, 0.05], s: 0.8, at: 'meta', enter: 'drop', p: { sweep: 0.28 } },
       { type: 'ring', pos: [0, 0.03, 0], at: 'global', p: { r: 1.1, color: MINT } },
       { type: 'person', pos: [-1.3, 0, 0.6], rot: [0, 0.5, 0], p: { ...CO2, pose: 'idle' }, out: 'resolver' },
       { type: 'person', pos: [-1.3, 0, 0.6], rot: [0, 0.5, 0], at: 'resolver', enter: 'none', p: { ...CO2, pose: 'point' } },
@@ -123,7 +124,7 @@ export const BEATS: BeatSpec[] = [
     overlays: [tag('META: 1 HORA', 'meta', { color: GREEN, size: 64, y: 70 })] },
 
   // 8. Es un memo interno, no una promesa a los clientes.  (deslizamiento lateral frente a la pared de vidrio)
-  { id: 'b08', set: 'room', cam: { from: [-1.2, 2.4, 4.1], to: [0.7, 2.2, 3.9], look: [-0.1, 1.0, -0.3], lookTo: [0.2, 1.0, -0.4], fov: 46 }, keywords: ['interno', 'promesa'],
+  { id: 'b08', set: 'room', cam: { from: [-1.1, 3.1, 4.1], to: [0.6, 2.95, 3.9], look: [-0.1, 0.75, -0.5], lookTo: [0.2, 0.75, -0.6], fov: 46 }, keywords: ['interno', 'promesa'],
     actors: [
       OFFICE,
       { type: 'box', pos: [0, 0.38, 0.7], p: { size: [1.9, 0.76, 1.0], color: '#f4f6f8' } },
@@ -144,20 +145,20 @@ export const BEATS: BeatSpec[] = [
       { type: 'workdesk', pos: [1.6, 0, -1.6], s: 0.85, p: { mon: {}, mug: MINT } },
       { type: 'person', pos: [-0.75, 0, 0.1], rot: [0, 0.35, 0], p: { ...CO1, pose: 'hold' }, out: 'reclamar' },
       { type: 'person', pos: [-0.75, 0, 0.1], rot: [0, 0.35, 0], at: 'reclamar', enter: 'none', p: { ...CO1, pose: 'point' } },
-      { type: 'invoice', pos: [0.15, 1.65, 0.5], rot: [0, -0.15, 0.04], s: 1.0, at: 'paga', bob: 0.03 },
-      { type: 'ticket', pos: [0.55, 1.15, 1.1], s: 0.8, at: 'descuento', enter: 'pop' },
+      { type: 'invoice', pos: [0.35, 1.85, 0.0], rot: [0, -0.15, 0.04], s: 1.0, at: 'paga', bob: 0.03 },
+      { type: 'ticket', pos: [0.3, 1.25, 0.75], s: 0.7, at: 'descuento', enter: 'pop' },
     ],
     overlays: [tag('TU EMPRESA PUEDE RECLAMAR UN DESCUENTO', 'reclamar', { color: GREEN, size: 34, y: 70 })] },
 
   // 10. No llega solo: según guías especializadas, comprando directo se pide hasta el 31 de diciembre.  (se aleja del escritorio)
-  { id: 'b10', set: 'room', cam: { from: [0.25, 1.95, 2.6], to: [-0.2, 2.35, 3.9], look: [0, 1.05, -0.3], lookTo: [0, 1.1, -0.3], fov: 46 }, keywords: ['especializadas', 'comprando', '31'],
+  { id: 'b10', set: 'room', cam: { from: [0.15, 1.95, 2.8], to: [-0.15, 2.35, 4.1], look: [0, 1.05, -0.3], lookTo: [0, 1.1, -0.3], fov: 46 }, keywords: ['especializadas', 'comprando', '31'],
     actors: [
       OFFICE,
       { type: 'box', pos: [0, 0.37, -0.2], p: { size: [2.4, 0.74, 1.1], color: '#f4f6f8' } },
       { type: 'tray', pos: [-0.7, 0.75, 0.0], rot: [0, 0.2, 0] },
       { type: 'cross', pos: [-0.7, 1.25, 0.05], s: 0.35, at: 'solo' },
       { type: 'claim', pos: [0.05, 1.35, -0.35], rot: [-0.25, 0, 0], at: 'según', p: { checks: [0.4, 1.9, 2.5, 3.0] } },
-      { type: 'deskcal', pos: [0.75, 0.75, 0.0], rot: [0, -0.3, 0], s: 0.65, at: '31', p: { circle: 0.15 } },
+      { type: 'deskcal', pos: [0.6, 0.75, 0.05], rot: [0, -0.3, 0], s: 0.6, at: '31', p: { circle: 0.15 } },
     ],
     overlays: [tag('compra directa, según guías especializadas', 'según', { size: 28, y: 75.5, color: 'rgba(31,42,58,.92)' }), tag('HASTA EL 31/12', '31', { color: SIG, size: 60, y: 68.5 })] },
 
@@ -165,13 +166,13 @@ export const BEATS: BeatSpec[] = [
   { id: 'b11', set: 'room', cam: { from: [0.5, 1.8, 3.5], to: [0.35, 2.6, 4.2], look: [0.25, 1.3, -0.5], lookTo: [0.35, 1.25, -0.6], fov: 46 }, keywords: ['sistemas'],
     actors: [
       OFFICE,
-      { type: 'workdesk', pos: [-0.3, 0, -0.4], p: { mon: { mode: 'sent' } } },
-      ...chair(-0.3, 0.45),
-      { type: 'person', pos: [-0.3, 0, 0.5], rot: [0, PI, 0], p: { ...YOU, pose: 'sitType' } },
-      { type: 'fly', pos: [-0.3, 1.5, -0.4], p: { to: [1.6, -0.1, -0.3], at: 0.3, dur: 0.9 }, out: 1.25 },
-      { type: 'person', pos: [1.35, 0, -0.8], rot: [0, -0.4, 0], p: { ...IT, pose: 'idle' }, out: 'sistemas' },
-      { type: 'person', pos: [1.35, 0, -0.8], rot: [0, -0.4, 0], at: 'sistemas', enter: 'none', p: { ...IT, pose: 'hold' } },
-      { type: 'check', pos: [1.35, 2.45, -0.8], s: 0.45, at: 'trabajo' },
+      { type: 'workdesk', pos: [-0.1, 0, -0.4], p: { mon: { mode: 'sent' } } },
+      ...chair(-0.45, 0.45),
+      { type: 'person', pos: [-0.45, 0, 0.5], rot: [0, PI, 0], p: { ...YOU, pose: 'sitType' } },
+      { type: 'fly', pos: [-0.1, 1.5, -0.4], p: { to: [1.2, -0.1, -0.3], at: 0.3, dur: 0.9 }, out: 1.25 },
+      { type: 'person', pos: [1.1, 0, -0.8], rot: [0, -0.4, 0], p: { ...IT, pose: 'idle' }, out: 'sistemas' },
+      { type: 'person', pos: [1.1, 0, -0.8], rot: [0, -0.4, 0], at: 'sistemas', enter: 'none', p: { ...IT, pose: 'hold' } },
+      { type: 'check', pos: [1.1, 2.4, -0.8], s: 0.45, at: 'trabajo' },
     ],
     overlays: [tag('MANDÁSELO AL DE SISTEMAS', 0.05, { color: DARKAMB, size: 48, y: 70 })] },
 ];

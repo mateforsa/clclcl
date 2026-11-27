@@ -59,8 +59,8 @@ const Office: React.FC<{ t: number; p: any }> = ({ p }) => {
       <B s={[14, 5, 0.2]} pos={[0, 6.3, -3.75]} c={WALLW} />
       {[-4.4, 4.4].map((x) => <B key={x} s={[0.2, 9, 14]} pos={[x, 4.5, 0]} c="#e3e8ee" />)}
       {/* techo con paneles de luz */}
-      <B s={[9, 0.1, 14]} pos={[0, 4.6, 0]} c="#f3f5f7" />
-      {[-2, 0, 2].map((z) => [-1.8, 1.8].map((x) => <Flat key={x + '' + z} s={[1.4, 0.5]} pos={[x, 4.54, z]} rot={[Math.PI / 2, 0, 0]} c="#ffffff" />))}
+      {!p.open && <B s={[9, 0.1, 14]} pos={[0, 4.6, 0]} c="#f3f5f7" />}
+      {!p.open && [-2, 0, 2].map((z) => [-1.8, 1.8].map((x) => <Flat key={x + '' + z} s={[1.4, 0.5]} pos={[x, 4.54, z]} rot={[Math.PI / 2, 0, 0]} c="#ffffff" />))}
       {/* planta */}
       <group position={[-3.6, 0, -3.0]}><Cyl r={0.28} h={0.5} r2={0.34} pos={[0, 0.25, 0]} c={SLATE} />
         {[0, 1, 2, 3, 4].map((i) => <mesh key={i} position={[Math.cos(i * 1.3) * 0.2, 0.8 + i * 0.12, Math.sin(i * 1.3) * 0.2]}><icosahedronGeometry args={[0.28, 0]} /><M c={i % 2 ? '#3f8f5a' : '#4fa86a'} /></mesh>)}</group>
