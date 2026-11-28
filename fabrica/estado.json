@@ -2722,7 +2722,7 @@
    "tema": "redes y algoritmo (pedido del dueño)",
    "fuentes": [],
    "puntaje": 9.0,
-   "etapa": "revision",
+   "etapa": "esperando_ok_final",
    "creado": "2026-11-28T02:38:22-03:00",
    "historial": [
     {
@@ -2777,6 +2777,11 @@
     {
      "etapa": "revision",
      "cuando": "2026-11-28T06:26:34-03:00",
+     "nota": ""
+    },
+    {
+     "etapa": "esperando_ok_final",
+     "cuando": "2026-11-28T06:29:15-03:00",
      "nota": ""
     }
    ],
@@ -3019,5 +3024,5 @@
    "link": "https://www.instagram.com/reel/DgR5Wfnh00G/"
   }
  },
- "actualizado": "2026-11-28T06:26:34-03:00"
+ "actualizado": "2026-11-28T06:29:15-03:00"
 }
