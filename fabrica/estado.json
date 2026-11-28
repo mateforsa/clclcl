@@ -2710,15 +2710,38 @@
    "tema": "redes y algoritmo (pedido del dueño)",
    "fuentes": [],
    "puntaje": 9.0,
-   "etapa": "idea",
+   "etapa": "guion",
    "creado": "2026-11-28T02:38:22-03:00",
    "historial": [
     {
      "etapa": "idea",
      "cuando": "2026-11-28T02:38:22-03:00"
+    },
+    {
+     "etapa": "guion",
+     "cuando": "2026-11-28T02:46:20-03:00",
+     "nota": ""
+    }
+   ],
+   "nota": ""
+  },
+  "litio-pileta-salar": {
+   "titulo": "El litio argentino tarda más de un año en salir de una pileta: la máquina que lo hace en días",
+   "tema": "economía argentina",
+   "fuentes": [
+    "https://www.ambito.com/energia/exportaciones-mineras-acumularon-us7455-millones-10-meses-y-crecieron-525-interanual-n6349150",
+    "https://www.lanacion.com.ar/economia/el-oro-blanco-el-informe-del-gobierno-que-revela-la-actualidad-del-mineral-estrella-nid12102026/"
+   ],
+   "puntaje": 7.8,
+   "etapa": "idea",
+   "creado": "2026-11-28T02:45:57-03:00",
+   "historial": [
+    {
+     "etapa": "idea",
+     "cuando": "2026-11-28T02:45:57-03:00"
     }
    ]
   }
  },
- "actualizado": "2026-11-28T02:38:22-03:00"
+ "actualizado": "2026-11-28T02:46:20-03:00"
 }
