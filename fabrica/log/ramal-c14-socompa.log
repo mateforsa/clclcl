@@ -12,3 +12,6 @@
 2026-11-28T08:51:13-03:00 [oido] oído: 99 % de coincidencia; dudosos: C14 (seguridad 58 %); diferencias: bocina→bozina
 2026-11-28T08:52:29-03:00 [productor] toma 1: C14 dudoso (58 %); probadas 6 variantes, gana 'C catorce' (77 %); Socompa tal cual (87 %). Toma 2 de voz
 2026-11-28T08:52:52-03:00 [oido] oído: 98 % de coincidencia; dudosos: ninguno; diferencias: 4 000→4000; tres→3
+2026-11-28T09:00:46-03:00 [productor] toma 2 OK (Whisper 98 %, sin términos dudosos; C14 y Socompa en el glosario como probadas). beats.ts/props.tsx/entry.ts escritos; stills
+2026-11-28T09:32:22-03:00 [productor] stills revisados; QC por máscara (objetos clave en magenta: tren, vía, viaducto, túnel, restos): 0 cuadros tapados en 1802; audio mezclado; lanzo render
+2026-11-28T09:32:23-03:00 [fabrica] etapa -> render

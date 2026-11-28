@@ -3193,7 +3193,7 @@
     "https://www.3djuegos.com/xbox-one/noticias/digital-foundry-pone-a-prueba-gta-6-xbox-one-gracias-a-nube-microsoft-resultado-mejor-esperado"
    ],
    "puntaje": 7.5,
-   "etapa": "voz",
+   "etapa": "render",
    "creado": "2026-11-28T08:44:50-03:00",
    "historial": [
     {
@@ -3234,6 +3234,11 @@
      "etapa": "voz",
      "cuando": "2026-11-28T08:53:14-03:00",
      "nota": "voz sin OK (regla voz_sin_ok del dueño)"
+    },
+    {
+     "etapa": "render",
+     "cuando": "2026-11-28T09:27:12-03:00",
+     "nota": ""
     }
    ],
    "nota": "",
@@ -3247,7 +3252,7 @@
     "https://www.diariouno.com.ar/sociedad/el-misterioso-bocinazo-del-tren-mas-extremo-del-pais-y-la-historia-detras-un-homenaje-emocionante-n1568105"
    ],
    "puntaje": 7.3,
-   "etapa": "voz",
+   "etapa": "render",
    "creado": "2026-11-28T08:44:50-03:00",
    "historial": [
     {
@@ -3273,11 +3278,16 @@
      "etapa": "voz",
      "cuando": "2026-11-28T08:49:48-03:00",
      "nota": "voz sin OK (regla voz_sin_ok del dueño)"
+    },
+    {
+     "etapa": "render",
+     "cuando": "2026-11-28T09:32:23-03:00",
+     "nota": ""
     }
    ],
    "nota": "",
    "caracteres_voz": 957
   }
  },
- "actualizado": "2026-11-28T08:53:14-03:00"
+ "actualizado": "2026-11-28T09:32:23-03:00"
 }

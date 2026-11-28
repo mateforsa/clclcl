@@ -14,3 +14,13 @@
 2026-11-28T08:53:13-03:00 [fabrica] gta-vi-xbox-one-nube: la voz gasta unos 918 caracteres de ElevenLabs. AVISO: no se puede leer el saldo (la clave no tiene ese permiso); anotalo en fabrica/config.json.
 2026-11-28T08:53:14-03:00 [fabrica] etapa -> esperando_ok_voz
 2026-11-28T08:53:14-03:00 [fabrica] voz SIN OK del dueño (regla voz_sin_ok): ~918 caracteres
+2026-11-28T08:54:09-03:00 [productor] arranco: créditos, pruebas de pronunciación y voz
+2026-11-28T08:54:09-03:00 [fabrica] gta-vi-xbox-one-nube: la voz gasta unos 918 caracteres de ElevenLabs. AVISO: no se puede leer el saldo (la clave no tiene ese permiso); anotalo en fabrica/config.json.
+2026-11-28T08:56:59-03:00 [productor] pronunciación probada antes de la voz: Xbox One S -> Éxbox Guán Ese (93 %), One S -> Guán Ese, Digital Foundry -> Dígital Foundry (95 %), Series S queda Síries Ese (Whisper oye 'serie se' en todas); genero voz 1
+2026-11-28T08:57:31-03:00 [oido] oído: 99 % de coincidencia; dudosos: Series S (seguridad 13 %); diferencias: gta→gt; series→sirius
+2026-11-28T08:58:22-03:00 [productor] voz 1 (60,6 s): Whisper 99 %, pero 'Series S' del plano 6 se oye 'Sirius S' (13 %). Probado en contexto: 'Séries Ese.' se transcribe 'Series S.'; voz 2 (última)
+2026-11-28T08:59:05-03:00 [oido] oído: 99 % de coincidencia; dudosos: GTA 6, Series S (seguridad 51 %); diferencias: gta 6→gt6; →entre
+2026-11-28T08:59:39-03:00 [productor] voz 2 (60,3 s): Whisper 99 %; Series S del plano 6 ahora se oye 'Series S' (67 % en el tramo solo); el 'entre entre' del informe es de Whisper (el tramo solo se oye una vez); GTA 6 se transcribe 'GT6' (forma del glosario). No regenero más
+2026-11-28T09:06:18-03:00 [productor] planos escritos (14, living de noche con consola vieja, ventana y nube-servidor lejana unidas por un haz; CSS de subtítulos de litio); saco stills
+2026-11-28T09:27:12-03:00 [productor] stills y QC por máscara revisados (objetos clave en magenta vs placas: 0 cuadros tapados en 1809; franja 290-390 p99,5 <= 25 de luma, velo más fuerte en plano 6); audio mezclado; lanzo render
+2026-11-28T09:27:12-03:00 [fabrica] etapa -> render

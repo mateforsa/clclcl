@@ -1,0 +1,3 @@
+{ "beat": "b02", "frac": 0.6,
+  "overlay": { "y": 60, "kicker": "SALTA",
+    "lines": [ { "t": "A 4.000 METROS", "size": 112 }, { "t": "TOCA BOCINA", "c": "yellow", "size": 132 }, { "t": "EN EL MISMO LUGAR HACE CASI 30 AÑOS", "size": 52, "c": "cyan" } ] } }

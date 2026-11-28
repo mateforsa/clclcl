@@ -915,5 +915,61 @@
    "Socomppa,",
    "Socompa ,"
   ]
+ },
+ "Xbox One S": {
+  "dicho": "Éxbox Guán Ese",
+  "estado": "probada",
+  "puntaje": 0.93,
+  "variantes": [
+   "Éxbox Uán Ese",
+   "Éxbox Guán Ese",
+   "Éxbox Wan Ese",
+   "Éxbox One Ese",
+   "Ex box Uán Es"
+  ]
+ },
+ "Series S": {
+  "dicho": "Séries Ese",
+  "estado": "probada",
+  "puntaje": 0.48,
+  "variantes": [
+   "Síries Ese",
+   "Séries Ese",
+   "Síries Ése",
+   "Sírieses",
+   "Síries, Ese",
+   "Siries Ese"
+  ],
+  "nota": "28/11/2026 gta-vi-xbox-one-nube: en final de frase ('la versión de ##.') solo 'Séries Ese' se transcribe 'Series S' (el puntaje no lo refleja); 'Síries Ese' se oye 'Sirius S' (13 % en la voz 1). En medio de frase 'Síries Ese' se oyó bien. A confirmar por el dueño de oído"
+ },
+ "Digital Foundry": {
+  "dicho": "Dígital Foundry",
+  "estado": "probada",
+  "puntaje": 0.95,
+  "variantes": [
+   "Díyital Fáundri",
+   "Díchital Fáundri",
+   "Digital Fáundri",
+   "Díyitol Fáundri",
+   "Dígital Foundry"
+  ]
+ },
+ "One S": {
+  "dicho": "Guán Ese",
+  "estado": "probada",
+  "puntaje": 0.53,
+  "variantes": [
+   "Guán Ese",
+   "Uán Ese",
+   "Wan Ese",
+   "One Ese",
+   "Guán Es"
+  ],
+  "nota": "28/11/2026 gta-vi-xbox-one-nube: corregido a mano. 'Wan Ese' sacó 85 % pero se oye 'al aguane'; 'Guán Ese' se transcribe '1S' (suena 'uan ese') y es la ganadora en 'Xbox One S' (93 %)"
+ },
+ "Xbox": {
+  "dicho": "Éxbox",
+  "estado": "probada",
+  "nota": "28/11/2026 gta-vi-xbox-one-nube: en las 5 variantes de 'Xbox One S' Whisper oyó 'Xbox' con 'Éxbox'"
  }
 }
