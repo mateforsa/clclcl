@@ -24,3 +24,5 @@
 2026-11-28T06:04:19-03:00 [oido] oído: 94 % de coincidencia; dudosos: ninguno; diferencias: mil→1 000; parana lo enfrian→paranalo en fria; ser→hacer; i→1; ii→2 en; cinco→5; conta→contad
 2026-11-28T06:06:31-03:00 [revisor] APROBADO: 1080x1920 30fps h264+aac 65,70 s (timing 65,694); -14,6 LUFS / -4,9 dBTP; sin silencios/negro/congelados; uniones medidas sobre el MP4 en los 1971 cuadros: mín. 25 px entre palabras (21 px es el espacio interno de 'Atucha I'), 8 cuadros con dos activas (mín. 27 px), ninguna bajo 14; placas (y 525-755) no tapan 3D en ningún cuadro (revisado a 5 fps + recorte); portada 1080x1920; 5 etiquetas; Whisper 94 %, sin términos fallidos. Observaciones para el dueño: Chernóbyl acentuado (decidir de oído); plano 13 (56,1-60,6 s) el fondo de la olla asoma bajo el borde de la losa: oclusión correcta, no atraviesa; plano 10 grafito rojizo sin fuego, tono sobrio.
 2026-11-28T06:06:31-03:00 [fabrica] etapa -> esperando_ok_final
+2026-11-28T06:07:13-03:00 [dueño] APROBADO (esperando_ok_final -> listo)
+2026-11-28T06:08:31-03:00 [publicador] PUBLICADO: https://www.instagram.com/reel/DgR5Wfnh00G/
