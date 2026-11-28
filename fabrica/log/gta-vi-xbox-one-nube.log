@@ -32,3 +32,6 @@
 2026-11-28T09:44:47-03:00 [fabrica] etapa -> render (devuelto por el revisor: pronunciación GTA 6 y Series S sin resolver (falta probar variantes o dejar 'PRONUNCIACIÓN SIN RESOLVER' en el log); el resto PASA)
 2026-11-28T09:45:11-03:00 [productor] PRONUNCIACIÓN SIN RESOLVER: GTA 6 (Whisper oye 'GT6'; forma del glosario 'ge te a seis', probada 0,91), Series S (seguridad 51 %). Ya se usaron las 2 tomas de voz permitidas; lo decide el dueño de oído.
 2026-11-28T09:45:11-03:00 [fabrica] etapa -> revision
+2026-11-28T09:47:12-03:00 [revisor] APROBADO (vuelta 2): 1080x1920 30 fps h264+aac 60,307 s (= timing.json); -14,1 LUFS, -4,1 dBTP, 0 silencios/negros/congelados; uniones de subtítulos medidas por el revisor en los 1809 cuadros del MP4: mínimo 18 px (ningún hueco entre 12 y 17 px, sin uniones colapsadas); 6 frames a tamaño completo OK (subs ~295-385 px, placas y fuente <=1430 px, sombra ~1451 < 1500); portada 1080x1920; 5 etiquetas; qc*.ts fuera del bundle; sin logos reales. Observación para el dueño: PRONUNCIACIÓN SIN RESOLVER GTA 6 ('GT6') y Series S (51 %), decidir de oído.
+2026-11-28T09:47:12-03:00 [fabrica] etapa -> esperando_ok_final (revisor: todo PASA; el dueño decide de oído GTA 6 y Series S (PRONUNCIACIÓN SIN RESOLVER))
+2026-11-28T09:49:19-03:00 [publicador] reel de prueba automático (madrugada) https://www.instagram.com/reel/DgSSobaxUND/
