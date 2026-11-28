@@ -1,2 +1,9 @@
 2026-11-27T21:41:55-03:00 [fabrica] idea creada: El aceite de limón vale el doble que la carne: récord de exportaciones del campo
 2026-11-27T21:41:56-03:00 [editor] elegido (corrida 21:34): sorpresa 8, vigencia 8, compartible 8, 3D 8 = 8.0. Hecho nuevo, sin repetir: cosecha-record-171 habló de la cosecha 2025/26 y este es el dato de exportaciones de octubre (Secretaría de Agricultura, 27/11). Gancho: el aceite esencial de cítricos se vende a US$ 32.449/t, más del doble que la carne bovina fresca (US$ 15.397/t). Es economía con número concreto, lo que más se comparte, y entra en el formato 'Argentina productiva'. Barcos, toneladas y limones se arman bien en low-poly. No repetir el limón de de-donde-vienen-tus-cosas (65-70% del mundo): acá el dato es el precio por tonelada.
+2026-11-27T21:45:50-03:00 [guionista] guion escrito: 195 palabras, 17 planos (~67 s), apertura tipo A8 la diferencia (carne 15.397 vs aceite esencial de cítricos 32.449 US$/t), cierre tipo juego adiviná el precio (lana peinada, respuesta en la descripción); dice cítricos, no limón (las fuentes no separan el limón)
+2026-11-27T21:45:50-03:00 [fabrica] etapa -> guion
+2026-11-27T21:46:36-03:00 [verificador] APROBADO: 22 datos, todos con fuente
+2026-11-27T21:46:36-03:00 [fabrica] etapa -> verificado
+2026-11-27T21:46:53-03:00 [fabrica] exportaciones-agro-5717: la voz gasta unos 1141 caracteres de ElevenLabs. AVISO: no se puede leer el saldo (la clave no tiene ese permiso); anotalo en fabrica/config.json.
+2026-11-27T21:46:53-03:00 [fabrica] etapa -> esperando_ok_voz
+2026-11-27T21:46:53-03:00 [fabrica] voz SIN OK del dueño (regla voz_sin_ok): ~1141 caracteres
