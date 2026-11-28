@@ -2642,15 +2642,37 @@
     "https://www.infobae.com/sociedad/2020/10/30/a-500-anos-del-paso-de-magallanes-por-el-estrecho-como-fue-la-proeza-que-la-argentina-no-conmemoro/"
    ],
    "puntaje": 7.5,
-   "etapa": "idea",
+   "etapa": "voz",
    "creado": "2026-11-28T01:45:32-03:00",
    "historial": [
     {
      "etapa": "idea",
      "cuando": "2026-11-28T01:45:32-03:00"
+    },
+    {
+     "etapa": "guion",
+     "cuando": "2026-11-28T01:49:46-03:00",
+     "nota": ""
+    },
+    {
+     "etapa": "verificado",
+     "cuando": "2026-11-28T01:50:42-03:00",
+     "nota": ""
+    },
+    {
+     "etapa": "esperando_ok_voz",
+     "cuando": "2026-11-28T01:51:02-03:00",
+     "nota": ""
+    },
+    {
+     "etapa": "voz",
+     "cuando": "2026-11-28T01:51:02-03:00",
+     "nota": "voz sin OK (regla voz_sin_ok del dueño)"
     }
-   ]
+   ],
+   "nota": "",
+   "caracteres_voz": 1059
   }
  },
- "actualizado": "2026-11-28T01:45:57-03:00"
+ "actualizado": "2026-11-28T01:51:02-03:00"
 }
