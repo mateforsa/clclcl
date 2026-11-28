@@ -80,7 +80,7 @@ export const BEATS: BeatSpec[] = [
 
   // 6. Son 119 molinos en un campo parecido a la Ciudad de Buenos Aires.
   { id: 'b06', set: 'room', cam: { from: [0.0, 5.2, 3.0], to: [0.0, 4.8, 2.5], look: [0, 0, -0.6], fov: 44, shift: -0.04 }, keywords: ['119', 'molinos', 'Ciudad', 'Aires.'],
-    actors: [WORLD({ noBardas: true, tufts: { n: 0 }, noDust: true }),
+    actors: [WORLD({ noBardas: true, tufts: { n: 0 }, noDust: true, shadeA: 0.96 }),
       { type: 'park', pos: [0, 0, -0.95], p: { caba: 119, w: 2.5, H: 0.16, spin: 2.0, outline: true, outAt: W('b06', 'Ciudad') } },
     ],
     overlays: [P1('119 MOLINOS · ~200 KM²', W('b06', '119')), P2('COMO LA CIUDAD DE BUENOS AIRES', W('b06', 'Ciudad')), FU_AI] },
@@ -122,7 +122,7 @@ export const BEATS: BeatSpec[] = [
 
   // 11. Pero el viento le va a dar solo un tercio de lo que consume.
   { id: 'b11', set: 'room', cam: { from: [0.4, 3.0, 3.6], to: [0.1, 2.8, 3.2], look: [0, 0.2, -0.4], fov: 44, shift: -0.04 }, keywords: ['viento', 'tercio', 'consume.'],
-    actors: [WORLD({ tufts: { z: [1.4, 3.2] } }),
+    actors: [WORLD({ tufts: { z: [1.4, 3.2] }, shadeA: 0.96 }),
       { type: 'pie', pos: [0, 0, -0.8], rot: [0, 0.6, 0], p: { r: 0.8, wind: [[W('b11', 'viento'), 0.12], [W('b11', 'tercio') + 0.2, 0.33]] } },
     ],
     overlays: [P1('VIENTO: 12% → 33% DEL CONSUMO', W('b11', 'viento')), FU_AM] },

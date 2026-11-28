@@ -53,7 +53,7 @@ export const BEATS: BeatSpec[] = [
     overlays: [H1('4.000 TONELADAS', W('b02', '4.000')), H2('PENSADA PARA EL 8% DEL GAS ARGENTINO', W('b02', '8%')), LN] },
 
   // 3. Se llama Fénix. Y no la hicieron acá.
-  { id: 'b03', set: 'room', cam: { from: [-1.8, SEA + 1.7, 4.4], to: [-1.2, SEA + 1.5, 4.8], look: [0, SEA + 1.45, 0], fov: 44, shift: 0 }, keywords: ['Fénix.', 'acá.'],
+  { id: 'b03', set: 'room', cam: { from: [-1.8, SEA + 1.7, 4.4], to: [-1.2, SEA + 1.5, 4.8], look: [0, SEA + 1.7, 0], fov: 44, shift: 0 }, keywords: ['Fénix.', 'acá.'],
     actors: [SEAW({ coast: { x0: -4.2 } }),
       { type: 'platform', pos: [0, SB, 0], p: { light: true } },
     ],
@@ -78,7 +78,7 @@ export const BEATS: BeatSpec[] = [
   { id: 'b06', set: 'room', cam: cutCam(SB - 0.15, SEA + 1.9, 0.0), keywords: ['base', '70', 'arriba.'],
     actors: [CUT,
       { type: 'pipe', p: { pts: [[0.2, SB + 0.045, 0.2], [0.2, SB + 0.045, 0.62], [4.8, SB + 0.045, 0.62]] } },
-      { type: 'platform', pos: [0, SB + 1.9, 0], p: { top: false }, move: { to: [0, SB, 0], at: W('b06', 'apoyaron'), dur: 1.6 } },
+      { type: 'platform', pos: [0, SB + 1.0, 0], p: { top: false }, move: { to: [0, SB, 0], at: W('b06', 'apoyaron'), dur: 1.6 } },
       { type: 'twinship', pos: [4.6, 0, 0], at: W('b06', 'y') - 0.3, enter: 'none', p: { topY: [[0, 0.45], [W('b06', 'parte') + 0.15, 0.45], [DUR('b06') - 0.05, 0.0]] },
         move: { to: [0, 0, 0], at: W('b06', 'y') - 0.3, dur: W('b06', 'parte') - W('b06', 'y') + 0.4 } },
       { type: 'platform', pos: [4.6, SB, 0], at: W('b06', 'y') - 0.3, enter: 'none', p: { jacket: false, topY: [[0, 0.45], [W('b06', 'parte') + 0.15, 0.45], [DUR('b06') - 0.05, 0.0]] },

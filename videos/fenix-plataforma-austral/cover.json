@@ -1,3 +1,3 @@
-{ "beat": "b03", "frac": 0.9,
-  "overlay": { "y": 60, "kicker": "PLATAFORMA FÉNIX",
+{ "beat": "b03", "frac": 0.3,
+  "overlay": { "y": 70, "kicker": "PLATAFORMA FÉNIX",
     "lines": [ { "t": "4.000 TONELADAS", "size": 112 }, { "t": "EN EL MAR", "c": "yellow", "size": 140 }, { "t": "PENSADA PARA EL 8% DEL GAS", "size": 60, "c": "cyan" } ] } }

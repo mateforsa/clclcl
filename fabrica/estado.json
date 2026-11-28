@@ -3043,7 +3043,7 @@
     "https://www.iprofesional.com/negocios/454613-record-de-divisas-aluar-reporto-ganancias-millonarias-y-acelera-su-plan-de-inversion"
    ],
    "puntaje": 8.0,
-   "etapa": "render",
+   "etapa": "revision",
    "creado": "2026-11-28T06:45:49-03:00",
    "historial": [
     {
@@ -3074,6 +3074,11 @@
      "etapa": "render",
      "cuando": "2026-11-28T07:28:25-03:00",
      "nota": ""
+    },
+    {
+     "etapa": "revision",
+     "cuando": "2026-11-28T07:46:56-03:00",
+     "nota": ""
     }
    ],
    "nota": "",
@@ -3087,7 +3092,7 @@
     "https://www.iprofesional.com/economia/421001-hito-en-mar-argentino-total-energies-puso-en-accion-los-3-pozos-del-proyecto-fenix"
    ],
    "puntaje": 7.3,
-   "etapa": "voz",
+   "etapa": "render",
    "creado": "2026-11-28T06:45:49-03:00",
    "historial": [
     {
@@ -3123,11 +3128,16 @@
      "etapa": "voz",
      "cuando": "2026-11-28T06:52:53-03:00",
      "nota": "voz sin OK (regla voz_sin_ok del dueño)"
+    },
+    {
+     "etapa": "render",
+     "cuando": "2026-11-28T07:44:55-03:00",
+     "nota": ""
     }
    ],
    "nota": "",
    "caracteres_voz": 970
   }
  },
- "actualizado": "2026-11-28T07:28:25-03:00"
+ "actualizado": "2026-11-28T07:46:56-03:00"
 }
