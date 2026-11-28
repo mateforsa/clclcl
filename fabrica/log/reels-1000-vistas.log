@@ -6,3 +6,8 @@
 2026-11-28T02:59:07-03:00 [fabrica] etapa -> guion (devuelto por el verificador: planos 6-7, placas 6-7 y la linea de Mosseri de la descripcion sin fuente leida; reformular con Meta 2023 (compartir como factor, tiempo de visualizacion en estadisticas) o quitar el 'un poco mas')
 2026-11-28T03:00:04-03:00 [guionista] vuelta 2: planos 5-7, placas, fuente chica y descripción rehechos solo con Meta 2023 (compartir es uno de los factores; tiempo de visualización en estadísticas); fuera Mosseri y el 'pesa un poco más'; 168 palabras, mismo gancho C21 y mismo cierre
 2026-11-28T03:00:05-03:00 [fabrica] etapa -> guion
+2026-11-28T03:00:48-03:00 [verificador] APROBADO: 12 datos, todos con fuente (vuelta 2: planos 5-7 verificados contra Meta jun-2023 'predicting that you will share a post is one factor' y Meta abr-2023 'total watch time and average watch time' en Reels insights; resto sin cambios, OK)
+2026-11-28T03:00:48-03:00 [fabrica] etapa -> verificado
+2026-11-28T03:01:24-03:00 [fabrica] reels-1000-vistas: la voz gasta unos 878 caracteres de ElevenLabs. AVISO: no se puede leer el saldo (la clave no tiene ese permiso); anotalo en fabrica/config.json.
+2026-11-28T03:01:34-03:00 [fabrica] etapa -> esperando_ok_voz
+2026-11-28T03:01:34-03:00 [fabrica] voz SIN OK del dueño (regla voz_sin_ok): ~878 caracteres

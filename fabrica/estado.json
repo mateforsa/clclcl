@@ -2722,7 +2722,7 @@
    "tema": "redes y algoritmo (pedido del dueño)",
    "fuentes": [],
    "puntaje": 9.0,
-   "etapa": "guion",
+   "etapa": "voz",
    "creado": "2026-11-28T02:38:22-03:00",
    "historial": [
     {
@@ -2743,9 +2743,25 @@
      "etapa": "guion",
      "cuando": "2026-11-28T03:00:05-03:00",
      "nota": ""
+    },
+    {
+     "etapa": "verificado",
+     "cuando": "2026-11-28T03:00:48-03:00",
+     "nota": ""
+    },
+    {
+     "etapa": "esperando_ok_voz",
+     "cuando": "2026-11-28T03:01:34-03:00",
+     "nota": ""
+    },
+    {
+     "etapa": "voz",
+     "cuando": "2026-11-28T03:01:34-03:00",
+     "nota": "voz sin OK (regla voz_sin_ok del dueño)"
     }
    ],
-   "nota": ""
+   "nota": "",
+   "caracteres_voz": 878
   },
   "litio-pileta-salar": {
    "titulo": "El litio argentino tarda más de un año en salir de una pileta: la máquina que lo hace en días",
@@ -2797,5 +2813,5 @@
    "caracteres_voz": 952
   }
  },
- "actualizado": "2026-11-28T03:00:29-03:00"
+ "actualizado": "2026-11-28T03:01:34-03:00"
 }
