@@ -58,7 +58,7 @@ export const BEATS: BeatSpec[] = [
       { type: 'route', p: { route: [[1.6, 1.6], [1.25, 1.2], [1.3, 0.45], [0.2, 0.15], [0.35, -0.6], [-0.35, -0.85], [-0.45, -1.4], [-1.25, -1.75]], border: -1.62,
         draw: { at: 0, dur: W('b03', 'Socompa,') + 0.3 }, go: { at: 0.2, dur: W('b03', 'Socompa,') + 0.5 }, borderAt: W('b03', 'frontera') } },
     ],
-    overlays: [P1('RAMAL C14 · SALTA → SOCOMPA', W('b03', 'ramal')), P2('FRONTERA CON CHILE', W('b03', 'frontera')), FU_DU] },
+    overlays: [P1('RAMAL C14 · SALTA → SOCOMPA', W('b03', 'ramal'), { x: 33, size: 33, y: 69.3 }), P2('FRONTERA CON CHILE', W('b03', 'frontera'), { x: 33, size: 33, y: 72.6 }), { ...FU_DU, x: 33, y: 66.0 }] },
 
   // 4. Lo inauguraron en 1948, y cruza túneles y viaductos de alta montaña.
   { id: 'b04', set: 'room', cam: { from: [0.6, 1.7, 6.6], to: [0.1, 1.65, 6.0], look: [-1.0, 1.0, 0], fov: 44, shift: 0.08 }, keywords: ['1948,', 'túneles', 'viaductos'],
@@ -88,13 +88,13 @@ export const BEATS: BeatSpec[] = [
       { type: 'drop', pos: [1.25, 0, -0.5], at: W('b06', '100'), enter: 'none', p: { H, at: W('b06', '100'), dur: 0.6 } },
       { type: 'wreck', pos: [0.55, 0, 0.0], at: W('b06', 'metros'), p: { silhouette: true } },
     ],
-    overlays: [Q1('1996 · QUEBRADA DEL AGUA', W('b06', '1996,'), { out: W('b06', 'cayó') }), Q1('LOCOMOTORA GT22 9702 · ~100 M', W('b06', 'cayó')),
-      Q2('NEVADA Y PRESUNTAS AVALANCHAS', W('b06', 'durante')), FUQ] },
+    overlays: [Q1('1996 · QUEBRADA DEL AGUA', W('b06', '1996,'), { out: W('b06', 'cayó'), y: 48.5 }), Q1('LOCOMOTORA GT22 9702 · ~100 M', W('b06', 'cayó'), { y: 48.5 }),
+      Q2('NEVADA Y PRESUNTAS AVALANCHAS', W('b06', 'durante'), { y: 52.6 }), { ...FUQ, y: 56.2 }] },
 
   // 7. Murieron tres trabajadores ferroviarios.
   { id: 'b07', set: 'room', cam: { from: [0.35, 2.6, 2.9], to: [0.05, 2.5, 2.5], look: [0, 1.75, -1.0], fov: 44, shift: 0.07 }, keywords: ['tres', 'ferroviarios.'],
     actors: [WORLD({ dusk: true, snow: 140, snowTop: 3.6, patches: 10 }), CLIFF(), TRACK,
-      { type: 'lights', pos: [0, H, -0.7], p: { x: [-0.45, 0, 0.45], at: [W('b07', 'tres'), W('b07', 'tres') + 0.18, W('b07', 'tres') + 0.36] } },
+      { type: 'lights', pos: [0, H, -1.38], p: { x: [-0.45, 0, 0.45], at: [W('b07', 'tres'), W('b07', 'tres') + 0.18, W('b07', 'tres') + 0.36] } },
     ],
     overlays: [P1('3 TRABAJADORES FERROVIARIOS', W('b07', 'tres')), FU_DU] },
 
@@ -120,7 +120,7 @@ export const BEATS: BeatSpec[] = [
       { type: 'train', p: { x: [[0, -1.0], [DUR('b10'), -1.5]], dir: -1, y: 0, z: -0.3, n: 2,
         load: [{ c: '#c8662f', at: W('b10', 'cobre') }, { c: '#e8edf2', at: W('b10', 'litio') }] } },
     ],
-    overlays: [P1('COBRE Y LITIO DE LA PUNA', W('b10', 'cobre')), FU_AM] },
+    overlays: [P1('COBRE Y LITIO DE LA PUNA', W('b10', 'cobre'), { y: 68 }), FU_AM] },
 
   // 11. Según Ámbito, el lunes 30 de noviembre Nación y Salta firmarían un convenio para recuperarlo.
   { id: 'b11', set: 'room', cam: { from: [0.3, 2.6, 3.9], to: [0.0, 2.45, 3.4], look: [0, 0.15, -0.8], fov: 44, shift: -0.01 }, keywords: ['Ámbito,', 'lunes', 'convenio'],

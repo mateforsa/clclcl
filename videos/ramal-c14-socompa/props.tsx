@@ -376,7 +376,7 @@ export const Route: React.FC<P> = ({ t, p }) => {
     for (let i = 0; i < lens.length; i++) { if (s <= acc + lens[i] || i === lens.length - 1) { const u = (s - acc) / lens[i]; const a = pts[i], b = pts[i + 1];
       return { x: lerp(a[0], b[0], u), z: lerp(a[1], b[1], u), h: Math.atan2(-(b[1] - a[1]), b[0] - a[0]) }; } acc += lens[i]; } return { x: 0, z: 0, h: 0 }; };
   const drawK = p.draw ? eio((t - p.draw.at) / p.draw.dur) : 1; const ds = tot * drawK;
-  const goK = p.go ? clamp((t - p.go.at) / p.go.dur) : 0; const head = lerp(0.35, tot - 0.05, goK);
+  const goK = p.go ? clamp((t - p.go.at) / p.go.dur) : 0; const head = lerp(0.7, tot - 0.1, goK);
   const n = Math.ceil(tot / 0.06);
   return (
     <group>
@@ -386,9 +386,12 @@ export const Route: React.FC<P> = ({ t, p }) => {
             <mesh><boxGeometry args={[tot / n + 0.004, 0.012, 0.05]} /><Mat c="#3a2c26" /></mesh>
             <mesh position={[0, 0.008, 0]}><boxGeometry args={[0.012, 0.006, 0.07]} /><Mat c="#cfd5db" /></mesh>
           </group>; })}
-        {/* tren chico: locomotora amarilla + 3 vagones */}
-        {[0, 1, 2, 3].map((i) => { const q = at(head - i * 0.22); return <group key={'c' + i} position={[q.x, 0.05, q.z]} rotation={[0, q.h, 0]}>
-          <mesh><boxGeometry args={[0.2, 0.09, 0.1]} /><Mat c={i === 0 ? LOCO : '#5e6b78'} /></mesh></group>; })}
+        {/* tren chico: locomotora amarilla + 2 vagones. Cada vagón es una cuerda del recorrido (frente y cola sobre la vía):
+            en las curvas gira de a poco y nunca se mete en el de al lado (separación 0,3 > largo 0,17 + ancho 0,09) */}
+        {[0, 1, 2].map((i) => { const sc = head - i * 0.3; const a = at(sc + 0.085), b = at(sc - 0.085);
+          const h = Math.atan2(-(a.z - b.z), a.x - b.x);
+          return <group key={'c' + i} position={[(a.x + b.x) / 2, 0.05, (a.z + b.z) / 2]} rotation={[0, h, 0]}>
+            <mesh><boxGeometry args={[0.17, 0.09, 0.09]} /><Mat c={i === 0 ? LOCO : '#5e6b78'} /></mesh></group>; })}
       </KeyCtx.Provider>
       {/* Salta: casitas bajas al principio del recorrido */}
       {[[0.15, 0.05], [-0.12, 0.12], [0.05, -0.14], [0.22, -0.1], [-0.18, -0.06]].map(([dx, dz], i) => <mesh key={'h' + i} position={[pts[0][0] + dx, 0.04, pts[0][1] + dz]}><boxGeometry args={[0.09, 0.08, 0.09]} /><M c={['#e8d7b4', '#d7c09a', '#f0e2c4'][i % 3]} /></mesh>)}

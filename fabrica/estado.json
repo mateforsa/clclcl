@@ -3278,7 +3278,7 @@
     "https://www.diariouno.com.ar/sociedad/el-misterioso-bocinazo-del-tren-mas-extremo-del-pais-y-la-historia-detras-un-homenaje-emocionante-n1568105"
    ],
    "puntaje": 7.3,
-   "etapa": "render",
+   "etapa": "revision",
    "creado": "2026-11-28T08:44:50-03:00",
    "historial": [
     {
@@ -3319,11 +3319,16 @@
      "etapa": "render",
      "cuando": "2026-11-28T09:53:39-03:00",
      "nota": "devuelto por el revisor: placa del mapa tapa tren y vía a 9,1-9,3 s; vagones se atraviesan en las curvas 9-10,5 s; postes clavados en el riel 29-31 s"
+    },
+    {
+     "etapa": "revision",
+     "cuando": "2026-11-28T10:14:12-03:00",
+     "nota": ""
     }
    ],
-   "nota": "devuelto por el revisor: placa del mapa tapa tren y vía a 9,1-9,3 s; vagones se atraviesan en las curvas 9-10,5 s; postes clavados en el riel 29-31 s",
+   "nota": "",
    "caracteres_voz": 957
   }
  },
- "actualizado": "2026-11-28T09:54:09-03:00"
+ "actualizado": "2026-11-28T10:14:12-03:00"
 }
