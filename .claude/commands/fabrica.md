@@ -44,7 +44,7 @@ Reglas generales
 4. Si no hay nada aprobado, decilo y listá lo que está esperando OK.
 
 ## hora
-La corrida automática (cada 2 horas, a las y 34 de las horas impares en UTC: 22:34, 00:34, 02:34… en Argentina). Nadie está mirando: no preguntes nada y no destrabes frenos salvo el de voz con `auto-voz` cuando `voz_sin_ok` está encendido.
+La corrida automática (hora Argentina: de madrugada cada hora, 00:34 a 07:34 todos los días y hasta 10:34 sábados y domingos; de día cada 2 horas, 09:34, 11:34… 23:34). Nadie está mirando: no preguntes nada y no destrabes frenos salvo el de voz con `auto-voz` cuando `voz_sin_ok` está encendido.
 La única publicación permitida es `auto-prueba` (reel de prueba de madrugada); nunca una publicación normal.
 1. `git pull` de la rama de trabajo y `python3 fabrica/estado.py tope`.
 2. Si hay videos en `voz`, o en `render`/`guion` con nota de rechazo: hacé **seguir** con esos (de a uno).
