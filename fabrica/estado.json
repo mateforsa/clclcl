@@ -2871,7 +2871,7 @@
     "https://www.infobae.com/sociedad/2019/12/19/malena-galmarini-y-gabriel-katopodis-recorrieron-una-planta-potabilizadora-de-palermo/"
    ],
    "puntaje": 7.8,
-   "etapa": "esperando_ok_final",
+   "etapa": "publicado",
    "creado": "2026-11-28T05:10:46-03:00",
    "historial": [
     {
@@ -2922,10 +2922,21 @@
      "etapa": "esperando_ok_final",
      "cuando": "2026-11-28T06:21:56-03:00",
      "nota": ""
+    },
+    {
+     "etapa": "listo",
+     "cuando": "2026-11-28T06:22:29-03:00",
+     "nota": "aprobado por el dueño desde esperando_ok_final"
+    },
+    {
+     "etapa": "publicado",
+     "cuando": "2026-11-28T06:23:52-03:00",
+     "nota": "https://www.instagram.com/reel/DgR7GIWpnCp/"
     }
    ],
    "nota": "",
-   "caracteres_voz": 993
+   "caracteres_voz": 993,
+   "link": "https://www.instagram.com/reel/DgR7GIWpnCp/"
   },
   "atucha-olla-72-tornillos": {
    "titulo": "La tapa del reactor de Atucha se cierra con 72 tornillos de 1.000 toneladas",
@@ -3003,5 +3014,5 @@
    "link": "https://www.instagram.com/reel/DgR5Wfnh00G/"
   }
  },
- "actualizado": "2026-11-28T06:21:56-03:00"
+ "actualizado": "2026-11-28T06:23:52-03:00"
 }
