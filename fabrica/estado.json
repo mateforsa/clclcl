@@ -3043,7 +3043,7 @@
     "https://www.iprofesional.com/negocios/454613-record-de-divisas-aluar-reporto-ganancias-millonarias-y-acelera-su-plan-de-inversion"
    ],
    "puntaje": 8.0,
-   "etapa": "revision",
+   "etapa": "esperando_ok_final",
    "creado": "2026-11-28T06:45:49-03:00",
    "historial": [
     {
@@ -3078,6 +3078,11 @@
     {
      "etapa": "revision",
      "cuando": "2026-11-28T07:46:56-03:00",
+     "nota": ""
+    },
+    {
+     "etapa": "esperando_ok_final",
+     "cuando": "2026-11-28T07:50:43-03:00",
      "nota": ""
     }
    ],
@@ -3139,5 +3144,5 @@
    "caracteres_voz": 970
   }
  },
- "actualizado": "2026-11-28T07:46:56-03:00"
+ "actualizado": "2026-11-28T07:50:43-03:00"
 }
