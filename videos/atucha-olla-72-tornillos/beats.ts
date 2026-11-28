@@ -111,7 +111,7 @@ export const BEATS: BeatSpec[] = [
     overlays: [H1('CHERNOBYL: GRAFITO', W('b10', 'grafito,')), FU_PF] },
 
   // 11. Atucha I arrancó en 1974. Atucha II, en 2014.
-  { id: 'b11', set: 'room', cam: { from: [-0.75, G + 1.15, 6.9], to: [0.55, G + 1.05, 6.5], look: [-0.45, G + 0.35, -1.6], lookTo: [0.35, G + 0.35, -1.6], fov: 44, shift: SH }, keywords: ['Atucha I', 'Atucha II,'],
+  { id: 'b11', set: 'room', cam: { from: [-0.75, G + 1.15, 6.9], to: [0.55, G + 1.05, 6.5], look: [-0.45, G + 0.35, -1.6], lookTo: [0.35, G + 0.35, -1.6], fov: 44, shift: SH }, keywords: ['1974.', '2014.'],
     actors: [FLAT,
       { type: 'dome', pos: [-0.75, G, -1.6], p: { R: 0.6, on: W('b11', 'arrancó') } },
       { type: 'dome', pos: [0.85, G, -1.6], at: W('b11', 'Atucha II,'), p: { R: 0.6, on: W('b11', '2014.') } },

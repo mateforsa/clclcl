@@ -1,0 +1,3 @@
+{ "beat": "b13", "frac": 0.95,
+  "overlay": { "y": 63, "kicker": "ATUCHA POR DENTRO",
+    "lines": [ { "t": "72 TORNILLOS", "size": 140 }, { "t": "1.000 TONELADAS", "c": "yellow", "size": 118 }, { "t": "CADA UNO APRIETA LA TAPA DEL REACTOR", "size": 50, "c": "cyan" } ] } }

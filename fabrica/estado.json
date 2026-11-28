@@ -2866,7 +2866,7 @@
     "https://www.infobae.com/sociedad/2019/12/19/malena-galmarini-y-gabriel-katopodis-recorrieron-una-planta-potabilizadora-de-palermo/"
    ],
    "puntaje": 7.8,
-   "etapa": "render",
+   "etapa": "revision",
    "creado": "2026-11-28T05:10:46-03:00",
    "historial": [
     {
@@ -2896,6 +2896,11 @@
     {
      "etapa": "render",
      "cuando": "2026-11-28T05:34:15-03:00",
+     "nota": ""
+    },
+    {
+     "etapa": "revision",
+     "cuando": "2026-11-28T05:45:57-03:00",
      "nota": ""
     }
    ],
@@ -2952,5 +2957,5 @@
    "caracteres_voz": 992
   }
  },
- "actualizado": "2026-11-28T05:34:15-03:00"
+ "actualizado": "2026-11-28T05:45:57-03:00"
 }
