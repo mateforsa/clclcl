@@ -6,3 +6,8 @@
 2026-11-28T06:51:15-03:00 [fabrica] etapa -> guion (devuelto por el verificador: plano 2, descripcion y titulo dicen en presente que da el 8% del gas segun La Nacion; La Nacion (2024) dice 'aportara' (proyeccion). Pasarlo a pasado o proyeccion, o atribuir a iProfesional 2025 en pasado.)
 2026-11-28T06:51:51-03:00 [guionista] corregido por verificador: 8% como proyección (según La Nación iba a dar / pensada para dar) en voz plano 2, placa 2, título, portada y descripción; Ámbito 20/12/2023 agregado a la hoja para el caño de 2023; 173 palabras
 2026-11-28T06:51:51-03:00 [fabrica] etapa -> guion
+2026-11-28T06:52:33-03:00 [verificador] APROBADO: 21 datos, todos con fuente (re-verificado tras correccion: 8% como proyeccion de La Nacion 'iba a dar'/'pensada para'; cano 2023 con Ambito 20/12/2023; sin otros cambios)
+2026-11-28T06:52:33-03:00 [fabrica] etapa -> verificado
+2026-11-28T06:52:52-03:00 [fabrica] fenix-plataforma-austral: la voz gasta unos 970 caracteres de ElevenLabs. AVISO: no se puede leer el saldo (la clave no tiene ese permiso); anotalo en fabrica/config.json.
+2026-11-28T06:52:53-03:00 [fabrica] etapa -> esperando_ok_voz
+2026-11-28T06:52:53-03:00 [fabrica] voz SIN OK del dueño (regla voz_sin_ok): ~970 caracteres
