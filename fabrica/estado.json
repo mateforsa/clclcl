@@ -2504,7 +2504,7 @@
     "https://www.infobae.com/deportes/2023/11/28/la-increible-historia-de-la-recuperacion-del-gol-perdido-de-bochini-a-50-anos-de-independiente-campeon-del-mundo/"
    ],
    "puntaje": 7.5,
-   "etapa": "revision",
+   "etapa": "render",
    "creado": "2026-11-27T22:44:38-03:00",
    "historial": [
     {
@@ -2540,11 +2540,16 @@
      "etapa": "revision",
      "cuando": "2026-11-27T23:29:34-03:00",
      "nota": ""
+    },
+    {
+     "etapa": "render",
+     "cuando": "2026-11-27T23:32:00-03:00",
+     "nota": "devuelto por el revisor: placas tapan cartel VUELTA (~25 s); BOCHINI cortado en borde y BERTONI sobre defensor (~33-35 s); fuentes tapa el euro (~55-57 s)"
     }
    ],
-   "nota": "",
+   "nota": "devuelto por el revisor: placas tapan cartel VUELTA (~25 s); BOCHINI cortado en borde y BERTONI sobre defensor (~33-35 s); fuentes tapa el euro (~55-57 s)",
    "caracteres_voz": 1030
   }
  },
- "actualizado": "2026-11-27T23:29:34-03:00"
+ "actualizado": "2026-11-27T23:32:00-03:00"
 }
