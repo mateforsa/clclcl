@@ -2,3 +2,8 @@
 2026-11-28T06:45:49-03:00 [editor] elegido (corrida 06:34): sorpresa 8, vigencia 7, compartible 8, 3D 9 = 8.0. Fusiona candidatos 1 (parque-eolico-aluar-582) y 2 (aluar-fabrica-no-se-apaga). Formato @induscoreig 'Instalaciones solo en Argentina / cómo funciona por dentro' (solo el formato). Vuelve del descarte de 04:34 porque ahora tiene segunda fuente del parque (iProfesional 420559: 56 Goldwind de 6 MW, rotor 165 m, buje a 100 m, línea privada 34,16 km a 132 kV). Ámbito: 582 MW, 119 molinos, 182,5 m de punta, ~200 km2 como CABA, 600.000 hogares, corte >6 h daña equipos, sería la 4a provincia en consumo. iProfesional 454613: 460.000 t/año al 98%. Ojo: iProfesional llama 'La Flecha' al parque de la 5a etapa; el 6 h y la 4a provincia salen solo de Ámbito.
 2026-11-28T06:49:47-03:00 [guionista] guion escrito: 170 palabras (unos 50 s, 14 planos), apertura tipo G63 un tiempo (Seis horas.), cierre tipo Predicción n.º 49 sí o no (¿Los termina construyendo?), sin parte N; Aluar PRONUNCIACIÓN A CONFIRMAR liviana, Goldwind solo en placa
 2026-11-28T06:49:47-03:00 [fabrica] etapa -> guion
+2026-11-28T06:50:48-03:00 [verificador] APROBADO: 30 datos, todos con fuente (Ambito 22/10/2026, iProfesional 420559 y 454613, La Nacion 460.000 t)
+2026-11-28T06:50:48-03:00 [fabrica] etapa -> verificado
+2026-11-28T06:51:13-03:00 [fabrica] aluar-parque-eolico-fabrica: la voz gasta unos 933 caracteres de ElevenLabs. AVISO: no se puede leer el saldo (la clave no tiene ese permiso); anotalo en fabrica/config.json.
+2026-11-28T06:51:13-03:00 [fabrica] etapa -> esperando_ok_voz
+2026-11-28T06:51:14-03:00 [fabrica] voz SIN OK del dueño (regla voz_sin_ok): ~933 caracteres

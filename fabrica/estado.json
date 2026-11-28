@@ -3043,7 +3043,7 @@
     "https://www.iprofesional.com/negocios/454613-record-de-divisas-aluar-reporto-ganancias-millonarias-y-acelera-su-plan-de-inversion"
    ],
    "puntaje": 8.0,
-   "etapa": "guion",
+   "etapa": "voz",
    "creado": "2026-11-28T06:45:49-03:00",
    "historial": [
     {
@@ -3054,9 +3054,25 @@
      "etapa": "guion",
      "cuando": "2026-11-28T06:49:47-03:00",
      "nota": ""
+    },
+    {
+     "etapa": "verificado",
+     "cuando": "2026-11-28T06:50:48-03:00",
+     "nota": ""
+    },
+    {
+     "etapa": "esperando_ok_voz",
+     "cuando": "2026-11-28T06:51:13-03:00",
+     "nota": ""
+    },
+    {
+     "etapa": "voz",
+     "cuando": "2026-11-28T06:51:14-03:00",
+     "nota": "voz sin OK (regla voz_sin_ok del dueño)"
     }
    ],
-   "nota": ""
+   "nota": "",
+   "caracteres_voz": 933
   },
   "fenix-plataforma-austral": {
    "titulo": "A 60 km de la costa, una plataforma de 4.000 toneladas saca el 8% del gas argentino",
@@ -3082,5 +3098,5 @@
    "nota": ""
   }
  },
- "actualizado": "2026-11-28T06:49:47-03:00"
+ "actualizado": "2026-11-28T06:51:14-03:00"
 }
