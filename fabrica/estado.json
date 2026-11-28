@@ -3209,9 +3209,14 @@
      "etapa": "guion",
      "cuando": "2026-11-28T08:49:46-03:00",
      "nota": ""
+    },
+    {
+     "etapa": "guion",
+     "cuando": "2026-11-28T08:50:53-03:00",
+     "nota": "devuelto por el verificador: el 184,5 ms es de una Xbox One S (2016, 10 años), no de una consola de hace 13 años. Corregir planos 2 y 13 (voz y placa) y la descripción. El resto está OK."
     }
    ],
-   "nota": ""
+   "nota": "devuelto por el verificador: el 184,5 ms es de una Xbox One S (2016, 10 años), no de una consola de hace 13 años. Corregir planos 2 y 13 (voz y placa) y la descripción. El resto está OK."
   },
   "ramal-c14-socompa": {
    "titulo": "El tren a 4.000 metros que toca bocina en el mismo lugar desde hace 30 años",
@@ -3253,5 +3258,5 @@
    "caracteres_voz": 957
   }
  },
- "actualizado": "2026-11-28T08:49:48-03:00"
+ "actualizado": "2026-11-28T08:51:13-03:00"
 }
