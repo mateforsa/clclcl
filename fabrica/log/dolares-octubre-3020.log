@@ -22,3 +22,4 @@
 2026-11-28T01:22:31-03:00 [fabrica] etapa -> esperando_ok_final
 2026-11-28T01:22:56-03:00 [publicador] FALLÓ la prueba automática: |  |     | ¿Y vos? ¿Colchón o banco? Una palabra. |     |  |     | Fuentes: BCRA, vía Infobae y Ámbito (27/11/2026). |     |  |     | #dolar #ahorro #economia #argentina #finanzas |   modo: reel de prueba (solo no seguidores, se gradúa a mano) | Error de Meta: API access blocked. (código 200, tipo OAuthException)
 2026-11-28T01:23:15-03:00 [jefe] auto-prueba falló: API de Meta bloqueada (OAuthException 200). Queda esperando OK del dueño para subir a mano.
+2026-11-28T02:21:28-03:00 [dueño] APROBADO (esperando_ok_final -> listo)

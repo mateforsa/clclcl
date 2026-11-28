@@ -2504,7 +2504,7 @@
     "https://www.infobae.com/deportes/2023/11/28/la-increible-historia-de-la-recuperacion-del-gol-perdido-de-bochini-a-50-anos-de-independiente-campeon-del-mundo/"
    ],
    "puntaje": 7.5,
-   "etapa": "esperando_ok_final",
+   "etapa": "listo",
    "creado": "2026-11-27T22:44:38-03:00",
    "historial": [
     {
@@ -2575,6 +2575,11 @@
      "etapa": "esperando_ok_final",
      "cuando": "2026-11-28T00:17:55-03:00",
      "nota": ""
+    },
+    {
+     "etapa": "listo",
+     "cuando": "2026-11-28T02:21:28-03:00",
+     "nota": "aprobado por el dueño desde esperando_ok_final"
     }
    ],
    "nota": "",
@@ -2588,7 +2593,7 @@
     "https://www.ambito.com/finanzas/la-compra-dolar-ahorro-trepo-15-octubre-supero-los-us3300-millones-y-crecio-el-atesoramiento-bajo-el-colchon-n6350206"
    ],
    "puntaje": 8.5,
-   "etapa": "esperando_ok_final",
+   "etapa": "listo",
    "creado": "2026-11-28T00:42:00-03:00",
    "historial": [
     {
@@ -2629,6 +2634,11 @@
      "etapa": "esperando_ok_final",
      "cuando": "2026-11-28T01:22:31-03:00",
      "nota": ""
+    },
+    {
+     "etapa": "listo",
+     "cuando": "2026-11-28T02:21:28-03:00",
+     "nota": "aprobado por el dueño desde esperando_ok_final"
     }
    ],
    "nota": "",
@@ -2679,5 +2689,5 @@
    "caracteres_voz": 1059
   }
  },
- "actualizado": "2026-11-28T02:05:52-03:00"
+ "actualizado": "2026-11-28T02:21:28-03:00"
 }
