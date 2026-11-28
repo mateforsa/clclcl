@@ -2866,7 +2866,7 @@
     "https://www.infobae.com/sociedad/2019/12/19/malena-galmarini-y-gabriel-katopodis-recorrieron-una-planta-potabilizadora-de-palermo/"
    ],
    "puntaje": 7.8,
-   "etapa": "guion",
+   "etapa": "verificado",
    "creado": "2026-11-28T05:10:46-03:00",
    "historial": [
     {
@@ -2876,6 +2876,11 @@
     {
      "etapa": "guion",
      "cuando": "2026-11-28T05:14:13-03:00",
+     "nota": ""
+    },
+    {
+     "etapa": "verificado",
+     "cuando": "2026-11-28T05:15:26-03:00",
      "nota": ""
     }
    ],
@@ -2900,10 +2905,15 @@
      "etapa": "guion",
      "cuando": "2026-11-28T05:14:13-03:00",
      "nota": ""
+    },
+    {
+     "etapa": "guion",
+     "cuando": "2026-11-28T05:15:03-03:00",
+     "nota": "devuelto por el verificador: titulo y descripcion dicen tornillos de 1.000 toneladas (parece peso); la fuente dice que cada uno ejerce 1.000 t de presion"
     }
    ],
-   "nota": ""
+   "nota": "devuelto por el verificador: titulo y descripcion dicen tornillos de 1.000 toneladas (parece peso); la fuente dice que cada uno ejerce 1.000 t de presion"
   }
  },
- "actualizado": "2026-11-28T05:14:13-03:00"
+ "actualizado": "2026-11-28T05:15:26-03:00"
 }
