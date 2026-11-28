@@ -211,7 +211,7 @@ export const Bubble: React.FC<P> = ({ t, p }) => {
   const dk = p.dim === undefined ? 0 : on(t, p.dim, 0.5);
   const at = (u: number): V3 => { const q = path(kf, u); return [q[0] + Math.sin(u * 3.1) * 0.015, q[1] + Math.sin(u * 2.2) * 0.03 + (wob ? Math.sin(u * 17) * wob : 0), q[2]]; };
   const [x, y, z] = at(t);
-  const ei = lerp(0.85, 0.15, dk), op = lerp(0.62, 0.45, dk);
+  const ei = lerp(1.1, 0.12, dk), op = lerp(0.82, 0.5, dk);
   return (
     <group>
       {trail && [0.07, 0.14, 0.21].map((dt, i) => { const q = at(t - dt); const dist = Math.hypot(q[0] - x, q[1] - y, q[2] - z); if (dist < 0.02) return null;
@@ -219,7 +219,7 @@ export const Bubble: React.FC<P> = ({ t, p }) => {
       <group position={[x, y, z]}>
         <Ball r={r} c={c} e={c} ei={ei} o={op} d={2} />
         <Ball r={r * 1.35} c={c} e={c} ei={ei * 0.6} o={0.1 * (1 - dk)} d={1} />
-        <mesh position={[0.02 * r, 0, r * 0.35]} rotation={[0, 0, -PI / 2]}><cylinderGeometry args={[r * 0.42, r * 0.42, r * 0.12, 3]} /><M c="#fff4ee" e="#fff4ee" ei={lerp(0.55, 0.1, dk)} /></mesh>
+        <group position={[0.04 * r, 0, r * 0.55]} rotation={[0, 0, PI / 2]}><mesh rotation={[PI / 2, 0, 0]}><cylinderGeometry args={[r * 0.4, r * 0.4, r * 0.1, 3]} /><M c="#fff4ee" e="#fff4ee" ei={lerp(0.7, 0.1, dk)} /></mesh></group>
         {mark && <group position={[r * 0.52, r * 0.5, r * 0.62]}>
           <B s={[r * 0.55, r * 0.55, r * 0.08]} c="#5b6172" />
           <mesh position={[0, 0, r * 0.05]}><torusGeometry args={[r * 0.15, r * 0.045, 6, 14]} /><M c="#d8dbe3" /></mesh>
@@ -286,7 +286,7 @@ export const Screen: React.FC<P> = ({ t, p }) => {
         <B s={[w + 0.1, h + 0.1, 0.06]} pos={[0, 0, -0.04]} c="#1a2238" />
         <B s={[w, h, 0.02]} c="#0e1a33" e="#13254a" ei={0.6} />
         {/* play grande, tenue */}
-        <mesh position={[0, 0.12, 0.02]} rotation={[PI / 2, 0, -PI / 2]}><cylinderGeometry args={[0.2, 0.2, 0.02, 3]} /><M c={CORAL} e={CORAL} ei={0.5} /></mesh>
+        <group position={[0.02, 0.12, 0.03]} rotation={[0, 0, PI / 2]}><mesh rotation={[PI / 2, 0, 0]}><cylinderGeometry args={[0.2, 0.2, 0.02, 3]} /><M c={CORAL} e={CORAL} ei={0.5} /></mesh></group>
         {/* barra de tiempo */}
         <B s={[w * 0.86, 0.06, 0.02]} pos={[0, -h / 2 + 0.16, 0.02]} c="#2b3450" />
         <B s={[Math.max(0.001, w * 0.86 * k), 0.06, 0.025]} pos={[-w * 0.43 + (w * 0.86 * k) / 2, -h / 2 + 0.16, 0.025]} c={CORAL} e={CORAL} ei={0.8} />
@@ -404,7 +404,7 @@ export const Phone: React.FC<P> = ({ t, p }) => {
     <group>
       <B s={[0.62, 1.15, 0.06]} c="#1b2233" />
       <B s={[0.54, 1.0, 0.01]} pos={[0, 0.0, 0.032]} c="#0c1630" e="#10224a" ei={0.6} />
-      <mesh position={[0, 0.16, 0.04]} rotation={[PI / 2, 0, -PI / 2]}><cylinderGeometry args={[0.11, 0.11, 0.01, 3]} /><M c={CORAL} e={CORAL} ei={0.6} /></mesh>
+      <group position={[0.01, 0.16, 0.042]} rotation={[0, 0, PI / 2]}><mesh rotation={[PI / 2, 0, 0]}><cylinderGeometry args={[0.11, 0.11, 0.01, 3]} /><M c={CORAL} e={CORAL} ei={0.6} /></mesh></group>
       {/* ojito (vistas) */}
       <group position={[-0.17, -0.28, 0.04]}>
         <mesh scale={[1.5, 1, 1]}><torusGeometry args={[0.04, 0.012, 6, 14]} /><M c="#dfe6ff" e="#dfe6ff" ei={0.3} /></mesh>

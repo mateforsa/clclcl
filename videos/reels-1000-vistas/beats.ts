@@ -28,7 +28,9 @@ const FU_DIC24 = SMALL('FUENTE: META (DICIEMBRE DE 2024)');
 
 const WORLD = { type: 'world', p: {} };
 const SET = 'room' as const; // el set solo aporta luces y piso; el mundo de noche lo tapa todo
-const CAM = (from: number[], to: number[], look: number[], lookTo?: number[]) => ({ from, to, look, lookTo, fov: 44, shift: -0.03 }) as any;
+const LY = 0.3; // subo el punto de mira: la escena baja al centro del cuadro, lejos de la franja de subtítulos
+const up = (v?: number[]) => (v ? [v[0], v[1] + LY, v[2]] : undefined);
+const CAM = (from: number[], to: number[], look: number[], lookTo?: number[]) => ({ from, to, look: up(look), lookTo: up(lookTo), fov: 44, shift: -0.03 }) as any;
 const ME = { shirt: '#ffb347', skin: '#e9b48f', hair: '#2a1d14' }; // vos, el que sube el reel (remera ámbar)
 const TRIAL = '#ffcf5a'; // reel de prueba: burbuja dorada
 
@@ -126,7 +128,7 @@ export const BEATS: BeatSpec[] = [
         at: W('b09', 'videos') + i * ((W('b09', 'veces') - W('b09', 'videos')) / 10), p: { r: 0.09, gray: true, mark: true, trail: false } })),
       { type: 'bridge', pos: [-0.66, 0.37, 0.55], p: { len: 0.62, drop: W('b09', 'saca') } },
       { type: 'group', pos: [0.75, 0, 0.45], p: { n: 6, h: 0.35, seed: 18, fol: 1, off: W('b09', 'saca'), away: W('b09', 'saca') + 0.1 } },
-      { type: 'month', pos: [0.75, 0.0, 1.55], at: W('b09', '30'), p: { at: W('b09', '30'), dur: 0.45 } },
+      { type: 'month', pos: [0.15, 0.0, 1.35], at: W('b09', '30'), p: { at: W('b09', '30'), dur: 0.45 } },
     ],
     overlays: [P1('10 REPOSTEOS EN 30 DÍAS', W('b09', '10')), P2('= FUERA DE RECOMENDACIONES', W('b09', 'saca')), FU_MAY24] },
 
@@ -163,12 +165,12 @@ export const BEATS: BeatSpec[] = [
     overlays: [P1('"EL CORTE ES EN 1.000":', W('b12', 'corte')), P2('NO ES OFICIAL', W('b12', 'nunca'), { color: RED }), ] },
 
   // 13. Mandáselo al que sube reels, y contame cuántas vistas tiene tu último.
-  { id: 'b13', set: SET, cam: CAM([0.0, 1.4, 4.8], [0.15, 1.45, 4.4], [0, 1.0, -0.3]), keywords: ['reels,', 'vistas'],
+  { id: 'b13', set: SET, cam: CAM([0.0, 1.45, 5.5], [0.15, 1.5, 5.1], [0, 1.0, -0.3]), keywords: ['reels,', 'vistas'],
     actors: [WORLD,
       ...[[-1.3, 0.0, -1.9, 0.0], [-0.45, 0.4, -2.1, 0.7], [0.6, 0.2, -2.0, 1.3], [1.35, 0.5, -1.85, 0.4]].map(([x, y, z, d]) => ({ type: 'bubble', p: { r: 0.16, kf: [[0, x, 0.6 + y, z], [DUR('b13'), x, 1.35 + y, z]], trail: false } })),
-      { type: 'folk', pos: [-0.85, 0, 0.55], rot: [0, 0.9, 0], s: 0.95, p: { ...ME, seq: [[0, 'throw'], [0.9, 'phone']] } },
-      { type: 'folk', pos: [0.85, 0, 0.4], rot: [0, -0.9, 0], s: 0.95, p: { shirt: '#8f7be8', skin: '#c98d66', hair: '#111', seq: [[0, 'idle'], [0.85, 'phone']] } },
-      { type: 'plane', p: { a: [-0.7, 1.15, 0.6], b: [0.78, 0.85, 0.5], at: 0.0, dur: 0.85, arc: 0.35 } },
+      { type: 'folk', pos: [-0.75, 0, 0.55], rot: [0, 0.9, 0], s: 0.95, p: { ...ME, seq: [[0, 'throw'], [0.9, 'phone']] } },
+      { type: 'folk', pos: [0.75, 0, 0.4], rot: [0, -0.9, 0], s: 0.95, p: { shirt: '#8f7be8', skin: '#c98d66', hair: '#111', seq: [[0, 'idle'], [0.85, 'phone']] } },
+      { type: 'plane', p: { a: [-0.6, 1.15, 0.6], b: [0.68, 0.85, 0.5], at: 0.0, dur: 0.85, arc: 0.35 } },
       { type: 'phone2', pos: [0, 1.4, -0.55], at: W('b13', 'contame'), bob: 0.03, p: { at: W('b13', 'vistas'), grow: 0.8 } },
     ],
     overlays: [P1('¿CUÁNTAS VISTAS TIENE TU ÚLTIMO REEL?', W('b13', 'cuántas'))] },
