@@ -250,9 +250,9 @@ export const Cut: React.FC<P> = ({ t, p }) => {
   const { w = 3.0, n = 14, brk } = p;
   return (
     <group>{Array.from({ length: n }, (_, i) => {
-      const x = -w / 2 + (i + 0.5) * (w / n); const bk = brk === undefined ? 0 : clamp((t - brk - (i % 5) * 0.05) / 1.0);
+      const x = -w / 2 + (i + 0.5) * (w / n); const bk = brk === undefined ? 0 : clamp((t - brk - (i % 5) * 0.05) / 0.7);
       if (bk >= 1) return null;
-      return <B key={i} s={[w / n * 0.6, 0.045, 0.045]} pos={[x + bk * (i - n / 2) * 0.04, -bk * bk * 1.8 + Math.sin(t * 6 + i) * 0.005, bk * 0.3]} rot={[bk * (i % 3), 0, bk * (i % 2 ? 2 : -2)]}
+      return <B key={i} s={[w / n * 0.6, 0.045, 0.045]} pos={[x + bk * (i - n / 2) * 0.05, -bk * 0.45 + Math.sin(t * 6 + i) * 0.005, bk * 0.25]} rot={[bk * (i % 3), 0, bk * (i % 2 ? 2 : -2)]}
         c="#ff7f6e" e="#ff7f6e" ei={1.0} o={1 - bk} />;
     })}</group>
   );
@@ -375,9 +375,9 @@ export const Beacon: React.FC<P> = ({ t, p }) => {
 export const Dial: React.FC<P> = ({ t, p }) => {
   const { r = 0.55, at = 0, dur = 1.0 } = p; const k = eio(clamp((t - at) / dur));
   return (
-    <group rotation={[-PI / 2, 0, 0]} position={[0, 0.02, 0]}>
+    <group rotation={[-PI / 2, 0, 0]} position={[0, 0.045, 0]}>
       <mesh><ringGeometry args={[r * 0.82, r, 40]} /><meshStandardMaterial color="#263050" /></mesh>
-      {k > 0.001 && <mesh position={[0, 0, 0.003]} rotation={[0, 0, PI / 2]}><ringGeometry args={[r * 0.82, r, 40, 1, 0, -Math.max(0.01, k * PI * 2)]} />
+      {k > 0.001 && <mesh position={[0, 0, 0.008]}><ringGeometry args={[r * 0.82, r, 40, 1, PI / 2 - Math.max(0.01, k * PI * 2), Math.max(0.01, k * PI * 2)]} />
         <meshStandardMaterial color={AMBER} emissive={AMBER} emissiveIntensity={0.8} /></mesh>}
       <group rotation={[0, 0, PI / 2 - k * PI * 2]} position={[0, 0, 0.01]}><mesh position={[r * 0.4, 0, 0]}><boxGeometry args={[r * 0.8, 0.04, 0.02]} /><M c="#fff4e0" e="#fff4e0" ei={0.4} /></mesh></group>
       {/* luna que se va y sol que llega, chiquitos, sobre el anillo */}

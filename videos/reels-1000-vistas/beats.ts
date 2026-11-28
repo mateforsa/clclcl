@@ -11,7 +11,7 @@ const RED = 'rgba(150,22,38,.94)';
 const fit = (text: string, max: number, px = 760) => Math.min(max, Math.floor(px / (text.length * 0.72)));
 const P1 = (text: string, at: any, o: any = {}) => ({ type: 'tag' as const, text, at, x: 46, y: 67.2, color: PANEL, size: fit(text, 46), ...o });
 const P2 = (text: string, at: any, o: any = {}) => ({ type: 'tag' as const, text, at, x: 46, y: 71.1, color: PANEL, size: fit(text, 40), ...o });
-const SMALL = (text: string, at: any = 0) => ({ type: 'tag' as const, text, at, x: 46, y: 74.4, color: 'rgba(8,12,26,.78)', size: 20 });
+const SMALL = (text: string, at: any = 0) => ({ type: 'tag' as const, text, at, x: 46, y: 74.0, color: 'rgba(8,12,26,.78)', size: 20 });
 
 const B = (timing as any).beats as { id: string; start: number; end: number; words: { w: string; s: number; e: number }[] }[];
 const DUR = (id: string) => { const b = B.find((x) => x.id === id)!; return b.end - b.start; };
@@ -67,7 +67,7 @@ export const BEATS: BeatSpec[] = [
       { type: 'group', pos: [-0.85, 0, 0.7], p: { n: 3, h: 0.25, seed: 3, fol: 1, react: W('b03', 'responde,') } },
       { type: 'group', pos: [0.05, 0, -0.5], p: { n: 5, h: 0.75, seed: 5, fol: 1, lit: W('b03', 'pasa') + 0.3, react: W('b03', 'grande,') + 0.2 } },
       { type: 'group', pos: [1.05, 0, -1.75], p: { n: 8, h: 1.25, seed: 8, fol: 2, lit: W('b03', 'después') + 0.3, react: W('b03', 'otro.') } },
-      { type: 'bubble', p: { kf: [[0, -0.85, 1.4, 0.7], [W('b03', 'pasa'), -0.85, 1.4, 0.7], [W('b03', 'pasa') + 0.6, 0.05, 1.9, -0.5, 0.25], [W('b03', 'después'), 0.05, 1.9, -0.5], [W('b03', 'después') + 0.55, 1.05, 2.4, -1.75, 0.2]] } },
+      { type: 'bubble', p: { kf: [[0, -0.85, 1.58, 0.7], [W('b03', 'pasa'), -0.85, 1.58, 0.7], [W('b03', 'pasa') + 0.6, 0.05, 2.08, -0.5, 0.25], [W('b03', 'después'), 0.05, 2.08, -0.5], [W('b03', 'después') + 0.55, 1.05, 2.58, -1.75, 0.2]] } },
     ],
     overlays: [P1('GRUPO 1 → GRUPO 2 → GRUPO 3', W('b03', 'pasa')), FU_MAY24] },
 
@@ -138,7 +138,7 @@ export const BEATS: BeatSpec[] = [
       { type: 'folk', pos: [0.0, 0, 1.15], rot: [0, Math.PI, 0], s: 0.9, p: { ...ME, pose: 'phone' } },
       { type: 'group', pos: [-0.95, 0, -0.35], p: { n: 5, h: 0.5, seed: 19, fol: 5, off: W('b10', 'primero') } },
       { type: 'group', pos: [0.9, 0, 0.1], p: { n: 5, h: 0.3, seed: 20, fol: 0, lit: W('b10', 'gente'), look: W('b10', 've'), react: W('b10', 'sigue.') } },
-      { type: 'bubble', p: { c: TRIAL, kf: [[0, 0.0, 0.85, 1.05], [W('b10', 'prueba:'), 0.0, 1.35, 0.55], [W('b10', 'primero') + 0.7, 0.9, 1.45, 0.1, 0.2]] } },
+      { type: 'bubble', p: { c: TRIAL, kf: [[0, 0.0, 0.85, 1.05], [W('b10', 'prueba:'), 0.0, 1.35, 0.55], [W('b10', 'primero') + 0.7, 0.9, 1.62, 0.1, 0.2]] } },
     ],
     overlays: [P1('REELS DE PRUEBA (TRIAL REELS):', W('b10', 'reels')), P2('SOLO NO SEGUIDORES', W('b10', 'solo')), FU_DIC24] },
 
@@ -146,10 +146,10 @@ export const BEATS: BeatSpec[] = [
   { id: 'b11', set: SET, cam: CAM([0.0, 1.5, 5.2], [0.2, 1.55, 4.75], [0, 0.8, -0.1]), keywords: ['siguiente', 'seguidores.'],
     actors: [WORLD,
       { type: 'dial', pos: [0.0, 0, 1.0], p: { at: 0.05, dur: W('b11', 'ves') } },
-      { type: 'group', pos: [-0.95, 0, -0.4], p: { n: 5, h: 0.5, seed: 19, fol: 5, off: 0.0, lit: W('b11', 'pasás') + 0.5, react: W('b11', 'seguidores.') } },
-      { type: 'group', pos: [0.9, 0, -0.1], p: { n: 5, h: 0.3, seed: 20, fol: 0, react: W('b11', 'anduvo,') } },
-      { type: 'stats', pos: [0.9, 0.0, 0.75], at: W('b11', 'ves'), p: { at: W('b11', 'ves') } },
-      { type: 'bubble', p: { c: TRIAL, kf: [[0, 0.9, 1.45, -0.1], [W('b11', 'pasás'), 0.9, 1.45, -0.1], [W('b11', 'pasás') + 0.7, -0.95, 1.65, -0.4, 0.3]] } },
+      { type: 'group', pos: [-0.85, 0, -0.4], p: { n: 5, h: 0.5, seed: 19, fol: 5, lit: W('b11', 'pasás') + 0.5, react: W('b11', 'seguidores.') } },
+      { type: 'group', pos: [0.82, 0, -0.1], p: { n: 5, h: 0.3, seed: 20, fol: 0, react: W('b11', 'anduvo,') } },
+      { type: 'stats', pos: [0.75, 0.0, 0.75], at: W('b11', 'ves'), p: { at: W('b11', 'ves') } },
+      { type: 'bubble', p: { c: TRIAL, kf: [[0, 0.82, 1.62, -0.1], [W('b11', 'pasás'), 0.82, 1.62, -0.1], [W('b11', 'pasás') + 0.7, -0.85, 1.76, -0.4, 0.1]] } },
     ],
     overlays: [P1('24 HORAS DESPUÉS:', W('b11', 'día')), P2('COMPARTIR CON TODOS', W('b11', 'pasás')), FU_DIC24] },
 
