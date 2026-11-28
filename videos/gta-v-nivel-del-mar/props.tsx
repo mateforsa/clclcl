@@ -1,6 +1,6 @@
 import React from 'react';
 import * as THREE from 'three';
-import { M, Label, useTex, Person } from '../../src/kit/Props';
+import { M, Label, useTex } from '../../src/kit/Props';
 import { clamp, eio, eo, lerp, pop, rnd } from '../../src/kit/math';
 
 // Look propio de este video (distinto de los de hoy: escritorio de nogal, Lusail de noche, neón violeta): una maqueta
@@ -488,17 +488,38 @@ export const Pedestal: React.FC<P> = ({ p }) => {
   );
 };
 
-/** Muñeco del kit sin cara: se tapan los dos ojos con una placa del color de la piel, 1 mm delante. */
-export const Faceless: React.FC<P> = (a) => {
-  const p = a.p; const pose = p.pose ?? 'idle'; const ph = p.phase ?? 0; const sway = Math.sin((a.t + ph) * 2.2);
+/** Copia del muñeco del kit SIN la geometría de los ojos (el guion pide personas sin cara). */
+export const Faceless: React.FC<P> = ({ t, p }) => {
+  const { shirt = '#27e0d8', pants = '#2a2350', skin = '#f2c39b', hair = '#3a2a1a', pose = 'idle', cap, phase = 0 } = p;
+  const w = Math.sin((t + phase) * 9);
+  const sway = Math.sin((t + phase) * 2.2);
   const sit = pose === 'sit' || pose === 'sitType';
-  const y0 = (sit ? -0.3 : 0) + (pose === 'cheer' ? Math.abs(Math.sin((a.t + ph) * 7)) * 0.12 : sway * 0.012);
+  const legRot = (side: number) => (sit ? -1.5 : pose === 'walk' ? w * 0.6 * side : 0);
+  let aL: V3 = [0, 0, -0.1 - sway * 0.03], aR: V3 = [0, 0, 0.1 + sway * 0.03];
+  if (pose === 'walk') { aL = [-w * 0.5, 0, -0.1]; aR = [w * 0.5, 0, 0.1]; }
+  if (pose === 'point') aR = [-1.45 + sway * 0.04, 0, 0.15];
+  if (pose === 'cheer') { aL = [0, 0, -2.6 - w * 0.15]; aR = [0, 0, 2.6 + w * 0.15]; }
+  if (pose === 'type' || pose === 'sitType') { aL = [-1.1 + w * 0.07, 0, -0.15]; aR = [-1.1 - w * 0.07, 0, 0.15]; }
+  if (pose === 'hold') { aL = [-1.0, 0, -0.25]; aR = [-1.0, 0, 0.25]; }
+  if (pose === 'sad') { aL = [0.1, 0, -0.05]; aR = [0.1, 0, 0.05]; }
+  if (pose === 'shrug') { aL = [0, 0, -1.2 - sway * 0.1]; aR = [0, 0, 1.2 + sway * 0.1]; }
+  const y0 = (sit ? -0.3 : 0) + (pose === 'cheer' ? Math.abs(Math.sin((t + phase) * 7)) * 0.12 : sway * 0.012);
   return (
-    <group>
-      <Person {...a} />
-      <group position={[0, y0 + 0.7, 0]} rotation={[pose === 'sad' ? 0.25 : 0, 0, sway * 0.015]}>
+    <group position={[0, y0, 0]}>
+      {[-1, 1].map((sd) => (
+        <group key={sd} position={[0.12 * sd, 0.7, 0]} rotation={[legRot(sd), 0, 0]}>
+          <B s={[0.17, 0.7, 0.19]} pos={[0, -0.35, 0]} c={pants} />
+          <B s={[0.18, 0.09, 0.26]} pos={[0, -0.68, 0.04]} c="#15102b" />
+        </group>
+      ))}
+      <group rotation={[pose === 'sad' ? 0.25 : 0, 0, sway * 0.015]} position={[0, 0.7, 0]}>
+        <B s={[0.52, 0.62, 0.29]} pos={[0, 0.32, 0]} c={shirt} />
+        <group position={[-0.33, 0.58, 0]} rotation={aL}><B s={[0.13, 0.5, 0.14]} pos={[0, -0.22, 0]} c={shirt} /><B s={[0.12, 0.12, 0.13]} pos={[0, -0.52, 0]} c={skin} /></group>
+        <group position={[0.33, 0.58, 0]} rotation={aR}><B s={[0.13, 0.5, 0.14]} pos={[0, -0.22, 0]} c={shirt} /><B s={[0.12, 0.12, 0.13]} pos={[0, -0.52, 0]} c={skin} /></group>
         <group position={[0, 0.84, 0]} rotation={[pose === 'sad' ? 0.3 : 0, sway * 0.05, 0]}>
-          <B s={[0.3, 0.12, 0.012]} pos={[0, 0.02, 0.177]} c={p.skin ?? '#f2c39b'} />
+          <B s={[0.37, 0.36, 0.34]} c={skin} />
+          <B s={[0.39, 0.13, 0.36]} pos={[0, 0.2, -0.005]} c={cap ?? hair} />
+          {cap && <B s={[0.39, 0.04, 0.2]} pos={[0, 0.15, 0.24]} c={cap} />}
         </group>
       </group>
     </group>

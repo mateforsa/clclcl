@@ -73,10 +73,10 @@ export const BEATS: BeatSpec[] = [
   // 6. Se corta el puerto. También quedan afectadas la energía y las aguas residuales.
   { id: 'b06', set: 'room', cam: { from: [-1.5, 3.2, 5.1], to: [-0.85, 3.0, 4.7], look: [-0.8, 0.98, 0.0], lookTo: [-0.7, 0.98, -0.3], fov: 44 }, keywords: ['corta', 'puerto.', 'energía', 'residuales.'],
     actors: [W,
-      { type: 'coast', pos: [0, 0.64, 0], p: { infra: true, lv: [[0, 0.1], [0.4, 0.11], [4.9, 0.24]],
-        marks: [{ kind: 'pin', at: 0.67, pos: [-1.0, 0.6, 0.62] }, { kind: 'pin', at: 2.84, pos: [-1.22, 0.62, -0.3] }, { kind: 'pin', at: 3.66, pos: [-0.62, 0.22, -0.32] }] } },
+      { type: 'coast', pos: [0, 0.64, 0], p: { infra: true, lv: [[0, 0.05], [0.6, 0.081], [1.48, 0.082], [3.0, 0.2], [4.9, 0.24]],
+        marks: [{ kind: 'pin', at: 0.67, pos: [-1.15, 0.3, 0.86] }, { kind: 'pin', at: 2.84, pos: [-1.22, 0.62, -0.3] }, { kind: 'pin', at: 3.66, pos: [-0.62, 0.22, -0.32] }] } },
     ],
-    overlays: [P1('2300: PUERTO FUERA DE SERVICIO', 'puerto.', { out: 'También' }), P2('TAMBIÉN: ENERGÍA Y AGUAS RESIDUALES', 'También'), F1, F2(ESQ)] },
+    overlays: [P1('2300: PUERTO FUERA DE SERVICIO', 'puerto.', { out: 'También', y: 68.5 }), P2('TAMBIÉN: ENERGÍA Y AGUAS RESIDUALES', 'También', { y: 68.5 }), F1, F2(ESQ)] },
 
   // 7. Si las emisiones bajan fuerte, se inunda el 2,2%, sin tocar ninguna infraestructura importante.
   { id: 'b07', set: 'room', cam: { from: [-0.5, 4.6, 6.0], to: [-0.1, 4.9, 6.5], look: [0, -0.15, 0.0], lookTo: [0, -0.15, -0.1], fov: 44 }, keywords: ['bajan', '2,2%,', 'infraestructura'],
