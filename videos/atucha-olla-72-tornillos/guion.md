@@ -1,4 +1,4 @@
-# La tapa del reactor de Atucha se cierra con 72 tornillos de 1.000 toneladas
+# La tapa del reactor de Atucha se cierra con 72 tornillos que aprietan con 1.000 toneladas cada uno
 
 Video vertical 1080x1920, unos 50-55 s, 14 planos, 172 palabras dichas. Formato inspirado en la serie de @induscoreig
 "Instalaciones solo en Argentina / armado de cero" (cómo funciona por dentro, cierre "¿trabajás en...?"). Del canal se toma
@@ -88,7 +88,7 @@ Límites y cómo los trata el guion:
 | 1 | ESFERA DE 56 M · 72 TORNILLOS |
 | 2 | ATUCHA POR DENTRO · SEGÚN INFOBAE (2019) |
 | 3 | 20 M BAJO TIERRA · OLLA DE 18 X 8 M (ATUCHA II) |
-| 4 | 1 TORNILLO = 1.000 TONELADAS |
+| 4 | CADA TORNILLO APRIETA CON 1.000 TONELADAS |
 | 5 | AGUA PESADA: FRENA LOS NEUTRONES |
 | 6 | CALOR → VAPOR → TURBINA |
 | 7 | 70.000 TUBOS CON AGUA DEL PARANÁ |
@@ -97,7 +97,7 @@ Límites y cómo los trata el guion:
 | 10 | CHERNOBYL: GRAFITO |
 | 11 | ATUCHA I: 1974 · ATUCHA II: 2014 |
 | 12 | 5 MILLONES DE PERSONAS · SEGÚN INFOBAE (2019) |
-| 13 | 72 × 1.000 = 72.000 TONELADAS |
+| 13 | 72.000 TONELADAS DE PRESIÓN SOBRE LA TAPA |
 | 14 | ¿TRABAJÁS EN ENERGÍA? |
 
 Fuente en pantalla chica, abajo: planos 1-7 y 11-13 (Infobae, 8/7/2019), planos 9-10 (Perfil, 14/6/2019). En el plano 9 puede
@@ -105,18 +105,19 @@ ir en texto plano chico "Julieta Romero, ingeniera nuclear" (muñeco genérico, 
 
 ## Títulos
 
-- Principal: **La tapa del reactor de Atucha se cierra con 72 tornillos de 1.000 toneladas**
+- Principal: **La tapa del reactor de Atucha se cierra con 72 tornillos que aprietan con 1.000 toneladas cada uno**
+- Portada sugerida: 72 TORNILLOS · CADA UNO APRIETA CON 1.000 TONELADAS
 - Alternativa 1: Atucha por dentro: una esfera de 56 metros y una olla de 18
 - Alternativa 2: Qué pasa en Atucha si el agua pesada hierve
 
 Ganchos alternativos (no usados):
-- "Setenta y dos tornillos, mil toneladas cada uno. Eso cierra la tapa del reactor de Atucha, según Infobae."
+- "Setenta y dos tornillos que aprietan con mil toneladas cada uno. Así se cierra la tapa del reactor de Atucha, según Infobae."
 - "La esfera de Atucha que ves desde la ruta es la mitad. La otra sigue veinte metros bajo tierra."
 
 ## Descripción de Instagram
 
 ```
-Una esfera de hormigón de 56 metros y, abajo, una tapa que aprietan 72 tornillos de 1.000 toneladas cada uno: así es Atucha por dentro, según la recorrida de Infobae (2019).
+Una esfera de hormigón de 56 metros y, abajo, una tapa que aprietan 72 tornillos, cada uno con 1.000 toneladas de presión: así es Atucha por dentro, según la recorrida de Infobae (2019).
 
 La esfera sigue 20 metros bajo tierra. Ahí está el reactor, una "olla a presión" de 18 por 8 metros en Atucha II, según el guía de la central.
 El agua pesada frena los neutrones para que rompan átomos y liberen calor. El vapor mueve la turbina, pasa por 70.000 tubos enfriados con agua del Paraná y vuelve a ser agua.

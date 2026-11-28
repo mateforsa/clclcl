@@ -4,3 +4,5 @@
 2026-11-28T05:14:13-03:00 [fabrica] etapa -> guion
 2026-11-28T05:15:02-03:00 [verificador] DEVUELTO: 1 dato DISTINTO. Titulo principal ("72 tornillos de 1.000 toneladas") y primera linea de la descripcion ("72 tornillos de 1.000 toneladas cada uno") se leen como peso de cada tornillo; Infobae dice que cada esparrago "ejerce mil toneladas de presion". Reescribir como "que aprietan con 1.000 toneladas cada uno" o similar (la voz, plano 4, ya esta bien). Resto de datos (13) OK contra Infobae 8/7/2019 y Perfil 14/6/2019; forma OK.
 2026-11-28T05:15:03-03:00 [fabrica] etapa -> guion (devuelto por el verificador: titulo y descripcion dicen tornillos de 1.000 toneladas (parece peso); la fuente dice que cada uno ejerce 1.000 t de presion)
+2026-11-28T05:15:33-03:00 [guionista] corregido por verificador: título, portada sugerida, gancho alternativo, primera línea de la descripción y placas 4 y 13 dicen ahora que cada tornillo aprieta con 1.000 t de presión (no peso); voz sin cambios
+2026-11-28T05:15:33-03:00 [fabrica] etapa -> guion

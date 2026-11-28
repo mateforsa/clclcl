@@ -2910,10 +2910,15 @@
      "etapa": "guion",
      "cuando": "2026-11-28T05:15:03-03:00",
      "nota": "devuelto por el verificador: titulo y descripcion dicen tornillos de 1.000 toneladas (parece peso); la fuente dice que cada uno ejerce 1.000 t de presion"
+    },
+    {
+     "etapa": "guion",
+     "cuando": "2026-11-28T05:15:33-03:00",
+     "nota": ""
     }
    ],
-   "nota": "devuelto por el verificador: titulo y descripcion dicen tornillos de 1.000 toneladas (parece peso); la fuente dice que cada uno ejerce 1.000 t de presion"
+   "nota": ""
   }
  },
- "actualizado": "2026-11-28T05:15:26-03:00"
+ "actualizado": "2026-11-28T05:15:33-03:00"
 }
