@@ -352,19 +352,28 @@ export const City: React.FC<P> = ({ t, p }) => {
   );
 };
 
-/* ---------- Gota guía (plano 13): recorre torre -> caño -> planta -> túnel -> casa ---------- */
-const ROUTE: [number, number][] = [[L.TOWER, -0.4], [L.TOWER, L.PIPE_Y], [L.PUMP[0], L.PIPE_Y], [3.1, 0.0], [4.15, 0.05], [5.25, 0.05], [6.35, 0.0], [7.5, -0.6], [L.TANK[1], L.TUN_Y], [L.HOUSE, L.TUN_Y], [L.HOUSE, L.GROUND]];
-export const routeAt = (u: number): [number, number] => {
-  const d: number[] = [0]; for (let i = 1; i < ROUTE.length; i++) d.push(d[i - 1] + Math.hypot(ROUTE[i][0] - ROUTE[i - 1][0], ROUTE[i][1] - ROUTE[i - 1][1]));
+/* ---------- Gota guía (plano 13): solo por huecos reales del corte. Tramo A: torre -> pozo -> caño -> cámara de bombas (se apaga
+   adentro del agua). En la planta no viaja: se encienden las etapas. Tramo B: aparece dentro del tanque -> túnel -> ramal de la casa. ---------- */
+const RA: [number, number][] = [[L.TOWER, -0.4], [L.TOWER, L.PIPE_Y], [3.1, L.PIPE_Y], [3.1, -0.75]];
+const RB: [number, number][] = [[7.35, -0.62], [L.TANK[1] - 0.05, L.TUN_Y], [L.HOUSE, L.TUN_Y], [L.HOUSE, L.GROUND - 0.04]];
+export const routeOf = (R: [number, number][], u: number): [number, number] => {
+  const d: number[] = [0]; for (let i = 1; i < R.length; i++) d.push(d[i - 1] + Math.hypot(R[i][0] - R[i - 1][0], R[i][1] - R[i - 1][1]));
   const s = clamp(u) * d[d.length - 1]; let i = 1; while (i < d.length - 1 && d[i] < s) i++;
-  const k = (s - d[i - 1]) / Math.max(1e-6, d[i] - d[i - 1]); return [lerp(ROUTE[i - 1][0], ROUTE[i][0], k), lerp(ROUTE[i - 1][1], ROUTE[i][1], k)];
+  const k = (s - d[i - 1]) / Math.max(1e-6, d[i] - d[i - 1]); return [lerp(R[i - 1][0], R[i][0], k), lerp(R[i - 1][1], R[i][1], k)];
+};
+/** posición de la gota para el avance g (0-1); null = oculta (mientras se encienden las etapas de la planta) */
+export const dropAt = (g: number, split: [number, number]): { x: number; y: number; s: number; c: string; R: [number, number][]; u: number } | null => {
+  if (g <= split[0]) { const u = g / split[0]; const [x, y] = routeOf(RA, u); return { x, y, s: 1 - clamp((u - 0.9) / 0.1), c: MUD2, R: RA, u }; }
+  if (g < split[1]) return null;
+  const u = (g - split[1]) / (1 - split[1]); const [x, y] = routeOf(RB, u); return { x, y, s: clamp(u / 0.06), c: CLEAN2, R: RB, u };
 };
 export const Drop: React.FC<P> = ({ t, p }) => {
-  const { at = 0, dur = 4 } = p; const q = clamp((t - at) / dur); const u = eio(q) * 0.5 + q * 0.5; const [x, y] = routeAt(u);
-  const c = mixc(MUD2, CLEAN2, clamp((x - 2.5) / 4.5));
-  return <group position={[x, y, 0.06]}>
-    <Ball r={0.07} c={c} e={c} ei={0.9} />
-    {[1, 2, 3].map((k) => { const [px, py] = routeAt(Math.max(0, u - k * 0.012)); return <Ball key={k} r={0.05 - k * 0.01} pos={[px - x, py - y, 0]} c={c} e={c} ei={0.7} o={0.6 - k * 0.15} />; })}
+  const { at = 0, dur = 4, split = [0.42, 0.72] } = p; const q = clamp((t - at) / dur); const g = eio(q) * 0.5 + q * 0.5;
+  const d = dropAt(g, split); if (!d || d.s <= 0.001) return null;
+  const c = mixc(d.c, '#ffffff', 0.15);
+  return <group position={[d.x, d.y, 0.02]} scale={[d.s, d.s, d.s]}>
+    <Ball r={0.05} c={c} e={c} ei={0.9} />
+    {[1, 2, 3].map((k) => { const [px, py] = routeOf(d.R, Math.max(0, d.u - k * 0.015)); return <Ball key={k} r={0.04 - k * 0.008} pos={[px - d.x, py - d.y, 0]} c={c} e={c} ei={0.7} o={0.6 - k * 0.15} />; })}
   </group>;
 };
 

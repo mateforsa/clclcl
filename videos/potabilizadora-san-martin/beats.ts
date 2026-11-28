@@ -40,6 +40,12 @@ const PLANT = (p: any = {}) => A('plant', { all: true, ...p });
 const CITY = (p: any = {}) => A('city', p);
 const PAD = (p: any) => ({ type: 'pad', pos: [30, 0, OZ] as V3, p });
 
+// plano 13: las etapas de la planta se encienden cuando la cámara pasa por cada una (avance g = mismo easing que la cámara)
+const ST13 = (() => { const d = DUR('b13'); const e = (t: number) => { const k = Math.min(1, t / d); const x = k < 0.5 ? 2 * k * k : 1 - Math.pow(-2 * k + 2, 2) / 2; return x * 0.5 + k * 0.5; };
+  const tAt = (g: number) => { let t = 0; while (t < d && e(t) < g) t += 0.01; return t; };
+  const g0 = 0.42, g1 = 0.72, ks = ['bombas', 'coag', 'dec', 'fil', 'tan']; const o: any = {};
+  ks.forEach((k, i) => { o[k] = tAt(g0 + ((g1 - g0) * i) / 5); if (i < 4) o[k + 'Off'] = tAt(g0 + ((g1 - g0) * (i + 1)) / 5); }); return o; })();
+
 export const BEATS: BeatSpec[] = [
   // 1. Abrís la canilla en Buenos Aires.
   { id: 'b01', set: 'room', cam: cam([12.1, 1.05, 0.75], [11.98, 0.98, 0.5], [11.9, 0.53, -0.62]), keywords: ['canilla', 'Aires.'],
@@ -103,7 +109,7 @@ export const BEATS: BeatSpec[] = [
 
   // 13. Si vivís en la Ciudad, tu canilla puede empezar a 1.200 metros adentro del río.
   { id: 'b13', set: 'room', cam: cam([-3.0, 1.0, 12.0], [11.4, 0.9, 11.6], [-3.0, -0.3, 0], [11.4, -0.3, 0]), keywords: ['canilla', '1.200', 'río.'],
-    actors: [WORLD, EARTH, RIVER(), PIPES(), PLANT(), CITY(), A('drop', { at: 0.1, dur: DUR('b13') - 0.4 })],
+    actors: [WORLD, EARTH, RIVER(), PIPES(), PLANT({ st: ST13 }), CITY(), A('drop', { at: 0, dur: DUR('b13'), split: [0.42, 0.72] })],
     overlays: [P1('1.200 M ADENTRO DEL RÍO', W('b13', '1.200')), FU_GOB] },
 
   // 14. ¿Trabajás en una planta de agua? Contá abajo en qué etapa.
