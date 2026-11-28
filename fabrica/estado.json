@@ -2704,7 +2704,21 @@
    "nota": "reel de prueba automático (madrugada)",
    "caracteres_voz": 1059,
    "link_prueba": "https://www.instagram.com/reel/DgRg_EAvIlV/"
+  },
+  "reels-1000-vistas": {
+   "titulo": "¿Por qué tu Reel se queda en 1.000 vistas?",
+   "tema": "redes y algoritmo (pedido del dueño)",
+   "fuentes": [],
+   "puntaje": 9.0,
+   "etapa": "idea",
+   "creado": "2026-11-28T02:38:22-03:00",
+   "historial": [
+    {
+     "etapa": "idea",
+     "cuando": "2026-11-28T02:38:22-03:00"
+    }
+   ]
   }
  },
- "actualizado": "2026-11-28T02:35:29-03:00"
+ "actualizado": "2026-11-28T02:38:22-03:00"
 }
