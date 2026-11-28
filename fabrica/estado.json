@@ -2119,7 +2119,7 @@
     "https://www.infobae.com/deportes/2026/04/07/comienza-la-fase-de-grupos-de-la-copa-libertadores-y-sudamericana-los-millonarios-premios-que-reparten/"
    ],
    "puntaje": 8.3,
-   "etapa": "esperando_ok_final",
+   "etapa": "listo",
    "creado": "2026-11-27T18:15:26-03:00",
    "historial": [
     {
@@ -2170,6 +2170,11 @@
      "etapa": "esperando_ok_final",
      "cuando": "2026-11-27T19:26:33-03:00",
      "nota": ""
+    },
+    {
+     "etapa": "listo",
+     "cuando": "2026-11-27T21:58:08-03:00",
+     "nota": "aprobado por el dueño desde esperando_ok_final"
     }
    ],
    "nota": "",
@@ -2183,7 +2188,7 @@
     "https://www.infobae.com/deportes/2026/11/27/carlos-sainz-se-enojo-por-una-maniobra-de-franco-colapinto-lo-critico-y-advirtio-quizas-tenga-que-hablar-con-el/"
    ],
    "puntaje": null,
-   "etapa": "esperando_ok_final",
+   "etapa": "listo",
    "creado": "2026-11-27T18:28:52-03:00",
    "historial": [
     {
@@ -2244,6 +2249,11 @@
      "etapa": "esperando_ok_final",
      "cuando": "2026-11-27T19:31:19-03:00",
      "nota": ""
+    },
+    {
+     "etapa": "listo",
+     "cuando": "2026-11-27T21:58:08-03:00",
+     "nota": "aprobado por el dueño desde esperando_ok_final"
     }
    ],
    "nota": "",
@@ -2457,5 +2467,5 @@
    "caracteres_voz": 1141
   }
  },
- "actualizado": "2026-11-27T21:57:25-03:00"
+ "actualizado": "2026-11-27T21:58:08-03:00"
 }
