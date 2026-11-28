@@ -3108,7 +3108,7 @@
     "https://www.iprofesional.com/economia/421001-hito-en-mar-argentino-total-energies-puso-en-accion-los-3-pozos-del-proyecto-fenix"
    ],
    "puntaje": 7.3,
-   "etapa": "revision",
+   "etapa": "esperando_ok_final",
    "creado": "2026-11-28T06:45:49-03:00",
    "historial": [
     {
@@ -3164,11 +3164,16 @@
      "etapa": "revision",
      "cuando": "2026-11-28T07:59:26-03:00",
      "nota": ""
+    },
+    {
+     "etapa": "esperando_ok_final",
+     "cuando": "2026-11-28T07:59:53-03:00",
+     "nota": ""
     }
    ],
    "nota": "",
    "caracteres_voz": 970
   }
  },
- "actualizado": "2026-11-28T07:59:26-03:00"
+ "actualizado": "2026-11-28T07:59:53-03:00"
 }
