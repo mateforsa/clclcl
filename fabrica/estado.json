@@ -2579,7 +2579,24 @@
    ],
    "nota": "",
    "caracteres_voz": 1030
+  },
+  "dolares-octubre-3020": {
+   "titulo": "En 10 meses los argentinos ya compraron más dólares que en todo 2025",
+   "tema": "economía argentina",
+   "fuentes": [
+    "https://www.infobae.com/economia/2026/11/27/la-demanda-de-dolares-no-afloja-los-argentinos-compraron-mas-de-usd-3000-millones-en-octubre/",
+    "https://www.ambito.com/finanzas/la-compra-dolar-ahorro-trepo-15-octubre-supero-los-us3300-millones-y-crecio-el-atesoramiento-bajo-el-colchon-n6350206"
+   ],
+   "puntaje": 8.5,
+   "etapa": "idea",
+   "creado": "2026-11-28T00:42:00-03:00",
+   "historial": [
+    {
+     "etapa": "idea",
+     "cuando": "2026-11-28T00:42:00-03:00"
+    }
+   ]
   }
  },
- "actualizado": "2026-11-28T00:17:55-03:00"
+ "actualizado": "2026-11-28T00:42:01-03:00"
 }
