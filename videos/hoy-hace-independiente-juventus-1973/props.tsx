@@ -464,11 +464,11 @@ export const Mesa: React.FC<P> = ({ p }) => { const { w = 1.4, d = 0.7, h = 0.55
 
 /* ---------- Dos tarjetas IDA / VUELTA; la de VUELTA se cae ---------- */
 export const IdaVuelta: React.FC<P> = ({ t, tt, p }) => {
-  const { fallAt = 99, drop = 1.0 } = p; const f = eio((t - fallAt) / 0.6);
+  const { fallAt = 99, drop = 1.0 } = p; const f = eio((t - fallAt) / 0.5); const g = 1 - eio((t - fallAt - 0.55) / 0.35); // se inclina, se apaga y se borra en su lugar
   return (
     <group>
       <group position={[-0.4, 0, 0]}><Sign t={t} tt={tt} p={{ text: 'IDA', w: 0.72, h: 0.36, bg: '#1a1c24', color: '#fff', size: 0.6 }} /></group>
-      <group position={[0.4, -f * drop, f * 0.15]} rotation={[-f * 1.45, 0, f * 0.15]}><Sign t={t} tt={tt} p={{ text: 'VUELTA', w: 0.72, h: 0.36, bg: '#1a1c24', color: f > 0 ? '#8a8a90' : '#fff', size: 0.5 }} /></group>
+      {g > 0 && <group position={[0.4, -f * drop, f * 0.15]} rotation={[-f * 0.5, 0, f * 0.35]} scale={g}><Sign t={t} tt={tt} p={{ text: 'VUELTA', w: 0.72, h: 0.36, bg: '#1a1c24', color: f > 0 ? '#8a8a90' : '#fff', size: 0.5 }} /></group>}
     </group>
   );
 };
@@ -483,7 +483,8 @@ export const Aro: React.FC<P> = ({ t, p }) => { const { r = 0.6, color = ROJO } 
 
 /* ---------- Jugada de las dos paredes: Bochini (A) y Bertoni (B) avanzan hacia -z y la pelota va y vuelve ---------- */
 export const Paredes: React.FC<P> = ({ t, tt, p }) => {
-  const { t0 = 0, passes = [0.6, 1.4, 2.2, 3.0], z0 = 2.2, z1 = -1.6, dur = 4.0, la = 0, lb = 0 } = p;
+  const { t0 = 0, passes = [0.6, 1.4, 2.2, 3.0], z0 = 2.2, z1 = -1.6, dur = 4.0, la = 0, lb = 0, offA = -0.15, offB = 0.15, ls = 1, ly = 2.2, lo = 99 } = p;
+  const lOut = 1 - eio((t - lo) / 0.25); // los carteles se van antes de que los jugadores se crucen con los de Juventus
   // A va por la izquierda en zigzag suave; B por la derecha. Posiciones continuas.
   const k = clamp((t - t0) / dur);
   const zA = lerp(z0, z1, k), zB = lerp(z0 - 0.5, z1 - 0.4, k);
@@ -498,8 +499,8 @@ export const Paredes: React.FC<P> = ({ t, tt, p }) => {
     <group>
       <group position={[xA, 0, zA]} rotation={[0, PI, 0]}><Player t={t} tt={tt} p={{ kit: 'ind', poses: [[0, 'walk'], [t0 - 0.3, 'run']], phase: 0.3, hair: '#2a1a10' }} /></group>
       <group position={[xB, 0, zB]} rotation={[0, PI, 0]}><Player t={t} tt={tt} p={{ kit: 'ind', poses: [[0, 'walk'], [t0 - 0.3, 'run']], phase: 1.4, hair: '#5a3a1a' }} /></group>
-      {pop(t - la) > 0 && <group position={[xA - 0.15, 2.2, zA]} rotation={[-0.7, 0, 0]} scale={pop(t - la)}><Sign t={t} tt={tt} p={{ text: 'BOCHINI', w: 1.15, h: 0.3, bg: INK, size: 0.62 }} /></group>}
-      {pop(t - lb) > 0 && <group position={[xB + 0.15, 2.2, zB]} rotation={[-0.7, 0, 0]} scale={pop(t - lb)}><Sign t={t} tt={tt} p={{ text: 'BERTONI', w: 1.15, h: 0.3, bg: INK, size: 0.62 }} /></group>}
+      {pop(t - la) * lOut > 0 && <group position={[xA + offA, ly, zA]} rotation={[-0.7, 0, 0]} scale={pop(t - la) * ls * lOut}><Sign t={t} tt={tt} p={{ text: 'BOCHINI', w: 1.15, h: 0.3, bg: INK, size: 0.62 }} /></group>}
+      {pop(t - lb) * lOut > 0 && <group position={[xB + offB, ly, zB]} rotation={[-0.7, 0, 0]} scale={pop(t - lb) * ls * lOut}><Sign t={t} tt={tt} p={{ text: 'BERTONI', w: 1.15, h: 0.3, bg: INK, size: 0.62 }} /></group>}
       <Ball t={t} tt={tt} p={{ path: [[0, ball[0], ball[1], ball[2]]] }} />
     </group>
   );
