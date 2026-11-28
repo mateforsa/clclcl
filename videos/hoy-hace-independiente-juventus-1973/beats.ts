@@ -96,10 +96,10 @@ export const BEATS: BeatSpec[] = [
   // 7. Faltan diez minutos. Bochini y Bertoni, dos pibes, hacen dos paredes seguidas.
   { id: 'b07', set: 'void', cam: { from: [0.4, 5.0, 6.2], to: [0.1, 4.6, 5.3], look: [0, 0.0, -2.2], lookTo: [0, 0.0, -2.6], fov: 44, shift: 0 }, keywords: ['Bochini', 'Bertoni,', 'paredes'],
     actors: [EST({}),
-      { type: 'paredes', pos: [0, 0, 0], p: { t0: 1.2, dur: 4.4, passes: [0.6, 1.4, 2.2, 3.0], z0: 2.2, z1: -1.6, la: W('b07', 'Bochini'), lb: W('b07', 'Bertoni,'), offA: 0.32, offB: -0.12, ls: 0.82, ly: 2.05, lo: W('b07', 'hacen') } },
+      { type: 'paredes', pos: [0, 0, 0], p: { t0: 1.2, dur: 4.4, passes: [0.6, 1.4, 2.2, 3.0], z0: 2.2, z1: -1.6, la: W('b07', 'Bochini'), lb: W('b07', 'Bertoni,'), offA: 0.32, offB: -0.12, ls: 0.82, ly: 2.05, lo: W('b07', 'Bertoni,') + 0.35 } },
       { type: 'player', pos: [1.55, 0, -0.1], rot: [0, 0, 0], p: { kit: 'juv', poses: [[0, 'idle'], [3.2, 'sad']], phase: 1 } },
-      { type: 'player', pos: [-1.25, 0, -2.4], rot: [0, 0.3, 0], p: { kit: 'juv', poses: [[0, 'idle'], [4.0, 'sad']], phase: 2.5 } },
-      { type: 'player', pos: [0.05, 0, -3.0], p: { kit: 'juv', pose: 'gk', phase: 0.7 } },
+      { type: 'player', pos: [-1.6, 0, -2.8], rot: [0, 0.3, 0], p: { kit: 'juv', poses: [[0, 'idle'], [4.0, 'sad']], phase: 2.5 } },
+      { type: 'player', pos: [0.05, 0, -3.7], p: { kit: 'juv', pose: 'gk', phase: 0.7 } },
     ],
     overlays: [P1('FALTAN 10 MINUTOS', 'Faltan'), FUR] },
 
