@@ -3358,14 +3358,20 @@
     "https://www.infobae.com/politica/2026/11/28/el-tribunal-del-mar-rechazo-el-pedido-argentino-para-frenar-la-explotacion-petrolera-en-malvinas/"
    ],
    "puntaje": 8.0,
-   "etapa": "idea",
+   "etapa": "guion",
    "creado": "2026-11-28T10:45:12-03:00",
    "historial": [
     {
      "etapa": "idea",
      "cuando": "2026-11-28T10:45:12-03:00"
+    },
+    {
+     "etapa": "guion",
+     "cuando": "2026-11-28T10:49:26-03:00",
+     "nota": ""
     }
-   ]
+   ],
+   "nota": ""
   },
   "deuda-enero-1800-bcra": {
    "titulo": "Cómo piensa pagar el Gobierno los US$ 4.370 M de enero: 1.800 salen del Banco Central",
@@ -3375,15 +3381,21 @@
     "https://www.infobae.com/economia/2026/11/28/el-plan-del-gobierno-para-pagar-la-deuda-en-enero-tiene-respuesta-y-un-costo-las-reservas-del-banco-central/"
    ],
    "puntaje": 8.0,
-   "etapa": "idea",
+   "etapa": "guion",
    "creado": "2026-11-28T10:45:13-03:00",
    "historial": [
     {
      "etapa": "idea",
      "cuando": "2026-11-28T10:45:13-03:00"
+    },
+    {
+     "etapa": "guion",
+     "cuando": "2026-11-28T10:49:15-03:00",
+     "nota": ""
     }
-   ]
+   ],
+   "nota": ""
   }
  },
- "actualizado": "2026-11-28T10:45:13-03:00"
+ "actualizado": "2026-11-28T10:49:26-03:00"
 }
