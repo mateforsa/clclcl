@@ -205,7 +205,8 @@
      "cuando": "2026-11-25T16:05:25-03:00",
      "nota": "importado (hecho antes de la fábrica)"
     }
-   ]
+   ],
+   "link_prueba": "https://www.instagram.com/reel/DgRjSiFh0Up/"
   },
   "gta-vi-parte-2": {
    "titulo": "GTA VI, parte 2: la primera semana después del récord",
@@ -2178,7 +2179,8 @@
     }
    ],
    "nota": "",
-   "caracteres_voz": 994
+   "caracteres_voz": 994,
+   "link_prueba": "https://www.instagram.com/reel/DgRivtphpSp/"
   },
   "colapinto-fp2-qatar": {
    "titulo": "Colapinto en la FP2 de Qatar: 15°, frenos, y Sainz enojado",
@@ -2188,7 +2190,7 @@
     "https://www.infobae.com/deportes/2026/11/27/carlos-sainz-se-enojo-por-una-maniobra-de-franco-colapinto-lo-critico-y-advirtio-quizas-tenga-que-hablar-con-el/"
    ],
    "puntaje": null,
-   "etapa": "listo",
+   "etapa": "publicado",
    "creado": "2026-11-27T18:28:52-03:00",
    "historial": [
     {
@@ -2254,10 +2256,16 @@
      "etapa": "listo",
      "cuando": "2026-11-27T21:58:08-03:00",
      "nota": "aprobado por el dueño desde esperando_ok_final"
+    },
+    {
+     "etapa": "publicado",
+     "cuando": "2026-11-28T02:56:56-03:00",
+     "nota": "https://www.instagram.com/reel/DgRjbblhEcy/"
     }
    ],
    "nota": "",
-   "caracteres_voz": 986
+   "caracteres_voz": 986,
+   "link": "https://www.instagram.com/reel/DgRjbblhEcy/"
   },
   "fp2-qatar-general": {
    "titulo": "FP2 de Qatar: dos banderas rojas y Mercedes otra vez 1-2",
@@ -2326,7 +2334,8 @@
     }
    ],
    "nota": "",
-   "caracteres_voz": 958
+   "caracteres_voz": 958,
+   "link_prueba": "https://www.instagram.com/reel/DgRjGXuKNp3/"
   },
   "gta-v-nivel-del-mar": {
    "titulo": "Científicos inundaron Los Santos de GTA V para mostrar la suba del mar",
@@ -2425,7 +2434,8 @@
     }
    ],
    "nota": "",
-   "caracteres_voz": 966
+   "caracteres_voz": 966,
+   "link_prueba": "https://www.instagram.com/reel/DgRi6kttX-L/"
   },
   "exportaciones-agro-5717": {
    "titulo": "El aceite de limón vale el doble que la carne: récord de exportaciones del campo",
@@ -2494,7 +2504,8 @@
     }
    ],
    "nota": "",
-   "caracteres_voz": 1141
+   "caracteres_voz": 1141,
+   "link_prueba": "https://www.instagram.com/reel/DgRilrGsKdZ/"
   },
   "hoy-hace-independiente-juventus-1973": {
    "titulo": "Hoy hace 53 años: el gol de Bochini que estuvo perdido",
@@ -2583,7 +2594,8 @@
     }
    ],
    "nota": "",
-   "caracteres_voz": 1030
+   "caracteres_voz": 1030,
+   "link_prueba": "https://www.instagram.com/reel/DgRicCCx9Cz/"
   },
   "dolares-octubre-3020": {
    "titulo": "En 10 meses los argentinos ya compraron más dólares que en todo 2025",
@@ -2733,15 +2745,21 @@
     "https://www.lanacion.com.ar/economia/el-oro-blanco-el-informe-del-gobierno-que-revela-la-actualidad-del-mineral-estrella-nid12102026/"
    ],
    "puntaje": 7.8,
-   "etapa": "idea",
+   "etapa": "guion",
    "creado": "2026-11-28T02:45:57-03:00",
    "historial": [
     {
      "etapa": "idea",
      "cuando": "2026-11-28T02:45:57-03:00"
+    },
+    {
+     "etapa": "guion",
+     "cuando": "2026-11-28T02:52:27-03:00",
+     "nota": ""
     }
-   ]
+   ],
+   "nota": ""
   }
  },
- "actualizado": "2026-11-28T02:46:20-03:00"
+ "actualizado": "2026-11-28T02:56:56-03:00"
 }
