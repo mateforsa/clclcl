@@ -2633,7 +2633,24 @@
    ],
    "nota": "",
    "caracteres_voz": 1032
+  },
+  "hoy-hace-magallanes-pacifico": {
+   "titulo": "Hoy hace 506 años Magallanes llegó al Pacífico (y le puso ese nombre)",
+   "tema": "Efeméride / historia",
+   "fuentes": [
+    "https://www.history.com/this-day-in-history/november-28/magellan-reaches-the-pacific",
+    "https://www.infobae.com/sociedad/2020/10/30/a-500-anos-del-paso-de-magallanes-por-el-estrecho-como-fue-la-proeza-que-la-argentina-no-conmemoro/"
+   ],
+   "puntaje": 7.5,
+   "etapa": "idea",
+   "creado": "2026-11-28T01:45:32-03:00",
+   "historial": [
+    {
+     "etapa": "idea",
+     "cuando": "2026-11-28T01:45:32-03:00"
+    }
+   ]
   }
  },
- "actualizado": "2026-11-28T01:23:15-03:00"
+ "actualizado": "2026-11-28T01:45:57-03:00"
 }
