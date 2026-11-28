@@ -830,5 +830,65 @@
   "dicho": "Atucha dos",
   "estado": "probada",
   "nota": "misma forma que Atucha I; se verifica con oir en atucha-olla-72-tornillos"
+ },
+ "Rávena": {
+  "dicho": "Rá-vena",
+  "estado": "probada",
+  "puntaje": 0.73,
+  "variantes": [
+   "Rávena",
+   "Ravena",
+   "Rabena",
+   "Rá-vena",
+   "Rávenna"
+  ],
+  "nota": "28/11/2026 fenix-plataforma-austral: las 5 se oyen \"Ravenna\"; ganó Rá-vena 73 %. Pendiente de que el dueño elija de oído."
+ },
+ "Fénix": {
+  "dicho": "Fénix",
+  "estado": "probada",
+  "puntaje": 0.56,
+  "variantes": [
+   "Fénix",
+   "Fénics",
+   "Fé-nix",
+   "Fénis"
+  ],
+  "nota": "28/11/2026 fenix-plataforma-austral: Whisper oye \"Phoenix\" (= Fénix) con 1-3; \"Fénis\" ganó por puntaje (56 vs 54) pero pierde la x, se usa Fénix. Pendiente de que el dueño elija de oído."
+ },
+ "Aluar": {
+  "dicho": "Alu-ar",
+  "estado": "probada",
+  "puntaje": 0.59,
+  "variantes": [
+   "Aluar",
+   "Aluár",
+   "Alu-ar",
+   "Aluar,",
+   "Aluuar"
+  ]
+ },
+ "Vega Pléyade": {
+  "dicho": "Vega Pléiade",
+  "estado": "probada",
+  "puntaje": 0.57,
+  "variantes": [
+   "Vega Pléyade",
+   "Vega Pleyade",
+   "Vega Plé-ya-de",
+   "Vega Pléiade"
+  ],
+  "nota": "28/11/2026 fenix-plataforma-austral: \"Pléyade\" se oye \"PlayJade\"; \"Pléiade\" se oye \"Playade\" (57 %). Pendiente de que el dueño elija de oído."
+ },
+ "Obelisco": {
+  "dicho": "el Obelísco",
+  "estado": "probada",
+  "puntaje": 0.7,
+  "variantes": [
+   "el Obelisco",
+   "el Obelisco porteño",
+   "el obelisco",
+   "el Obelísco"
+  ]
  }
 }

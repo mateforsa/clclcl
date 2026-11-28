@@ -1,0 +1,3 @@
+{ "beat": "b01", "frac": 0.03,
+  "overlay": { "y": 61, "kicker": "ALUAR",
+    "lines": [ { "t": "MÁS DE 6 HORAS", "c": "yellow", "size": 120 }, { "t": "SIN LUZ Y SE DAÑA", "size": 96 }, { "t": "POR ESO TIENE 119 MOLINOS PROPIOS", "size": 54, "c": "cyan" } ] } }
