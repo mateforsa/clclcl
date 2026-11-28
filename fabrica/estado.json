@@ -2411,7 +2411,24 @@
    ],
    "nota": "",
    "caracteres_voz": 966
+  },
+  "exportaciones-agro-5717": {
+   "titulo": "El aceite de limón vale el doble que la carne: récord de exportaciones del campo",
+   "tema": "economía argentina",
+   "fuentes": [
+    "https://www.argentina.gob.ar/noticias/las-exportaciones-agroindustriales-alcanzaron-en-octubre-un-record-historico-de-usd-5717",
+    "https://www.lanacion.com.ar/economia/campo/las-exportaciones-agroindustriales-de-octubre-marcaron-un-record-us5717-millones-nid27112026/"
+   ],
+   "puntaje": 8.0,
+   "etapa": "idea",
+   "creado": "2026-11-27T21:41:55-03:00",
+   "historial": [
+    {
+     "etapa": "idea",
+     "cuando": "2026-11-27T21:41:55-03:00"
+    }
+   ]
   }
  },
- "actualizado": "2026-11-27T21:14:56-03:00"
+ "actualizado": "2026-11-27T21:41:56-03:00"
 }
