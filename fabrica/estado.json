@@ -2905,7 +2905,7 @@
     "https://www.perfil.com/noticias/ciencia/tras-serie-chernobyl-asi-se-preparan-centrales-nucleares-argentinas-evitar-accidente.phtml"
    ],
    "puntaje": 7.5,
-   "etapa": "guion",
+   "etapa": "voz",
    "creado": "2026-11-28T05:10:46-03:00",
    "historial": [
     {
@@ -2926,10 +2926,26 @@
      "etapa": "guion",
      "cuando": "2026-11-28T05:15:33-03:00",
      "nota": ""
+    },
+    {
+     "etapa": "verificado",
+     "cuando": "2026-11-28T05:16:07-03:00",
+     "nota": ""
+    },
+    {
+     "etapa": "esperando_ok_voz",
+     "cuando": "2026-11-28T05:16:25-03:00",
+     "nota": ""
+    },
+    {
+     "etapa": "voz",
+     "cuando": "2026-11-28T05:16:25-03:00",
+     "nota": "voz sin OK (regla voz_sin_ok del dueño)"
     }
    ],
-   "nota": ""
+   "nota": "",
+   "caracteres_voz": 992
   }
  },
- "actualizado": "2026-11-28T05:15:56-03:00"
+ "actualizado": "2026-11-28T05:16:25-03:00"
 }

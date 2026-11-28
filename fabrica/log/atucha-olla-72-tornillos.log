@@ -6,3 +6,8 @@
 2026-11-28T05:15:03-03:00 [fabrica] etapa -> guion (devuelto por el verificador: titulo y descripcion dicen tornillos de 1.000 toneladas (parece peso); la fuente dice que cada uno ejerce 1.000 t de presion)
 2026-11-28T05:15:33-03:00 [guionista] corregido por verificador: título, portada sugerida, gancho alternativo, primera línea de la descripción y placas 4 y 13 dicen ahora que cada tornillo aprieta con 1.000 t de presión (no peso); voz sin cambios
 2026-11-28T05:15:33-03:00 [fabrica] etapa -> guion
+2026-11-28T05:16:06-03:00 [verificador] APROBADO: 14 datos, todos con fuente (Infobae 8/7/2019, Perfil 14/6/2019); titulo, portada, descripcion y placas 4 y 13 ya dicen presion de 1.000 t por esparrago, como Infobae
+2026-11-28T05:16:07-03:00 [fabrica] etapa -> verificado
+2026-11-28T05:16:25-03:00 [fabrica] atucha-olla-72-tornillos: la voz gasta unos 992 caracteres de ElevenLabs. AVISO: no se puede leer el saldo (la clave no tiene ese permiso); anotalo en fabrica/config.json.
+2026-11-28T05:16:25-03:00 [fabrica] etapa -> esperando_ok_voz
+2026-11-28T05:16:25-03:00 [fabrica] voz SIN OK del dueño (regla voz_sin_ok): ~992 caracteres
