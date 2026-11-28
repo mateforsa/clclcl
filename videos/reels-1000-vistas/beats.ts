@@ -109,10 +109,10 @@ export const BEATS: BeatSpec[] = [
     overlays: [P1('¿LO VAN A COMPARTIR?', W('b06', 'probable')), FU_JUN23] },
 
   // 7. Y en tus estadísticas te muestra cuánto tiempo lo miran, para que veas dónde se van.
-  { id: 'b07', set: SET, cam: CAM([0.3, 1.35, 4.7], [0.0, 1.4, 4.2], [0, 0.95, -0.5], undefined, LY, -0.13), keywords: ['estadísticas', 'tiempo', 'van.'],
+  { id: 'b07', set: SET, cam: CAM([0.3, 1.35, 4.7], [0.0, 1.4, 4.2], [0, 0.95, -0.5], undefined, LY, -0.14), keywords: ['estadísticas', 'tiempo', 'van.'],
     actors: [WORLD,
       { type: 'screen', pos: [0, 0, -0.95], p: { w: 2.0, h: 0.95, at: 0.1, dur: DUR('b07') - 0.2, marks: [W('b07', 'tiempo') - 0.1, W('b07', 'miran,') - 0.1, W('b07', 'dónde') - 0.1, W('b07', 'van.') - 0.1] } },
-      { type: 'viewers', pos: [0, 0, -0.4], p: { xs: [-1.0, -0.6, -0.2, 0.2, 0.6, 1.0], leave: [W('b07', 'tiempo'), W('b07', 'dónde'), null, null, W('b07', 'van.'), W('b07', 'miran,')] } },
+      { type: 'viewers', pos: [0, 0, -0.65], p: { xs: [-1.0, -0.6, -0.2, 0.2, 0.6, 1.0], leave: [W('b07', 'tiempo'), W('b07', 'dónde'), null, null, W('b07', 'van.'), W('b07', 'miran,')] } },
     ],
     overlays: [P1('ESTADÍSTICAS:', W('b07', 'estadísticas')), P2('TIEMPO DE VISUALIZACIÓN', W('b07', 'tiempo')), FU_ABR23] },
 
