@@ -344,11 +344,11 @@ export const Bridge: React.FC<P> = ({ t, p }) => {
 
 /* ---------- Mes: 30 baldosas que se prenden de a una ---------- */
 export const Month: React.FC<P> = ({ t, p }) => {
-  const { at = 0, dur = 0.8, c = '#8fa0c8' } = p;
+  const { at = 0, dur = 0.8, c = '#ffb347' } = p;
   const n = Math.floor(clamp((t - at) / dur) * 30 + 0.0001);
   return (
     <group>{Array.from({ length: 30 }, (_, i) => { const x = (i % 6) - 2.5, z = Math.floor(i / 6) - 2; const lit = i < n;
-      return <B key={i} s={[0.13, 0.03, 0.13]} pos={[x * 0.16, 0.015, z * 0.16]} c={lit ? c : '#1e2740'} e={c} ei={lit ? 0.6 : 0} />; })}</group>
+      return <B key={i} s={[0.1, 0.03, 0.1]} pos={[x * 0.13, 0.035, z * 0.13]} c={lit ? c : '#1e2740'} e={c} ei={lit ? 0.35 : 0} />; })}</group>
   );
 };
 

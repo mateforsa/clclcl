@@ -9,9 +9,9 @@ import timing from './timing.json';
 const PANEL = 'rgba(8,12,26,.9)';
 const RED = 'rgba(150,22,38,.94)';
 const fit = (text: string, max: number, px = 760) => Math.min(max, Math.floor(px / (text.length * 0.72)));
-const P1 = (text: string, at: any, o: any = {}) => ({ type: 'tag' as const, text, at, x: 46, y: 65.5, color: PANEL, size: fit(text, 46), ...o });
-const P2 = (text: string, at: any, o: any = {}) => ({ type: 'tag' as const, text, at, x: 46, y: 69.6, color: PANEL, size: fit(text, 40), ...o });
-const SMALL = (text: string, at: any = 0) => ({ type: 'tag' as const, text, at, x: 46, y: 73.4, color: 'rgba(8,12,26,.78)', size: 21 });
+const P1 = (text: string, at: any, o: any = {}) => ({ type: 'tag' as const, text, at, x: 46, y: 67.2, color: PANEL, size: fit(text, 46), ...o });
+const P2 = (text: string, at: any, o: any = {}) => ({ type: 'tag' as const, text, at, x: 46, y: 71.1, color: PANEL, size: fit(text, 40), ...o });
+const SMALL = (text: string, at: any = 0) => ({ type: 'tag' as const, text, at, x: 46, y: 74.4, color: 'rgba(8,12,26,.78)', size: 20 });
 
 const B = (timing as any).beats as { id: string; start: number; end: number; words: { w: string; s: number; e: number }[] }[];
 const DUR = (id: string) => { const b = B.find((x) => x.id === id)!; return b.end - b.start; };
@@ -30,7 +30,7 @@ const WORLD = { type: 'world', p: {} };
 const SET = 'room' as const; // el set solo aporta luces y piso; el mundo de noche lo tapa todo
 const LY = 0.3; // subo el punto de mira: la escena baja al centro del cuadro, lejos de la franja de subtítulos
 const up = (v?: number[]) => (v ? [v[0], v[1] + LY, v[2]] : undefined);
-const CAM = (from: number[], to: number[], look: number[], lookTo?: number[]) => ({ from, to, look: up(look), lookTo: up(lookTo), fov: 44, shift: -0.03 }) as any;
+const CAM = (from: number[], to: number[], look: number[], lookTo?: number[], ly = LY) => ({ from, to, look: [look[0], look[1] + ly, look[2]], lookTo: lookTo && [lookTo[0], lookTo[1] + ly, lookTo[2]], fov: 44, shift: -0.03 }) as any;
 const ME = { shirt: '#ffb347', skin: '#e9b48f', hair: '#2a1d14' }; // vos, el que sube el reel (remera ámbar)
 const TRIAL = '#ffcf5a'; // reel de prueba: burbuja dorada
 
@@ -38,13 +38,13 @@ export const BEATS: BeatSpec[] = [
   // 1. ¿Tu reel se clava en 300, 1.000 o 1.500 vistas? Instagram explicó por qué.
   { id: 'b01', set: SET, cam: CAM([0.55, 1.65, 6.1], [0.15, 1.6, 5.5], [0.1, 1.2, 0]), keywords: ['reel', '1.000', 'vistas?'],
     actors: [WORLD,
-      { type: 'folk', pos: [-1.05, 0, 1.05], rot: [0, 0.55, 0], s: 0.9, p: { ...ME, seq: [[0, 'phone'], [W('b01', 'Instagram'), 'look']] } },
+      { type: 'folk', pos: [-1.0, 0, 0.45], rot: [0, 0.55, 0], s: 0.9, p: { ...ME, seq: [[0, 'phone'], [W('b01', 'Instagram'), 'look']] } },
       { type: 'glass', pos: [-0.35, 1.5, 0.2], p: { w: 0.72, d: 0.5, flash: W('b01', '300,') } },
-      { type: 'bubble', p: { kf: [[0, -0.95, 0.75, 1.25], [1.0, -0.35, 1.21, 0.2]], wob: 0.006 } },
+      { type: 'bubble', p: { kf: [[0, -0.72, 1.0, 0.85], [1.0, -0.35, 1.21, 0.2]], wob: 0.006 } },
       { type: 'glass', pos: [0.42, 2.0, -0.35], at: W('b01', '1.000'), p: { w: 0.72, d: 0.5, flash: W('b01', '1.000') + 0.6 } },
-      { type: 'bubble', at: W('b01', '1.000') - 0.05, enter: 'none', p: { kf: [[W('b01', '1.000') - 0.05, -0.95, 0.75, 1.25], [W('b01', '1.000') + 0.6, 0.42, 1.71, -0.35, 0.1]], wob: 0.006 } },
+      { type: 'bubble', at: W('b01', '1.000') - 0.05, enter: 'none', p: { kf: [[W('b01', '1.000') - 0.05, -0.72, 1.0, 0.85], [W('b01', '1.000') + 0.6, 0.42, 1.71, -0.35, 0.1]], wob: 0.006 } },
       { type: 'glass', pos: [1.15, 2.48, -0.9], at: W('b01', '1.500'), p: { w: 0.72, d: 0.5, flash: W('b01', '1.500') + 0.6 } },
-      { type: 'bubble', at: W('b01', '1.500') - 0.05, enter: 'none', p: { kf: [[W('b01', '1.500') - 0.05, -0.95, 0.75, 1.25], [W('b01', '1.500') + 0.65, 1.15, 2.19, -0.9, 0.1]], wob: 0.006 } },
+      { type: 'bubble', at: W('b01', '1.500') - 0.05, enter: 'none', p: { kf: [[W('b01', '1.500') - 0.05, -0.72, 1.0, 0.85], [W('b01', '1.500') + 0.65, 1.15, 2.19, -0.9, 0.1]], wob: 0.006 } },
       { type: 'halo', pos: [-0.35, 0, 0.2], at: W('b01', 'Instagram'), p: { r: 0.42, c: '#27e0d8' } },
       { type: 'halo', pos: [0.42, 0, -0.35], at: W('b01', 'explicó'), p: { r: 0.42, c: '#27e0d8' } },
       { type: 'halo', pos: [1.15, 0, -0.9], at: W('b01', 'por'), p: { r: 0.42, c: '#27e0d8' } },
@@ -72,7 +72,7 @@ export const BEATS: BeatSpec[] = [
     overlays: [P1('GRUPO 1 → GRUPO 2 → GRUPO 3', W('b03', 'pasa')), FU_MAY24] },
 
   // 4. Si no responde, ahí te quedaste.
-  { id: 'b04', set: SET, cam: CAM([-0.65, 1.3, 4.7], [-0.35, 1.26, 4.25], [-0.25, 0.85, -0.2]), keywords: ['quedaste.'],
+  { id: 'b04', set: SET, cam: CAM([-0.65, 1.3, 5.0], [-0.35, 1.26, 4.55], [-0.25, 0.85, -0.2], undefined, 0.1), keywords: ['quedaste.'],
     actors: [WORLD,
       { type: 'group', pos: [-0.55, 0, 0.2], p: { n: 4, h: 0.25, seed: 4, fol: 1, phone: true, away: W('b04', 'responde,'), off: W('b04', 'ahí') } },
       { type: 'group', pos: [0.95, 0, -1.6], p: { n: 6, h: 0.8, seed: 6, fol: 1, off: W('b04', 'ahí') } },
