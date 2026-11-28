@@ -2435,7 +2435,7 @@
     "https://www.lanacion.com.ar/economia/campo/las-exportaciones-agroindustriales-de-octubre-marcaron-un-record-us5717-millones-nid27112026/"
    ],
    "puntaje": 8.0,
-   "etapa": "revision",
+   "etapa": "esperando_ok_final",
    "creado": "2026-11-27T21:41:55-03:00",
    "historial": [
     {
@@ -2481,11 +2481,16 @@
      "etapa": "revision",
      "cuando": "2026-11-27T22:23:27-03:00",
      "nota": ""
+    },
+    {
+     "etapa": "esperando_ok_final",
+     "cuando": "2026-11-27T22:27:11-03:00",
+     "nota": "AVISO: dura 74 s, se pasa del tope; acortarlo exige regenerar la voz"
     }
    ],
-   "nota": "",
+   "nota": "AVISO: dura 74 s, se pasa del tope; acortarlo exige regenerar la voz",
    "caracteres_voz": 1141
   }
  },
- "actualizado": "2026-11-27T22:23:27-03:00"
+ "actualizado": "2026-11-27T22:27:11-03:00"
 }
