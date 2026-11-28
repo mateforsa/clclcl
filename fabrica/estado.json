@@ -2738,9 +2738,14 @@
      "etapa": "guion",
      "cuando": "2026-11-28T02:59:07-03:00",
      "nota": "devuelto por el verificador: planos 6-7, placas 6-7 y la linea de Mosseri de la descripcion sin fuente leida; reformular con Meta 2023 (compartir como factor, tiempo de visualizacion en estadisticas) o quitar el 'un poco mas'"
+    },
+    {
+     "etapa": "guion",
+     "cuando": "2026-11-28T03:00:05-03:00",
+     "nota": ""
     }
    ],
-   "nota": "devuelto por el verificador: planos 6-7, placas 6-7 y la linea de Mosseri de la descripcion sin fuente leida; reformular con Meta 2023 (compartir como factor, tiempo de visualizacion en estadisticas) o quitar el 'un poco mas'"
+   "nota": ""
   },
   "litio-pileta-salar": {
    "titulo": "El litio argentino tarda más de un año en salir de una pileta: la máquina que lo hace en días",
@@ -2792,5 +2797,5 @@
    "caracteres_voz": 952
   }
  },
- "actualizado": "2026-11-28T02:59:35-03:00"
+ "actualizado": "2026-11-28T03:00:29-03:00"
 }

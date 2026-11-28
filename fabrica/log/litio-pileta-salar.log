@@ -11,3 +11,7 @@
 2026-11-28T02:59:35-03:00 [fabrica] litio-pileta-salar: la voz gasta unos 952 caracteres de ElevenLabs. AVISO: no se puede leer el saldo (la clave no tiene ese permiso); anotalo en fabrica/config.json.
 2026-11-28T02:59:35-03:00 [fabrica] etapa -> esperando_ok_voz
 2026-11-28T02:59:35-03:00 [fabrica] voz SIN OK del dueño (regla voz_sin_ok): ~952 caracteres
+2026-11-28T03:00:08-03:00 [productor] arranco: créditos y voz
+2026-11-28T03:00:08-03:00 [fabrica] litio-pileta-salar: la voz gasta unos 952 caracteres de ElevenLabs. AVISO: no se puede leer el saldo (la clave no tiene ese permiso); anotalo en fabrica/config.json.
+2026-11-28T03:00:16-03:00 [productor] voz generada (62,6 s); escucho con Whisper
+2026-11-28T03:00:29-03:00 [oido] oído: 98 % de coincidencia; dudosos: ninguno; diferencias: por ciento→; conta abajo→contada bajo
