@@ -8,3 +8,5 @@
 2026-11-28T05:15:56-03:00 [fabrica] potabilizadora-san-martin: la voz gasta unos 993 caracteres de ElevenLabs. AVISO: no se puede leer el saldo (la clave no tiene ese permiso); anotalo en fabrica/config.json.
 2026-11-28T05:15:56-03:00 [fabrica] etapa -> esperando_ok_voz
 2026-11-28T05:15:56-03:00 [fabrica] voz SIN OK del dueño (regla voz_sin_ok): ~993 caracteres
+2026-11-28T05:16:28-03:00 [productor] arranco: voz
+2026-11-28T05:16:28-03:00 [fabrica] potabilizadora-san-martin: la voz gasta unos 993 caracteres de ElevenLabs. AVISO: no se puede leer el saldo (la clave no tiene ese permiso); anotalo en fabrica/config.json.
