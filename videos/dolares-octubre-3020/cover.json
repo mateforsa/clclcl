@@ -1,0 +1,3 @@
+{ "beat": "b02", "frac": 0.95,
+  "overlay": { "kicker": "DÓLAR AHORRO",
+    "lines": [ { "t": "EN 10 MESES", "size": 128 }, { "t": "MÁS QUE TODO 2025", "c": "yellow", "size": 100 }, { "t": "US$ 26.814 M VS. US$ 26.392 M", "size": 58, "c": "cyan" } ] } }
