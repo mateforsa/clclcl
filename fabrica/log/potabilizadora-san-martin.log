@@ -5,3 +5,6 @@
 2026-11-28T05:14:13-03:00 [fabrica] etapa -> guion
 2026-11-28T05:15:26-03:00 [verificador] APROBADO: 20 datos, todos con fuente (Argentina.gob.ar 05/09/2016 e Infobae 19/12/2019, releidas por curl hoy). Forma: 175 palabras ~51 s, apertura E48 'Abris la canilla' sin texto repetido (ultima E hace 15 videos), 5 etiquetas.
 2026-11-28T05:15:26-03:00 [fabrica] etapa -> verificado
+2026-11-28T05:15:56-03:00 [fabrica] potabilizadora-san-martin: la voz gasta unos 993 caracteres de ElevenLabs. AVISO: no se puede leer el saldo (la clave no tiene ese permiso); anotalo en fabrica/config.json.
+2026-11-28T05:15:56-03:00 [fabrica] etapa -> esperando_ok_voz
+2026-11-28T05:15:56-03:00 [fabrica] voz SIN OK del dueño (regla voz_sin_ok): ~993 caracteres
