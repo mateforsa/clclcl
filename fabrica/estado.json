@@ -2642,7 +2642,8 @@
     }
    ],
    "nota": "",
-   "caracteres_voz": 1032
+   "caracteres_voz": 1032,
+   "link_prueba": "https://www.instagram.com/reel/DgRgo_4T4Ql/"
   },
   "hoy-hace-magallanes-pacifico": {
    "titulo": "Hoy hace 506 años Magallanes llegó al Pacífico (y le puso ese nombre)",
@@ -2652,7 +2653,7 @@
     "https://www.infobae.com/sociedad/2020/10/30/a-500-anos-del-paso-de-magallanes-por-el-estrecho-como-fue-la-proeza-que-la-argentina-no-conmemoro/"
    ],
    "puntaje": 7.5,
-   "etapa": "revision",
+   "etapa": "esperando_ok_final",
    "creado": "2026-11-28T01:45:32-03:00",
    "historial": [
     {
@@ -2688,11 +2689,16 @@
      "etapa": "revision",
      "cuando": "2026-11-28T02:27:10-03:00",
      "nota": ""
+    },
+    {
+     "etapa": "esperando_ok_final",
+     "cuando": "2026-11-28T02:32:34-03:00",
+     "nota": "AVISO: dura 69,8 s, al borde del tope de 70 s; History se pronuncia Jístory"
     }
    ],
-   "nota": "",
+   "nota": "AVISO: dura 69,8 s, al borde del tope de 70 s; History se pronuncia Jístory",
    "caracteres_voz": 1059
   }
  },
- "actualizado": "2026-11-28T02:27:10-03:00"
+ "actualizado": "2026-11-28T02:32:34-03:00"
 }
