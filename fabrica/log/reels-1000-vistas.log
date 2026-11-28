@@ -31,3 +31,5 @@
 2026-11-28T06:28:04-03:00 [oido] oído: 93 % de coincidencia; dudosos: ninguno; diferencias: reel→ril; en 300 1 000→entre cientos; 1 500→mil o mil quinientas; a→; ve solo→beso los; 1 000→mil
 2026-11-28T06:29:15-03:00 [revisor] APROBADO: 1080x1920 30fps h264+aac 53,945 s (=timing); -13,7 LUFS / -3,9 dBTP; sin silencios/negros/congelados; 0 px magenta (__QCF no se ve); uniones de subtítulos mín. 16 px medido en 1618 cuadros; subtítulos y303-380, placas <=1446; portada 1080x1920 legible; 5 etiquetas; pronunciación sin términos fallidos. Obs: Whisper oye 'en trescientas' como 'entre cientos' (gancho, 0-2 s) y 've solo' como 'beso los' (~37 s); reel->'ril'; bloques amarillos asomando bajo las placas (~31-34 s y ~42-45 s).
 2026-11-28T06:29:15-03:00 [fabrica] etapa -> esperando_ok_final
+2026-11-28T06:29:49-03:00 [dueño] APROBADO (esperando_ok_final -> listo)
+2026-11-28T06:31:05-03:00 [publicador] PUBLICADO: https://www.instagram.com/reel/DgR78BlPtVg/
