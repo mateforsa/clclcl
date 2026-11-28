@@ -739,5 +739,18 @@
   "dicho": "Bertoni",
   "estado": "probada",
   "nota": "28/11/2026 hoy-hace-independiente-juventus-1973: Whisper lo entiende tal cual en la toma larga."
+ },
+ "History": {
+  "dicho": "Jístory,",
+  "estado": "probada",
+  "puntaje": 0.63,
+  "variantes": [
+   "Jístori,",
+   "Jístory,",
+   "History,",
+   "Hístori,",
+   "Jistori,",
+   "Jístri,"
+  ]
  }
 }
