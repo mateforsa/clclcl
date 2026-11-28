@@ -752,5 +752,53 @@
    "Jistori,",
    "Jístri,"
   ]
+ },
+ "reel": {
+  "dicho": "reel",
+  "estado": "probada",
+  "puntaje": 0.62,
+  "variantes": [
+   "ril",
+   "riil",
+   "rííl",
+   "reel",
+   "Ril"
+  ],
+  "nota": "28/11/2026 reels-1000-vistas: en la voz completa Whisper la oye 'ril' (suena bien en inglés)"
+ },
+ "reels": {
+  "dicho": "riils",
+  "estado": "probada",
+  "puntaje": 0.65,
+  "variantes": [
+   "rils",
+   "riils",
+   "reels",
+   "Rils",
+   "ríils"
+  ],
+  "nota": "28/11/2026 reels-1000-vistas: en la voz completa Whisper oyó 'reels' las dos veces"
+ },
+ "Instagram": {
+  "dicho": "Instagrám",
+  "estado": "probada",
+  "puntaje": 0.88,
+  "variantes": [
+   "Instagram",
+   "Ínstagram",
+   "Instagrám",
+   "Instagrem"
+  ],
+  "nota": "28/11/2026 reels-1000-vistas: 'Instagrám' 88% vs 'Instagram' 86%; en la voz completa se oye bien las 3 veces"
+ },
+ "Meta": {
+  "dicho": "Meta",
+  "estado": "probada",
+  "nota": "28/11/2026 reels-1000-vistas: escrita igual, Whisper la oye bien"
+ },
+ "300, 1.000 o 1.500": {
+  "dicho": "trescientas, o mil, o mil quinientas",
+  "estado": "probada",
+  "nota": "28/11/2026: 'trescientas, mil' se oye como trescientas mil (300.000); con 'o' entre cada cifra se entiende 300 o 1.000 o 1.500"
  }
 }

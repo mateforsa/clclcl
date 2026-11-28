@@ -11,3 +11,10 @@
 2026-11-28T03:01:24-03:00 [fabrica] reels-1000-vistas: la voz gasta unos 878 caracteres de ElevenLabs. AVISO: no se puede leer el saldo (la clave no tiene ese permiso); anotalo en fabrica/config.json.
 2026-11-28T03:01:34-03:00 [fabrica] etapa -> esperando_ok_voz
 2026-11-28T03:01:34-03:00 [fabrica] voz SIN OK del dueño (regla voz_sin_ok): ~878 caracteres
+2026-11-28T04:08:11-03:00 [fabrica] reels-1000-vistas: la voz gasta unos 878 caracteres de ElevenLabs. AVISO: no se puede leer el saldo (la clave no tiene ese permiso); anotalo en fabrica/config.json.
+2026-11-28T04:08:16-03:00 [productor] arranco: pruebo pronunciación de reel/reels e Instagram antes de la voz
+2026-11-28T04:10:36-03:00 [productor] pronunciación probada: reel→'reel' 62%, reels→'riils' 65%, Instagram→'Instagrám' 88%; genero la voz (toma 1)
+2026-11-28T04:11:02-03:00 [oido] oído: 96 % de coincidencia; dudosos: ninguno; diferencias: reel→ril; 1 000→mil; 1 500→1500; muestra→muestras; a→; 1 000→mil
+2026-11-28T04:11:45-03:00 [productor] toma 1: 'trescientas, mil' se oía como 300.000; cambio a 'trescientas, o mil, o mil quinientas' (probado) y genero toma 2
+2026-11-28T04:12:12-03:00 [oido] oído: 93 % de coincidencia; dudosos: ninguno; diferencias: reel→ril; en 300 1 000→entre cientos; 1 500→mil o mil quinientas; a→; ve solo→beso los; 1 000→mil
+2026-11-28T04:12:21-03:00 [productor] toma 2 ok (93%, diferencias solo de transcripción: ril, entre cientos=en trescientas). Glosario actualizado. Paso a beats.

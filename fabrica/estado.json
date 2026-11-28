@@ -2771,7 +2771,7 @@
     "https://www.lanacion.com.ar/economia/el-oro-blanco-el-informe-del-gobierno-que-revela-la-actualidad-del-mineral-estrella-nid12102026/"
    ],
    "puntaje": 7.8,
-   "etapa": "revision",
+   "etapa": "render",
    "creado": "2026-11-28T02:45:57-03:00",
    "historial": [
     {
@@ -2817,11 +2817,16 @@
      "etapa": "revision",
      "cuando": "2026-11-28T04:07:12-03:00",
      "nota": ""
+    },
+    {
+     "etapa": "render",
+     "cuando": "2026-11-28T04:13:40-03:00",
+     "nota": "devuelto por el revisor: placa PILETA DE EVAPORACIÓN tapa al operario 11,8-16,8 s (plano 4) y su cabeza cae bajo el velo Shade; mover placa u operario"
     }
    ],
-   "nota": "",
+   "nota": "devuelto por el revisor: placa PILETA DE EVAPORACIÓN tapa al operario 11,8-16,8 s (plano 4) y su cabeza cae bajo el velo Shade; mover placa u operario",
    "caracteres_voz": 952
   }
  },
- "actualizado": "2026-11-28T04:07:12-03:00"
+ "actualizado": "2026-11-28T04:13:40-03:00"
 }
