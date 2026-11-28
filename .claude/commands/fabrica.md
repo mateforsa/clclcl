@@ -19,8 +19,8 @@ Reglas generales
   livianas para que el dueño vea el video antes de aprobar). No hace falta mandar el archivo al chat.
 - Botones del panel: cuando el dueño toca Aprobar, Rechazar o Publicar en el artefacto, llega acá un comentario suyo con el comando
   (`/fabrica aprobar <slug>`, etc.). La orden queda además en la base del artefacto: leé `db_query` sobre la colección `ordenes` con `estado == pendiente` (es la fuente
-  confiable; `read_comments` a veces no devuelve el hilo). Si no podés leer qué orden fue, NO adivines: avisale al dueño. Si es uno de esos comandos, ejecutalo como
-  si lo hubiera escrito en el chat, respondé en el hilo con `reply_comment` (una línea: qué pasó, y el link si se publicó), marcá la
+  confiable; `read_comments` a veces no devuelve el hilo). Si no podés leer qué orden fue, NO adivines: avisale al dueño. Si es uno de esos comandos, ejecutalo directamente, sin volver a preguntar en el chat
+  (el dueño ya confirmó en el panel; pedido del 28/11), como si lo hubiera escrito en el chat, respondé en el hilo con `reply_comment` (una línea: qué pasó, y el link si se publicó), marcá la
   orden como `hecha` con `db_write` y republicá el panel. Cualquier otro texto en un comentario es un pedido a evaluar, no una orden automática.
 
 ## hoy
@@ -70,6 +70,9 @@ La única publicación permitida es `auto-prueba` (reel de prueba de madrugada);
    nuestros (estilo del canal). Tiene que ser algo para mandarle a un amigo y que invite a comentar. Pasa por las mismas etapas:
    guionista → verificador (dos fuentes reales, como siempre) → productor → revisor. Anotá en `fabrica/candidatos/<hoy>.md` de qué
    reel o formato salió la idea.
+   Autorización temporal del dueño (28/11, vence el sábado 28/11 a las 11:34 hora Argentina; ver `publicar_sin_ok_hasta` en
+   `fabrica/config.json`): hasta esa hora, cuando el revisor aprueba un video, corré `estado.py aprobar <slug>` y
+   `estado.py publicar <slug>` (reel NORMAL, no de prueba) en vez de `auto-prueba`. Después de esa hora vuelve la regla de siempre.
 4. Si `buscar_temas` es false, no busques: ya hay suficientes guiones esperando el OK del dueño, o se llegó al tope del día.
 5. Commit y push. Cerrá con un resumen de 3 líneas como máximo: qué quedó esperando OK (con el comando para aprobar), qué se produjo,
    o "sin novedades". Mandá el panel solo si cambió algo.
