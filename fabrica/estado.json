@@ -2588,15 +2588,37 @@
     "https://www.ambito.com/finanzas/la-compra-dolar-ahorro-trepo-15-octubre-supero-los-us3300-millones-y-crecio-el-atesoramiento-bajo-el-colchon-n6350206"
    ],
    "puntaje": 8.5,
-   "etapa": "idea",
+   "etapa": "voz",
    "creado": "2026-11-28T00:42:00-03:00",
    "historial": [
     {
      "etapa": "idea",
      "cuando": "2026-11-28T00:42:00-03:00"
+    },
+    {
+     "etapa": "guion",
+     "cuando": "2026-11-28T00:45:47-03:00",
+     "nota": ""
+    },
+    {
+     "etapa": "verificado",
+     "cuando": "2026-11-28T00:47:15-03:00",
+     "nota": ""
+    },
+    {
+     "etapa": "esperando_ok_voz",
+     "cuando": "2026-11-28T00:47:40-03:00",
+     "nota": ""
+    },
+    {
+     "etapa": "voz",
+     "cuando": "2026-11-28T00:47:40-03:00",
+     "nota": "voz sin OK (regla voz_sin_ok del dueño)"
     }
-   ]
+   ],
+   "nota": "",
+   "caracteres_voz": 1032
   }
  },
- "actualizado": "2026-11-28T00:42:01-03:00"
+ "actualizado": "2026-11-28T00:47:40-03:00"
 }

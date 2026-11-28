@@ -1,2 +1,9 @@
 2026-11-28T00:42:00-03:00 [fabrica] idea creada: En 10 meses los argentinos ya compraron más dólares que en todo 2025
 2026-11-28T00:42:01-03:00 [editor] elegido (corrida 00:34 28/11): sorpresa 8, vigencia 8, compartible 9, mostrable 3D 9 = 8.5 porque es economía con número concreto (lo que más se comparte), venía de 8.3 'para mañana' y el día arranca sin videos de bolsillo. Datos: BCRA, 1,7 M personas, US$ 3.020 M brutos en octubre (2° del año tras julio 3.319); 2026 acumula 26.814 M > todo 2025 (26.392); ~4 de 10 bajo el colchón, la proporción más alta desde la salida del cepo. No mezclar con los 3.300/3.332 de Ámbito (demanda neta total con transferencias) ni con los 3.505 de Clarín.
+2026-11-28T00:45:47-03:00 [guionista] guion escrito: 180 palabras, apertura tipo B11 fecha exacta en medio de la acción (Octubre de 2026, 1,7 millones de personas), cierre tipo elegir entre dos en una palabra (¿Colchón o banco?) tras callback a las dos pilas; solo los 3.020 brutos, sin 3.332 ni 3.505
+2026-11-28T00:45:47-03:00 [fabrica] etapa -> guion
+2026-11-28T00:47:15-03:00 [verificador] APROBADO: 22 datos, todos con fuente (Infobae y Ambito 27/11/2026; sep. 2.896 brutos confirmado en informe BCRA sep-2026). 26.814 y 26.392 ambos brutos de personas (26.392 = 53.206 desde abr-25 menos 26.814). 4 de cada 10 sobre ~2.700 M netos privados, la voz no lo cuelga de los 3.020.
+2026-11-28T00:47:15-03:00 [fabrica] etapa -> verificado
+2026-11-28T00:47:40-03:00 [fabrica] dolares-octubre-3020: la voz gasta unos 1032 caracteres de ElevenLabs. AVISO: no se puede leer el saldo (la clave no tiene ese permiso); anotalo en fabrica/config.json.
+2026-11-28T00:47:40-03:00 [fabrica] etapa -> esperando_ok_voz
+2026-11-28T00:47:40-03:00 [fabrica] voz SIN OK del dueño (regla voz_sin_ok): ~1032 caracteres
