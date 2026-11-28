@@ -3193,14 +3193,20 @@
     "https://www.3djuegos.com/xbox-one/noticias/digital-foundry-pone-a-prueba-gta-6-xbox-one-gracias-a-nube-microsoft-resultado-mejor-esperado"
    ],
    "puntaje": 7.5,
-   "etapa": "idea",
+   "etapa": "guion",
    "creado": "2026-11-28T08:44:50-03:00",
    "historial": [
     {
      "etapa": "idea",
      "cuando": "2026-11-28T08:44:50-03:00"
+    },
+    {
+     "etapa": "guion",
+     "cuando": "2026-11-28T08:48:14-03:00",
+     "nota": ""
     }
-   ]
+   ],
+   "nota": ""
   },
   "ramal-c14-socompa": {
    "titulo": "El tren a 4.000 metros que toca bocina en el mismo lugar desde hace 30 años",
@@ -3210,15 +3216,21 @@
     "https://www.diariouno.com.ar/sociedad/el-misterioso-bocinazo-del-tren-mas-extremo-del-pais-y-la-historia-detras-un-homenaje-emocionante-n1568105"
    ],
    "puntaje": 7.3,
-   "etapa": "idea",
+   "etapa": "guion",
    "creado": "2026-11-28T08:44:50-03:00",
    "historial": [
     {
      "etapa": "idea",
      "cuando": "2026-11-28T08:44:50-03:00"
+    },
+    {
+     "etapa": "guion",
+     "cuando": "2026-11-28T08:48:14-03:00",
+     "nota": ""
     }
-   ]
+   ],
+   "nota": ""
   }
  },
- "actualizado": "2026-11-28T08:44:50-03:00"
+ "actualizado": "2026-11-28T08:48:14-03:00"
 }
