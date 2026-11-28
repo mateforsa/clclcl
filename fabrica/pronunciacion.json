@@ -890,5 +890,30 @@
    "el obelisco",
    "el Obelísco"
   ]
+ },
+ "C14": {
+  "dicho": "C catorce,",
+  "estado": "probada",
+  "puntaje": 0.77,
+  "variantes": [
+   "ce catorce,",
+   "cé catorce,",
+   "ce, catorce,",
+   "ce-catorce,",
+   "C catorce,",
+   "C14,"
+  ]
+ },
+ "Socompa": {
+  "dicho": "Socompa,",
+  "estado": "probada",
+  "puntaje": 0.87,
+  "variantes": [
+   "Socompa,",
+   "Socómpa,",
+   "So-cómpa,",
+   "Socomppa,",
+   "Socompa ,"
+  ]
  }
 }
