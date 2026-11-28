@@ -2866,7 +2866,7 @@
     "https://www.infobae.com/sociedad/2019/12/19/malena-galmarini-y-gabriel-katopodis-recorrieron-una-planta-potabilizadora-de-palermo/"
    ],
    "puntaje": 7.8,
-   "etapa": "revision",
+   "etapa": "render",
    "creado": "2026-11-28T05:10:46-03:00",
    "historial": [
     {
@@ -2902,9 +2902,14 @@
      "etapa": "revision",
      "cuando": "2026-11-28T05:45:57-03:00",
      "nota": ""
+    },
+    {
+     "etapa": "render",
+     "cuando": "2026-11-28T05:53:46-03:00",
+     "nota": "devuelto por el revisor: b13 55,8–56,5 s la gota cruza tierra/paredes fuera de caños (pozo de bombas→pileta 1, entre piletas, filtro→tanque); hacerla viajar por caños o por encima"
     }
    ],
-   "nota": "",
+   "nota": "devuelto por el revisor: b13 55,8–56,5 s la gota cruza tierra/paredes fuera de caños (pozo de bombas→pileta 1, entre piletas, filtro→tanque); hacerla viajar por caños o por encima",
    "caracteres_voz": 993
   },
   "atucha-olla-72-tornillos": {
@@ -2915,7 +2920,7 @@
     "https://www.perfil.com/noticias/ciencia/tras-serie-chernobyl-asi-se-preparan-centrales-nucleares-argentinas-evitar-accidente.phtml"
    ],
    "puntaje": 7.5,
-   "etapa": "voz",
+   "etapa": "render",
    "creado": "2026-11-28T05:10:46-03:00",
    "historial": [
     {
@@ -2951,11 +2956,16 @@
      "etapa": "voz",
      "cuando": "2026-11-28T05:16:25-03:00",
      "nota": "voz sin OK (regla voz_sin_ok del dueño)"
+    },
+    {
+     "etapa": "render",
+     "cuando": "2026-11-28T05:50:40-03:00",
+     "nota": ""
     }
    ],
    "nota": "",
    "caracteres_voz": 992
   }
  },
- "actualizado": "2026-11-28T05:45:57-03:00"
+ "actualizado": "2026-11-28T05:53:46-03:00"
 }

@@ -32,7 +32,7 @@ const LY = 0.3; // subo el punto de mira: la escena baja al centro del cuadro, l
 const up = (v?: number[]) => (v ? [v[0], v[1] + LY, v[2]] : undefined);
 // Encuadre: la gente tiene que quedar ARRIBA de las placas (y < 1250 px) y debajo de la franja de subtítulos.
 // K aleja la cámara del punto de mira (todo un poco más chico) y SH sube la imagen entera sin cambiar la perspectiva.
-const K = 1.2, SH = -0.09;
+const K = 1.2, SH = -0.1;
 const away = (c: number[], l: number[]) => [l[0] + (c[0] - l[0]) * K, l[1] + (c[1] - l[1]) * K, l[2] + (c[2] - l[2]) * K];
 const CAM = (from: number[], to: number[], look: number[], lookTo?: number[], ly = LY, sh = SH) => { const L = [look[0], look[1] + ly, look[2]]; const LT = lookTo && [lookTo[0], lookTo[1] + ly, lookTo[2]];
   return { from: away(from, L), to: away(to, LT ?? L), look: L, lookTo: LT, fov: 44, shift: sh } as any; };
@@ -43,7 +43,7 @@ export const BEATS: BeatSpec[] = [
   // 1. ¿Tu reel se clava en 300, 1.000 o 1.500 vistas? Instagram explicó por qué.
   { id: 'b01', set: SET, cam: CAM([0.55, 1.65, 6.1], [0.15, 1.6, 5.5], [0.1, 1.2, 0]), keywords: ['reel', '1.000', 'vistas?'],
     actors: [WORLD,
-      { type: 'folk', pos: [-0.6, 0, -0.05], rot: [0, 0.3, 0], s: 0.9, p: { ...ME, seq: [[0, 'phone'], [W('b01', 'Instagram'), 'look']] } },
+      { type: 'folk', pos: [-0.6, 0, -0.3], rot: [0, 0.3, 0], s: 0.9, p: { ...ME, seq: [[0, 'phone'], [W('b01', 'Instagram'), 'look']] } },
       { type: 'glass', pos: [-0.35, 1.5, 0.2], p: { w: 0.72, d: 0.5, flash: W('b01', '300,') } },
       { type: 'bubble', p: { kf: [[0, -0.25, 1.05, 0.4], [1.0, -0.35, 1.21, 0.2]], wob: 0.006 } },
       { type: 'glass', pos: [0.42, 2.0, -0.35], at: W('b01', '1.000'), p: { w: 0.72, d: 0.5, flash: W('b01', '1.000') + 0.6 } },
@@ -140,10 +140,10 @@ export const BEATS: BeatSpec[] = [
   // 10. Para probar están los reels de prueba: primero los ve solo gente que no te sigue.
   { id: 'b10', set: SET, cam: CAM([0.3, 1.6, 5.4], [0.0, 1.55, 4.9], [0, 0.85, -0.15]), keywords: ['reels', 'sigue.'],
     actors: [WORLD,
-      { type: 'folk', pos: [0.0, 0, 0.75], rot: [0, Math.PI, 0], s: 0.9, p: { ...ME, pose: 'phone' } },
+      { type: 'folk', pos: [0.0, 0, 0.5], rot: [0, Math.PI, 0], s: 0.9, p: { ...ME, pose: 'phone' } },
       { type: 'group', pos: [-0.95, 0, -0.35], p: { n: 5, h: 0.5, seed: 19, fol: 5, off: W('b10', 'primero') } },
       { type: 'group', pos: [0.9, 0, 0.1], p: { n: 5, h: 0.3, seed: 20, fol: 0, lit: W('b10', 'gente'), look: W('b10', 've'), react: W('b10', 'sigue.') } },
-      { type: 'bubble', p: { c: TRIAL, kf: [[0, 0.0, 0.95, 0.45], [W('b10', 'prueba:'), 0.0, 1.35, 0.25], [W('b10', 'primero') + 0.7, 0.9, 1.62, 0.1, 0.2]] } },
+      { type: 'bubble', p: { c: TRIAL, kf: [[0, 0.0, 1.05, 0.15], [W('b10', 'prueba:'), 0.0, 1.4, 0.0], [W('b10', 'primero') + 0.7, 0.9, 1.62, 0.1, 0.2]] } },
     ],
     overlays: [P1('REELS DE PRUEBA (TRIAL REELS):', W('b10', 'reels')), P2('SOLO NO SEGUIDORES', W('b10', 'solo')), FU_DIC24] },
 

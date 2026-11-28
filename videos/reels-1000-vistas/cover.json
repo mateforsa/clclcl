@@ -1,3 +1,3 @@
 { "beat": "b03", "frac": 0.95,
-  "overlay": { "y": 58, "kicker": "INSTAGRAM REELS",
+  "overlay": { "y": 58,
     "lines": [ { "t": "¿TU REEL SE", "size": 140 }, { "t": "CLAVA EN 1.000?", "c": "yellow", "size": 118 }, { "t": "INSTAGRAM EXPLICÓ POR QUÉ", "size": 62, "c": "cyan" } ] } }

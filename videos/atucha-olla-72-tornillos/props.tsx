@@ -434,10 +434,10 @@ export const Graphite: React.FC<P> = ({ t, p }) => {
   return <group>
     {Array.from({ length: cols * rows }, (_, i) => { const cx = -W / 2 + s / 2 + (i % cols) * (s + gap), cy = s / 2 + Math.floor(i / cols) * (s + gap); const v = 0.5 + 0.5 * Math.sin(i * 1.7 + t * 2);
       return <group key={i} position={[cx, cy, 0]}>
-        <B s={[s, s, s]} c={hk > 0 ? '#2e2b29' : '#2a2e32'} e={hk > 0 ? '#ff5a1f' : undefined} ei={hk * (0.1 + 0.04 * v)} />
+        <B s={[s, s, s]} c={hk > 0 ? '#2a2725' : '#2a2e32'} e={hk > 0 ? '#ff6a2a' : undefined} ei={hk * (0.06 + 0.03 * v)} />
         <Cyl r={s * 0.14} h={0.02} rot={[PI / 2, 0, 0]} pos={[0, 0, s / 2 + 0.005]} c="#15181b" />
       </group>; })}
-    {hk > 0 && <pointLight position={[0, H / 2, 1]} intensity={1.2 * hk} color="#ff7a3a" distance={3} />}
+    {hk > 0 && <pointLight position={[0, H / 2, 1]} intensity={0.4 * hk} color="#ff7a3a" distance={3} />}
     <Neutrons t={t} list={list} xe={-W / 2} xmax={W / 2} z={s / 2 + 0.06} />
   </group>;
 };
