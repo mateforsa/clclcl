@@ -16,3 +16,5 @@
 2026-11-28T03:00:16-03:00 [productor] voz generada (62,6 s); escucho con Whisper
 2026-11-28T03:00:29-03:00 [oido] oído: 98 % de coincidencia; dudosos: ninguno; diferencias: por ciento→; conta abajo→contada bajo
 2026-11-28T03:00:39-03:00 [productor] voz escuchada: 98 %, cifras 60.000/1.858/162/184/2026/2025 bien oídas; 'contá abajo' Whisper lo junta por sinalefa, se entiende. Sin regenerar.
+2026-11-28T03:10:49-03:00 [productor] retomo tras reinicio: voz ya generada (62,6 s), sin regenerar; escribo planos (props, beats, entry)
+2026-11-28T03:16:21-03:00 [productor] planos listos (14, look salar de la Puna, placas 2D sin pill), stills revisados; audio mezclado; midiendo subtítulos antes del render
