@@ -3349,7 +3349,41 @@
    "nota": "reel de prueba automático (madrugada)",
    "caracteres_voz": 957,
    "link_prueba": "https://www.instagram.com/reel/DgSXg4TIk2E/"
+  },
+  "malvinas-sea-lion-rechazo": {
+   "titulo": "El Tribunal del Mar rechazó 18 a 3 el pedido argentino para frenar Sea Lion",
+   "tema": "Malvinas / energía / derecho internacional",
+   "fuentes": [
+    "https://www.lanacion.com.ar/politica/el-tribunal-del-mar-rechazo-el-reclamo-argentino-para-frenar-la-explotacion-petrolera-en-malvinas-nid28112026/",
+    "https://www.infobae.com/politica/2026/11/28/el-tribunal-del-mar-rechazo-el-pedido-argentino-para-frenar-la-explotacion-petrolera-en-malvinas/"
+   ],
+   "puntaje": 8.0,
+   "etapa": "idea",
+   "creado": "2026-11-28T10:45:12-03:00",
+   "historial": [
+    {
+     "etapa": "idea",
+     "cuando": "2026-11-28T10:45:12-03:00"
+    }
+   ]
+  },
+  "deuda-enero-1800-bcra": {
+   "titulo": "Cómo piensa pagar el Gobierno los US$ 4.370 M de enero: 1.800 salen del Banco Central",
+   "tema": "economía argentina",
+   "fuentes": [
+    "https://www.lanacion.com.ar/economia/el-plan-de-caputo-para-pagar-el-vencimiento-de-deuda-de-enero-de-us4370-millones-ingresos-externos-nid27112026/",
+    "https://www.infobae.com/economia/2026/11/28/el-plan-del-gobierno-para-pagar-la-deuda-en-enero-tiene-respuesta-y-un-costo-las-reservas-del-banco-central/"
+   ],
+   "puntaje": 8.0,
+   "etapa": "idea",
+   "creado": "2026-11-28T10:45:13-03:00",
+   "historial": [
+    {
+     "etapa": "idea",
+     "cuando": "2026-11-28T10:45:13-03:00"
+    }
+   ]
   }
  },
- "actualizado": "2026-11-28T10:32:04-03:00"
+ "actualizado": "2026-11-28T10:45:13-03:00"
 }
