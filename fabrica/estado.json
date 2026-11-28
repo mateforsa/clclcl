@@ -3043,14 +3043,20 @@
     "https://www.iprofesional.com/negocios/454613-record-de-divisas-aluar-reporto-ganancias-millonarias-y-acelera-su-plan-de-inversion"
    ],
    "puntaje": 8.0,
-   "etapa": "idea",
+   "etapa": "guion",
    "creado": "2026-11-28T06:45:49-03:00",
    "historial": [
     {
      "etapa": "idea",
      "cuando": "2026-11-28T06:45:49-03:00"
+    },
+    {
+     "etapa": "guion",
+     "cuando": "2026-11-28T06:49:47-03:00",
+     "nota": ""
     }
-   ]
+   ],
+   "nota": ""
   },
   "fenix-plataforma-austral": {
    "titulo": "A 60 km de la costa, una plataforma de 4.000 toneladas saca el 8% del gas argentino",
@@ -3060,15 +3066,21 @@
     "https://www.iprofesional.com/economia/421001-hito-en-mar-argentino-total-energies-puso-en-accion-los-3-pozos-del-proyecto-fenix"
    ],
    "puntaje": 7.3,
-   "etapa": "idea",
+   "etapa": "guion",
    "creado": "2026-11-28T06:45:49-03:00",
    "historial": [
     {
      "etapa": "idea",
      "cuando": "2026-11-28T06:45:49-03:00"
+    },
+    {
+     "etapa": "guion",
+     "cuando": "2026-11-28T06:49:35-03:00",
+     "nota": ""
     }
-   ]
+   ],
+   "nota": ""
   }
  },
- "actualizado": "2026-11-28T06:45:49-03:00"
+ "actualizado": "2026-11-28T06:49:47-03:00"
 }
