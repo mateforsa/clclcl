@@ -29,3 +29,6 @@
 2026-11-28T10:16:15-03:00 [productor] vuelta 3: vía del mapa completa desde el primer cuadro (sin animación de dibujo); nada más cambia
 2026-11-28T10:28:46-03:00 [productor] render listo (vuelta 3): out/ramal-c14-socompa/ramal-c14-socompa.mp4, 60 s. Vía del mapa entera desde el primer cuadro; plano 3 revisado cada 2 cuadros 8,0-9,8 s y cada 3 hasta 13 s: el tren siempre sobre la vía. Máscara 0 cuadros tapados; resto sin cambios
 2026-11-28T10:28:46-03:00 [fabrica] etapa -> revision
+2026-11-28T10:29:46-03:00 [revisor] APROBADO (vuelta 3): 1080x1920 30 fps h264+aac, 60,075 s = timing; -14,4 LUFS, -4,2 dBTP, 0 silencios/negros/congelados; mapa 7,8-13,2 s revisado cada 4 cuadros + zoom en curvas: vía completa, tren siempre sobre la vía, vagones separados, placas sin tapar tren/vía; postes detrás de la vía; planos 6 y 10 OK; 1996 sobrio sin personas; uniones mín 19 px (dos activas: 20 y 19 px); portada OK; 5 etiquetas; Whisper 98 % sin términos dudosos.
+2026-11-28T10:29:46-03:00 [fabrica] etapa -> esperando_ok_final
+2026-11-28T10:32:04-03:00 [publicador] reel de prueba automático (madrugada) https://www.instagram.com/reel/DgSXg4TIk2E/

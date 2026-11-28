@@ -3278,7 +3278,7 @@
     "https://www.diariouno.com.ar/sociedad/el-misterioso-bocinazo-del-tren-mas-extremo-del-pais-y-la-historia-detras-un-homenaje-emocionante-n1568105"
    ],
    "puntaje": 7.3,
-   "etapa": "revision",
+   "etapa": "publicado",
    "creado": "2026-11-28T08:44:50-03:00",
    "historial": [
     {
@@ -3334,11 +3334,22 @@
      "etapa": "revision",
      "cuando": "2026-11-28T10:28:46-03:00",
      "nota": ""
+    },
+    {
+     "etapa": "esperando_ok_final",
+     "cuando": "2026-11-28T10:29:46-03:00",
+     "nota": ""
+    },
+    {
+     "etapa": "publicado",
+     "cuando": "2026-11-28T10:32:04-03:00",
+     "nota": "reel de prueba automático (madrugada) https://www.instagram.com/reel/DgSXg4TIk2E/"
     }
    ],
-   "nota": "",
-   "caracteres_voz": 957
+   "nota": "reel de prueba automático (madrugada)",
+   "caracteres_voz": 957,
+   "link_prueba": "https://www.instagram.com/reel/DgSXg4TIk2E/"
   }
  },
- "actualizado": "2026-11-28T10:28:46-03:00"
+ "actualizado": "2026-11-28T10:32:04-03:00"
 }
