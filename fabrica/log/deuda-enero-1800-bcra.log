@@ -9,3 +9,6 @@
 2026-11-28T10:50:21-03:00 [fabrica] etapa -> guion
 2026-11-28T10:51:06-03:00 [verificador] APROBADO: 17 datos, todos con fuente (La Nacion 27/11/2026, Infobae 28/11/2026). Citas textuales, atribuciones, 340 en placa, sin suma propia, enero sin fecha, 168 palabras ~58 s, 5 etiquetas, apertura no repetida.
 2026-11-28T10:51:06-03:00 [fabrica] etapa -> verificado
+2026-11-28T10:51:34-03:00 [fabrica] deuda-enero-1800-bcra: la voz gasta unos 1015 caracteres de ElevenLabs. AVISO: no se puede leer el saldo (la clave no tiene ese permiso); anotalo en fabrica/config.json.
+2026-11-28T10:51:34-03:00 [fabrica] etapa -> esperando_ok_voz
+2026-11-28T10:51:34-03:00 [fabrica] voz SIN OK del dueño (regla voz_sin_ok): ~1015 caracteres

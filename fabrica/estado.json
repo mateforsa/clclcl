@@ -3397,7 +3397,7 @@
     "https://www.infobae.com/economia/2026/11/28/el-plan-del-gobierno-para-pagar-la-deuda-en-enero-tiene-respuesta-y-un-costo-las-reservas-del-banco-central/"
    ],
    "puntaje": 8.0,
-   "etapa": "verificado",
+   "etapa": "voz",
    "creado": "2026-11-28T10:45:13-03:00",
    "historial": [
     {
@@ -3423,10 +3423,21 @@
      "etapa": "verificado",
      "cuando": "2026-11-28T10:51:06-03:00",
      "nota": ""
+    },
+    {
+     "etapa": "esperando_ok_voz",
+     "cuando": "2026-11-28T10:51:34-03:00",
+     "nota": ""
+    },
+    {
+     "etapa": "voz",
+     "cuando": "2026-11-28T10:51:34-03:00",
+     "nota": "voz sin OK (regla voz_sin_ok del dueño)"
     }
    ],
-   "nota": ""
+   "nota": "",
+   "caracteres_voz": 1015
   }
  },
- "actualizado": "2026-11-28T10:51:10-03:00"
+ "actualizado": "2026-11-28T10:51:34-03:00"
 }
