@@ -41,9 +41,9 @@ const TRIAL = '#ffcf5a'; // reel de prueba: burbuja dorada
 
 export const BEATS: BeatSpec[] = [
   // 1. ¿Tu reel se clava en 300, 1.000 o 1.500 vistas? Instagram explicó por qué.
-  { id: 'b01', set: SET, cam: CAM([0.55, 1.65, 6.1], [0.15, 1.6, 5.5], [0.1, 1.2, 0]), keywords: ['reel', '1.000', 'vistas?'],
+  { id: 'b01', set: SET, cam: CAM([0.55, 1.65, 6.1], [0.15, 1.6, 5.5], [0.1, 1.2, 0], undefined, LY, -0.12), keywords: ['reel', '1.000', 'vistas?'],
     actors: [WORLD,
-      { type: 'folk', pos: [-0.6, 0, -0.3], rot: [0, 0.3, 0], s: 0.9, p: { ...ME, seq: [[0, 'phone'], [W('b01', 'Instagram'), 'look']] } },
+      { type: 'folk', pos: [-0.6, 0, -0.5], rot: [0, 0.3, 0], s: 0.9, p: { ...ME, seq: [[0, 'phone'], [W('b01', 'Instagram'), 'look']] } },
       { type: 'glass', pos: [-0.35, 1.5, 0.2], p: { w: 0.72, d: 0.5, flash: W('b01', '300,') } },
       { type: 'bubble', p: { kf: [[0, -0.25, 1.05, 0.4], [1.0, -0.35, 1.21, 0.2]], wob: 0.006 } },
       { type: 'glass', pos: [0.42, 2.0, -0.35], at: W('b01', '1.000'), p: { w: 0.72, d: 0.5, flash: W('b01', '1.000') + 0.6 } },
@@ -67,7 +67,7 @@ export const BEATS: BeatSpec[] = [
     overlays: [P1('PRIMERO: UN GRUPO CHICO', W('b02', 'grupo')), FU_MAY24] },
 
   // 3. Si responde, pasa a uno más grande, y después a otro.
-  { id: 'b03', set: SET, cam: CAM([0.2, 1.35, 6.4], [0.35, 1.9, 6.0], [0.1, 1.0, -0.6], [0.2, 1.35, -0.8]), keywords: ['grande,', 'otro.'],
+  { id: 'b03', set: SET, cam: CAM([0.2, 1.35, 6.4], [0.35, 1.9, 6.0], [0.1, 1.0, -0.6], [0.2, 1.35, -0.8], LY, -0.11), keywords: ['grande,', 'otro.'],
     actors: [WORLD,
       { type: 'group', pos: [-0.85, 0, 0.4], p: { n: 3, h: 0.25, seed: 3, fol: 1, react: W('b03', 'responde,') } },
       { type: 'group', pos: [0.05, 0, -0.5], p: { n: 5, h: 0.75, seed: 5, fol: 1, lit: W('b03', 'pasa') + 0.3, react: W('b03', 'grande,') + 0.2 } },
@@ -109,10 +109,10 @@ export const BEATS: BeatSpec[] = [
     overlays: [P1('¿LO VAN A COMPARTIR?', W('b06', 'probable')), FU_JUN23] },
 
   // 7. Y en tus estadísticas te muestra cuánto tiempo lo miran, para que veas dónde se van.
-  { id: 'b07', set: SET, cam: CAM([0.3, 1.35, 4.7], [0.0, 1.4, 4.2], [0, 0.95, -0.5]), keywords: ['estadísticas', 'tiempo', 'van.'],
+  { id: 'b07', set: SET, cam: CAM([0.3, 1.35, 4.7], [0.0, 1.4, 4.2], [0, 0.95, -0.5], undefined, LY, -0.13), keywords: ['estadísticas', 'tiempo', 'van.'],
     actors: [WORLD,
       { type: 'screen', pos: [0, 0, -0.95], p: { w: 2.0, h: 0.95, at: 0.1, dur: DUR('b07') - 0.2, marks: [W('b07', 'tiempo') - 0.1, W('b07', 'miran,') - 0.1, W('b07', 'dónde') - 0.1, W('b07', 'van.') - 0.1] } },
-      { type: 'viewers', pos: [0, 0, -0.2], p: { xs: [-1.0, -0.6, -0.2, 0.2, 0.6, 1.0], leave: [W('b07', 'tiempo'), W('b07', 'dónde'), null, null, W('b07', 'van.'), W('b07', 'miran,')] } },
+      { type: 'viewers', pos: [0, 0, -0.4], p: { xs: [-1.0, -0.6, -0.2, 0.2, 0.6, 1.0], leave: [W('b07', 'tiempo'), W('b07', 'dónde'), null, null, W('b07', 'van.'), W('b07', 'miran,')] } },
     ],
     overlays: [P1('ESTADÍSTICAS:', W('b07', 'estadísticas')), P2('TIEMPO DE VISUALIZACIÓN', W('b07', 'tiempo')), FU_ABR23] },
 
@@ -138,12 +138,12 @@ export const BEATS: BeatSpec[] = [
     overlays: [P1('10 REPOSTEOS EN 30 DÍAS', W('b09', '10')), P2('= FUERA DE RECOMENDACIONES', W('b09', 'saca')), FU_MAY24] },
 
   // 10. Para probar están los reels de prueba: primero los ve solo gente que no te sigue.
-  { id: 'b10', set: SET, cam: CAM([0.3, 1.6, 5.4], [0.0, 1.55, 4.9], [0, 0.85, -0.15]), keywords: ['reels', 'sigue.'],
+  { id: 'b10', set: SET, cam: CAM([0.3, 1.6, 5.4], [0.0, 1.55, 4.9], [0, 0.85, -0.15], undefined, LY, -0.13), keywords: ['reels', 'sigue.'],
     actors: [WORLD,
-      { type: 'folk', pos: [0.0, 0, 0.5], rot: [0, Math.PI, 0], s: 0.9, p: { ...ME, pose: 'phone' } },
+      { type: 'folk', pos: [0.0, 0, 0.32], rot: [0, Math.PI, 0], s: 0.9, p: { ...ME, pose: 'phone' } },
       { type: 'group', pos: [-0.95, 0, -0.35], p: { n: 5, h: 0.5, seed: 19, fol: 5, off: W('b10', 'primero') } },
       { type: 'group', pos: [0.9, 0, 0.1], p: { n: 5, h: 0.3, seed: 20, fol: 0, lit: W('b10', 'gente'), look: W('b10', 've'), react: W('b10', 'sigue.') } },
-      { type: 'bubble', p: { c: TRIAL, kf: [[0, 0.0, 1.05, 0.15], [W('b10', 'prueba:'), 0.0, 1.4, 0.0], [W('b10', 'primero') + 0.7, 0.9, 1.62, 0.1, 0.2]] } },
+      { type: 'bubble', p: { c: TRIAL, kf: [[0, 0.0, 1.05, -0.05], [W('b10', 'prueba:'), 0.0, 1.4, -0.15], [W('b10', 'primero') + 0.7, 0.9, 1.62, 0.1, 0.2]] } },
     ],
     overlays: [P1('REELS DE PRUEBA (TRIAL REELS):', W('b10', 'reels')), P2('SOLO NO SEGUIDORES', W('b10', 'solo')), FU_DIC24] },
 
@@ -159,7 +159,7 @@ export const BEATS: BeatSpec[] = [
     overlays: [P1('24 HORAS DESPUÉS:', W('b11', 'día')), P2('COMPARTIR CON TODOS', W('b11', 'pasás')), FU_DIC24] },
 
   // 12. Vas a leer que el corte está en 1.000. Instagram nunca publicó ese número.
-  { id: 'b12', set: SET, cam: CAM([0.4, 1.4, 5.0], [0.0, 1.55, 4.65], [0, 1.1, -0.25]), keywords: ['1.000.', 'nunca'],
+  { id: 'b12', set: SET, cam: CAM([0.4, 1.4, 5.0], [0.0, 1.55, 4.65], [0, 1.1, -0.25], undefined, LY, -0.13), keywords: ['1.000.', 'nunca'],
     actors: [WORLD,
       { type: 'group', pos: [0, 0, -0.6], p: { n: 4, h: 0.0, foot: false, seed: 21, fol: 1, look: W('b12', 'nunca') } },
       { type: 'cut', pos: [0, 1.6, -0.65], at: W('b12', 'corte'), p: { w: 2.9, brk: W('b12', 'nunca') } },
