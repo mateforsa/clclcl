@@ -56,7 +56,7 @@ export const BEATS: BeatSpec[] = [
     actors: [WORLD({ noRange: true, noShade: false, shadeA: 0.94 }),
       { type: 'hills', p: { pts: [[1.5, -0.4, 0.5, 0.35, 0], [-0.4, 0.9, 0.35, 0.3, 0], [0.55, 0.78, 0.3, 0.25, 0], [-1.0, -0.2, 0.6, 0.38, 1], [0.9, -1.4, 0.55, 0.35, 1], [-1.2, -2.6, 0.8, 0.45, 1], [-2.3, -1.2, 0.9, 0.45, 1], [0.0, -2.3, 0.7, 0.4, 1], [1.9, 1.3, 0.3, 0.3, 0], [-2.0, 0.6, 0.5, 0.35, 0]] } },
       { type: 'route', p: { route: [[1.6, 1.6], [1.25, 1.2], [1.3, 0.45], [0.2, 0.15], [0.35, -0.6], [-0.35, -0.85], [-0.45, -1.4], [-1.25, -1.75]], border: -1.62,
-        draw: { at: 0, dur: W('b03', 'Socompa,') + 0.3 }, go: { at: 0.2, dur: W('b03', 'Socompa,') + 0.5 }, borderAt: W('b03', 'frontera') } },
+        go: { at: 0.2, dur: W('b03', 'Socompa,') + 0.5 }, borderAt: W('b03', 'frontera') } },
     ],
     overlays: [P1('RAMAL C14 · SALTA → SOCOMPA', W('b03', 'ramal'), { x: 33, size: 33, y: 69.3 }), P2('FRONTERA CON CHILE', W('b03', 'frontera'), { x: 33, size: 33, y: 72.6 }), { ...FU_DU, x: 33, y: 66.0 }] },
 
