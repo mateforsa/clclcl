@@ -127,19 +127,19 @@ export const BEATS: BeatSpec[] = [
     overlays: [P1('CANAL 7 · EN VIVO', 'Canal', { out: 'Después,' }), P1('DESPUÉS: SOLO FOTOS Y DIBUJOS DE EL GRÁFICO', 'fotos'), FU] },
 
   // 10. Hasta que un hincha, Mariano Asch, llegó a la RAI, la tele italiana, por un amigo de allá.
-  { id: 'b10', set: 'room', cam: { from: [0.8, 3.1, 6.2], to: [0.3, 2.8, 5.4], look: [0.1, 0.85, -0.6], fov: 44, shift: 0 }, keywords: ['hincha,', 'Asch,', 'RAI,'],
+  { id: 'b10', set: 'room', cam: { from: [0.6, 2.95, 5.5], to: [0.3, 2.7, 4.8], look: [0.15, 0.85, -0.7], fov: 44, shift: 0 }, keywords: ['hincha,', 'Asch,', 'RAI,'],
     actors: [LIV({ era: 'new', lampX: -2.4 }),
       { type: 'compu', pos: [-0.75, 0, -0.3], p: {} },
       { type: 'box', pos: [-0.75, 0.42, 0.45], p: { size: [0.5, 0.06, 0.5], color: '#2a2d38' } },
       ...[[-0.97, 0.23], [-0.53, 0.23], [-0.97, 0.67], [-0.53, 0.67]].map(([x, z]) => ({ type: 'box', pos: [x, 0.2, z] as any, p: { size: [0.04, 0.4, 0.04], color: '#1a1c24' } })),
       { type: 'player', pos: [-0.75, 0, 0.5], rot: [0, PI, 0], p: { kit: 'hincha', pose: 'type', scarf: '#e9e6dc' } },
-      { type: 'canal', pos: [1.0, 0, -1.6], at: 'RAI,', p: {} },
-      { type: 'player', pos: [0.35, 0, -0.75], rot: [0, -0.4, 0], at: 'amigo', s: 0.92, p: { kit: 'amigo', poses: [[0, 'idle'], [0.3, 'point']] } },
+      { type: 'canal', pos: [1.0, 0, -1.6], at: 'RAI,', p: { h: 1.45 } },
+      { type: 'player', pos: [-0.05, 0, -1.05], rot: [0, 0.3, 0], at: 'amigo', s: 0.92, p: { kit: 'amigo', poses: [[0, 'idle'], [0.3, 'point']] } },
     ],
     overlays: [P1('MARIANO ASCH · HINCHA DE INDEPENDIENTE', 'Asch,'), P2('RAI · TELEVISIÓN ITALIANA', 'RAI,'), FU] },
 
   // 11. Mandó mail tras mail. Le pidieron 500 euros por digitalizar la cinta, sin saber si estaba el gol.
-  { id: 'b11', set: 'room', cam: { from: [-0.5, 2.3, 6.0], to: [0.0, 2.1, 5.3], look: [0.1, 0.95, -0.6], fov: 44, shift: 0 }, keywords: ['mail', 'mail.', '500', 'digitalizar'],
+  { id: 'b11', set: 'room', cam: { from: [-0.4, 2.6, 4.9], to: [0.0, 2.4, 4.25], look: [0.05, 0.85, -0.7], fov: 44, shift: 0 }, keywords: ['mail', 'mail.', '500', 'digitalizar'],
     actors: [LIV({ era: 'new', lampX: 2.4 }),
       { type: 'compu', pos: [-0.8, 0, -0.3], p: {} },
       { type: 'player', pos: [-0.8, 0, 0.5], rot: [0, PI, 0], p: { kit: 'hincha', pose: 'type', scarf: '#e9e6dc' } },
@@ -152,12 +152,12 @@ export const BEATS: BeatSpec[] = [
     overlays: [P1('500 EUROS PARA DIGITALIZAR', '500'), P2('¿ESTÁ EL GOL?', 'gol.'), FU] },
 
   // 12. En 2007 le tocaron el timbre: el VHS negro, con el golazo del Bocha.
-  { id: 'b12', set: 'room', cam: { from: [1.1, 1.85, 2.9], to: [0.15, 1.75, 2.5], look: [0.7, 1.15, -3.0], lookTo: [-0.15, 0.85, -1.3], fov: 44, shift: 0 }, keywords: ['2007', 'timbre:', 'VHS', 'golazo'],
+  { id: 'b12', set: 'room', cam: { from: [1.1, 1.85, 2.9], to: [0.15, 1.75, 2.5], look: [0.7, 1.15, -3.0], lookTo: [-0.15, 1.1, -1.3], fov: 44, shift: 0 }, keywords: ['2007', 'timbre:', 'VHS', 'golazo'],
     actors: [LIV({ door: true, era: 'new', lampX: -2.3 }),
       { type: 'timbre', pos: [0.98, 1.25, -3.5], p: { at: W('b12', 'timbre:') } },
       { type: 'mesa', pos: [-0.2, 0, -1.0], p: { w: 2.1, d: 2.0, h: 0.45, c: '#3a2618' } },
       { type: 'vcr', pos: [-0.2, 0.475, -1.5], p: { led: [[0, 0], [tV + 1.0, 0], [tV + 1.2, 1]] } },
-      { type: 'tv', pos: [-0.2, 0.895, -1.6], p: { legs: false, kind: 'pitch', on: [[0, 0], [tG - 0.25, 0], [tG + 0.1, 1]], ball: [[tG, -0.5, -0.5, 0], [tG + 0.5, 0.0, 0.1, 0], [tG + 0.9, 0.25, -0.35, 0]] } },
+      { type: 'tv', pos: [-0.2, 0.895, -1.6], p: { wood: '#36241a', legs: false, kind: 'pitch', on: [[0, 0], [tG - 0.25, 0], [tG + 0.1, 1]], ball: [[tG, -0.5, -0.5, 0], [tG + 0.5, 0.0, 0.1, 0], [tG + 0.9, 0.25, -0.35, 0]] } },
       { type: 'cassette', pos: [0, 0, 0], p: { path: [[0, -0.2, 0.475, -0.42], [tV, -0.2, 0.475, -0.42], [tV + 0.35, -0.2, 0.56, -0.42], [tV + 1.1, -0.2, 0.56, -1.42]] } },
     ],
     overlays: [P1('2007', '2007'), FUR] },
@@ -169,8 +169,8 @@ export const BEATS: BeatSpec[] = [
       { type: 'vcr', pos: [0, 0.475, -1.55], p: { led: [[0, 1]] } },
       { type: 'tv', pos: [0, 0.895, -1.65], p: { legs: false, kind: 'pitch', ball: [[0, -0.5, -0.5, 0], [0.6, 0.0, 0.1, 0], [1.1, 0.25, -0.35, 0], [3.2, 0.3, -0.4, 0]] } },
       { type: 'sofa', pos: [0, 0, 1.05], p: { c: '#3a2a3a' } },
-      { type: 'player', pos: [-0.5, 0, 1.0], rot: [0, PI, 0], p: { kit: 'civ', pose: 'sit', hair: '#b8b2a8' } },
-      { type: 'player', pos: [0.5, 0, 1.0], rot: [0, PI, 0], p: { kit: 'abuela', pose: 'sit', hair: '#c8c2b8', phase: 1.1 } },
+      { type: 'player', pos: [-0.5, 0, 1.0], rot: [0, PI, 0], p: { kit: 'civ', pose: 'sit', hair: '#7e7a74' } },
+      { type: 'player', pos: [0.5, 0, 1.0], rot: [0, PI, 0], p: { kit: 'abuela', pose: 'sit', hair: '#8e887e', phase: 1.1 } },
     ],
     overlays: [P1('¿ALGUIEN EN TU CASA LO VIO EN VIVO?', '¿Alguien')] },
 ];

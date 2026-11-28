@@ -13,3 +13,5 @@
 2026-11-27T22:52:01-03:00 [oido] oído: 97 % de coincidencia; dudosos: ninguno; diferencias: diez→10; bochini→bocini; bochini→bocini; asch→ash; tele→tela
 2026-11-27T22:52:32-03:00 [productor] voz generada: 67,8 s (bajo 70). Oído 97 %: Juventus, Ajax, VHS, RAI, Bertoni bien; Asch→'Ash' (correcto); Bochini→'Bocini' (grafía italiana, mismo sonido; probado aparte: 5 variantes se entienden Bochini 73-75 %, no regenero); 'tele'→'tela' leve. Glosario actualizado
 2026-11-27T23:02:04-03:00 [productor] beats.ts, entry.ts y props.tsx escritos (Olímpico de noche + living con VHS, 13 planos); anclas y keywords verificadas con script. Stills
+2026-11-27T23:18:15-03:00 [productor] stills revisados y barrido sin subtítulos (todos los cuadros, media escala): franja y 290-390 con luma <= 41 en los 13 planos (b10 cartel RAI y b12 puerta/tele corregidos). Anclas exactas, sin pill, placas <= 1450 px, hueco de subtítulos 32 px. Mezcla lista. Render
+2026-11-27T23:18:15-03:00 [fabrica] etapa -> render

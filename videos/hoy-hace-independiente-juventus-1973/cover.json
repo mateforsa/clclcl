@@ -1,0 +1,3 @@
+{ "beat": "b12", "frac": 0.97,
+  "overlay": { "kicker": "HOY HACE 53 AÑOS",
+    "lines": [ { "t": "EL GOL" }, { "t": "PERDIDO", "c": "yellow", "size": 140 }, { "t": "BOCHINI · ROMA 1973 · LLEGÓ EN UN VHS", "size": 46, "c": "cyan" } ] } }
