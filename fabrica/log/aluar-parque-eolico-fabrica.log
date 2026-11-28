@@ -7,3 +7,5 @@
 2026-11-28T06:51:13-03:00 [fabrica] aluar-parque-eolico-fabrica: la voz gasta unos 933 caracteres de ElevenLabs. AVISO: no se puede leer el saldo (la clave no tiene ese permiso); anotalo en fabrica/config.json.
 2026-11-28T06:51:13-03:00 [fabrica] etapa -> esperando_ok_voz
 2026-11-28T06:51:14-03:00 [fabrica] voz SIN OK del dueño (regla voz_sin_ok): ~933 caracteres
+2026-11-28T06:52:02-03:00 [productor] arranco: créditos y voz
+2026-11-28T06:52:02-03:00 [fabrica] aluar-parque-eolico-fabrica: la voz gasta unos 933 caracteres de ElevenLabs. AVISO: no se puede leer el saldo (la clave no tiene ese permiso); anotalo en fabrica/config.json.

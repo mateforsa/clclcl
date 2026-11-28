@@ -1,10 +1,10 @@
-# A 60 km de la costa, una plataforma de 4.000 toneladas saca el 8% del gas argentino
+# A 60 km de la costa, una plataforma de 4.000 toneladas pensada para dar el 8% del gas argentino
 
 Video vertical 1080x1920, unos 50-55 s, 13 planos, 171 palabras dichas. Formato inspirado en la serie de @induscoreig
 "Instalaciones solo en Argentina / cómo funciona por dentro" (solo el formato, el guion es propio). Video suelto, sin "parte N"
 y sin "Seguime".
 Inicio: H76 de playbook 1 sección H adaptado, una orden sobre la imagen ("Mirá ese punto en el mar, a 60 kilómetros de Tierra del
-Fuego"), golpe 2 el dato enorme atribuido (4.000 toneladas, el equivalente al 8% del gas argentino, según La Nación) y golpe 3 la
+Fuego"), golpe 2 el dato enorme atribuido (4.000 toneladas, pensada para dar el equivalente al 8% del gas argentino, según La Nación) y golpe 3 la
 contradicción ("Se llama Fénix. Y no la hicieron acá"). La última H fue H76 hace unos quince videos. No es "Sos X". No repite el E48
 de potabilizadora-san-martin, el B16 de atucha-olla-72-tornillos ni el I88 de litio-pileta-salar.
 Cierre: playbook 4 n.º 17 adaptado, un número ("¿Cuántas de estas tres sabías? Dejá el número"), tras callback a la imagen del
@@ -16,7 +16,7 @@ No se menciona Malvinas, Sea Lion ni los socios por nombre en voz.
 ## Guion final (una línea por plano)
 
 1. Mirá ese punto en el mar, a 60 kilómetros de Tierra del Fuego.
-2. Es una plataforma de 4.000 toneladas, y según La Nación da el equivalente al 8% del gas argentino.
+2. Es una plataforma de 4.000 toneladas, y según La Nación iba a dar el equivalente al 8% del gas argentino.
 3. Se llama Fénix. Y no la hicieron acá.
 4. La armaron en dos partes en Rávena, Italia.
 5. Pero primero, en 2023, tendieron un caño de 36 kilómetros por el fondo.
@@ -66,10 +66,10 @@ Pronunciación:
 |---|---|---|
 | Fénix "está ubicada a 60 kilómetros de la costa de Tierra del Fuego" | Plano 1 | [iProfesional, Ignacio Ortiz, 22/1/2025](https://www.iprofesional.com/economia/421001-hito-en-mar-argentino-total-energies-puso-en-accion-los-3-pozos-del-proyecto-fenix) |
 | "Con un peso de 4000 toneladas" | Planos 2 y 12 | [iProfesional, 22/1/2025](https://www.iprofesional.com/economia/421001-hito-en-mar-argentino-total-energies-puso-en-accion-los-3-pozos-del-proyecto-fenix) |
-| "Aportará el equivalente al 8% de la producción argentina" (La Nación) y "el equivalente al 8% de la producción argentina" (iProfesional) | Plano 2 ("según La Nación da el equivalente al 8% del gas argentino") | [La Nación, 20/9/2024](https://www.lanacion.com.ar/economia/comenzo-a-producir-gas-la-nueva-plataforma-instalada-en-el-mar-argentino-nid20092024/), [iProfesional, 22/1/2025](https://www.iprofesional.com/economia/421001-hito-en-mar-argentino-total-energies-puso-en-accion-los-3-pozos-del-proyecto-fenix) |
+| "Aportará el equivalente al 8% de la producción argentina" (La Nación) y "el equivalente al 8% de la producción argentina" (iProfesional) | Plano 2 ("según La Nación iba a dar el equivalente al 8% del gas argentino": proyección de La Nación para cuando anduvieran los tres pozos) | [La Nación, 20/9/2024](https://www.lanacion.com.ar/economia/comenzo-a-producir-gas-la-nueva-plataforma-instalada-en-el-mar-argentino-nid20092024/), [iProfesional, 22/1/2025](https://www.iprofesional.com/economia/421001-hito-en-mar-argentino-total-energies-puso-en-accion-los-3-pozos-del-proyecto-fenix) |
 | Se llama plataforma de producción Fénix | Plano 3 | [La Nación, 20/9/2024](https://www.lanacion.com.ar/economia/comenzo-a-producir-gas-la-nueva-plataforma-instalada-en-el-mar-argentino-nid20092024/) |
 | "Se construyó en dos partes en el astillero de Rossetti Marino, en el puerto de Rávena, Italia, y tras su transporte marítimo..." | Planos 3-4 y 12 | [iProfesional, 22/1/2025](https://www.iprofesional.com/economia/421001-hito-en-mar-argentino-total-energies-puso-en-accion-los-3-pozos-del-proyecto-fenix) |
-| "Las actividades en el mar se iniciaron en septiembre de 2023" y "en primera instancia la instalación de 36 kilómetros de gasoducto submarino" | Plano 5 ("Pero primero, en 2023, tendieron un caño de 36 kilómetros por el fondo") | [iProfesional, 22/1/2025](https://www.iprofesional.com/economia/421001-hito-en-mar-argentino-total-energies-puso-en-accion-los-3-pozos-del-proyecto-fenix), [La Nación, 20/9/2024](https://www.lanacion.com.ar/economia/comenzo-a-producir-gas-la-nueva-plataforma-instalada-en-el-mar-argentino-nid20092024/) ("Primero se instaló 36 kilómetros de gasoducto submarino") |
+| "Las actividades en el mar se iniciaron en septiembre de 2023" y "en primera instancia la instalación de 36 kilómetros de gasoducto submarino" | Plano 5 ("Pero primero, en 2023, tendieron un caño de 36 kilómetros por el fondo") | [iProfesional, 22/1/2025](https://www.iprofesional.com/economia/421001-hito-en-mar-argentino-total-energies-puso-en-accion-los-3-pozos-del-proyecto-fenix), [La Nación, 20/9/2024](https://www.lanacion.com.ar/economia/comenzo-a-producir-gas-la-nueva-plataforma-instalada-en-el-mar-argentino-nid20092024/) ("Primero se instaló 36 kilómetros de gasoducto submarino"), [Ámbito, 20/12/2023](https://www.ambito.com/energia/offshore-tierra-del-fuego-arribo-al-pais-la-plataforma-del-proyecto-fenix-n5903735) ("El ducto submarino fue tendido con el barco Castorone", agregada por el verificador) |
 | La plataforma se instaló "en una zona que tiene 70 metros de profundidad"; "la base se colocó en el fondo del mar y luego se montó su estructura superior mediante barcos de más de 300 metros de longitud" | Planos 6 y 12 (los 300 m solo en placa) | [iProfesional, 22/1/2025](https://www.iprofesional.com/economia/421001-hito-en-mar-argentino-total-energies-puso-en-accion-los-3-pozos-del-proyecto-fenix) |
 | "Finalmente, la perforación de tres pozos horizontales" | Plano 7 | [La Nación, 20/9/2024](https://www.lanacion.com.ar/economia/comenzo-a-producir-gas-la-nueva-plataforma-instalada-en-el-mar-argentino-nid20092024/), [iProfesional, 22/1/2025](https://www.iprofesional.com/economia/421001-hito-en-mar-argentino-total-energies-puso-en-accion-los-3-pozos-del-proyecto-fenix) |
 | El gasoducto submarino conecta Fénix "con la plataforma Vega Pléyade, también operada por Total Austral, y así poder evacuar el gas producido" | Plano 8 | [La Nación, 20/9/2024](https://www.lanacion.com.ar/economia/comenzo-a-producir-gas-la-nueva-plataforma-instalada-en-el-mar-argentino-nid20092024/) |
@@ -80,7 +80,7 @@ Pronunciación:
 
 Límites y cómo los trata el guion:
 - El 8% es "el equivalente al 8% de la producción argentina" según las dos notas, y en La Nación era lo que iba a aportar con los
-  tres pozos. La voz dice "da el equivalente al 8% del gas argentino" con "según La Nación". No se dice que sea el 8% de hoy
+  tres pozos. Es una proyección: la voz dice "según La Nación iba a dar el equivalente al 8% del gas argentino" (corrección del verificador). No se dice que sea el 8% de hoy
   (noviembre de 2026): no hay fuente de 2026.
 - La Nación dice que el primer pozo arrancó "ayer" en una nota del 20/9/2024. La voz dice solo "septiembre de 2024", sin día.
 - "De costado bajo el fondo" explica qué es un pozo horizontal. Las fuentes no dan largo ni profundidad de los pozos, y el guion
@@ -94,7 +94,7 @@ Límites y cómo los trata el guion:
 | Plano | Texto en pantalla (exacto) |
 |---|---|
 | 1 | A 60 KM DE TIERRA DEL FUEGO |
-| 2 | 4.000 TONELADAS · 8% DEL GAS ARGENTINO · SEGÚN LA NACIÓN (2024) |
+| 2 | 4.000 TONELADAS · PENSADA PARA EL 8% DEL GAS ARGENTINO · SEGÚN LA NACIÓN (2024) |
 | 3 | PLATAFORMA FÉNIX · TOTALENERGIES Y SOCIOS |
 | 4 | HECHA EN DOS PARTES EN RÁVENA, ITALIA |
 | 5 | 2023: 36 KM DE CAÑO SUBMARINO |
@@ -112,8 +112,8 @@ Fuente en pantalla chica, abajo: planos 2, 3, 8, 9 y 10 (La Nación, 20/9/2024),
 
 ## Títulos
 
-- Principal: **A 60 km de la costa, una plataforma de 4.000 toneladas saca el 8% del gas argentino**
-- Portada sugerida: 4.000 TONELADAS EN EL MAR · 8% DEL GAS ARGENTINO
+- Principal: **A 60 km de la costa, una plataforma de 4.000 toneladas pensada para dar el 8% del gas argentino**
+- Portada sugerida: 4.000 TONELADAS EN EL MAR · PENSADA PARA EL 8% DEL GAS
 - Alternativa 1: Fénix por dentro: la plataforma de gas que hicieron en Italia para Tierra del Fuego
 - Alternativa 2: Así sale el gas del mar de Tierra del Fuego
 
@@ -124,7 +124,7 @@ Ganchos alternativos (no usados):
 ## Descripción de Instagram
 
 ```
-A 60 kilómetros de Tierra del Fuego hay una plataforma de 4.000 toneladas que da el equivalente al 8% del gas argentino, según La Nación (2024).
+A 60 kilómetros de Tierra del Fuego hay una plataforma de 4.000 toneladas pensada para dar el equivalente al 8% del gas argentino, según La Nación (2024).
 
 Se llama Fénix y la construyeron en dos partes en el astillero Rossetti Marino, en Rávena, Italia. Primero, en 2023, tendieron 36 km de gasoducto submarino. Después apoyaron la base en 70 metros de agua y barcos de más de 300 metros le montaron la parte de arriba, según iProfesional (2025).
 Desde ahí perforaron tres pozos horizontales. El gas viaja a la plataforma Vega Pléyade, de ahí a las plantas de Río Cullen y Cañadón Alfa, y por el Gasoducto San Martín hasta Bahía Blanca.
