@@ -1,0 +1,3 @@
+{ "beat": "b04", "frac": 0.9,
+  "overlay": { "y": 60, "kicker": "AGUA DE BUENOS AIRES",
+    "lines": [ { "t": "TU CANILLA", "size": 140 }, { "t": "EMPIEZA EN EL RÍO", "c": "yellow", "size": 104 }, { "t": "A 1.200 M DE LA COSTA, SEGÚN EL GOBIERNO", "size": 46, "c": "cyan" } ] } }

@@ -800,5 +800,35 @@
   "dicho": "trescientas, o mil, o mil quinientas",
   "estado": "probada",
   "nota": "28/11/2026: 'trescientas, mil' se oye como trescientas mil (300.000); con 'o' entre cada cifra se entiende 300 o 1.000 o 1.500"
+ },
+ "Chernobyl": {
+  "dicho": "Chernóbyl",
+  "estado": "probada",
+  "puntaje": 0.93,
+  "variantes": [
+   "Chernóbil",
+   "Chernobíl",
+   "Cher-nó-bil",
+   "Chernobil",
+   "Chernóbyl"
+  ],
+  "nota": "28/11/2026 atucha-olla-72-tornillos: empate 93 % entre Chernobíl y Chernóbyl; se usa Chernóbyl (acento llano, el que pidió el editor). Falta que el dueño confirme de oído."
+ },
+ "Atucha I": {
+  "dicho": "Atucha uno",
+  "estado": "probada",
+  "puntaje": 0.45,
+  "variantes": [
+   "Atucha uno",
+   "Atucha Uno",
+   "Atúcha uno",
+   "Atucha, uno"
+  ],
+  "nota": "Whisper oye \"Atucha 1\" (el puntaje bajo es por I contra 1): se entiende bien."
+ },
+ "Atucha II": {
+  "dicho": "Atucha dos",
+  "estado": "probada",
+  "nota": "misma forma que Atucha I; se verifica con oir en atucha-olla-72-tornillos"
  }
 }

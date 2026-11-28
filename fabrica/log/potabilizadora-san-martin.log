@@ -10,3 +10,8 @@
 2026-11-28T05:15:56-03:00 [fabrica] voz SIN OK del dueño (regla voz_sin_ok): ~993 caracteres
 2026-11-28T05:16:28-03:00 [productor] arranco: voz
 2026-11-28T05:16:28-03:00 [fabrica] potabilizadora-san-martin: la voz gasta unos 993 caracteres de ElevenLabs. AVISO: no se puede leer el saldo (la clave no tiene ese permiso); anotalo en fabrica/config.json.
+2026-11-28T05:17:06-03:00 [oido] oído: 99 % de coincidencia; dudosos: ninguno; diferencias: conta→contada
+2026-11-28T05:17:18-03:00 [productor] voz lista (1 toma): 62,7 s, Whisper 99 %; Infobae y cifras bien; 'Contá abajo' se oye como 'contada abajo' (unión de vocales, 0,35 s, no se regenera)
+2026-11-28T05:28:04-03:00 [productor] escribo planos: corte transversal río -> planta -> ciudad (props, beats, entry); stills
+2026-11-28T05:34:15-03:00 [productor] planos listos (14, corte transversal río -> planta -> ciudad, placas abajo sobre tierra profunda, sin personas ni carteles 3D), stills revisados al 8/50/85 %; keywords exactas sin choque; audio mezclado; lanzo render
+2026-11-28T05:34:15-03:00 [fabrica] etapa -> render

@@ -12,5 +12,4 @@ if (typeof document !== 'undefined' && !document.getElementById('subs-gap')) {
   st.textContent = 'div[style*="gap: 6px 20px"]{column-gap:32px !important;left:100px !important;right:118px !important} div[style*="gap: 6px 20px"] > span[style*="padding: 0px 18px"]{margin:0 8px}';
   document.head.appendChild(st);
 }
-(window as any).__QCF = true; { const q = document.createElement('style'); q.textContent = 'div[style*="translate(-50%, -50%)"]{display:none !important}'; document.head.appendChild(q); }
 registerRoot(makeRoot(timing, BEATS, EXTRA));
