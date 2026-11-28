@@ -34,7 +34,7 @@ const WORKER = { shirt: '#ff7a3d', pants: '#2c333d', skin: '#c98d62', hair: '#15
 
 export const BEATS: BeatSpec[] = [
   // 1. En octubre, la tonelada de carne bovina fresca se exportó a 15.397 dólares.
-  { id: 'b01', set: 'room', cam: { from: [0.7, 2.35, 8.4], to: [0.15, 2.2, 7.6], look: [0, 1.3, 0], fov: 44 }, keywords: ['carne', '15.397'],
+  { id: 'b01', set: 'room', cam: { from: [0.7, 2.35, 9.2], to: [0.15, 2.2, 8.4], look: [0, 1.3, 0], fov: 44, shift: -0.08 }, keywords: ['carne', '15.397'],
     actors: [WORLD,
       { type: 'barco', pos: [0.2, 0, -2.4], p: { len: 3.0, n: 12, pre: 5, loadAt: W('b01', 'exportó'), step: 0.14 } },
       { type: 'balanza', pos: [0, 0, 0.3], p: { kf: [[0, 0.1], [W('b01', '15.397'), 0.1], [W('b01', '15.397') + 0.9, 0.2]], left: { kind: 'carne' } } },
@@ -44,7 +44,7 @@ export const BEATS: BeatSpec[] = [
     overlays: [P1('CARNE BOVINA FRESCA', PRE('b01')), P2('US$ 15.397 / TONELADA', '15.397'), SMALL('ESQUEMA, NO A ESCALA', 74.0)] },
 
   // 2. Y algo se vendió a más del doble.
-  { id: 'b02', set: 'room', cam: { from: [-0.6, 2.2, 7.6], to: [-0.2, 2.1, 7.0], look: [0.1, 1.45, 0.3], fov: 44 }, keywords: ['algo', 'doble.'],
+  { id: 'b02', set: 'room', cam: { from: [-0.6, 2.2, 8.5], to: [-0.2, 2.1, 7.9], look: [0.1, 1.45, 0.3], fov: 44, shift: -0.08 }, keywords: ['algo', 'doble.'],
     actors: [WORLD,
       { type: 'barco', pos: [0.2, 0, -2.4], p: { len: 3.0, n: 12, pre: 12 } },
       { type: 'balanza', pos: [0, 0, 0.3], p: { kf: [[0, 0.2], [W('b02', 'algo') + 0.25, 0.2], [W('b02', 'algo') + 1.0, -0.24]], left: { kind: 'carne' }, right: { kind: 'frasco', at: W('b02', 'algo') } } },
@@ -53,7 +53,7 @@ export const BEATS: BeatSpec[] = [
     overlays: [P1('MÁS DEL DOBLE', 'doble.'), SMALL('ESQUEMA, NO A ESCALA', 74.0)] },
 
   // 3. Aceite esencial de cítricos: 32.449 dólares, según la Secretaría de Agricultura.
-  { id: 'b03', set: 'room', cam: { from: [0.6, 2.05, 6.6], to: [0.05, 1.9, 5.9], look: [0, 1.2, 0], fov: 44 }, keywords: ['Aceite', 'cítricos:', '32.449', 'Secretaría'],
+  { id: 'b03', set: 'room', cam: { from: [0.6, 2.05, 7.2], to: [0.05, 1.9, 6.5], look: [0, 1.2, 0], fov: 44, shift: -0.08 }, keywords: ['Aceite', 'cítricos:', '32.449', 'Secretaría'],
     actors: [SECO,
       { type: 'box', pos: [-0.35, 0.25, 0], p: { size: [1.0, 0.5, 0.8], color: '#3a4350' } },
       { type: 'frasco', pos: [-0.35, 0.5, 0], s: 2.0, p: {} },
@@ -67,7 +67,7 @@ export const BEATS: BeatSpec[] = [
       P1('SEGÚN LA SECRETARÍA DE AGRICULTURA · OCTUBRE 2026', 'Agricultura.', { size: fit('SEGÚN LA SECRETARÍA DE AGRICULTURA · OCTUBRE 2026', 46, 840) }), ...FU()] },
 
   // 4. Fue lo mejor pagado de un mes récord.
-  { id: 'b04', set: 'room', cam: { from: [-0.7, 2.2, 6.6], to: [-0.2, 2.05, 6.0], look: [0, 1.15, 0], fov: 44 }, keywords: ['mejor', 'récord.'],
+  { id: 'b04', set: 'room', cam: { from: [-0.7, 2.2, 6.6], to: [-0.2, 2.05, 6.0], look: [0, 1.15, 0], fov: 44, shift: -0.08 }, keywords: ['mejor', 'récord.'],
     actors: [WORLD,
       { type: 'podio', pos: [0, 0, 0], p: { two: false } },
       { type: 'frasco', pos: [-0.52, 1.05, 0], s: 1.25, at: 0.05, enter: 'drop', p: {} },
@@ -76,7 +76,7 @@ export const BEATS: BeatSpec[] = [
     overlays: [P1('N.º 1 EN PRECIO POR TONELADA', 'pagado'), ...FU()] },
 
   // 5. Las exportaciones agroindustriales llegaron a 5.717 millones de dólares.
-  { id: 'b05', set: 'room', cam: { from: [1.1, 2.6, 8.4], to: [0.4, 2.4, 7.6], look: [0, 1.0, -1.0], fov: 44 }, keywords: ['agroindustriales', '5.717 millones'],
+  { id: 'b05', set: 'room', cam: { from: [1.1, 2.6, 8.7], to: [0.4, 2.4, 7.9], look: [0, 1.0, -1.0], fov: 44, shift: -0.08 }, keywords: ['agroindustriales', '5.717 millones'],
     actors: [WORLD,
       { type: 'barco', pos: [0, 0, -2.3], p: { len: 3.0, n: 24, pre: 4, loadAt: W('b05', 'agroindustriales'), step: 0.15 } },
       { type: 'grua', pos: [-0.9, 0, -0.5], p: { trolley: [[0, 0.5], [1.2, 0.5], [2.6, -1.7]], cable: [[0, 0.3], [1.2, 0.3], [2.6, 0.5], [3.4, 1.15]], box: '#25b3a1' } },
@@ -86,7 +86,7 @@ export const BEATS: BeatSpec[] = [
     overlays: [P1('OCTUBRE 2026: US$ 5.717 MILLONES', '5.717'), P2('RÉCORD HISTÓRICO', 'dólares.'), ...FU()] },
 
   // 6. Y a 11 millones de toneladas: las dos, un 23% más que un año antes.
-  { id: 'b06', set: 'room', cam: { from: [-0.7, 2.4, 7.8], to: [0, 2.2, 7.1], look: [0, 1.0, -0.2], fov: 44 }, keywords: ['11 millones', 'toneladas:', '23%'],
+  { id: 'b06', set: 'room', cam: { from: [-0.7, 2.4, 8.3], to: [0.0, 2.2, 7.6], look: [0, 1.0, -0.2], fov: 44, shift: -0.08 }, keywords: ['11 millones', 'toneladas:', '23%'],
     actors: [SECO,
       { type: 'pila', pos: [0, 0, -1.6], p: { h0: 0.25, h1: 1.35, at: W('b06', '11'), dur: 1.4, ratio: 1.05, seed: 5 } },
       { type: 'par', pos: [-0.78, 0, 0.7], at: 'las', p: { h: 0.9, ratio: 1.23, at: W('b06', '23%'), c: '#25b3a1', cap: 'VALOR' } },
@@ -96,7 +96,7 @@ export const BEATS: BeatSpec[] = [
       SMALL('GRIS: UN AÑO ANTES', 59.0, 'las'), ...FU()] },
 
   // 7. 21 complejos productivos marcaron su propio récord del mes.
-  { id: 'b07', set: 'room', cam: { from: [0.6, 3.3, 6.0], to: [0.1, 3.1, 5.4], look: [0, 0.45, 0], fov: 44 }, keywords: ['21', 'complejos', 'récord'],
+  { id: 'b07', set: 'room', cam: { from: [0.6, 3.3, 6.9], to: [0.1, 3.1, 6.3], look: [0, 0.45, 0], fov: 44, shift: -0.08 }, keywords: ['21', 'complejos', 'récord'],
     actors: [WORLD,
       { type: 'barco', pos: [0, 0, -2.4], p: { len: 3.0, n: 12, pre: 12 } },
       { type: 'person', pos: [1.25, 0, -0.75], rot: [0, -0.5, 0], s: 0.8, p: { ...WORKER, pose: 'idle' } },
@@ -105,7 +105,7 @@ export const BEATS: BeatSpec[] = [
     overlays: [P1('21 COMPLEJOS CON RÉCORD DE VENTAS', '21'), ...FU()] },
 
   // 8. El trigo vendió un 47% más.
-  { id: 'b08', set: 'room', cam: { from: [-0.8, 2.1, 6.6], to: [-0.3, 2.0, 6.0], look: [0, 0.95, 0], fov: 44 }, keywords: ['trigo', '47%'],
+  { id: 'b08', set: 'room', cam: { from: [-0.8, 2.1, 6.6], to: [-0.3, 2.0, 6.0], look: [0, 0.95, 0], fov: 44, shift: -0.08 }, keywords: ['trigo', '47%'],
     actors: [WORLD,
       { type: 'cinta', pos: [0, 0, 0], p: { len: 8, speed: 0.35 } },
       { type: 'bolsa', pos: [-1.0, 0.58, 0], move: { to: [0.2, 0.58, 0], at: 0, dur: 3.42 }, p: { mark: 'trigo' } },
@@ -116,7 +116,7 @@ export const BEATS: BeatSpec[] = [
     overlays: [P1('TRIGO +47%', '47%'), ...FU()] },
 
   // 9. El alimento para animales, un 42%.
-  { id: 'b09', set: 'room', cam: { from: [0.9, 2.2, 6.4], to: [0.4, 2.05, 5.8], look: [0, 0.95, 0], fov: 44 }, keywords: ['alimento', '42%.'],
+  { id: 'b09', set: 'room', cam: { from: [0.9, 2.2, 6.4], to: [0.4, 2.05, 5.8], look: [0, 0.95, 0], fov: 44, shift: -0.08 }, keywords: ['alimento', '42%.'],
     actors: [WORLD,
       { type: 'cinta', pos: [0, 0, 0], p: { len: 8, speed: 0.35 } },
       { type: 'bolsa', pos: [-0.8, 0.58, 0], move: { to: [0.25, 0.58, 0], at: 0, dur: 3.05 }, p: { c: '#5f9a55', band: '#2c5a32', mark: 'pellet' } },
@@ -126,7 +126,7 @@ export const BEATS: BeatSpec[] = [
     overlays: [P1('ALIMENTO PARA ANIMALES +42%', '42%.'), ...FU()] },
 
   // 10. El girasol y las legumbres, un 32%.
-  { id: 'b10', set: 'room', cam: { from: [-0.5, 2.3, 6.8], to: [0.1, 2.15, 6.2], look: [0, 1.0, 0], fov: 44 }, keywords: ['girasol', 'legumbres,', '32%.'],
+  { id: 'b10', set: 'room', cam: { from: [-0.5, 2.3, 6.8], to: [0.1, 2.15, 6.2], look: [0, 1.0, 0], fov: 44, shift: -0.08 }, keywords: ['girasol', 'legumbres,', '32%.'],
     actors: [WORLD,
       { type: 'cinta', pos: [0, 0, 0], p: { len: 8, speed: 0.35 } },
       { type: 'girasol', pos: [-1.2, 0.58, 0], move: { to: [-0.15, 0.58, 0], at: 0, dur: 3.37 }, p: { h: 0.9 } },
@@ -137,17 +137,17 @@ export const BEATS: BeatSpec[] = [
     overlays: [P1('GIRASOL +32%', '32%.'), P2('LEGUMBRES +32%', '32%.'), ...FU()] },
 
   // 11. Y los bovinos, un 23%.
-  { id: 'b11', set: 'room', cam: { from: [0.7, 2.3, 6.8], to: [0.2, 2.15, 6.2], look: [0, 0.8, 0], fov: 44 }, keywords: ['bovinos,', '23%.'],
+  { id: 'b11', set: 'room', cam: { from: [0.7, 2.3, 7.2], to: [0.2, 2.15, 6.6], look: [0, 0.8, 0], fov: 44, shift: -0.08 }, keywords: ['bovinos,', '23%.'],
     actors: [SECO,
       { type: 'corral', pos: [0, 0, -0.2], p: { w: 3.0, d: 1.7 } },
-      { type: 'vaca', pos: [-0.55, 0, -0.45], rot: [0, 0.3, 0], s: 0.85, p: {} },
-      { type: 'vaca', pos: [0.6, 0, 0.15], rot: [0, -2.6, 0], s: 0.85, p: { ph: 1.4 } },
+      { type: 'vaca', pos: [-0.65, 0, -0.55], rot: [0, 0.2, 0], s: 0.85, p: {} },
+      { type: 'vaca', pos: [0.75, 0, 0.35], rot: [0, -2.8, 0], s: 0.85, p: { ph: 1.4 } },
       { type: 'sube', pos: [1.2, 0.0, 0.9], at: '23%.', p: { len: 0.7, color: '#25b3a1' } },
     ],
     overlays: [P1('BOVINOS +23%', '23%.'), ...FU()] },
 
   // 12. Ahora mirá el año entero.
-  { id: 'b12', set: 'room', cam: { from: [0.5, 1.9, 7.2], to: [0.05, 1.8, 6.6], look: [0, 1.35, 0], fov: 44 }, keywords: ['año'],
+  { id: 'b12', set: 'room', cam: { from: [0.5, 1.9, 8.8], to: [0.05, 1.8, 8.2], look: [0, 1.35, 0], fov: 44, shift: -0.08 }, keywords: ['año'],
     actors: [WORLD,
       { type: 'meses', pos: [0, 1.4, 0], p: { on: 10, at: 0.25, step: 0.085 } },
       ...[-1.2, 1.2].map((x) => ({ type: 'box', pos: [x, 0.45, -0.05] as any, p: { size: [0.08, 0.9, 0.08], color: '#6c7884' } })),
@@ -155,7 +155,7 @@ export const BEATS: BeatSpec[] = [
     overlays: [P1('ENERO A OCTUBRE', 'año'), ...FU()] },
 
   // 13. De enero a octubre salieron 106,82 millones de toneladas: récord para esos diez meses.
-  { id: 'b13', set: 'room', cam: { from: [0.8, 2.1, 8.8], to: [0.15, 2.6, 8.0], look: [0, 1.0, -0.8], fov: 44 }, keywords: ['salieron', '106,82 millones', 'toneladas:'],
+  { id: 'b13', set: 'room', cam: { from: [0.8, 2.1, 8.8], to: [0.15, 2.6, 8.0], look: [0, 1.0, -0.8], fov: 44, shift: -0.08 }, keywords: ['salieron', '106,82 millones', 'toneladas:'],
     actors: [WORLD,
       { type: 'barco', pos: [-0.2, 0, -2.4], p: { len: 3.0, grain: '#e0ad55', grainAt: 0.2, grainDur: 1.5 }, move: { to: [3.2, 0, -2.4], at: W('b13', 'toneladas:'), dur: 3.0 } },
       { type: 'pila', pos: [-0.35, 0, 0.0], p: { h0: 0.35, h1: 1.5, at: W('b13', '106,82'), dur: 2.3, ratio: 0.95, seed: 9 } },
@@ -165,7 +165,7 @@ export const BEATS: BeatSpec[] = [
     overlays: [P1('106,82 MILLONES DE TONELADAS', '106,82'), P2('RÉCORD PARA ESE PERÍODO', 'meses.'), ...FU()] },
 
   // 14. En dólares, 48.967 millones.
-  { id: 'b14', set: 'room', cam: { from: [-0.6, 2.3, 7.0], to: [0, 2.1, 6.3], look: [0, 1.1, 0], fov: 44 }, keywords: ['dólares,', '48.967 millones.'],
+  { id: 'b14', set: 'room', cam: { from: [-0.6, 2.3, 7.0], to: [0.0, 2.1, 6.3], look: [0, 1.1, 0], fov: 44, shift: -0.08 }, keywords: ['dólares,', '48.967 millones.'],
     actors: [WORLD,
       { type: 'fajo', pos: [0, 0, 0], p: { h0: 0.3, h1: 1.7, at: W('b14', '48.967'), dur: 2.6, w: 1.0 } },
       { type: 'fajo', pos: [-1.15, 0, 0.5], at: 'dólares,', p: { h0: 0.3, w: 0.6 } },
@@ -175,7 +175,7 @@ export const BEATS: BeatSpec[] = [
     overlays: [P1('US$ 48.967 MILLONES', '48.967'), ...FU(ESQ)] },
 
   // 15. Y eso no es récord: es el segundo valor de la historia.
-  { id: 'b15', set: 'room', cam: { from: [0.7, 2.25, 6.6], to: [0.2, 2.1, 6.0], look: [0, 1.15, 0], fov: 44 }, keywords: ['récord:', 'segundo'],
+  { id: 'b15', set: 'room', cam: { from: [0.7, 2.25, 6.6], to: [0.2, 2.1, 6.0], look: [0, 1.15, 0], fov: 44, shift: -0.08 }, keywords: ['récord:', 'segundo'],
     actors: [WORLD,
       { type: 'podio', pos: [0, 0, 0], p: {} },
       { type: 'cross', pos: [-0.52, 1.6, 0.1], s: 0.45, at: 'no' },
@@ -184,7 +184,7 @@ export const BEATS: BeatSpec[] = [
     overlays: [P1('2.º VALOR DE LA HISTORIA', 'segundo'), ...FU()] },
 
   // 16. Justo debajo de la carne, en esa lista, está la lana peinada.
-  { id: 'b16', set: 'room', cam: { from: [-0.75, 2.35, 8.3], to: [-0.1, 2.2, 7.5], look: [0, 1.3, 0.3], fov: 44 }, keywords: ['carne,', 'lana', 'peinada.'],
+  { id: 'b16', set: 'room', cam: { from: [-0.75, 2.35, 8.3], to: [-0.1, 2.2, 7.5], look: [0, 1.3, 0.3], fov: 44, shift: -0.08 }, keywords: ['carne,', 'lana', 'peinada.'],
     actors: [WORLD,
       { type: 'barco', pos: [0.2, 0, -2.4], p: { len: 3.0, n: 12, pre: 12 } },
       { type: 'balanza', pos: [0, 0, 0.3], p: { kf: [[0, 0.2], [W('b16', 'lana') + 0.2, 0.2], [W('b16', 'lana') + 0.9, 0.08]], left: { kind: 'carne' }, right: { kind: 'lana', at: W('b16', 'lana') } } },
@@ -194,7 +194,7 @@ export const BEATS: BeatSpec[] = [
     overlays: [P1('LANA PEINADA', 'lana'), P2('US$ ¿? / TONELADA', 'peinada.'), ...FU(ESQ)] },
 
   // 17. ¿Cuánto vale su tonelada? Dejá tu número sin buscar. La respuesta, en la descripción.
-  { id: 'b17', set: 'room', cam: { from: [0.6, 2.1, 6.4], to: [0.1, 1.95, 5.8], look: [0, 1.1, 0], fov: 44 }, keywords: ['tonelada?', 'número', 'descripción.'],
+  { id: 'b17', set: 'room', cam: { from: [0.6, 2.1, 6.4], to: [0.1, 1.95, 5.8], look: [0, 1.1, 0], fov: 44, shift: -0.08 }, keywords: ['tonelada?', 'número', 'descripción.'],
     actors: [WORLD,
       { type: 'box', pos: [-0.35, 0.05, 0], p: { size: [1.4, 0.1, 1.0], color: '#6b4f33' } },
       { type: 'lana', pos: [-0.35, 0.1, 0], s: 1.7 },
