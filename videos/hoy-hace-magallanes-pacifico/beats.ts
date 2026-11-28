@@ -11,6 +11,9 @@ const PANEL = 'rgba(10,14,20,.9)';
 const fit = (text: string, max: number, px = 820) => Math.min(max, Math.floor(px / (text.length * 0.64)));
 const P1 = (text: string, at: any, o: any = {}) => ({ type: 'tag' as const, text, at, x: 46, y: 63.5, color: PANEL, size: fit(text, 46), ...o });
 const P2 = (text: string, at: any, o: any = {}) => ({ type: 'tag' as const, text, at, x: 46, y: 68, color: PANEL, size: fit(text, 40), ...o });
+// Placas altas (en el cielo, entre los subtítulos y el horizonte) para los planos donde las naves ocupan la franja baja.
+const H1 = (text: string, at: any, o: any = {}) => P1(text, at, { y: 31.5, ...o });
+const H2 = (text: string, at: any, o: any = {}) => P2(text, at, { y: 36, ...o });
 const SMALL = (text: string, y: number, at: any = 0) => ({ type: 'tag' as const, text, at, x: 46, y, color: 'rgba(10,14,20,.78)', size: 20 });
 
 const B = (timing as any).beats as { id: string; start: number; end: number; words: { w: string; s: number; e: number }[] }[];
@@ -47,7 +50,7 @@ export const BEATS: BeatSpec[] = [
     actors: [MIRROR,
       SHIP([0.4, 0, -1.6], PI * 0.62, { s: 0.85, move: { to: [0.0, 0, -2.2], at: 0, dur: 3.6 }, p: { still: true } }),
     ],
-    overlays: [P1('PACÍFICO', PRE('b01')), P2('"TRANQUILO", EN LATÍN', W('b01', 'calma.'))] },
+    overlays: [H1('PACÍFICO', PRE('b01')), H2('"TRANQUILO", EN LATÍN', W('b01', 'calma.'))] },
 
   // 2. Y en ese mar tan calmo, sus marineros terminaron masticando cuero.
   { id: 'b02', set: 'room', cam: { from: [1.5, 1.9, 5.6], to: [1.1, 1.8, 4.9], look: [0, 0.95, 0], fov: 44 }, keywords: ['marineros', 'terminaron', 'cuero.'],
@@ -56,7 +59,7 @@ export const BEATS: BeatSpec[] = [
       { type: 'faceless', pos: [0.15, 0.43, 0.05], rot: [0, 0.7, 0], s: 0.32, p: { ...SAILOR[0], seq: [[0, 'idle'], [W('b02', 'terminaron'), 'chew']] } },
       { type: 'faceless', pos: [-0.35, 0.43, -0.08], rot: [0, 0.9, 0], s: 0.32, at: W('b02', 'masticando'), p: { ...SAILOR[1], pose: 'chew', phase: 1.3 } },
     ],
-    overlays: [P1('MASTICARON CUERO', W('b02', 'cuero.'))] },
+    overlays: [H1('MASTICARON CUERO', W('b02', 'cuero.'))] },
 
   // 3. Hoy hace 506 años, el 28 de noviembre de 1520, sus naves salían a ese océano.
   { id: 'b03', set: 'room', cam: { from: [0.0, 2.6, 8.4], to: [0.0, 2.35, 7.2], look: [0, 0.7, -0.6], fov: 44 }, keywords: ['506', '1520,', 'océano.'],
@@ -65,7 +68,7 @@ export const BEATS: BeatSpec[] = [
       SHIP([0.4, 0, 3.6], PI / 2, { s: 0.6, move: { to: [0.4, 0, 0.0], at: 0.2, dur: 7.6 } }),
       SHIP([0.0, 0, 4.6], PI / 2, { s: 0.6, at: W('b03', '1520,'), move: { to: [0.0, 0, 1.6], at: W('b03', '1520,'), dur: 5 } }),
     ],
-    overlays: [P1('HOY HACE 506 AÑOS', W('b03', '506')), P2('28 DE NOVIEMBRE DE 1520', W('b03', '28')), FU] },
+    overlays: [H1('HOY HACE 506 AÑOS', W('b03', '506')), H2('28 DE NOVIEMBRE DE 1520', W('b03', '28')), FU] },
 
   // 4. Pero primero tuvieron que encontrar la entrada.
   { id: 'b04', set: 'room', cam: { from: [2.0, 1.6, 6.4], to: [1.3, 1.55, 6.0], look: [0.6, 0.8, 0], fov: 44 }, keywords: ['entrada.'],
@@ -90,7 +93,7 @@ export const BEATS: BeatSpec[] = [
       SHIP([0.0, 0, 1.8], PI / 2, { s: 0.65, move: { to: [0.0, 0, 0.6], at: 0, dur: 2.6 } }),
       SHIP([0.15, 0, 0.0], PI / 2, { s: 0.65, move: { to: [0.15, 0, -1.2], at: 0, dur: 2.6 } }),
     ],
-    overlays: [P1('MÁS DE UN MES', W('b06', 'mes.')), FU] },
+    overlays: [H1('MÁS DE UN MES', W('b06', 'mes.')), FU] },
 
   // 7. Cuando por fin ve el mar abierto, Magallanes llora de alegría.
   { id: 'b07', set: 'room', cam: { from: [0.9, 1.75, 4.8], to: [0.7, 1.7, 4.2], look: [-0.1, 0.8, -1.5], fov: 44 }, keywords: ['abierto,', 'alegría.'],
@@ -98,7 +101,7 @@ export const BEATS: BeatSpec[] = [
       SHIP([0, 0, 0.6], PI / 2, { s: 1.3, p: { still: true, furl: 1 } }),
       { type: 'faceless', pos: [0.0, 0.37, 0.3], rot: [0, PI, 0], s: 0.42, p: { shirt: '#3d4a5a', pants: '#2a2622', skin: '#e0b48c', hair: '#3a2a1a', seq: [[0, 'idle'], [W('b07', 'llora'), 'face'], [W('b07', 'alegría.'), 'cheer']] } },
     ],
-    overlays: [P1('FERNANDO DE MAGALLANES', W('b07', 'Magallanes')), FU] },
+    overlays: [H1('FERNANDO DE MAGALLANES', W('b07', 'Magallanes')), FU] },
 
   // 8. Pero ahí llega la traición.
   { id: 'b08', set: 'room', cam: { from: [-0.8, 1.7, 6.6], to: [-0.5, 1.6, 6.0], look: [0.2, 0.6, 0], fov: 44 }, keywords: ['traición.'],
@@ -120,7 +123,7 @@ export const BEATS: BeatSpec[] = [
       { type: 'ship', pos: [0.75, 0, 0.0], rot: [0, PI / 2, 0], s: 0.78, p: { cargo: 8, lantern: '#ff3b2e' }, out: W('b09', 'vuelta,') },
       { type: 'shipturn', pos: [0.75, 0, 0.0], s: 0.78, at: W('b09', 'vuelta,'), enter: 'none', p: { cargo: 8, lantern: '#ff3b2e', at: W('b09', 'vuelta,'), dur: 1.3, go: W('b09', 'rumbo'), d: [0.3, 0, 3.2] } },
     ],
-    overlays: [P1('SAN ANTONIO', W('b09', 'Antonio,'), { out: W('b09', 'provista,') }), P1('LA MÁS GRANDE Y MEJOR PROVISTA', W('b09', 'provista,')), P2('RUMBO A ESPAÑA', W('b09', 'España.')), FU] },
+    overlays: [H1('SAN ANTONIO', W('b09', 'Antonio,'), { out: W('b09', 'provista,') }), H1('LA MÁS GRANDE Y MEJOR PROVISTA', W('b09', 'provista,')), H2('RUMBO A ESPAÑA', W('b09', 'España.')), FU] },
 
   // 10. Al océano salen solo tres naves.
   { id: 'b10', set: 'room', cam: { from: [-2.2, 1.3, 5.4], to: [-1.8, 1.25, 4.8], look: [0.2, 0.55, -0.6], fov: 44 }, keywords: ['tres'],
@@ -130,11 +133,11 @@ export const BEATS: BeatSpec[] = [
       SHIP([1.5, 0, 1.6], -PI * 0.15, { s: 0.6, at: W('b10', 'tres'), move: { to: [0.4, 0, 0.9], at: 0, dur: 2.4 } }),
       SHIP([1.9, 0, 2.6], -PI * 0.15, { s: 0.6, at: W('b10', 'tres') + 0.15, move: { to: [0.9, 0, 1.9], at: 0, dur: 2.4 } }),
     ],
-    overlays: [P1('3 NAVES', W('b10', 'tres')), FU] },
+    overlays: [H1('3 NAVES', W('b10', 'tres')), FU] },
 
   // 11. Y ese mar ya tenía nombre.
   { id: 'b11', set: 'room', cam: { from: [0.4, 4.2, 5.4], to: [0.15, 4.0, 4.8], look: [0, 0.6, 0], fov: 44 }, keywords: ['nombre.'],
-    actors: [DUSK,
+    actors: [{ type: 'world', p: { kind: 'dusk', dark: '#151011' } },
       { type: 'chart', pos: [0, 0, 0], p: { hl: W('b11', 'nombre.') } },
     ],
     overlays: [FU] },
@@ -154,14 +157,14 @@ export const BEATS: BeatSpec[] = [
       SHIP([1.1, 0, -0.6], PI * 0.9, { s: 0.75, move: { to: [0.85, 0, -0.8], at: 0, dur: 3.8 } }),
       { type: 'tally', pos: [-0.08, 1.12, 2.2], rot: [-0.15, 0.2, 0], s: 0.3, p: { at: W('b13', 'travesía'), dur: W('b13', 'días.') - W('b13', 'travesía') + 0.3 } },
     ],
-    overlays: [P1('99 DÍAS', W('b13', '99')), P2('SEGÚN HISTORY.COM', -1.2), FU] },
+    overlays: [H1('99 DÍAS', W('b13', '99')), H2('SEGÚN HISTORY.COM', -1.2), FU] },
 
   // 14. Y la comida se acaba.
   { id: 'b14', set: 'room', cam: { from: [0.5, 1.7, 4.4], to: [0.25, 1.6, 3.9], look: [0, 0.55, 0], fov: 44 }, keywords: ['comida', 'acaba.'],
     actors: [DUSK,
       { type: 'hold', pos: [0, 0, 0], p: { at: W('b14', 'comida') } },
     ],
-    overlays: [P1('SIN COMIDA', W('b14', 'acaba.')), FU] },
+    overlays: [H1('SIN COMIDA', W('b14', 'acaba.')), FU] },
 
   // 15. Para seguir vivos, mastican las partes de cuero de sus equipos.
   { id: 'b15', set: 'room', cam: { from: [-0.5, 1.55, 5.2], to: [-0.25, 1.5, 4.7], look: [0, 0.9, 0], fov: 44 }, keywords: ['mastican', 'cuero'],
@@ -172,12 +175,12 @@ export const BEATS: BeatSpec[] = [
       { type: 'faceless', pos: [0.05, 0.34, 0.15], rot: [0, 0, 0], s: 0.6, at: W('b15', 'mastican'), p: { ...SAILOR[1], pose: 'chew', phase: 1.1 } },
       { type: 'faceless', pos: [0.8, 0.34, -0.05], rot: [0, -0.4, 0], s: 0.6, at: W('b15', 'cuero'), p: { ...SAILOR[2], pose: 'chew', phase: 2.3 } },
     ],
-    overlays: [P1('CUERO DE SUS EQUIPOS', W('b15', 'cuero')), FU] },
+    overlays: [P1('CUERO DE SUS EQUIPOS', W('b15', 'cuero'), { y: 70.3 }), { ...FU, y: 74.2 }] },
 
   // 16. 506 años después, ese mar del hambre se sigue llamando Pacífico.
   { id: 'b16', set: 'room', cam: { from: [-0.5, 1.9, 8.6], to: [-0.1, 1.75, 7.6], look: [0, 0.75, 0], fov: 44 }, keywords: ['506', 'Pacífico.'],
     actors: [MIRROR],
-    overlays: [P1('PACÍFICO', W('b16', 'Pacífico.')), FU] },
+    overlays: [H1('PACÍFICO', W('b16', 'Pacífico.')), FU] },
 
   // 17. Verdadero o falso: Magallanes completó la vuelta al mundo. Respondé abajo, sin buscar.
   { id: 'b17', set: 'room', cam: { from: [0.3, 1.8, 7.4], to: [0.0, 1.7, 6.6], look: [0, 1.2, 0], fov: 44 }, keywords: ['Verdadero', 'completó', 'buscar.'],
@@ -186,6 +189,6 @@ export const BEATS: BeatSpec[] = [
       { type: 'check', pos: [-1.15, 1.45, 0.3], s: 0.4, at: W('b17', 'Verdadero') },
       { type: 'cross', pos: [1.15, 1.45, 0.3], s: 0.4, at: W('b17', 'falso:') },
     ],
-    overlays: [P1('¿VERDADERO O FALSO?', W('b17', 'Verdadero'), { out: W('b17', 'buscar.') }), P1('RESPONDÉ SIN BUSCAR', W('b17', 'buscar.')),
-      P2('MAGALLANES COMPLETÓ LA VUELTA AL MUNDO', W('b17', 'mundo.'))] },
+    overlays: [H1('¿VERDADERO O FALSO?', W('b17', 'Verdadero'), { out: W('b17', 'buscar.') }), H1('RESPONDÉ SIN BUSCAR', W('b17', 'buscar.')),
+      H2('MAGALLANES COMPLETÓ LA VUELTA AL MUNDO', W('b17', 'mundo.'))] },
 ];

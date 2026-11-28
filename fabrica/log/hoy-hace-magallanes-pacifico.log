@@ -17,3 +17,4 @@
 2026-11-28T02:05:52-03:00 [productor] stills revisados, keywords exactas y anclas numéricas verificadas por script; uniones medidas en 47 cuadros de riesgo: mínimo 19 px. Mezcla lista. Lanzo el render
 2026-11-28T02:05:52-03:00 [fabrica] etapa -> render
 2026-11-28T02:11:59-03:00 [productor] render 1 medido: mástil detrás de la franja en b02 (luma 100) y unión Magallanes|completó 12 px. Arreglo: mástiles en silueta oscura sin luz y +8 px a cada lado del recuadro de palabra clave (CSS en entry.ts). Re-render
+2026-11-28T02:21:49-03:00 [productor] placas movidas al cielo (y 31,5/36 %) en los planos con naves para no taparlas; b11 con fondo oscuro (la franja daba 86 de luma). Render final

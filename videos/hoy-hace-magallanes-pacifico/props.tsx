@@ -31,7 +31,7 @@ export const curve = (kf: [number, number][], t: number) => {
 };
 
 export const WOOD = '#7a5233', WOOD2 = '#5e3d25', WOOD3 = '#93673f', SAIL = '#b3a68a', SAIL2 = '#9e9177', ROPE = '#3b2a1c', LEATHER = '#6e4326';
-export const MAST = '#3a2618';
+export const MAST = '#1f150d';
 export const ROCK = ['#4d545b', '#5a6168', '#434a51', '#636a71'];
 
 const KIND: Record<string, { sky: [number, string][]; fog: string; sea: string; amp: number; hemi: [string, string, number]; dir: string; dirI: number }> = {
@@ -108,12 +108,12 @@ export const Ship: React.FC<P> = ({ t, p }) => {
       <B s={[0.7, 0.02, 0.36]} pos={[0.04, 0.365, 0]} c={WOOD3} />
       <B s={[0.3, 0.12, 0.4]} pos={[-0.56, 0.6, 0]} c={WOOD2} />
       {/* mástiles */}
-      <Cyl r={0.022} h={1.35} pos={[0.32, 1.02, 0]} c={MAST} />
-      <Cyl r={0.026} h={1.6} pos={[-0.02, 1.15, 0]} c={MAST} />
-      <Cyl r={0.018} h={0.95} pos={[-0.4, 0.95, 0]} c={MAST} />
+      {/* mástiles y vergas sin luz (siluetas oscuras): cuando pasan detrás de los subtítulos no levantan el fondo */}
+      {[[0.022, 1.35, 0.32, 1.02], [0.026, 1.6, -0.02, 1.15], [0.018, 0.95, -0.4, 0.95]].map(([r, h, x, y], i) => (
+        <mesh key={i} position={[x, y, 0]}><cylinderGeometry args={[r, r, h, 6]} /><meshBasicMaterial color={MAST} /></mesh>))}
       <Cyl r={0.016} h={0.5} pos={[0.92, 0.5, 0]} rot={[0, 0, -1.15]} c={WOOD2} />
       {/* vergas */}
-      {[[0.32, 1.2, 0.5], [0.32, 1.56, 0.38], [-0.02, 1.3, 0.6], [-0.02, 1.74, 0.44]].map(([x, y, w], i) => <B key={i} s={[0.03, 0.03, w + 0.06]} pos={[x, y, 0]} c={MAST} />)}
+      {[[0.32, 1.2, 0.5], [0.32, 1.56, 0.38], [-0.02, 1.3, 0.6], [-0.02, 1.74, 0.44]].map(([x, y, w], i) => <mesh key={i} position={[x, y, 0]}><boxGeometry args={[0.03, 0.03, w + 0.06]} /><meshBasicMaterial color={MAST} /></mesh>)}
       {sails > 0.5 && <group>
         <Sail w={0.27} h={0.4} pos={[0.31, 0.98, 0]} c={sail} t={t} ph={ph} />
         <Sail w={0.2} h={0.3} pos={[0.31, 1.4, 0]} c={sail} t={t} ph={ph + 1} />

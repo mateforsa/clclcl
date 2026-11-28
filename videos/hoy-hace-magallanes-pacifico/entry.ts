@@ -8,7 +8,8 @@ import { makeRoot } from '../../src/Video';
 // Igual que en exportaciones-agro-5717 (sin tocar src/): solo en este video el hueco horizontal entre palabras pasa a 32 px.
 if (typeof document !== 'undefined' && !document.getElementById('subs-gap')) {
   const st = document.createElement('style'); st.id = 'subs-gap';
-  st.textContent = 'div[style*="gap: 6px 20px"]{column-gap:32px !important}';
+  // y las palabras clave (recuadro azul) llevan 8 px más de cada lado: el recuadro cuenta como tinta en la medición.
+  st.textContent = 'div[style*="gap: 6px 20px"]{column-gap:32px !important} div[style*="gap: 6px 20px"] > span[style*="padding: 0px 18px"]{margin:0 8px}';
   document.head.appendChild(st);
 }
 registerRoot(makeRoot(timing, BEATS, EXTRA));
