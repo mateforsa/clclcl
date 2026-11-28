@@ -2490,7 +2490,24 @@
    ],
    "nota": "AVISO: dura 74 s, se pasa del tope; acortarlo exige regenerar la voz",
    "caracteres_voz": 1141
+  },
+  "hoy-hace-independiente-juventus-1973": {
+   "titulo": "Hoy hace 53 años: el gol de Bochini que estuvo perdido",
+   "tema": "Efeméride fútbol",
+   "fuentes": [
+    "https://www.lanacion.com.ar/deportes/futbol/independiente/a-medio-siglo-del-independiente-campeon-del-mundo-contra-juventus-en-italia-con-un-golazo-de-ricardo-nid28112023/",
+    "https://www.infobae.com/deportes/2023/11/28/la-increible-historia-de-la-recuperacion-del-gol-perdido-de-bochini-a-50-anos-de-independiente-campeon-del-mundo/"
+   ],
+   "puntaje": 7.5,
+   "etapa": "idea",
+   "creado": "2026-11-27T22:44:38-03:00",
+   "historial": [
+    {
+     "etapa": "idea",
+     "cuando": "2026-11-27T22:44:38-03:00"
+    }
+   ]
   }
  },
- "actualizado": "2026-11-27T22:27:11-03:00"
+ "actualizado": "2026-11-27T22:44:39-03:00"
 }
