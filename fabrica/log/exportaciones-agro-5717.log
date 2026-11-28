@@ -13,3 +13,7 @@
 2026-11-27T21:48:06-03:00 [oido] oído: 98 % de coincidencia; dudosos: ninguno; diferencias: →un; bovinos→bobinos; →son; diez→10
 2026-11-27T21:48:31-03:00 [productor] pronunciación: Whisper 98 %, cifras largas bien (15.397, 32.449, 5.717, 106,82, 48.967). 'bobinos' es b/v, 'un un' y 'son' no aparecen al oír los tramos sueltos. AVISO: la voz dura 74 s; recortar el plano 4 deja 71,7 s (sigue arriba de 70), así que no regenero
 2026-11-27T21:57:16-03:00 [productor] beats.ts, entry.ts y props.tsx escritos (muelle al amanecer, 17 planos); anclas y keywords verificadas con script. Stills
+2026-11-27T22:06:26-03:00 [productor] stills revisados (cuadro 0, 85 %), barrido sin subtítulos cada 3 cuadros: franja y 290-390 oscura en los 17 planos (b07 recuadrado: el horizonte rozaba la franja). Anclas exactas, sin pill, placas con borde <= 1450 px. Mezcla -14,3 LUFS. Portada lista. Render
+2026-11-27T22:06:26-03:00 [fabrica] etapa -> render
+2026-11-27T22:10:24-03:00 [productor] render listo: out/exportaciones-agro-5717/exportaciones-agro-5717.mp4, 74 s (1080x1920, 30 fps, -14,3 LUFS; voz 74 s, pasa de 70 s: plano 4 recortable pero recortarlo deja 71,7 s, no regeneré). Portada: instagram/portadas/exportaciones-agro-5717.jpg
+2026-11-27T22:10:24-03:00 [fabrica] etapa -> revision

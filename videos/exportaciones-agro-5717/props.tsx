@@ -135,7 +135,7 @@ export const Balanza: React.FC<P> = ({ t, tt, p }) => {
   const end = (s: number): V3 => [s * L * Math.cos(a), y0 + s * L * Math.sin(a), 0];
   const item = (it: any, s: number) => {
     if (!it) return null; const [x, y] = end(s); const k = it.at === undefined ? 1 : eo((t - it.at) / 0.35);
-    if (it.at !== undefined && t < it.at) return null; const lift = (1 - k) * 1.4;
+    if (it.at !== undefined && t < it.at) return null; const lift = (1 - k) * 0.6;
     if (it.out !== undefined && t >= it.out) return null;
     return <group position={[x + (it.dx ?? 0), y + 0.33 + lift, 0]}><Item t={t} tt={tt} p={it} /></group>;
   };

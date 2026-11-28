@@ -1,0 +1,3 @@
+{ "beat": "b02", "frac": 0.95,
+  "overlay": { "kicker": "CAMPO ARGENTINO",
+    "lines": [ { "t": "ACEITE DE CÍTRICOS", "size": 96 }, { "t": "MÁS DEL DOBLE", "c": "yellow", "size": 128 }, { "t": "QUE LA CARNE · US$ 32.449 / T", "size": 58, "c": "cyan" } ] } }
