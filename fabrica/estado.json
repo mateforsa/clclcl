@@ -3186,14 +3186,14 @@
    "link": "https://www.instagram.com/reel/DgSGTCwNz0k/"
   },
   "gta-vi-xbox-one-nube": {
-   "titulo": "GTA VI en una Xbox One de 2013: por la nube, apenas 9 milisegundos más lento",
+   "titulo": "GTA 6 en una Xbox One S de hace 10 años: por la nube, apenas 9 milisegundos más lento",
    "tema": "videojuegos",
    "fuentes": [
     "https://vandal.elespanol.com/noticia/2026331023/asi-se-juega-a-gta-6-en-una-xbox-one-de-2013-digital-foundry-analiza-los-sorprendentes-resultados/",
     "https://www.3djuegos.com/xbox-one/noticias/digital-foundry-pone-a-prueba-gta-6-xbox-one-gracias-a-nube-microsoft-resultado-mejor-esperado"
    ],
    "puntaje": 7.5,
-   "etapa": "verificado",
+   "etapa": "voz",
    "creado": "2026-11-28T08:44:50-03:00",
    "historial": [
     {
@@ -3224,9 +3224,20 @@
      "etapa": "verificado",
      "cuando": "2026-11-28T08:52:39-03:00",
      "nota": ""
+    },
+    {
+     "etapa": "esperando_ok_voz",
+     "cuando": "2026-11-28T08:53:14-03:00",
+     "nota": ""
+    },
+    {
+     "etapa": "voz",
+     "cuando": "2026-11-28T08:53:14-03:00",
+     "nota": "voz sin OK (regla voz_sin_ok del dueño)"
     }
    ],
-   "nota": ""
+   "nota": "",
+   "caracteres_voz": 918
   },
   "ramal-c14-socompa": {
    "titulo": "El tren a 4.000 metros que toca bocina en el mismo lugar desde hace 30 años",
@@ -3268,5 +3279,5 @@
    "caracteres_voz": 957
   }
  },
- "actualizado": "2026-11-28T08:52:52-03:00"
+ "actualizado": "2026-11-28T08:53:14-03:00"
 }
