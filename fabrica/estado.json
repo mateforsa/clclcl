@@ -2756,10 +2756,20 @@
      "etapa": "guion",
      "cuando": "2026-11-28T02:52:27-03:00",
      "nota": ""
+    },
+    {
+     "etapa": "guion",
+     "cuando": "2026-11-28T02:58:07-03:00",
+     "nota": "devuelto por el verificador: el 'así' del plano 8 hace oír que Rincón usa la resina de Fénix; 'el litio se concentra' de la descripción no tiene fuente"
+    },
+    {
+     "etapa": "guion",
+     "cuando": "2026-11-28T02:58:42-03:00",
+     "nota": ""
     }
    ],
    "nota": ""
   }
  },
- "actualizado": "2026-11-28T02:56:56-03:00"
+ "actualizado": "2026-11-28T02:58:42-03:00"
 }
