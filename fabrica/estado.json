@@ -2857,7 +2857,41 @@
    "nota": "",
    "caracteres_voz": 952,
    "link": "https://www.instagram.com/reel/DgRtcTWhcha/"
+  },
+  "potabilizadora-san-martin": {
+   "titulo": "La canilla de 5,8 millones de personas empieza a 1.200 metros adentro del río",
+   "tema": "negocios y tecnología",
+   "fuentes": [
+    "https://www.argentina.gob.ar/noticias/pena-y-frigerio-recorrieron-la-planta-general-san-martin-de-aysa",
+    "https://www.infobae.com/sociedad/2019/12/19/malena-galmarini-y-gabriel-katopodis-recorrieron-una-planta-potabilizadora-de-palermo/"
+   ],
+   "puntaje": 7.8,
+   "etapa": "idea",
+   "creado": "2026-11-28T05:10:46-03:00",
+   "historial": [
+    {
+     "etapa": "idea",
+     "cuando": "2026-11-28T05:10:46-03:00"
+    }
+   ]
+  },
+  "atucha-olla-72-tornillos": {
+   "titulo": "La tapa del reactor de Atucha se cierra con 72 tornillos de 1.000 toneladas",
+   "tema": "negocios y tecnología",
+   "fuentes": [
+    "https://www.infobae.com/sociedad/2019/07/08/viaje-a-las-entranas-de-la-central-nuclear-de-atucha-por-que-en-la-argentina-no-podria-ocurrir-un-chernobyl/",
+    "https://www.perfil.com/noticias/ciencia/tras-serie-chernobyl-asi-se-preparan-centrales-nucleares-argentinas-evitar-accidente.phtml"
+   ],
+   "puntaje": 7.5,
+   "etapa": "idea",
+   "creado": "2026-11-28T05:10:46-03:00",
+   "historial": [
+    {
+     "etapa": "idea",
+     "cuando": "2026-11-28T05:10:46-03:00"
+    }
+   ]
   }
  },
- "actualizado": "2026-11-28T05:02:56-03:00"
+ "actualizado": "2026-11-28T05:10:46-03:00"
 }

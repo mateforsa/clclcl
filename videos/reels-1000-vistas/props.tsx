@@ -135,7 +135,9 @@ const poseOf = (name: string, t: number, ph: number): Pose => {
 };
 const mix = (a: V3, b: V3, k: number): V3 => [lerp(a[0], b[0], k), lerp(a[1], b[1], k), lerp(a[2], b[2], k)];
 export const Folk: React.FC<P> = ({ t, p }) => {
-  const { shirt = SHIRTS[0], pants = '#283048', skin = SKINS[0], hair = '#2a1d14', ph = 0, phone } = p;
+  // QC (solo en el bundle de control, nunca en el render): toda la gente en magenta plano para medir si una placa la tapa
+  const QC = typeof window !== 'undefined' && (window as any).__QCF;
+  const { shirt = SHIRTS[0], pants = '#283048', skin = SKINS[0], hair = '#2a1d14', ph = 0, phone } = QC ? { ...p, shirt: '#ff00ff', pants: '#ff00ff', skin: '#ff00ff', hair: '#ff00ff' } : p;
   const seq: [number, string][] = p.seq ?? [[0, p.pose ?? 'idle']];
   let i = 0; for (let j = 0; j < seq.length; j++) if (t >= seq[j][0]) i = j;
   let q = poseOf(seq[i][1], t, ph);
