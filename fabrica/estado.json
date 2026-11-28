@@ -3033,7 +3033,42 @@
    "nota": "",
    "caracteres_voz": 992,
    "link": "https://www.instagram.com/reel/DgR5Wfnh00G/"
+  },
+  "aluar-parque-eolico-fabrica": {
+   "titulo": "La fábrica que no se puede apagar: Aluar armó un parque eólico del tamaño de Buenos Aires",
+   "tema": "negocios y tecnología",
+   "fuentes": [
+    "https://www.ambito.com/energia/ya-funciona-el-parque-eolico-mas-grande-la-argentina-tiene-el-tamano-caba-y-puede-abastecer-600000-hogares-n6336902",
+    "https://www.iprofesional.com/economia/420559-aluar-comienza-construir-primera-linea-electrica-privada-gestion-javier-milei",
+    "https://www.iprofesional.com/negocios/454613-record-de-divisas-aluar-reporto-ganancias-millonarias-y-acelera-su-plan-de-inversion"
+   ],
+   "puntaje": 8.0,
+   "etapa": "idea",
+   "creado": "2026-11-28T06:45:49-03:00",
+   "historial": [
+    {
+     "etapa": "idea",
+     "cuando": "2026-11-28T06:45:49-03:00"
+    }
+   ]
+  },
+  "fenix-plataforma-austral": {
+   "titulo": "A 60 km de la costa, una plataforma de 4.000 toneladas saca el 8% del gas argentino",
+   "tema": "negocios y tecnología",
+   "fuentes": [
+    "https://www.lanacion.com.ar/economia/comenzo-a-producir-gas-la-nueva-plataforma-instalada-en-el-mar-argentino-nid20092024/",
+    "https://www.iprofesional.com/economia/421001-hito-en-mar-argentino-total-energies-puso-en-accion-los-3-pozos-del-proyecto-fenix"
+   ],
+   "puntaje": 7.3,
+   "etapa": "idea",
+   "creado": "2026-11-28T06:45:49-03:00",
+   "historial": [
+    {
+     "etapa": "idea",
+     "cuando": "2026-11-28T06:45:49-03:00"
+    }
+   ]
   }
  },
- "actualizado": "2026-11-28T06:31:05-03:00"
+ "actualizado": "2026-11-28T06:45:49-03:00"
 }
