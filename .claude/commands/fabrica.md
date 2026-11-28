@@ -44,7 +44,7 @@ Reglas generales
 4. Si no hay nada aprobado, decilo y listá lo que está esperando OK.
 
 ## hora
-La corrida automática de cada hora. Nadie está mirando: no preguntes nada y no destrabes frenos salvo el de voz con `auto-voz` cuando `voz_sin_ok` está encendido.
+La corrida automática (cada 2 horas, a las y 34 de las horas impares en UTC: 22:34, 00:34, 02:34… en Argentina). Nadie está mirando: no preguntes nada y no destrabes frenos salvo el de voz con `auto-voz` cuando `voz_sin_ok` está encendido.
 La única publicación permitida es `auto-prueba` (reel de prueba de madrugada); nunca una publicación normal.
 1. `git pull` de la rama de trabajo y `python3 fabrica/estado.py tope`.
 2. Si hay videos en `voz`, o en `render`/`guion` con nota de rechazo: hacé **seguir** con esos (de a uno).
@@ -61,6 +61,14 @@ La única publicación permitida es `auto-prueba` (reel de prueba de madrugada);
    `fabrica/config.json`, según cuándo se generó la voz) y, si corresponde, lo sube como reel de PRUEBA, nunca normal. Si dice que
    está fuera de la franja, queda esperando el OK del dueño como siempre. Si avisa que la prueba salió normal, ponelo primero en el
    resumen: la subida automática se apagó sola.
+   Madrugada sin noticias (pedido del dueño, 28/11): en las corridas entre las 00:34 y las 07:34 (hora Argentina), si el editor no
+   elige ninguna noticia nueva con 7 o más, no termines ahí: hacé un video **inspirado en reels que funcionan**. Fuentes, en orden:
+   reels que mandó el dueño y `fabrica/referencias.md`; y, cuando la API de Instagram ande y el permiso esté dado, la búsqueda por
+   hashtag de la API (leé solo texto y números: tema, gancho de la descripción, me gusta, comentarios). Se toma el TEMA o el FORMATO
+   que pega, nunca el video: no se baja ni se reusa contenido ajeno, y el guion, los datos, la estética, la paleta y las escenas son
+   nuestros (estilo del canal). Tiene que ser algo para mandarle a un amigo y que invite a comentar. Pasa por las mismas etapas:
+   guionista → verificador (dos fuentes reales, como siempre) → productor → revisor. Anotá en `fabrica/candidatos/<hoy>.md` de qué
+   reel o formato salió la idea.
 4. Si `buscar_temas` es false, no busques: ya hay suficientes guiones esperando el OK del dueño, o se llegó al tope del día.
 5. Commit y push. Cerrá con un resumen de 3 líneas como máximo: qué quedó esperando OK (con el comando para aprobar), qué se produjo,
    o "sin novedades". Mandá el panel solo si cambió algo.
