@@ -2,3 +2,8 @@
 2026-11-28T08:44:50-03:00 [editor] elegido (corrida 08:34): sorpresa 7, vigencia 6, compartible 7, mostrable 3D 9 = 7.3. Rubro nuevo hoy (ferrocarril de montaña), muy mostrable en low-poly (vía, viaducto, locomotora, cartel 4.000 m). Ámbito 27/11: convenio Nación-Salta el lunes 30/11 para recuperar C14 y C15 (Salta-Socompa, minería de la Puna), 'no implica confirmación de inversión'. Diario Uno 23/6/2026: bocina en Quebrada del Agua por el accidente de 1996 (GT22 9702, ~100 m al vacío, tres ferroviarios). Cuidado en guion: el convenio aún no está firmado y no es inversión confirmada; el dato de la bocina es de junio. Se prefirió a corpus-christi-88 (7.8) para no sumar un cuarto video de energía hoy.
 2026-11-28T08:48:13-03:00 [guionista] guion escrito: 173 palabras, apertura tipo F52 objeto fuera de lugar (restos de la locomotora a +4.000 m) + contradicción de la bocina, cierre tipo memoria personal n.º 40 (¿Subiste al Tren a las Nubes? Contá en qué año). Convenio en condicional según Ámbito; Santilli, Sáenz y GT22 solo en placas; C14 y Socompa a confirmar
 2026-11-28T08:48:14-03:00 [fabrica] etapa -> guion
+2026-11-28T08:49:19-03:00 [verificador] APROBADO: 27 datos, todos con fuente (Diario Uno 23/6/2026, Ambito 27/11/2026; corroborado Cronista/Cadena3/Canal26). Lunes 30/11 coincide con calendario (hoy sab 28/11), en condicional.
+2026-11-28T08:49:20-03:00 [fabrica] etapa -> verificado
+2026-11-28T08:49:48-03:00 [fabrica] ramal-c14-socompa: la voz gasta unos 957 caracteres de ElevenLabs. AVISO: no se puede leer el saldo (la clave no tiene ese permiso); anotalo en fabrica/config.json.
+2026-11-28T08:49:48-03:00 [fabrica] etapa -> esperando_ok_voz
+2026-11-28T08:49:48-03:00 [fabrica] voz SIN OK del dueño (regla voz_sin_ok): ~957 caracteres

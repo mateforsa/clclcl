@@ -3204,6 +3204,11 @@
      "etapa": "guion",
      "cuando": "2026-11-28T08:48:14-03:00",
      "nota": ""
+    },
+    {
+     "etapa": "guion",
+     "cuando": "2026-11-28T08:49:46-03:00",
+     "nota": ""
     }
    ],
    "nota": ""
@@ -3216,7 +3221,7 @@
     "https://www.diariouno.com.ar/sociedad/el-misterioso-bocinazo-del-tren-mas-extremo-del-pais-y-la-historia-detras-un-homenaje-emocionante-n1568105"
    ],
    "puntaje": 7.3,
-   "etapa": "guion",
+   "etapa": "voz",
    "creado": "2026-11-28T08:44:50-03:00",
    "historial": [
     {
@@ -3227,10 +3232,26 @@
      "etapa": "guion",
      "cuando": "2026-11-28T08:48:14-03:00",
      "nota": ""
+    },
+    {
+     "etapa": "verificado",
+     "cuando": "2026-11-28T08:49:20-03:00",
+     "nota": ""
+    },
+    {
+     "etapa": "esperando_ok_voz",
+     "cuando": "2026-11-28T08:49:48-03:00",
+     "nota": ""
+    },
+    {
+     "etapa": "voz",
+     "cuando": "2026-11-28T08:49:48-03:00",
+     "nota": "voz sin OK (regla voz_sin_ok del dueño)"
     }
    ],
-   "nota": ""
+   "nota": "",
+   "caracteres_voz": 957
   }
  },
- "actualizado": "2026-11-28T08:48:14-03:00"
+ "actualizado": "2026-11-28T08:49:48-03:00"
 }
