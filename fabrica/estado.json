@@ -2499,15 +2499,37 @@
     "https://www.infobae.com/deportes/2023/11/28/la-increible-historia-de-la-recuperacion-del-gol-perdido-de-bochini-a-50-anos-de-independiente-campeon-del-mundo/"
    ],
    "puntaje": 7.5,
-   "etapa": "idea",
+   "etapa": "voz",
    "creado": "2026-11-27T22:44:38-03:00",
    "historial": [
     {
      "etapa": "idea",
      "cuando": "2026-11-27T22:44:38-03:00"
+    },
+    {
+     "etapa": "guion",
+     "cuando": "2026-11-27T22:48:25-03:00",
+     "nota": ""
+    },
+    {
+     "etapa": "verificado",
+     "cuando": "2026-11-27T22:49:32-03:00",
+     "nota": ""
+    },
+    {
+     "etapa": "esperando_ok_voz",
+     "cuando": "2026-11-27T22:49:54-03:00",
+     "nota": ""
+    },
+    {
+     "etapa": "voz",
+     "cuando": "2026-11-27T22:49:54-03:00",
+     "nota": "voz sin OK (regla voz_sin_ok del dueño)"
     }
-   ]
+   ],
+   "nota": "",
+   "caracteres_voz": 1030
   }
  },
- "actualizado": "2026-11-27T22:44:39-03:00"
+ "actualizado": "2026-11-27T22:49:54-03:00"
 }

@@ -1,2 +1,9 @@
 2026-11-27T22:44:38-03:00 [fabrica] idea creada: Hoy hace 53 años: el gol de Bochini que estuvo perdido
 2026-11-27T22:44:39-03:00 [editor] elegido (corrida 22:34): sorpresa 8, vigencia 7, compartible 7, 3D 8 = 7.5. Efeméride del 28/11 (sale mañana). Gancho: el gol que ganó la Intercontinental 1973 no se podía ver, el video estaba perdido hasta que un hincha (Mariano Asch) lo consiguió vía la RAI; Juventus jugó porque el Ajax no quiso y puso como condición partido único en Italia (Roma). Al haber poco video real, el 3D suma. Le gana a hoy-hace-boca-real-madrid-2000 (misma fecha, pero hay video real de sobra). Ojo: 'la única final a partido único' no está verificado en las fuentes; decir solo que se jugó a un partido en Italia. 53 años, aniversario no redondo.
+2026-11-27T22:48:25-03:00 [guionista] guion escrito: 179 palabras (unos 61 s), 13 planos, apertura tipo F52 objeto fuera de lugar (VHS negro desde Italia) con hoy hace 53 años como golpe 3, cierre tipo memoria personal n.º 34 (¿alguien en tu casa lo vio en vivo?). Sin parte N. Pronunciación a confirmar: Juventus, Ajax, Asch, RAI, VHS (Zoff y Cuccureddu solo en placa).
+2026-11-27T22:48:25-03:00 [fabrica] etapa -> guion
+2026-11-27T22:49:32-03:00 [verificador] APROBADO: 30 datos (voz, placas y descripcion), todos con fuente en La Nacion e Infobae 28/11/2023
+2026-11-27T22:49:32-03:00 [fabrica] etapa -> verificado
+2026-11-27T22:49:54-03:00 [fabrica] hoy-hace-independiente-juventus-1973: la voz gasta unos 1030 caracteres de ElevenLabs. AVISO: no se puede leer el saldo (la clave no tiene ese permiso); anotalo en fabrica/config.json.
+2026-11-27T22:49:54-03:00 [fabrica] etapa -> esperando_ok_voz
+2026-11-27T22:49:54-03:00 [fabrica] voz SIN OK del dueño (regla voz_sin_ok): ~1030 caracteres
