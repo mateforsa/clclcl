@@ -3193,7 +3193,7 @@
     "https://www.3djuegos.com/xbox-one/noticias/digital-foundry-pone-a-prueba-gta-6-xbox-one-gracias-a-nube-microsoft-resultado-mejor-esperado"
    ],
    "puntaje": 7.5,
-   "etapa": "render",
+   "etapa": "revision",
    "creado": "2026-11-28T08:44:50-03:00",
    "historial": [
     {
@@ -3238,6 +3238,11 @@
     {
      "etapa": "render",
      "cuando": "2026-11-28T09:27:12-03:00",
+     "nota": ""
+    },
+    {
+     "etapa": "revision",
+     "cuando": "2026-11-28T09:41:22-03:00",
      "nota": ""
     }
    ],
@@ -3289,5 +3294,5 @@
    "caracteres_voz": 957
   }
  },
- "actualizado": "2026-11-28T09:32:23-03:00"
+ "actualizado": "2026-11-28T09:41:42-03:00"
 }
