@@ -2722,7 +2722,7 @@
    "tema": "redes y algoritmo (pedido del dueño)",
    "fuentes": [],
    "puntaje": 9.0,
-   "etapa": "voz",
+   "etapa": "render",
    "creado": "2026-11-28T02:38:22-03:00",
    "historial": [
     {
@@ -2758,6 +2758,11 @@
      "etapa": "voz",
      "cuando": "2026-11-28T03:01:34-03:00",
      "nota": "voz sin OK (regla voz_sin_ok del dueño)"
+    },
+    {
+     "etapa": "render",
+     "cuando": "2026-11-28T04:26:56-03:00",
+     "nota": ""
     }
    ],
    "nota": "",
@@ -2849,5 +2854,5 @@
    "link": "https://www.instagram.com/reel/DgRtcTWhcha/"
   }
  },
- "actualizado": "2026-11-28T04:24:28-03:00"
+ "actualizado": "2026-11-28T04:26:56-03:00"
 }

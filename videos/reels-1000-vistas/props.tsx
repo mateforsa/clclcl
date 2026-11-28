@@ -124,7 +124,7 @@ type Pose = { aL: V3; aR: V3; lean: number; jump: number };
 const poseOf = (name: string, t: number, ph: number): Pose => {
   const s = Math.sin((t + ph) * 2.3), w = Math.sin((t + ph) * 8);
   switch (name) {
-    case 'cheer': return { aL: [0, 0, -2.5 - w * 0.12], aR: [0, 0, 2.5 + w * 0.12], lean: 0, jump: Math.abs(Math.sin((t + ph) * 6)) * 0.06 };
+    case 'cheer': return { aL: [w * 0.15, 0, -3.1], aR: [-w * 0.15, 0, 3.1], lean: 0, jump: Math.abs(Math.sin((t + ph) * 6)) * 0.06 };
     case 'phone': return { aL: [-1.05, 0, -0.3], aR: [-1.05, 0, 0.3], lean: 0.12, jump: 0 };
     case 'point': return { aL: [0.05, 0, -0.1], aR: [-1.4 + s * 0.04, 0, 0.1], lean: 0, jump: 0 };
     case 'throw': return { aL: [0.05, 0, -0.1], aR: [-2.6, 0, 0.2], lean: -0.05, jump: 0 };
@@ -147,9 +147,9 @@ export const Folk: React.FC<P> = ({ t, p }) => {
       {[-1, 1].map((sd) => <group key={sd} position={[0.085 * sd, 0.44, 0]} rotation={[wl * sd, 0, 0]}>
         <B s={[0.12, 0.44, 0.13]} pos={[0, -0.22, 0]} c={pants} /><B s={[0.13, 0.06, 0.18]} pos={[0, -0.42, 0.025]} c="#0d1120" /></group>)}
       <group position={[0, 0.44, 0]} rotation={[q.lean, 0, 0]}>
-        <B s={[0.34, 0.4, 0.2]} pos={[0, 0.2, 0]} c={shirt} />
-        <group position={[-0.22, 0.37, 0]} rotation={walking ? [-wl, 0, -0.1] : q.aL}><B s={[0.09, 0.32, 0.1]} pos={[0, -0.15, 0]} c={shirt} /><B s={[0.085, 0.08, 0.09]} pos={[0, -0.34, 0]} c={skin} /></group>
-        <group position={[0.22, 0.37, 0]} rotation={walking ? [wl, 0, 0.1] : q.aR}><B s={[0.09, 0.32, 0.1]} pos={[0, -0.15, 0]} c={shirt} /><B s={[0.085, 0.08, 0.09]} pos={[0, -0.34, 0]} c={skin} /></group>
+        <B s={[0.31, 0.4, 0.2]} pos={[0, 0.2, 0]} c={shirt} />
+        <group position={[-0.2, 0.37, 0]} rotation={walking ? [-wl, 0, -0.1] : q.aL}><B s={[0.09, 0.32, 0.1]} pos={[0, -0.15, 0]} c={shirt} /><B s={[0.085, 0.08, 0.09]} pos={[0, -0.34, 0]} c={skin} /></group>
+        <group position={[0.2, 0.37, 0]} rotation={walking ? [wl, 0, 0.1] : q.aR}><B s={[0.09, 0.32, 0.1]} pos={[0, -0.15, 0]} c={shirt} /><B s={[0.085, 0.08, 0.09]} pos={[0, -0.34, 0]} c={skin} /></group>
         {hasPhone && <group position={[0, 0.24, 0.27]} rotation={[-0.5, 0, 0]}><B s={[0.13, 0.2, 0.02]} c="#1b2233" /><B s={[0.11, 0.16, 0.005]} pos={[0, 0, 0.012]} c="#203a66" e="#2a5aa8" ei={0.5} /></group>}
         <group position={[0, 0.55, 0]}>
           <Ball r={0.125} c={skin} />
@@ -172,11 +172,11 @@ const Heart: React.FC<{ k: number; c?: string }> = ({ k, c = CORAL }) => (k <= 0
    lit / off (borde encendido / apagado), edge (color), sc (escala de la gente), phone (miran el celular), dim (se apaga todo) */
 export const Group: React.FC<P> = ({ t, p }) => {
   const { n = 3, h = 0.4, seed = 1, fol = 0, react, away, lit, off, edge = TEAL, sc = 0.8, phone = false, foot = true, look } = p;
-  const cols = Math.ceil(Math.sqrt(n * 1.6)); const rows = Math.ceil(n / cols); const sx = 0.32 * sc / 0.8, sz = 0.3 * sc / 0.8;
+  const cols = Math.ceil(Math.sqrt(n * 1.6)); const rows = Math.ceil(n / cols); const sx = 0.42 * sc / 0.8, sz = 0.3 * sc / 0.8;
   const w = p.w ?? cols * sx + 0.35, d = p.d ?? rows * sz + 0.35;
   const people = React.useMemo(() => { const r = rnd(seed); return Array.from({ length: n }, (_, i) => { const c = i % cols, rw = Math.floor(i / cols);
     const inRow = Math.min(cols, n - rw * cols);
-    return { x: (c - (inRow - 1) / 2) * sx + (r() - 0.5) * 0.05, z: (rw - (rows - 1) / 2) * sz + (r() - 0.5) * 0.04, ph: r() * 6, skin: SKINS[Math.floor(r() * SKINS.length)],
+    return { x: (c - (inRow - 1) / 2) * sx + (r() - 0.5) * 0.02, z: (rw - (rows - 1) / 2) * sz + (r() - 0.5) * 0.04, ph: r() * 6, skin: SKINS[Math.floor(r() * SKINS.length)],
       shirt: i < fol ? FOL : SHIRTS[(seed * 3 + i) % SHIRTS.length], hair: ['#2a1d14', '#4a3020', '#111', '#7a5a3a'][Math.floor(r() * 4)] }; }); }, [n, seed, fol]);
   const ek = (lit === undefined ? 1 : on(t, lit)) * (off === undefined ? 1 : 1 - on(t, off, 0.4));
   const ak = away === undefined ? 0 : eio((t - away) / 0.45);
