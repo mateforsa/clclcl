@@ -3184,7 +3184,41 @@
    "nota": "",
    "caracteres_voz": 970,
    "link": "https://www.instagram.com/reel/DgSGTCwNz0k/"
+  },
+  "gta-vi-xbox-one-nube": {
+   "titulo": "GTA VI en una Xbox One de 2013: por la nube, apenas 9 milisegundos más lento",
+   "tema": "videojuegos",
+   "fuentes": [
+    "https://vandal.elespanol.com/noticia/2026331023/asi-se-juega-a-gta-6-en-una-xbox-one-de-2013-digital-foundry-analiza-los-sorprendentes-resultados/",
+    "https://www.3djuegos.com/xbox-one/noticias/digital-foundry-pone-a-prueba-gta-6-xbox-one-gracias-a-nube-microsoft-resultado-mejor-esperado"
+   ],
+   "puntaje": 7.5,
+   "etapa": "idea",
+   "creado": "2026-11-28T08:44:50-03:00",
+   "historial": [
+    {
+     "etapa": "idea",
+     "cuando": "2026-11-28T08:44:50-03:00"
+    }
+   ]
+  },
+  "ramal-c14-socompa": {
+   "titulo": "El tren a 4.000 metros que toca bocina en el mismo lugar desde hace 30 años",
+   "tema": "economía argentina",
+   "fuentes": [
+    "https://www.ambito.com/energia/belgrano-cargas-se-firma-convenio-recuperar-los-ramales-c14-y-c15-claves-la-mineria-la-puna-n6350168",
+    "https://www.diariouno.com.ar/sociedad/el-misterioso-bocinazo-del-tren-mas-extremo-del-pais-y-la-historia-detras-un-homenaje-emocionante-n1568105"
+   ],
+   "puntaje": 7.3,
+   "etapa": "idea",
+   "creado": "2026-11-28T08:44:50-03:00",
+   "historial": [
+    {
+     "etapa": "idea",
+     "cuando": "2026-11-28T08:44:50-03:00"
+    }
+   ]
   }
  },
- "actualizado": "2026-11-28T08:01:36-03:00"
+ "actualizado": "2026-11-28T08:44:50-03:00"
 }
