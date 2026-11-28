@@ -2733,9 +2733,14 @@
      "etapa": "guion",
      "cuando": "2026-11-28T02:46:20-03:00",
      "nota": ""
+    },
+    {
+     "etapa": "guion",
+     "cuando": "2026-11-28T02:59:07-03:00",
+     "nota": "devuelto por el verificador: planos 6-7, placas 6-7 y la linea de Mosseri de la descripcion sin fuente leida; reformular con Meta 2023 (compartir como factor, tiempo de visualizacion en estadisticas) o quitar el 'un poco mas'"
     }
    ],
-   "nota": ""
+   "nota": "devuelto por el verificador: planos 6-7, placas 6-7 y la linea de Mosseri de la descripcion sin fuente leida; reformular con Meta 2023 (compartir como factor, tiempo de visualizacion en estadisticas) o quitar el 'un poco mas'"
   },
   "litio-pileta-salar": {
    "titulo": "El litio argentino tarda más de un año en salir de una pileta: la máquina que lo hace en días",
@@ -2745,7 +2750,7 @@
     "https://www.lanacion.com.ar/economia/el-oro-blanco-el-informe-del-gobierno-que-revela-la-actualidad-del-mineral-estrella-nid12102026/"
    ],
    "puntaje": 7.8,
-   "etapa": "guion",
+   "etapa": "voz",
    "creado": "2026-11-28T02:45:57-03:00",
    "historial": [
     {
@@ -2766,10 +2771,26 @@
      "etapa": "guion",
      "cuando": "2026-11-28T02:58:42-03:00",
      "nota": ""
+    },
+    {
+     "etapa": "verificado",
+     "cuando": "2026-11-28T02:59:20-03:00",
+     "nota": ""
+    },
+    {
+     "etapa": "esperando_ok_voz",
+     "cuando": "2026-11-28T02:59:35-03:00",
+     "nota": ""
+    },
+    {
+     "etapa": "voz",
+     "cuando": "2026-11-28T02:59:35-03:00",
+     "nota": "voz sin OK (regla voz_sin_ok del dueño)"
     }
    ],
-   "nota": ""
+   "nota": "",
+   "caracteres_voz": 952
   }
  },
- "actualizado": "2026-11-28T02:58:42-03:00"
+ "actualizado": "2026-11-28T02:59:35-03:00"
 }

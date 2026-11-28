@@ -6,3 +6,8 @@
 2026-11-28T02:58:07-03:00 [fabrica] etapa -> guion (devuelto por el verificador: el 'así' del plano 8 hace oír que Rincón usa la resina de Fénix; 'el litio se concentra' de la descripción no tiene fuente)
 2026-11-28T02:58:42-03:00 [guionista] vuelta 2: plano 8 dice 'con extracción directa' (no se le atribuye la resina de Fénix a Rincón); descripción sin 'el agua se va y el litio se concentra', reemplazado por las piletas celestes de La Nación; 173 palabras
 2026-11-28T02:58:42-03:00 [fabrica] etapa -> guion
+2026-11-28T02:59:20-03:00 [verificador] APROBADO: 20 datos, todos con fuente (vuelta 2: plano 8 'con extracción directa' = La Nación; descripción piletas celestes de evaporación = La Nación; resto sin cambios, ya verificado)
+2026-11-28T02:59:20-03:00 [fabrica] etapa -> verificado
+2026-11-28T02:59:35-03:00 [fabrica] litio-pileta-salar: la voz gasta unos 952 caracteres de ElevenLabs. AVISO: no se puede leer el saldo (la clave no tiene ese permiso); anotalo en fabrica/config.json.
+2026-11-28T02:59:35-03:00 [fabrica] etapa -> esperando_ok_voz
+2026-11-28T02:59:35-03:00 [fabrica] voz SIN OK del dueño (regla voz_sin_ok): ~952 caracteres
