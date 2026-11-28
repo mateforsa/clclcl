@@ -15,3 +15,6 @@
 2026-11-27T23:02:04-03:00 [productor] beats.ts, entry.ts y props.tsx escritos (Olímpico de noche + living con VHS, 13 planos); anclas y keywords verificadas con script. Stills
 2026-11-27T23:18:15-03:00 [productor] stills revisados y barrido sin subtítulos (todos los cuadros, media escala): franja y 290-390 con luma <= 41 en los 13 planos (b10 cartel RAI y b12 puerta/tele corregidos). Anclas exactas, sin pill, placas <= 1450 px, hueco de subtítulos 32 px. Mezcla lista. Render
 2026-11-27T23:18:15-03:00 [fabrica] etapa -> render
+2026-11-27T23:24:29-03:00 [productor] QC del primer render: la placa 2007 tapaba el papel del casete al final de b12; sale en 'VHS'. Re-render
+2026-11-27T23:29:34-03:00 [productor] render listo: out/hoy-hace-independiente-juventus-1973/hoy-hace-independiente-juventus-1973.mp4, 68 s (1080x1920, 30 fps, -14,2 LUFS / -3,8 dBTP). Uniones de subtítulos medidas en el MP4 (tinta luma>115 o recuadro azul, todos los cuadros): entre palabras >= 18 px (los huecos de 12-13 px son la J-u de 'Juventus', dentro de la palabra). Franja y 290-390 sin subtítulos: luma <= 41. Portada: instagram/portadas/hoy-hace-independiente-juventus-1973.jpg
+2026-11-27T23:29:34-03:00 [fabrica] etapa -> revision

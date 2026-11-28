@@ -160,7 +160,7 @@ export const BEATS: BeatSpec[] = [
       { type: 'tv', pos: [-0.2, 0.895, -1.6], p: { wood: '#36241a', legs: false, kind: 'pitch', on: [[0, 0], [tG - 0.25, 0], [tG + 0.1, 1]], ball: [[tG, -0.5, -0.5, 0], [tG + 0.5, 0.0, 0.1, 0], [tG + 0.9, 0.25, -0.35, 0]] } },
       { type: 'cassette', pos: [0, 0, 0], p: { path: [[0, -0.2, 0.475, -0.42], [tV, -0.2, 0.475, -0.42], [tV + 0.35, -0.2, 0.56, -0.42], [tV + 1.1, -0.2, 0.56, -1.42]] } },
     ],
-    overlays: [P1('2007', '2007'), FUR] },
+    overlays: [P1('2007', '2007', { out: 'VHS' }), FUR] },
 
   // 13. ¿Alguien en tu casa lo vio en vivo? Contalo abajo.
   { id: 'b13', set: 'room', cam: { from: [-0.7, 3.4, 4.9], to: [-0.3, 3.0, 4.2], look: [0, 0.65, -1.2], fov: 44, shift: 0 }, keywords: ['casa', 'vivo?', 'Contalo'],
