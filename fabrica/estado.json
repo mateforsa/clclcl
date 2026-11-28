@@ -2722,7 +2722,7 @@
    "tema": "redes y algoritmo (pedido del dueño)",
    "fuentes": [],
    "puntaje": 9.0,
-   "etapa": "revision",
+   "etapa": "render",
    "creado": "2026-11-28T02:38:22-03:00",
    "historial": [
     {
@@ -2767,6 +2767,11 @@
     {
      "etapa": "revision",
      "cuando": "2026-11-28T05:02:56-03:00",
+     "nota": ""
+    },
+    {
+     "etapa": "render",
+     "cuando": "2026-11-28T06:13:23-03:00",
      "nota": ""
     }
    ],
@@ -2866,7 +2871,7 @@
     "https://www.infobae.com/sociedad/2019/12/19/malena-galmarini-y-gabriel-katopodis-recorrieron-una-planta-potabilizadora-de-palermo/"
    ],
    "puntaje": 7.8,
-   "etapa": "render",
+   "etapa": "revision",
    "creado": "2026-11-28T05:10:46-03:00",
    "historial": [
     {
@@ -2907,9 +2912,14 @@
      "etapa": "render",
      "cuando": "2026-11-28T05:53:46-03:00",
      "nota": "devuelto por el revisor: b13 55,8–56,5 s la gota cruza tierra/paredes fuera de caños (pozo de bombas→pileta 1, entre piletas, filtro→tanque); hacerla viajar por caños o por encima"
+    },
+    {
+     "etapa": "revision",
+     "cuando": "2026-11-28T06:19:01-03:00",
+     "nota": ""
     }
    ],
-   "nota": "devuelto por el revisor: b13 55,8–56,5 s la gota cruza tierra/paredes fuera de caños (pozo de bombas→pileta 1, entre piletas, filtro→tanque); hacerla viajar por caños o por encima",
+   "nota": "",
    "caracteres_voz": 993
   },
   "atucha-olla-72-tornillos": {
@@ -2988,5 +2998,5 @@
    "link": "https://www.instagram.com/reel/DgR5Wfnh00G/"
   }
  },
- "actualizado": "2026-11-28T06:08:31-03:00"
+ "actualizado": "2026-11-28T06:19:01-03:00"
 }
