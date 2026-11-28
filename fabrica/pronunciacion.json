@@ -847,14 +847,14 @@
  "Fénix": {
   "dicho": "Fénix",
   "estado": "probada",
-  "puntaje": 0.56,
+  "puntaje": 0.64,
   "variantes": [
    "Fénix",
-   "Fénics",
-   "Fé-nix",
-   "Fénis"
+   "el Fénix",
+   "fénix, como el ave",
+   "Fénix."
   ],
-  "nota": "28/11/2026 fenix-plataforma-austral: Whisper oye \"Phoenix\" (= Fénix) con 1-3; \"Fénis\" ganó por puntaje (56 vs 54) pero pierde la x, se usa Fénix. Pendiente de que el dueño elija de oído."
+  "nota": "28/11/2026 fenix-plataforma-austral, vuelta 2: 10 variantes (Fénix, Fénix., Fénix,, Fé-nix, Fénics, Féniks, Fé nics, Fénikss, Fénis) -> Whisper oye siempre \"Phoenix\" (misma palabra en inglés), salvo \"el Fénix\" (agrega artículo: cambia el guion, descartada) y \"Fénis\" (pierde la x). Sin variante claramente mejor: SIN RESOLVER, que elija el dueño de oído."
  },
  "Aluar": {
   "dicho": "Alu-ar",
