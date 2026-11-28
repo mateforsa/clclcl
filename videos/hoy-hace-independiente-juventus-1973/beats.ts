@@ -34,6 +34,8 @@ const K6 = W('b06', 'tira') + 0.22;          // patada del penal
 const K8 = W('b08', 'pica.') - 0.12;         // la picada
 const tV = W('b12', 'VHS');                  // el casete entra
 const tG = W('b12', 'golazo');               // la tele se prende
+const CPATH = [[0, -0.2, 0.475, -0.42], [tV, -0.2, 0.475, -0.42], [tV + 0.35, -0.2, 0.56, -0.42], [tV + 1.1, -0.2, 0.56, -1.42]];
+const tL = tV + 2.0;                         // aparece el papel del casete (ya quieto y entero en cuadro)
 
 export const BEATS: BeatSpec[] = [
   // 1. Un VHS negro llega por correo desde Italia. En el lomo: Juventus contra Independiente.
@@ -96,12 +98,12 @@ export const BEATS: BeatSpec[] = [
   // 7. Faltan diez minutos. Bochini y Bertoni, dos pibes, hacen dos paredes seguidas.
   { id: 'b07', set: 'void', cam: { from: [0.4, 5.0, 6.2], to: [0.1, 4.6, 5.3], look: [0, 0.0, -2.2], lookTo: [0, 0.0, -2.6], fov: 44, shift: 0 }, keywords: ['Bochini', 'Bertoni,', 'paredes'],
     actors: [EST({}),
-      { type: 'paredes', pos: [0, 0, 0], p: { t0: 1.2, dur: 4.4, passes: [0.6, 1.4, 2.2, 3.0], z0: 2.2, z1: -1.6, la: W('b07', 'Bochini'), lb: W('b07', 'Bertoni,'), offA: 0.32, offB: -0.12, ls: 0.82, ly: 2.05, lo: W('b07', 'Bertoni,') + 0.35 } },
+      { type: 'paredes', pos: [0, 0, 0], p: { t0: 1.2, dur: 4.4, passes: [0.6, 1.4, 2.2, 3.0], z0: 2.2, z1: -1.6, la: 99, lb: 99, lo: -1 /* vuelta 3: sin carteles 3D de nombre; van en placa 2D */ } },
       { type: 'player', pos: [1.55, 0, -0.1], rot: [0, 0, 0], p: { kit: 'juv', poses: [[0, 'idle'], [3.2, 'sad']], phase: 1 } },
       { type: 'player', pos: [-1.6, 0, -2.8], rot: [0, 0.3, 0], p: { kit: 'juv', poses: [[0, 'idle'], [4.0, 'sad']], phase: 2.5 } },
       { type: 'player', pos: [0.05, 0, -3.7], p: { kit: 'juv', pose: 'gk', phase: 0.7 } },
     ],
-    overlays: [P1('FALTAN 10 MINUTOS', 'Faltan'), FUR] },
+    overlays: [P1('FALTAN 10 MINUTOS', 'Faltan', { out: 'Bochini' }), P1('BOCHINI · BERTONI', 'Bochini'), FUR] },
 
   // 8. Bochini queda solo contra el arquero y se la pica. Primera Intercontinental del club.
   { id: 'b08', set: 'void', cam: { from: [1.2, 3.4, 7.2], to: [0.9, 3.1, 6.4], look: [0.35, 0.7, -0.8], fov: 44, shift: 0 }, keywords: ['solo', 'pica.', 'Intercontinental'],
@@ -152,13 +154,16 @@ export const BEATS: BeatSpec[] = [
     overlays: [P1('500 EUROS PARA DIGITALIZAR', '500'), P2('¿ESTÁ EL GOL?', 'gol.'), FU] },
 
   // 12. En 2007 le tocaron el timbre: el VHS negro, con el golazo del Bocha.
-  { id: 'b12', set: 'room', cam: { from: [1.1, 1.85, 2.9], to: [0.15, 1.75, 2.5], look: [0.7, 1.15, -3.0], lookTo: [-0.15, 1.1, -1.3], fov: 44, shift: 0 }, keywords: ['2007', 'timbre:', 'VHS', 'golazo'],
+  { id: 'b12', set: 'room', cam: { from: [1.1, 1.85, 2.9], to: [0.075, 1.75, 2.5], look: [0.7, 1.15, -3.0], lookTo: [-0.225, 1.1, -1.3], fov: 44, shift: 0 }, keywords: ['2007', 'timbre:', 'VHS', 'golazo'],
     actors: [LIV({ door: true, era: 'new', lampX: -2.3 }),
       { type: 'timbre', pos: [0.98, 1.25, -3.5], p: { at: W('b12', 'timbre:') } },
       { type: 'mesa', pos: [-0.2, 0, -1.0], p: { w: 2.1, d: 2.0, h: 0.45, c: '#3a2618' } },
       { type: 'vcr', pos: [-0.2, 0.475, -1.5], p: { led: [[0, 0], [tV + 1.0, 0], [tV + 1.2, 1]] } },
       { type: 'tv', pos: [-0.2, 0.895, -1.6], p: { wood: '#36241a', legs: false, kind: 'pitch', on: [[0, 0], [tG - 0.25, 0], [tG + 0.1, 1]], ball: [[tG, -0.5, -0.5, 0], [tG + 0.5, 0.0, 0.1, 0], [tG + 0.9, 0.25, -0.35, 0]] } },
-      { type: 'cassette', pos: [0, 0, 0], p: { path: [[0, -0.2, 0.475, -0.42], [tV, -0.2, 0.475, -0.42], [tV + 0.35, -0.2, 0.56, -0.42], [tV + 1.1, -0.2, 0.56, -1.42]] } },
+      // vuelta 3: el casete entra sin papel (de cerca no entra entero en cuadro y el rótulo se leía cortado); el papel aparece
+      // recién con el casete quieto en la videocasetera, entero en cuadro.
+      { type: 'cassette', pos: [0, 0, 0], out: tL, p: { label: false, path: CPATH } },
+      { type: 'cassette', pos: [0, 0, 0], at: tL, enter: 'none', p: { path: CPATH } },
     ],
     overlays: [P1('2007', '2007', { out: 'VHS' }), FUR] },
 
