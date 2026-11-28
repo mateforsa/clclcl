@@ -21,11 +21,12 @@ dicen solo "enero".
   deuda de enero." Golpe 2, el dato enorme: "hay que pagar 4.370 millones de dólares". Golpe 3, la promesa visual: "Y lo arma en
   cuatro bloques." La última J fue J91 en `colapinto-fp2-qatar`, catorce videos atrás. No repite el A8 de `gta-vi-xbox-one-nube`,
   el F52 de `ramal-c14-socompa` ni el G63 de `aluar-parque-eolico-fabrica`. No es "Sos X".
-- **Cierre:** Playbook 3 Por continuación n.º 4 adaptado ("Falta el dato oficial, sale el [fecha]. Seguime y lo vemos"): "La
-  revisión del Fondo se espera en diciembre. Seguime y te cuento si entra el primer bloque." Callback a la pila del gancho (el
-  primer bloque, el de abajo, queda titilando). Ninguno de los últimos veinte cierres de `hooks_used.json` usó continuación: sin
-  elegir entre dos (lo usó `gta-vi-xbox-one-nube`), sin memoria personal (`ramal-c14-socompa`), sin predicción (`aluar`), sin
-  "¿Trabajás en...?", sin mandáselo. Lleva "Seguime" pero con motivo concreto y fechado, no "para la próxima historia".
+- **Cierre:** Playbook 4 Corrección y debate sano n.º 70 adaptado ("¿Qué parte te costó creer?") a una pregunta concreta sobre
+  el dato: "El primer bloque depende de diciembre. ¿Cuál de los cuatro te sorprendió más? Contalo en los comentarios." Callback a
+  la pila del gancho (el bloque de abajo titila). Invita a comentar sin tomar partido: no pregunta si el plan es bueno o malo.
+  Sin "Seguime" y sin promesa de continuación (pedido del coordinador). No repite los últimos veinte cierres ni el n.º 56 "¿Qué
+  parte querés que explique? Dejala abajo" de `malvinas-sea-lion-rechazo`, escrito en paralelo: sin elegir entre dos, sin número,
+  sin memoria personal, sin predicción, sin "¿Trabajás en...?", sin mandáselo, sin verdadero o falso.
 - **Imagen que abre y cierra:** una pila de cuatro bloques low-poly sobre una mesa, al lado de un hueco marcado "ENERO" con la
   altura de la deuda (una línea punteada arriba, no un número). Plano 1: la pila vacía, solo la línea punteada y una calculadora
   genérica. Planos 4 a 9: cae un bloque por plano, cada uno de un color y con su etiqueta. El de 1.800 (plano 9) es el más alto y
@@ -37,7 +38,7 @@ dicen solo "enero".
   mes del pago" (0:24), 300 (0:27), "el más grande", 1.800 (0:31), "no dijo cuándo" (0:36), la cita del rango (0:42), "el costo"
   (0:46), diciembre (0:52). Ningún tramo pasa de 6 s sin dato nuevo.
 - **Checks de la skill:** cero fallas duras (sin rayas, sin punto y coma, sin oraciones de una palabra, sin "no es X, es Y", sin
-  preguntas: el video no tiene ninguna). Gancho con nombre en la primera frase y número en la segunda. Una sola pedida al final.
+  preguntas en el medio: la única es la del cierre). Gancho con nombre en la primera frase y número en la segunda. Un solo pedido al final, sin "Seguime".
   El score.py en inglés solo da avisos blandos por los números escritos con letras y el CTA en castellano.
 
 ## Guion final (una línea por plano)
@@ -56,7 +57,7 @@ dicen solo "enero".
 | 10 | 0:36 | El Tesoro se los compra al Banco Central con pesos del superávit. El ministro no dijo cuándo. |
 | 11 | 0:42 | Con eso, según Caputo, «ya estás en los 4.300, 4.400». |
 | 12 | 0:46 | Según Infobae, ahí está el costo: esos dólares salen de las reservas del Banco Central. |
-| 13 | 0:52 | La revisión del Fondo se espera en diciembre. Seguime y te cuento si entra el primer bloque. |
+| 13 | 0:52 | El primer bloque depende de diciembre. ¿Cuál de los cuatro te sorprendió más? Contalo en los comentarios. |
 
 Tiempos estimados a unas 2,9 palabras dichas por segundo (unos 58 s). Los reales salen de `timing.json` después de la voz. Si la
 toma pasa de 62 s, el primer recorte posible es la segunda frase del plano 10 ("El ministro no dijo cuándo.") y su placa pasa
@@ -98,7 +99,7 @@ Fuentes leídas en copias bajadas con curl el 28/11/2026 (scratchpad `buscador-1
 | Vencimiento de enero: US$ 4.370 millones según Caputo (La Nación escribe "casi US$4400 millones"; Infobae, "USD 4.400 millones") | 2: "Según el ministro, hay que pagar 4.370 millones de dólares." | [La Nación](https://www.lanacion.com.ar/economia/el-plan-de-caputo-para-pagar-el-vencimiento-de-deuda-de-enero-de-us4370-millones-ingresos-externos-nid27112026/) (cita "Nosotros tenemos que pagar US$4370 millones"), [Infobae](https://www.infobae.com/economia/2026/11/28/el-plan-del-gobierno-para-pagar-la-deuda-en-enero-tiene-respuesta-y-un-costo-las-reservas-del-banco-central/) ("un vencimiento de USD 4.400 millones en enero") |
 | Cuatro fuentes de dólares: organismos, préstamos garantizados, venta de AySA y compra al BCRA | 3: "Y lo arma en cuatro bloques." | [La Nación](https://www.lanacion.com.ar/economia/el-plan-de-caputo-para-pagar-el-vencimiento-de-deuda-de-enero-de-us4370-millones-ingresos-externos-nid27112026/), [Infobae](https://www.infobae.com/economia/2026/11/28/el-plan-del-gobierno-para-pagar-la-deuda-en-enero-tiene-respuesta-y-un-costo-las-reservas-del-banco-central/) ("Caputo identificó desembolsos de organismos internacionales, créditos garantizados por entidades regionales, recursos de la venta de AySA y compras de divisas al Banco Central") |
 | US$ 1.200 millones del FMI y otros organismos multilaterales, según Caputo | 4: "Primer bloque: 1.200 millones del Fondo Monetario y otros organismos." | [La Nación](https://www.lanacion.com.ar/economia/el-plan-de-caputo-para-pagar-el-vencimiento-de-deuda-de-enero-de-us4370-millones-ingresos-externos-nid27112026/) ("ingresarán US$1200 millones correspondientes 'al Fondo [Monetario Internacional] y los [otros organismos] multilaterales'"), [Infobae](https://www.infobae.com/economia/2026/11/28/el-plan-del-gobierno-para-pagar-la-deuda-en-enero-tiene-respuesta-y-un-costo-las-reservas-del-banco-central/) ("cerca de USD 1.200 millones del Fondo Monetario Internacional (FMI) y otros organismos multilaterales") |
-| Ese ingreso depende en parte de que el directorio del FMI apruebe la tercera revisión, esperada para la primera semana de diciembre | 5: "Depende en parte de que el Fondo apruebe su tercera revisión, esperada para principios de diciembre." y 13: "La revisión del Fondo se espera en diciembre." | [La Nación](https://www.lanacion.com.ar/economia/el-plan-de-caputo-para-pagar-el-vencimiento-de-deuda-de-enero-de-us4370-millones-ingresos-externos-nid27112026/) ("El primero de esos ingresos depende, en parte, de que el directorio del FMI apruebe la tercera revisión del acuerdo, cuyo tratamiento se espera para la primera semana de diciembre") |
+| Ese ingreso depende en parte de que el directorio del FMI apruebe la tercera revisión, esperada para la primera semana de diciembre | 5: "Depende en parte de que el Fondo apruebe su tercera revisión, esperada para principios de diciembre." y 13: "El primer bloque depende de diciembre." | [La Nación](https://www.lanacion.com.ar/economia/el-plan-de-caputo-para-pagar-el-vencimiento-de-deuda-de-enero-de-us4370-millones-ingresos-externos-nid27112026/) ("El primero de esos ingresos depende, en parte, de que el directorio del FMI apruebe la tercera revisión del acuerdo, cuyo tratamiento se espera para la primera semana de diciembre") |
 | US$ 1.000 millones de financiamientos garantizados por CAF y Fonplata | 6: "Segundo bloque: 1.000 millones en préstamos garantizados por la CAF y Fonplata." | [La Nación](https://www.lanacion.com.ar/economia/el-plan-de-caputo-para-pagar-el-vencimiento-de-deuda-de-enero-de-us4370-millones-ingresos-externos-nid27112026/) ("los otros US$1000 millones que faltaban de los financiamientos garantizados con CAF y Fonplata"), [Infobae](https://www.infobae.com/economia/2026/11/28/el-plan-del-gobierno-para-pagar-la-deuda-en-enero-tiene-respuesta-y-un-costo-las-reservas-del-banco-central/) (nombres completos: Corporación Andina de Fomento y Fondo Financiero para el Desarrollo de la Cuenca del Plata) |
 | El desembolso de CAF y Fonplata está previsto para enero, el mismo mes del vencimiento | 7: "Llega en enero, el mismo mes del pago." | [La Nación](https://www.lanacion.com.ar/economia/el-plan-de-caputo-para-pagar-el-vencimiento-de-deuda-de-enero-de-us4370-millones-ingresos-externos-nid27112026/) ("el desembolso de los préstamos garantizados por la CAF y Fonplata está previsto para enero, el mismo mes en que vence la deuda") |
 | Venta de AySA: US$ 300 millones según Caputo. La Nación: traspaso previsto en diciembre, alrededor de US$ 340 millones | 8: "Tercer bloque: unos 300 millones de la venta de AySA, según el ministro." (el 340 solo en placa) | [La Nación](https://www.lanacion.com.ar/economia/el-plan-de-caputo-para-pagar-el-vencimiento-de-deuda-de-enero-de-us4370-millones-ingresos-externos-nid27112026/) ("Y entran los US$300 millones de la venta de AySA" / "está previsto el traspaso de AySA, que aportaría alrededor de US$340 millones"), [Infobae](https://www.infobae.com/economia/2026/11/28/el-plan-del-gobierno-para-pagar-la-deuda-en-enero-tiene-respuesta-y-un-costo-las-reservas-del-banco-central/) ("USD 300 millones de la privatización de AySA") |
@@ -139,7 +140,7 @@ Aparte de los subtítulos. Mayúsculas y signos tal como van. Sin "parte N" en n
 | 10 | `PESOS DEL SUPERÁVIT → DÓLARES DEL BCRA` · `FECHA: NO INFORMADA` | en "superávit." y en "cuándo." |
 | 11 | `CAPUTO: «YA ESTÁS EN LOS 4.300, 4.400»` | en "4.300," |
 | 12 | `EL COSTO: RESERVAS DEL BCRA` · `SEGÚN INFOBAE` | en "costo:" y en "Infobae," |
-| 13 | `REVISIÓN DEL FMI: DICIEMBRE` · `NO ES CONSEJO DE INVERSIÓN` | en "diciembre." y la segunda chica, todo el plano |
+| 13 | `REVISIÓN DEL FMI: DICIEMBRE` · `¿CUÁL TE SORPRENDIÓ MÁS?` · `NO ES CONSEJO DE INVERSIÓN` | en "diciembre.", en "sorprendió" y la tercera chica, todo el plano |
 
 Fuentes en pantalla (texto chico, abajo, planos 2 a 13): `FUENTE: LA NACIÓN, 27/11/2026 · INFOBAE, 28/11/2026`.
 Personas: Caputo es un muñeco genérico de traje con placa de nombre (plano 1 y plano 11), sin cara reconocible. Marcas e
@@ -167,7 +168,7 @@ Según Infobae, el costo son las reservas del Banco Central. Una fuente consulta
 
 Esto no es consejo de inversión.
 
-La revisión del FMI se espera en diciembre. Seguime y te cuento si entra el primer bloque.
+El primer bloque depende de diciembre. ¿Cuál de los cuatro te sorprendió más? Contalo en los comentarios.
 
 Fuentes: La Nación (27/11/2026) e Infobae (28/11/2026).
 
