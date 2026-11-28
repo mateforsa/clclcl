@@ -2435,7 +2435,7 @@
     "https://www.lanacion.com.ar/economia/campo/las-exportaciones-agroindustriales-de-octubre-marcaron-un-record-us5717-millones-nid27112026/"
    ],
    "puntaje": 8.0,
-   "etapa": "esperando_ok_final",
+   "etapa": "listo",
    "creado": "2026-11-27T21:41:55-03:00",
    "historial": [
     {
@@ -2486,9 +2486,14 @@
      "etapa": "esperando_ok_final",
      "cuando": "2026-11-27T22:27:11-03:00",
      "nota": "AVISO: dura 74 s, se pasa del tope; acortarlo exige regenerar la voz"
+    },
+    {
+     "etapa": "listo",
+     "cuando": "2026-11-27T23:08:18-03:00",
+     "nota": "aprobado por el dueño desde esperando_ok_final"
     }
    ],
-   "nota": "AVISO: dura 74 s, se pasa del tope; acortarlo exige regenerar la voz",
+   "nota": "",
    "caracteres_voz": 1141
   },
   "hoy-hace-independiente-juventus-1973": {
@@ -2531,5 +2536,5 @@
    "caracteres_voz": 1030
   }
  },
- "actualizado": "2026-11-27T22:49:54-03:00"
+ "actualizado": "2026-11-27T23:08:18-03:00"
 }

@@ -664,5 +664,80 @@
    "Vespúcci,",
    "Bespúchi,"
   ]
+ },
+ "Juventus": {
+  "dicho": "Yuvéntus",
+  "estado": "probada",
+  "puntaje": 0.97,
+  "variantes": [
+   "Yuventus",
+   "Iuventus",
+   "Yuvéntus",
+   "Juventus"
+  ]
+ },
+ "Ajax": {
+  "dicho": "Ayax",
+  "estado": "probada",
+  "puntaje": 0.96,
+  "variantes": [
+   "Áyax",
+   "Áiax",
+   "Ájax",
+   "Ayax"
+  ]
+ },
+ "RAI": {
+  "dicho": "Rái",
+  "estado": "probada",
+  "puntaje": 0.88,
+  "variantes": [
+   "Rai",
+   "Rái",
+   "erre a i",
+   "Rrai"
+  ]
+ },
+ "VHS": {
+  "dicho": "vé hache ése",
+  "estado": "probada",
+  "puntaje": 0.88,
+  "variantes": [
+   "ve hache ese",
+   "ve, hache, ese",
+   "uve hache ese",
+   "vé hache ése"
+  ]
+ },
+ "Asch": {
+  "dicho": "Ash",
+  "estado": "probada",
+  "puntaje": 0.66,
+  "variantes": [
+   "Ash",
+   "Asch",
+   "Ásch",
+   "Asc",
+   "Ách"
+  ],
+  "nota": "28/11/2026: Ash se oye \"Ash\" (66 %); es como se pronuncia el apellido."
+ },
+ "Bochini": {
+  "dicho": "Bochini",
+  "estado": "probada",
+  "puntaje": 0.75,
+  "variantes": [
+   "Bochini",
+   "Bochíni",
+   "Bo-chi-ni",
+   "Bochinni",
+   "Botchini"
+  ],
+  "nota": "28/11/2026 hoy-hace-independiente-juventus-1973: las 5 variantes se entienden como Bochini (73-75 %); se deja tal cual (castellano). En la toma larga Whisper escribe \"Bocini\" (grafía italiana, mismo sonido)."
+ },
+ "Bertoni": {
+  "dicho": "Bertoni",
+  "estado": "probada",
+  "nota": "28/11/2026 hoy-hace-independiente-juventus-1973: Whisper lo entiende tal cual en la toma larga."
  }
 }

@@ -27,3 +27,4 @@
 2026-11-27T22:26:55-03:00 [oido] oído: 98 % de coincidencia; dudosos: ninguno; diferencias: →un; bovinos→bobinos; →son; diez→10
 2026-11-27T22:27:11-03:00 [revisor] APROBADO (vuelta 2): 1080x1920 30fps h264+aac 74,0 s (timing 74,007); -14,2 LUFS / -3,8 dBTP, sin silencios >1,5 s; sin negros ni congelados; uniones de subtítulos re-medidas en los 2220 cuadros (tinta luma>115 o azul, renglones separados): mínimo 20 px (21|complejos|productivos 30,6-31,1 s), dos activas en 7 cuadros con 20-38 px; tinta x 48-1025 (el 48 es '21' activo escalado a 30,1 s, dentro del cuadro), y 296-469, nada en franjas de IG; textos = parrafos.json; portada 1080x1920 legible; 5 etiquetas; Whisper 98 %, sin términos no entendidos. AVISO: dura 74 s.
 2026-11-27T22:27:11-03:00 [fabrica] etapa -> esperando_ok_final (AVISO: dura 74 s, se pasa del tope; acortarlo exige regenerar la voz)
+2026-11-27T23:08:18-03:00 [dueño] APROBADO (esperando_ok_final -> listo)
