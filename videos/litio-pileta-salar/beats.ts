@@ -69,7 +69,7 @@ export const BEATS: BeatSpec[] = [
   { id: 'b04', set: 'room', cam: { from: [-0.3, 2.3, 4.9], to: [0.0, 2.1, 4.3], look: [0, 0.15, -0.5], fov: 44, shift: -0.035 }, keywords: ['pileta', 'salmuera', 'evapora.'],
     actors: [WORLD,
       { type: 'pond', pos: [-0.15, 0, -0.5], p: { w: 2.0, d: 1.2, c: '#4fc4dc', lvl: [[W('b04', 'quieta'), 0.13], [DUR('b04'), 0.045]], vapor: W('b04', 'agua') - 0.2 } },
-      { type: 'worker', pos: [0.85, 0, -0.75], rot: [0, -0.5, 0], s: 0.55, p: { pose: 'idle' } },
+      { type: 'worker', pos: [0.75, 0, -1.6], rot: [0, -0.5, 0], s: 0.55, p: { pose: 'idle' } },
     ],
     overlays: [H1('PILETA DE EVAPORACIÓN', W('b04', 'pileta'))] },
 

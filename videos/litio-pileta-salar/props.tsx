@@ -110,8 +110,8 @@ export const Pond: React.FC<P> = ({ t, p }) => {
 export const Cal: React.FC<P> = ({ t, p }) => {
   const { rate = 4, at = 0 } = p;
   const f = Math.max(0, (t - at) * rate); const k = f % 1; const n = Math.floor(f);
-  const page = (key: string, rotX: number) => (
-    <group key={key} position={[0, 0.23, 0.04]} rotation={[rotX, 0, 0]}>
+  const page = (key: string, rotX: number, sc = 1) => (
+    <group key={key} position={[0, 0.23, 0.04]} rotation={[rotX, 0, 0]} scale={[sc, sc, sc]}>
       <group position={[0, -0.23, 0]}>
         <B s={[0.44, 0.46, 0.008]} c="#eeebe3" />
         <B s={[0.44, 0.09, 0.012]} pos={[0, 0.185, 0.002]} c="#d9443a" />
@@ -123,7 +123,7 @@ export const Cal: React.FC<P> = ({ t, p }) => {
       <B s={[0.52, 0.58, 0.06]} c="#2b2f3a" />
       <B s={[0.44, 0.46, 0.03]} pos={[0, 0, 0.03]} c="#d8d4cb" />
       {page('base', 0)}
-      {t >= at && page('flip', -eio(clamp(k * 1.6)) * PI * 0.92)}
+      {t >= at && k < 0.98 && page('flip', -eio(clamp(k * 1.6)) * PI * 0.92, 1 - eio(clamp((k - 0.62) / 0.34)))}
       {[-0.12, 0.12].map((x) => <Cyl key={x} r={0.02} h={0.08} pos={[x, 0.3, 0.04]} c="#9aa0aa" />)}
     </group>
   );
@@ -251,7 +251,7 @@ export const BrineCut: React.FC<P> = ({ t, p }) => {
       {dots.map((q, i) => { const y = q.y + Math.sin(t * 1.3 + q.ph) * 0.03; const x = q.x + Math.sin(t * 0.9 + q.ph * 2) * 0.03;
         if (i % 3 === 0) return lk > 0 ? <Ball key={i} r={0.045 * lk} pos={[x, y, d / 2 + 0.03]} c={LI} e={LI} ei={1.1} /> : null;
         return sk > 0 ? <B key={i} s={[0.05 * sk, 0.05 * sk, 0.05 * sk]} pos={[x, y, d / 2 + 0.03]} rot={[q.ph, q.ph, 0]} c="#f2f4f5" e="#ffffff" ei={0.2} /> : null; })}
-      {well > 0 && t >= well && <group>{pipeBetween([w * 0.3, 0.6, 0.1], [w * 0.3, 1.9, 0.1], 0.04, PIPE, 'well')}<Cyl r={0.08} h={0.12} pos={[w * 0.3, 1.9, 0.1]} c="#7b818a" /></group>}
+      {well > 0 && t >= well && <group position={[w * 0.3, 0.6, 0.1]} scale={[1, Math.max(0.001, eo((t - well) / 0.35)), 1]}><group position={[-w * 0.3, -0.6, -0.1]}>{pipeBetween([w * 0.3, 0.6, 0.1], [w * 0.3, 1.9, 0.1], 0.04, PIPE, 'well')}<Cyl r={0.08} h={0.12} pos={[w * 0.3, 1.9, 0.1]} c="#7b818a" /></group></group>}
     </group>
   );
 };
