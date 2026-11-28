@@ -3244,6 +3244,16 @@
      "etapa": "revision",
      "cuando": "2026-11-28T09:41:22-03:00",
      "nota": ""
+    },
+    {
+     "etapa": "render",
+     "cuando": "2026-11-28T09:44:47-03:00",
+     "nota": "devuelto por el revisor: pronunciación GTA 6 y Series S sin resolver (falta probar variantes o dejar 'PRONUNCIACIÓN SIN RESOLVER' en el log); el resto PASA"
+    },
+    {
+     "etapa": "revision",
+     "cuando": "2026-11-28T09:45:11-03:00",
+     "nota": ""
     }
    ],
    "nota": "",
@@ -3294,5 +3304,5 @@
    "caracteres_voz": 957
   }
  },
- "actualizado": "2026-11-28T09:41:42-03:00"
+ "actualizado": "2026-11-28T09:45:11-03:00"
 }
