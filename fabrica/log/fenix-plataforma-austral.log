@@ -31,3 +31,5 @@
 2026-11-28T07:59:26-03:00 [fabrica] etapa -> revision
 2026-11-28T07:59:53-03:00 [revisor] APROBADO (vuelta 2): 1080x1920 30 fps h264+aac 62,78 s = timing; -14,6 LUFS / -4,5 dBTP; sin silencios, negros ni congelados; uniones mín 23 px en 1883 cuadros; placas fuera de objetos clave; portada OK; 5 etiquetas. MP4/timing/portada sin cambios desde la vuelta 1. Observación para el dueño, decidir de oído: Fénix (PRONUNCIACIÓN SIN RESOLVER, Whisper oye Phoenix, s 11,5-12,5); también Rá-vena (Ravenna) y Pléiade (Playade). Bordes del set visibles arriba a la izquierda en 38,1-39 s (dentro de los 250 px de la interfaz); placa de fuente toca el norte del mapa en 38-41 s.
 2026-11-28T07:59:53-03:00 [fabrica] etapa -> esperando_ok_final
+2026-11-28T08:00:22-03:00 [dueño] APROBADO (esperando_ok_final -> listo)
+2026-11-28T08:01:36-03:00 [publicador] PUBLICADO: https://www.instagram.com/reel/DgSGTCwNz0k/
