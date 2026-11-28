@@ -30,7 +30,12 @@ const WORLD = { type: 'world', p: {} };
 const SET = 'room' as const; // el set solo aporta luces y piso; el mundo de noche lo tapa todo
 const LY = 0.3; // subo el punto de mira: la escena baja al centro del cuadro, lejos de la franja de subtítulos
 const up = (v?: number[]) => (v ? [v[0], v[1] + LY, v[2]] : undefined);
-const CAM = (from: number[], to: number[], look: number[], lookTo?: number[], ly = LY) => ({ from, to, look: [look[0], look[1] + ly, look[2]], lookTo: lookTo && [lookTo[0], lookTo[1] + ly, lookTo[2]], fov: 44, shift: -0.03 }) as any;
+// Encuadre: la gente tiene que quedar ARRIBA de las placas (y < 1250 px) y debajo de la franja de subtítulos.
+// K aleja la cámara del punto de mira (todo un poco más chico) y SH sube la imagen entera sin cambiar la perspectiva.
+const K = 1.2, SH = -0.09;
+const away = (c: number[], l: number[]) => [l[0] + (c[0] - l[0]) * K, l[1] + (c[1] - l[1]) * K, l[2] + (c[2] - l[2]) * K];
+const CAM = (from: number[], to: number[], look: number[], lookTo?: number[], ly = LY, sh = SH) => { const L = [look[0], look[1] + ly, look[2]]; const LT = lookTo && [lookTo[0], lookTo[1] + ly, lookTo[2]];
+  return { from: away(from, L), to: away(to, LT ?? L), look: L, lookTo: LT, fov: 44, shift: sh } as any; };
 const ME = { shirt: '#ffb347', skin: '#e9b48f', hair: '#2a1d14' }; // vos, el que sube el reel (remera ámbar)
 const TRIAL = '#ffcf5a'; // reel de prueba: burbuja dorada
 

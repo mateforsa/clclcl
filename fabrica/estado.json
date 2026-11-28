@@ -2866,14 +2866,20 @@
     "https://www.infobae.com/sociedad/2019/12/19/malena-galmarini-y-gabriel-katopodis-recorrieron-una-planta-potabilizadora-de-palermo/"
    ],
    "puntaje": 7.8,
-   "etapa": "idea",
+   "etapa": "guion",
    "creado": "2026-11-28T05:10:46-03:00",
    "historial": [
     {
      "etapa": "idea",
      "cuando": "2026-11-28T05:10:46-03:00"
+    },
+    {
+     "etapa": "guion",
+     "cuando": "2026-11-28T05:14:13-03:00",
+     "nota": ""
     }
-   ]
+   ],
+   "nota": ""
   },
   "atucha-olla-72-tornillos": {
    "titulo": "La tapa del reactor de Atucha se cierra con 72 tornillos de 1.000 toneladas",
@@ -2883,15 +2889,21 @@
     "https://www.perfil.com/noticias/ciencia/tras-serie-chernobyl-asi-se-preparan-centrales-nucleares-argentinas-evitar-accidente.phtml"
    ],
    "puntaje": 7.5,
-   "etapa": "idea",
+   "etapa": "guion",
    "creado": "2026-11-28T05:10:46-03:00",
    "historial": [
     {
      "etapa": "idea",
      "cuando": "2026-11-28T05:10:46-03:00"
+    },
+    {
+     "etapa": "guion",
+     "cuando": "2026-11-28T05:14:13-03:00",
+     "nota": ""
     }
-   ]
+   ],
+   "nota": ""
   }
  },
- "actualizado": "2026-11-28T05:10:46-03:00"
+ "actualizado": "2026-11-28T05:14:13-03:00"
 }
