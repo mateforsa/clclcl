@@ -2504,7 +2504,7 @@
     "https://www.infobae.com/deportes/2023/11/28/la-increible-historia-de-la-recuperacion-del-gol-perdido-de-bochini-a-50-anos-de-independiente-campeon-del-mundo/"
    ],
    "puntaje": 7.5,
-   "etapa": "revision",
+   "etapa": "render",
    "creado": "2026-11-27T22:44:38-03:00",
    "historial": [
     {
@@ -2555,11 +2555,16 @@
      "etapa": "revision",
      "cuando": "2026-11-27T23:43:43-03:00",
      "nota": ""
+    },
+    {
+     "etapa": "render",
+     "cuando": "2026-11-27T23:47:53-03:00",
+     "nota": "devuelto por el revisor: cartel BERTONI tapa botines del jugador de Juventus y toca el cartel BOCHINI (~32,9-33,1 s)"
     }
    ],
-   "nota": "",
+   "nota": "devuelto por el revisor: cartel BERTONI tapa botines del jugador de Juventus y toca el cartel BOCHINI (~32,9-33,1 s)",
    "caracteres_voz": 1030
   }
  },
- "actualizado": "2026-11-27T23:43:43-03:00"
+ "actualizado": "2026-11-27T23:47:53-03:00"
 }
