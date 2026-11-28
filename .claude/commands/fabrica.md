@@ -63,8 +63,9 @@ La única publicación permitida es `auto-prueba` (reel de prueba de madrugada);
    resumen: la subida automática se apagó sola.
    Madrugada sin noticias (pedido del dueño, 28/11): en las corridas entre las 00:34 y las 07:34 (hora Argentina), si el editor no
    elige ninguna noticia nueva con 7 o más, no termines ahí: hacé un video **inspirado en reels que funcionan**. Fuentes, en orden:
-   reels que mandó el dueño y `fabrica/referencias.md`; y, cuando la API de Instagram ande y el permiso esté dado, la búsqueda por
-   hashtag de la API (leé solo texto y números: tema, gancho de la descripción, me gusta, comentarios). Se toma el TEMA o el FORMATO
+   reels que mandó el dueño y `fabrica/referencias.md`; `python3 fabrica/referencias.py` (lee por la API los posteos que más pegaron
+   de las cuentas de referencia); y, si el dueño consigue el permiso, la búsqueda por hashtag (leé solo texto y números: tema,
+   gancho de la descripción, me gusta, comentarios). Se toma el TEMA o el FORMATO
    que pega, nunca el video: no se baja ni se reusa contenido ajeno, y el guion, los datos, la estética, la paleta y las escenas son
    nuestros (estilo del canal). Tiene que ser algo para mandarle a un amigo y que invite a comentar. Pasa por las mismas etapas:
    guionista → verificador (dos fuentes reales, como siempre) → productor → revisor. Anotá en `fabrica/candidatos/<hoy>.md` de qué
